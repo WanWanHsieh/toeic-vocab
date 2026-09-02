@@ -1,3 +1,4 @@
 data/toeic_vocab_batch*.json
+data/reading_batch_*.json
 data/merge.py
 data/_*
