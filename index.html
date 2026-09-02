@@ -217,7 +217,6 @@
   .questions-col{ display:flex; flex-direction:column; gap:16px; }
   .q-card{ background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:16px 18px; }
   .q-head{ font-weight:600; font-size:14.5px; margin-bottom:2px; }
-  .q-head-zh{ color:var(--text-muted); font-size:12.5px; margin-bottom:10px; }
   .q-opt{ display:block; width:100%; text-align:left; background:var(--surface-2); border:1px solid var(--border); color:var(--text); padding:9px 12px; border-radius:8px; font-size:13.5px; cursor:pointer; margin-bottom:7px; }
   .q-opt:last-child{ margin-bottom:0; }
   .q-opt[aria-pressed="true"]{ border-color:var(--accent); background:var(--accent-soft); }
@@ -670,11 +669,10 @@ function renderReadingMode(container){
       }
       return `<button class="${cls}" data-qi="${qi}" data-oi="${oi}" aria-pressed="${chosen===oi}" ${checked?'disabled':''}>${String.fromCharCode(65+oi)}. ${opt}</button>`;
     }).join("");
-    const explainHtml = (checked && chosen !== undefined) ? `<div class="q-explain">${chosen===q.answer_index ? '✅ 答對了！' : '❌ 答錯了。'} 正確答案是 (${String.fromCharCode(65+q.answer_index)})。${q.explanation_zh}</div>` : "";
+    const explainHtml = (checked && chosen !== undefined) ? `<div class="q-explain">${chosen===q.answer_index ? '✅ 答對了！' : '❌ 答錯了。'} 正確答案是 (${String.fromCharCode(65+q.answer_index)})。<br>${q.question_zh ? `題目：${q.question_zh}<br>` : ""}${q.explanation_zh}</div>` : "";
     return `
       <div class="q-card">
         <div class="q-head">${qi+1}. ${q.question_en}</div>
-        <div class="q-head-zh">${q.question_zh || ""}</div>
         ${optsHtml}
         ${explainHtml}
       </div>

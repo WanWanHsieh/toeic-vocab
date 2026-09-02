@@ -1,0 +1,1262 @@
+[
+  {
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "r.tanaka@brightleaf-imports.com"
+          },
+          {
+            "label": "To:",
+            "value": "support@oceanexfreight.com"
+          },
+          {
+            "label": "Subject:",
+            "value": "Missing Shipment - Order #58231"
+          },
+          {
+            "label": "Date:",
+            "value": "June 9"
+          }
+        ],
+        "paragraphs": [
+          "Dear OceanEx Support Team,",
+          "I am writing regarding order #58231, a shipment of patio furniture that was scheduled to arrive at our warehouse on June 3. As of today, June 9, the containers have still not been delivered, and our online tracking tool shows no updates since May 28.",
+          "This delay is beginning to affect our ability to fulfill orders for the summer season, and several customers have already contacted us to ask about their purchases. Could you please provide an updated delivery estimate and confirm whether the shipment is still in transit?",
+          "I would also appreciate knowing whether any compensation is available for the inconvenience, as this is not the first time an OceanEx shipment has been delayed this year.",
+          "Regards,\nRina Tanaka\nPurchasing Manager, Brightleaf Imports"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "Why did Ms. Tanaka write the e-mail?",
+        "question_zh": "田中女士為什麼寫這封電子郵件？",
+        "options": [
+          "To cancel an order",
+          "To inquire about a delayed shipment",
+          "To request a product catalog",
+          "To change a delivery address"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信件一開始便說明是針對訂單 #58231 的貨物延遲送達提出詢問，因此答案是 (B)。"
+      },
+      {
+        "question_en": "According to the e-mail, when was the shipment originally scheduled to arrive?",
+        "question_zh": "根據這封信，貨物原本預計何時送達？",
+        "options": [
+          "May 28",
+          "June 3",
+          "June 9",
+          "July 1"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中提到貨物原訂於 6 月 3 日送達倉庫，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What can be inferred about Brightleaf Imports' relationship with OceanEx Freight?",
+        "question_zh": "從信中可以推測出 Brightleaf Imports 與 OceanEx Freight 之間的關係為何？",
+        "options": [
+          "It has never used OceanEx's services before",
+          "It has experienced previous delays with OceanEx",
+          "It plans to switch to a different freight company immediately",
+          "It has already received a partial refund"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信末提到「這已不是 OceanEx 今年第一次延誤出貨」，顯示雙方過去也曾發生類似延誤，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"fulfill\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"fulfill\" 一詞意思最接近下列何者？",
+        "options": [
+          "complete",
+          "deny",
+          "delay",
+          "advertise"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "此處 \"fulfill orders\" 指「完成/履行訂單」，故與 \"complete\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "memo",
+        "title": "Memo",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Denise Cole, Operations Director"
+          },
+          {
+            "label": "To:",
+            "value": "All Department Heads"
+          },
+          {
+            "label": "Subject:",
+            "value": "Rescheduled Quarterly Planning Meeting"
+          },
+          {
+            "label": "Date:",
+            "value": "April 14"
+          }
+        ],
+        "paragraphs": [
+          "This memo is to inform you that the quarterly planning meeting originally scheduled for April 18 has been moved to April 25 due to a scheduling conflict with the regional sales conference.",
+          "The meeting will still be held in Conference Room B on the third floor, but the start time has changed from 9:00 a.m. to 10:30 a.m. to accommodate staff traveling back from the conference that morning.",
+          "Please update your calendars accordingly and notify your team members of this change. If you have prepared materials for the original date, there is no need to revise them; the agenda remains the same.",
+          "Department heads who are unable to attend should send a representative and forward any discussion points to my office by April 23."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the main purpose of this memo?",
+        "question_zh": "這份備忘錄的主要目的為何？",
+        "options": [
+          "To cancel the quarterly planning meeting",
+          "To announce a change in the meeting's date and time",
+          "To introduce a new conference room",
+          "To request feedback on the meeting agenda"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "備忘錄開頭即說明季度規劃會議的日期與時間已變更，因此答案是 (B)。"
+      },
+      {
+        "question_en": "Why was the meeting rescheduled?",
+        "question_zh": "會議為什麼被重新安排時間？",
+        "options": [
+          "The conference room was double-booked",
+          "It conflicted with the regional sales conference",
+          "Several department heads were on vacation",
+          "The agenda was not yet finalized"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "備忘錄提到原訂日期與區域銷售會議衝突，因此答案是 (B)。"
+      },
+      {
+        "question_en": "Which of the following is NOT mentioned in the memo?",
+        "question_zh": "下列何者未在備忘錄中提及？",
+        "options": [
+          "The new start time of the meeting",
+          "The room where the meeting will be held",
+          "A virtual attendance option for the meeting",
+          "The deadline for submitting discussion points"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "備忘錄中提到新的開始時間、會議室、及提交討論要點的截止日，但並未提及是否可以線上參加會議，因此答案是 (C)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "letter",
+        "title": "Letter",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Gregory Holt, Sales Director, Meridian Paper Supplies"
+          },
+          {
+            "label": "To:",
+            "value": "Ms. Angela Ruiz, Purchasing Dept., Westfield Print Co."
+          },
+          {
+            "label": "Subject:",
+            "value": "Upcoming Price Adjustment"
+          },
+          {
+            "label": "Date:",
+            "value": "August 1"
+          }
+        ],
+        "paragraphs": [
+          "Dear Ms. Ruiz,",
+          "Meridian Paper Supplies values the partnership we have built with Westfield Print Co. over the past six years. I am writing to let you know that, due to a sustained increase in raw material and shipping costs, we will need to adjust our pricing structure for all bulk paper orders effective October 1.",
+          "The new price list, enclosed with this letter, reflects an average increase of 6 percent across our standard product lines. Orders placed and confirmed before September 15 will still be honored at current prices, regardless of the delivery date.",
+          "We understand that this change may affect your budgeting, and our account team is available to discuss volume discounts or alternative product options that may help offset the impact.",
+          "Sincerely,\nGregory Holt\nSales Director, Meridian Paper Supplies"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "Why did Mr. Holt write this letter?",
+        "question_zh": "Holt 先生為什麼寫這封信？",
+        "options": [
+          "To end a business partnership",
+          "To notify a customer of a price increase",
+          "To apologize for a shipping error",
+          "To announce a new product line"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中說明由於原物料及運費成本上升，公司必須調整大宗紙張訂單的價格，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What is true about orders placed before September 15?",
+        "question_zh": "關於9月15日之前下的訂單，下列敘述何者正確？",
+        "options": [
+          "They will be canceled automatically",
+          "They will still be charged at current prices",
+          "They will receive an extra discount",
+          "They will be delayed until October"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中提到9月15日前確認的訂單仍會以目前價格計價，不受此次調價影響，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What can be inferred about Westfield Print Co.?",
+        "question_zh": "關於 Westfield Print Co.，可以推測出什麼？",
+        "options": [
+          "It is a new customer of Meridian Paper Supplies",
+          "It has done business with Meridian for several years",
+          "It no longer purchases bulk paper",
+          "It has switched to a competitor"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中提到雙方合作關係已維持六年之久，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"sustained\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"sustained\" 一詞意思最接近下列何者？",
+        "options": [
+          "continuous",
+          "sudden",
+          "minor",
+          "temporary"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"sustained increase\" 指「持續性的上漲」，語意最接近 \"continuous\"，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "customer.care@luminaappliances.com"
+          },
+          {
+            "label": "To:",
+            "value": "k.morales@fastmail-example.com"
+          },
+          {
+            "label": "Subject:",
+            "value": "Re: Blender Model LX-200 - Replacement Request"
+          },
+          {
+            "label": "Date:",
+            "value": "November 3"
+          }
+        ],
+        "paragraphs": [
+          "Dear Ms. Morales,",
+          "Thank you for contacting Lumina Appliances about the issue with your LX-200 blender. We are sorry to hear that the motor stopped working after only three weeks of use.",
+          "Based on the photos you sent, our technical team has confirmed that the unit is covered under our one-year warranty. We will ship a replacement blender to the address on file within five business days, free of charge. You do not need to return the defective unit; instead, please dispose of it safely, as instructed in the enclosed recycling guide.",
+          "If the replacement arrives with the same issue, please contact us directly at this email address, and we will arrange a full refund instead of a second replacement.",
+          "Best regards,\nCustomer Care Team, Lumina Appliances"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "Why did Lumina Appliances send this e-mail?",
+        "question_zh": "Lumina Appliances 為什麼寄出這封電子郵件？",
+        "options": [
+          "To advertise a new blender model",
+          "To respond to a warranty complaint",
+          "To confirm a canceled order",
+          "To request a product review"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信件內容是針對顧客反映果汁機故障一事所做的保固回覆，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What is Ms. Morales asked to do with the defective blender?",
+        "question_zh": "Morales 女士被要求如何處理故障的果汁機？",
+        "options": [
+          "Return it in the original packaging",
+          "Bring it to a local store",
+          "Dispose of it safely",
+          "Mail it to the technical team"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "信中說明不需退回故障機器，只需依回收指南安全丟棄即可，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What will happen if the replacement blender has the same problem?",
+        "question_zh": "如果替換的果汁機出現同樣的問題，將會發生什麼事？",
+        "options": [
+          "A technician will visit the customer's home",
+          "The customer will receive a full refund",
+          "The warranty period will be extended",
+          "A second replacement will be sent automatically"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中提到若替換品仍有相同問題，公司將改為提供全額退款，而非再次更換，因此答案是 (B)。"
+      },
+      {
+        "question_en": "Which of the following is NOT mentioned in the e-mail?",
+        "question_zh": "下列何者未在信中提及？",
+        "options": [
+          "The length of the product warranty",
+          "The cost of the replacement",
+          "The estimated shipping time for the replacement",
+          "A prepaid return shipping label"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "信中提到保固期限（一年）、免費更換、以及五個工作天內送達，但並未提到退貨用的預付運送標籤，因此答案是 (D)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "hr@nexacorp-benefits.com"
+          },
+          {
+            "label": "To:",
+            "value": "All Employees"
+          },
+          {
+            "label": "Subject:",
+            "value": "2026 Open Enrollment Period Begins"
+          },
+          {
+            "label": "Date:",
+            "value": "October 6"
+          }
+        ],
+        "paragraphs": [
+          "Dear Team,",
+          "This is a reminder that the annual open enrollment period for health and dental benefits will run from October 13 to October 31. During this window, all employees may enroll in a new plan, adjust their current coverage, or add dependents, regardless of whether they experienced a qualifying life event.",
+          "This year, we are introducing two new plan options through Windmere Health: a low-premium plan with a higher deductible, and a comprehensive plan with expanded vision coverage. Details on both plans are available on the benefits portal, along with a short video explaining the differences.",
+          "Employees who do not make any changes by October 31 will automatically remain on their current plan for the coming year. We strongly encourage everyone to log in and review the options, even if you plan to keep your existing coverage.",
+          "A live Q&A session with the benefits team will be held on October 20 at 2:00 p.m. in the main auditorium for anyone with questions."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the main purpose of this e-mail?",
+        "question_zh": "這封電子郵件的主要目的為何？",
+        "options": [
+          "To announce a change in employee salaries",
+          "To remind employees of the open enrollment period",
+          "To introduce a new HR director",
+          "To cancel dental coverage for all employees"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信件主要在提醒員工年度健康及牙科保險開放投保期間，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What will happen to employees who make no changes by October 31?",
+        "question_zh": "若員工在10月31日前未做任何變更，將會發生什麼事？",
+        "options": [
+          "They will lose their current coverage",
+          "They will automatically remain on their current plan",
+          "They will be enrolled in the low-premium plan",
+          "They must contact HR directly"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中提到若員工在10月31日前未做出任何變動，將自動保留目前方案，因此答案是 (B)。"
+      },
+      {
+        "question_en": "According to the e-mail, what is a feature of the new comprehensive plan?",
+        "question_zh": "根據信件內容，新的「全面型」方案有什麼特色？",
+        "options": [
+          "A lower monthly premium",
+          "A higher deductible",
+          "Expanded vision coverage",
+          "Unlimited dental visits"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "信中提到全面型方案的特色是擴大的視力保健給付範圍，因此答案是 (C)。"
+      },
+      {
+        "question_en": "Why might an employee attend the session on October 20?",
+        "question_zh": "員工為什麼可能會參加10月20日的活動？",
+        "options": [
+          "To submit enrollment forms in person",
+          "To ask questions about the benefit plans",
+          "To receive a physical exam",
+          "To meet the new benefits provider's CEO"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中提到10月20日將舉行現場問答活動，讓員工可以針對保險方案提問，因此答案是 (B)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "hiring@brookstone-recruiting.com"
+          },
+          {
+            "label": "To:",
+            "value": "d.iversen@webmail-example.com"
+          },
+          {
+            "label": "Subject:",
+            "value": "Interview Confirmation - Marketing Coordinator Position"
+          },
+          {
+            "label": "Date:",
+            "value": "February 12"
+          }
+        ],
+        "paragraphs": [
+          "Dear Mr. Iversen,",
+          "Thank you for your application for the Marketing Coordinator position at Sable & Finch Media. We were impressed with your portfolio and would like to invite you to an interview.",
+          "The interview is scheduled for February 19 at 2:00 p.m. and will be conducted by video call. You will meet with the marketing director, Ms. Paula Grant, and one member of the creative team. The session should last approximately 45 minutes and will include a short exercise in which you will review a sample social media campaign and offer feedback.",
+          "Please confirm your availability by replying to this email no later than February 15. If the proposed time does not work for you, we can offer an alternative slot on February 20.",
+          "Best regards,\nBrookstone Recruiting on behalf of Sable & Finch Media"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of this e-mail?",
+        "question_zh": "這封電子郵件的目的為何？",
+        "options": [
+          "To reject a job application",
+          "To invite a candidate to an interview",
+          "To offer a candidate a position",
+          "To request additional application documents"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信件主要目的是邀請 Iversen 先生參加面試，因此答案是 (B)。"
+      },
+      {
+        "question_en": "How will the interview be conducted?",
+        "question_zh": "這場面試將以何種方式進行？",
+        "options": [
+          "In person at the company office",
+          "By telephone",
+          "By video call",
+          "By written questionnaire"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "信中提到面試將以視訊方式進行，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What will the interview include, according to the e-mail?",
+        "question_zh": "根據信件內容，這場面試將包含什麼內容？",
+        "options": [
+          "A written English test",
+          "A review of a sample social media campaign",
+          "A tour of the office",
+          "A group discussion with other candidates"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中提到面試將包含檢視一則社群媒體行銷活動範例並提供意見的練習，因此答案是 (B)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "events@rivertown-conferences.org"
+          },
+          {
+            "label": "To:",
+            "value": "Registered Attendees"
+          },
+          {
+            "label": "Subject:",
+            "value": "Venue Change - Global Retail Innovation Summit"
+          },
+          {
+            "label": "Date:",
+            "value": "May 2"
+          }
+        ],
+        "paragraphs": [
+          "Dear Attendee,",
+          "We are writing to inform you of an important change to the Global Retail Innovation Summit, taking place May 14-15. Due to unexpected renovations at the Carlton Convention Center, the summit will now be held at the Bayside Exhibition Hall, located two blocks north of the original venue.",
+          "All sessions, workshops, and meal times will remain exactly as printed in the original schedule. Parking at Bayside is limited, so we strongly encourage attendees to use public transportation or the shuttle service running from Carlton Convention Center every 20 minutes on both days.",
+          "Updated badges reflecting the new location will be available for pickup starting at 7:30 a.m. on May 14. If you have already printed your badge with the old address, please disregard it and collect a new one on-site.",
+          "We apologize for any inconvenience and look forward to seeing you at the summit."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "Why was this e-mail sent to attendees?",
+        "question_zh": "這封電子郵件寄送給與會者的原因為何？",
+        "options": [
+          "To cancel the summit",
+          "To announce a change of venue",
+          "To introduce new keynote speakers",
+          "To increase the registration fee"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信件主要說明高峰會場地已變更，因此答案是 (B)。"
+      },
+      {
+        "question_en": "Why is the venue being changed?",
+        "question_zh": "場地為什麼會變更？",
+        "options": [
+          "Low attendance numbers",
+          "Renovations at the original venue",
+          "A scheduling conflict with another event",
+          "Severe weather conditions"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中提到原場地 Carlton Convention Center 正在進行整修，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What does the e-mail say will remain unchanged?",
+        "question_zh": "信中提到什麼事項將維持不變？",
+        "options": [
+          "The parking arrangements",
+          "The schedule of sessions and meals",
+          "The registration fee",
+          "The list of keynote speakers"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中明確說明所有場次、工作坊及用餐時間都將維持原定行程不變，因此答案是 (B)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "letter",
+        "title": "Letter",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Thomas Blake, 22 Birchwood Lane"
+          },
+          {
+            "label": "To:",
+            "value": "Customer Relations, Ferrow Home Goods"
+          },
+          {
+            "label": "Date:",
+            "value": "January 9"
+          }
+        ],
+        "paragraphs": [
+          "Dear Customer Relations Team,",
+          "I am writing to express my disappointment with a dining table (model Everline Oak, item #7734) that I purchased from your Denton Street showroom on December 2. Within only five weeks, one of the table legs has developed a visible crack, and the surface finish has started to peel near the edges.",
+          "I have attached photographs showing the damage. Given that the table was advertised as being built for \"everyday, long-term use,\" I do not believe this level of wear is reasonable for a product used under normal household conditions.",
+          "I would like to request either a full refund or a replacement table of the same model. I have kept the original receipt and delivery confirmation, which I can provide upon request.",
+          "I trust that Ferrow Home Goods will resolve this matter promptly, as I have been a loyal customer for several years.",
+          "Sincerely,\nThomas Blake"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "Why did Mr. Blake write this letter?",
+        "question_zh": "Blake 先生為什麼寫這封信？",
+        "options": [
+          "To request a product catalog",
+          "To complain about a defective product",
+          "To cancel a delivery",
+          "To praise a store employee"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中說明餐桌在購買五週後便出現裂痕與掉漆，Blake 先生對此提出抱怨，因此答案是 (B)。"
+      },
+      {
+        "question_en": "How long after the purchase did Mr. Blake notice the problem?",
+        "question_zh": "Blake 先生在購買後多久才發現問題？",
+        "options": [
+          "One week",
+          "Five weeks",
+          "Five months",
+          "One year"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中提到僅五週後桌腳便出現裂痕，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What evidence does Mr. Blake offer to support his claim?",
+        "question_zh": "Blake 先生提供了什麼證據來支持他的說法？",
+        "options": [
+          "A written warranty document",
+          "Photographs and purchase records",
+          "A statement from a repair technician",
+          "A video recording of the defect"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中提到他附上了照片，並保留了收據與送貨確認單，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"peel\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"peel\" 一詞意思最接近下列何者？",
+        "options": [
+          "separate from the surface",
+          "become brighter",
+          "grow larger",
+          "change color"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"the surface finish has started to peel\" 指桌面塗層開始「剝落、脫落」，語意最接近 \"separate from the surface\"，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "facilities@granton-tech.com"
+          },
+          {
+            "label": "To:",
+            "value": "All Staff, 4th Floor"
+          },
+          {
+            "label": "Subject:",
+            "value": "Temporary Relocation During Floor Renovation"
+          },
+          {
+            "label": "Date:",
+            "value": "July 20"
+          }
+        ],
+        "paragraphs": [
+          "Dear Team,",
+          "As previously announced, renovation work on the fourth floor will begin on August 3 and is expected to last approximately three weeks. During this period, all employees currently seated on the fourth floor will be temporarily relocated to available desks on the sixth floor.",
+          "IT will migrate your phone extensions and network connections over the weekend of August 1-2, so please save any unsaved work and log off your computers before leaving on Friday, July 31. A moving crew will transport boxes of personal items on Saturday morning; boxes should be labeled with your name and clearly marked \"Fragile\" if needed.",
+          "Please note that the sixth-floor pantry and printer stations will be shared with the existing sixth-floor staff, so we ask everyone to be considerate of noise levels and equipment use during this transition.",
+          "If you have large personal items that will not fit in a standard moving box, please contact facilities directly by July 25 to arrange alternative transport."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the main purpose of this e-mail?",
+        "question_zh": "這封電子郵件的主要目的為何？",
+        "options": [
+          "To announce a company merger",
+          "To inform staff of a temporary relocation",
+          "To introduce new office furniture",
+          "To cancel a scheduled renovation"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信件主要說明四樓員工在整修期間將暫時遷移至六樓辦公，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What should employees do before leaving the office on July 31?",
+        "question_zh": "員工在7月31日離開辦公室前應該做什麼？",
+        "options": [
+          "Return their office keys",
+          "Save their work and log off their computers",
+          "Submit a moving request form",
+          "Label their desks with their names"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中提到員工應在7月31日星期五離開前儲存工作並登出電腦，以便IT團隊進行搬遷作業，因此答案是 (B)。"
+      },
+      {
+        "question_en": "Which of the following is NOT mentioned in the e-mail?",
+        "question_zh": "下列何者未在信中提及？",
+        "options": [
+          "The expected duration of the renovation",
+          "Instructions for labeling moving boxes",
+          "The purchase of replacement furniture",
+          "Shared use of the sixth-floor pantry"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "信中提到整修預計時程、搬遷箱標示方式、以及六樓茶水間共用事宜，但並未提到採購替代家具，因此答案是 (C)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Invoice",
+        "meta": [
+          {
+            "label": "Invoice No.:",
+            "value": "INV-30987"
+          },
+          {
+            "label": "Date:",
+            "value": "May 6"
+          },
+          {
+            "label": "Bill To:",
+            "value": "Castlebrook Dental Clinic"
+          },
+          {
+            "label": "Payment Terms:",
+            "value": "Net 30"
+          }
+        ],
+        "paragraphs": [
+          "Please find below the itemized charges for dental supply order #30987, shipped on May 5 by Meadowlane Dental Supply Co. Payment is due within 30 days of the invoice date. A late fee of 1.5% per month will apply to overdue balances."
+        ],
+        "table": {
+          "headers": [
+            "Item",
+            "Quantity",
+            "Unit Price",
+            "Total"
+          ],
+          "rows": [
+            [
+              "Disposable Gloves (Box of 100)",
+              "20",
+              "$8.50",
+              "$170.00"
+            ],
+            [
+              "Dental Bibs (Pack of 500)",
+              "5",
+              "$24.00",
+              "$120.00"
+            ],
+            [
+              "Sterilization Pouches (Box of 200)",
+              "10",
+              "$15.75",
+              "$157.50"
+            ],
+            [
+              "Shipping & Handling",
+              "-",
+              "-",
+              "$22.00"
+            ],
+            [
+              "Total Due",
+              "",
+              "",
+              "$469.50"
+            ]
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What kind of document is this?",
+        "question_zh": "這是一份什麼樣的文件？",
+        "options": [
+          "A product catalog",
+          "An invoice",
+          "A job application",
+          "A shipping label"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "文件標題及內容皆為請款明細，屬於發票（invoice），因此答案是 (B)。"
+      },
+      {
+        "question_en": "What is the total amount due on this invoice?",
+        "question_zh": "這張發票的應付總金額為多少？",
+        "options": [
+          "$170.00",
+          "$157.50",
+          "$447.50",
+          "$469.50"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "將各項金額加總（$170.00+$120.00+$157.50+$22.00）後，應付總額為 $469.50，因此答案是 (D)。"
+      },
+      {
+        "question_en": "According to the invoice, what happens if payment is late?",
+        "question_zh": "根據發票內容，若延遲付款會發生什麼事？",
+        "options": [
+          "The order will be canceled",
+          "A late fee of 1.5% per month will apply",
+          "Future orders will be blocked",
+          "The shipment will be returned"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "發票說明中提到逾期未繳款項將按月加收1.5%的滯納金，因此答案是 (B)。"
+      },
+      {
+        "question_en": "How many boxes of disposable gloves were ordered?",
+        "question_zh": "訂購了幾箱拋棄式手套？",
+        "options": [
+          "5",
+          "10",
+          "20",
+          "500"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "根據表格，拋棄式手套（Disposable Gloves）的訂購數量為20箱，因此答案是 (C)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Registration Form",
+        "meta": [
+          {
+            "label": "Event:",
+            "value": "Northbridge Small Business Expo"
+          },
+          {
+            "label": "Date:",
+            "value": "September 18-19"
+          },
+          {
+            "label": "Location:",
+            "value": "Northbridge Convention Center, Hall C"
+          },
+          {
+            "label": "Registration Deadline:",
+            "value": "September 5"
+          }
+        ],
+        "paragraphs": [
+          "Complete the form below to register for the Northbridge Small Business Expo. Registration includes access to all exhibitor booths, two keynote sessions, and a boxed lunch on both days. Attendees who register before August 20 receive an early-bird discount of $30."
+        ],
+        "table": {
+          "headers": [
+            "Ticket Type",
+            "Regular Price",
+            "Early-Bird Price (before Aug 20)",
+            "Includes"
+          ],
+          "rows": [
+            [
+              "Single-Day Pass",
+              "$85",
+              "$55",
+              "One day of access, lunch included"
+            ],
+            [
+              "Two-Day Pass",
+              "$150",
+              "$120",
+              "Both days, lunch included both days"
+            ],
+            [
+              "Exhibitor Booth (10x10 ft)",
+              "$400",
+              "$370",
+              "Booth space, two staff badges, listing in event guide"
+            ]
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of this form?",
+        "question_zh": "這份表格的用途為何？",
+        "options": [
+          "To register for a business expo",
+          "To apply for an exhibitor loan",
+          "To request a refund",
+          "To renew a business license"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這是一份用於報名參加 Northbridge 中小企業博覽會的表格，因此答案是 (A)。"
+      },
+      {
+        "question_en": "How much can attendees save by registering before August 20?",
+        "question_zh": "在8月20日前完成報名的與會者可節省多少費用？",
+        "options": [
+          "$15",
+          "$30",
+          "$45",
+          "$60"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "文字說明8月20日前完成報名者可享有 $30 的早鳥優惠，表格中兩日票價差額也是 $30，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What is included with the Exhibitor Booth registration?",
+        "question_zh": "攤位（Exhibitor Booth）報名項目包含什麼？",
+        "options": [
+          "A private parking space",
+          "Two staff badges and a listing in the event guide",
+          "Free hotel accommodation",
+          "Unlimited boxed lunches for one week"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "表格中列出攤位報名包含攤位空間、兩張工作人員識別證，以及活動指南中的名錄刊登，因此答案是 (B)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Order Confirmation",
+        "meta": [
+          {
+            "label": "Order No.:",
+            "value": "OC-88421"
+          },
+          {
+            "label": "Customer:",
+            "value": "Hawthorne Office Interiors"
+          },
+          {
+            "label": "Date:",
+            "value": "March 22"
+          },
+          {
+            "label": "Sales Rep:",
+            "value": "Melissa Ford"
+          }
+        ],
+        "paragraphs": [
+          "Thank you for your order. Due to current warehouse capacity, your items will be shipped in three separate batches rather than as a single delivery. Each batch will be sent via TrackFast Freight, and tracking numbers will be emailed once each shipment departs our facility."
+        ],
+        "table": {
+          "headers": [
+            "Batch",
+            "Items",
+            "Quantity",
+            "Scheduled Ship Date"
+          ],
+          "rows": [
+            [
+              "1",
+              "Adjustable Desks (Model D-12)",
+              "15",
+              "March 28"
+            ],
+            [
+              "2",
+              "Ergonomic Chairs (Model C-7)",
+              "15",
+              "April 4"
+            ],
+            [
+              "3",
+              "Filing Cabinets (Model F-3)",
+              "10",
+              "April 11"
+            ]
+          ]
+        }
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of this document?",
+        "question_zh": "這份文件的目的為何？",
+        "options": [
+          "To request a price quote",
+          "To confirm an order and its shipping schedule",
+          "To file a complaint about damaged goods",
+          "To advertise new office furniture"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "文件內容為確認訂單內容及分批出貨時程，因此答案是 (B)。"
+      },
+      {
+        "question_en": "Why will the order be shipped in three separate batches?",
+        "question_zh": "為什麼這筆訂單將分成三批出貨？",
+        "options": [
+          "Due to warehouse capacity",
+          "Because the customer requested it",
+          "Due to a shortage of chairs",
+          "Because of a shipping company strike"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "文件中說明由於目前倉庫容量有限，因此訂單將分三批出貨，因此答案是 (A)。"
+      },
+      {
+        "question_en": "Which item is scheduled to ship first?",
+        "question_zh": "哪一項商品預計最先出貨？",
+        "options": [
+          "Filing cabinets",
+          "Ergonomic chairs",
+          "Adjustable desks",
+          "Storage shelves"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "根據表格，第一批出貨（3月28日）的商品是可調式辦公桌，因此答案是 (C)。"
+      },
+      {
+        "question_en": "How will the customer be informed once each shipment departs?",
+        "question_zh": "每批貨物出貨後，顧客將如何得知相關訊息？",
+        "options": [
+          "By a phone call from the sales rep",
+          "By a tracking number sent via e-mail",
+          "By a printed notice mailed to the office",
+          "By an in-person visit from the driver"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "文件中提到每批貨物出貨後，將以電子郵件寄送追蹤號碼給顧客，因此答案是 (B)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Notice",
+        "meta": [
+          {
+            "label": "Date Posted:",
+            "value": "December 1"
+          }
+        ],
+        "paragraphs": [
+          "Please be advised that the main office will be closed on December 26 and December 29 in observance of the winter holiday period. Normal business hours will resume on December 30.",
+          "Employees who are required to work during this period due to ongoing client projects should coordinate directly with their supervisor to confirm scheduling and will receive holiday pay in accordance with company policy.",
+          "The building's front entrance will be locked during the closure, but employees with keycard access may enter the office to retrieve personal items between 9:00 a.m. and 3:00 p.m. on December 27 only. Security will be present during these hours.",
+          "All voicemail and e-mail inquiries received during the closure will be answered within two business days of reopening on December 30."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of this notice?",
+        "question_zh": "這則公告的目的為何？",
+        "options": [
+          "To announce new office hours permanently",
+          "To inform staff of office closure dates",
+          "To request volunteers for holiday work",
+          "To announce a change in company policy"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "公告主要說明辦公室將於特定日期關閉，因此答案是 (B)。"
+      },
+      {
+        "question_en": "When will normal business hours resume?",
+        "question_zh": "正常上班時間將於何時恢復？",
+        "options": [
+          "December 26",
+          "December 27",
+          "December 29",
+          "December 30"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "公告提到正常營業時間將於12月30日恢復，因此答案是 (D)。"
+      },
+      {
+        "question_en": "On what day can employees retrieve personal items from the office?",
+        "question_zh": "員工可以在哪一天回辦公室拿取個人物品？",
+        "options": [
+          "December 26",
+          "December 27",
+          "December 29",
+          "December 30"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "公告說明員工可於12月27日上午9點至下午3點期間憑門禁卡進入辦公室拿取個人物品，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What will employees who work during the closure period receive?",
+        "question_zh": "在辦公室關閉期間仍需工作的員工將獲得什麼？",
+        "options": [
+          "An extra day off",
+          "Holiday pay according to company policy",
+          "A cash bonus",
+          "Free parking for one month"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "公告提到在此期間需要工作的員工將依公司政策獲得假日津貼，因此答案是 (B)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Notice",
+        "meta": [
+          {
+            "label": "Date Posted:",
+            "value": "June 15"
+          },
+          {
+            "label": "Effective:",
+            "value": "July 1"
+          }
+        ],
+        "paragraphs": [
+          "Effective July 1, the company's travel expense reimbursement policy will be updated. Employees will now be required to submit all receipts through the new digital expense portal, EasyClaim, rather than emailing scanned copies to the finance department.",
+          "The maximum daily meal allowance for domestic travel will increase from $45 to $55, and reimbursement requests must be submitted within 14 days of the trip's end date, rather than the current 30-day window.",
+          "Employees who have travel scheduled before July 1 should continue to use the current process for that trip. Any trip beginning on or after July 1 must follow the new procedure in full.",
+          "Training sessions on how to use the EasyClaim portal will be held on June 24 and June 26; attendance is optional but strongly recommended."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is this notice mainly about?",
+        "question_zh": "這則公告主要在說明什麼？",
+        "options": [
+          "A change in employee vacation policy",
+          "An update to the travel expense reimbursement policy",
+          "A new employee dress code",
+          "A change in office locations"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "公告主要說明差旅報帳政策的更新，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What is the new daily meal allowance for domestic travel?",
+        "question_zh": "國內出差新的每日餐費上限為多少？",
+        "options": [
+          "$30",
+          "$45",
+          "$55",
+          "$65"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "公告提到每日餐費上限將從45美元調高至55美元，因此答案是 (C)。"
+      },
+      {
+        "question_en": "According to the notice, how soon must reimbursement requests be submitted after a trip ends?",
+        "question_zh": "根據公告，出差結束後多久之內必須提交報帳申請？",
+        "options": [
+          "Within 7 days",
+          "Within 14 days",
+          "Within 21 days",
+          "Within 30 days"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "公告提到新規定要求出差結束後14天內提交報帳申請，較原本30天縮短，因此答案是 (B)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Notice",
+        "meta": [
+          {
+            "label": "Date Posted:",
+            "value": "October 3"
+          }
+        ],
+        "paragraphs": [
+          "This notice is to inform all tenants of Riverside Business Tower that the building's water supply will be shut off on October 10 from 10:00 p.m. to 6:00 a.m. the following morning while contractors replace aging pipes on the lower floors.",
+          "Restrooms on floors 1 through 5 will be unavailable during this time; restrooms on floors 6 and above will not be affected, as they are connected to a separate water line. Tenants are advised to store drinking water in advance if they plan to be in the building after hours.",
+          "The elevators will remain in operation throughout the maintenance work, though elevator 2 will be reserved exclusively for contractor use starting at 8:00 p.m.",
+          "We apologize for any inconvenience and thank you for your patience as we complete these necessary upgrades."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of this notice?",
+        "question_zh": "這則公告的目的為何？",
+        "options": [
+          "To announce a rent increase",
+          "To inform tenants of a scheduled water shutoff",
+          "To advertise a new tenant amenity",
+          "To announce a change in elevator hours"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "公告主要通知房客大樓將進行停水維修工程，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What time will the water supply be restored?",
+        "question_zh": "供水將於幾點恢復？",
+        "options": [
+          "10:00 p.m.",
+          "midnight",
+          "6:00 a.m.",
+          "8:00 a.m."
+        ],
+        "answer_index": 2,
+        "explanation_zh": "公告提到停水時間為晚上10點至隔天早上6點，因此供水將於早上6點恢復，因此答案是 (C)。"
+      },
+      {
+        "question_en": "Which restrooms will NOT be affected by the water shutoff?",
+        "question_zh": "哪些樓層的洗手間不會受到停水影響？",
+        "options": [
+          "Floors 1 through 5",
+          "Floor 1 only",
+          "Floors 6 and above",
+          "All restrooms in the building"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "公告說明六樓以上的洗手間因使用獨立水管線路，不受此次停水影響，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What will happen to elevator 2 starting at 8:00 p.m.?",
+        "question_zh": "晚上8點起，2號電梯將會如何？",
+        "options": [
+          "It will be shut down for the night",
+          "It will be reserved for contractor use",
+          "It will be moved to a different floor",
+          "It will operate at a slower speed"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "公告提到2號電梯自晚上8點起將保留給承包商專用，因此答案是 (B)。"
+      }
+    ]
+  }
+]
