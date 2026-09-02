@@ -1,0 +1,218 @@
+[
+  {
+    "category": "office",
+    "scene_svg": "<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><rect x=\"110\" y=\"175\" width=\"180\" height=\"14\" rx=\"2\" class=\"p1-accent\"/><line x1=\"130\" y1=\"189\" x2=\"130\" y2=\"230\" class=\"p1-stroke\"/><line x1=\"270\" y1=\"189\" x2=\"270\" y2=\"230\" class=\"p1-stroke\"/><rect x=\"165\" y=\"160\" width=\"70\" height=\"8\" rx=\"2\" class=\"p1-fill\"/><rect x=\"170\" y=\"125\" width=\"60\" height=\"35\" rx=\"3\" class=\"p1-fill\"/><circle cx=\"200\" cy=\"95\" r=\"18\" class=\"p1-fill\"/><rect x=\"182\" y=\"113\" width=\"36\" height=\"50\" rx=\"10\" class=\"p1-fill\"/><line x1=\"182\" y1=\"130\" x2=\"165\" y2=\"158\" class=\"p1-stroke\"/><line x1=\"218\" y1=\"130\" x2=\"235\" y2=\"158\" class=\"p1-stroke\"/></svg>",
+    "options": [
+      "A woman is typing on a laptop.",
+      "A woman is talking on the phone.",
+      "A man is reading a newspaper at the desk.",
+      "A woman is filing away some documents."
+    ],
+    "answer_index": 0,
+    "explanation_zh": "圖中女子坐在桌前，雙手放在筆電上打字，所以 (A) 正確；她並未講電話、看報紙或歸檔文件，故 (B)(C)(D) 錯誤。"
+  },
+  {
+    "category": "office",
+    "scene_svg": "<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><rect x=\"110\" y=\"175\" width=\"180\" height=\"14\" rx=\"2\" class=\"p1-accent\"/><line x1=\"130\" y1=\"189\" x2=\"130\" y2=\"230\" class=\"p1-stroke\"/><line x1=\"270\" y1=\"189\" x2=\"270\" y2=\"230\" class=\"p1-stroke\"/><rect x=\"165\" y=\"145\" width=\"50\" height=\"25\" rx=\"2\" class=\"p1-fill\"/><rect x=\"160\" y=\"150\" width=\"50\" height=\"25\" rx=\"2\" class=\"p1-fill\"/><circle cx=\"230\" cy=\"95\" r=\"18\" class=\"p1-fill\"/><rect x=\"212\" y=\"113\" width=\"36\" height=\"50\" rx=\"10\" class=\"p1-fill\"/><line x1=\"212\" y1=\"130\" x2=\"190\" y2=\"155\" class=\"p1-stroke\"/><line x1=\"248\" y1=\"130\" x2=\"205\" y2=\"150\" class=\"p1-stroke\"/></svg>",
+    "options": [
+      "A man is signing a document.",
+      "A man is reviewing some paperwork.",
+      "A man is throwing away some papers.",
+      "A man is answering the phone."
+    ],
+    "answer_index": 1,
+    "explanation_zh": "男子坐在桌前，面前有一疊文件，雙手正在翻閱查看，故 (B) reviewing paperwork 正確；他沒有簽名、丟棄文件或講電話。"
+  },
+  {
+    "category": "meetings",
+    "scene_svg": "<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><ellipse cx=\"200\" cy=\"190\" rx=\"110\" ry=\"30\" class=\"p1-accent\"/><circle cx=\"120\" cy=\"140\" r=\"14\" class=\"p1-fill\"/><rect x=\"105\" y=\"155\" width=\"30\" height=\"35\" rx=\"8\" class=\"p1-fill\"/><circle cx=\"200\" cy=\"120\" r=\"14\" class=\"p1-fill\"/><rect x=\"185\" y=\"135\" width=\"30\" height=\"35\" rx=\"8\" class=\"p1-fill\"/><circle cx=\"280\" cy=\"140\" r=\"14\" class=\"p1-fill\"/><rect x=\"265\" y=\"155\" width=\"30\" height=\"35\" rx=\"8\" class=\"p1-fill\"/><line x1=\"120\" y1=\"175\" x2=\"140\" y2=\"188\" class=\"p1-stroke\"/><line x1=\"200\" y1=\"170\" x2=\"200\" y2=\"188\" class=\"p1-stroke\"/><line x1=\"280\" y1=\"175\" x2=\"260\" y2=\"188\" class=\"p1-stroke\"/></svg>",
+    "options": [
+      "They are shaking hands with each other.",
+      "They are gathered around a conference table.",
+      "They are standing in a line.",
+      "They are eating a meal together."
+    ],
+    "answer_index": 1,
+    "explanation_zh": "圖中三人圍坐在會議桌旁，故 (B) 正確；他們沒有握手、排隊站立，也沒有用餐，故其餘選項錯誤。"
+  },
+  {
+    "category": "meetings",
+    "scene_svg": "<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><rect x=\"110\" y=\"215\" width=\"25\" height=\"18\" rx=\"2\" class=\"p1-accent\"/><circle cx=\"150\" cy=\"110\" r=\"16\" class=\"p1-fill\"/><rect x=\"132\" y=\"126\" width=\"36\" height=\"55\" rx=\"10\" class=\"p1-fill\"/><line x1=\"140\" y1=\"181\" x2=\"135\" y2=\"220\" class=\"p1-stroke\"/><line x1=\"160\" y1=\"181\" x2=\"165\" y2=\"220\" class=\"p1-stroke\"/><circle cx=\"250\" cy=\"110\" r=\"16\" class=\"p1-fill\"/><rect x=\"232\" y=\"126\" width=\"36\" height=\"55\" rx=\"10\" class=\"p1-fill\"/><line x1=\"240\" y1=\"181\" x2=\"235\" y2=\"220\" class=\"p1-stroke\"/><line x1=\"260\" y1=\"181\" x2=\"265\" y2=\"220\" class=\"p1-stroke\"/><line x1=\"168\" y1=\"150\" x2=\"200\" y2=\"155\" class=\"p1-stroke\"/><line x1=\"232\" y1=\"150\" x2=\"200\" y2=\"155\" class=\"p1-stroke\"/></svg>",
+    "options": [
+      "Two men are shaking hands.",
+      "Two men are exchanging business cards.",
+      "Two men are carrying suitcases.",
+      "Two men are arguing with each other."
+    ],
+    "answer_index": 0,
+    "explanation_zh": "兩人站著伸出手互相握手，故 (A) 正確；圖中並無交換名片、提著行李或爭吵的動作。"
+  },
+  {
+    "category": "warehouse_logistics",
+    "scene_svg": "<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><rect x=\"260\" y=\"140\" width=\"60\" height=\"50\" class=\"p1-accent\"/><rect x=\"270\" y=\"95\" width=\"45\" height=\"45\" class=\"p1-fill\"/><circle cx=\"150\" cy=\"110\" r=\"16\" class=\"p1-fill\"/><rect x=\"132\" y=\"126\" width=\"36\" height=\"55\" rx=\"10\" class=\"p1-fill\"/><line x1=\"140\" y1=\"181\" x2=\"135\" y2=\"225\" class=\"p1-stroke\"/><line x1=\"160\" y1=\"181\" x2=\"165\" y2=\"225\" class=\"p1-stroke\"/><rect x=\"140\" y=\"90\" width=\"50\" height=\"35\" rx=\"3\" class=\"p1-fill\"/><line x1=\"132\" y1=\"140\" x2=\"145\" y2=\"115\" class=\"p1-stroke\"/><line x1=\"168\" y1=\"140\" x2=\"185\" y2=\"115\" class=\"p1-stroke\"/></svg>",
+    "options": [
+      "A man is stacking boxes in a warehouse.",
+      "A man is unloading a truck.",
+      "A man is sweeping the floor.",
+      "A man is loading a cart with tools."
+    ],
+    "answer_index": 0,
+    "explanation_zh": "男子正將一個箱子疊放到旁邊的箱堆上，符合 stacking boxes，故 (A) 正確；圖中沒有卡車、掃地或工具推車。"
+  },
+  {
+    "category": "warehouse_logistics",
+    "scene_svg": "<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><rect x=\"150\" y=\"200\" width=\"90\" height=\"10\" rx=\"2\" class=\"p1-accent\"/><circle cx=\"165\" cy=\"220\" r=\"10\" class=\"p1-fill\"/><circle cx=\"225\" cy=\"220\" r=\"10\" class=\"p1-fill\"/><line x1=\"240\" y1=\"205\" x2=\"270\" y2=\"160\" class=\"p1-stroke\"/><rect x=\"155\" y=\"160\" width=\"35\" height=\"40\" rx=\"2\" class=\"p1-fill\"/><rect x=\"195\" y=\"150\" width=\"35\" height=\"50\" rx=\"2\" class=\"p1-fill\"/><circle cx=\"290\" cy=\"110\" r=\"16\" class=\"p1-fill\"/><rect x=\"272\" y=\"126\" width=\"36\" height=\"55\" rx=\"10\" class=\"p1-fill\"/><line x1=\"280\" y1=\"181\" x2=\"275\" y2=\"225\" class=\"p1-stroke\"/><line x1=\"300\" y1=\"181\" x2=\"305\" y2=\"225\" class=\"p1-stroke\"/><line x1=\"272\" y1=\"140\" x2=\"268\" y2=\"162\" class=\"p1-stroke\"/></svg>",
+    "options": [
+      "A worker is pushing a cart loaded with boxes.",
+      "A worker is loading boxes onto a truck.",
+      "A worker is climbing a ladder.",
+      "A worker is opening a box with a knife."
+    ],
+    "answer_index": 0,
+    "explanation_zh": "圖中人物正推著載滿箱子的推車，故 (A) 正確；沒有卡車、梯子或開箱動作出現。"
+  },
+  {
+    "category": "retail_store",
+    "scene_svg": "<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><rect x=\"100\" y=\"170\" width=\"200\" height=\"60\" rx=\"4\" class=\"p1-accent\"/><rect x=\"170\" y=\"140\" width=\"50\" height=\"35\" rx=\"3\" class=\"p1-fill\"/><circle cx=\"195\" cy=\"95\" r=\"16\" class=\"p1-fill\"/><rect x=\"177\" y=\"111\" width=\"36\" height=\"55\" rx=\"10\" class=\"p1-fill\"/><line x1=\"177\" y1=\"130\" x2=\"185\" y2=\"150\" class=\"p1-stroke\"/><line x1=\"213\" y1=\"130\" x2=\"205\" y2=\"150\" class=\"p1-stroke\"/><circle cx=\"290\" cy=\"150\" r=\"14\" class=\"p1-fill\"/><rect x=\"275\" y=\"165\" width=\"30\" height=\"45\" rx=\"8\" class=\"p1-fill\"/></svg>",
+    "options": [
+      "A cashier is ringing up a purchase at the register.",
+      "A customer is trying on clothes.",
+      "Shelves are being restocked with merchandise.",
+      "A cashier is sweeping the store floor."
+    ],
+    "answer_index": 0,
+    "explanation_zh": "收銀員站在櫃檯後方，正對著收銀機操作結帳，故 (A) 正確；圖中無試衣、補貨或掃地的動作。"
+  },
+  {
+    "category": "restaurant_dining",
+    "scene_svg": "<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><rect x=\"140\" y=\"190\" width=\"120\" height=\"12\" rx=\"3\" class=\"p1-accent\"/><line x1=\"150\" y1=\"202\" x2=\"150\" y2=\"225\" class=\"p1-stroke\"/><line x1=\"250\" y1=\"202\" x2=\"250\" y2=\"225\" class=\"p1-stroke\"/><ellipse cx=\"200\" cy=\"185\" rx=\"20\" ry=\"6\" class=\"p1-fill\"/><circle cx=\"150\" cy=\"150\" r=\"14\" class=\"p1-fill\"/><rect x=\"135\" y=\"165\" width=\"30\" height=\"35\" rx=\"8\" class=\"p1-fill\"/><circle cx=\"280\" cy=\"110\" r=\"16\" class=\"p1-fill\"/><rect x=\"262\" y=\"126\" width=\"36\" height=\"55\" rx=\"10\" class=\"p1-fill\"/><rect x=\"255\" y=\"118\" width=\"50\" height=\"8\" rx=\"2\" class=\"p1-fill\"/><line x1=\"262\" y1=\"135\" x2=\"270\" y2=\"120\" class=\"p1-stroke\"/><line x1=\"298\" y1=\"135\" x2=\"290\" y2=\"120\" class=\"p1-stroke\"/></svg>",
+    "options": [
+      "A customer is paying the bill.",
+      "A chef is cooking at the stove.",
+      "A waiter is serving food to a customer.",
+      "Diners are washing the dishes."
+    ],
+    "answer_index": 2,
+    "explanation_zh": "服務生端著托盤將食物送到坐著的顧客桌前，故 (C) 正確；圖中沒有付帳、烹飪或洗碗的動作。"
+  },
+  {
+    "category": "restaurant_dining",
+    "scene_svg": "<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><rect x=\"120\" y=\"180\" width=\"160\" height=\"12\" rx=\"3\" class=\"p1-accent\"/><line x1=\"130\" y1=\"192\" x2=\"130\" y2=\"215\" class=\"p1-stroke\"/><line x1=\"270\" y1=\"192\" x2=\"270\" y2=\"215\" class=\"p1-stroke\"/><ellipse cx=\"160\" cy=\"175\" rx=\"18\" ry=\"6\" class=\"p1-fill\"/><ellipse cx=\"240\" cy=\"175\" rx=\"18\" ry=\"6\" class=\"p1-fill\"/><circle cx=\"160\" cy=\"120\" r=\"15\" class=\"p1-fill\"/><rect x=\"143\" y=\"136\" width=\"34\" height=\"45\" rx=\"9\" class=\"p1-fill\"/><circle cx=\"240\" cy=\"120\" r=\"15\" class=\"p1-fill\"/><rect x=\"223\" y=\"136\" width=\"34\" height=\"45\" rx=\"9\" class=\"p1-fill\"/><line x1=\"160\" y1=\"150\" x2=\"160\" y2=\"172\" class=\"p1-stroke\"/><line x1=\"240\" y1=\"150\" x2=\"240\" y2=\"172\" class=\"p1-stroke\"/></svg>",
+    "options": [
+      "The people are ordering from a menu.",
+      "The people are eating a meal together.",
+      "The people are cooking in the kitchen.",
+      "The people are clearing the table."
+    ],
+    "answer_index": 1,
+    "explanation_zh": "兩人面對面坐在餐桌前用餐，故 (B) 正確；圖中沒有點餐、下廚或收拾餐桌的動作。"
+  },
+  {
+    "category": "outdoor_street",
+    "scene_svg": "<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><rect x=\"0\" y=\"180\" width=\"400\" height=\"100\" class=\"p1-accent\"/><rect x=\"150\" y=\"180\" width=\"15\" height=\"100\" class=\"p1-fill\"/><rect x=\"180\" y=\"180\" width=\"15\" height=\"100\" class=\"p1-fill\"/><rect x=\"210\" y=\"180\" width=\"15\" height=\"100\" class=\"p1-fill\"/><rect x=\"240\" y=\"180\" width=\"15\" height=\"100\" class=\"p1-fill\"/><circle cx=\"200\" cy=\"120\" r=\"16\" class=\"p1-fill\"/><rect x=\"182\" y=\"136\" width=\"36\" height=\"50\" rx=\"10\" class=\"p1-fill\"/><line x1=\"190\" y1=\"186\" x2=\"180\" y2=\"230\" class=\"p1-stroke\"/><line x1=\"210\" y1=\"186\" x2=\"225\" y2=\"230\" class=\"p1-stroke\"/><line x1=\"182\" y1=\"150\" x2=\"165\" y2=\"175\" class=\"p1-stroke\"/><line x1=\"218\" y1=\"150\" x2=\"235\" y2=\"170\" class=\"p1-stroke\"/></svg>",
+    "options": [
+      "A man is crossing the street at a crosswalk.",
+      "A man is waiting at a bus stop.",
+      "A man is riding a bicycle down the street.",
+      "A man is standing at a traffic light."
+    ],
+    "answer_index": 0,
+    "explanation_zh": "男子正走在斑馬線上過馬路，故 (A) 正確；他並非在候車、騎腳踏車，也不是只站在號誌前。"
+  },
+  {
+    "category": "construction",
+    "scene_svg": "<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><rect x=\"250\" y=\"80\" width=\"6\" height=\"150\" class=\"p1-accent\"/><rect x=\"290\" y=\"80\" width=\"6\" height=\"150\" class=\"p1-accent\"/><line x1=\"250\" y1=\"100\" x2=\"296\" y2=\"100\" class=\"p1-stroke\"/><line x1=\"250\" y1=\"130\" x2=\"296\" y2=\"130\" class=\"p1-stroke\"/><line x1=\"250\" y1=\"160\" x2=\"296\" y2=\"160\" class=\"p1-stroke\"/><line x1=\"250\" y1=\"190\" x2=\"296\" y2=\"190\" class=\"p1-stroke\"/><circle cx=\"270\" cy=\"70\" r=\"14\" class=\"p1-fill\"/><rect x=\"256\" y=\"84\" width=\"28\" height=\"40\" rx=\"8\" class=\"p1-fill\"/><line x1=\"260\" y1=\"124\" x2=\"256\" y2=\"150\" class=\"p1-stroke\"/><line x1=\"280\" y1=\"124\" x2=\"290\" y2=\"150\" class=\"p1-stroke\"/><circle cx=\"150\" cy=\"140\" r=\"16\" class=\"p1-fill\"/><rect x=\"132\" y=\"156\" width=\"36\" height=\"50\" rx=\"10\" class=\"p1-fill\"/><line x1=\"140\" y1=\"206\" x2=\"135\" y2=\"235\" class=\"p1-stroke\"/><line x1=\"160\" y1=\"206\" x2=\"165\" y2=\"235\" class=\"p1-stroke\"/><rect x=\"175\" y=\"170\" width=\"20\" height=\"6\" rx=\"2\" class=\"p1-fill\"/><line x1=\"168\" y1=\"170\" x2=\"180\" y2=\"172\" class=\"p1-stroke\"/></svg>",
+    "options": [
+      "A worker is climbing a ladder.",
+      "A worker is painting a wall.",
+      "A worker is digging a hole.",
+      "A worker is driving a truck."
+    ],
+    "answer_index": 0,
+    "explanation_zh": "其中一名工人正在爬梯子，故 (A) 正確；圖中沒有油漆牆壁、挖洞或開卡車的動作。"
+  },
+  {
+    "category": "construction",
+    "scene_svg": "<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><rect x=\"280\" y=\"190\" width=\"60\" height=\"30\" rx=\"3\" class=\"p1-accent\"/><circle cx=\"200\" cy=\"225\" r=\"12\" class=\"p1-fill\"/><rect x=\"170\" y=\"195\" width=\"60\" height=\"20\" rx=\"4\" class=\"p1-fill\"/><line x1=\"230\" y1=\"205\" x2=\"260\" y2=\"180\" class=\"p1-stroke\"/><line x1=\"230\" y1=\"215\" x2=\"260\" y2=\"192\" class=\"p1-stroke\"/><circle cx=\"280\" cy=\"130\" r=\"16\" class=\"p1-fill\"/><rect x=\"262\" y=\"146\" width=\"36\" height=\"50\" rx=\"10\" class=\"p1-fill\"/><line x1=\"270\" y1=\"196\" x2=\"265\" y2=\"230\" class=\"p1-stroke\"/><line x1=\"290\" y1=\"196\" x2=\"295\" y2=\"230\" class=\"p1-stroke\"/><line x1=\"262\" y1=\"160\" x2=\"258\" y2=\"182\" class=\"p1-stroke\"/><line x1=\"298\" y1=\"160\" x2=\"262\" y2=\"186\" class=\"p1-stroke\"/></svg>",
+    "options": [
+      "A worker is pushing a wheelbarrow.",
+      "A worker is laying bricks on a wall.",
+      "A worker is operating a crane.",
+      "A worker is measuring a board."
+    ],
+    "answer_index": 0,
+    "explanation_zh": "工人正推著一台裝有材料的手推車，故 (A) 正確；圖中沒有砌磚、操作吊車或測量木板的動作。"
+  },
+  {
+    "category": "transportation_travel",
+    "scene_svg": "<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><rect x=\"60\" y=\"90\" width=\"220\" height=\"100\" rx=\"10\" class=\"p1-accent\"/><circle cx=\"110\" cy=\"200\" r=\"18\" class=\"p1-fill\"/><circle cx=\"230\" cy=\"200\" r=\"18\" class=\"p1-fill\"/><rect x=\"90\" y=\"110\" width=\"40\" height=\"30\" rx=\"3\" class=\"p1-fill\"/><rect x=\"150\" y=\"110\" width=\"40\" height=\"30\" rx=\"3\" class=\"p1-fill\"/><rect x=\"210\" y=\"110\" width=\"40\" height=\"30\" rx=\"3\" class=\"p1-fill\"/><line x1=\"270\" y1=\"100\" x2=\"270\" y2=\"180\" class=\"p1-stroke\"/><circle cx=\"310\" cy=\"140\" r=\"15\" class=\"p1-fill\"/><rect x=\"293\" y=\"155\" width=\"34\" height=\"45\" rx=\"9\" class=\"p1-fill\"/><line x1=\"300\" y1=\"200\" x2=\"285\" y2=\"185\" class=\"p1-stroke\"/><line x1=\"320\" y1=\"200\" x2=\"320\" y2=\"230\" class=\"p1-stroke\"/></svg>",
+    "options": [
+      "A woman is boarding a bus.",
+      "A woman is driving a bus.",
+      "A woman is waiting at a train station.",
+      "A woman is getting off a bicycle."
+    ],
+    "answer_index": 0,
+    "explanation_zh": "女子正準備踏上公車，故 (A) board a bus（登上公車）的描述正確；她並非在開車、在火車站等候，也不是下腳踏車。"
+  },
+  {
+    "category": "transportation_travel",
+    "scene_svg": "<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><rect x=\"0\" y=\"200\" width=\"400\" height=\"40\" class=\"p1-accent\"/><circle cx=\"140\" cy=\"210\" r=\"14\" class=\"p1-fill\"/><circle cx=\"200\" cy=\"210\" r=\"14\" class=\"p1-fill\"/><line x1=\"140\" y1=\"210\" x2=\"175\" y2=\"175\" class=\"p1-stroke\"/><line x1=\"200\" y1=\"210\" x2=\"175\" y2=\"175\" class=\"p1-stroke\"/><line x1=\"175\" y1=\"175\" x2=\"190\" y2=\"160\" class=\"p1-stroke\"/><circle cx=\"175\" cy=\"145\" r=\"13\" class=\"p1-fill\"/><rect x=\"165\" y=\"155\" width=\"20\" height=\"30\" rx=\"6\" class=\"p1-fill\"/><circle cx=\"260\" cy=\"205\" r=\"10\" class=\"p1-fill\"/><circle cx=\"300\" cy=\"205\" r=\"10\" class=\"p1-fill\"/><line x1=\"260\" y1=\"205\" x2=\"280\" y2=\"180\" class=\"p1-stroke\"/><line x1=\"300\" y1=\"205\" x2=\"280\" y2=\"180\" class=\"p1-stroke\"/><circle cx=\"280\" cy=\"155\" r=\"10\" class=\"p1-fill\"/><rect x=\"272\" y=\"163\" width=\"16\" height=\"22\" rx=\"5\" class=\"p1-fill\"/></svg>",
+    "options": [
+      "Cyclists are riding along a path.",
+      "Cyclists are repairing their bicycles.",
+      "Runners are jogging through a park.",
+      "A car is parked beside the path."
+    ],
+    "answer_index": 0,
+    "explanation_zh": "兩位騎士正沿著步道騎腳踏車前進，故 (A) 正確；圖中沒有修理腳踏車、慢跑者或停放的汽車。"
+  },
+  {
+    "category": "park_outdoor",
+    "scene_svg": "<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><rect x=\"320\" y=\"150\" width=\"12\" height=\"60\" class=\"p1-fill\"/><circle cx=\"326\" cy=\"130\" r=\"35\" class=\"p1-accent\"/><rect x=\"100\" y=\"190\" width=\"140\" height=\"10\" rx=\"2\" class=\"p1-fill\"/><line x1=\"110\" y1=\"200\" x2=\"110\" y2=\"220\" class=\"p1-stroke\"/><line x1=\"230\" y1=\"200\" x2=\"230\" y2=\"220\" class=\"p1-stroke\"/><circle cx=\"140\" cy=\"150\" r=\"15\" class=\"p1-fill\"/><rect x=\"124\" y=\"165\" width=\"32\" height=\"30\" rx=\"8\" class=\"p1-fill\"/><circle cx=\"200\" cy=\"150\" r=\"15\" class=\"p1-fill\"/><rect x=\"184\" y=\"165\" width=\"32\" height=\"30\" rx=\"8\" class=\"p1-fill\"/><line x1=\"140\" y1=\"195\" x2=\"140\" y2=\"215\" class=\"p1-stroke\"/><line x1=\"200\" y1=\"195\" x2=\"200\" y2=\"215\" class=\"p1-stroke\"/></svg>",
+    "options": [
+      "People are sitting on a bench in the park.",
+      "People are planting trees in the park.",
+      "People are jogging around the park.",
+      "People are having a picnic on the grass."
+    ],
+    "answer_index": 0,
+    "explanation_zh": "兩人並肩坐在公園長椅上，故 (A) 正確；圖中並無種樹、慢跑或野餐的畫面。"
+  },
+  {
+    "category": "factory_production",
+    "scene_svg": "<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><rect x=\"230\" y=\"110\" width=\"100\" height=\"90\" rx=\"6\" class=\"p1-accent\"/><circle cx=\"280\" cy=\"130\" r=\"12\" class=\"p1-fill\"/><rect x=\"250\" y=\"160\" width=\"60\" height=\"20\" rx=\"3\" class=\"p1-fill\"/><rect x=\"100\" y=\"190\" width=\"140\" height=\"14\" rx=\"2\" class=\"p1-fill\"/><circle cx=\"180\" cy=\"110\" r=\"16\" class=\"p1-fill\"/><rect x=\"162\" y=\"126\" width=\"36\" height=\"55\" rx=\"10\" class=\"p1-fill\"/><line x1=\"170\" y1=\"181\" x2=\"165\" y2=\"225\" class=\"p1-stroke\"/><line x1=\"190\" y1=\"181\" x2=\"195\" y2=\"225\" class=\"p1-stroke\"/><line x1=\"198\" y1=\"140\" x2=\"250\" y2=\"165\" class=\"p1-stroke\"/></svg>",
+    "options": [
+      "A worker is operating a machine in the factory.",
+      "A worker is cleaning the factory floor.",
+      "A worker is packing boxes onto a truck.",
+      "A worker is repairing a conveyor belt."
+    ],
+    "answer_index": 0,
+    "explanation_zh": "工人站在機台前操作控制面板，故 (A) 正確；圖中沒有清潔地板、裝車或維修輸送帶的動作。"
+  },
+  {
+    "category": "kitchen_food_service",
+    "scene_svg": "<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><rect x=\"140\" y=\"170\" width=\"100\" height=\"60\" rx=\"4\" class=\"p1-accent\"/><circle cx=\"165\" cy=\"175\" r=\"8\" class=\"p1-fill\"/><circle cx=\"215\" cy=\"175\" r=\"8\" class=\"p1-fill\"/><rect x=\"175\" y=\"140\" width=\"50\" height=\"30\" rx=\"6\" class=\"p1-fill\"/><line x1=\"175\" y1=\"150\" x2=\"160\" y2=\"150\" class=\"p1-stroke\"/><line x1=\"225\" y1=\"150\" x2=\"240\" y2=\"150\" class=\"p1-stroke\"/><rect x=\"190\" y=\"70\" width=\"20\" height=\"15\" rx=\"3\" class=\"p1-fill\"/><circle cx=\"200\" cy=\"95\" r=\"16\" class=\"p1-fill\"/><rect x=\"182\" y=\"111\" width=\"36\" height=\"45\" rx=\"10\" class=\"p1-fill\"/><line x1=\"182\" y1=\"125\" x2=\"185\" y2=\"145\" class=\"p1-stroke\"/><line x1=\"218\" y1=\"125\" x2=\"215\" y2=\"145\" class=\"p1-stroke\"/></svg>",
+    "options": [
+      "A chef is washing dishes in the sink.",
+      "A chef is cooking food on the stove.",
+      "A chef is chopping vegetables on a cutting board.",
+      "A chef is serving food to customers."
+    ],
+    "answer_index": 1,
+    "explanation_zh": "廚師站在爐台前，雙手正在鍋子上方料理，故 (B) 正確；圖中沒有洗碗、切菜或上菜的動作。"
+  },
+  {
+    "category": "airport",
+    "scene_svg": "<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><rect x=\"90\" y=\"170\" width=\"220\" height=\"50\" rx=\"4\" class=\"p1-accent\"/><rect x=\"110\" y=\"195\" width=\"45\" height=\"35\" rx=\"4\" class=\"p1-fill\"/><line x1=\"125\" y1=\"195\" x2=\"125\" y2=\"185\" class=\"p1-stroke\"/><line x1=\"140\" y1=\"195\" x2=\"140\" y2=\"185\" class=\"p1-stroke\"/><circle cx=\"280\" cy=\"120\" r=\"16\" class=\"p1-fill\"/><rect x=\"262\" y=\"136\" width=\"36\" height=\"45\" rx=\"10\" class=\"p1-fill\"/><circle cx=\"170\" cy=\"130\" r=\"15\" class=\"p1-fill\"/><rect x=\"153\" y=\"146\" width=\"34\" height=\"45\" rx=\"9\" class=\"p1-fill\"/><line x1=\"153\" y1=\"170\" x2=\"130\" y2=\"195\" class=\"p1-stroke\"/></svg>",
+    "options": [
+      "A traveler is checking in luggage at the counter.",
+      "A traveler is boarding an airplane.",
+      "A traveler is buying a ticket online.",
+      "An attendant is loading bags onto a cart."
+    ],
+    "answer_index": 0,
+    "explanation_zh": "旅客將行李放在櫃檯前辦理登機手續，故 (A) 正確；圖中未顯示登機、線上購票或裝載行李車的畫面。"
+  }
+]

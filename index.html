@@ -255,6 +255,14 @@
   .p2-option-row .q-opt{ flex:1; margin-bottom:0; }
   .mini-speak-btn{ background:var(--accent-soft); color:var(--accent); border:none; width:34px; height:34px; border-radius:50%; font-size:14px; cursor:pointer; flex:none; }
 
+  /* Part 1 photo-description scenes */
+  .p1-scene-wrap{ max-width:420px; margin:0 auto 18px; border-radius:14px; overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow); }
+  .p1-scene-wrap svg{ display:block; width:100%; height:auto; }
+  .p1-bg{ fill:var(--surface-2); }
+  .p1-fill{ fill:var(--text-muted); }
+  .p1-accent{ fill:var(--gold); }
+  .p1-stroke{ stroke:var(--text-muted); stroke-width:6; stroke-linecap:round; fill:none; }
+
   footer.note{ text-align:center; color:var(--text-muted); font-size:12px; margin-top:36px; }
 
   @media (prefers-reduced-motion: reduce){
@@ -290,7 +298,7 @@
     <button class="tab" data-mode="quiz" role="tab" aria-selected="false">小測驗</button>
     <button class="tab" data-mode="grammar" role="tab" aria-selected="false">文法選字 Part 5-6</button>
     <button class="tab" data-mode="reading" role="tab" aria-selected="false">閱讀測驗 Part 7</button>
-    <button class="tab" data-mode="listening" role="tab" aria-selected="false">聽力測驗 Part 2-4</button>
+    <button class="tab" data-mode="listening" role="tab" aria-selected="false">聽力測驗 Part 1-4</button>
   </div>
 
   <div class="controls" id="vocabControls">
@@ -328,7 +336,8 @@
 
   <div class="controls" id="listeningControls" style="display:none;">
     <div class="subtabs">
-      <button class="subtab" data-lpart="p2" aria-selected="true">問答 Part 2</button>
+      <button class="subtab" data-lpart="p1" aria-selected="true">照片描述 Part 1</button>
+      <button class="subtab" data-lpart="p2" aria-selected="false">問答 Part 2</button>
       <button class="subtab" data-lpart="p3" aria-selected="false">對話 Part 3</button>
       <button class="subtab" data-lpart="p4" aria-selected="false">簡短獨白 Part 4</button>
     </div>
@@ -396,6 +405,13 @@ const FALLBACK_P6 = [
     ]
   }
 ];
+const FALLBACK_P1 = [
+  {category:"office",
+    scene_svg:"<svg viewBox=\"0 0 400 280\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"0\" y=\"0\" width=\"400\" height=\"280\" class=\"p1-bg\"/><rect x=\"120\" y=\"170\" width=\"160\" height=\"12\" class=\"p1-fill\"/><rect x=\"140\" y=\"120\" width=\"120\" height=\"50\" rx=\"4\" class=\"p1-accent\"/><circle cx=\"200\" cy=\"90\" r=\"22\" class=\"p1-fill\"/><rect x=\"178\" y=\"112\" width=\"44\" height=\"55\" rx=\"10\" class=\"p1-fill\"/><line x1=\"178\" y1=\"130\" x2=\"150\" y2=\"150\" class=\"p1-stroke\"/><line x1=\"222\" y1=\"130\" x2=\"250\" y2=\"150\" class=\"p1-stroke\"/></svg>",
+    options:["A woman is typing on a laptop.","A woman is answering the phone.","A man is reading a newspaper.","Two people are shaking hands."],
+    answer_index:0, explanation_zh:"圖中的女士坐在桌前，雙手放在筆電上打字，所以答案是 (A)。"
+  }
+];
 const FALLBACK_P2 = [
   {question:"Where's the nearest ATM machine?", options:["It's just around the corner, next to the bakery.","I opened an account last week.","About three miles from here."], answer_index:0, question_type:"wh_question", explanation_zh:"問題問的是「哪裡」，只有 (A) 有直接回答地點，所以答案是 (A)。"}
 ];
@@ -451,12 +467,14 @@ let p6Order = []; let p6Idx = 0; let p6Selected = {}; let p6Checked = false;
 let p5Progress = loadJSON("toeic-p5-progress"); // {idx: true} completed
 let p6Progress = loadJSON("toeic-p6-progress");
 
-/* Listening (Part 2/3/4) */
-let p2Items = []; let p3Items = []; let p4Items = [];
-let listeningPart = "p2";
+/* Listening (Part 1/2/3/4) */
+let p1Items = []; let p2Items = []; let p3Items = []; let p4Items = [];
+let listeningPart = "p1";
+let p1Order = []; let p1Idx = 0; let p1Selected = null; let p1Checked = false; let p1ShowText = false;
 let p2Order = []; let p2Idx = 0; let p2Selected = null; let p2Checked = false; let p2ShowText = false;
 let p3Order = []; let p3Idx = 0; let p3Selected = {}; let p3Checked = false; let p3ShowText = false;
 let p4Order = []; let p4Idx = 0; let p4Selected = {}; let p4Checked = false; let p4ShowText = false;
+let p1Progress = loadJSON("toeic-p1-progress");
 let p2Progress = loadJSON("toeic-p2-progress");
 let p3Progress = loadJSON("toeic-p3-progress");
 let p4Progress = loadJSON("toeic-p4-progress");
@@ -533,9 +551,10 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
         localStorage.setItem("toeic-reading-checked", JSON.stringify(readingChecked));
       }catch(err){}
     }
-    const partMap = {p5:"toeic-p5-progress", p6:"toeic-p6-progress", p2:"toeic-p2-progress", p3:"toeic-p3-progress", p4:"toeic-p4-progress"};
+    const partMap = {p5:"toeic-p5-progress", p6:"toeic-p6-progress", p1:"toeic-p1-progress", p2:"toeic-p2-progress", p3:"toeic-p3-progress", p4:"toeic-p4-progress"};
     if(cloud.p5) { p5Progress = cloud.p5; saveJSON(partMap.p5, p5Progress); }
     if(cloud.p6) { p6Progress = cloud.p6; saveJSON(partMap.p6, p6Progress); }
+    if(cloud.p1) { p1Progress = cloud.p1; saveJSON(partMap.p1, p1Progress); }
     if(cloud.p2) { p2Progress = cloud.p2; saveJSON(partMap.p2, p2Progress); }
     if(cloud.p3) { p3Progress = cloud.p3; saveJSON(partMap.p3, p3Progress); }
     if(cloud.p4) { p4Progress = cloud.p4; saveJSON(partMap.p4, p4Progress); }
@@ -544,6 +563,7 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
     if(!cloud.reading) pushCloudReading();
     if(!cloud.p5) pushCloudPart("p5", p5Progress);
     if(!cloud.p6) pushCloudPart("p6", p6Progress);
+    if(!cloud.p1) pushCloudPart("p1", p1Progress);
     if(!cloud.p2) pushCloudPart("p2", p2Progress);
     if(!cloud.p3) pushCloudPart("p3", p3Progress);
     if(!cloud.p4) pushCloudPart("p4", p4Progress);
@@ -668,7 +688,8 @@ document.querySelectorAll(".subtab[data-lpart]").forEach(btn=>{
 });
 document.getElementById("listeningShuffleBtn").addEventListener("click", ()=>{
   speechSynthesis.cancel();
-  if(listeningPart === "p2"){ shuffleArr(p2Order); p2Idx = 0; }
+  if(listeningPart === "p1"){ shuffleArr(p1Order); p1Idx = 0; }
+  else if(listeningPart === "p2"){ shuffleArr(p2Order); p2Idx = 0; }
   else if(listeningPart === "p3"){ shuffleArr(p3Order); p3Idx = 0; }
   else { shuffleArr(p4Order); p4Idx = 0; }
   renderStage();
@@ -1050,15 +1071,99 @@ function renderP6(container){
   });
 }
 
-/* ---------- Render: listening mode (Part 2/3/4) ---------- */
+/* ---------- Render: listening mode (Part 1/2/3/4) ---------- */
+const P1_CATEGORY_LABELS = {office:"辦公室", meetings:"會議", warehouse_logistics:"倉儲物流", retail_store:"零售商店", restaurant_dining:"餐飲用餐", outdoor_street:"戶外街景", construction:"工地施工", transportation_travel:"交通旅遊", park_outdoor:"戶外公園", factory_production:"工廠生產", kitchen_food_service:"廚房餐飲服務", airport:"機場"};
 const P2_TYPE_LABELS = {wh_question:"疑問詞問句", yes_no_question:"是非問句", tag_question:"附加問句", statement_or_request:"敘述／請求句", choice_question:"選擇問句"};
 const P3_CATEGORY_LABELS = {office:"辦公室", meetings:"會議", travel:"旅遊交通", hospitality:"飯店餐飲", retail_shopping:"零售購物", technology:"科技資訊", logistics:"物流運輸", hr:"人力資源", health:"健康醫療"};
 const P4_CATEGORY_LABELS = {announcement:"廣播公告", advertisement:"廣告", voicemail:"語音留言", broadcast_news:"新聞廣播", tour_guide:"導覽解說", meeting_excerpt:"會議片段", instructions_tutorial:"操作說明"};
 
 function renderListeningMode(container){
-  if(listeningPart === "p2") renderP2(container);
+  if(listeningPart === "p1") renderP1(container);
+  else if(listeningPart === "p2") renderP2(container);
   else if(listeningPart === "p3") renderConversationOrTalk(container, "p3");
   else renderConversationOrTalk(container, "p4");
+}
+
+function renderP1(container){
+  if(p1Items.length === 0){ container.innerHTML = `<div class="empty-state">正在載入 Part 1 題目…</div>`; return; }
+  if(p1Order.length === 0) p1Order = p1Items.map(it=>it.id);
+  if(p1Idx >= p1Order.length) p1Idx = 0;
+  const item = p1Items.find(it=>it.id===p1Order[p1Idx]);
+  const checked = p1Checked;
+  const doneCount = p1Order.filter(id=>p1Progress[id]).length;
+
+  const optsHtml = item.options.map((opt,oi)=>{
+    let cls = "q-opt";
+    if(checked){
+      if(oi === item.answer_index) cls += " correct";
+      else if(oi === p1Selected) cls += " wrong";
+    }
+    const label = (checked || p1ShowText) ? opt : `敘述 ${String.fromCharCode(65+oi)}（點🔊聆聽）`;
+    return `
+      <div class="p2-option-row">
+        <button class="mini-speak-btn" data-speak="${encodeURIComponent(opt)}" title="播放此敘述">🔊</button>
+        <button class="${cls}" data-oi="${oi}" aria-pressed="${p1Selected===oi}" ${checked?'disabled':''}>${String.fromCharCode(65+oi)}. ${label}</button>
+      </div>
+    `;
+  }).join("");
+
+  const explainHtml = checked ? `<div class="q-explain">${p1Selected===item.answer_index?'✅ 答對了！':'❌ 答錯了。'} 正確答案是 (${String.fromCharCode(65+item.answer_index)})。<br>${item.explanation_zh}</div>` : "";
+
+  container.innerHTML = `
+    <div class="reading-head">
+      <div class="reading-tag"><span class="chip cat">${P1_CATEGORY_LABELS[item.category]||item.category}</span></div>
+      <div class="reading-nav">
+        <span>已完成 ${doneCount} / ${p1Order.length}</span>
+        <button class="nav-btn" id="p1PrevBtn" style="width:36px;height:36px;">◀</button>
+        <span>${p1Idx+1} / ${p1Order.length}</span>
+        <button class="nav-btn" id="p1NextBtn" style="width:36px;height:36px;">▶</button>
+      </div>
+    </div>
+    <div class="listen-card">
+      <div class="p1-scene-wrap">${item.scene_svg}</div>
+      <div class="listen-play-row">
+        <button class="big-play-btn" id="p1PlayBtn" ${canSpeak?'':'disabled'}>▶ 播放四個敘述</button>
+      </div>
+      <div class="transcript-toggle"><button id="p1ToggleText">${p1ShowText ? '隱藏文字' : '顯示文字（非正式練習）'}</button></div>
+      <div class="p5-options">${optsHtml}</div>
+      ${explainHtml}
+      <div class="reading-actions">
+        ${!checked ? `<button class="icon-btn" id="p1CheckBtn" ${p1Selected===null?'disabled':''}>提交答案</button>` : `<button class="icon-btn" id="p1RetryBtn">🔄 重新作答</button>`}
+      </div>
+    </div>
+  `;
+
+  document.getElementById("p1PlayBtn").addEventListener("click", ()=>{
+    speakSequence(item.options);
+  });
+  container.querySelectorAll(".mini-speak-btn").forEach(btn=>{
+    btn.addEventListener("click", (e)=>{ e.stopPropagation(); speak(decodeURIComponent(btn.dataset.speak)); });
+  });
+  document.getElementById("p1ToggleText").addEventListener("click", ()=>{ p1ShowText = !p1ShowText; renderStage(); });
+  if(!checked){
+    container.querySelectorAll(".q-opt").forEach(btn=>{
+      btn.addEventListener("click", ()=>{ p1Selected = Number(btn.dataset.oi); renderStage(); });
+    });
+  }
+  document.getElementById("p1CheckBtn")?.addEventListener("click", ()=>{
+    p1Checked = true;
+    p1Progress[item.id] = true; saveJSON("toeic-p1-progress", p1Progress); pushCloudPart("p1", p1Progress);
+    renderStage();
+  });
+  document.getElementById("p1RetryBtn")?.addEventListener("click", ()=>{
+    p1Checked = false; p1Selected = null; p1ShowText = false;
+    renderStage();
+  });
+  document.getElementById("p1PrevBtn").addEventListener("click", ()=>{
+    speechSynthesis.cancel();
+    p1Idx = (p1Idx-1+p1Order.length)%p1Order.length; p1Selected=null; p1Checked=false; p1ShowText=false;
+    renderStage();
+  });
+  document.getElementById("p1NextBtn").addEventListener("click", ()=>{
+    speechSynthesis.cancel();
+    p1Idx = (p1Idx+1)%p1Order.length; p1Selected=null; p1Checked=false; p1ShowText=false;
+    renderStage();
+  });
 }
 
 function renderP2(container){
@@ -1431,6 +1536,11 @@ async function loadP6(){
   p6Order = p6Items.map(it=>it.id);
   if(mode === "grammar" && grammarPart === "p6") renderStage();
 }
+async function loadP1(){
+  p1Items = await loadJSONData("data/part1.json", FALLBACK_P1);
+  p1Order = p1Items.map(it=>it.id);
+  if(mode === "listening" && listeningPart === "p1") renderStage();
+}
 async function loadP2(){
   p2Items = await loadJSONData("data/part2.json", FALLBACK_P2);
   p2Order = p2Items.map(it=>it.id);
@@ -1451,6 +1561,7 @@ loadVocab();
 loadReading();
 loadP5();
 loadP6();
+loadP1();
 loadP2();
 loadP3();
 loadP4();
@@ -1484,7 +1595,7 @@ loadP4();
     signOut: () => signOut(auth)
   };
 
-  const PROGRESS_KEYS = ["vocab","reading","p5","p6","p2","p3","p4"];
+  const PROGRESS_KEYS = ["vocab","reading","p5","p6","p1","p2","p3","p4"];
 
   window.cloudSync = {
     async loadProgress(uid){
