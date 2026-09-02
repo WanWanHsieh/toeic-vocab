@@ -232,10 +232,18 @@
   @media (prefers-reduced-motion: reduce){
     .flashcard, .speak-btn, .progress-fill{ transition:none !important; }
   }
+
+  .auth-bar{ display:flex; justify-content:flex-end; align-items:center; gap:10px; margin-bottom:6px; font-size:13px; color:var(--text-muted); }
+  .auth-user{ display:flex; align-items:center; gap:8px; }
+  .auth-avatar{ width:24px; height:24px; border-radius:50%; }
+  .auth-btn{ background:var(--accent); color:var(--accent-contrast); border:none; padding:7px 14px; border-radius:8px; font-size:13px; font-weight:600; cursor:pointer; }
+  .auth-btn.secondary{ background:var(--surface-2); color:var(--text-muted); border:1px solid var(--border); }
+  .sync-note{ font-family:"IBM Plex Mono",monospace; font-size:11px; }
 </style>
 </head>
 <body>
 <div class="app">
+  <div class="auth-bar" id="authBar"></div>
   <div class="top">
     <div class="brand">
       <span class="kicker">TOEIC Core Vocabulary</span>
@@ -282,7 +290,7 @@
 
   <div class="stage" id="stage"></div>
 
-  <footer class="note">進度儲存在此瀏覽器（localStorage），換裝置或清除瀏覽器資料會重新開始。發音使用瀏覽器內建的 Web Speech API。</footer>
+  <footer class="note" id="footerNote">進度預設儲存在此瀏覽器（localStorage）。登入 Google 帳號後，進度會同步到雲端，換裝置也看得到。發音使用瀏覽器內建的 Web Speech API。</footer>
 </div>
 
 <script>
@@ -337,15 +345,87 @@ let readingSets = [];
 let readingOrder = [];
 let readingIdx = 0;
 let readingDocTab = {};
-let readingAnswers = {};
-let readingChecked = {};
+let readingAnswers = loadReadingAnswers();
+let readingChecked = loadReadingChecked();
+
+let currentUser = null;
+let cloudSyncing = false; // true while we're applying a cloud snapshot, to avoid re-uploading it right back
 
 function loadProgress(){
   try{ return JSON.parse(localStorage.getItem("toeic-vocab-progress")||"{}"); }catch(e){ return {}; }
 }
 function saveProgress(){
   try{ localStorage.setItem("toeic-vocab-progress", JSON.stringify(progress)); }catch(e){}
+  pushCloudVocab();
 }
+function loadReadingAnswers(){
+  try{ return JSON.parse(localStorage.getItem("toeic-reading-answers")||"{}"); }catch(e){ return {}; }
+}
+function loadReadingChecked(){
+  try{ return JSON.parse(localStorage.getItem("toeic-reading-checked")||"{}"); }catch(e){ return {}; }
+}
+function saveReadingProgress(){
+  try{
+    localStorage.setItem("toeic-reading-answers", JSON.stringify(readingAnswers));
+    localStorage.setItem("toeic-reading-checked", JSON.stringify(readingChecked));
+  }catch(e){}
+  pushCloudReading();
+}
+
+function pushCloudVocab(){
+  if(cloudSyncing || !currentUser || !window.cloudSync) return;
+  window.cloudSync.saveVocab(currentUser.uid, progress).catch(()=>{});
+}
+function pushCloudReading(){
+  if(cloudSyncing || !currentUser || !window.cloudSync) return;
+  window.cloudSync.saveReading(currentUser.uid, {answers: readingAnswers, checked: readingChecked}).catch(()=>{});
+}
+
+function renderAuthBar(){
+  const bar = document.getElementById("authBar");
+  if(currentUser){
+    bar.innerHTML = `
+      <span class="sync-note">☁️ 進度已同步</span>
+      <div class="auth-user">
+        ${currentUser.photoURL ? `<img class="auth-avatar" src="${currentUser.photoURL}" referrerpolicy="no-referrer">` : ''}
+        <span>${currentUser.displayName || currentUser.email || ''}</span>
+      </div>
+      <button class="auth-btn secondary" id="signOutBtn">登出</button>
+    `;
+    document.getElementById("signOutBtn").addEventListener("click", ()=> window.cloudAuth?.signOut());
+  }else{
+    bar.innerHTML = `<button class="auth-btn" id="signInBtn">使用 Google 登入以同步進度</button>`;
+    document.getElementById("signInBtn").addEventListener("click", ()=> window.cloudAuth?.signIn());
+  }
+}
+
+window.addEventListener("cloud-auth-changed", async (e)=>{
+  currentUser = e.detail.user;
+  renderAuthBar();
+  if(!currentUser || !window.cloudSync) return;
+  try{
+    cloudSyncing = true;
+    const cloud = await window.cloudSync.loadProgress(currentUser.uid);
+    if(cloud.vocab){
+      progress = cloud.vocab;
+      try{ localStorage.setItem("toeic-vocab-progress", JSON.stringify(progress)); }catch(err){}
+    }
+    if(cloud.reading){
+      readingAnswers = cloud.reading.answers || {};
+      readingChecked = cloud.reading.checked || {};
+      try{
+        localStorage.setItem("toeic-reading-answers", JSON.stringify(readingAnswers));
+        localStorage.setItem("toeic-reading-checked", JSON.stringify(readingChecked));
+      }catch(err){}
+    }
+    cloudSyncing = false;
+    if(!cloud.vocab) pushCloudVocab();
+    if(!cloud.reading) pushCloudReading();
+    render();
+  }catch(err){
+    cloudSyncing = false;
+  }
+});
 function statusOf(id){ return progress[id] || null; }
 function setStatus(id, status){
   if(progress[id] === status){ delete progress[id]; }
@@ -686,8 +766,10 @@ function renderReadingMode(container){
       <div class="reading-tag">
         <span class="chip cat">${READING_TYPE_LABELS[set.type]}</span>
         <span class="chip pos">${READING_CATEGORY_LABELS[set.category] || set.category}</span>
+        ${checked ? `<span class="chip pos" style="background:var(--success-soft);color:var(--success);">已完成</span>` : ''}
       </div>
       <div class="reading-nav">
+        <span>本篩選已完成 ${finalList.filter(id=>readingChecked[id]).length} / ${finalList.length}</span>
         <button class="nav-btn" id="readingPrevBtn" title="上一篇" style="width:36px;height:36px;">◀</button>
         <span>${readingIdx+1} / ${finalList.length}</span>
         <button class="nav-btn" id="readingNextBtn" title="下一篇" style="width:36px;height:36px;">▶</button>
@@ -715,17 +797,20 @@ function renderReadingMode(container){
         const qi = Number(btn.dataset.qi), oi = Number(btn.dataset.oi);
         if(!readingAnswers[set.id]) readingAnswers[set.id] = {};
         readingAnswers[set.id][qi] = oi;
+        saveReadingProgress();
         renderStage();
       });
     });
   }
   document.getElementById("checkAnswersBtn")?.addEventListener("click", ()=>{
     readingChecked[set.id] = true;
+    saveReadingProgress();
     renderStage();
   });
   document.getElementById("retryBtn")?.addEventListener("click", ()=>{
     readingChecked[set.id] = false;
     readingAnswers[set.id] = {};
+    saveReadingProgress();
     renderStage();
   });
   document.getElementById("readingPrevBtn").addEventListener("click", ()=>{
@@ -784,6 +869,58 @@ async function loadReading(){
 
 loadVocab();
 loadReading();
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
+  import {
+    getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged
+  } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js";
+  import {
+    getFirestore, doc, getDoc, setDoc
+  } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyD98VuESGm9Q_qy-LMH0lEInO9vQ3i5g0g",
+    authDomain: "toeic-vocab-c0461.firebaseapp.com",
+    projectId: "toeic-vocab-c0461",
+    storageBucket: "toeic-vocab-c0461.firebasestorage.app",
+    messagingSenderId: "23914630655",
+    appId: "1:23914630655:web:5b00a2717cda6e1494ebca"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+  const provider = new GoogleAuthProvider();
+
+  window.cloudAuth = {
+    signIn: () => signInWithPopup(auth, provider).catch(err => alert("登入失敗：" + err.message)),
+    signOut: () => signOut(auth)
+  };
+
+  window.cloudSync = {
+    async loadProgress(uid){
+      const [vocabSnap, readingSnap] = await Promise.all([
+        getDoc(doc(db, "users", uid, "progress", "vocab")),
+        getDoc(doc(db, "users", uid, "progress", "reading"))
+      ]);
+      return {
+        vocab: vocabSnap.exists() ? vocabSnap.data().data : null,
+        reading: readingSnap.exists() ? readingSnap.data().data : null
+      };
+    },
+    saveVocab(uid, data){
+      return setDoc(doc(db, "users", uid, "progress", "vocab"), { data, updatedAt: Date.now() });
+    },
+    saveReading(uid, data){
+      return setDoc(doc(db, "users", uid, "progress", "reading"), { data, updatedAt: Date.now() });
+    }
+  };
+
+  onAuthStateChanged(auth, (user)=>{
+    window.dispatchEvent(new CustomEvent("cloud-auth-changed", { detail: { user } }));
+  });
 </script>
 </body>
 </html>
