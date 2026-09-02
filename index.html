@@ -194,6 +194,40 @@
   .opt-btn:disabled{ cursor:default; }
   .quiz-next{ margin-top:20px; }
 
+  /* Reading */
+  .reading-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:10px; }
+  .reading-tag{ display:flex; gap:8px; align-items:center; }
+  .reading-nav{ display:flex; gap:8px; align-items:center; font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--text-muted); }
+  .reading-layout{ display:grid; grid-template-columns:1fr 1fr; gap:20px; align-items:start; }
+  @media (max-width:760px){ .reading-layout{ grid-template-columns:1fr; } }
+  .doc-tabs{ display:flex; gap:6px; margin-bottom:10px; flex-wrap:wrap; }
+  .doc-tab{ border:1px solid var(--border); background:var(--surface-2); color:var(--text-muted); padding:6px 14px; border-radius:8px 8px 0 0; font-size:13px; font-weight:600; cursor:pointer; }
+  .doc-tab[aria-selected="true"]{ background:var(--surface); color:var(--accent); border-bottom-color:var(--surface); }
+  .doc-card{ background:var(--surface); border:1px solid var(--border); border-radius:12px; box-shadow:var(--shadow); padding:22px 24px; }
+  .doc-title{ font-weight:700; font-size:13px; letter-spacing:.06em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
+  .doc-meta{ display:flex; flex-direction:column; gap:2px; margin-bottom:14px; padding-bottom:14px; border-bottom:1px dashed var(--border); font-size:13.5px; }
+  .doc-meta .row2{ display:flex; gap:6px; }
+  .doc-meta .row2 .label{ color:var(--text-muted); min-width:60px; }
+  .doc-para{ margin:0 0 12px; line-height:1.75; font-size:14.5px; white-space:pre-line; }
+  .doc-para:last-child{ margin-bottom:0; }
+  .doc-table-wrap{ overflow-x:auto; margin-top:10px; }
+  .doc-table{ border-collapse:collapse; width:100%; font-size:13.5px; }
+  .doc-table th, .doc-table td{ border:1px solid var(--border); padding:7px 10px; text-align:left; white-space:nowrap; }
+  .doc-table th{ background:var(--surface-2); color:var(--text-muted); font-weight:600; }
+  .questions-col{ display:flex; flex-direction:column; gap:16px; }
+  .q-card{ background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:16px 18px; }
+  .q-head{ font-weight:600; font-size:14.5px; margin-bottom:2px; }
+  .q-head-zh{ color:var(--text-muted); font-size:12.5px; margin-bottom:10px; }
+  .q-opt{ display:block; width:100%; text-align:left; background:var(--surface-2); border:1px solid var(--border); color:var(--text); padding:9px 12px; border-radius:8px; font-size:13.5px; cursor:pointer; margin-bottom:7px; }
+  .q-opt:last-child{ margin-bottom:0; }
+  .q-opt[aria-pressed="true"]{ border-color:var(--accent); background:var(--accent-soft); }
+  .q-opt.correct{ background:var(--success-soft); border-color:var(--success); color:var(--success); }
+  .q-opt.wrong{ background:var(--danger-soft); border-color:var(--danger); color:var(--danger); }
+  .q-opt:disabled{ cursor:default; }
+  .q-explain{ margin-top:10px; padding-top:10px; border-top:1px dashed var(--border); font-size:13px; color:var(--text-muted); line-height:1.6; }
+  .reading-actions{ display:flex; justify-content:center; gap:10px; margin-top:20px; }
+  .reading-score{ text-align:center; font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--text-muted); margin-top:14px; }
+
   footer.note{ text-align:center; color:var(--text-muted); font-size:12px; margin-top:36px; }
 
   @media (prefers-reduced-motion: reduce){
@@ -219,14 +253,32 @@
     <button class="tab" data-mode="card" role="tab" aria-selected="true">字卡模式</button>
     <button class="tab" data-mode="list" role="tab" aria-selected="false">單字列表</button>
     <button class="tab" data-mode="quiz" role="tab" aria-selected="false">小測驗</button>
+    <button class="tab" data-mode="reading" role="tab" aria-selected="false">閱讀練習</button>
   </div>
 
-  <div class="controls">
+  <div class="controls" id="vocabControls">
     <input type="search" id="searchInput" placeholder="搜尋單字或中文意思…">
     <select id="categorySelect"></select>
     <label class="chk"><input type="checkbox" id="onlyUnknown"> 只看待複習</label>
     <button class="icon-btn" id="shuffleBtn">🔀 隨機排序</button>
     <button class="icon-btn" id="resetBtn">↺ 重設進度</button>
+  </div>
+
+  <div class="controls" id="readingControls" style="display:none;">
+    <select id="readingTypeSelect">
+      <option value="all">全部題型</option>
+      <option value="single">單篇文章</option>
+      <option value="double">雙篇文章</option>
+      <option value="triple">三篇文章</option>
+    </select>
+    <select id="readingCategorySelect">
+      <option value="all">全部類型</option>
+      <option value="correspondence">商業書信</option>
+      <option value="advertisement">廣告／徵才</option>
+      <option value="notice">公告／新聞稿</option>
+      <option value="form">表單／單據</option>
+    </select>
+    <button class="icon-btn" id="readingShuffleBtn">🔀 隨機排序</button>
   </div>
 
   <div class="stage" id="stage"></div>
@@ -255,6 +307,23 @@ const FALLBACK_VOCAB = [
   {word:"invoice", ipa:"/ˈɪnvɔɪs/", pos:"n.", meaning_zh:"發票；請款單", example_en:"The invoice must be paid within thirty days.", example_zh:"這張請款單必須在三十天內付清。", category:"finance"}
 ];
 
+const READING_TYPE_LABELS = {single:"單篇文章", double:"雙篇文章", triple:"三篇文章"};
+const READING_CATEGORY_LABELS = {correspondence:"商業書信", advertisement:"廣告／徵才", notice:"公告／新聞稿", form:"表單／單據"};
+
+/* Tiny fallback set — only used if data/toeic_reading.json fails to load. */
+const FALLBACK_READING = [
+  {
+    id:0, type:"single", category:"correspondence",
+    passages:[{ kind:"email", title:"E-mail",
+      meta:[{label:"From:",value:"j.chen@brightway-logistics.com"},{label:"To:",value:"customer.service@parkviewhotel.com"},{label:"Subject:",value:"Delayed Shipment Inquiry"},{label:"Date:",value:"March 4"}],
+      paragraphs:["Dear Customer Service Team,","I am writing to ask about the status of my recent order (#4482), which was supposed to arrive on March 1 but has not yet been delivered.","Please let me know the expected delivery date at your earliest convenience.","Sincerely,\nJ. Chen"],
+      table:null }],
+    questions:[
+      {question_en:"Why did Mr. Chen write the e-mail?", question_zh:"陳先生為什麼寫這封信？", options:["To cancel an order","To ask about a delayed delivery","To request a refund","To complain about a product's quality"], answer_index:1, explanation_zh:"信件開頭就說明是詢問訂單 #4482 延遲送達的狀況，所以答案是 (B)。"}
+    ]
+  }
+];
+
 /* ---------- State ---------- */
 let words = [];
 let order = [];
@@ -264,6 +333,13 @@ let flipped = false;
 let progress = loadProgress();
 let quizWord = null;
 let quizLocked = false;
+
+let readingSets = [];
+let readingOrder = [];
+let readingIdx = 0;
+let readingDocTab = {};
+let readingAnswers = {};
+let readingChecked = {};
 
 function loadProgress(){
   try{ return JSON.parse(localStorage.getItem("toeic-vocab-progress")||"{}"); }catch(e){ return {}; }
@@ -333,8 +409,29 @@ document.querySelectorAll(".tab").forEach(btn=>{
     document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected", b===btn?"true":"false"));
     cursor = 0; flipped = false; listPage = 1;
     if(mode === "quiz") quizWord = null;
+    document.getElementById("vocabControls").style.display = mode === "reading" ? "none" : "flex";
+    document.getElementById("readingControls").style.display = mode === "reading" ? "flex" : "none";
     renderStage();
   });
+});
+
+function readingFilterList(){
+  const type = document.getElementById("readingTypeSelect").value;
+  const cat = document.getElementById("readingCategorySelect").value;
+  return readingSets.filter(s=>{
+    if(type !== "all" && s.type !== type) return false;
+    if(cat !== "all" && s.category !== cat) return false;
+    return true;
+  });
+}
+document.getElementById("readingTypeSelect").addEventListener("change", ()=>{ readingIdx = 0; renderStage(); });
+document.getElementById("readingCategorySelect").addEventListener("change", ()=>{ readingIdx = 0; renderStage(); });
+document.getElementById("readingShuffleBtn").addEventListener("click", ()=>{
+  const list = readingFilterList();
+  for(let i=list.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [list[i],list[j]]=[list[j],list[i]]; }
+  readingOrder = list.map(s=>s.id);
+  readingIdx = 0;
+  renderStage();
 });
 
 /* ---------- Render: stats ---------- */
@@ -527,11 +624,128 @@ function renderQuizMode(container){
   });
 }
 
+/* ---------- Render: reading mode ---------- */
+function docLabel(kind){
+  return {email:"E-mail", memo:"Memo", letter:"Letter", ad:"Advertisement", notice:"Notice", article:"Article", form:"Form"}[kind] || kind;
+}
+function renderDoc(doc){
+  const metaHtml = (doc.meta && doc.meta.length) ? `<div class="doc-meta">${doc.meta.map(m=>`<div class="row2"><span class="label">${m.label}</span><span>${m.value}</span></div>`).join("")}</div>` : "";
+  const parasHtml = (doc.paragraphs && doc.paragraphs.length) ? doc.paragraphs.map(p=>`<p class="doc-para">${p}</p>`).join("") : "";
+  const tableHtml = doc.table ? `<div class="doc-table-wrap"><table class="doc-table"><thead><tr>${doc.table.headers.map(h=>`<th>${h}</th>`).join("")}</tr></thead><tbody>${doc.table.rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>` : "";
+  return `<div class="doc-title">${doc.title || docLabel(doc.kind)}</div>${metaHtml}${parasHtml}${tableHtml}`;
+}
+
+function renderReadingMode(container){
+  if(readingSets.length === 0){
+    container.innerHTML = `<div class="empty-state">正在載入閱讀文章…</div>`;
+    return;
+  }
+  const list = readingFilterList();
+  const filteredOrder = readingOrder.filter(id=>list.some(s=>s.id===id));
+  const finalList = filteredOrder.length ? filteredOrder : list.map(s=>s.id);
+  if(finalList.length === 0){
+    container.innerHTML = `<div class="empty-state">找不到符合條件的文章，試著調整篩選條件。</div>`;
+    return;
+  }
+  if(readingIdx >= finalList.length) readingIdx = 0;
+  const set = readingSets.find(s=>s.id===finalList[readingIdx]);
+  const activeDocIdx = readingDocTab[set.id] ?? 0;
+  const answers = readingAnswers[set.id] || {};
+  const checked = !!readingChecked[set.id];
+
+  const docTabsHtml = set.passages.length > 1
+    ? `<div class="doc-tabs">${set.passages.map((d,i)=>`<button class="doc-tab" data-doc="${i}" aria-selected="${i===activeDocIdx}">${d.title || docLabel(d.kind)}</button>`).join("")}</div>`
+    : "";
+
+  let correctCount = 0;
+  const questionsHtml = set.questions.map((q,qi)=>{
+    const chosen = answers[qi];
+    const showResult = checked && chosen !== undefined;
+    if(showResult && chosen === q.answer_index) correctCount++;
+    const optsHtml = q.options.map((opt,oi)=>{
+      let cls = "q-opt";
+      if(checked){
+        if(oi === q.answer_index) cls += " correct";
+        else if(oi === chosen) cls += " wrong";
+      }
+      return `<button class="${cls}" data-qi="${qi}" data-oi="${oi}" aria-pressed="${chosen===oi}" ${checked?'disabled':''}>${String.fromCharCode(65+oi)}. ${opt}</button>`;
+    }).join("");
+    const explainHtml = (checked && chosen !== undefined) ? `<div class="q-explain">${chosen===q.answer_index ? '✅ 答對了！' : '❌ 答錯了。'} 正確答案是 (${String.fromCharCode(65+q.answer_index)})。${q.explanation_zh}</div>` : "";
+    return `
+      <div class="q-card">
+        <div class="q-head">${qi+1}. ${q.question_en}</div>
+        <div class="q-head-zh">${q.question_zh || ""}</div>
+        ${optsHtml}
+        ${explainHtml}
+      </div>
+    `;
+  }).join("");
+
+  const answeredCount = Object.keys(answers).length;
+
+  container.innerHTML = `
+    <div class="reading-head">
+      <div class="reading-tag">
+        <span class="chip cat">${READING_TYPE_LABELS[set.type]}</span>
+        <span class="chip pos">${READING_CATEGORY_LABELS[set.category] || set.category}</span>
+      </div>
+      <div class="reading-nav">
+        <button class="nav-btn" id="readingPrevBtn" title="上一篇" style="width:36px;height:36px;">◀</button>
+        <span>${readingIdx+1} / ${finalList.length}</span>
+        <button class="nav-btn" id="readingNextBtn" title="下一篇" style="width:36px;height:36px;">▶</button>
+      </div>
+    </div>
+    <div class="reading-layout">
+      <div>
+        ${docTabsHtml}
+        <div class="doc-card">${renderDoc(set.passages[activeDocIdx])}</div>
+      </div>
+      <div class="questions-col">${questionsHtml}</div>
+    </div>
+    <div class="reading-actions">
+      ${!checked ? `<button class="icon-btn" id="checkAnswersBtn" ${answeredCount===0?'disabled':''}>提交答案（已作答 ${answeredCount}/${set.questions.length}）</button>` : `<button class="icon-btn" id="retryBtn">🔄 重新作答</button>`}
+    </div>
+    ${checked ? `<div class="reading-score">本篇答對 ${correctCount} / ${set.questions.length} 題</div>` : ""}
+  `;
+
+  container.querySelectorAll(".doc-tab").forEach(btn=>{
+    btn.addEventListener("click", ()=>{ readingDocTab[set.id] = Number(btn.dataset.doc); renderStage(); });
+  });
+  if(!checked){
+    container.querySelectorAll(".q-opt").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        const qi = Number(btn.dataset.qi), oi = Number(btn.dataset.oi);
+        if(!readingAnswers[set.id]) readingAnswers[set.id] = {};
+        readingAnswers[set.id][qi] = oi;
+        renderStage();
+      });
+    });
+  }
+  document.getElementById("checkAnswersBtn")?.addEventListener("click", ()=>{
+    readingChecked[set.id] = true;
+    renderStage();
+  });
+  document.getElementById("retryBtn")?.addEventListener("click", ()=>{
+    readingChecked[set.id] = false;
+    readingAnswers[set.id] = {};
+    renderStage();
+  });
+  document.getElementById("readingPrevBtn").addEventListener("click", ()=>{
+    readingIdx = (readingIdx-1+finalList.length)%finalList.length;
+    renderStage();
+  });
+  document.getElementById("readingNextBtn").addEventListener("click", ()=>{
+    readingIdx = (readingIdx+1)%finalList.length;
+    renderStage();
+  });
+}
+
 /* ---------- Master render ---------- */
 function renderStage(){
   const container = document.getElementById("stage");
   if(mode === "card") renderCardMode(container);
   else if(mode === "list") renderListMode(container);
+  else if(mode === "reading") renderReadingMode(container);
   else renderQuizMode(container);
 }
 function render(){
@@ -557,7 +771,21 @@ async function loadVocab(){
   render();
 }
 
+async function loadReading(){
+  try{
+    const res = await fetch("data/toeic_reading.json");
+    if(!res.ok) throw new Error("HTTP " + res.status);
+    const data = await res.json();
+    readingSets = data.map((s,i)=>({...s, id: s.id ?? i}));
+  }catch(err){
+    readingSets = FALLBACK_READING;
+  }
+  readingOrder = readingSets.map(s=>s.id);
+  if(mode === "reading") renderStage();
+}
+
 loadVocab();
+loadReading();
 </script>
 </body>
 </html>
