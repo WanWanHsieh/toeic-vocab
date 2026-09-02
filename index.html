@@ -1,0 +1,567 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>多益單字通</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --bg:#f6f3ec;
+    --surface:#ffffff;
+    --surface-2:#efeae0;
+    --border:#ddd5c7;
+    --text:#262420;
+    --text-muted:#6e6658;
+    --accent:#1e4b43;
+    --accent-contrast:#ffffff;
+    --accent-soft:#dceae6;
+    --gold:#a9834f;
+    --gold-soft:#f1e6d3;
+    --danger:#b3492f;
+    --danger-soft:#f4e2dc;
+    --success:#3e7b58;
+    --success-soft:#dfeee4;
+    --shadow: 0 1px 2px rgba(38,36,32,.06), 0 8px 24px -12px rgba(38,36,32,.18);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#15181a;
+      --surface:#1d2124;
+      --surface-2:#23282b;
+      --border:#33393d;
+      --text:#edeae3;
+      --text-muted:#a7a296;
+      --accent:#4fa98f;
+      --accent-contrast:#08201b;
+      --accent-soft:#1f3a34;
+      --gold:#d8b378;
+      --gold-soft:#3a3021;
+      --danger:#e2836a;
+      --danger-soft:#3a2620;
+      --success:#4fa98f;
+      --success-soft:#1f3a34;
+      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 28px -14px rgba(0,0,0,.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#15181a;
+    --surface:#1d2124;
+    --surface-2:#23282b;
+    --border:#33393d;
+    --text:#edeae3;
+    --text-muted:#a7a296;
+    --accent:#4fa98f;
+    --accent-contrast:#08201b;
+    --accent-soft:#1f3a34;
+    --gold:#d8b378;
+    --gold-soft:#3a3021;
+    --danger:#e2836a;
+    --danger-soft:#3a2620;
+    --success:#4fa98f;
+    --success-soft:#1f3a34;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 28px -14px rgba(0,0,0,.6);
+  }
+
+  *{ box-sizing:border-box; }
+  html,body{ margin:0; }
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{ text-wrap:balance; }
+  .mono{ font-family:"IBM Plex Mono", ui-monospace, Consolas, monospace; }
+  button{ font-family:inherit; }
+
+  .app{ max-width:920px; margin:0 auto; padding:28px 20px 64px; }
+
+  .top{ display:flex; align-items:flex-end; justify-content:space-between; gap:16px; flex-wrap:wrap; margin-bottom:20px; }
+  .brand{ display:flex; flex-direction:column; gap:2px; }
+  .brand .kicker{ font-family:"IBM Plex Mono", monospace; font-size:11px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); }
+  .brand h1{ font-family:"Fraunces", Georgia, serif; font-weight:700; font-size:clamp(26px,4vw,34px); margin:0; }
+  .stats{ display:flex; gap:18px; font-family:"IBM Plex Mono", monospace; font-size:13px; color:var(--text-muted); }
+  .stats b{ color:var(--text); font-size:16px; display:block; font-weight:600; }
+
+  .tabs{ display:flex; gap:6px; background:var(--surface-2); border:1px solid var(--border); border-radius:999px; padding:4px; width:max-content; margin-bottom:16px; }
+  .tab{ border:none; background:transparent; color:var(--text-muted); padding:8px 18px; border-radius:999px; font-size:14px; font-weight:600; cursor:pointer; transition:background .15s,color .15s; }
+  .tab[aria-selected="true"]{ background:var(--accent); color:var(--accent-contrast); }
+  .tab:not([aria-selected="true"]):hover{ color:var(--text); }
+
+  .controls{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:22px; }
+  .controls input[type="search"]{
+    flex:1 1 220px; background:var(--surface); border:1px solid var(--border); color:var(--text);
+    padding:10px 14px; border-radius:10px; font-size:14px;
+  }
+  .controls select{
+    background:var(--surface); border:1px solid var(--border); color:var(--text);
+    padding:10px 12px; border-radius:10px; font-size:14px; max-width:180px;
+  }
+  .icon-btn{
+    background:var(--surface); border:1px solid var(--border); color:var(--text);
+    padding:9px 14px; border-radius:10px; font-size:14px; font-weight:500; cursor:pointer; display:inline-flex; align-items:center; gap:6px;
+  }
+  .icon-btn:hover{ border-color:var(--accent); color:var(--accent); }
+  .controls label.chk{ display:flex; align-items:center; gap:6px; font-size:13px; color:var(--text-muted); white-space:nowrap; }
+
+  .stage{ min-height:360px; }
+
+  /* Flashcard */
+  .card-nav-row{ display:flex; justify-content:center; align-items:center; gap:14px; margin-top:20px; flex-wrap:wrap; }
+  .card-wrap{ perspective:1600px; max-width:560px; margin:0 auto; }
+  .flashcard{
+    position:relative; min-height:320px; border-radius:18px; cursor:pointer;
+    transform-style:preserve-3d; transition:transform .5s cubic-bezier(.2,.8,.2,1);
+  }
+  .flashcard.flipped{ transform:rotateY(180deg); }
+  .face{
+    position:absolute; inset:0; backface-visibility:hidden; border-radius:18px;
+    background:var(--surface); border:1px solid var(--border); box-shadow:var(--shadow);
+    padding:26px 26px 20px; display:flex; flex-direction:column;
+  }
+  .face.back{ transform:rotateY(180deg); }
+  .face::before{
+    content:""; position:absolute; left:-9px; top:50%; width:18px; height:18px; border-radius:50%;
+    background:var(--bg); border:1px solid var(--border); transform:translateY(-50%);
+  }
+  .face::after{
+    content:""; position:absolute; right:-9px; top:50%; width:18px; height:18px; border-radius:50%;
+    background:var(--bg); border:1px solid var(--border); transform:translateY(-50%);
+  }
+  .face-top{ display:flex; justify-content:space-between; align-items:flex-start; }
+  .chip{ font-family:"IBM Plex Mono", monospace; font-size:11px; letter-spacing:.06em; padding:4px 10px; border-radius:999px; text-transform:uppercase; }
+  .chip.cat{ background:var(--gold-soft); color:var(--gold); }
+  .chip.pos{ background:var(--accent-soft); color:var(--accent); }
+  .word-block{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; text-align:center; padding:18px 0; }
+  .word{ font-family:"Fraunces", Georgia, serif; font-weight:600; font-size:clamp(30px,5vw,42px); margin:0; }
+  .ipa{ color:var(--accent); font-size:16px; }
+  .speak-row{ display:flex; gap:10px; align-items:center; justify-content:center; }
+  .speak-btn{
+    background:var(--accent-soft); color:var(--accent); border:none; width:42px; height:42px; border-radius:50%;
+    font-size:18px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:transform .12s;
+  }
+  .speak-btn:hover{ transform:scale(1.08); }
+  .speak-btn:disabled{ opacity:.4; cursor:not-allowed; }
+  .hint{ text-align:center; font-size:12px; color:var(--text-muted); margin-top:auto; }
+  .meaning{ font-family:"Fraunces", Georgia, serif; font-size:26px; font-weight:600; text-align:center; margin:6px 0 14px; }
+  .example{ background:var(--surface-2); border-radius:12px; padding:14px 16px; font-size:14px; line-height:1.6; color:var(--text); display:flex; gap:10px; align-items:flex-start; }
+  .example .txt{ font-style:italic; }
+  .example .txt-zh{ color:var(--text-muted); font-style:normal; margin-top:4px; }
+
+  .nav-btn{
+    background:var(--surface); border:1px solid var(--border); color:var(--text);
+    width:44px; height:44px; border-radius:50%; font-size:16px; cursor:pointer;
+  }
+  .nav-btn:hover{ border-color:var(--accent); color:var(--accent); }
+  .mark-row{ display:flex; justify-content:center; gap:10px; margin-top:16px; }
+  .mark-btn{ border:1px solid var(--border); background:var(--surface); padding:9px 16px; border-radius:10px; font-size:13px; font-weight:600; cursor:pointer; color:var(--text-muted); }
+  .mark-btn.unknown.active{ background:var(--danger-soft); border-color:var(--danger); color:var(--danger); }
+  .mark-btn.known.active{ background:var(--success-soft); border-color:var(--success); color:var(--success); }
+
+  .progress-bar{ height:6px; border-radius:999px; background:var(--surface-2); overflow:hidden; margin-top:22px; max-width:560px; margin-left:auto; margin-right:auto; }
+  .progress-fill{ height:100%; background:var(--success); border-radius:999px; transition:width .3s; }
+
+  /* List */
+  .list{ display:flex; flex-direction:column; gap:8px; }
+  .row{
+    display:grid; grid-template-columns:1fr auto auto 44px; gap:14px; align-items:start;
+    background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:12px 16px;
+  }
+  .row .w{ font-family:"Fraunces", Georgia, serif; font-weight:600; font-size:17px; }
+  .row .ipa{ font-size:13px; margin-left:8px; }
+  .row .meaning-inline{ color:var(--text-muted); font-size:13px; margin-top:2px; }
+  .row .example-inline{ font-size:12.5px; margin-top:6px; line-height:1.5; }
+  .row .example-inline .en{ font-style:italic; color:var(--text-muted); }
+  .row .example-inline .zh{ color:var(--text-muted); }
+  .row .cat-badge{ font-size:11px; color:var(--gold); font-family:"IBM Plex Mono",monospace; white-space:nowrap; padding-top:2px; }
+  .row .speak-btn{ width:36px; height:36px; font-size:15px; }
+  .empty-state{ text-align:center; color:var(--text-muted); padding:60px 20px; font-size:14px; }
+  .load-more-wrap{ display:flex; justify-content:center; padding:18px 0 6px; }
+  .list-count{ text-align:center; font-size:12px; color:var(--text-muted); margin-bottom:10px; font-family:"IBM Plex Mono",monospace; }
+
+  /* Quiz */
+  .quiz-card{ max-width:560px; margin:0 auto; background:var(--surface); border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow); padding:30px; text-align:center; }
+  .quiz-score{ font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--text-muted); text-align:center; margin-bottom:14px; }
+  .quiz-options{ display:grid; gap:10px; margin-top:22px; }
+  .opt-btn{
+    background:var(--surface-2); border:1px solid var(--border); color:var(--text); padding:13px 16px;
+    border-radius:10px; font-size:15px; cursor:pointer; text-align:left; transition:background .12s,border-color .12s;
+  }
+  .opt-btn:hover:not(:disabled){ border-color:var(--accent); }
+  .opt-btn.correct{ background:var(--success-soft); border-color:var(--success); color:var(--success); }
+  .opt-btn.wrong{ background:var(--danger-soft); border-color:var(--danger); color:var(--danger); }
+  .opt-btn:disabled{ cursor:default; }
+  .quiz-next{ margin-top:20px; }
+
+  footer.note{ text-align:center; color:var(--text-muted); font-size:12px; margin-top:36px; }
+
+  @media (prefers-reduced-motion: reduce){
+    .flashcard, .speak-btn, .progress-fill{ transition:none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="app">
+  <div class="top">
+    <div class="brand">
+      <span class="kicker">TOEIC Core Vocabulary</span>
+      <h1>多益單字通</h1>
+    </div>
+    <div class="stats">
+      <div><b id="statTotal">0</b>總字數</div>
+      <div><b id="statKnown">0</b>已熟記</div>
+      <div><b id="statUnknown">0</b>待複習</div>
+    </div>
+  </div>
+
+  <div class="tabs" role="tablist">
+    <button class="tab" data-mode="card" role="tab" aria-selected="true">字卡模式</button>
+    <button class="tab" data-mode="list" role="tab" aria-selected="false">單字列表</button>
+    <button class="tab" data-mode="quiz" role="tab" aria-selected="false">小測驗</button>
+  </div>
+
+  <div class="controls">
+    <input type="search" id="searchInput" placeholder="搜尋單字或中文意思…">
+    <select id="categorySelect"></select>
+    <label class="chk"><input type="checkbox" id="onlyUnknown"> 只看待複習</label>
+    <button class="icon-btn" id="shuffleBtn">🔀 隨機排序</button>
+    <button class="icon-btn" id="resetBtn">↺ 重設進度</button>
+  </div>
+
+  <div class="stage" id="stage"></div>
+
+  <footer class="note">進度儲存在此瀏覽器（localStorage），換裝置或清除瀏覽器資料會重新開始。發音使用瀏覽器內建的 Web Speech API。</footer>
+</div>
+
+<script>
+/* ---------- Data ---------- */
+const CATEGORY_LABELS = {
+  office:"辦公室", meetings:"會議行程", correspondence:"商業書信", email:"商業書信",
+  contracts:"合約法律", hr:"人力資源", finance:"財務會計", banking:"銀行金融",
+  marketing:"行銷業務", advertising:"廣告", manufacturing:"製造生產", logistics:"物流運輸",
+  travel:"旅遊交通", hospitality:"飯店餐飲活動", technology:"科技資訊",
+  customer_service:"客戶服務", real_estate:"不動產設施", insurance:"保險",
+  verbs_general:"常考動詞", adjectives_general:"常考形容詞副詞", media:"媒體出版",
+  health_wellness:"健康保健", education_training:"教育訓練",
+  government_public:"公家機關法規", environment_sustainability:"環保永續"
+};
+function categoryLabel(cat){ return CATEGORY_LABELS[cat] || cat; }
+
+/* Placeholder sample set — replaced with the full 500+ word dataset. */
+const VOCAB = [
+  {word:"accommodate", ipa:"/əˈkɑːmədeɪt/", pos:"v.", meaning_zh:"容納；配合(需求)", example_en:"The hotel can accommodate up to three hundred guests.", example_zh:"這間飯店最多可以容納三百位房客。", category:"hospitality"},
+  {word:"agenda", ipa:"/əˈdʒendə/", pos:"n.", meaning_zh:"議程", example_en:"Please review the agenda before tomorrow's meeting.", example_zh:"請在明天開會前先看過議程。", category:"meetings"},
+  {word:"invoice", ipa:"/ˈɪnvɔɪs/", pos:"n.", meaning_zh:"發票；請款單", example_en:"The invoice must be paid within thirty days.", example_zh:"這張請款單必須在三十天內付清。", category:"finance"},
+  {word:"reimburse", ipa:"/ˌriːɪmˈbɜːrs/", pos:"v.", meaning_zh:"償還；核銷費用", example_en:"Employees will be reimbursed for travel expenses.", example_zh:"員工的差旅費用將會獲得核銷。", category:"finance"},
+  {word:"candidate", ipa:"/ˈkændɪdət/", pos:"n.", meaning_zh:"應徵者；候選人", example_en:"Only three candidates were selected for a second interview.", example_zh:"只有三位應徵者獲選進入第二輪面試。", category:"hr"},
+  {word:"warehouse", ipa:"/ˈwerhaʊs/", pos:"n.", meaning_zh:"倉庫", example_en:"The shipment is currently stored in the warehouse.", example_zh:"這批貨目前存放在倉庫裡。", category:"logistics"},
+  {word:"itinerary", ipa:"/aɪˈtɪnəreri/", pos:"n.", meaning_zh:"行程表", example_en:"Our itinerary includes stops in Tokyo and Osaka.", example_zh:"我們的行程表包含東京與大阪兩站。", category:"travel"},
+  {word:"malfunction", ipa:"/mælˈfʌŋkʃən/", pos:"v.", meaning_zh:"故障；失靈", example_en:"The printer malfunctioned during the presentation.", example_zh:"印表機在簡報途中故障了。", category:"technology"},
+  {word:"premium", ipa:"/ˈpriːmiəm/", pos:"n.", meaning_zh:"保費；額外費用", example_en:"Your insurance premium increases if you file a claim.", example_zh:"只要申請理賠，你的保費就會提高。", category:"insurance"},
+  {word:"lease", ipa:"/liːs/", pos:"n./v.", meaning_zh:"租約；租賃", example_en:"The company decided to lease the office space for five years.", example_zh:"公司決定將這間辦公室租賃五年。", category:"real_estate"},
+  {word:"endorse", ipa:"/ɪnˈdɔːrs/", pos:"v.", meaning_zh:"背書；代言", example_en:"The athlete was paid to endorse the new sportswear line.", example_zh:"這位運動員收費代言這款新運動服飾。", category:"advertising"},
+  {word:"circulation", ipa:"/ˌsɜːrkjəˈleɪʃən/", pos:"n.", meaning_zh:"發行量；流通", example_en:"The magazine's circulation has grown steadily this year.", example_zh:"這本雜誌的發行量今年穩定成長。", category:"media"},
+  {word:"assemble", ipa:"/əˈsembl/", pos:"v.", meaning_zh:"組裝", example_en:"Workers assemble the parts on the production line.", example_zh:"作業員在生產線上組裝零件。", category:"manufacturing"},
+  {word:"inquiry", ipa:"/ɪnˈkwaɪəri/", pos:"n.", meaning_zh:"詢問；查詢", example_en:"We received an inquiry about our return policy.", example_zh:"我們收到一則關於退貨政策的詢問。", category:"customer_service"},
+  {word:"withdraw", ipa:"/wɪðˈdrɔː/", pos:"v.", meaning_zh:"提款；撤回", example_en:"You can withdraw cash from any branch.", example_zh:"你可以在任何一間分行提款。", category:"banking"},
+  {word:"promote", ipa:"/prəˈmoʊt/", pos:"v.", meaning_zh:"晉升；促銷", example_en:"She was promoted to regional manager last month.", example_zh:"她上個月被晉升為區域經理。", category:"office"},
+  {word:"negotiate", ipa:"/nɪˈɡoʊʃieɪt/", pos:"v.", meaning_zh:"協商；談判", example_en:"Both sides agreed to negotiate a lower price.", example_zh:"雙方同意協商出一個較低的價格。", category:"contracts"},
+  {word:"versatile", ipa:"/ˈvɜːrsətl/", pos:"adj.", meaning_zh:"多才多藝的；用途廣的", example_en:"This software is versatile enough for small and large teams alike.", example_zh:"這款軟體用途很廣，大小團隊都適用。", category:"adjectives_general"},
+  {word:"substantial", ipa:"/səbˈstænʃəl/", pos:"adj.", meaning_zh:"大量的；重大的", example_en:"The merger resulted in substantial cost savings.", example_zh:"這次合併帶來了大量的成本節省。", category:"adjectives_general"},
+  {word:"launch", ipa:"/lɔːntʃ/", pos:"v.", meaning_zh:"推出；發表", example_en:"The company will launch its new product next quarter.", example_zh:"公司將於下一季推出新產品。", category:"marketing"},
+  {word:"eligible", ipa:"/ˈelɪdʒəbl/", pos:"adj.", meaning_zh:"合格的；有資格的", example_en:"Full-time staff are eligible for health benefits.", example_zh:"全職員工才有資格享有健康福利。", category:"hr"},
+  {word:"draft", ipa:"/dræft/", pos:"n./v.", meaning_zh:"草稿；起草", example_en:"Please send me a draft of the contract by Friday.", example_zh:"請在星期五前把合約草稿寄給我。", category:"contracts"},
+  {word:"outsource", ipa:"/ˈaʊtsɔːrs/", pos:"v.", meaning_zh:"外包", example_en:"The firm decided to outsource its customer support.", example_zh:"公司決定將客服工作外包出去。", category:"office"},
+  {word:"forecast", ipa:"/ˈfɔːrkæst/", pos:"n./v.", meaning_zh:"預測", example_en:"Analysts revised the sales forecast upward.", example_zh:"分析師將銷售預測上修了。", category:"finance"}
+];
+
+/* ---------- State ---------- */
+let words = VOCAB.map((w,i)=>({...w, id:i}));
+let order = words.map(w=>w.id);
+let cursor = 0;
+let mode = "card";
+let flipped = false;
+let progress = loadProgress();
+let quizWord = null;
+let quizLocked = false;
+
+function loadProgress(){
+  try{ return JSON.parse(localStorage.getItem("toeic-vocab-progress")||"{}"); }catch(e){ return {}; }
+}
+function saveProgress(){
+  try{ localStorage.setItem("toeic-vocab-progress", JSON.stringify(progress)); }catch(e){}
+}
+function statusOf(id){ return progress[id] || null; }
+function setStatus(id, status){
+  if(progress[id] === status){ delete progress[id]; }
+  else{ progress[id] = status; }
+  saveProgress();
+  renderStats();
+}
+
+/* ---------- Speech ---------- */
+const canSpeak = "speechSynthesis" in window;
+function speak(text){
+  if(!canSpeak) return;
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = "en-US";
+  u.rate = 0.92;
+  window.speechSynthesis.speak(u);
+}
+
+/* ---------- Filtering ---------- */
+function currentFilterList(){
+  const q = document.getElementById("searchInput").value.trim().toLowerCase();
+  const cat = document.getElementById("categorySelect").value;
+  const onlyUnknown = document.getElementById("onlyUnknown").checked;
+  return words.filter(w=>{
+    if(cat !== "all" && w.category !== cat) return false;
+    if(onlyUnknown && statusOf(w.id) === "known") return false;
+    if(q && !(w.word.toLowerCase().includes(q) || w.meaning_zh.includes(q))) return false;
+    return true;
+  });
+}
+
+/* ---------- Setup controls ---------- */
+function populateCategories(){
+  const sel = document.getElementById("categorySelect");
+  const cats = Array.from(new Set(words.map(w=>w.category))).sort();
+  sel.innerHTML = `<option value="all">全部分類</option>` + cats.map(c=>`<option value="${c}">${categoryLabel(c)}</option>`).join("");
+}
+
+document.getElementById("searchInput").addEventListener("input", ()=>{ cursor=0; listPage=1; render(); });
+document.getElementById("categorySelect").addEventListener("change", ()=>{ cursor=0; listPage=1; render(); });
+document.getElementById("onlyUnknown").addEventListener("change", ()=>{ cursor=0; listPage=1; render(); });
+document.getElementById("shuffleBtn").addEventListener("click", ()=>{
+  const list = currentFilterList();
+  for(let i=list.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [list[i],list[j]]=[list[j],list[i]]; }
+  order = list.map(w=>w.id);
+  cursor = 0; flipped = false;
+  renderStage();
+});
+document.getElementById("resetBtn").addEventListener("click", ()=>{
+  if(confirm("確定要清除所有熟記進度嗎？此動作無法復原。")){
+    progress = {};
+    saveProgress();
+    render();
+  }
+});
+document.querySelectorAll(".tab").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    mode = btn.dataset.mode;
+    document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected", b===btn?"true":"false"));
+    cursor = 0; flipped = false; listPage = 1;
+    if(mode === "quiz") quizWord = null;
+    renderStage();
+  });
+});
+
+/* ---------- Render: stats ---------- */
+function renderStats(){
+  const total = words.length;
+  const known = Object.values(progress).filter(v=>v==="known").length;
+  const unknown = Object.values(progress).filter(v=>v==="unknown").length;
+  document.getElementById("statTotal").textContent = total;
+  document.getElementById("statKnown").textContent = known;
+  document.getElementById("statUnknown").textContent = unknown;
+}
+
+/* ---------- Render: card mode ---------- */
+function renderCardMode(container){
+  const list = currentFilterList();
+  const filteredOrder = order.filter(id=>list.some(w=>w.id===id));
+  const finalList = filteredOrder.length ? filteredOrder : list.map(w=>w.id);
+  if(finalList.length === 0){
+    container.innerHTML = `<div class="empty-state">找不到符合條件的單字，試著調整搜尋或分類。</div>`;
+    return;
+  }
+  if(cursor >= finalList.length) cursor = 0;
+  const w = words.find(x=>x.id===finalList[cursor]);
+  const st = statusOf(w.id);
+
+  container.innerHTML = `
+    <div class="card-wrap">
+      <div class="flashcard ${flipped?'flipped':''}" id="flashcard">
+        <div class="face front">
+          <div class="face-top">
+            <span class="chip cat">${categoryLabel(w.category)}</span>
+            <span class="chip pos">${w.pos}</span>
+          </div>
+          <div class="word-block">
+            <p class="word">${w.word}</p>
+            <p class="ipa mono">${w.ipa}</p>
+            <div class="speak-row">
+              <button class="speak-btn" id="speakWordBtn" title="播放發音" ${canSpeak?'':'disabled'}>🔊</button>
+            </div>
+          </div>
+          <p class="hint">${canSpeak?'':'（此瀏覽器不支援語音播放）'} 點卡片查看中文意思</p>
+        </div>
+        <div class="face back">
+          <div class="face-top">
+            <span class="chip cat">${categoryLabel(w.category)}</span>
+            <span class="chip pos">${w.pos}</span>
+          </div>
+          <p class="meaning">${w.meaning_zh}</p>
+          <div class="example">
+            <button class="speak-btn" id="speakExampleBtn" style="width:32px;height:32px;font-size:14px;flex:none;" title="播放例句" ${canSpeak?'':'disabled'}>🔊</button>
+            <div>
+              <div class="txt">${w.example_en}</div>
+              ${w.example_zh ? `<div class="txt-zh">${w.example_zh}</div>` : ''}
+            </div>
+          </div>
+          <p class="hint">再點一次回到正面</p>
+        </div>
+      </div>
+    </div>
+    <div class="mark-row">
+      <button class="mark-btn unknown ${st==='unknown'?'active':''}" id="markUnknownBtn">❌ 還不熟</button>
+      <button class="mark-btn known ${st==='known'?'active':''}" id="markKnownBtn">✅ 已熟記</button>
+    </div>
+    <div class="card-nav-row">
+      <button class="nav-btn" id="prevBtn" title="上一個">◀</button>
+      <span class="mono" style="color:var(--text-muted);font-size:13px;">${cursor+1} / ${finalList.length}</span>
+      <button class="nav-btn" id="nextBtn" title="下一個">▶</button>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" style="width:${((cursor+1)/finalList.length*100).toFixed(1)}%"></div></div>
+  `;
+
+  document.getElementById("flashcard").addEventListener("click", ()=>{ flipped = !flipped; renderStage(); });
+  const sb = document.getElementById("speakWordBtn");
+  if(sb) sb.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.word); });
+  const seb = document.getElementById("speakExampleBtn");
+  if(seb) seb.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.example_en); });
+  document.getElementById("markUnknownBtn").addEventListener("click", (e)=>{ e.stopPropagation(); setStatus(w.id, "unknown"); renderStage(); });
+  document.getElementById("markKnownBtn").addEventListener("click", (e)=>{ e.stopPropagation(); setStatus(w.id, "known"); renderStage(); });
+  document.getElementById("prevBtn").addEventListener("click", ()=>{ cursor = (cursor-1+finalList.length)%finalList.length; flipped=false; renderStage(); });
+  document.getElementById("nextBtn").addEventListener("click", ()=>{ cursor = (cursor+1)%finalList.length; flipped=false; renderStage(); });
+}
+
+/* ---------- Render: list mode ---------- */
+const LIST_PAGE_SIZE = 100;
+let listPage = 1;
+
+function renderListMode(container){
+  const list = currentFilterList();
+  if(list.length === 0){
+    container.innerHTML = `<div class="empty-state">找不到符合條件的單字，試著調整搜尋或分類。</div>`;
+    return;
+  }
+  const visibleCount = Math.min(list.length, listPage * LIST_PAGE_SIZE);
+  const visible = list.slice(0, visibleCount);
+
+  container.innerHTML = `
+    <div class="list-count">顯示 ${visibleCount} / ${list.length} 筆</div>
+    <div class="list">` + visible.map(w=>{
+    const st = statusOf(w.id);
+    return `
+      <div class="row" data-id="${w.id}">
+        <div>
+          <span class="w">${w.word}</span>
+          <span class="ipa mono">${w.ipa}</span>
+          <div class="meaning-inline">${w.pos} ${w.meaning_zh}</div>
+          ${w.example_en ? `<div class="example-inline"><div class="en">${w.example_en}</div>${w.example_zh ? `<div class="zh">${w.example_zh}</div>` : ''}</div>` : ''}
+        </div>
+        <div class="cat-badge">${categoryLabel(w.category)}</div>
+        <div>
+          ${st==='known' ? '<span class="chip pos" style="background:var(--success-soft);color:var(--success);">熟記</span>' : st==='unknown' ? '<span class="chip pos" style="background:var(--danger-soft);color:var(--danger);">待複習</span>' : ''}
+        </div>
+        <button class="speak-btn" data-word="${encodeURIComponent(w.word)}" ${canSpeak?'':'disabled'} title="播放發音">🔊</button>
+      </div>
+    `;
+  }).join("") + `</div>` + (visibleCount < list.length ? `<div class="load-more-wrap"><button class="icon-btn" id="loadMoreBtn">載入更多（還有 ${list.length - visibleCount} 筆）</button></div>` : '');
+
+  container.querySelectorAll(".speak-btn").forEach(btn=>{
+    btn.addEventListener("click", ()=> speak(decodeURIComponent(btn.dataset.word)));
+  });
+  document.getElementById("loadMoreBtn")?.addEventListener("click", ()=>{
+    listPage++;
+    renderStage();
+  });
+}
+
+/* ---------- Render: quiz mode ---------- */
+function pickQuizWord(){
+  const list = currentFilterList();
+  const pool = list.length >= 4 ? list : words;
+  quizWord = pool[Math.floor(Math.random()*pool.length)];
+  const distractorsPool = words.filter(w=>w.id !== quizWord.id);
+  const distractors = [];
+  const shuffled = distractorsPool.slice().sort(()=>Math.random()-0.5);
+  for(const w of shuffled){
+    if(distractors.length >= 3) break;
+    if(w.meaning_zh !== quizWord.meaning_zh) distractors.push(w);
+  }
+  const options = [quizWord, ...distractors].sort(()=>Math.random()-0.5);
+  quizWord.options = options;
+  quizLocked = false;
+}
+
+let quizScore = {correct:0, total:0};
+
+function renderQuizMode(container){
+  if(!quizWord) pickQuizWord();
+  const w = quizWord;
+  container.innerHTML = `
+    <div class="quiz-score mono">本次測驗　答對 ${quizScore.correct} / ${quizScore.total}</div>
+    <div class="quiz-card">
+      <span class="chip pos">${w.pos}</span>
+      <div class="word-block" style="padding-top:10px;">
+        <p class="word">${w.word}</p>
+        <p class="ipa mono">${w.ipa}</p>
+        <div class="speak-row">
+          <button class="speak-btn" id="quizSpeakBtn" ${canSpeak?'':'disabled'} title="播放發音">🔊</button>
+        </div>
+      </div>
+      <p style="color:var(--text-muted);font-size:13px;margin:0;">這個字的中文意思是？</p>
+      <div class="quiz-options">
+        ${w.options.map((o,i)=>`<button class="opt-btn" data-idx="${i}">${o.meaning_zh}</button>`).join("")}
+      </div>
+      <div class="quiz-next" id="quizNextWrap" style="display:none;">
+        <button class="icon-btn" id="quizNextBtn">下一題 ▶</button>
+      </div>
+    </div>
+  `;
+  document.getElementById("quizSpeakBtn")?.addEventListener("click", ()=> speak(w.word));
+  container.querySelectorAll(".opt-btn").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      if(quizLocked) return;
+      quizLocked = true;
+      const idx = Number(btn.dataset.idx);
+      const chosen = w.options[idx];
+      const isCorrect = chosen.id === w.id;
+      quizScore.total++;
+      if(isCorrect) quizScore.correct++;
+      container.querySelectorAll(".opt-btn").forEach((b,i)=>{
+        b.disabled = true;
+        if(w.options[i].id === w.id) b.classList.add("correct");
+        else if(i === idx) b.classList.add("wrong");
+      });
+      document.getElementById("quizNextWrap").style.display = "block";
+      document.querySelector(".quiz-score").textContent = `本次測驗　答對 ${quizScore.correct} / ${quizScore.total}`;
+    });
+  });
+  document.getElementById("quizNextBtn")?.addEventListener("click", ()=>{
+    pickQuizWord();
+    renderStage();
+  });
+}
+
+/* ---------- Master render ---------- */
+function renderStage(){
+  const container = document.getElementById("stage");
+  if(mode === "card") renderCardMode(container);
+  else if(mode === "list") renderListMode(container);
+  else renderQuizMode(container);
+}
+function render(){
+  renderStats();
+  renderStage();
+}
+
+populateCategories();
+render();
+</script>
+</body>
+</html>
