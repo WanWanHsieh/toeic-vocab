@@ -1,0 +1,340 @@
+[
+  {
+    "category": "office",
+    "lines": [
+      {"speaker": "Man", "text": "Hey Lisa, is the printer on the third floor still not working? I tried to print the contract twice and nothing came out."},
+      {"speaker": "Woman", "text": "Yeah, it's been down since yesterday afternoon. I already put in a ticket with IT, but they said it might take until tomorrow to fix."},
+      {"speaker": "Man", "text": "Tomorrow? I need three copies of this contract before my two o'clock meeting with the client."},
+      {"speaker": "Woman", "text": "You could use the printer on the fifth floor for now. It's a bit slower, but it works fine."},
+      {"speaker": "Man", "text": "Good idea. Could you forward me the ticket number too, just in case someone asks about it?"},
+      {"speaker": "Woman", "text": "Sure, I'll send it over now. Just so you know, that printer only has color cartridges loaded, so black-and-white pages come out a little gray."},
+      {"speaker": "Man", "text": "That's okay as long as it's readable. Thanks for the heads-up."}
+    ],
+    "questions": [
+      {"question_en": "What are the speakers mainly discussing?", "options": ["A meeting that was postponed", "A broken printer on the third floor", "A new contract with a client", "An IT department reorganization"], "answer_index": 1, "explanation_zh": "對話一開始男士就詢問三樓印表機是否還沒修好，兩人接著討論解決方法，所以答案是 (B)。"},
+      {"question_en": "When did the printer stop working?", "options": ["This morning", "Yesterday afternoon", "Last week", "Right before the meeting"], "answer_index": 1, "explanation_zh": "女士說印表機從昨天下午就故障了，所以答案是 (B)。"},
+      {"question_en": "What will the man most likely do next?", "options": ["Cancel his two o'clock meeting", "Wait until IT fixes the printer", "Print his documents on the fifth floor", "Ask a colleague to print for him"], "answer_index": 2, "explanation_zh": "女士建議他先用五樓的印表機，男士也表示可以接受，所以答案是 (C)。"}
+    ]
+  },
+  {
+    "category": "meetings",
+    "lines": [
+      {"speaker": "Woman", "text": "Hi Tom, are you free for the marketing review at ten tomorrow? I need your input on the ad budget."},
+      {"speaker": "Man", "text": "Actually, I have a call with the Taipei office at that time. Could we push it back to eleven instead?"},
+      {"speaker": "Woman", "text": "Let me check the room schedule... Room B is open from eleven to twelve, so that should work."},
+      {"speaker": "Man", "text": "Great. Should I bring printouts of the Q4 campaign proposal, or will you send them digitally?"},
+      {"speaker": "Woman", "text": "Just bring your laptop. I'll share the file through the shared drive this afternoon."},
+      {"speaker": "Man", "text": "Sounds good. I'll also invite Rachel, since she's handling the social media portion."},
+      {"speaker": "Woman", "text": "Perfect, that'll save us a follow-up meeting later."}
+    ],
+    "questions": [
+      {"question_en": "What are the speakers mainly trying to do?", "options": ["Cancel a meeting", "Reschedule a meeting", "Prepare a client proposal", "Book a conference room for a client"], "answer_index": 1, "explanation_zh": "男士因故無法在十點開會，兩人討論改到十一點，所以答案是 (B)。"},
+      {"question_en": "Why can't Tom attend the meeting at ten?", "options": ["He has a call with the Taipei office", "He is meeting a client", "He is out of the office", "He hasn't finished the proposal"], "answer_index": 0, "explanation_zh": "男士說他十點要跟台北辦公室通話，所以答案是 (A)。"},
+      {"question_en": "What will the woman most likely do this afternoon?", "options": ["Print the proposal", "Call the Taipei office", "Share a file through the shared drive", "Book a different conference room"], "answer_index": 2, "explanation_zh": "女士說她下午會透過共用雲端硬碟分享檔案，所以答案是 (C)。"}
+    ]
+  },
+  {
+    "category": "travel",
+    "lines": [
+      {"speaker": "Man", "text": "Excuse me, is flight 205 to Chicago still on time? The board just says delayed, but there's no new time listed."},
+      {"speaker": "Woman", "text": "Let me check... I'm sorry, sir, it's now delayed about two hours because of a mechanical issue with the aircraft."},
+      {"speaker": "Man", "text": "Two hours? I have a connecting flight out of Chicago at six. Will I still make it?"},
+      {"speaker": "Woman", "text": "It'll be tight, but you might. If you end up missing it, we can rebook you on the next available flight at no extra charge."},
+      {"speaker": "Man", "text": "I appreciate that. Is there somewhere nearby with Wi-Fi? I still have some work to finish."},
+      {"speaker": "Woman", "text": "The lounge near gate twelve has free Wi-Fi and plenty of seating. Boarding announcements will reach you there too."},
+      {"speaker": "Man", "text": "Thanks for your help."}
+    ],
+    "questions": [
+      {"question_en": "Why has the flight been delayed?", "options": ["Bad weather", "A mechanical issue", "A staffing shortage", "A security check"], "answer_index": 1, "explanation_zh": "女士說是因為飛機發生機械故障，所以答案是 (B)。"},
+      {"question_en": "What will the airline do if the man misses his connecting flight?", "options": ["Refund his ticket", "Charge him a rebooking fee", "Rebook him at no extra charge", "Put him on a waiting list"], "answer_index": 2, "explanation_zh": "女士說若錯過轉機班機，可以免費幫他改到下一班，所以答案是 (C)。"},
+      {"question_en": "Where will the man most likely go while he waits?", "options": ["To the lounge near gate 12", "To the check-in counter", "To baggage claim", "To a restaurant outside security"], "answer_index": 0, "explanation_zh": "女士建議他去十二號登機門附近的貴賓室，那裡有免費無線網路，所以答案是 (A)。"}
+    ]
+  },
+  {
+    "category": "hospitality",
+    "lines": [
+      {"speaker": "Woman", "text": "Hi, I have a reservation for two nights under the name Johnson, starting tonight."},
+      {"speaker": "Man", "text": "Let me pull that up... I see the reservation, but it looks like the room type was changed to a standard room instead of the deluxe suite you booked online."},
+      {"speaker": "Woman", "text": "That's strange. I definitely paid for the deluxe suite with the city view."},
+      {"speaker": "Man", "text": "I apologize for the mix-up. We do have a deluxe suite available on the tenth floor, and I can upgrade you at no extra cost for the inconvenience."},
+      {"speaker": "Woman", "text": "That would be great, thank you. Does it still include breakfast?"},
+      {"speaker": "Man", "text": "Yes, breakfast is included for both nights, served in the lobby restaurant from seven to ten a.m."},
+      {"speaker": "Woman", "text": "Perfect. I'll just need a couple of key cards, then."}
+    ],
+    "questions": [
+      {"question_en": "What problem does the woman have?", "options": ["Her reservation was cancelled", "She was given the wrong room type", "Her payment was declined", "Her room wasn't cleaned"], "answer_index": 1, "explanation_zh": "她預訂的是豪華套房，卻被改成標準房，所以答案是 (B)。"},
+      {"question_en": "What does the man do to fix the problem?", "options": ["He gives her a partial refund", "He offers a free upgrade to a deluxe suite", "He cancels her reservation", "He offers a discount on breakfast"], "answer_index": 1, "explanation_zh": "男士提出免費將她升等到十樓的豪華套房，所以答案是 (B)。"},
+      {"question_en": "What time does breakfast end?", "options": ["9 a.m.", "10 a.m.", "11 a.m.", "Breakfast is not included"], "answer_index": 1, "explanation_zh": "男士說早餐供應到早上十點，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "retail_shopping",
+    "lines": [
+      {"speaker": "Woman", "text": "Hi, I'd like to return this jacket. I bought it last week, but it's too small."},
+      {"speaker": "Man", "text": "No problem. Do you have the receipt with you?"},
+      {"speaker": "Woman", "text": "Yes, right here. I paid by credit card."},
+      {"speaker": "Man", "text": "Great. Since it's within thirty days and the tags are still attached, I can give you a full refund, or you could exchange it for a larger size."},
+      {"speaker": "Woman", "text": "Do you have it in a medium? I think that would fit better than the small."},
+      {"speaker": "Man", "text": "Let me check the stockroom... yes, we have one medium left in that color."},
+      {"speaker": "Woman", "text": "I'll exchange it then, thanks."}
+    ],
+    "questions": [
+      {"question_en": "What is the woman trying to do?", "options": ["Buy a new jacket", "Exchange a jacket for a different size", "Get a price adjustment", "File a complaint about a product"], "answer_index": 1, "explanation_zh": "女士表示夾克太小，想換一件較大尺寸的，所以答案是 (B)。"},
+      {"question_en": "What condition allows the man to offer a refund or exchange?", "options": ["The item must still have its tags and be within 30 days", "The customer must show ID", "The item must be completely unworn", "The customer must have a membership card"], "answer_index": 0, "explanation_zh": "男士說只要在三十天內且吊牌還在，就能退換貨，所以答案是 (A)。"},
+      {"question_en": "What will the woman most likely receive?", "options": ["A refund to her credit card", "A store credit", "A medium-sized jacket", "A different style of jacket"], "answer_index": 2, "explanation_zh": "她最後選擇換成中號，所以答案是 (C)。"}
+    ]
+  },
+  {
+    "category": "technology",
+    "lines": [
+      {"speaker": "Man", "text": "Have you noticed the app crashing every time someone tries to upload a photo larger than five megabytes?"},
+      {"speaker": "Woman", "text": "Yes, I saw a few user complaints about that this morning. I think it's related to the update we pushed last night."},
+      {"speaker": "Man", "text": "That would make sense — the image compression module was rewritten in that update. Should we roll it back?"},
+      {"speaker": "Woman", "text": "I'd rather not roll back the whole update, since it also fixed the login bug. Let's just patch the compression module separately."},
+      {"speaker": "Man", "text": "Okay, how long do you think that'll take?"},
+      {"speaker": "Woman", "text": "If I start now, I should have a fix ready to test by this evening, and we can push it out tomorrow morning."},
+      {"speaker": "Man", "text": "Great, I'll let customer support know so they can update the users who complained."}
+    ],
+    "questions": [
+      {"question_en": "What problem are the speakers discussing?", "options": ["Users can't log in", "The app crashes when uploading large photos", "The app is running slowly", "Users can't update the app"], "answer_index": 1, "explanation_zh": "男士一開始就提到上傳超過五MB的照片會讓程式當機，所以答案是 (B)。"},
+      {"question_en": "Why doesn't the woman want to roll back the entire update?", "options": ["It would take too long", "It also fixed the login bug", "Users prefer the new version", "It's against company policy"], "answer_index": 1, "explanation_zh": "女士說那次更新也修好了登入的問題，所以不想整個復原，答案是 (B)。"},
+      {"question_en": "What will the man most likely do next?", "options": ["Rewrite the compression module himself", "Notify customer support", "Push the update immediately", "Contact the users directly"], "answer_index": 1, "explanation_zh": "男士說他會通知客服人員，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "logistics",
+    "lines": [
+      {"speaker": "Woman", "text": "This is the warehouse calling about order 4521. The shipment from our supplier in Vietnam is stuck at customs."},
+      {"speaker": "Man", "text": "Stuck at customs? We were supposed to have those parts on the assembly line by Thursday."},
+      {"speaker": "Woman", "text": "I know. I've already contacted the customs broker, and they said the paperwork was missing a certificate of origin."},
+      {"speaker": "Man", "text": "Can that be resolved quickly, or should we look into expediting a partial shipment by air?"},
+      {"speaker": "Woman", "text": "The broker thinks it can clear within two days once we resubmit the certificate, so air freight might not be necessary yet."},
+      {"speaker": "Man", "text": "Alright, let's hold off on air freight for now, but keep me updated every few hours."},
+      {"speaker": "Woman", "text": "Will do. I'll call again as soon as I hear back from customs."}
+    ],
+    "questions": [
+      {"question_en": "Why is the shipment delayed?", "options": ["The supplier ran out of parts", "It is stuck at customs due to missing paperwork", "The truck broke down", "The warehouse is closed"], "answer_index": 1, "explanation_zh": "貨物卡在海關，是因為缺少產地證明，所以答案是 (B)。"},
+      {"question_en": "What alternative does the man consider?", "options": ["Cancelling the order", "Switching suppliers", "Expediting a shipment by air", "Delaying the assembly line"], "answer_index": 2, "explanation_zh": "男士提出是否要用空運加急部分貨物，所以答案是 (C)。"},
+      {"question_en": "What will the woman most likely do next?", "options": ["Cancel the shipment", "Contact customs again once she hears back", "Fly to Vietnam", "Switch to air freight immediately"], "answer_index": 1, "explanation_zh": "女士說她一有海關的消息就會再打電話通知，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "hr",
+    "lines": [
+      {"speaker": "Woman", "text": "Thanks for coming in, David. I see you spent four years at Grantline Marketing. What made you decide to leave?"},
+      {"speaker": "Man", "text": "The company was acquired last year, and my whole department was restructured. I'm looking for a role with more room to grow into a team lead position."},
+      {"speaker": "Woman", "text": "That's helpful context. This position includes managing two junior associates within the first year. How do you feel about mentoring less experienced staff?"},
+      {"speaker": "Man", "text": "I actually mentored two interns at my last job, and one of them was hired full-time partly based on my recommendation."},
+      {"speaker": "Woman", "text": "Good to know. One more thing — this role requires occasional travel to our regional offices, about once a month. Is that workable for you?"},
+      {"speaker": "Man", "text": "Yes, that's not a problem at all."}
+    ],
+    "questions": [
+      {"question_en": "What is the purpose of this conversation?", "options": ["A performance review", "A job interview", "An exit interview", "A team meeting"], "answer_index": 1, "explanation_zh": "這是應徵者與面試官之間的對話，屬於求職面試，所以答案是 (B)。"},
+      {"question_en": "Why did the man leave his previous job?", "options": ["He was fired", "His company was acquired and his department restructured", "He wanted higher pay", "He relocated to a new city"], "answer_index": 1, "explanation_zh": "男士說他的公司被收購，部門也重組了，所以答案是 (B)。"},
+      {"question_en": "What can be inferred about the man from the conversation?", "options": ["He has no management experience", "He has experience mentoring junior staff", "He is unwilling to travel", "He was previously a team lead"], "answer_index": 1, "explanation_zh": "男士提到自己曾指導過兩名實習生，顯示他有帶人經驗，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "health",
+    "lines": [
+      {"speaker": "Man", "text": "Hi, I'd like to schedule a check-up with Dr. Reyes sometime next week if possible."},
+      {"speaker": "Woman", "text": "Let me see... Dr. Reyes is fully booked until Wednesday, but she has an opening at three p.m. that day."},
+      {"speaker": "Man", "text": "Wednesday afternoon works for me. Actually, I also need to renew a prescription — can that be handled during the same visit?"},
+      {"speaker": "Woman", "text": "Yes, just mention it when you arrive, and she can review your prescription during the appointment."},
+      {"speaker": "Man", "text": "Great. Do I need to bring anything specific, like previous test results?"},
+      {"speaker": "Woman", "text": "If you had blood work done elsewhere in the past year, it would help to bring those results, but it's not required."},
+      {"speaker": "Man", "text": "Okay, I'll dig those up just in case. Thanks for your help."}
+    ],
+    "questions": [
+      {"question_en": "Why is the man calling?", "options": ["To cancel an appointment", "To schedule a check-up", "To ask about billing", "To request a house call"], "answer_index": 1, "explanation_zh": "男士打電話是為了預約下週的健康檢查，所以答案是 (B)。"},
+      {"question_en": "When is the man's appointment?", "options": ["Monday morning", "Tuesday afternoon", "Wednesday at 3 p.m.", "Wednesday morning"], "answer_index": 2, "explanation_zh": "女士說Reyes醫師週三下午三點有空，所以答案是 (C)。"},
+      {"question_en": "What will the man most likely bring to the appointment?", "options": ["His insurance card only", "Previous blood test results", "A referral letter", "Nothing extra"], "answer_index": 1, "explanation_zh": "女士建議他帶去年做過的抽血報告，男士也說會去找，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "office",
+    "lines": [
+      {"speaker": "Woman", "text": "Hey Mark, we're almost out of printer paper and toner in the supply closet. Could you place an order today?"},
+      {"speaker": "Man", "text": "Sure, I'll take care of it. Do we still use the same vendor, Office Direct?"},
+      {"speaker": "Woman", "text": "Yes, but check if they have the eco-friendly paper in stock this time. The last order got substituted with the regular kind."},
+      {"speaker": "Man", "text": "Got it, I'll double-check before confirming the order. Anything else we need?"},
+      {"speaker": "Woman", "text": "Actually, yes. We're also low on the blue folders for client presentations."},
+      {"speaker": "Man", "text": "I'll add those to the order. Everything should be delivered by Friday."},
+      {"speaker": "Woman", "text": "Perfect, that's before the client visit next Monday."}
+    ],
+    "questions": [
+      {"question_en": "What is the woman asking the man to do?", "options": ["Clean the supply closet", "Place an order for office supplies", "Contact a new vendor", "Cancel a previous order"], "answer_index": 1, "explanation_zh": "女士請Mark去訂購紙張和碳粉等辦公用品，所以答案是 (B)。"},
+      {"question_en": "What happened with the previous order?", "options": ["It never arrived", "The eco-friendly paper was substituted with regular paper", "The wrong vendor was used", "It was overcharged"], "answer_index": 1, "explanation_zh": "女士提到上次訂的環保紙被換成一般紙張，所以答案是 (B)。"},
+      {"question_en": "Why does the delivery timing matter to the woman?", "options": ["She is leaving on a trip Friday", "There is a client visit next Monday", "The office is moving locations", "The vendor is raising prices soon"], "answer_index": 1, "explanation_zh": "女士說週五前送到才能趕上下週一的客戶來訪，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "meetings",
+    "lines": [
+      {"speaker": "Man", "text": "Hi both, thanks for joining. I think we're still waiting on Karen from the Seoul office to connect."},
+      {"speaker": "Woman", "text": "I just got a message from her — she's having trouble with the video link, so she'll join by phone instead."},
+      {"speaker": "Man 2", "text": "That's fine. We can still share the slides on screen for her benefit; I'll read out anything that's only visual."},
+      {"speaker": "Man", "text": "Good idea. Let's give her two more minutes before we start the agenda."},
+      {"speaker": "Woman", "text": "In the meantime, should we confirm the numbers for the Q3 report? I noticed a discrepancy in the shipping costs section."},
+      {"speaker": "Man 2", "text": "I saw that too. I think it's just a formatting error, not an actual calculation mistake. I'll fix it before we present."},
+      {"speaker": "Man", "text": "Perfect. Let's start with introductions once Karen's on the line."}
+    ],
+    "questions": [
+      {"question_en": "Why hasn't the meeting started yet?", "options": ["The conference room is occupied", "Karen is having trouble joining by video", "The agenda hasn't been prepared", "The slides are not ready"], "answer_index": 1, "explanation_zh": "Karen因視訊連線出問題，大家在等她改用電話加入，所以答案是 (B)。"},
+      {"question_en": "What will Man 2 do for Karen's benefit?", "options": ["Send her the recording later", "Read aloud anything only shown on the slides", "Reschedule the meeting", "Translate the meeting into Korean"], "answer_index": 1, "explanation_zh": "Man2表示會把螢幕上顯示的內容念出來給只用電話的Karen聽，所以答案是 (B)。"},
+      {"question_en": "What will Man 2 most likely do before the presentation?", "options": ["Recalculate the entire Q3 report", "Fix a formatting error in the shipping costs section", "Cancel the Q3 report", "Ask Karen to review the numbers"], "answer_index": 1, "explanation_zh": "Man2說他會在報告前修正運費部分的格式錯誤，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "travel",
+    "lines": [
+      {"speaker": "Woman", "text": "Hi, I have a reservation for a compact car under Martinez, picking up today."},
+      {"speaker": "Man", "text": "Let me check... I see your reservation, but unfortunately all our compact cars are currently rented out."},
+      {"speaker": "Woman", "text": "Oh no, I really need something fuel-efficient since I'll be driving about 300 miles this week."},
+      {"speaker": "Man", "text": "I understand. I can offer you a free upgrade to a midsize sedan at the same price — it still gets good mileage, around 35 miles per gallon."},
+      {"speaker": "Woman", "text": "That works for me. Does it come with GPS, or do I need to add that separately?"},
+      {"speaker": "Man", "text": "GPS comes standard on that model, so you won't need to pay extra."},
+      {"speaker": "Woman", "text": "Great, that saves me some hassle. I'll take it."}
+    ],
+    "questions": [
+      {"question_en": "What problem does the woman face?", "options": ["Her reservation was cancelled", "The car she reserved is unavailable", "She forgot her driver's license", "The rental price increased"], "answer_index": 1, "explanation_zh": "她預訂的小型車目前都被租出去了，所以答案是 (B)。"},
+      {"question_en": "What solution does the man offer?", "options": ["A refund", "A free upgrade to a midsize sedan", "A discount on a compact car next time", "A shuttle to another branch"], "answer_index": 1, "explanation_zh": "男士提供免費升等到中型房車，價格不變，所以答案是 (B)。"},
+      {"question_en": "Why is the woman pleased about the GPS?", "options": ["It comes at no extra charge", "It's a brand she prefers", "It includes international maps", "It was her main request"], "answer_index": 0, "explanation_zh": "男士說GPS是該車型標配，不需額外付費，女士因此感到省事，所以答案是 (A)。"}
+    ]
+  },
+  {
+    "category": "hospitality",
+    "lines": [
+      {"speaker": "Man", "text": "Hi, I have a reservation for four people at seven tonight under the name Chen, but we might need to push it back."},
+      {"speaker": "Woman", "text": "No problem, what time were you thinking?"},
+      {"speaker": "Man", "text": "Could we move it to eight-thirty? One of our guests is arriving late from the airport."},
+      {"speaker": "Woman", "text": "Let me check... eight-thirty is available, but I should mention the kitchen stops taking orders for the tasting menu at nine-thirty."},
+      {"speaker": "Man", "text": "That should be fine, we don't plan to stay too late anyway. Also, one of our guests has a shellfish allergy — can the kitchen accommodate that?"},
+      {"speaker": "Woman", "text": "Absolutely, just let your server know when you arrive, and the chef will prepare an alternative dish."},
+      {"speaker": "Man", "text": "Perfect, thank you for your help."}
+    ],
+    "questions": [
+      {"question_en": "What is the man trying to do?", "options": ["Cancel his reservation", "Change his reservation time", "Order food in advance", "Book a table for eight people"], "answer_index": 1, "explanation_zh": "男士想把訂位時間從七點延後到八點半，所以答案是 (B)。"},
+      {"question_en": "Why does the man want to change the time?", "options": ["The restaurant is overbooked", "A guest is arriving late from the airport", "He is running late from work", "The kitchen requested it"], "answer_index": 1, "explanation_zh": "男士說有一位客人的班機延誤，會晚點到，所以答案是 (B)。"},
+      {"question_en": "What will the man most likely do when he arrives at the restaurant?", "options": ["Ask for a different table", "Tell the server about the shellfish allergy", "Order the tasting menu immediately", "Request an earlier time slot"], "answer_index": 1, "explanation_zh": "女士請他到場後告知服務生過敏資訊，男士也答應了，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "retail_shopping",
+    "lines": [
+      {"speaker": "Woman", "text": "Hi, I'm looking for a laptop mainly for video editing. This one in the display case caught my eye, but I'm not sure it's powerful enough."},
+      {"speaker": "Man", "text": "That model has a decent processor, but for video editing, I'd actually recommend this one instead — it has a dedicated graphics card, which makes a big difference for rendering."},
+      {"speaker": "Woman", "text": "What's the price difference between the two?"},
+      {"speaker": "Man", "text": "This one is about two hundred dollars more, but it comes with double the storage and a two-year warranty included."},
+      {"speaker": "Woman", "text": "That's actually a good deal. Do you have it in silver? The one on display is black."},
+      {"speaker": "Man", "text": "Let me check in the back... yes, we have two silver ones in stock."},
+      {"speaker": "Woman", "text": "I'll take one then, thank you."}
+    ],
+    "questions": [
+      {"question_en": "What is the woman shopping for?", "options": ["A tablet for drawing", "A laptop for video editing", "A desktop computer", "A camera for filming"], "answer_index": 1, "explanation_zh": "女士表示自己要找一台適合剪輯影片的筆記型電腦，所以答案是 (B)。"},
+      {"question_en": "Why does the man recommend the other model?", "options": ["It is cheaper", "It has a dedicated graphics card for rendering", "It comes in more colors", "It has a longer battery life"], "answer_index": 1, "explanation_zh": "男士說那台配有獨立顯卡，對算圖有很大幫助，所以答案是 (B)。"},
+      {"question_en": "What will the woman most likely buy?", "options": ["A black laptop with basic specs", "A silver laptop with the recommended specs", "Two laptops", "A laptop with only the display model's specs"], "answer_index": 1, "explanation_zh": "女士決定買銀色、配備顯卡的那款，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "technology",
+    "lines": [
+      {"speaker": "Man", "text": "Hi, I'm calling about upgrading my phone plan. I keep running out of data before the month ends."},
+      {"speaker": "Woman", "text": "I can help with that. Right now you're on the five-gigabyte plan. Would you like me to look at the ten-gigabyte plan or the unlimited plan?"},
+      {"speaker": "Man", "text": "What's the price difference between those two?"},
+      {"speaker": "Woman", "text": "The ten-gigabyte plan is ten dollars more per month, and the unlimited plan is twenty-five dollars more, but it includes hotspot data as well."},
+      {"speaker": "Man", "text": "I don't really use hotspot much, so the ten-gigabyte plan should be enough. How soon would the change take effect?"},
+      {"speaker": "Woman", "text": "It'll apply starting your next billing cycle, which begins in five days."},
+      {"speaker": "Man", "text": "That works. Please go ahead and make that change."}
+    ],
+    "questions": [
+      {"question_en": "Why is the man calling?", "options": ["To cancel his phone plan", "To upgrade his data plan", "To report a billing error", "To ask about a new phone"], "answer_index": 1, "explanation_zh": "男士因為常常用完數據流量，想要升級方案，所以答案是 (B)。"},
+      {"question_en": "What does the unlimited plan include that the man doesn't need?", "options": ["International calling", "Hotspot data", "Extra cloud storage", "A streaming service subscription"], "answer_index": 1, "explanation_zh": "女士說無限方案多了熱點分享功能，但男士說自己不常用，所以答案是 (B)。"},
+      {"question_en": "Which plan will the man most likely choose?", "options": ["The five-gigabyte plan", "The ten-gigabyte plan", "The unlimited plan", "He will cancel his plan"], "answer_index": 1, "explanation_zh": "男士表示十GB的方案就夠用了，並要求女士做更改，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "logistics",
+    "lines": [
+      {"speaker": "Man", "text": "I just finished the inventory count for aisle twelve, and we're showing forty units of the blue widgets, but the system says we should have sixty-five."},
+      {"speaker": "Woman", "text": "That's a big gap. Did you check if any were moved to the overflow section last week?"},
+      {"speaker": "Man", "text": "I didn't think to check there. Let me go look now."},
+      {"speaker": "Woman", "text": "While you do that, I'll pull up the shipping records to see if an order went out that wasn't logged properly."},
+      {"speaker": "Man", "text": "Good idea. I found twenty units in the overflow section, so that narrows the gap to just five units."},
+      {"speaker": "Woman", "text": "That's more reasonable — probably just a counting error somewhere. I'll note it in today's report, and we'll recount next week."}
+    ],
+    "questions": [
+      {"question_en": "What problem are the speakers addressing?", "options": ["A shipment stuck at customs", "A discrepancy in inventory counts", "A damaged product", "A missing delivery truck"], "answer_index": 1, "explanation_zh": "兩人在討論藍色小零件的庫存數字與系統不符的問題，所以答案是 (B)。"},
+      {"question_en": "Where did the man find some of the missing units?", "options": ["In the shipping truck", "In the overflow section", "In a different aisle", "In the returns area"], "answer_index": 1, "explanation_zh": "男士在溢放區找到二十個，所以答案是 (B)。"},
+      {"question_en": "What will the woman most likely do?", "options": ["Order more blue widgets immediately", "Note the discrepancy and schedule a recount", "Reassign the employee responsible", "Ignore the small difference"], "answer_index": 1, "explanation_zh": "女士說她會把差異記錄在報告裡，並安排下週重新清點，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "hr",
+    "lines": [
+      {"speaker": "Woman", "text": "Hi, I have some questions about the new health insurance options during open enrollment."},
+      {"speaker": "Man", "text": "Sure, what would you like to know?"},
+      {"speaker": "Woman", "text": "I currently have the basic plan, but I'm thinking about switching to the premium plan since my daughter will need braces this year."},
+      {"speaker": "Man", "text": "The premium plan covers orthodontic work at fifty percent, whereas the basic plan doesn't cover it at all. The premium plan does cost about sixty dollars more per month, though."},
+      {"speaker": "Woman", "text": "That seems worth it given the cost of braces. When would the change take effect if I switch now?"},
+      {"speaker": "Man", "text": "If you submit the enrollment form by Friday, it'll take effect on the first of next month."},
+      {"speaker": "Woman", "text": "Great, I'll fill that out today then."}
+    ],
+    "questions": [
+      {"question_en": "Why is the woman considering switching plans?", "options": ["She wants lower monthly payments", "Her daughter needs orthodontic coverage", "Her current plan is being discontinued", "She wants dental cleaning coverage"], "answer_index": 1, "explanation_zh": "女士因為女兒今年需要戴牙套，考慮換成有理賠矯正費用的方案，所以答案是 (B)。"},
+      {"question_en": "How much more does the premium plan cost per month?", "options": ["$25", "$40", "$60", "$100"], "answer_index": 2, "explanation_zh": "男士說保費方案每月多六十美元，所以答案是 (C)。"},
+      {"question_en": "What will the woman most likely do next?", "options": ["Wait until next year to decide", "Submit the enrollment form today", "Ask for a refund on her current plan", "Schedule an appointment with the dentist"], "answer_index": 1, "explanation_zh": "女士說她今天就會填寫加保表格，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "health",
+    "lines": [
+      {"speaker": "Man", "text": "Hi, I'd like to cancel my gym membership. I'm relocating to another city next month."},
+      {"speaker": "Woman", "text": "I'm sorry to hear that. I can process the cancellation, but I should mention you're still within your annual contract, so there may be an early termination fee."},
+      {"speaker": "Man", "text": "How much would that be?"},
+      {"speaker": "Woman", "text": "It's typically one month's fee, but if you can provide proof of relocation, like a new lease, we can waive that fee."},
+      {"speaker": "Man", "text": "I do have my new lease agreement with me, actually."},
+      {"speaker": "Woman", "text": "Perfect. If you email that to our membership office, we'll waive the fee and process your cancellation right away."},
+      {"speaker": "Man", "text": "I'll send that over as soon as I get home."}
+    ],
+    "questions": [
+      {"question_en": "Why does the man want to cancel his membership?", "options": ["He is unhappy with the gym", "He is relocating to another city", "He can no longer afford it", "He joined a different gym"], "answer_index": 1, "explanation_zh": "男士說他下個月要搬到另一個城市，所以答案是 (B)。"},
+      {"question_en": "How can the man avoid paying the termination fee?", "options": ["By paying in cash", "By providing proof of relocation", "By canceling six months in advance", "By upgrading his membership first"], "answer_index": 1, "explanation_zh": "女士說只要提供搬遷證明（如租約），就能免除違約金，所以答案是 (B)。"},
+      {"question_en": "What will the man most likely do next?", "options": ["Visit the gym in person tomorrow", "Email his lease agreement to the membership office", "Cancel his lease agreement", "Ask for a partial refund"], "answer_index": 1, "explanation_zh": "男士說他一到家就會把租約寄過去，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "office",
+    "lines": [
+      {"speaker": "Man", "text": "Before you head out on leave, Nancy, can you walk us through where things stand with the Hendricks account?"},
+      {"speaker": "Woman", "text": "Sure. I've finished the initial proposal, but I'm still waiting on final approval from their legal team, which could take another week or two."},
+      {"speaker": "Man 2", "text": "I can follow up with their legal contact while you're away, if you give me the email thread."},
+      {"speaker": "Woman", "text": "That would help a lot. I'll forward everything before I leave Friday, including my notes on their budget concerns."},
+      {"speaker": "Man", "text": "Good. Anything else we should know about the account?"},
+      {"speaker": "Woman", "text": "Just that they're sensitive about the timeline, so keep them updated even if there's no major news."},
+      {"speaker": "Man 2", "text": "Understood, I'll send a short update every few days."}
+    ],
+    "questions": [
+      {"question_en": "What is the purpose of this conversation?", "options": ["Planning a client presentation", "Handing off account responsibilities before Nancy's leave", "Discussing a budget cut", "Reviewing a completed contract"], "answer_index": 1, "explanation_zh": "對話目的是在Nancy休假前，把Hendricks客戶的工作交接給同事，所以答案是 (B)。"},
+      {"question_en": "What is still pending on the Hendricks account?", "options": ["Approval from the client's legal team", "The initial proposal draft", "Payment from the client", "A signed contract renewal"], "answer_index": 0, "explanation_zh": "女士說她還在等客戶法務部門的最終核准，所以答案是 (A)。"},
+      {"question_en": "What will Man 2 most likely do while Nancy is away?", "options": ["Ignore the account until she returns", "Follow up with the client's legal contact and send updates", "Cancel the proposal", "Renegotiate the budget with the client"], "answer_index": 1, "explanation_zh": "Man2表示會跟進法務聯絡人，並每隔幾天回報進度，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "meetings",
+    "lines": [
+      {"speaker": "Woman", "text": "Let's go over the marketing budget for next quarter. Right now we're proposing a ten percent increase, mostly for digital ads."},
+      {"speaker": "Man", "text": "I'm a little concerned about that increase given how tight the overall budget is this year. Can we justify it with results from this quarter?"},
+      {"speaker": "Woman 2", "text": "Actually, yes — the digital campaign we ran last month brought in twice the leads compared to print ads, at a lower cost per lead."},
+      {"speaker": "Man", "text": "That's a strong argument. Do we have exact numbers I could bring to the finance committee?"},
+      {"speaker": "Woman 2", "text": "I'll put together a one-page summary with the comparison data by tomorrow morning."},
+      {"speaker": "Woman", "text": "Great, let's plan to present this to the committee on Thursday, then."},
+      {"speaker": "Man", "text": "Sounds good, I'll make sure the meeting is on the calendar."}
+    ],
+    "questions": [
+      {"question_en": "What are the speakers mainly discussing?", "options": ["Cutting the marketing budget", "A proposed increase in the digital ad budget", "Hiring a new marketing manager", "Switching to print advertising"], "answer_index": 1, "explanation_zh": "他們在討論下一季行銷預算提高一成、主要用於數位廣告的提案，所以答案是 (B)。"},
+      {"question_en": "Why does Woman 2 think the increase is justified?", "options": ["The digital campaign got twice the leads at a lower cost", "Print ads are too expensive to continue", "Competitors increased their budgets", "The finance committee requested it"], "answer_index": 0, "explanation_zh": "她說上個月的數位廣告活動帶來兩倍名單，且每筆成本更低，所以答案是 (A)。"},
+      {"question_en": "What will Woman 2 most likely do next?", "options": ["Cancel the digital campaign", "Prepare a summary with comparison data", "Present directly to the finance committee herself", "Increase the print ad budget"], "answer_index": 1, "explanation_zh": "她說會在隔天早上前準備好一份比較數據的摘要，所以答案是 (B)。"}
+    ]
+  }
+]

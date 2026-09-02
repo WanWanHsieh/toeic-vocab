@@ -1,0 +1,394 @@
+[
+  {
+    "category": "correspondence",
+    "title": "E-mail",
+    "meta": [
+      {"label": "From", "value": "customerservice@urbanthreads.com"},
+      {"label": "To", "value": "jasonlee@mailbox.com"},
+      {"label": "Subject", "value": "Delay in Your Recent Order"},
+      {"label": "Date", "value": "March 3"}
+    ],
+    "paragraphs": [
+      "Thank you for your recent purchase from Urban Threads. We are writing to let you know that your order {{1}} due to an unexpected shortage of materials at our supplier's warehouse.",
+      "We understand this delay may be {{2}} to your plans, and we sincerely apologize for the inconvenience.",
+      "{{3}} the delay, we would like to offer you a 15% discount on your next purchase as a token of our appreciation for your patience.",
+      "{{4}} Your new order is expected to arrive within five to seven business days. If you have any questions, please do not hesitate to contact our support team."
+    ],
+    "blanks": [
+      {"options": ["delays", "delaying", "has been delayed", "will delay"], "answer_index": 2, "type": "verb_form", "explanation_zh": "包裹本身是「被延遲」，需用被動語態的現在完成式 has been delayed，所以答案是 (C)。"},
+      {"options": ["destructive", "distracted", "disruption", "disruptive"], "answer_index": 3, "type": "adjective_adverb", "explanation_zh": "be動詞後面需要形容詞，表示「造成困擾的」，disruptive 符合語意，所以答案是 (D)。"},
+      {"options": ["In light of", "In addition to", "Regardless of", "As opposed to"], "answer_index": 0, "type": "conjunction_connector", "explanation_zh": "In light of 表示「考慮到、鑑於」，承接上文提到的延誤原因，語意最恰當，所以答案是 (A)。"},
+      {"options": ["Our store will be closed for the holidays next week.", "We have shipped a replacement order using expedited delivery.", "Please remember to renew your membership soon.", "The new product line will launch in the fall."], "answer_index": 1, "type": "sentence_insertion", "explanation_zh": "這句承接下句「新訂單預計五到七個工作天內送達」，說明已用快遞寄出替代訂單，語意最連貫，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "notice",
+    "title": "Notice",
+    "meta": [],
+    "paragraphs": [
+      "Effective May 1, the company will {{1}} a more relaxed dress code policy for all departments except those meeting with outside clients.",
+      "Employees {{2}} wear jeans, T-shirts, and sneakers on any business day, provided the clothing is clean and in good condition.",
+      "{{3}}, staff who interact directly with clients or attend external meetings are still expected to follow the formal dress code.",
+      "Managers will distribute an updated guideline sheet outlining acceptable and unacceptable attire. {{4}} We appreciate your cooperation as we transition to this new policy."
+    ],
+    "blanks": [
+      {"options": ["implementing", "implementation", "implements", "implement"], "answer_index": 3, "type": "verb_form", "explanation_zh": "will 後面須接原形動詞 implement，所以答案是 (D)。"},
+      {"options": ["may now", "must never", "should hardly", "would rarely"], "answer_index": 0, "type": "word_choice", "explanation_zh": "語意為「現在可以」，may now 表示新增的許可，所以答案是 (A)。"},
+      {"options": ["Furthermore", "However", "Similarly", "For example"], "answer_index": 1, "type": "conjunction_connector", "explanation_zh": "However 表示「然而」，對比前文提到的服裝規定放寬，語意轉折最恰當，所以答案是 (B)。"},
+      {"options": ["The company picnic will be held in the parking lot.", "All employees must complete the annual safety training by June.", "If you have questions about specific items, please contact your department supervisor.", "The office will be relocating to a new building in July."], "answer_index": 2, "type": "sentence_insertion", "explanation_zh": "承接上文提到會發布指南，若有疑問可詢問部門主管，語意銜接最佳，所以答案是 (C)。"}
+    ]
+  },
+  {
+    "category": "advertisement",
+    "title": "Advertisement",
+    "meta": [],
+    "paragraphs": [
+      "Golden Crust Bakery is thrilled to announce its {{1}} opening in downtown Millbrook this Saturday, June 7.",
+      "The first 100 customers will {{2}} a free pastry of their choice, along with a coupon for 20% off their next visit.",
+      "{{3}}, customers who spend more than $30 will be entered into a raffle to win a free birthday cake.",
+      "Our menu features fresh croissants, sourdough bread, and seasonal fruit tarts made daily from scratch. {{4}} We can't wait to welcome you to our new location!"
+    ],
+    "blanks": [
+      {"options": ["grand", "grandly", "grandeur", "grandest"], "answer_index": 0, "type": "adjective_adverb", "explanation_zh": "grand opening 為固定用法，形容詞 grand 修飾 opening，所以答案是 (A)。"},
+      {"options": ["receiving", "receive", "received", "receipt"], "answer_index": 1, "type": "verb_form", "explanation_zh": "will 後面須接原形動詞 receive，所以答案是 (B)。"},
+      {"options": ["On the other hand", "Nevertheless", "In addition", "Instead"], "answer_index": 2, "type": "conjunction_connector", "explanation_zh": "In addition 表示「此外」，承接上文優惠再補充一項活動，所以答案是 (C)。"},
+      {"options": ["The bakery was founded by two sisters in 1998.", "Our online ordering system will launch next month.", "We recommend trying our chocolate croissants first.", "Parking is available directly behind the store on Elm Street."], "answer_index": 3, "type": "sentence_insertion", "explanation_zh": "這句補充停車資訊，方便顧客前來慶祝開幕，承接上下文最自然，所以答案是 (D)。"}
+    ]
+  },
+  {
+    "category": "form",
+    "title": "Itinerary",
+    "meta": [
+      {"label": "Traveler", "value": "Michael Chen"},
+      {"label": "Trip", "value": "Chicago Conference, September 22-24"}
+    ],
+    "paragraphs": [
+      "Your flight to Chicago {{1}} at 7:45 a.m. on September 22 from Gate 14, and you should arrive at the airport at least two hours before departure.",
+      "A car service will be waiting at the arrivals area to take you directly to the {{2}} hotel near the convention center.",
+      "{{3}} you have any changes to your schedule, please notify the travel department at least 24 hours in advance.",
+      "The conference registration desk opens at 8:00 a.m. on the first day. {{4}} Please keep this itinerary with you throughout the trip."
+    ],
+    "blanks": [
+      {"options": ["departing", "departs", "to depart", "departed"], "answer_index": 1, "type": "verb_form", "explanation_zh": "描述班機的固定時刻表，需用現在式 departs，所以答案是 (B)。"},
+      {"options": ["dedicated", "designed", "designated", "destined"], "answer_index": 2, "type": "word_choice", "explanation_zh": "designated 表示「指定的」，符合語境指預先安排好的飯店，所以答案是 (C)。"},
+      {"options": ["Because", "Although", "Unless", "Should"], "answer_index": 3, "type": "conjunction_connector", "explanation_zh": "Should you have = If you have，為條件句倒裝用法，所以答案是 (D)。"},
+      {"options": ["Remember to bring your badge and a valid photo ID.", "The hotel offers a rooftop pool and fitness center.", "Chicago is known for its deep-dish pizza.", "Next year's conference will be held in Seattle."], "answer_index": 0, "type": "sentence_insertion", "explanation_zh": "承接上文提到報到櫃檯開放時間，提醒攜帶識別證與證件，語意最連貫，所以答案是 (A)。"}
+    ]
+  },
+  {
+    "category": "correspondence",
+    "title": "E-mail",
+    "meta": [
+      {"label": "From", "value": "laura.kim@brightpath.com"},
+      {"label": "To", "value": "teamleads@brightpath.com"},
+      {"label": "Subject", "value": "Rescheduled Weekly Meeting"},
+      {"label": "Date", "value": "October 9"}
+    ],
+    "paragraphs": [
+      "Due to a scheduling conflict, this week's team meeting {{1}} from Wednesday to Thursday at the same time.",
+      "Please make sure to review the attached agenda {{2}} so that we can make the most of our discussion time.",
+      "{{3}} the change, all other meeting details, including the video conference link, remain the same.",
+      "We will begin promptly at 2:00 p.m. and expect the meeting to last about 45 minutes. {{4}} If you are unable to attend at the new time, please let me know as soon as possible."
+    ],
+    "blanks": [
+      {"options": ["moves", "moving", "has been moved", "move"], "answer_index": 2, "type": "verb_form", "explanation_zh": "會議是「被改期」，需用被動語態現在完成式 has been moved，所以答案是 (C)。"},
+      {"options": ["before", "ahead", "forward", "beforehand"], "answer_index": 3, "type": "adjective_adverb", "explanation_zh": "beforehand 作副詞，表示「事先」，修飾動詞 review，所以答案是 (D)。"},
+      {"options": ["Aside from", "Because of", "As a result of", "Due to"], "answer_index": 0, "type": "preposition", "explanation_zh": "Aside from 表示「除了...之外」，說明除了時間改變其餘不變，所以答案是 (A)。"},
+      {"options": ["The office will close early on Friday for a company event.", "A recording will be made available for anyone who misses the session.", "Our quarterly budget review has been postponed until December.", "The new intern will join the marketing team next Monday."], "answer_index": 1, "type": "sentence_insertion", "explanation_zh": "承接下文提到若無法出席可通知，說明會後將提供錄影供缺席者查看，語意最連貫，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "notice",
+    "title": "Notice",
+    "meta": [],
+    "paragraphs": [
+      "This is to inform all tenants that a mandatory fire drill {{1}} on the morning of November 5 between 9:00 and 10:00 a.m.",
+      "When the alarm sounds, please leave your desk {{2}} and proceed to the nearest stairwell; do not use the elevators.",
+      "{{3}}, employees with mobility issues should wait near the stairwell for assistance from a designated floor warden.",
+      "The entire drill is expected to take no more than 15 minutes. {{4}} Thank you for your cooperation in keeping our building safe."
+    ],
+    "blanks": [
+      {"options": ["conducts", "conducting", "is conducting", "will be conducted"], "answer_index": 3, "type": "verb_form", "explanation_zh": "描述未來將發生的被動動作，需用未來式被動語態 will be conducted，所以答案是 (D)。"},
+      {"options": ["immediately", "immediate", "immediacy", "immediateness"], "answer_index": 0, "type": "adjective_adverb", "explanation_zh": "修飾動詞 leave 需用副詞 immediately，所以答案是 (A)。"},
+      {"options": ["Similarly", "Additionally", "Consequently", "Otherwise"], "answer_index": 1, "type": "conjunction_connector", "explanation_zh": "Additionally 表示「此外」，補充另一項注意事項，所以答案是 (B)。"},
+      {"options": ["The building's lobby will be renovated next spring.", "Tenants are reminded to pay rent by the fifth of each month.", "Building management will announce an all-clear signal once the drill is complete.", "A new coffee shop will open on the ground floor."], "answer_index": 2, "type": "sentence_insertion", "explanation_zh": "承接演習時間長度，說明結束後會廣播解除信號，語意最連貫，所以答案是 (C)。"}
+    ]
+  },
+  {
+    "category": "advertisement",
+    "title": "Advertisement",
+    "meta": [],
+    "paragraphs": [
+      "TaskFlow, the project management tool trusted by thousands of teams, is now {{1}} an exclusive 30% discount for new subscribers.",
+      "Our platform helps teams track deadlines, assign tasks, and communicate more {{2}}, all in one convenient dashboard.",
+      "{{3}} other project management tools, TaskFlow requires no lengthy setup process and can be up and running within minutes.",
+      "Sign up before October 31 to lock in this special rate for a full year. {{4}} Visit our website today to start your free trial."
+    ],
+    "blanks": [
+      {"options": ["offering", "offer", "offered", "offers"], "answer_index": 0, "type": "verb_form", "explanation_zh": "is 後面須接現在分詞形成現在進行式 offering，所以答案是 (A)。"},
+      {"options": ["effective", "effectively", "effectiveness", "effectuate"], "answer_index": 1, "type": "adjective_adverb", "explanation_zh": "修飾動詞 communicate 需用副詞 effectively，所以答案是 (B)。"},
+      {"options": ["Similar to", "In accordance with", "Unlike", "Together with"], "answer_index": 2, "type": "preposition", "explanation_zh": "Unlike 表示「與...不同」，對比其他工具設定繁瑣，所以答案是 (C)。"},
+      {"options": ["TaskFlow was founded by a team of former engineers.", "Our customer support team is available around the clock.", "The company recently opened a new office in Austin.", "No credit card is required to begin your 14-day trial."], "answer_index": 3, "type": "sentence_insertion", "explanation_zh": "承接下文「立即造訪網站開始免費試用」，說明試用不需信用卡，語意最連貫，所以答案是 (D)。"}
+    ]
+  },
+  {
+    "category": "form",
+    "title": "Registration Form",
+    "meta": [
+      {"label": "Product", "value": "Vantek Series-9 Blender"},
+      {"label": "Warranty Period", "value": "2 Years"}
+    ],
+    "paragraphs": [
+      "Thank you for purchasing a Vantek Series-9 Blender. To {{1}} your warranty, please complete this form within 30 days of purchase.",
+      "Your warranty {{2}} any manufacturing defects in materials or workmanship for a period of two years from the date of purchase.",
+      "{{3}} you experience any issues with the product, please contact our customer service center rather than attempting repairs yourself.",
+      "Attempting unauthorized repairs will void the warranty immediately. {{4}} Please keep your original receipt as proof of purchase."
+    ],
+    "blanks": [
+      {"options": ["activation", "activate", "activating", "activated"], "answer_index": 1, "type": "verb_form", "explanation_zh": "to 後面須接原形動詞 activate，所以答案是 (B)。"},
+      {"options": ["carries", "contains", "covers", "concerns"], "answer_index": 2, "type": "word_choice", "explanation_zh": "covers 表示「涵蓋、保障」，符合保固範圍的語境，所以答案是 (C)。"},
+      {"options": ["Despite", "Given that", "Whereas", "Should"], "answer_index": 3, "type": "conjunction_connector", "explanation_zh": "Should you experience = If you experience，為條件句倒裝用法，所以答案是 (D)。"},
+      {"options": ["Only certified Vantek technicians are authorized to perform repairs.", "The Series-9 Blender comes in three colors.", "Vantek products are sold in over 40 countries.", "Customers may register multiple products at once."], "answer_index": 0, "type": "sentence_insertion", "explanation_zh": "承接上文提到未經授權維修將使保固失效，說明只有認證技師可維修，語意連貫，所以答案是 (A)。"}
+    ]
+  },
+  {
+    "category": "correspondence",
+    "title": "E-mail",
+    "meta": [
+      {"label": "From", "value": "hr@meridianconsulting.com"},
+      {"label": "To", "value": "allstaff@meridianconsulting.com"},
+      {"label": "Subject", "value": "New Health Insurance Provider"},
+      {"label": "Date", "value": "January 8"}
+    ],
+    "paragraphs": [
+      "We are writing to inform you that Meridian Consulting {{1}} to a new health insurance provider, effective February 1.",
+      "The new plan offers {{2}} coverage, including expanded dental and vision benefits not previously available.",
+      "{{3}}, monthly premiums will remain approximately the same as under the current plan.",
+      "An informational session will be held on January 20 to answer any questions about the transition. {{4}} We appreciate your patience as we complete this transition."
+    ],
+    "blanks": [
+      {"options": ["switches", "switched", "will be switching", "has switch"], "answer_index": 2, "type": "verb_form", "explanation_zh": "表示未來即將發生的動作，需用未來進行式 will be switching，所以答案是 (C)。"},
+      {"options": ["broadly", "broaden", "breadth", "broader"], "answer_index": 3, "type": "adjective_adverb", "explanation_zh": "修飾名詞 coverage 需用形容詞 broader，所以答案是 (D)。"},
+      {"options": ["Nevertheless", "Furthermore", "Therefore", "Meanwhile"], "answer_index": 0, "type": "conjunction_connector", "explanation_zh": "Nevertheless 表示「儘管如此」，說明雖然福利提升但保費不變，語意轉折，所以答案是 (A)。"},
+      {"options": ["The company cafeteria will be closed that day.", "Attendance is optional but strongly encouraged.", "All new hires must complete orientation within a week.", "Employees can request a parking permit online."], "answer_index": 1, "type": "sentence_insertion", "explanation_zh": "承接上文提到說明會，補充出席雖非強制但強烈建議參加，語意連貫，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "notice",
+    "title": "Memo",
+    "meta": [
+      {"label": "To", "value": "All Employees"},
+      {"label": "From", "value": "IT Department"},
+      {"label": "Date", "value": "February 2"}
+    ],
+    "paragraphs": [
+      "Starting next Monday, all employees will be {{1}} to update their network passwords as part of our new security policy.",
+      "The updated policy requires passwords to include a mix of letters, numbers, and symbols to reduce the {{2}} of unauthorized access.",
+      "{{3}} these changes, we strongly recommend that employees avoid using the same password across multiple accounts.",
+      "IT will send a password reset link to each employee's company email account on Monday morning. {{4}} If you do not receive this email within 24 hours, please contact the help desk."
+    ],
+    "blanks": [
+      {"options": ["require", "requiring", "requires", "required"], "answer_index": 3, "type": "verb_form", "explanation_zh": "be動詞後面須接過去分詞形成被動語態 required，所以答案是 (D)。"},
+      {"options": ["likelihood", "likely", "likeliness", "likeness"], "answer_index": 0, "type": "noun_form", "explanation_zh": "the 後面須接名詞 likelihood，表示「可能性」，所以答案是 (A)。"},
+      {"options": ["Regardless of", "In connection with", "In case of", "On behalf of"], "answer_index": 1, "type": "preposition", "explanation_zh": "In connection with 表示「與...有關」，承接上文提到的安全政策變更，所以答案是 (B)。"},
+      {"options": ["The company will host a cybersecurity workshop in March.", "New employees receive laptops during their first week.", "The link will expire 48 hours after it is sent.", "The IT department will be relocating to the third floor."], "answer_index": 2, "type": "sentence_insertion", "explanation_zh": "承接上文提到會寄送重設連結，補充連結將於48小時後失效的重要資訊，語意連貫，所以答案是 (C)。"}
+    ]
+  },
+  {
+    "category": "advertisement",
+    "title": "Advertisement",
+    "meta": [],
+    "paragraphs": [
+      "Homestead Furniture is holding its biggest clearance {{1}} of the year, with savings of up to 60% on select items.",
+      "All sofas, dining sets, and bedroom furniture are {{2}} reduced to make room for our new spring collection.",
+      "{{3}} in-store purchases, customers can now also shop the entire clearance selection online with free local delivery.",
+      "The sale runs from March 1 through March 15 or while supplies last. {{4}} We look forward to helping you find the perfect piece for your home."
+    ],
+    "blanks": [
+      {"options": ["sale", "sell", "selling", "sold"], "answer_index": 0, "type": "noun_form", "explanation_zh": "clearance sale 為固定用法，sale 作名詞，所以答案是 (A)。"},
+      {"options": ["significant", "significantly", "significance", "signify"], "answer_index": 1, "type": "adjective_adverb", "explanation_zh": "修飾過去分詞 reduced 需用副詞 significantly，所以答案是 (B)。"},
+      {"options": ["Instead of", "In spite of", "In addition to", "Contrary to"], "answer_index": 2, "type": "preposition", "explanation_zh": "In addition to 表示「除了...之外」，說明除了門市也能線上購買，所以答案是 (C)。"},
+      {"options": ["Homestead Furniture has been in business for over 20 years.", "Our design consultants are available by appointment.", "The store will extend its hours during the holidays.", "Quantities are limited, so early shopping is recommended."], "answer_index": 3, "type": "sentence_insertion", "explanation_zh": "承接上文提到數量有限，建議提早選購，語意最連貫，所以答案是 (D)。"}
+    ]
+  },
+  {
+    "category": "correspondence",
+    "title": "E-mail",
+    "meta": [
+      {"label": "From", "value": "procurement@northbridge-mfg.com"},
+      {"label": "To", "value": "sales@steelworksupply.com"},
+      {"label": "Subject", "value": "Revision to Purchase Order #4471"},
+      {"label": "Date", "value": "July 19"}
+    ],
+    "paragraphs": [
+      "We are writing to request a {{1}} to Purchase Order #4471, which was submitted on July 12.",
+      "Specifically, we would like to {{2}} the quantity of steel brackets from 500 units to 750 units due to increased demand from our clients.",
+      "{{3}} the change in quantity, we understand the delivery date may need to be adjusted, and we are willing to accommodate a short delay.",
+      "Please confirm receipt of this request and let us know the updated price and delivery schedule at your earliest convenience. {{4}} We appreciate your continued partnership."
+    ],
+    "blanks": [
+      {"options": ["revise", "revision", "revising", "revised"], "answer_index": 1, "type": "noun_form", "explanation_zh": "冠詞 a 後面須接名詞 revision，所以答案是 (B)。"},
+      {"options": ["increasing", "increased", "increase", "increases"], "answer_index": 2, "type": "verb_form", "explanation_zh": "would like to 後面須接原形動詞 increase，所以答案是 (C)。"},
+      {"options": ["Regardless of", "Instead of", "In case", "Given"], "answer_index": 3, "type": "conjunction_connector", "explanation_zh": "Given 表示「鑑於」，說明因數量變更而理解交期可能需調整，所以答案是 (D)。"},
+      {"options": ["We look forward to your prompt response.", "Steelworks Supply was founded in 1985.", "Our factory operates three shifts per day.", "The new product catalog will be released in August."], "answer_index": 0, "type": "sentence_insertion", "explanation_zh": "承接上文請求儘早回覆，表達期待對方盡快回應，語意最連貫，所以答案是 (A)。"}
+    ]
+  },
+  {
+    "category": "notice",
+    "title": "Notice",
+    "meta": [],
+    "paragraphs": [
+      "Please note that the office {{1}} at 1:00 p.m. on December 24 and will remain closed until December 26.",
+      "Employees are {{2}} to complete any urgent tasks before the early closure to avoid delays for clients.",
+      "{{3}}, the customer service hotline will remain staffed on a limited basis for emergencies only.",
+      "Normal business hours will resume on December 27. {{4}} We wish everyone a safe and happy holiday season."
+    ],
+    "blanks": [
+      {"options": ["closes", "closing", "will close", "closed"], "answer_index": 2, "type": "verb_form", "explanation_zh": "描述未來將發生的事，需用未來式 will close，所以答案是 (C)。"},
+      {"options": ["encouraging", "encouragement", "encourages", "encouraged"], "answer_index": 3, "type": "verb_form", "explanation_zh": "be動詞後面須接過去分詞 encouraged 形成被動語態，所以答案是 (D)。"},
+      {"options": ["However", "Similarly", "Therefore", "For instance"], "answer_index": 0, "type": "conjunction_connector", "explanation_zh": "However 表示「然而」，對比辦公室關閉但客服專線仍有限開放，所以答案是 (A)。"},
+      {"options": ["The company holiday party will be held on December 20.", "Any voicemails left during the closure will be returned as soon as possible.", "Employees may request additional vacation days next year.", "The building's heating system was recently upgraded."], "answer_index": 1, "type": "sentence_insertion", "explanation_zh": "承接上文提到辦公室關閉，補充關閉期間的語音留言將盡快回覆，語意連貫，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "advertisement",
+    "title": "Advertisement",
+    "meta": [],
+    "paragraphs": [
+      "Apex Fitness Center invites you to {{1}} the new year with a special membership offer available through January only.",
+      "New members who sign up this month will receive a {{2}} discount of 25% on their first three months of dues.",
+      "{{3}} the discounted rate, members also gain full access to our group classes, sauna, and personal training consultations.",
+      "Our certified trainers are available to design a fitness plan tailored to your goals. {{4}} Stop by our front desk today to learn more about this limited-time offer."
+    ],
+    "blanks": [
+      {"options": ["starting", "started", "starts", "start"], "answer_index": 3, "type": "verb_form", "explanation_zh": "invites you to 後面須接原形動詞 start，所以答案是 (D)。"},
+      {"options": ["substantial", "substance", "substantially", "substantiate"], "answer_index": 0, "type": "adjective_adverb", "explanation_zh": "修飾名詞 discount 需用形容詞 substantial，所以答案是 (A)。"},
+      {"options": ["In place of", "Along with", "As opposed to", "Rather than"], "answer_index": 1, "type": "preposition", "explanation_zh": "Along with 表示「連同」，說明除了折扣還享有其他福利，所以答案是 (B)。"},
+      {"options": ["Apex Fitness opened its first location in 2010.", "The gym will be closed for renovations in March.", "A free consultation is included with every new membership.", "Members can cancel their subscription at any time."], "answer_index": 2, "type": "sentence_insertion", "explanation_zh": "承接上文提到教練可依目標設計課表，補充新會員可享免費諮詢，語意連貫，所以答案是 (C)。"}
+    ]
+  },
+  {
+    "category": "correspondence",
+    "title": "E-mail",
+    "meta": [
+      {"label": "From", "value": "recruiting@brightonlegal.com"},
+      {"label": "To", "value": "sarah.nguyen@mailbox.com"},
+      {"label": "Subject", "value": "Interview Confirmation - Paralegal Position"},
+      {"label": "Date", "value": "May 6"}
+    ],
+    "paragraphs": [
+      "Thank you for your interest in the paralegal position at Brighton Legal Group. We would like to {{1}} you for an interview on May 15 at 10:00 a.m.",
+      "The interview will be conducted by our hiring manager and will last {{2}} 45 minutes.",
+      "{{3}} the interview, please bring a copy of your resume, two professional references, and a valid photo ID.",
+      "Please reply to this email to confirm your availability for the scheduled time. {{4}} We look forward to meeting you."
+    ],
+    "blanks": [
+      {"options": ["invite", "inviting", "invited", "invitation"], "answer_index": 0, "type": "verb_form", "explanation_zh": "would like to 後面須接原形動詞 invite，所以答案是 (A)。"},
+      {"options": ["exactly", "approximately", "hardly", "barely"], "answer_index": 1, "type": "adjective_adverb", "explanation_zh": "approximately 表示「大約」，符合語境中對面談時間的估計，所以答案是 (B)。"},
+      {"options": ["According to", "Instead of", "Prior to", "Except for"], "answer_index": 2, "type": "preposition", "explanation_zh": "Prior to 表示「在...之前」，說明面試前需準備的事項，所以答案是 (C)。"},
+      {"options": ["Brighton Legal Group was established in 2005.", "Our office is located near the downtown courthouse.", "The firm recently won an award for community service.", "If this time does not work for you, we would be happy to arrange an alternative."], "answer_index": 3, "type": "sentence_insertion", "explanation_zh": "承接上文請求確認時間，補充若時間不合適可另行安排，語意最連貫，所以答案是 (D)。"}
+    ]
+  },
+  {
+    "category": "notice",
+    "title": "Memo",
+    "meta": [
+      {"label": "To", "value": "All Staff"},
+      {"label": "From", "value": "Facilities Management"},
+      {"label": "Date", "value": "August 3"}
+    ],
+    "paragraphs": [
+      "Beginning next month, the office will {{1}} a new recycling program to reduce paper and plastic waste.",
+      "Separate bins will be placed on each floor for paper, plastic, and general {{2}}.",
+      "{{3}} these new bins, employees are asked to rinse out containers before recycling them to prevent contamination.",
+      "A short training session on proper recycling procedures will be held in the break room next Tuesday. {{4}} We hope everyone will take part in this effort to make our office more sustainable."
+    ],
+    "blanks": [
+      {"options": ["launching", "launch", "launched", "launches"], "answer_index": 1, "type": "verb_form", "explanation_zh": "will 後面須接原形動詞 launch，所以答案是 (B)。"},
+      {"options": ["wasted", "wasteful", "waste", "wastefully"], "answer_index": 2, "type": "noun_form", "explanation_zh": "general 後面需要名詞 waste，表示「廢棄物」，所以答案是 (C)。"},
+      {"options": ["Instead of", "Because of", "In spite of", "In addition to"], "answer_index": 3, "type": "preposition", "explanation_zh": "In addition to 表示「除了...之外」，補充清洗容器的要求，所以答案是 (D)。"},
+      {"options": ["Attendance is not mandatory, but light refreshments will be provided.", "The office will be repainted next quarter.", "Employees must submit expense reports by the tenth of each month.", "The company's annual report will be published in September."], "answer_index": 0, "type": "sentence_insertion", "explanation_zh": "承接上文提到教育訓練場次，補充出席非強制但會提供茶點，語意連貫，所以答案是 (A)。"}
+    ]
+  },
+  {
+    "category": "advertisement",
+    "title": "Advertisement",
+    "meta": [],
+    "paragraphs": [
+      "Horizon Travel is pleased to {{1}} a brand-new seven-day tour package to the coastal towns of southern Portugal.",
+      "The package includes {{2}} airfare, hotel accommodations, and daily breakfast for a single low price.",
+      "{{3}} exploring charming fishing villages, travelers will have the opportunity to sample fresh seafood and local wines.",
+      "This limited-time package is available for travel between September and November. {{4}} Contact one of our travel consultants today to reserve your spot."
+    ],
+    "blanks": [
+      {"options": ["introducing", "introduced", "introduce", "introduction"], "answer_index": 2, "type": "verb_form", "explanation_zh": "to 後面須接原形動詞 introduce，所以答案是 (C)。"},
+      {"options": ["one-way", "direct", "connecting", "round-trip"], "answer_index": 3, "type": "word_choice", "explanation_zh": "round-trip 表示「來回」，符合套裝行程包含來回機票的語境，所以答案是 (D)。"},
+      {"options": ["In addition to", "Instead of", "Because of", "In case of"], "answer_index": 0, "type": "preposition", "explanation_zh": "In addition to 表示「除了...之外」，說明除了探索漁村還能品嚐美食，所以答案是 (A)。"},
+      {"options": ["Horizon Travel has offices in twelve countries.", "Space is limited to 20 travelers per departure date.", "Portugal is known for its historic castles.", "The company recently updated its mobile app."], "answer_index": 1, "type": "sentence_insertion", "explanation_zh": "承接下文提醒儘早聯絡預約，說明每梯次名額有限，語意連貫，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "form",
+    "title": "Confirmation",
+    "meta": [
+      {"label": "Guest", "value": "Robert Alvarez"},
+      {"label": "Confirmation Number", "value": "HR-58231"},
+      {"label": "Check-in", "value": "October 11"}
+    ],
+    "paragraphs": [
+      "This email {{1}} your reservation at the Lakeside Grand Hotel for two nights, from October 11 to October 13.",
+      "Your room includes a king-size bed, a private balcony, and complimentary {{2}} to the fitness center and pool.",
+      "{{3}} you need to cancel or modify your reservation, please do so at least 48 hours before check-in to avoid a cancellation fee.",
+      "Check-in begins at 3:00 p.m., and early arrivals may store luggage with the front desk. {{4}} We look forward to hosting you during your stay."
+    ],
+    "blanks": [
+      {"options": ["confirming", "confirmed", "to confirm", "confirms"], "answer_index": 3, "type": "verb_form", "explanation_zh": "主詞 this email 是第三人稱單數，需用現在式動詞 confirms，所以答案是 (D)。"},
+      {"options": ["access", "accessible", "accessing", "accessed"], "answer_index": 0, "type": "noun_form", "explanation_zh": "complimentary 後面需要名詞 access，表示「使用權」，所以答案是 (A)。"},
+      {"options": ["Because", "Should", "Although", "Whereas"], "answer_index": 1, "type": "conjunction_connector", "explanation_zh": "Should you need = If you need，為條件句倒裝用法，所以答案是 (B)。"},
+      {"options": ["The hotel restaurant serves breakfast until 10:00 a.m.", "Lakeside Grand Hotel opened its doors in 2015.", "Late check-out until 1:00 p.m. can be arranged upon request.", "Guests receive a discount at the nearby golf course."], "answer_index": 2, "type": "sentence_insertion", "explanation_zh": "承接上文提到提前入住可寄放行李，補充延遲退房也可安排，語意連貫，所以答案是 (C)。"}
+    ]
+  },
+  {
+    "category": "correspondence",
+    "title": "E-mail",
+    "meta": [
+      {"label": "From", "value": "alerts@harborstatebank.com"},
+      {"label": "To", "value": "emily.tran@mailbox.com"},
+      {"label": "Subject", "value": "Unusual Activity on Your Account"},
+      {"label": "Date", "value": "November 2"}
+    ],
+    "paragraphs": [
+      "We recently {{1}} a transaction on your account that appears inconsistent with your usual spending patterns.",
+      "For your {{2}}, we have temporarily placed a hold on your debit card until the activity can be verified.",
+      "{{3}} you recognize this transaction, please log in to your online banking account or call our fraud department to confirm.",
+      "A new card will be issued automatically if the transaction is found to be fraudulent. {{4}} We apologize for any inconvenience this may cause."
+    ],
+    "blanks": [
+      {"options": ["detected", "detecting", "detect", "detection"], "answer_index": 0, "type": "verb_form", "explanation_zh": "recently 通常搭配過去式動詞 detected，所以答案是 (A)。"},
+      {"options": ["protective", "protection", "protectively", "protect"], "answer_index": 1, "type": "noun_form", "explanation_zh": "your 後面需要名詞 protection，表示「保護」，所以答案是 (B)。"},
+      {"options": ["Unless", "Although", "If", "Because"], "answer_index": 2, "type": "conjunction_connector", "explanation_zh": "If 表示條件「如果」，說明若您認得此筆交易該如何處理，所以答案是 (C)。"},
+      {"options": ["Harbor State Bank was founded in 1952.", "Customers can open a new savings account online.", "The bank's mobile app was recently updated with new features.", "It typically takes five to seven business days for a replacement card to arrive."], "answer_index": 3, "type": "sentence_insertion", "explanation_zh": "承接上文提到將自動核發新卡，補充卡片預計送達時間，語意連貫，所以答案是 (D)。"}
+    ]
+  },
+  {
+    "category": "notice",
+    "title": "Memo",
+    "meta": [
+      {"label": "To", "value": "All Managers"},
+      {"label": "From", "value": "Human Resources"},
+      {"label": "Date", "value": "March 20"}
+    ],
+    "paragraphs": [
+      "This year's annual performance review process will {{1}} on April 1 and conclude on April 30.",
+      "Managers are asked to schedule a one-on-one meeting with each {{2}} member to discuss goals and achievements from the past year.",
+      "{{3}}, please submit all completed review forms to Human Resources no later than May 5.",
+      "HR will review all submissions and follow up with any managers whose forms are incomplete. {{4}} Thank you for your attention to this important process."
+    ],
+    "blanks": [
+      {"options": ["beginning", "begin", "began", "begun"], "answer_index": 1, "type": "verb_form", "explanation_zh": "will 後面須接原形動詞 begin，所以答案是 (B)。"},
+      {"options": ["teams", "teamed", "team", "teaming"], "answer_index": 2, "type": "word_choice", "explanation_zh": "team 作名詞修飾 member，構成複合名詞 team member，所以答案是 (C)。"},
+      {"options": ["Beforehand", "Meanwhile", "Nonetheless", "Afterward"], "answer_index": 3, "type": "conjunction_connector", "explanation_zh": "Afterward 表示「之後」，說明面談結束後應繳交表單，所以答案是 (D)。"},
+      {"options": ["Please make sure each form is signed by both the manager and the employee.", "The annual company retreat will be held in June.", "New hires must complete a background check before starting.", "The HR department is hiring two additional recruiters."], "answer_index": 0, "type": "sentence_insertion", "explanation_zh": "承接上文提到HR會檢查表單是否完整，補充需要主管與員工雙方簽名，語意連貫，所以答案是 (A)。"}
+    ]
+  }
+]

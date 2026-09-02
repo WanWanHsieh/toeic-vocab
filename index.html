@@ -84,9 +84,12 @@
   .stats{ display:flex; gap:18px; font-family:"IBM Plex Mono", monospace; font-size:13px; color:var(--text-muted); }
   .stats b{ color:var(--text); font-size:16px; display:block; font-weight:600; }
 
-  .tabs{ display:flex; gap:6px; background:var(--surface-2); border:1px solid var(--border); border-radius:999px; padding:4px; width:max-content; margin-bottom:16px; }
-  .tab{ border:none; background:transparent; color:var(--text-muted); padding:8px 18px; border-radius:999px; font-size:14px; font-weight:600; cursor:pointer; transition:background .15s,color .15s; }
+  .tabs{ display:flex; gap:6px; flex-wrap:wrap; background:var(--surface-2); border:1px solid var(--border); border-radius:999px; padding:4px; width:max-content; max-width:100%; margin-bottom:16px; }
+  .tab{ border:none; background:transparent; color:var(--text-muted); padding:8px 18px; border-radius:999px; font-size:14px; font-weight:600; cursor:pointer; transition:background .15s,color .15s; white-space:nowrap; }
   .tab[aria-selected="true"]{ background:var(--accent); color:var(--accent-contrast); }
+  .subtabs{ display:flex; gap:4px; background:var(--surface-2); border:1px solid var(--border); border-radius:10px; padding:3px; }
+  .subtab{ border:none; background:transparent; color:var(--text-muted); padding:7px 14px; border-radius:8px; font-size:13px; font-weight:600; cursor:pointer; white-space:nowrap; }
+  .subtab[aria-selected="true"]{ background:var(--accent); color:var(--accent-contrast); }
   .tab:not([aria-selected="true"]):hover{ color:var(--text); }
 
   .controls{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:22px; }
@@ -227,6 +230,31 @@
   .reading-actions{ display:flex; justify-content:center; gap:10px; margin-top:20px; }
   .reading-score{ text-align:center; font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--text-muted); margin-top:14px; }
 
+  /* Grammar (Part 5/6) */
+  .p5-card{ max-width:640px; margin:0 auto; background:var(--surface); border:1px solid var(--border); border-radius:16px; box-shadow:var(--shadow); padding:28px; }
+  .p5-cat{ margin-bottom:14px; }
+  .p5-sentence{ font-size:17px; line-height:1.8; margin-bottom:22px; }
+  .p5-blank{ display:inline-block; min-width:70px; border-bottom:2px solid var(--accent); color:var(--accent); font-weight:600; text-align:center; }
+  .p5-options{ display:grid; gap:10px; }
+  .blank-marker{ display:inline-flex; align-items:center; justify-content:center; min-width:34px; padding:1px 6px; border-radius:6px; background:var(--gold-soft); color:var(--gold); font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:12.5px; }
+  .blank-marker.answered-correct{ background:var(--success-soft); color:var(--success); }
+  .blank-marker.answered-wrong{ background:var(--danger-soft); color:var(--danger); }
+  .p6-blank-label{ font-family:"IBM Plex Mono",monospace; font-size:12px; color:var(--gold); font-weight:700; margin-bottom:4px; }
+
+  /* Listening (Part 2/3/4) */
+  .listen-card{ max-width:640px; margin:0 auto; }
+  .listen-play-row{ display:flex; justify-content:center; margin-bottom:22px; }
+  .big-play-btn{ background:var(--accent); color:var(--accent-contrast); border:none; padding:16px 30px; border-radius:999px; font-size:15px; font-weight:700; cursor:pointer; display:flex; align-items:center; gap:10px; }
+  .big-play-btn:disabled{ opacity:.55; cursor:default; }
+  .transcript-toggle{ text-align:center; margin-bottom:16px; }
+  .transcript-toggle button{ background:none; border:none; color:var(--text-muted); text-decoration:underline; font-size:12.5px; cursor:pointer; }
+  .transcript-box{ background:var(--surface-2); border-radius:12px; padding:14px 16px; margin-bottom:18px; font-size:13.5px; line-height:1.7; }
+  .transcript-line{ margin-bottom:6px; }
+  .transcript-line b{ color:var(--gold); }
+  .p2-option-row{ display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+  .p2-option-row .q-opt{ flex:1; margin-bottom:0; }
+  .mini-speak-btn{ background:var(--accent-soft); color:var(--accent); border:none; width:34px; height:34px; border-radius:50%; font-size:14px; cursor:pointer; flex:none; }
+
   footer.note{ text-align:center; color:var(--text-muted); font-size:12px; margin-top:36px; }
 
   @media (prefers-reduced-motion: reduce){
@@ -260,7 +288,9 @@
     <button class="tab" data-mode="card" role="tab" aria-selected="true">字卡模式</button>
     <button class="tab" data-mode="list" role="tab" aria-selected="false">單字列表</button>
     <button class="tab" data-mode="quiz" role="tab" aria-selected="false">小測驗</button>
-    <button class="tab" data-mode="reading" role="tab" aria-selected="false">閱讀練習</button>
+    <button class="tab" data-mode="grammar" role="tab" aria-selected="false">文法選字 Part 5-6</button>
+    <button class="tab" data-mode="reading" role="tab" aria-selected="false">閱讀測驗 Part 7</button>
+    <button class="tab" data-mode="listening" role="tab" aria-selected="false">聽力測驗 Part 2-4</button>
   </div>
 
   <div class="controls" id="vocabControls">
@@ -286,6 +316,23 @@
       <option value="form">表單／單據</option>
     </select>
     <button class="icon-btn" id="readingShuffleBtn">🔀 隨機排序</button>
+  </div>
+
+  <div class="controls" id="grammarControls" style="display:none;">
+    <div class="subtabs">
+      <button class="subtab" data-gpart="p5" aria-selected="true">單句填空 Part 5</button>
+      <button class="subtab" data-gpart="p6" aria-selected="false">短文填空 Part 6</button>
+    </div>
+    <button class="icon-btn" id="grammarShuffleBtn">🔀 隨機排序</button>
+  </div>
+
+  <div class="controls" id="listeningControls" style="display:none;">
+    <div class="subtabs">
+      <button class="subtab" data-lpart="p2" aria-selected="true">問答 Part 2</button>
+      <button class="subtab" data-lpart="p3" aria-selected="false">對話 Part 3</button>
+      <button class="subtab" data-lpart="p4" aria-selected="false">簡短獨白 Part 4</button>
+    </div>
+    <button class="icon-btn" id="listeningShuffleBtn">🔀 隨機排序</button>
   </div>
 
   <div class="stage" id="stage"></div>
@@ -331,6 +378,53 @@ const FALLBACK_READING = [
   }
 ];
 
+const FALLBACK_P5 = [
+  {sentence:"The manager asked all employees to ___________ the new safety guidelines carefully before starting work.", options:["review","reviewing","reviewed","reviews"], answer_index:0, category:"verb_form", explanation_zh:"空格前是 to，後面須接原形動詞(to review)，所以答案是 (A)。"}
+];
+const FALLBACK_P6 = [
+  {category:"notice", title:"Notice", meta:[],
+    paragraphs:[
+      "All staff members are reminded that the parking garage will be closed for maintenance from June 10 to June 12. During this period, employees {{1}} use the temporary lot on Maple Street.",
+      "The maintenance work {{2}} repaving the entire garage floor and upgrading the lighting system. {{3}}",
+      "We apologize for any {{4}} this may cause and appreciate your patience."
+    ],
+    blanks:[
+      {options:["must","must have","had to","would have to"], answer_index:0, type:"verb_form", explanation_zh:"這裡是對未來規定的強制要求，用 must 表示義務，所以答案是 (A)。"},
+      {options:["involves","involving","involved","to involve"], answer_index:0, type:"verb_form", explanation_zh:"主詞 The maintenance work 需要一個現在式動詞，所以答案是 (A)。"},
+      {options:["The garage was built in 1998.","Please contact the front desk if you have a reserved spot.","We recommend arriving early to secure parking.","The company picnic has been rescheduled."], answer_index:2, type:"sentence_insertion", explanation_zh:"這句話承接上一句提到維修期間的安排，建議提早到避免找不到停車位，語意最連貫，所以答案是 (C)。"},
+      {options:["inconvenience","inconvenient","inconveniently","inconveniences"], answer_index:0, type:"noun_form", explanation_zh:"any 後面接名詞 inconvenience，所以答案是 (A)。"}
+    ]
+  }
+];
+const FALLBACK_P2 = [
+  {question:"Where's the nearest ATM machine?", options:["It's just around the corner, next to the bakery.","I opened an account last week.","About three miles from here."], answer_index:0, question_type:"wh_question", explanation_zh:"問題問的是「哪裡」，只有 (A) 有直接回答地點，所以答案是 (A)。"}
+];
+const FALLBACK_P3 = [
+  {category:"office",
+    lines:[
+      {speaker:"Man", text:"Hi Sarah, do you have a minute to look over the budget report before the meeting?"},
+      {speaker:"Woman", text:"Sure, but I'm heading to a client call in ten minutes. Can we go through it after lunch instead?"},
+      {speaker:"Man", text:"That works. I'll also send you the updated spreadsheet by then so you have the latest numbers."},
+      {speaker:"Woman", text:"Perfect, just make sure it includes the Q3 figures — I noticed those were missing from the last version."}
+    ],
+    questions:[
+      {question_en:"What does the man want the woman to do?", options:["Attend a client call","Review a budget report","Reschedule a meeting","Send a spreadsheet"], answer_index:1, explanation_zh:"男士一開始就請 Sarah 在會議前看一下預算報告，所以答案是 (B)。"},
+      {question_en:"Why can't the woman help right away?", options:["She is leaving the office","She has a client call","She is in a meeting","She has not finished lunch"], answer_index:1, explanation_zh:"女士說她十分鐘後要去客戶電話會議，所以答案是 (B)。"},
+      {question_en:"What does the woman say was missing from a previous version?", options:["The budget total","The client's contact information","The Q3 figures","The meeting schedule"], answer_index:2, explanation_zh:"女士提到上一版少了 Q3 的數字，所以答案是 (C)。"}
+    ]
+  }
+];
+const FALLBACK_P4 = [
+  {category:"announcement",
+    talk:"Attention all passengers. Flight 218 to Chicago has been delayed due to weather conditions in the area. The new departure time is 3:45 PM, which is approximately one hour later than originally scheduled. Passengers may wait in the lounge near Gate 12, where complimentary refreshments are being provided. We apologize for the inconvenience and will provide further updates as they become available.",
+    questions:[
+      {question_en:"What is the announcement mainly about?", options:["A gate change","A flight delay","A cancelled flight","A boarding procedure"], answer_index:1, explanation_zh:"廣播一開始就說明班機因天候延誤，所以答案是 (B)。"},
+      {question_en:"According to the announcement, what time will the flight now depart?", options:["2:45 PM","3:00 PM","3:45 PM","4:45 PM"], answer_index:2, explanation_zh:"廣播明確提到新的起飛時間是下午 3:45，所以答案是 (C)。"},
+      {question_en:"What are passengers offered while they wait?", options:["A seat upgrade","Complimentary refreshments","A refund","A hotel voucher"], answer_index:1, explanation_zh:"廣播提到休息室有提供免費茶點，所以答案是 (B)。"}
+    ]
+  }
+];
+
 /* ---------- State ---------- */
 let words = [];
 let order = [];
@@ -347,6 +441,28 @@ let readingIdx = 0;
 let readingDocTab = {};
 let readingAnswers = loadReadingAnswers();
 let readingChecked = loadReadingChecked();
+
+/* Grammar (Part 5/6) */
+let p5Items = [];
+let p6Items = [];
+let grammarPart = "p5";
+let p5Order = []; let p5Idx = 0; let p5Selected = null; let p5Checked = false;
+let p6Order = []; let p6Idx = 0; let p6Selected = {}; let p6Checked = false;
+let p5Progress = loadJSON("toeic-p5-progress"); // {idx: true} completed
+let p6Progress = loadJSON("toeic-p6-progress");
+
+/* Listening (Part 2/3/4) */
+let p2Items = []; let p3Items = []; let p4Items = [];
+let listeningPart = "p2";
+let p2Order = []; let p2Idx = 0; let p2Selected = null; let p2Checked = false; let p2ShowText = false;
+let p3Order = []; let p3Idx = 0; let p3Selected = {}; let p3Checked = false; let p3ShowText = false;
+let p4Order = []; let p4Idx = 0; let p4Selected = {}; let p4Checked = false; let p4ShowText = false;
+let p2Progress = loadJSON("toeic-p2-progress");
+let p3Progress = loadJSON("toeic-p3-progress");
+let p4Progress = loadJSON("toeic-p4-progress");
+
+function loadJSON(key){ try{ return JSON.parse(localStorage.getItem(key)||"{}"); }catch(e){ return {}; } }
+function saveJSON(key, val){ try{ localStorage.setItem(key, JSON.stringify(val)); }catch(e){} }
 
 let currentUser = null;
 let cloudSyncing = false; // true while we're applying a cloud snapshot, to avoid re-uploading it right back
@@ -372,14 +488,13 @@ function saveReadingProgress(){
   pushCloudReading();
 }
 
-function pushCloudVocab(){
+function pushCloud(key, data){
   if(cloudSyncing || !currentUser || !window.cloudSync) return;
-  window.cloudSync.saveVocab(currentUser.uid, progress).catch(()=>{});
+  window.cloudSync.save(currentUser.uid, key, data).catch(()=>{});
 }
-function pushCloudReading(){
-  if(cloudSyncing || !currentUser || !window.cloudSync) return;
-  window.cloudSync.saveReading(currentUser.uid, {answers: readingAnswers, checked: readingChecked}).catch(()=>{});
-}
+function pushCloudVocab(){ pushCloud("vocab", progress); }
+function pushCloudReading(){ pushCloud("reading", {answers: readingAnswers, checked: readingChecked}); }
+function pushCloudPart(key, progressObj){ pushCloud(key, progressObj); }
 
 function renderAuthBar(){
   const bar = document.getElementById("authBar");
@@ -418,9 +533,20 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
         localStorage.setItem("toeic-reading-checked", JSON.stringify(readingChecked));
       }catch(err){}
     }
+    const partMap = {p5:"toeic-p5-progress", p6:"toeic-p6-progress", p2:"toeic-p2-progress", p3:"toeic-p3-progress", p4:"toeic-p4-progress"};
+    if(cloud.p5) { p5Progress = cloud.p5; saveJSON(partMap.p5, p5Progress); }
+    if(cloud.p6) { p6Progress = cloud.p6; saveJSON(partMap.p6, p6Progress); }
+    if(cloud.p2) { p2Progress = cloud.p2; saveJSON(partMap.p2, p2Progress); }
+    if(cloud.p3) { p3Progress = cloud.p3; saveJSON(partMap.p3, p3Progress); }
+    if(cloud.p4) { p4Progress = cloud.p4; saveJSON(partMap.p4, p4Progress); }
     cloudSyncing = false;
     if(!cloud.vocab) pushCloudVocab();
     if(!cloud.reading) pushCloudReading();
+    if(!cloud.p5) pushCloudPart("p5", p5Progress);
+    if(!cloud.p6) pushCloudPart("p6", p6Progress);
+    if(!cloud.p2) pushCloudPart("p2", p2Progress);
+    if(!cloud.p3) pushCloudPart("p3", p3Progress);
+    if(!cloud.p4) pushCloudPart("p4", p4Progress);
     render();
   }catch(err){
     cloudSyncing = false;
@@ -443,6 +569,24 @@ function speak(text){
   u.lang = "en-US";
   u.rate = 0.92;
   window.speechSynthesis.speak(u);
+}
+/* Plays a list of strings in sequence (used for Part 2/3/4 audio). pitchFn(i) optionally varies pitch per line (e.g. by speaker). */
+function speakSequence(texts, opts){
+  opts = opts || {};
+  if(!canSpeak){ opts.onDone && opts.onDone(); return; }
+  window.speechSynthesis.cancel();
+  let i = 0;
+  function next(){
+    if(i >= texts.length){ opts.onDone && opts.onDone(); return; }
+    const u = new SpeechSynthesisUtterance(texts[i]);
+    u.lang = "en-US";
+    u.rate = 0.92;
+    if(opts.pitchFn) u.pitch = opts.pitchFn(i);
+    u.onend = ()=>{ i++; next(); };
+    u.onerror = ()=>{ i++; next(); };
+    window.speechSynthesis.speak(u);
+  }
+  next();
 }
 
 /* ---------- Filtering ---------- */
@@ -488,11 +632,51 @@ document.querySelectorAll(".tab").forEach(btn=>{
     document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected", b===btn?"true":"false"));
     cursor = 0; flipped = false; listPage = 1;
     if(mode === "quiz") quizWord = null;
-    document.getElementById("vocabControls").style.display = mode === "reading" ? "none" : "flex";
+    document.getElementById("vocabControls").style.display = mode === "card" || mode === "list" || mode === "quiz" ? "flex" : "none";
     document.getElementById("readingControls").style.display = mode === "reading" ? "flex" : "none";
+    document.getElementById("grammarControls").style.display = mode === "grammar" ? "flex" : "none";
+    document.getElementById("listeningControls").style.display = mode === "listening" ? "flex" : "none";
     renderStage();
   });
 });
+
+document.querySelectorAll(".subtab[data-gpart]").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    grammarPart = btn.dataset.gpart;
+    document.querySelectorAll(".subtab[data-gpart]").forEach(b=>b.setAttribute("aria-selected", b===btn?"true":"false"));
+    renderStage();
+  });
+});
+document.getElementById("grammarShuffleBtn").addEventListener("click", ()=>{
+  if(grammarPart === "p5"){
+    for(let i=p5Order.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [p5Order[i],p5Order[j]]=[p5Order[j],p5Order[i]]; }
+    p5Idx = 0;
+  }else{
+    for(let i=p6Order.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [p6Order[i],p6Order[j]]=[p6Order[j],p6Order[i]]; }
+    p6Idx = 0;
+  }
+  renderStage();
+});
+
+document.querySelectorAll(".subtab[data-lpart]").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    listeningPart = btn.dataset.lpart;
+    document.querySelectorAll(".subtab[data-lpart]").forEach(b=>b.setAttribute("aria-selected", b===btn?"true":"false"));
+    speechSynthesis.cancel();
+    renderStage();
+  });
+});
+document.getElementById("listeningShuffleBtn").addEventListener("click", ()=>{
+  speechSynthesis.cancel();
+  if(listeningPart === "p2"){ shuffleArr(p2Order); p2Idx = 0; }
+  else if(listeningPart === "p3"){ shuffleArr(p3Order); p3Idx = 0; }
+  else { shuffleArr(p4Order); p4Idx = 0; }
+  renderStage();
+});
+function shuffleArr(arr){
+  for(let i=arr.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [arr[i],arr[j]]=[arr[j],arr[i]]; }
+  return arr;
+}
 
 function readingFilterList(){
   const type = document.getElementById("readingTypeSelect").value;
@@ -703,6 +887,363 @@ function renderQuizMode(container){
   });
 }
 
+/* ---------- Render: grammar mode (Part 5/6) ---------- */
+const P5_CATEGORY_LABELS = {
+  verb_form:"動詞形式", subject_verb_agreement:"主詞動詞一致", noun_form:"名詞形式", adjective_adverb:"形容詞副詞",
+  preposition:"介系詞", conjunction_connector:"連接詞／轉承詞", pronoun:"代名詞", comparison:"比較級", relative_clause:"關係子句", word_choice:"字義選擇"
+};
+
+function renderGrammarMode(container){
+  if(grammarPart === "p5") renderP5(container);
+  else renderP6(container);
+}
+
+function renderP5(container){
+  if(p5Items.length === 0){ container.innerHTML = `<div class="empty-state">正在載入 Part 5 題目…</div>`; return; }
+  if(p5Order.length === 0) p5Order = p5Items.map(it=>it.id);
+  if(p5Idx >= p5Order.length) p5Idx = 0;
+  const item = p5Items.find(it=>it.id===p5Order[p5Idx]);
+  const checked = p5Checked;
+  const doneCount = p5Order.filter(id=>p5Progress[id]).length;
+
+  const blankHtml = checked ? `<span class="p5-blank">${item.options[p5Selected]}</span>` : `<span class="p5-blank">＿＿＿＿</span>`;
+  const sentenceHtml = item.sentence.replace(/_{4,}/, blankHtml);
+
+  const optsHtml = item.options.map((opt,oi)=>{
+    let cls = "q-opt";
+    if(checked){
+      if(oi === item.answer_index) cls += " correct";
+      else if(oi === p5Selected) cls += " wrong";
+    }
+    return `<button class="${cls}" data-oi="${oi}" aria-pressed="${p5Selected===oi}" ${checked?'disabled':''}>${String.fromCharCode(65+oi)}. ${opt}</button>`;
+  }).join("");
+
+  const explainHtml = checked ? `<div class="q-explain">${p5Selected===item.answer_index?'✅ 答對了！':'❌ 答錯了。'} 正確答案是 (${String.fromCharCode(65+item.answer_index)})。<br>${item.explanation_zh}</div>` : "";
+
+  container.innerHTML = `
+    <div class="reading-head">
+      <div class="reading-tag"><span class="chip cat">${P5_CATEGORY_LABELS[item.category]||item.category}</span></div>
+      <div class="reading-nav">
+        <span>已完成 ${doneCount} / ${p5Order.length}</span>
+        <button class="nav-btn" id="p5PrevBtn" style="width:36px;height:36px;">◀</button>
+        <span>${p5Idx+1} / ${p5Order.length}</span>
+        <button class="nav-btn" id="p5NextBtn" style="width:36px;height:36px;">▶</button>
+      </div>
+    </div>
+    <div class="p5-card">
+      <p class="p5-sentence">${sentenceHtml}</p>
+      <div class="p5-options">${optsHtml}</div>
+      ${explainHtml}
+      <div class="reading-actions">
+        ${!checked ? `<button class="icon-btn" id="p5CheckBtn" ${p5Selected===null?'disabled':''}>提交答案</button>` : `<button class="icon-btn" id="p5RetryBtn">🔄 重新作答</button>`}
+      </div>
+    </div>
+  `;
+
+  if(!checked){
+    container.querySelectorAll(".q-opt").forEach(btn=>{
+      btn.addEventListener("click", ()=>{ p5Selected = Number(btn.dataset.oi); renderStage(); });
+    });
+  }
+  document.getElementById("p5CheckBtn")?.addEventListener("click", ()=>{
+    p5Checked = true;
+    p5Progress[item.id] = true; saveJSON("toeic-p5-progress", p5Progress); pushCloudPart("p5", p5Progress);
+    renderStage();
+  });
+  document.getElementById("p5RetryBtn")?.addEventListener("click", ()=>{
+    p5Checked = false; p5Selected = null;
+    renderStage();
+  });
+  document.getElementById("p5PrevBtn").addEventListener("click", ()=>{
+    p5Idx = (p5Idx-1+p5Order.length)%p5Order.length; p5Selected=null; p5Checked=false;
+    renderStage();
+  });
+  document.getElementById("p5NextBtn").addEventListener("click", ()=>{
+    p5Idx = (p5Idx+1)%p5Order.length; p5Selected=null; p5Checked=false;
+    renderStage();
+  });
+}
+
+function renderP6(container){
+  if(p6Items.length === 0){ container.innerHTML = `<div class="empty-state">正在載入 Part 6 題目…</div>`; return; }
+  if(p6Order.length === 0) p6Order = p6Items.map(it=>it.id);
+  if(p6Idx >= p6Order.length) p6Idx = 0;
+  const item = p6Items.find(it=>it.id===p6Order[p6Idx]);
+  const checked = p6Checked;
+  const doneCount = p6Order.filter(id=>p6Progress[id]).length;
+
+  const metaHtml = (item.meta && item.meta.length) ? `<div class="doc-meta">${item.meta.map(m=>`<div class="row2"><span class="label">${m.label}</span><span>${m.value}</span></div>`).join("")}</div>` : "";
+  const parasHtml = item.paragraphs.map(p=>{
+    return p.replace(/\{\{(\d)\}\}/g, (m,n)=>{
+      const bi = Number(n)-1;
+      let cls = "blank-marker";
+      if(checked){
+        cls += (p6Selected[bi] === item.blanks[bi].answer_index) ? " answered-correct" : " answered-wrong";
+      }
+      return `<span class="${cls}">(${n})</span>`;
+    });
+  }).map(p=>`<p class="doc-para">${p}</p>`).join("");
+
+  const blanksHtml = item.blanks.map((b,bi)=>{
+    const sel = p6Selected[bi];
+    const optsHtml = b.options.map((opt,oi)=>{
+      let cls = "q-opt";
+      if(checked){
+        if(oi === b.answer_index) cls += " correct";
+        else if(oi === sel) cls += " wrong";
+      }
+      return `<button class="${cls}" data-bi="${bi}" data-oi="${oi}" aria-pressed="${sel===oi}" ${checked?'disabled':''}>${String.fromCharCode(65+oi)}. ${opt}</button>`;
+    }).join("");
+    const explainHtml = (checked) ? `<div class="q-explain">${sel===b.answer_index?'✅ 答對了！':'❌ 答錯了。'} 正確答案是 (${String.fromCharCode(65+b.answer_index)})。<br>${b.explanation_zh}</div>` : "";
+    return `<div class="q-card"><div class="p6-blank-label">空格 (${bi+1})</div>${optsHtml}${explainHtml}</div>`;
+  }).join("");
+
+  const answeredCount = Object.keys(p6Selected).length;
+
+  container.innerHTML = `
+    <div class="reading-head">
+      <div class="reading-tag"><span class="chip cat">${READING_CATEGORY_LABELS[item.category]||item.category}</span></div>
+      <div class="reading-nav">
+        <span>已完成 ${doneCount} / ${p6Order.length}</span>
+        <button class="nav-btn" id="p6PrevBtn" style="width:36px;height:36px;">◀</button>
+        <span>${p6Idx+1} / ${p6Order.length}</span>
+        <button class="nav-btn" id="p6NextBtn" style="width:36px;height:36px;">▶</button>
+      </div>
+    </div>
+    <div class="reading-layout">
+      <div class="doc-card">
+        <div class="doc-title">${item.title || 'Passage'}</div>
+        ${metaHtml}
+        ${parasHtml}
+      </div>
+      <div class="questions-col">${blanksHtml}</div>
+    </div>
+    <div class="reading-actions">
+      ${!checked ? `<button class="icon-btn" id="p6CheckBtn" ${answeredCount<4?'disabled':''}>提交答案（已作答 ${answeredCount}/4）</button>` : `<button class="icon-btn" id="p6RetryBtn">🔄 重新作答</button>`}
+    </div>
+  `;
+
+  if(!checked){
+    container.querySelectorAll(".q-opt").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        p6Selected[Number(btn.dataset.bi)] = Number(btn.dataset.oi);
+        renderStage();
+      });
+    });
+  }
+  document.getElementById("p6CheckBtn")?.addEventListener("click", ()=>{
+    p6Checked = true;
+    p6Progress[item.id] = true; saveJSON("toeic-p6-progress", p6Progress); pushCloudPart("p6", p6Progress);
+    renderStage();
+  });
+  document.getElementById("p6RetryBtn")?.addEventListener("click", ()=>{
+    p6Checked = false; p6Selected = {};
+    renderStage();
+  });
+  document.getElementById("p6PrevBtn").addEventListener("click", ()=>{
+    p6Idx = (p6Idx-1+p6Order.length)%p6Order.length; p6Selected={}; p6Checked=false;
+    renderStage();
+  });
+  document.getElementById("p6NextBtn").addEventListener("click", ()=>{
+    p6Idx = (p6Idx+1)%p6Order.length; p6Selected={}; p6Checked=false;
+    renderStage();
+  });
+}
+
+/* ---------- Render: listening mode (Part 2/3/4) ---------- */
+const P2_TYPE_LABELS = {wh_question:"疑問詞問句", yes_no_question:"是非問句", tag_question:"附加問句", statement_or_request:"敘述／請求句", choice_question:"選擇問句"};
+const P3_CATEGORY_LABELS = {office:"辦公室", meetings:"會議", travel:"旅遊交通", hospitality:"飯店餐飲", retail_shopping:"零售購物", technology:"科技資訊", logistics:"物流運輸", hr:"人力資源", health:"健康醫療"};
+const P4_CATEGORY_LABELS = {announcement:"廣播公告", advertisement:"廣告", voicemail:"語音留言", broadcast_news:"新聞廣播", tour_guide:"導覽解說", meeting_excerpt:"會議片段", instructions_tutorial:"操作說明"};
+
+function renderListeningMode(container){
+  if(listeningPart === "p2") renderP2(container);
+  else if(listeningPart === "p3") renderConversationOrTalk(container, "p3");
+  else renderConversationOrTalk(container, "p4");
+}
+
+function renderP2(container){
+  if(p2Items.length === 0){ container.innerHTML = `<div class="empty-state">正在載入 Part 2 題目…</div>`; return; }
+  if(p2Order.length === 0) p2Order = p2Items.map(it=>it.id);
+  if(p2Idx >= p2Order.length) p2Idx = 0;
+  const item = p2Items.find(it=>it.id===p2Order[p2Idx]);
+  const checked = p2Checked;
+  const doneCount = p2Order.filter(id=>p2Progress[id]).length;
+
+  const optsHtml = item.options.map((opt,oi)=>{
+    let cls = "q-opt";
+    if(checked){
+      if(oi === item.answer_index) cls += " correct";
+      else if(oi === p2Selected) cls += " wrong";
+    }
+    const label = (checked || p2ShowText) ? opt : `選項 ${String.fromCharCode(65+oi)}（點🔊聆聽）`;
+    return `
+      <div class="p2-option-row">
+        <button class="mini-speak-btn" data-speak="${encodeURIComponent(opt)}" title="播放此選項">🔊</button>
+        <button class="${cls}" data-oi="${oi}" aria-pressed="${p2Selected===oi}" ${checked?'disabled':''}>${String.fromCharCode(65+oi)}. ${label}</button>
+      </div>
+    `;
+  }).join("");
+
+  const explainHtml = checked ? `<div class="q-explain">${p2Selected===item.answer_index?'✅ 答對了！':'❌ 答錯了。'} 正確答案是 (${String.fromCharCode(65+item.answer_index)})。<br>題目：${item.question}<br>${item.explanation_zh}</div>` : "";
+
+  container.innerHTML = `
+    <div class="reading-head">
+      <div class="reading-tag"><span class="chip cat">${P2_TYPE_LABELS[item.question_type]||item.question_type}</span></div>
+      <div class="reading-nav">
+        <span>已完成 ${doneCount} / ${p2Order.length}</span>
+        <button class="nav-btn" id="p2PrevBtn" style="width:36px;height:36px;">◀</button>
+        <span>${p2Idx+1} / ${p2Order.length}</span>
+        <button class="nav-btn" id="p2NextBtn" style="width:36px;height:36px;">▶</button>
+      </div>
+    </div>
+    <div class="listen-card">
+      <div class="listen-play-row">
+        <button class="big-play-btn" id="p2PlayBtn" ${canSpeak?'':'disabled'}>▶ 播放題目與選項</button>
+      </div>
+      <div class="transcript-toggle"><button id="p2ToggleText">${p2ShowText ? '隱藏文字' : '顯示文字（非正式練習）'}</button></div>
+      ${p2ShowText ? `<div class="transcript-box"><div class="transcript-line"><b>Q:</b> ${item.question}</div></div>` : ''}
+      <div class="p5-options">${optsHtml}</div>
+      ${explainHtml}
+      <div class="reading-actions">
+        ${!checked ? `<button class="icon-btn" id="p2CheckBtn" ${p2Selected===null?'disabled':''}>提交答案</button>` : `<button class="icon-btn" id="p2RetryBtn">🔄 重新作答</button>`}
+      </div>
+    </div>
+  `;
+
+  document.getElementById("p2PlayBtn").addEventListener("click", ()=>{
+    speakSequence([item.question, ...item.options]);
+  });
+  container.querySelectorAll(".mini-speak-btn").forEach(btn=>{
+    btn.addEventListener("click", (e)=>{ e.stopPropagation(); speak(decodeURIComponent(btn.dataset.speak)); });
+  });
+  document.getElementById("p2ToggleText").addEventListener("click", ()=>{ p2ShowText = !p2ShowText; renderStage(); });
+  if(!checked){
+    container.querySelectorAll(".q-opt").forEach(btn=>{
+      btn.addEventListener("click", ()=>{ p2Selected = Number(btn.dataset.oi); renderStage(); });
+    });
+  }
+  document.getElementById("p2CheckBtn")?.addEventListener("click", ()=>{
+    p2Checked = true;
+    p2Progress[item.id] = true; saveJSON("toeic-p2-progress", p2Progress); pushCloudPart("p2", p2Progress);
+    renderStage();
+  });
+  document.getElementById("p2RetryBtn")?.addEventListener("click", ()=>{
+    p2Checked = false; p2Selected = null; p2ShowText = false;
+    renderStage();
+  });
+  document.getElementById("p2PrevBtn").addEventListener("click", ()=>{
+    speechSynthesis.cancel();
+    p2Idx = (p2Idx-1+p2Order.length)%p2Order.length; p2Selected=null; p2Checked=false; p2ShowText=false;
+    renderStage();
+  });
+  document.getElementById("p2NextBtn").addEventListener("click", ()=>{
+    speechSynthesis.cancel();
+    p2Idx = (p2Idx+1)%p2Order.length; p2Selected=null; p2Checked=false; p2ShowText=false;
+    renderStage();
+  });
+}
+
+function renderConversationOrTalk(container, kind){
+  const isP3 = kind === "p3";
+  const items = isP3 ? p3Items : p4Items;
+  if(items.length === 0){ container.innerHTML = `<div class="empty-state">正在載入 Part ${isP3?3:4} 題目…</div>`; return; }
+  if(isP3 && p3Order.length === 0) p3Order = p3Items.map(it=>it.id);
+  if(!isP3 && p4Order.length === 0) p4Order = p4Items.map(it=>it.id);
+  const order = isP3 ? p3Order : p4Order;
+  if((isP3 ? p3Idx : p4Idx) >= order.length){ if(isP3) p3Idx = 0; else p4Idx = 0; }
+  const idx = isP3 ? p3Idx : p4Idx;
+  const item = items.find(it=>it.id===order[idx]);
+  const selected = isP3 ? p3Selected : p4Selected;
+  const checked = isP3 ? p3Checked : p4Checked;
+  const showText = isP3 ? p3ShowText : p4ShowText;
+  const progressObj = isP3 ? p3Progress : p4Progress;
+  const doneCount = order.filter(id=>progressObj[id]).length;
+
+  const lines = isP3 ? item.lines.map(l=>l.text) : [item.talk];
+  const pitchFn = isP3 ? (i)=> (item.lines[i].speaker.includes("Woman") ? (item.lines[i].speaker.includes("2")?1.3:1.15) : (item.lines[i].speaker.includes("2")?0.85:1)) : undefined;
+
+  const transcriptHtml = isP3
+    ? item.lines.map(l=>`<div class="transcript-line"><b>${l.speaker}:</b> ${l.text}</div>`).join("")
+    : `<div class="transcript-line">${item.talk}</div>`;
+
+  const questionsHtml = item.questions.map((q,qi)=>{
+    const chosen = selected[qi];
+    const optsHtml = q.options.map((opt,oi)=>{
+      let cls = "q-opt";
+      if(checked){ if(oi===q.answer_index) cls += " correct"; else if(oi===chosen) cls += " wrong"; }
+      return `<button class="${cls}" data-qi="${qi}" data-oi="${oi}" aria-pressed="${chosen===oi}" ${checked?'disabled':''}>${String.fromCharCode(65+oi)}. ${opt}</button>`;
+    }).join("");
+    const explainHtml = (checked && chosen !== undefined) ? `<div class="q-explain">${chosen===q.answer_index?'✅ 答對了！':'❌ 答錯了。'} 正確答案是 (${String.fromCharCode(65+q.answer_index)})。<br>${q.explanation_zh}</div>` : "";
+    return `<div class="q-card"><div class="q-head">${qi+1}. ${q.question_en}</div>${optsHtml}${explainHtml}</div>`;
+  }).join("");
+
+  const answeredCount = Object.keys(selected).length;
+  const catLabel = isP3 ? (P3_CATEGORY_LABELS[item.category]||item.category) : (P4_CATEGORY_LABELS[item.category]||item.category);
+
+  container.innerHTML = `
+    <div class="reading-head">
+      <div class="reading-tag"><span class="chip cat">${catLabel}</span></div>
+      <div class="reading-nav">
+        <span>已完成 ${doneCount} / ${order.length}</span>
+        <button class="nav-btn" id="lPrevBtn" style="width:36px;height:36px;">◀</button>
+        <span>${idx+1} / ${order.length}</span>
+        <button class="nav-btn" id="lNextBtn" style="width:36px;height:36px;">▶</button>
+      </div>
+    </div>
+    <div class="reading-layout">
+      <div>
+        <div class="listen-play-row"><button class="big-play-btn" id="lPlayBtn" ${canSpeak?'':'disabled'}>▶ 播放${isP3?'對話':'獨白'}</button></div>
+        <div class="transcript-toggle"><button id="lToggleText">${showText ? '隱藏逐字稿' : '顯示逐字稿（非正式練習）'}</button></div>
+        ${showText ? `<div class="transcript-box">${transcriptHtml}</div>` : ''}
+      </div>
+      <div class="questions-col">${questionsHtml}</div>
+    </div>
+    <div class="reading-actions">
+      ${!checked ? `<button class="icon-btn" id="lCheckBtn" ${answeredCount<item.questions.length?'disabled':''}>提交答案（已作答 ${answeredCount}/${item.questions.length}）</button>` : `<button class="icon-btn" id="lRetryBtn">🔄 重新作答</button>`}
+    </div>
+  `;
+
+  document.getElementById("lPlayBtn").addEventListener("click", ()=>{
+    speakSequence(lines, {pitchFn});
+  });
+  document.getElementById("lToggleText").addEventListener("click", ()=>{
+    if(isP3) p3ShowText = !p3ShowText; else p4ShowText = !p4ShowText;
+    renderStage();
+  });
+  if(!checked){
+    container.querySelectorAll(".q-opt").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        const qi = Number(btn.dataset.qi), oi = Number(btn.dataset.oi);
+        selected[qi] = oi;
+        renderStage();
+      });
+    });
+  }
+  document.getElementById("lCheckBtn")?.addEventListener("click", ()=>{
+    if(isP3) p3Checked = true; else p4Checked = true;
+    progressObj[item.id] = true;
+    saveJSON(isP3 ? "toeic-p3-progress" : "toeic-p4-progress", progressObj);
+    pushCloudPart(isP3 ? "p3" : "p4", progressObj);
+    renderStage();
+  });
+  document.getElementById("lRetryBtn")?.addEventListener("click", ()=>{
+    if(isP3){ p3Checked=false; p3Selected={}; p3ShowText=false; } else { p4Checked=false; p4Selected={}; p4ShowText=false; }
+    renderStage();
+  });
+  document.getElementById("lPrevBtn").addEventListener("click", ()=>{
+    speechSynthesis.cancel();
+    if(isP3){ p3Idx=(p3Idx-1+order.length)%order.length; p3Selected={}; p3Checked=false; p3ShowText=false; }
+    else { p4Idx=(p4Idx-1+order.length)%order.length; p4Selected={}; p4Checked=false; p4ShowText=false; }
+    renderStage();
+  });
+  document.getElementById("lNextBtn").addEventListener("click", ()=>{
+    speechSynthesis.cancel();
+    if(isP3){ p3Idx=(p3Idx+1)%order.length; p3Selected={}; p3Checked=false; p3ShowText=false; }
+    else { p4Idx=(p4Idx+1)%order.length; p4Selected={}; p4Checked=false; p4ShowText=false; }
+    renderStage();
+  });
+}
+
 /* ---------- Render: reading mode ---------- */
 function docLabel(kind){
   return {email:"E-mail", memo:"Memo", letter:"Letter", ad:"Advertisement", notice:"Notice", article:"Article", form:"Form"}[kind] || kind;
@@ -829,6 +1370,8 @@ function renderStage(){
   if(mode === "card") renderCardMode(container);
   else if(mode === "list") renderListMode(container);
   else if(mode === "reading") renderReadingMode(container);
+  else if(mode === "grammar") renderGrammarMode(container);
+  else if(mode === "listening") renderListeningMode(container);
   else renderQuizMode(container);
 }
 function render(){
@@ -867,8 +1410,50 @@ async function loadReading(){
   if(mode === "reading") renderStage();
 }
 
+async function loadJSONData(path, fallback){
+  try{
+    const res = await fetch(path);
+    if(!res.ok) throw new Error("HTTP " + res.status);
+    const data = await res.json();
+    return data.map((it,i)=>({...it, id: it.id ?? i}));
+  }catch(err){
+    return fallback.map((it,i)=>({...it, id:i}));
+  }
+}
+
+async function loadP5(){
+  p5Items = await loadJSONData("data/part5.json", FALLBACK_P5);
+  p5Order = p5Items.map(it=>it.id);
+  if(mode === "grammar" && grammarPart === "p5") renderStage();
+}
+async function loadP6(){
+  p6Items = await loadJSONData("data/part6.json", FALLBACK_P6);
+  p6Order = p6Items.map(it=>it.id);
+  if(mode === "grammar" && grammarPart === "p6") renderStage();
+}
+async function loadP2(){
+  p2Items = await loadJSONData("data/part2.json", FALLBACK_P2);
+  p2Order = p2Items.map(it=>it.id);
+  if(mode === "listening" && listeningPart === "p2") renderStage();
+}
+async function loadP3(){
+  p3Items = await loadJSONData("data/part3.json", FALLBACK_P3);
+  p3Order = p3Items.map(it=>it.id);
+  if(mode === "listening" && listeningPart === "p3") renderStage();
+}
+async function loadP4(){
+  p4Items = await loadJSONData("data/part4.json", FALLBACK_P4);
+  p4Order = p4Items.map(it=>it.id);
+  if(mode === "listening" && listeningPart === "p4") renderStage();
+}
+
 loadVocab();
 loadReading();
+loadP5();
+loadP6();
+loadP2();
+loadP3();
+loadP4();
 </script>
 
 <script type="module">
@@ -899,23 +1484,20 @@ loadReading();
     signOut: () => signOut(auth)
   };
 
+  const PROGRESS_KEYS = ["vocab","reading","p5","p6","p2","p3","p4"];
+
   window.cloudSync = {
     async loadProgress(uid){
-      const [vocabSnap, readingSnap] = await Promise.all([
-        getDoc(doc(db, "users", uid, "progress", "vocab")),
-        getDoc(doc(db, "users", uid, "progress", "reading"))
-      ]);
-      return {
-        vocab: vocabSnap.exists() ? vocabSnap.data().data : null,
-        reading: readingSnap.exists() ? readingSnap.data().data : null
-      };
+      const snaps = await Promise.all(PROGRESS_KEYS.map(key => getDoc(doc(db, "users", uid, "progress", key))));
+      const out = {};
+      PROGRESS_KEYS.forEach((key, i) => { out[key] = snaps[i].exists() ? snaps[i].data().data : null; });
+      return out;
     },
-    saveVocab(uid, data){
-      return setDoc(doc(db, "users", uid, "progress", "vocab"), { data, updatedAt: Date.now() });
+    save(uid, key, data){
+      return setDoc(doc(db, "users", uid, "progress", key), { data, updatedAt: Date.now() });
     },
-    saveReading(uid, data){
-      return setDoc(doc(db, "users", uid, "progress", "reading"), { data, updatedAt: Date.now() });
-    }
+    saveVocab(uid, data){ return this.save(uid, "vocab", data); },
+    saveReading(uid, data){ return this.save(uid, "reading", data); }
   };
 
   onAuthStateChanged(auth, (user)=>{

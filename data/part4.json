@@ -1,0 +1,164 @@
+[
+  {
+    "category": "announcement",
+    "talk": "Attention shoppers. Riverside Home Goods will be closing in fifteen minutes. Please bring your final selections to the registers located at the front of the store. As a reminder, our garden furniture department is offering an extra twenty percent off all clearance items until the end of this week only. If you need assistance carrying large items to your vehicle, please ask any associate wearing a green vest, and they will be happy to help. Thank you for shopping with us today, and we look forward to seeing you again soon.",
+    "questions": [
+      {"question_en": "Where is this announcement most likely being made?", "options": ["At a train station", "In a retail store", "At a restaurant", "In a parking garage"], "answer_index": 1, "explanation_zh": "廣播提到店鋪即將打烊、收銀台、以及店員的服務，可判斷是在零售商店，所以答案是 (B)。"},
+      {"question_en": "According to the announcement, what discount is being offered?", "options": ["Ten percent off all items", "Free delivery on furniture", "Twenty percent off clearance garden furniture", "A buy-one-get-one deal"], "answer_index": 2, "explanation_zh": "廣播明確提到庭院家具部門的清倉品額外再打八折（20% off），所以答案是 (C)。"},
+      {"question_en": "What should customers do if they need help carrying items?", "options": ["Call a phone number", "Ask an associate wearing a green vest", "Go to customer service", "Use a shopping cart"], "answer_index": 1, "explanation_zh": "廣播提到若需要搬運協助，可以請穿綠色背心的員工幫忙，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "advertisement",
+    "talk": "Tired of spending your weekends stuck in traffic driving to the gym? Fit Sphere brings the workout to you. Our new home fitness app offers over three hundred guided video classes, from beginner yoga to advanced strength training, all led by certified instructors. Sign up before September fifteenth and get your first three months for just one dollar, a savings of nearly sixty dollars off the regular price. Every plan includes a personalized weekly schedule based on your goals. Download Fit Sphere today from any app store and start your first class in under two minutes.",
+    "questions": [
+      {"question_en": "What is being advertised?", "options": ["A gym membership card", "A home fitness app", "A pair of running shoes", "A meal delivery service"], "answer_index": 1, "explanation_zh": "廣告介紹的是名為 Fit Sphere 的居家健身應用程式，所以答案是 (B)。"},
+      {"question_en": "What is the special offer for new members?", "options": ["A free water bottle", "Three months for one dollar", "A lifetime discount", "A free personal trainer visit"], "answer_index": 1, "explanation_zh": "廣告提到九月十五日前註冊可享前三個月只需一美元，所以答案是 (B)。"},
+      {"question_en": "What can be inferred about the app's classes?", "options": ["They require expensive equipment", "They are only available on weekends", "They are taught by certified instructors", "They last exactly one hour each"], "answer_index": 2, "explanation_zh": "廣告提到超過三百堂課程皆由合格教練指導，所以答案是 (C)。"}
+    ]
+  },
+  {
+    "category": "voicemail",
+    "talk": "Hi, this message is for Mr. Alvarez. This is Priya calling from Brightline Dental. I'm reaching out to confirm your appointment for a routine cleaning this Thursday at ten thirty in the morning. Please remember to arrive about ten minutes early to complete a short update to your insurance information, since our records show it hasn't been updated in over two years. If Thursday no longer works for you, feel free to call our office back at 555-0148 to reschedule for a later date. We look forward to seeing you this week.",
+    "questions": [
+      {"question_en": "Why is Priya calling Mr. Alvarez?", "options": ["To cancel an appointment", "To confirm an upcoming appointment", "To offer a discount", "To request payment"], "answer_index": 1, "explanation_zh": "語音留言一開始就說明是為了確認週四的洗牙預約，所以答案是 (B)。"},
+      {"question_en": "What does the caller ask Mr. Alvarez to do before his appointment?", "options": ["Bring a form of identification", "Fast for several hours", "Arrive early to update insurance information", "Pay the bill in advance"], "answer_index": 2, "explanation_zh": "留言提到請提早十分鐘到，以更新保險資訊，所以答案是 (C)。"},
+      {"question_en": "What should Mr. Alvarez do if Thursday is not convenient?", "options": ["Ignore the message", "Call the office to reschedule", "Send an email", "Visit the office in person"], "answer_index": 1, "explanation_zh": "留言提到如果週四不方便，可以回撥電話重新安排時間，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "broadcast_news",
+    "talk": "In local business news, the Fairview Public Library announced yesterday that it will reopen its downtown branch next Monday after a six-month renovation project. The upgrade added a new children's reading room and doubled the number of available computer stations. City officials say the renovation, originally expected to cost four hundred thousand dollars, came in under budget thanks to a grant from a regional foundation. Library hours will remain the same, from nine in the morning until eight at night, Monday through Saturday. Residents are encouraged to visit the new space and take advantage of extended borrowing periods being offered through the end of the year.",
+    "questions": [
+      {"question_en": "What is the main topic of this news report?", "options": ["A new library branch opening", "The reopening of a renovated library", "A change in library hours", "A city budget shortfall"], "answer_index": 1, "explanation_zh": "報導主要說明市中心分館歷經六個月整修後即將重新開放，所以答案是 (B)。"},
+      {"question_en": "How was the renovation project funded?", "options": ["Entirely by city taxes", "Through a bank loan", "With help from a foundation grant", "By private donations only"], "answer_index": 2, "explanation_zh": "報導提到多虧地區基金會提供補助，整修費用低於預算，所以答案是 (C)。"},
+      {"question_en": "What can be inferred about the library's hours after the renovation?", "options": ["They will be extended on weekends", "They will stay the same as before", "They will be reduced on Saturdays", "They will change to include Sundays"], "answer_index": 1, "explanation_zh": "報導提到圖書館開放時間維持不變，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "tour_guide",
+    "talk": "Welcome aboard the Harbor Breeze sightseeing boat. Our tour will last approximately ninety minutes and will take us past the old lighthouse, the fishing pier, and the newly restored shipyard museum. Feel free to move around the deck and take photos, but please remain seated whenever the boat is docking or departing. Restrooms are located on the lower level, just past the snack counter. About halfway through the tour, we'll pass beneath the Clearwater Bridge, which was built in 1932 and is still one of the longest bridges in the region. If you have any questions along the way, just raise your hand and one of our crew members will assist you.",
+    "questions": [
+      {"question_en": "How long will the boat tour last?", "options": ["About thirty minutes", "About sixty minutes", "About ninety minutes", "About two hours"], "answer_index": 2, "explanation_zh": "導覽員提到行程大約九十分鐘，所以答案是 (C)。"},
+      {"question_en": "When are passengers asked to remain seated?", "options": ["During the entire tour", "While the boat is docking or departing", "Only near the bridge", "While photos are being taken"], "answer_index": 1, "explanation_zh": "導覽員提到船隻靠岸或出發時請務必坐好，所以答案是 (B)。"},
+      {"question_en": "What should passengers do if they have a question?", "options": ["Wait until the tour ends", "Visit the snack counter", "Raise their hand", "Call the ship's office"], "answer_index": 2, "explanation_zh": "導覽員提到若有問題可舉手，工作人員會協助，所以答案是 (C)。"}
+    ]
+  },
+  {
+    "category": "meeting_excerpt",
+    "talk": "Before we move on to the budget review, I want to briefly cover the results of last month's customer satisfaction survey. Overall satisfaction rose to eighty-seven percent, up from eighty-one percent in the previous quarter. The biggest improvement came from our shipping department, where average delivery time dropped from six days to just three. However, several respondents mentioned that our online return process is still confusing. I'd like Marcus and his team to draft a simpler return policy page by the end of next week so we can review it before it goes live. Any questions before we continue to the numbers?",
+    "questions": [
+      {"question_en": "What is mainly being discussed at the start of the meeting?", "options": ["Quarterly sales figures", "Results of a customer satisfaction survey", "A new hiring plan", "Shipping department layoffs"], "answer_index": 1, "explanation_zh": "會議開頭在報告上個月的顧客滿意度調查結果，所以答案是 (B)。"},
+      {"question_en": "By how much did average delivery time decrease?", "options": ["From six days to three days", "From three days to one day", "From eight days to six days", "From five days to two days"], "answer_index": 0, "explanation_zh": "談話提到平均出貨時間從六天降到三天，所以答案是 (A)。"},
+      {"question_en": "What is Marcus asked to do?", "options": ["Hire more staff", "Draft a simpler return policy page", "Present the budget numbers", "Contact unhappy customers"], "answer_index": 1, "explanation_zh": "說話者請 Marcus 和團隊在下週前擬出更簡化的退貨政策頁面，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "instructions_tutorial",
+    "talk": "Before installing the shelving unit, make sure you have all the parts listed on page two: four side panels, six shelves, and one bag of screws. Start by laying the two side panels flat on the floor, then attach the bottom shelf using four screws on each side. Once the base is secure, stand the unit upright and slide in the remaining shelves from the top down, spacing them evenly. Do not fully tighten any screws until all shelves are in place, as this makes adjustments much easier. Finally, attach the included wall strap near the top for added stability, especially if you have children or pets at home.",
+    "questions": [
+      {"question_en": "What is this talk mainly explaining?", "options": ["How to repair a shelving unit", "How to assemble a shelving unit", "How to clean furniture", "How to return a product"], "answer_index": 1, "explanation_zh": "整段說明主要是在講解書架的組裝步驟，所以答案是 (B)。"},
+      {"question_en": "How many screws should be used to attach the bottom shelf on each side?", "options": ["Two", "Four", "Six", "Eight"], "answer_index": 1, "explanation_zh": "說明提到底層層板每側使用四顆螺絲固定，所以答案是 (B)。"},
+      {"question_en": "Why does the speaker recommend not fully tightening the screws right away?", "options": ["To save time", "To make adjustments easier", "Because the screws might be reused", "Because the shelves are fragile"], "answer_index": 1, "explanation_zh": "說明提到先不完全鎖緊螺絲，是為了之後調整層板位置更容易，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "announcement",
+    "talk": "May I have your attention please. Due to scheduled maintenance on elevators three and four, only elevators one and two will be in service between now and six o'clock this evening. Employees on the upper floors are encouraged to use the stairwell near the east entrance during this time to avoid long waits. We apologize for any inconvenience this may cause. Building management expects the maintenance work to be finished by early tomorrow morning, and all four elevators should be fully operational again by eight a.m. If you have any concerns, please contact the front desk on the ground floor.",
+    "questions": [
+      {"question_en": "What is the purpose of this announcement?", "options": ["To announce a fire drill", "To inform employees about elevator maintenance", "To introduce new building rules", "To announce an office relocation"], "answer_index": 1, "explanation_zh": "廣播主要在說明電梯維修的相關資訊，所以答案是 (B)。"},
+      {"question_en": "Which elevators will remain in service?", "options": ["Elevators one and two", "Elevators three and four", "All four elevators", "None of the elevators"], "answer_index": 0, "explanation_zh": "廣播提到只有一號和二號電梯維持運作，所以答案是 (A)。"},
+      {"question_en": "What are employees encouraged to do during the maintenance period?", "options": ["Leave the building early", "Use the stairwell near the east entrance", "Work from home", "Wait at the front desk"], "answer_index": 1, "explanation_zh": "廣播建議員工可改走東側入口附近的樓梯，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "advertisement",
+    "talk": "Looking for a getaway that doesn't break the bank? Cedar Lake Resort is offering fifty percent off all weekday bookings throughout October. Guests can enjoy a private lakeside cabin, complimentary kayak rentals, and a full breakfast included with every stay. Unlike many resorts, we have no hidden resort fees or parking charges. Book three nights and receive a fourth night absolutely free. This offer is only available for reservations made directly through our website, and space is limited, since we only have twenty cabins total. Visit cedarlakeresort dot com today to check availability before the best dates are gone.",
+    "questions": [
+      {"question_en": "What is the main purpose of this advertisement?", "options": ["To promote a lakeside resort's discount offer", "To announce a new hiking trail", "To advertise kayaking lessons", "To recruit resort staff"], "answer_index": 0, "explanation_zh": "廣告主要在宣傳 Cedar Lake Resort 十月份平日訂房的折扣優惠，所以答案是 (A)。"},
+      {"question_en": "What do guests receive if they book three nights?", "options": ["A free breakfast", "A fourth night free", "A discount on kayak rental", "A free parking pass"], "answer_index": 1, "explanation_zh": "廣告提到訂三晚可再免費獲得第四晚，所以答案是 (B)。"},
+      {"question_en": "How can customers take advantage of this offer?", "options": ["By calling a travel agent", "By booking directly through the website", "By visiting in person", "By joining a loyalty program"], "answer_index": 1, "explanation_zh": "廣告說明此優惠僅限透過官網直接預訂才可享有，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "voicemail",
+    "talk": "Hello, this message is for Ms. Chen. This is David from Northside Auto Repair returning your call about your vehicle. The inspection is complete, and the good news is the engine noise you mentioned was just a loose belt, which we've already tightened at no charge. However, we did notice your brake pads are wearing thin and would recommend replacing them soon, ideally within the next month. That repair would cost around one hundred and twenty dollars including parts and labor. Give us a call back at 555-0173 whenever you're ready to schedule that, and we can usually get you in within a day or two.",
+    "questions": [
+      {"question_en": "Why is David calling Ms. Chen?", "options": ["To request payment for a service", "To return her call about a vehicle inspection", "To cancel an appointment", "To offer a new car for sale"], "answer_index": 1, "explanation_zh": "留言開頭說明是回電告知車輛檢查的結果，所以答案是 (B)。"},
+      {"question_en": "What caused the engine noise?", "options": ["A broken belt", "A loose belt", "Low oil level", "A faulty battery"], "answer_index": 1, "explanation_zh": "留言提到引擎噪音是因為皮帶鬆脫所造成，已經免費調整，所以答案是 (B)。"},
+      {"question_en": "What does David recommend Ms. Chen do soon?", "options": ["Replace the brake pads", "Buy a new car", "Change the oil", "Replace the battery"], "answer_index": 0, "explanation_zh": "留言建議煞車皮已經磨損，建議一個月內更換，所以答案是 (A)。"}
+    ]
+  },
+  {
+    "category": "broadcast_news",
+    "talk": "This is your morning traffic and weather update for the Westbrook area. Commuters should expect delays on Route 9 near the river bridge, where crews are repairing a water main break that started overnight. Traffic is currently backed up for nearly two miles, and officials say repairs may not be finished until early afternoon. Drivers are advised to take Maple Avenue as an alternate route if possible. As for the weather, expect cloudy skies this morning with a chance of light rain after noon, and temperatures reaching a high of sixty-eight degrees. We'll have another update for you in twenty minutes.",
+    "questions": [
+      {"question_en": "What is causing traffic delays on Route 9?", "options": ["A car accident", "A water main repair", "A construction project", "A parade"], "answer_index": 1, "explanation_zh": "報導提到是因為河橋附近的水管破裂維修工程造成塞車，所以答案是 (B)。"},
+      {"question_en": "What alternate route is suggested for drivers?", "options": ["Route 9", "The river bridge", "Maple Avenue", "The highway"], "answer_index": 2, "explanation_zh": "報導建議駕駛可改走 Maple Avenue 替代道路，所以答案是 (C)。"},
+      {"question_en": "What can be inferred about the weather later in the day?", "options": ["It will be sunny all day", "There is a chance of rain in the afternoon", "Temperatures will drop sharply", "Snow is expected"], "answer_index": 1, "explanation_zh": "報導提到中午後可能會有小雨，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "tour_guide",
+    "talk": "As we continue through the history museum, you'll notice we're now entering the textile hall, home to over two hundred handwoven pieces collected from artisans around the world. The piece directly in front of you took nearly eight months to complete and uses a dyeing technique that dates back over three centuries. Photography without flash is permitted in this hall, but please do not touch any of the fabric displays, as the oils from our hands can cause damage over time. In about ten minutes, we'll gather near the fountain courtyard for a short break before continuing to the final exhibit on the second floor.",
+    "questions": [
+      {"question_en": "What is the tour guide mainly describing?", "options": ["A collection of paintings", "A hall of handwoven textiles", "An ancient pottery exhibit", "A sculpture garden"], "answer_index": 1, "explanation_zh": "導覽員主要在介紹紡織展廳中收藏的手工織品，所以答案是 (B)。"},
+      {"question_en": "Why are visitors asked not to touch the fabric displays?", "options": ["The fabrics are for sale", "Hand oils can damage them over time", "They are behind glass", "They are being restored"], "answer_index": 1, "explanation_zh": "導覽員提到手部的油脂長期接觸會損害布料，所以答案是 (B)。"},
+      {"question_en": "What will happen in about ten minutes?", "options": ["The tour will end", "Visitors will take a break near the fountain courtyard", "A new exhibit will open", "Lunch will be served"], "answer_index": 1, "explanation_zh": "導覽員提到十分鐘後會在噴水中庭集合稍作休息，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "meeting_excerpt",
+    "talk": "Let's move to the next item on the agenda, the office relocation. As most of you know, our lease at the current building ends in December, so we've been reviewing three possible new locations downtown. Based on cost and commute distance for staff, the space on Bellwood Avenue is currently our top choice, even though it's slightly smaller than our current office. Rent there would save us roughly fifteen percent annually compared to renewing our current lease. I'd like everyone to review the floor plan I sent this morning and share feedback with me by Friday, since we need to finalize a decision before the end of the month.",
+    "questions": [
+      {"question_en": "What is the main topic of this part of the meeting?", "options": ["Hiring new employees", "Choosing a new office location", "Reviewing annual profits", "Planning a company event"], "answer_index": 1, "explanation_zh": "會議這部分主要在討論搬遷至新辦公室地點的決定，所以答案是 (B)。"},
+      {"question_en": "Why is Bellwood Avenue currently the top choice?", "options": ["It has the largest floor space", "It saves about fifteen percent in annual rent", "It is closest to the airport", "It has free parking"], "answer_index": 1, "explanation_zh": "談話提到 Bellwood Avenue 的租金每年可省下約百分之十五，所以答案是 (B)。"},
+      {"question_en": "What are employees asked to do by Friday?", "options": ["Sign a new lease", "Review the floor plan and give feedback", "Pack their belongings", "Vote on a moving date"], "answer_index": 1, "explanation_zh": "說話者請大家在週五前檢視今早寄出的平面圖並提供意見，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "instructions_tutorial",
+    "talk": "To reset your thermostat to factory settings, first locate the small recessed button on the lower right side of the device. Using a paperclip, press and hold that button for about ten seconds until the screen goes blank and then displays the company logo. Once the logo appears, release the button and wait roughly one minute for the system to restart completely. After it restarts, you'll need to reconnect it to your home Wi-Fi network using the mobile app, following the setup steps shown on screen. Keep in mind that resetting will erase any custom temperature schedules you previously created, so you may want to write those down first.",
+    "questions": [
+      {"question_en": "What is this talk mainly about?", "options": ["Installing a new thermostat", "Resetting a thermostat to factory settings", "Connecting a thermostat to solar power", "Troubleshooting a Wi-Fi router"], "answer_index": 1, "explanation_zh": "整段說明主要在講解如何將恆溫器重設為出廠設定，所以答案是 (B)。"},
+      {"question_en": "How long should the reset button be held?", "options": ["About five seconds", "About ten seconds", "About thirty seconds", "About one minute"], "answer_index": 1, "explanation_zh": "說明提到需按住重設鈕約十秒鐘，所以答案是 (B)。"},
+      {"question_en": "What does the speaker suggest doing before resetting the device?", "options": ["Unplugging the thermostat", "Writing down custom temperature schedules", "Calling customer support", "Charging the mobile phone"], "answer_index": 1, "explanation_zh": "說明提醒重設會清除自訂的溫度排程，建議事先記錄下來，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "announcement",
+    "talk": "Good afternoon, and welcome to Terminal B. This is a reminder that all liquids and gels carried in your hand luggage must be in containers of one hundred milliliters or less and placed in a single clear plastic bag. Passengers traveling with laptops or tablets should remove them from their bags before reaching the security checkpoint. Security lines are currently running about twenty minutes long. If your flight departs within the next hour, please inform a staff member so you can be moved to the front of the line. Thank you for your cooperation, and we wish you a pleasant journey.",
+    "questions": [
+      {"question_en": "Where would this announcement most likely be heard?", "options": ["At a hotel lobby", "At an airport security checkpoint", "At a train station", "At a shopping mall"], "answer_index": 1, "explanation_zh": "廣播內容涉及隨身行李液體規定與安檢隊伍，判斷是在機場安檢區，所以答案是 (B)。"},
+      {"question_en": "What should passengers do with laptops before security screening?", "options": ["Turn them off", "Remove them from their bags", "Place them in checked luggage", "Charge them fully"], "answer_index": 1, "explanation_zh": "廣播提到通過安檢前應將筆電從包內取出，所以答案是 (B)。"},
+      {"question_en": "What should passengers with a flight departing soon do?", "options": ["Wait in the regular line", "Inform a staff member to move ahead in line", "Rebook their flight", "Go to a different terminal"], "answer_index": 1, "explanation_zh": "廣播提到若航班一小時內起飛，可告知工作人員以優先通過，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "advertisement",
+    "talk": "Is your morning coffee routine getting a little boring? Introducing the BrewMaster Mini, a compact coffee maker designed for small kitchens and busy mornings. In under three minutes, it brews a full cup using freshly ground beans, no capsules or pods required, which means less plastic waste and lower long-term costs. It's currently available at a special introductory price of forty-nine dollars, twenty dollars off the regular price, but only while supplies last at participating retailers. Every unit comes with a two-year warranty and a reusable filter. Visit any Home Essentials store this week to see a live demonstration and taste the difference for yourself.",
+    "questions": [
+      {"question_en": "What product is being advertised?", "options": ["A tea kettle", "A compact coffee maker", "A blender", "A toaster oven"], "answer_index": 1, "explanation_zh": "廣告介紹的是一款小巧的咖啡機 BrewMaster Mini，所以答案是 (B)。"},
+      {"question_en": "How much is the introductory price discount?", "options": ["Ten dollars", "Twenty dollars", "Thirty dollars", "Forty dollars"], "answer_index": 1, "explanation_zh": "廣告提到特惠價比原價便宜二十美元，所以答案是 (B)。"},
+      {"question_en": "What can be inferred about the coffee maker?", "options": ["It requires coffee pods", "It reduces plastic waste", "It only works with bottled water", "It takes over ten minutes to brew"], "answer_index": 1, "explanation_zh": "廣告提到不需要膠囊或濾包，可減少塑膠垃圾，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "voicemail",
+    "talk": "Hi, it's Tom calling from Greenway Landscaping. I wanted to let you know that we had to reschedule your lawn service originally planned for this Wednesday because of the storm warning in the forecast. Instead, our crew will come by this Friday morning, sometime between eight and ten o'clock, to complete the mowing, trimming, and leaf removal as usual. There's no need for you to be home, since our team has access to the side gate. If Friday doesn't work well for you, just give the office a call back at 555-0192 and we'll find another time that suits your schedule better.",
+    "questions": [
+      {"question_en": "Why is Tom calling?", "options": ["To request payment", "To reschedule a lawn service appointment", "To cancel a contract", "To offer a new service package"], "answer_index": 1, "explanation_zh": "留言主要是通知因暴風警報而將割草服務改期，所以答案是 (B)。"},
+      {"question_en": "When will the crew now come to do the work?", "options": ["Wednesday afternoon", "Thursday evening", "Friday morning between eight and ten", "Saturday at noon"], "answer_index": 2, "explanation_zh": "留言提到團隊將改在週五上午八點到十點之間前來，所以答案是 (C)。"},
+      {"question_en": "Why doesn't the customer need to be home?", "options": ["The service was cancelled", "The crew has access to the side gate", "The work will be done remotely", "A neighbor will let them in"], "answer_index": 1, "explanation_zh": "留言提到團隊可以從側門進入，因此不需要屋主在家，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "broadcast_news",
+    "talk": "In sports news, the Ridgeline Hawks clinched the regional championship last night with a narrow three-to-two victory over their longtime rivals, the Oakdale Wolves. The winning goal came in the final two minutes of the match, scored by forward Elena Marsh, who finished the season with a team-leading twenty-two goals. Fans lined the streets outside the stadium late into the night to celebrate the team's first championship title in over a decade. The Hawks will now advance to the state tournament, which begins next month, with tickets expected to go on sale sometime next week.",
+    "questions": [
+      {"question_en": "What is the main subject of this news report?", "options": ["A team's championship victory", "A player's retirement", "A stadium renovation", "A coaching change"], "answer_index": 0, "explanation_zh": "報導主要在敘述 Ridgeline Hawks 隊贏得區域冠軍賽的消息，所以答案是 (A)。"},
+      {"question_en": "Who scored the winning goal?", "options": ["A player from Oakdale Wolves", "Elena Marsh", "The team coach", "A fan favorite from last season"], "answer_index": 1, "explanation_zh": "報導提到致勝球是由前鋒 Elena Marsh 在最後兩分鐘打進，所以答案是 (B)。"},
+      {"question_en": "What can be inferred about the team's recent history?", "options": ["They have won every year for a decade", "This is their first title in over ten years", "They lost the championship last year", "They are a newly formed team"], "answer_index": 1, "explanation_zh": "報導提到這是該隊十多年來首度奪冠，所以答案是 (B)。"}
+    ]
+  }
+]
