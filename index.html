@@ -266,6 +266,22 @@
   .p1-accent{ fill:var(--gold); }
   .p1-stroke{ stroke:var(--text-muted); stroke-width:6; stroke-linecap:round; fill:none; }
 
+  .lookup-word{ cursor:pointer; border-bottom:1px dotted var(--accent); }
+  .lookup-word:hover{ background:var(--accent-soft); border-bottom-style:solid; }
+
+  .wp-overlay{ display:none; position:fixed; inset:0; background:rgba(0,0,0,.4); z-index:100; align-items:center; justify-content:center; padding:20px; }
+  .wp-overlay.open{ display:flex; }
+  .wp-card{ position:relative; background:var(--surface); border:1px solid var(--border); border-radius:16px; box-shadow:var(--shadow); padding:26px; max-width:360px; width:100%; max-height:80vh; overflow-y:auto; }
+  .wp-close{ position:absolute; top:10px; right:12px; background:none; border:none; font-size:22px; line-height:1; color:var(--text-muted); cursor:pointer; }
+  .wp-word{ font-size:24px; font-weight:700; margin:0 0 6px; padding-right:24px; }
+  .wp-ipa{ color:var(--accent); font-size:15px; margin-bottom:10px; }
+  .wp-pos{ display:inline-block; font-family:"IBM Plex Mono",monospace; font-size:11px; text-transform:uppercase; background:var(--accent-soft); color:var(--accent); padding:3px 9px; border-radius:999px; margin-bottom:10px; }
+  .wp-meaning{ font-size:18px; font-weight:600; margin-bottom:12px; }
+  .wp-example{ background:var(--surface-2); border-radius:10px; padding:12px 14px; font-size:13.5px; line-height:1.6; }
+  .wp-example .zh{ color:var(--text-muted); margin-top:4px; }
+  .wp-note{ margin-top:12px; font-size:11.5px; color:var(--text-muted); }
+  .wp-loading{ text-align:center; color:var(--text-muted); padding:20px 0; }
+
   footer.note{ text-align:center; color:var(--text-muted); font-size:12px; margin-top:36px; }
 
   @media (prefers-reduced-motion: reduce){
@@ -364,7 +380,11 @@
 
   <div class="stage" id="stage"></div>
 
-  <footer class="note" id="footerNote">進度預設儲存在此瀏覽器（localStorage）。登入 Google 帳號後，進度會同步到雲端，換裝置也看得到。發音使用瀏覽器內建的 Web Speech API。</footer>
+  <footer class="note" id="footerNote">進度預設儲存在此瀏覽器（localStorage）。登入 Google 帳號後，進度會同步到雲端，換裝置也看得到。發音使用瀏覽器內建的 Web Speech API。文章中有底線的單字可以點擊查詢意思。</footer>
+</div>
+
+<div class="wp-overlay" id="wpOverlay">
+  <div class="wp-card" id="wpCard"></div>
 </div>
 
 <script>
@@ -642,6 +662,104 @@ function speakSequence(texts, opts){
   }
   next();
 }
+
+/* ---------- Word lookup (click-to-define) ---------- */
+function wrapWords(text){
+  if(!text) return text;
+  return text.replace(/[A-Za-z]+(?:['’][A-Za-z]+)?/g, (m)=> `<span class="lookup-word" data-w="${m.toLowerCase()}">${m}</span>`);
+}
+
+const wordLookupCache = {};
+function fetchWithTimeout(url, ms){
+  const controller = new AbortController();
+  const timer = setTimeout(()=>controller.abort(), ms || 6000);
+  return fetch(url, {signal: controller.signal}).finally(()=>clearTimeout(timer));
+}
+
+async function lookupWord(word){
+  const key = word.toLowerCase();
+  if(wordLookupCache[key]) return wordLookupCache[key];
+  const local = words.find(w=>w.word.toLowerCase() === key);
+  if(local){
+    const result = { word: local.word, ipa: local.ipa, pos: local.pos, meaning_zh: local.meaning_zh, example_en: local.example_en, example_zh: local.example_zh, audioUrl: null, source: "local" };
+    wordLookupCache[key] = result;
+    return result;
+  }
+  let ipa = "", audioUrl = null, defEn = "", pos = "", meaningZh = "";
+
+  const dictPromise = fetchWithTimeout(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(key)}`)
+    .then(res => res.ok ? res.json() : null)
+    .then(data => {
+      const entry = data && data[0];
+      if(!entry) return;
+      ipa = entry.phonetic || (entry.phonetics||[]).map(p=>p.text).find(Boolean) || "";
+      audioUrl = (entry.phonetics||[]).map(p=>p.audio).find(a=>a) || null;
+      const meaning = (entry.meanings||[])[0];
+      if(meaning){
+        pos = meaning.partOfSpeech || "";
+        defEn = (meaning.definitions||[])[0]?.definition || "";
+      }
+    }).catch(()=>{});
+
+  const translatePromise = fetchWithTimeout(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(key)}&langpair=en|zh-TW`)
+    .then(res => res.ok ? res.json() : null)
+    .then(tdata => {
+      let t = tdata?.responseData?.translatedText || "";
+      if(/no query specified|invalid/i.test(t) || t.trim().toLowerCase() === key) t = "";
+      meaningZh = t;
+    }).catch(()=>{});
+
+  await Promise.all([dictPromise, translatePromise]);
+  const result = { word: key, ipa, pos, meaning_zh: meaningZh, example_en: defEn, example_zh: "", audioUrl, source: "api" };
+  wordLookupCache[key] = result;
+  return result;
+}
+
+function closeWordPopup(){
+  document.getElementById("wpOverlay").classList.remove("open");
+}
+function showWordPopup(word){
+  const overlay = document.getElementById("wpOverlay");
+  const card = document.getElementById("wpCard");
+  card.innerHTML = `<button class="wp-close" id="wpClose">×</button><div class="wp-loading">查詢中…</div>`;
+  overlay.classList.add("open");
+  document.getElementById("wpClose").addEventListener("click", closeWordPopup);
+  lookupWord(word).then(r=>{
+    if(!overlay.classList.contains("open")) return;
+    card.innerHTML = `
+      <button class="wp-close" id="wpClose">×</button>
+      <div class="wp-word">${r.word}</div>
+      <div class="speak-row" style="justify-content:flex-start; margin-bottom:10px;">
+        ${r.ipa ? `<span class="wp-ipa mono">${r.ipa}</span>` : ''}
+        <button class="speak-btn" id="wpSpeak" style="width:34px;height:34px;font-size:14px;">🔊</button>
+      </div>
+      ${r.pos ? `<div class="wp-pos">${r.pos}</div>` : ''}
+      <div class="wp-meaning">${r.meaning_zh || (r.example_en ? '(查無中文翻譯，見下方英文釋義)' : '查無此字的資料')}</div>
+      ${r.example_en ? `<div class="wp-example"><div>${r.example_en}</div>${r.example_zh ? `<div class="zh">${r.example_zh}</div>` : ''}</div>` : ''}
+      ${r.source === 'api' ? `<div class="wp-note">此字不在多益單字庫中，資料來自線上字典／翻譯服務，僅供參考。</div>` : ''}
+    `;
+    document.getElementById("wpClose").addEventListener("click", closeWordPopup);
+    document.getElementById("wpSpeak").addEventListener("click", ()=>{
+      if(r.audioUrl){
+        const a = new Audio(r.audioUrl);
+        a.play().catch(()=> speak(r.word));
+      }else{
+        speak(r.word);
+      }
+    });
+  }).catch(()=>{
+    if(!overlay.classList.contains("open")) return;
+    card.innerHTML = `<button class="wp-close" id="wpClose">×</button><div class="wp-word">${word}</div><div class="wp-meaning">查詢失敗，請檢查網路連線後再試一次。</div>`;
+    document.getElementById("wpClose").addEventListener("click", closeWordPopup);
+  });
+}
+document.getElementById("wpOverlay").addEventListener("click", (e)=>{
+  if(e.target.id === "wpOverlay") closeWordPopup();
+});
+document.getElementById("stage").addEventListener("click", (e)=>{
+  const el = e.target.closest(".lookup-word");
+  if(el){ e.stopPropagation(); showWordPopup(el.dataset.w); }
+});
 
 /* ---------- Filtering ---------- */
 function currentFilterList(){
@@ -990,7 +1108,7 @@ function renderP5(container){
   const wrongCnt = wrongCount(p5Items, p5Progress);
 
   const blankHtml = checked ? `<span class="p5-blank">${item.options[p5Selected]}</span>` : `<span class="p5-blank">＿＿＿＿</span>`;
-  const sentenceHtml = item.sentence.replace(/_{4,}/, blankHtml);
+  const sentenceHtml = wrapWords(item.sentence).replace(/_{4,}/, blankHtml);
 
   const optsHtml = item.options.map((opt,oi)=>{
     let cls = "q-opt";
@@ -1069,7 +1187,7 @@ function renderP6(container){
 
   const metaHtml = (item.meta && item.meta.length) ? `<div class="doc-meta">${item.meta.map(m=>`<div class="row2"><span class="label">${m.label}</span><span>${m.value}</span></div>`).join("")}</div>` : "";
   const parasHtml = item.paragraphs.map(p=>{
-    return p.replace(/\{\{(\d)\}\}/g, (m,n)=>{
+    return wrapWords(p).replace(/\{\{(\d)\}\}/g, (m,n)=>{
       const bi = Number(n)-1;
       let cls = "blank-marker";
       if(checked){
@@ -1463,7 +1581,7 @@ function docLabel(kind){
 }
 function renderDoc(doc){
   const metaHtml = (doc.meta && doc.meta.length) ? `<div class="doc-meta">${doc.meta.map(m=>`<div class="row2"><span class="label">${m.label}</span><span>${m.value}</span></div>`).join("")}</div>` : "";
-  const parasHtml = (doc.paragraphs && doc.paragraphs.length) ? doc.paragraphs.map(p=>`<p class="doc-para">${p}</p>`).join("") : "";
+  const parasHtml = (doc.paragraphs && doc.paragraphs.length) ? doc.paragraphs.map(p=>`<p class="doc-para">${wrapWords(p)}</p>`).join("") : "";
   const tableHtml = doc.table ? `<div class="doc-table-wrap"><table class="doc-table"><thead><tr>${doc.table.headers.map(h=>`<th>${h}</th>`).join("")}</tr></thead><tbody>${doc.table.rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>` : "";
   return `<div class="doc-title">${doc.title || docLabel(doc.kind)}</div>${metaHtml}${parasHtml}${tableHtml}`;
 }
