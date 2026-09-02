@@ -326,6 +326,7 @@
       <option value="notice">公告／新聞稿</option>
       <option value="form">表單／單據</option>
     </select>
+    <label class="chk"><input type="checkbox" id="readingOnlyUnfinished"> 只看未完成</label>
     <button class="icon-btn" id="readingShuffleBtn">🔀 隨機排序</button>
   </div>
 
@@ -334,6 +335,7 @@
       <button class="subtab" data-gpart="p5" aria-selected="true">單句填空 Part 5</button>
       <button class="subtab" data-gpart="p6" aria-selected="false">短文填空 Part 6</button>
     </div>
+    <label class="chk"><input type="checkbox" id="grammarOnlyUnfinished"> 只看未完成</label>
     <button class="icon-btn" id="grammarShuffleBtn">🔀 隨機排序</button>
   </div>
 
@@ -344,6 +346,7 @@
       <button class="subtab" data-lpart="p3" aria-selected="false">對話 Part 3</button>
       <button class="subtab" data-lpart="p4" aria-selected="false">簡短獨白 Part 4</button>
     </div>
+    <label class="chk"><input type="checkbox" id="listeningOnlyUnfinished"> 只看未完成</label>
     <button class="icon-btn" id="listeningShuffleBtn">🔀 隨機排序</button>
   </div>
 
@@ -670,6 +673,11 @@ document.querySelectorAll(".subtab[data-gpart]").forEach(btn=>{
     renderStage();
   });
 });
+document.getElementById("grammarOnlyUnfinished").addEventListener("change", ()=>{
+  p5Idx = 0; p5Selected = null; p5Checked = false;
+  p6Idx = 0; p6Selected = {}; p6Checked = false;
+  renderStage();
+});
 document.getElementById("grammarShuffleBtn").addEventListener("click", ()=>{
   if(grammarPart === "p5"){
     for(let i=p5Order.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [p5Order[i],p5Order[j]]=[p5Order[j],p5Order[i]]; }
@@ -689,6 +697,14 @@ document.querySelectorAll(".subtab[data-lpart]").forEach(btn=>{
     renderStage();
   });
 });
+document.getElementById("listeningOnlyUnfinished").addEventListener("change", ()=>{
+  speechSynthesis.cancel();
+  p1Idx = 0; p1Selected = null; p1Checked = false; p1ShowText = false;
+  p2Idx = 0; p2Selected = null; p2Checked = false; p2ShowText = false;
+  p3Idx = 0; p3Selected = {}; p3Checked = false; p3ShowText = false;
+  p4Idx = 0; p4Selected = {}; p4Checked = false; p4ShowText = false;
+  renderStage();
+});
 document.getElementById("listeningShuffleBtn").addEventListener("click", ()=>{
   speechSynthesis.cancel();
   if(listeningPart === "p1"){ shuffleArr(p1Order); p1Idx = 0; }
@@ -705,14 +721,17 @@ function shuffleArr(arr){
 function readingFilterList(){
   const type = document.getElementById("readingTypeSelect").value;
   const cat = document.getElementById("readingCategorySelect").value;
+  const onlyUnfinished = document.getElementById("readingOnlyUnfinished").checked;
   return readingSets.filter(s=>{
     if(type !== "all" && s.type !== type) return false;
     if(cat !== "all" && s.category !== cat) return false;
+    if(onlyUnfinished && readingChecked[s.id]) return false;
     return true;
   });
 }
 document.getElementById("readingTypeSelect").addEventListener("change", ()=>{ readingIdx = 0; renderStage(); });
 document.getElementById("readingCategorySelect").addEventListener("change", ()=>{ readingIdx = 0; renderStage(); });
+document.getElementById("readingOnlyUnfinished").addEventListener("change", ()=>{ readingIdx = 0; renderStage(); });
 document.getElementById("readingShuffleBtn").addEventListener("click", ()=>{
   const list = readingFilterList();
   for(let i=list.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [list[i],list[j]]=[list[j],list[i]]; }
@@ -922,13 +941,23 @@ function renderGrammarMode(container){
   else renderP6(container);
 }
 
+function p5FilterList(){
+  const onlyUnfinished = document.getElementById("grammarOnlyUnfinished").checked;
+  return p5Items.filter(it => !(onlyUnfinished && p5Progress[it.id]));
+}
+
 function renderP5(container){
   if(p5Items.length === 0){ container.innerHTML = `<div class="empty-state">正在載入 Part 5 題目…</div>`; return; }
   if(p5Order.length === 0) p5Order = p5Items.map(it=>it.id);
-  if(p5Idx >= p5Order.length) p5Idx = 0;
-  const item = p5Items.find(it=>it.id===p5Order[p5Idx]);
+  const list = p5FilterList();
+  if(list.length === 0){ container.innerHTML = `<div class="empty-state">這個分類已經全部完成了！取消「只看未完成」可以重新看全部題目。</div>`; return; }
+  const filteredOrder = p5Order.filter(id=>list.some(it=>it.id===id));
+  const finalList = filteredOrder.length ? filteredOrder : list.map(it=>it.id);
+  if(p5Idx < 0) p5Idx = finalList.length - 1;
+  if(p5Idx >= finalList.length) p5Idx = 0;
+  const item = p5Items.find(it=>it.id===finalList[p5Idx]);
   const checked = p5Checked;
-  const doneCount = p5Order.filter(id=>p5Progress[id]).length;
+  const doneCount = p5Items.filter(it=>p5Progress[it.id]).length;
 
   const blankHtml = checked ? `<span class="p5-blank">${item.options[p5Selected]}</span>` : `<span class="p5-blank">＿＿＿＿</span>`;
   const sentenceHtml = item.sentence.replace(/_{4,}/, blankHtml);
@@ -948,9 +977,9 @@ function renderP5(container){
     <div class="reading-head">
       <div class="reading-tag"><span class="chip cat">${P5_CATEGORY_LABELS[item.category]||item.category}</span></div>
       <div class="reading-nav">
-        <span>已完成 ${doneCount} / ${p5Order.length}</span>
+        <span>已完成 ${doneCount} / ${p5Items.length}</span>
         <button class="nav-btn" id="p5PrevBtn" style="width:36px;height:36px;">◀</button>
-        <span>${p5Idx+1} / ${p5Order.length}</span>
+        <span>${p5Idx+1} / ${finalList.length}</span>
         <button class="nav-btn" id="p5NextBtn" style="width:36px;height:36px;">▶</button>
       </div>
     </div>
@@ -979,22 +1008,32 @@ function renderP5(container){
     renderStage();
   });
   document.getElementById("p5PrevBtn").addEventListener("click", ()=>{
-    p5Idx = (p5Idx-1+p5Order.length)%p5Order.length; p5Selected=null; p5Checked=false;
+    p5Idx--; p5Selected=null; p5Checked=false;
     renderStage();
   });
   document.getElementById("p5NextBtn").addEventListener("click", ()=>{
-    p5Idx = (p5Idx+1)%p5Order.length; p5Selected=null; p5Checked=false;
+    p5Idx++; p5Selected=null; p5Checked=false;
     renderStage();
   });
+}
+
+function p6FilterList(){
+  const onlyUnfinished = document.getElementById("grammarOnlyUnfinished").checked;
+  return p6Items.filter(it => !(onlyUnfinished && p6Progress[it.id]));
 }
 
 function renderP6(container){
   if(p6Items.length === 0){ container.innerHTML = `<div class="empty-state">正在載入 Part 6 題目…</div>`; return; }
   if(p6Order.length === 0) p6Order = p6Items.map(it=>it.id);
-  if(p6Idx >= p6Order.length) p6Idx = 0;
-  const item = p6Items.find(it=>it.id===p6Order[p6Idx]);
+  const list = p6FilterList();
+  if(list.length === 0){ container.innerHTML = `<div class="empty-state">這個分類已經全部完成了！取消「只看未完成」可以重新看全部題目。</div>`; return; }
+  const filteredOrder = p6Order.filter(id=>list.some(it=>it.id===id));
+  const finalList = filteredOrder.length ? filteredOrder : list.map(it=>it.id);
+  if(p6Idx < 0) p6Idx = finalList.length - 1;
+  if(p6Idx >= finalList.length) p6Idx = 0;
+  const item = p6Items.find(it=>it.id===finalList[p6Idx]);
   const checked = p6Checked;
-  const doneCount = p6Order.filter(id=>p6Progress[id]).length;
+  const doneCount = p6Items.filter(it=>p6Progress[it.id]).length;
 
   const metaHtml = (item.meta && item.meta.length) ? `<div class="doc-meta">${item.meta.map(m=>`<div class="row2"><span class="label">${m.label}</span><span>${m.value}</span></div>`).join("")}</div>` : "";
   const parasHtml = item.paragraphs.map(p=>{
@@ -1028,9 +1067,9 @@ function renderP6(container){
     <div class="reading-head">
       <div class="reading-tag"><span class="chip cat">${READING_CATEGORY_LABELS[item.category]||item.category}</span></div>
       <div class="reading-nav">
-        <span>已完成 ${doneCount} / ${p6Order.length}</span>
+        <span>已完成 ${doneCount} / ${p6Items.length}</span>
         <button class="nav-btn" id="p6PrevBtn" style="width:36px;height:36px;">◀</button>
-        <span>${p6Idx+1} / ${p6Order.length}</span>
+        <span>${p6Idx+1} / ${finalList.length}</span>
         <button class="nav-btn" id="p6NextBtn" style="width:36px;height:36px;">▶</button>
       </div>
     </div>
@@ -1065,11 +1104,11 @@ function renderP6(container){
     renderStage();
   });
   document.getElementById("p6PrevBtn").addEventListener("click", ()=>{
-    p6Idx = (p6Idx-1+p6Order.length)%p6Order.length; p6Selected={}; p6Checked=false;
+    p6Idx--; p6Selected={}; p6Checked=false;
     renderStage();
   });
   document.getElementById("p6NextBtn").addEventListener("click", ()=>{
-    p6Idx = (p6Idx+1)%p6Order.length; p6Selected={}; p6Checked=false;
+    p6Idx++; p6Selected={}; p6Checked=false;
     renderStage();
   });
 }
@@ -1087,13 +1126,23 @@ function renderListeningMode(container){
   else renderConversationOrTalk(container, "p4");
 }
 
+function p1FilterList(){
+  const onlyUnfinished = document.getElementById("listeningOnlyUnfinished").checked;
+  return p1Items.filter(it => !(onlyUnfinished && p1Progress[it.id]));
+}
+
 function renderP1(container){
   if(p1Items.length === 0){ container.innerHTML = `<div class="empty-state">正在載入 Part 1 題目…</div>`; return; }
   if(p1Order.length === 0) p1Order = p1Items.map(it=>it.id);
-  if(p1Idx >= p1Order.length) p1Idx = 0;
-  const item = p1Items.find(it=>it.id===p1Order[p1Idx]);
+  const list = p1FilterList();
+  if(list.length === 0){ container.innerHTML = `<div class="empty-state">這個分類已經全部完成了！取消「只看未完成」可以重新看全部題目。</div>`; return; }
+  const filteredOrder = p1Order.filter(id=>list.some(it=>it.id===id));
+  const finalList = filteredOrder.length ? filteredOrder : list.map(it=>it.id);
+  if(p1Idx < 0) p1Idx = finalList.length - 1;
+  if(p1Idx >= finalList.length) p1Idx = 0;
+  const item = p1Items.find(it=>it.id===finalList[p1Idx]);
   const checked = p1Checked;
-  const doneCount = p1Order.filter(id=>p1Progress[id]).length;
+  const doneCount = p1Items.filter(it=>p1Progress[it.id]).length;
 
   const optsHtml = item.options.map((opt,oi)=>{
     let cls = "q-opt";
@@ -1116,9 +1165,9 @@ function renderP1(container){
     <div class="reading-head">
       <div class="reading-tag"><span class="chip cat">${P1_CATEGORY_LABELS[item.category]||item.category}</span></div>
       <div class="reading-nav">
-        <span>已完成 ${doneCount} / ${p1Order.length}</span>
+        <span>已完成 ${doneCount} / ${p1Items.length}</span>
         <button class="nav-btn" id="p1PrevBtn" style="width:36px;height:36px;">◀</button>
-        <span>${p1Idx+1} / ${p1Order.length}</span>
+        <span>${p1Idx+1} / ${finalList.length}</span>
         <button class="nav-btn" id="p1NextBtn" style="width:36px;height:36px;">▶</button>
       </div>
     </div>
@@ -1160,23 +1209,33 @@ function renderP1(container){
   });
   document.getElementById("p1PrevBtn").addEventListener("click", ()=>{
     speechSynthesis.cancel();
-    p1Idx = (p1Idx-1+p1Order.length)%p1Order.length; p1Selected=null; p1Checked=false; p1ShowText=false;
+    p1Idx--; p1Selected=null; p1Checked=false; p1ShowText=false;
     renderStage();
   });
   document.getElementById("p1NextBtn").addEventListener("click", ()=>{
     speechSynthesis.cancel();
-    p1Idx = (p1Idx+1)%p1Order.length; p1Selected=null; p1Checked=false; p1ShowText=false;
+    p1Idx++; p1Selected=null; p1Checked=false; p1ShowText=false;
     renderStage();
   });
+}
+
+function p2FilterList(){
+  const onlyUnfinished = document.getElementById("listeningOnlyUnfinished").checked;
+  return p2Items.filter(it => !(onlyUnfinished && p2Progress[it.id]));
 }
 
 function renderP2(container){
   if(p2Items.length === 0){ container.innerHTML = `<div class="empty-state">正在載入 Part 2 題目…</div>`; return; }
   if(p2Order.length === 0) p2Order = p2Items.map(it=>it.id);
-  if(p2Idx >= p2Order.length) p2Idx = 0;
-  const item = p2Items.find(it=>it.id===p2Order[p2Idx]);
+  const list = p2FilterList();
+  if(list.length === 0){ container.innerHTML = `<div class="empty-state">這個分類已經全部完成了！取消「只看未完成」可以重新看全部題目。</div>`; return; }
+  const filteredOrder = p2Order.filter(id=>list.some(it=>it.id===id));
+  const finalList = filteredOrder.length ? filteredOrder : list.map(it=>it.id);
+  if(p2Idx < 0) p2Idx = finalList.length - 1;
+  if(p2Idx >= finalList.length) p2Idx = 0;
+  const item = p2Items.find(it=>it.id===finalList[p2Idx]);
   const checked = p2Checked;
-  const doneCount = p2Order.filter(id=>p2Progress[id]).length;
+  const doneCount = p2Items.filter(it=>p2Progress[it.id]).length;
 
   const optsHtml = item.options.map((opt,oi)=>{
     let cls = "q-opt";
@@ -1199,9 +1258,9 @@ function renderP2(container){
     <div class="reading-head">
       <div class="reading-tag"><span class="chip cat">${P2_TYPE_LABELS[item.question_type]||item.question_type}</span></div>
       <div class="reading-nav">
-        <span>已完成 ${doneCount} / ${p2Order.length}</span>
+        <span>已完成 ${doneCount} / ${p2Items.length}</span>
         <button class="nav-btn" id="p2PrevBtn" style="width:36px;height:36px;">◀</button>
-        <span>${p2Idx+1} / ${p2Order.length}</span>
+        <span>${p2Idx+1} / ${finalList.length}</span>
         <button class="nav-btn" id="p2NextBtn" style="width:36px;height:36px;">▶</button>
       </div>
     </div>
@@ -1242,12 +1301,12 @@ function renderP2(container){
   });
   document.getElementById("p2PrevBtn").addEventListener("click", ()=>{
     speechSynthesis.cancel();
-    p2Idx = (p2Idx-1+p2Order.length)%p2Order.length; p2Selected=null; p2Checked=false; p2ShowText=false;
+    p2Idx--; p2Selected=null; p2Checked=false; p2ShowText=false;
     renderStage();
   });
   document.getElementById("p2NextBtn").addEventListener("click", ()=>{
     speechSynthesis.cancel();
-    p2Idx = (p2Idx+1)%p2Order.length; p2Selected=null; p2Checked=false; p2ShowText=false;
+    p2Idx++; p2Selected=null; p2Checked=false; p2ShowText=false;
     renderStage();
   });
 }
@@ -1259,14 +1318,21 @@ function renderConversationOrTalk(container, kind){
   if(isP3 && p3Order.length === 0) p3Order = p3Items.map(it=>it.id);
   if(!isP3 && p4Order.length === 0) p4Order = p4Items.map(it=>it.id);
   const order = isP3 ? p3Order : p4Order;
-  if((isP3 ? p3Idx : p4Idx) >= order.length){ if(isP3) p3Idx = 0; else p4Idx = 0; }
-  const idx = isP3 ? p3Idx : p4Idx;
-  const item = items.find(it=>it.id===order[idx]);
+  const progressObj = isP3 ? p3Progress : p4Progress;
+  const onlyUnfinished = document.getElementById("listeningOnlyUnfinished").checked;
+  const list = items.filter(it => !(onlyUnfinished && progressObj[it.id]));
+  if(list.length === 0){ container.innerHTML = `<div class="empty-state">這個分類已經全部完成了！取消「只看未完成」可以重新看全部題目。</div>`; return; }
+  const filteredOrder = order.filter(id=>list.some(it=>it.id===id));
+  const finalList = filteredOrder.length ? filteredOrder : list.map(it=>it.id);
+  let idx = isP3 ? p3Idx : p4Idx;
+  if(idx < 0) idx = finalList.length - 1;
+  if(idx >= finalList.length) idx = 0;
+  if(isP3) p3Idx = idx; else p4Idx = idx;
+  const item = items.find(it=>it.id===finalList[idx]);
   const selected = isP3 ? p3Selected : p4Selected;
   const checked = isP3 ? p3Checked : p4Checked;
   const showText = isP3 ? p3ShowText : p4ShowText;
-  const progressObj = isP3 ? p3Progress : p4Progress;
-  const doneCount = order.filter(id=>progressObj[id]).length;
+  const doneCount = items.filter(it=>progressObj[it.id]).length;
 
   const lines = isP3 ? item.lines.map(l=>l.text) : [item.talk];
   const pitchFn = isP3 ? (i)=> (item.lines[i].speaker.includes("Woman") ? (item.lines[i].speaker.includes("2")?1.3:1.15) : (item.lines[i].speaker.includes("2")?0.85:1)) : undefined;
@@ -1293,9 +1359,9 @@ function renderConversationOrTalk(container, kind){
     <div class="reading-head">
       <div class="reading-tag"><span class="chip cat">${catLabel}</span></div>
       <div class="reading-nav">
-        <span>已完成 ${doneCount} / ${order.length}</span>
+        <span>已完成 ${doneCount} / ${items.length}</span>
         <button class="nav-btn" id="lPrevBtn" style="width:36px;height:36px;">◀</button>
-        <span>${idx+1} / ${order.length}</span>
+        <span>${idx+1} / ${finalList.length}</span>
         <button class="nav-btn" id="lNextBtn" style="width:36px;height:36px;">▶</button>
       </div>
     </div>
@@ -1341,14 +1407,14 @@ function renderConversationOrTalk(container, kind){
   });
   document.getElementById("lPrevBtn").addEventListener("click", ()=>{
     speechSynthesis.cancel();
-    if(isP3){ p3Idx=(p3Idx-1+order.length)%order.length; p3Selected={}; p3Checked=false; p3ShowText=false; }
-    else { p4Idx=(p4Idx-1+order.length)%order.length; p4Selected={}; p4Checked=false; p4ShowText=false; }
+    if(isP3){ p3Idx--; p3Selected={}; p3Checked=false; p3ShowText=false; }
+    else { p4Idx--; p4Selected={}; p4Checked=false; p4ShowText=false; }
     renderStage();
   });
   document.getElementById("lNextBtn").addEventListener("click", ()=>{
     speechSynthesis.cancel();
-    if(isP3){ p3Idx=(p3Idx+1)%order.length; p3Selected={}; p3Checked=false; p3ShowText=false; }
-    else { p4Idx=(p4Idx+1)%order.length; p4Selected={}; p4Checked=false; p4ShowText=false; }
+    if(isP3){ p3Idx++; p3Selected={}; p3Checked=false; p3ShowText=false; }
+    else { p4Idx++; p4Selected={}; p4Checked=false; p4ShowText=false; }
     renderStage();
   });
 }
