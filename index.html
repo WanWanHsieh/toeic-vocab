@@ -326,7 +326,11 @@
       <option value="notice">公告／新聞稿</option>
       <option value="form">表單／單據</option>
     </select>
-    <label class="chk"><input type="checkbox" id="readingOnlyUnfinished"> 只看未完成</label>
+    <select id="readingFilterMode">
+      <option value="all">全部題目</option>
+      <option value="unfinished">只看未完成</option>
+      <option value="wrong">只看答錯的</option>
+    </select>
     <button class="icon-btn" id="readingShuffleBtn">🔀 隨機排序</button>
   </div>
 
@@ -335,7 +339,11 @@
       <button class="subtab" data-gpart="p5" aria-selected="true">單句填空 Part 5</button>
       <button class="subtab" data-gpart="p6" aria-selected="false">短文填空 Part 6</button>
     </div>
-    <label class="chk"><input type="checkbox" id="grammarOnlyUnfinished"> 只看未完成</label>
+    <select id="grammarFilterMode">
+      <option value="all">全部題目</option>
+      <option value="unfinished">只看未完成</option>
+      <option value="wrong">只看答錯的</option>
+    </select>
     <button class="icon-btn" id="grammarShuffleBtn">🔀 隨機排序</button>
   </div>
 
@@ -346,7 +354,11 @@
       <button class="subtab" data-lpart="p3" aria-selected="false">對話 Part 3</button>
       <button class="subtab" data-lpart="p4" aria-selected="false">簡短獨白 Part 4</button>
     </div>
-    <label class="chk"><input type="checkbox" id="listeningOnlyUnfinished"> 只看未完成</label>
+    <select id="listeningFilterMode">
+      <option value="all">全部題目</option>
+      <option value="unfinished">只看未完成</option>
+      <option value="wrong">只看答錯的</option>
+    </select>
     <button class="icon-btn" id="listeningShuffleBtn">🔀 隨機排序</button>
   </div>
 
@@ -488,6 +500,16 @@ let p4Progress = loadJSON("toeic-p4-progress");
 function loadJSON(key){ try{ return JSON.parse(localStorage.getItem(key)||"{}"); }catch(e){ return {}; } }
 function saveJSON(key, val){ try{ localStorage.setItem(key, JSON.stringify(val)); }catch(e){} }
 
+/* progressObj values are "correct" | "wrong" (older data may just be `true`, treated as "done" but not "wrong"). */
+function filterByMode(items, progressObj, mode){
+  if(mode === "unfinished") return items.filter(it => !progressObj[it.id]);
+  if(mode === "wrong") return items.filter(it => progressObj[it.id] === "wrong");
+  return items;
+}
+function wrongCount(items, progressObj){
+  return items.filter(it => progressObj[it.id] === "wrong").length;
+}
+
 let currentUser = null;
 let cloudSyncing = false; // true while we're applying a cloud snapshot, to avoid re-uploading it right back
 
@@ -585,6 +607,12 @@ function setStatus(id, status){
   saveProgress();
   renderStats();
 }
+/* Unconditional set (no toggle-off) — for automatic updates like quiz results, where re-affirming the same status must not clear the mark. */
+function setStatusDirect(id, status){
+  progress[id] = status;
+  saveProgress();
+  renderStats();
+}
 
 /* ---------- Speech ---------- */
 const canSpeak = "speechSynthesis" in window;
@@ -622,7 +650,7 @@ function currentFilterList(){
   const onlyUnknown = document.getElementById("onlyUnknown").checked;
   return words.filter(w=>{
     if(cat !== "all" && w.category !== cat) return false;
-    if(onlyUnknown && statusOf(w.id) === "known") return false;
+    if(onlyUnknown && statusOf(w.id) !== "unknown") return false;
     if(q && !(w.word.toLowerCase().includes(q) || w.meaning_zh.includes(q))) return false;
     return true;
   });
@@ -673,7 +701,7 @@ document.querySelectorAll(".subtab[data-gpart]").forEach(btn=>{
     renderStage();
   });
 });
-document.getElementById("grammarOnlyUnfinished").addEventListener("change", ()=>{
+document.getElementById("grammarFilterMode").addEventListener("change", ()=>{
   p5Idx = 0; p5Selected = null; p5Checked = false;
   p6Idx = 0; p6Selected = {}; p6Checked = false;
   renderStage();
@@ -697,7 +725,7 @@ document.querySelectorAll(".subtab[data-lpart]").forEach(btn=>{
     renderStage();
   });
 });
-document.getElementById("listeningOnlyUnfinished").addEventListener("change", ()=>{
+document.getElementById("listeningFilterMode").addEventListener("change", ()=>{
   speechSynthesis.cancel();
   p1Idx = 0; p1Selected = null; p1Checked = false; p1ShowText = false;
   p2Idx = 0; p2Selected = null; p2Checked = false; p2ShowText = false;
@@ -721,17 +749,17 @@ function shuffleArr(arr){
 function readingFilterList(){
   const type = document.getElementById("readingTypeSelect").value;
   const cat = document.getElementById("readingCategorySelect").value;
-  const onlyUnfinished = document.getElementById("readingOnlyUnfinished").checked;
-  return readingSets.filter(s=>{
+  const filterMode = document.getElementById("readingFilterMode").value;
+  const base = readingSets.filter(s=>{
     if(type !== "all" && s.type !== type) return false;
     if(cat !== "all" && s.category !== cat) return false;
-    if(onlyUnfinished && readingChecked[s.id]) return false;
     return true;
   });
+  return filterByMode(base, readingChecked, filterMode);
 }
 document.getElementById("readingTypeSelect").addEventListener("change", ()=>{ readingIdx = 0; renderStage(); });
 document.getElementById("readingCategorySelect").addEventListener("change", ()=>{ readingIdx = 0; renderStage(); });
-document.getElementById("readingOnlyUnfinished").addEventListener("change", ()=>{ readingIdx = 0; renderStage(); });
+document.getElementById("readingFilterMode").addEventListener("change", ()=>{ readingIdx = 0; renderStage(); });
 document.getElementById("readingShuffleBtn").addEventListener("click", ()=>{
   const list = readingFilterList();
   for(let i=list.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [list[i],list[j]]=[list[j],list[i]]; }
@@ -915,6 +943,7 @@ function renderQuizMode(container){
       const isCorrect = chosen.id === w.id;
       quizScore.total++;
       if(isCorrect) quizScore.correct++;
+      setStatusDirect(w.id, isCorrect ? "known" : "unknown");
       container.querySelectorAll(".opt-btn").forEach((b,i)=>{
         b.disabled = true;
         if(w.options[i].id === w.id) b.classList.add("correct");
@@ -942,15 +971,15 @@ function renderGrammarMode(container){
 }
 
 function p5FilterList(){
-  const onlyUnfinished = document.getElementById("grammarOnlyUnfinished").checked;
-  return p5Items.filter(it => !(onlyUnfinished && p5Progress[it.id]));
+  const mode = document.getElementById("grammarFilterMode").value;
+  return filterByMode(p5Items, p5Progress, mode);
 }
 
 function renderP5(container){
   if(p5Items.length === 0){ container.innerHTML = `<div class="empty-state">正在載入 Part 5 題目…</div>`; return; }
   if(p5Order.length === 0) p5Order = p5Items.map(it=>it.id);
   const list = p5FilterList();
-  if(list.length === 0){ container.innerHTML = `<div class="empty-state">這個分類已經全部完成了！取消「只看未完成」可以重新看全部題目。</div>`; return; }
+  if(list.length === 0){ const m=document.getElementById("grammarFilterMode").value; container.innerHTML = `<div class="empty-state">${m==='wrong'?'目前沒有答錯的題目！':'這個分類已經全部完成了！'}切換上方篩選可以重新看其他題目。</div>`; return; }
   const filteredOrder = p5Order.filter(id=>list.some(it=>it.id===id));
   const finalList = filteredOrder.length ? filteredOrder : list.map(it=>it.id);
   if(p5Idx < 0) p5Idx = finalList.length - 1;
@@ -958,6 +987,7 @@ function renderP5(container){
   const item = p5Items.find(it=>it.id===finalList[p5Idx]);
   const checked = p5Checked;
   const doneCount = p5Items.filter(it=>p5Progress[it.id]).length;
+  const wrongCnt = wrongCount(p5Items, p5Progress);
 
   const blankHtml = checked ? `<span class="p5-blank">${item.options[p5Selected]}</span>` : `<span class="p5-blank">＿＿＿＿</span>`;
   const sentenceHtml = item.sentence.replace(/_{4,}/, blankHtml);
@@ -977,7 +1007,7 @@ function renderP5(container){
     <div class="reading-head">
       <div class="reading-tag"><span class="chip cat">${P5_CATEGORY_LABELS[item.category]||item.category}</span></div>
       <div class="reading-nav">
-        <span>已完成 ${doneCount} / ${p5Items.length}</span>
+        <span>已完成 ${doneCount} / ${p5Items.length}（答錯 ${wrongCnt}）</span>
         <button class="nav-btn" id="p5PrevBtn" style="width:36px;height:36px;">◀</button>
         <span>${p5Idx+1} / ${finalList.length}</span>
         <button class="nav-btn" id="p5NextBtn" style="width:36px;height:36px;">▶</button>
@@ -1000,7 +1030,8 @@ function renderP5(container){
   }
   document.getElementById("p5CheckBtn")?.addEventListener("click", ()=>{
     p5Checked = true;
-    p5Progress[item.id] = true; saveJSON("toeic-p5-progress", p5Progress); pushCloudPart("p5", p5Progress);
+    p5Progress[item.id] = (p5Selected === item.answer_index) ? "correct" : "wrong";
+    saveJSON("toeic-p5-progress", p5Progress); pushCloudPart("p5", p5Progress);
     renderStage();
   });
   document.getElementById("p5RetryBtn")?.addEventListener("click", ()=>{
@@ -1018,15 +1049,15 @@ function renderP5(container){
 }
 
 function p6FilterList(){
-  const onlyUnfinished = document.getElementById("grammarOnlyUnfinished").checked;
-  return p6Items.filter(it => !(onlyUnfinished && p6Progress[it.id]));
+  const mode = document.getElementById("grammarFilterMode").value;
+  return filterByMode(p6Items, p6Progress, mode);
 }
 
 function renderP6(container){
   if(p6Items.length === 0){ container.innerHTML = `<div class="empty-state">正在載入 Part 6 題目…</div>`; return; }
   if(p6Order.length === 0) p6Order = p6Items.map(it=>it.id);
   const list = p6FilterList();
-  if(list.length === 0){ container.innerHTML = `<div class="empty-state">這個分類已經全部完成了！取消「只看未完成」可以重新看全部題目。</div>`; return; }
+  if(list.length === 0){ const m=document.getElementById("grammarFilterMode").value; container.innerHTML = `<div class="empty-state">${m==='wrong'?'目前沒有答錯的題目！':'這個分類已經全部完成了！'}切換上方篩選可以重新看其他題目。</div>`; return; }
   const filteredOrder = p6Order.filter(id=>list.some(it=>it.id===id));
   const finalList = filteredOrder.length ? filteredOrder : list.map(it=>it.id);
   if(p6Idx < 0) p6Idx = finalList.length - 1;
@@ -1034,6 +1065,7 @@ function renderP6(container){
   const item = p6Items.find(it=>it.id===finalList[p6Idx]);
   const checked = p6Checked;
   const doneCount = p6Items.filter(it=>p6Progress[it.id]).length;
+  const wrongCnt = wrongCount(p6Items, p6Progress);
 
   const metaHtml = (item.meta && item.meta.length) ? `<div class="doc-meta">${item.meta.map(m=>`<div class="row2"><span class="label">${m.label}</span><span>${m.value}</span></div>`).join("")}</div>` : "";
   const parasHtml = item.paragraphs.map(p=>{
@@ -1067,7 +1099,7 @@ function renderP6(container){
     <div class="reading-head">
       <div class="reading-tag"><span class="chip cat">${READING_CATEGORY_LABELS[item.category]||item.category}</span></div>
       <div class="reading-nav">
-        <span>已完成 ${doneCount} / ${p6Items.length}</span>
+        <span>已完成 ${doneCount} / ${p6Items.length}（答錯 ${wrongCnt}）</span>
         <button class="nav-btn" id="p6PrevBtn" style="width:36px;height:36px;">◀</button>
         <span>${p6Idx+1} / ${finalList.length}</span>
         <button class="nav-btn" id="p6NextBtn" style="width:36px;height:36px;">▶</button>
@@ -1096,7 +1128,8 @@ function renderP6(container){
   }
   document.getElementById("p6CheckBtn")?.addEventListener("click", ()=>{
     p6Checked = true;
-    p6Progress[item.id] = true; saveJSON("toeic-p6-progress", p6Progress); pushCloudPart("p6", p6Progress);
+    p6Progress[item.id] = item.blanks.every((b,bi)=>p6Selected[bi]===b.answer_index) ? "correct" : "wrong";
+    saveJSON("toeic-p6-progress", p6Progress); pushCloudPart("p6", p6Progress);
     renderStage();
   });
   document.getElementById("p6RetryBtn")?.addEventListener("click", ()=>{
@@ -1127,15 +1160,15 @@ function renderListeningMode(container){
 }
 
 function p1FilterList(){
-  const onlyUnfinished = document.getElementById("listeningOnlyUnfinished").checked;
-  return p1Items.filter(it => !(onlyUnfinished && p1Progress[it.id]));
+  const mode = document.getElementById("listeningFilterMode").value;
+  return filterByMode(p1Items, p1Progress, mode);
 }
 
 function renderP1(container){
   if(p1Items.length === 0){ container.innerHTML = `<div class="empty-state">正在載入 Part 1 題目…</div>`; return; }
   if(p1Order.length === 0) p1Order = p1Items.map(it=>it.id);
   const list = p1FilterList();
-  if(list.length === 0){ container.innerHTML = `<div class="empty-state">這個分類已經全部完成了！取消「只看未完成」可以重新看全部題目。</div>`; return; }
+  if(list.length === 0){ const m=document.getElementById("listeningFilterMode").value; container.innerHTML = `<div class="empty-state">${m==='wrong'?'目前沒有答錯的題目！':'這個分類已經全部完成了！'}切換上方篩選可以重新看其他題目。</div>`; return; }
   const filteredOrder = p1Order.filter(id=>list.some(it=>it.id===id));
   const finalList = filteredOrder.length ? filteredOrder : list.map(it=>it.id);
   if(p1Idx < 0) p1Idx = finalList.length - 1;
@@ -1143,6 +1176,7 @@ function renderP1(container){
   const item = p1Items.find(it=>it.id===finalList[p1Idx]);
   const checked = p1Checked;
   const doneCount = p1Items.filter(it=>p1Progress[it.id]).length;
+  const wrongCnt = wrongCount(p1Items, p1Progress);
 
   const optsHtml = item.options.map((opt,oi)=>{
     let cls = "q-opt";
@@ -1165,7 +1199,7 @@ function renderP1(container){
     <div class="reading-head">
       <div class="reading-tag"><span class="chip cat">${P1_CATEGORY_LABELS[item.category]||item.category}</span></div>
       <div class="reading-nav">
-        <span>已完成 ${doneCount} / ${p1Items.length}</span>
+        <span>已完成 ${doneCount} / ${p1Items.length}（答錯 ${wrongCnt}）</span>
         <button class="nav-btn" id="p1PrevBtn" style="width:36px;height:36px;">◀</button>
         <span>${p1Idx+1} / ${finalList.length}</span>
         <button class="nav-btn" id="p1NextBtn" style="width:36px;height:36px;">▶</button>
@@ -1200,7 +1234,8 @@ function renderP1(container){
   }
   document.getElementById("p1CheckBtn")?.addEventListener("click", ()=>{
     p1Checked = true;
-    p1Progress[item.id] = true; saveJSON("toeic-p1-progress", p1Progress); pushCloudPart("p1", p1Progress);
+    p1Progress[item.id] = (p1Selected === item.answer_index) ? "correct" : "wrong";
+    saveJSON("toeic-p1-progress", p1Progress); pushCloudPart("p1", p1Progress);
     renderStage();
   });
   document.getElementById("p1RetryBtn")?.addEventListener("click", ()=>{
@@ -1220,15 +1255,15 @@ function renderP1(container){
 }
 
 function p2FilterList(){
-  const onlyUnfinished = document.getElementById("listeningOnlyUnfinished").checked;
-  return p2Items.filter(it => !(onlyUnfinished && p2Progress[it.id]));
+  const mode = document.getElementById("listeningFilterMode").value;
+  return filterByMode(p2Items, p2Progress, mode);
 }
 
 function renderP2(container){
   if(p2Items.length === 0){ container.innerHTML = `<div class="empty-state">正在載入 Part 2 題目…</div>`; return; }
   if(p2Order.length === 0) p2Order = p2Items.map(it=>it.id);
   const list = p2FilterList();
-  if(list.length === 0){ container.innerHTML = `<div class="empty-state">這個分類已經全部完成了！取消「只看未完成」可以重新看全部題目。</div>`; return; }
+  if(list.length === 0){ const m=document.getElementById("listeningFilterMode").value; container.innerHTML = `<div class="empty-state">${m==='wrong'?'目前沒有答錯的題目！':'這個分類已經全部完成了！'}切換上方篩選可以重新看其他題目。</div>`; return; }
   const filteredOrder = p2Order.filter(id=>list.some(it=>it.id===id));
   const finalList = filteredOrder.length ? filteredOrder : list.map(it=>it.id);
   if(p2Idx < 0) p2Idx = finalList.length - 1;
@@ -1236,6 +1271,7 @@ function renderP2(container){
   const item = p2Items.find(it=>it.id===finalList[p2Idx]);
   const checked = p2Checked;
   const doneCount = p2Items.filter(it=>p2Progress[it.id]).length;
+  const wrongCnt = wrongCount(p2Items, p2Progress);
 
   const optsHtml = item.options.map((opt,oi)=>{
     let cls = "q-opt";
@@ -1258,7 +1294,7 @@ function renderP2(container){
     <div class="reading-head">
       <div class="reading-tag"><span class="chip cat">${P2_TYPE_LABELS[item.question_type]||item.question_type}</span></div>
       <div class="reading-nav">
-        <span>已完成 ${doneCount} / ${p2Items.length}</span>
+        <span>已完成 ${doneCount} / ${p2Items.length}（答錯 ${wrongCnt}）</span>
         <button class="nav-btn" id="p2PrevBtn" style="width:36px;height:36px;">◀</button>
         <span>${p2Idx+1} / ${finalList.length}</span>
         <button class="nav-btn" id="p2NextBtn" style="width:36px;height:36px;">▶</button>
@@ -1292,7 +1328,8 @@ function renderP2(container){
   }
   document.getElementById("p2CheckBtn")?.addEventListener("click", ()=>{
     p2Checked = true;
-    p2Progress[item.id] = true; saveJSON("toeic-p2-progress", p2Progress); pushCloudPart("p2", p2Progress);
+    p2Progress[item.id] = (p2Selected === item.answer_index) ? "correct" : "wrong";
+    saveJSON("toeic-p2-progress", p2Progress); pushCloudPart("p2", p2Progress);
     renderStage();
   });
   document.getElementById("p2RetryBtn")?.addEventListener("click", ()=>{
@@ -1319,9 +1356,9 @@ function renderConversationOrTalk(container, kind){
   if(!isP3 && p4Order.length === 0) p4Order = p4Items.map(it=>it.id);
   const order = isP3 ? p3Order : p4Order;
   const progressObj = isP3 ? p3Progress : p4Progress;
-  const onlyUnfinished = document.getElementById("listeningOnlyUnfinished").checked;
-  const list = items.filter(it => !(onlyUnfinished && progressObj[it.id]));
-  if(list.length === 0){ container.innerHTML = `<div class="empty-state">這個分類已經全部完成了！取消「只看未完成」可以重新看全部題目。</div>`; return; }
+  const filterMode = document.getElementById("listeningFilterMode").value;
+  const list = filterByMode(items, progressObj, filterMode);
+  if(list.length === 0){ container.innerHTML = `<div class="empty-state">${filterMode==='wrong' ? '目前沒有答錯的題目！' : '這個分類已經全部完成了！'}切換上方篩選可以重新看其他題目。</div>`; return; }
   const filteredOrder = order.filter(id=>list.some(it=>it.id===id));
   const finalList = filteredOrder.length ? filteredOrder : list.map(it=>it.id);
   let idx = isP3 ? p3Idx : p4Idx;
@@ -1333,6 +1370,7 @@ function renderConversationOrTalk(container, kind){
   const checked = isP3 ? p3Checked : p4Checked;
   const showText = isP3 ? p3ShowText : p4ShowText;
   const doneCount = items.filter(it=>progressObj[it.id]).length;
+  const wrongCnt = wrongCount(items, progressObj);
 
   const lines = isP3 ? item.lines.map(l=>l.text) : [item.talk];
   const pitchFn = isP3 ? (i)=> (item.lines[i].speaker.includes("Woman") ? (item.lines[i].speaker.includes("2")?1.3:1.15) : (item.lines[i].speaker.includes("2")?0.85:1)) : undefined;
@@ -1359,7 +1397,7 @@ function renderConversationOrTalk(container, kind){
     <div class="reading-head">
       <div class="reading-tag"><span class="chip cat">${catLabel}</span></div>
       <div class="reading-nav">
-        <span>已完成 ${doneCount} / ${items.length}</span>
+        <span>已完成 ${doneCount} / ${items.length}（答錯 ${wrongCnt}）</span>
         <button class="nav-btn" id="lPrevBtn" style="width:36px;height:36px;">◀</button>
         <span>${idx+1} / ${finalList.length}</span>
         <button class="nav-btn" id="lNextBtn" style="width:36px;height:36px;">▶</button>
@@ -1396,7 +1434,7 @@ function renderConversationOrTalk(container, kind){
   }
   document.getElementById("lCheckBtn")?.addEventListener("click", ()=>{
     if(isP3) p3Checked = true; else p4Checked = true;
-    progressObj[item.id] = true;
+    progressObj[item.id] = item.questions.every((q,qi)=>selected[qi]===q.answer_index) ? "correct" : "wrong";
     saveJSON(isP3 ? "toeic-p3-progress" : "toeic-p4-progress", progressObj);
     pushCloudPart(isP3 ? "p3" : "p4", progressObj);
     renderStage();
@@ -1482,10 +1520,11 @@ function renderReadingMode(container){
       <div class="reading-tag">
         <span class="chip cat">${READING_TYPE_LABELS[set.type]}</span>
         <span class="chip pos">${READING_CATEGORY_LABELS[set.category] || set.category}</span>
-        ${checked ? `<span class="chip pos" style="background:var(--success-soft);color:var(--success);">已完成</span>` : ''}
+        ${readingChecked[set.id]==='correct' ? `<span class="chip pos" style="background:var(--success-soft);color:var(--success);">✅ 答對</span>` : ''}
+        ${readingChecked[set.id]==='wrong' ? `<span class="chip pos" style="background:var(--danger-soft);color:var(--danger);">❌ 答錯</span>` : ''}
       </div>
       <div class="reading-nav">
-        <span>本篩選已完成 ${finalList.filter(id=>readingChecked[id]).length} / ${finalList.length}</span>
+        <span>本篩選已完成 ${finalList.filter(id=>readingChecked[id]).length} / ${finalList.length}（答錯 ${finalList.filter(id=>readingChecked[id]==='wrong').length}）</span>
         <button class="nav-btn" id="readingPrevBtn" title="上一篇" style="width:36px;height:36px;">◀</button>
         <span>${readingIdx+1} / ${finalList.length}</span>
         <button class="nav-btn" id="readingNextBtn" title="下一篇" style="width:36px;height:36px;">▶</button>
@@ -1519,7 +1558,8 @@ function renderReadingMode(container){
     });
   }
   document.getElementById("checkAnswersBtn")?.addEventListener("click", ()=>{
-    readingChecked[set.id] = true;
+    const curAnswers = readingAnswers[set.id] || {};
+    readingChecked[set.id] = set.questions.every((q,qi)=>curAnswers[qi]===q.answer_index) ? "correct" : "wrong";
     saveReadingProgress();
     renderStage();
   });
