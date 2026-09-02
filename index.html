@@ -256,8 +256,11 @@
   .mini-speak-btn{ background:var(--accent-soft); color:var(--accent); border:none; width:34px; height:34px; border-radius:50%; font-size:14px; cursor:pointer; flex:none; }
 
   /* Part 1 photo-description scenes */
-  .p1-scene-wrap{ max-width:420px; margin:0 auto 18px; border-radius:14px; overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow); }
+  .p1-scene-wrap{ max-width:420px; margin:0 auto 6px; border-radius:14px; overflow:hidden; border:1px solid var(--border); box-shadow:var(--shadow); }
   .p1-scene-wrap svg{ display:block; width:100%; height:auto; }
+  .p1-scene-wrap img{ display:block; width:100%; height:280px; object-fit:cover; background:var(--surface-2); }
+  .p1-credit{ max-width:420px; margin:0 auto 18px; text-align:right; font-size:11px; color:var(--text-muted); }
+  .p1-credit a{ color:var(--text-muted); }
   .p1-bg{ fill:var(--surface-2); }
   .p1-fill{ fill:var(--text-muted); }
   .p1-accent{ fill:var(--gold); }
@@ -1120,7 +1123,8 @@ function renderP1(container){
       </div>
     </div>
     <div class="listen-card">
-      <div class="p1-scene-wrap">${item.scene_svg}</div>
+      <div class="p1-scene-wrap">${item.photo ? `<img src="${item.photo}" alt="TOEIC Part 1 photo" loading="lazy">` : item.scene_svg}</div>
+      ${item.photo && item.photo_credit ? `<div class="p1-credit">${item.photo_credit}</div>` : ''}
       <div class="listen-play-row">
         <button class="big-play-btn" id="p1PlayBtn" ${canSpeak?'':'disabled'}>▶ 播放四個敘述</button>
       </div>
