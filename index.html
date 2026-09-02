@@ -248,37 +248,16 @@ const CATEGORY_LABELS = {
 };
 function categoryLabel(cat){ return CATEGORY_LABELS[cat] || cat; }
 
-/* Placeholder sample set — replaced with the full 500+ word dataset. */
-const VOCAB = [
+/* Tiny fallback set — only used if data/toeic_vocab.json fails to load. */
+const FALLBACK_VOCAB = [
   {word:"accommodate", ipa:"/əˈkɑːmədeɪt/", pos:"v.", meaning_zh:"容納；配合(需求)", example_en:"The hotel can accommodate up to three hundred guests.", example_zh:"這間飯店最多可以容納三百位房客。", category:"hospitality"},
   {word:"agenda", ipa:"/əˈdʒendə/", pos:"n.", meaning_zh:"議程", example_en:"Please review the agenda before tomorrow's meeting.", example_zh:"請在明天開會前先看過議程。", category:"meetings"},
-  {word:"invoice", ipa:"/ˈɪnvɔɪs/", pos:"n.", meaning_zh:"發票；請款單", example_en:"The invoice must be paid within thirty days.", example_zh:"這張請款單必須在三十天內付清。", category:"finance"},
-  {word:"reimburse", ipa:"/ˌriːɪmˈbɜːrs/", pos:"v.", meaning_zh:"償還；核銷費用", example_en:"Employees will be reimbursed for travel expenses.", example_zh:"員工的差旅費用將會獲得核銷。", category:"finance"},
-  {word:"candidate", ipa:"/ˈkændɪdət/", pos:"n.", meaning_zh:"應徵者；候選人", example_en:"Only three candidates were selected for a second interview.", example_zh:"只有三位應徵者獲選進入第二輪面試。", category:"hr"},
-  {word:"warehouse", ipa:"/ˈwerhaʊs/", pos:"n.", meaning_zh:"倉庫", example_en:"The shipment is currently stored in the warehouse.", example_zh:"這批貨目前存放在倉庫裡。", category:"logistics"},
-  {word:"itinerary", ipa:"/aɪˈtɪnəreri/", pos:"n.", meaning_zh:"行程表", example_en:"Our itinerary includes stops in Tokyo and Osaka.", example_zh:"我們的行程表包含東京與大阪兩站。", category:"travel"},
-  {word:"malfunction", ipa:"/mælˈfʌŋkʃən/", pos:"v.", meaning_zh:"故障；失靈", example_en:"The printer malfunctioned during the presentation.", example_zh:"印表機在簡報途中故障了。", category:"technology"},
-  {word:"premium", ipa:"/ˈpriːmiəm/", pos:"n.", meaning_zh:"保費；額外費用", example_en:"Your insurance premium increases if you file a claim.", example_zh:"只要申請理賠，你的保費就會提高。", category:"insurance"},
-  {word:"lease", ipa:"/liːs/", pos:"n./v.", meaning_zh:"租約；租賃", example_en:"The company decided to lease the office space for five years.", example_zh:"公司決定將這間辦公室租賃五年。", category:"real_estate"},
-  {word:"endorse", ipa:"/ɪnˈdɔːrs/", pos:"v.", meaning_zh:"背書；代言", example_en:"The athlete was paid to endorse the new sportswear line.", example_zh:"這位運動員收費代言這款新運動服飾。", category:"advertising"},
-  {word:"circulation", ipa:"/ˌsɜːrkjəˈleɪʃən/", pos:"n.", meaning_zh:"發行量；流通", example_en:"The magazine's circulation has grown steadily this year.", example_zh:"這本雜誌的發行量今年穩定成長。", category:"media"},
-  {word:"assemble", ipa:"/əˈsembl/", pos:"v.", meaning_zh:"組裝", example_en:"Workers assemble the parts on the production line.", example_zh:"作業員在生產線上組裝零件。", category:"manufacturing"},
-  {word:"inquiry", ipa:"/ɪnˈkwaɪəri/", pos:"n.", meaning_zh:"詢問；查詢", example_en:"We received an inquiry about our return policy.", example_zh:"我們收到一則關於退貨政策的詢問。", category:"customer_service"},
-  {word:"withdraw", ipa:"/wɪðˈdrɔː/", pos:"v.", meaning_zh:"提款；撤回", example_en:"You can withdraw cash from any branch.", example_zh:"你可以在任何一間分行提款。", category:"banking"},
-  {word:"promote", ipa:"/prəˈmoʊt/", pos:"v.", meaning_zh:"晉升；促銷", example_en:"She was promoted to regional manager last month.", example_zh:"她上個月被晉升為區域經理。", category:"office"},
-  {word:"negotiate", ipa:"/nɪˈɡoʊʃieɪt/", pos:"v.", meaning_zh:"協商；談判", example_en:"Both sides agreed to negotiate a lower price.", example_zh:"雙方同意協商出一個較低的價格。", category:"contracts"},
-  {word:"versatile", ipa:"/ˈvɜːrsətl/", pos:"adj.", meaning_zh:"多才多藝的；用途廣的", example_en:"This software is versatile enough for small and large teams alike.", example_zh:"這款軟體用途很廣，大小團隊都適用。", category:"adjectives_general"},
-  {word:"substantial", ipa:"/səbˈstænʃəl/", pos:"adj.", meaning_zh:"大量的；重大的", example_en:"The merger resulted in substantial cost savings.", example_zh:"這次合併帶來了大量的成本節省。", category:"adjectives_general"},
-  {word:"launch", ipa:"/lɔːntʃ/", pos:"v.", meaning_zh:"推出；發表", example_en:"The company will launch its new product next quarter.", example_zh:"公司將於下一季推出新產品。", category:"marketing"},
-  {word:"eligible", ipa:"/ˈelɪdʒəbl/", pos:"adj.", meaning_zh:"合格的；有資格的", example_en:"Full-time staff are eligible for health benefits.", example_zh:"全職員工才有資格享有健康福利。", category:"hr"},
-  {word:"draft", ipa:"/dræft/", pos:"n./v.", meaning_zh:"草稿；起草", example_en:"Please send me a draft of the contract by Friday.", example_zh:"請在星期五前把合約草稿寄給我。", category:"contracts"},
-  {word:"outsource", ipa:"/ˈaʊtsɔːrs/", pos:"v.", meaning_zh:"外包", example_en:"The firm decided to outsource its customer support.", example_zh:"公司決定將客服工作外包出去。", category:"office"},
-  {word:"forecast", ipa:"/ˈfɔːrkæst/", pos:"n./v.", meaning_zh:"預測", example_en:"Analysts revised the sales forecast upward.", example_zh:"分析師將銷售預測上修了。", category:"finance"}
+  {word:"invoice", ipa:"/ˈɪnvɔɪs/", pos:"n.", meaning_zh:"發票；請款單", example_en:"The invoice must be paid within thirty days.", example_zh:"這張請款單必須在三十天內付清。", category:"finance"}
 ];
 
 /* ---------- State ---------- */
-let words = VOCAB.map((w,i)=>({...w, id:i}));
-let order = words.map(w=>w.id);
+let words = [];
+let order = [];
 let cursor = 0;
 let mode = "card";
 let flipped = false;
@@ -560,8 +539,25 @@ function render(){
   renderStage();
 }
 
-populateCategories();
-render();
+/* ---------- Load data ---------- */
+async function loadVocab(){
+  const stage = document.getElementById("stage");
+  stage.innerHTML = `<div class="empty-state">正在載入單字資料…</div>`;
+  try{
+    const res = await fetch("data/toeic_vocab.json");
+    if(!res.ok) throw new Error("HTTP " + res.status);
+    const data = await res.json();
+    words = data.map((w,i)=>({...w, id: w.id ?? i}));
+  }catch(err){
+    words = FALLBACK_VOCAB.map((w,i)=>({...w, id:i}));
+    stage.innerHTML = `<div class="empty-state">找不到 data/toeic_vocab.json，暫時顯示少量範例單字。<br>（若是直接雙擊開啟 index.html，瀏覽器會擋掉本機檔案讀取，請改用網站連結或本機伺服器開啟。）</div>`;
+  }
+  order = words.map(w=>w.id);
+  populateCategories();
+  render();
+}
+
+loadVocab();
 </script>
 </body>
 </html>
