@@ -713,6 +713,20 @@ function pushCloudPart(key, progressObj){ pushCloud(key, { version: versionOf(ke
 function pushCloudSaved(){ pushCloud("savedWords", savedWords); }
 
 function isWordSaved(word){ return !!savedWords[word.toLowerCase()]; }
+/* Auto-save (never un-save) a word the user just got wrong in the quiz, and note it was missed —
+   so a quiz mistake surfaces in the same collected review list as a manually-hearted word. */
+function saveWordFromQuizMistake(r){
+  const key = r.word.toLowerCase();
+  const existing = savedWords[key];
+  savedWords[key] = {
+    word: r.word, ipa: r.ipa||"", pos: r.pos||"", meaning_zh: r.meaning_zh||"", example_en: r.example_en||"", example_zh: r.example_zh||"",
+    savedAt: existing ? existing.savedAt : Date.now(),
+    lastWrongAt: Date.now(),
+    wrongCount: (existing?.wrongCount || 0) + 1
+  };
+  saveJSON("toeic-saved-words", savedWords);
+  pushCloudSaved();
+}
 function toggleSavedWord(r){
   const key = r.word.toLowerCase();
   if(savedWords[key]){
@@ -1341,6 +1355,7 @@ function renderQuizMode(container){
       const isCorrect = chosen.id === w.id;
       quizScore.total++;
       if(isCorrect) quizScore.correct++;
+      else saveWordFromQuizMistake(w);
       setStatusDirect(w.id, isCorrect ? "known" : "unknown");
       container.querySelectorAll(".opt-btn").forEach((b,i)=>{
         b.disabled = true;
@@ -1992,9 +2007,10 @@ function renderStage(){
 
 /* ---------- Saved words (collected from the lookup popup) ---------- */
 function renderSavedMode(container){
-  const list = Object.values(savedWords).sort((a,b)=> (b.savedAt||0)-(a.savedAt||0));
+  const list = Object.values(savedWords).sort((a,b)=>
+    Math.max(b.savedAt||0, b.lastWrongAt||0) - Math.max(a.savedAt||0, a.lastWrongAt||0));
   if(list.length === 0){
-    container.innerHTML = `<div class="empty-state">還沒有收藏任何單字。閱讀或文法測驗時點擊不懂的單字查詢意思，再按 🤍 即可加入收藏，方便之後複習。</div>`;
+    container.innerHTML = `<div class="empty-state">還沒有收藏任何單字。閱讀或文法測驗時點擊不懂的單字查詢意思，或在小測驗答錯，再按 🤍 即可加入收藏，方便之後複習。</div>`;
     return;
   }
   const rows = list.map(w=>`
@@ -2008,6 +2024,7 @@ function renderSavedMode(container){
       ${w.pos ? `<div class="wp-pos">${w.pos}</div>` : ''}
       <div class="wp-meaning">${w.meaning_zh || '（無中文翻譯）'}</div>
       ${w.example_en ? `<div class="wp-example"><div>${w.example_en}</div>${w.example_zh ? `<div class="zh">${w.example_zh}</div>` : ''}</div>` : ''}
+      ${w.wrongCount ? `<div class="hub-card-sub" style="margin-top:8px;">⚠️ 小測驗答錯 ${w.wrongCount} 次${w.lastWrongAt ? `，最近一次 ${new Date(w.lastWrongAt).toLocaleDateString('zh-TW')}` : ''}</div>` : ''}
     </div>
   `).join("");
   container.innerHTML = `<div class="hub-intro">已收藏 ${list.length} 個單字</div><div class="hub-list">${rows}</div>`;
