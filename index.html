@@ -136,6 +136,7 @@
   .chip{ font-family:"IBM Plex Mono", monospace; font-size:11px; letter-spacing:.06em; padding:4px 10px; border-radius:999px; text-transform:uppercase; }
   .chip.cat{ background:var(--gold-soft); color:var(--gold); }
   .chip.pos{ background:var(--accent-soft); color:var(--accent); }
+  .chip.imp{ background:var(--surface-2); color:var(--text-muted); text-transform:none; }
   .word-block{ flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; text-align:center; padding:18px 0; }
   .word{ font-family:"IBM Plex Sans", system-ui, sans-serif; font-weight:700; font-size:clamp(30px,5vw,42px); margin:0; }
   .ipa{ color:var(--accent); font-size:16px; }
@@ -346,6 +347,12 @@
   <div class="controls" id="vocabControls">
     <input type="search" id="searchInput" placeholder="搜尋單字或中文意思…">
     <select id="categorySelect"></select>
+    <select id="importanceSelect">
+      <option value="all">全部重要度</option>
+      <option value="core">🔴 必考</option>
+      <option value="common">🟡 常考</option>
+      <option value="extended">🟢 延伸</option>
+    </select>
     <label class="chk"><input type="checkbox" id="onlyUnknown"> 只看待複習</label>
     <button class="icon-btn" id="shuffleBtn">🔀 隨機排序</button>
     <button class="icon-btn" id="resetBtn">↺ 重設進度</button>
@@ -416,6 +423,9 @@ const CATEGORY_LABELS = {
   government_public:"公家機關法規", environment_sustainability:"環保永續"
 };
 function categoryLabel(cat){ return CATEGORY_LABELS[cat] || cat; }
+
+const IMPORTANCE_LABELS = { core:"🔴 必考", common:"🟡 常考", extended:"🟢 延伸" };
+function importanceLabel(imp){ return IMPORTANCE_LABELS[imp] || ""; }
 
 /* Tiny fallback set — only used if data/toeic_vocab.json fails to load. */
 const FALLBACK_VOCAB = [
@@ -727,7 +737,7 @@ function saveWordFromQuizMistake(r){
   const key = r.word.toLowerCase();
   const existing = savedWords[key];
   savedWords[key] = {
-    word: r.word, ipa: r.ipa||"", pos: r.pos||"", meaning_zh: r.meaning_zh||"", example_en: r.example_en||"", example_zh: r.example_zh||"",
+    word: r.word, ipa: r.ipa||"", pos: r.pos||"", meaning_zh: r.meaning_zh||"", example_en: r.example_en||"", example_zh: r.example_zh||"", importance: r.importance||"",
     savedAt: existing ? existing.savedAt : Date.now(),
     lastWrongAt: Date.now(),
     wrongCount: (existing?.wrongCount || 0) + 1
@@ -740,7 +750,7 @@ function toggleSavedWord(r){
   if(savedWords[key]){
     delete savedWords[key];
   }else{
-    savedWords[key] = { word: r.word, ipa: r.ipa||"", pos: r.pos||"", meaning_zh: r.meaning_zh||"", example_en: r.example_en||"", example_zh: r.example_zh||"", savedAt: Date.now() };
+    savedWords[key] = { word: r.word, ipa: r.ipa||"", pos: r.pos||"", meaning_zh: r.meaning_zh||"", example_en: r.example_en||"", example_zh: r.example_zh||"", importance: r.importance||"", savedAt: Date.now() };
   }
   saveJSON("toeic-saved-words", savedWords);
   pushCloudSaved();
@@ -923,7 +933,7 @@ async function lookupWord(word){
   let local = words.find(w=>w.word.toLowerCase() === key);
   if(!local){ for(const v of variants){ local = words.find(w=>w.word.toLowerCase() === v); if(local) break; } }
   if(local){
-    const result = { word: local.word, ipa: local.ipa, pos: local.pos, meaning_zh: local.meaning_zh, example_en: local.example_en, example_zh: local.example_zh, audioUrl: null, source: "local" };
+    const result = { word: local.word, ipa: local.ipa, pos: local.pos, meaning_zh: local.meaning_zh, example_en: local.example_en, example_zh: local.example_zh, importance: local.importance, audioUrl: null, source: "local" };
     wordLookupCache[key] = result;
     return result;
   }
@@ -986,7 +996,10 @@ function showWordPopup(word){
         <button class="speak-btn" id="wpSpeak" style="width:34px;height:34px;font-size:14px;">🔊</button>
         <button class="speak-btn" id="wpSave" style="width:34px;height:34px;font-size:14px;" title="加入收藏，之後複習">${isWordSaved(r.word) ? '❤️' : '🤍'}</button>
       </div>
-      ${r.pos ? `<div class="wp-pos">${r.pos}</div>` : ''}
+      <div style="display:flex; gap:6px;">
+        ${r.pos ? `<div class="wp-pos">${r.pos}</div>` : ''}
+        ${r.importance ? `<div class="wp-pos" style="background:var(--surface-2);color:var(--text-muted);">${importanceLabel(r.importance)}</div>` : ''}
+      </div>
       <div class="wp-meaning">${r.meaning_zh || (r.example_en ? '(查無中文翻譯，見下方英文釋義)' : '查無此字的資料')}</div>
       ${r.example_en ? `<div class="wp-example"><div>${r.example_en}</div>${r.example_zh ? `<div class="zh">${r.example_zh}</div>` : ''}</div>` : ''}
       ${r.source === 'api' ? `<div class="wp-note">此字不在多益單字庫中，資料來自線上字典／翻譯服務，僅供參考。</div>` : ''}
@@ -1022,9 +1035,11 @@ document.getElementById("stage").addEventListener("click", (e)=>{
 function currentFilterList(){
   const q = document.getElementById("searchInput").value.trim().toLowerCase();
   const cat = document.getElementById("categorySelect").value;
+  const importance = document.getElementById("importanceSelect").value;
   const onlyUnknown = document.getElementById("onlyUnknown").checked;
   return words.filter(w=>{
     if(cat !== "all" && w.category !== cat) return false;
+    if(importance !== "all" && w.importance !== importance) return false;
     if(onlyUnknown && statusOf(w.id) !== "unknown") return false;
     if(q && !(w.word.toLowerCase().includes(q) || w.meaning_zh.includes(q))) return false;
     return true;
@@ -1040,6 +1055,7 @@ function populateCategories(){
 
 document.getElementById("searchInput").addEventListener("input", ()=>{ cursor=0; listPage=1; render(); });
 document.getElementById("categorySelect").addEventListener("change", ()=>{ cursor=0; listPage=1; render(); });
+document.getElementById("importanceSelect").addEventListener("change", ()=>{ cursor=0; listPage=1; render(); });
 document.getElementById("onlyUnknown").addEventListener("change", ()=>{ cursor=0; listPage=1; render(); });
 document.getElementById("shuffleBtn").addEventListener("click", ()=>{
   const list = currentFilterList();
@@ -1192,7 +1208,10 @@ function renderCardMode(container){
       <div class="flashcard ${flipped?'flipped':''}" id="flashcard">
         <div class="face front">
           <div class="face-top">
-            <span class="chip cat">${categoryLabel(w.category)}</span>
+            <div style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
+              <span class="chip cat">${categoryLabel(w.category)}</span>
+              ${w.importance ? `<span class="chip imp">${importanceLabel(w.importance)}</span>` : ''}
+            </div>
             <div style="display:flex; gap:6px; align-items:center;">
               <span class="chip pos">${w.pos}</span>
               <button class="speak-btn card-save-btn" style="width:28px;height:28px;font-size:13px;" title="加入收藏，之後複習">${isWordSaved(w.word) ? '❤️' : '🤍'}</button>
@@ -1214,7 +1233,10 @@ function renderCardMode(container){
         </div>
         <div class="face back">
           <div class="face-top">
-            <span class="chip cat">${categoryLabel(w.category)}</span>
+            <div style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
+              <span class="chip cat">${categoryLabel(w.category)}</span>
+              ${w.importance ? `<span class="chip imp">${importanceLabel(w.importance)}</span>` : ''}
+            </div>
             <div style="display:flex; gap:6px; align-items:center;">
               <span class="chip pos">${w.pos}</span>
               <button class="speak-btn card-save-btn" style="width:28px;height:28px;font-size:13px;" title="加入收藏，之後複習">${isWordSaved(w.word) ? '❤️' : '🤍'}</button>
@@ -1286,7 +1308,10 @@ function renderListMode(container){
           <div class="meaning-inline">${w.pos} ${w.meaning_zh}</div>
           ${w.example_en ? `<div class="example-inline"><div class="en">${w.example_en}</div>${w.example_zh ? `<div class="zh">${w.example_zh}</div>` : ''}</div>` : ''}
         </div>
-        <div class="cat-badge">${categoryLabel(w.category)}</div>
+        <div>
+          <div class="cat-badge">${categoryLabel(w.category)}</div>
+          ${w.importance ? `<div class="cat-badge">${importanceLabel(w.importance)}</div>` : ''}
+        </div>
         <div>
           ${st==='known' ? '<span class="chip pos" style="background:var(--success-soft);color:var(--success);">熟記</span>' : st==='unknown' ? '<span class="chip pos" style="background:var(--danger-soft);color:var(--danger);">待複習</span>' : ''}
         </div>
@@ -1336,7 +1361,10 @@ function renderQuizMode(container){
   container.innerHTML = `
     <div class="quiz-score mono">本次測驗　答對 ${quizScore.correct} / ${quizScore.total}</div>
     <div class="quiz-card">
-      <span class="chip pos">${w.pos}</span>
+      <div style="display:flex; gap:6px; align-items:center;">
+        <span class="chip pos">${w.pos}</span>
+        ${w.importance ? `<span class="chip imp">${importanceLabel(w.importance)}</span>` : ''}
+      </div>
       <div class="word-block" style="padding-top:10px;">
         <p class="word">${w.word}</p>
         <p class="ipa mono">${w.ipa}</p>
@@ -2037,7 +2065,10 @@ function renderSavedMode(container){
         <button class="speak-btn" data-speak="${w.word}">🔊</button>
         <button class="speak-btn unsave-btn" data-unsave="${w.word}" title="移除收藏">❤️</button>
       </div>
-      ${w.pos ? `<div class="wp-pos">${w.pos}</div>` : ''}
+      <div style="display:flex; gap:6px;">
+        ${w.pos ? `<div class="wp-pos">${w.pos}</div>` : ''}
+        ${w.importance ? `<div class="wp-pos" style="background:var(--surface-2);color:var(--text-muted);">${importanceLabel(w.importance)}</div>` : ''}
+      </div>
       <div class="wp-meaning">${w.meaning_zh || '（無中文翻譯）'}</div>
       ${w.example_en ? `<div class="wp-example"><div>${w.example_en}</div>${w.example_zh ? `<div class="zh">${w.example_zh}</div>` : ''}</div>` : ''}
       ${w.wrongCount ? `<div class="hub-card-sub" style="margin-top:8px;">⚠️ 小測驗答錯 ${w.wrongCount} 次${w.lastWrongAt ? `，最近一次 ${new Date(w.lastWrongAt).toLocaleDateString('zh-TW')}` : ''}</div>` : ''}
