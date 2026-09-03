@@ -1,0 +1,4551 @@
+[
+  {
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "accounts.payable@driftwood-retail.com"
+          },
+          {
+            "label": "To:",
+            "value": "billing@cascadecloudsystems.com"
+          },
+          {
+            "label": "Subject:",
+            "value": "Discrepancy on Invoice #77410"
+          },
+          {
+            "label": "Date:",
+            "value": "March 11"
+          }
+        ],
+        "paragraphs": [
+          "Dear Cascade Cloud Billing Team,",
+          "I am writing about invoice #77410, which lists a charge of $1,240 for the Enterprise Analytics add-on. Our records show that we downgraded to the Standard plan on February 1, and the add-on should have been removed from our account at that time.",
+          "This is the second month in a row that our invoice has not reflected the downgrade, and the extra charge has already been deducted from our account. Could you please issue a corrected invoice and refund the overcharged amount as soon as possible?",
+          "We value our partnership with Cascade Cloud and would like to resolve this quickly so it does not affect next month's billing cycle.",
+          "Sincerely,\nMarcus Whitfield\nAccounts Payable, Driftwood Retail Group"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "Why did Mr. Whitfield write the e-mail?",
+        "question_zh": "惠特菲爾德先生為什麼撰寫這封電子郵件?",
+        "options": [
+          "To cancel a subscription entirely",
+          "To dispute an incorrect charge on an invoice",
+          "To request a copy of a contract",
+          "To ask about upgrading to a premium plan"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中說明公司已於2月1日降級方案，但發票仍列出應被移除的附加功能費用，並要求更正發票與退款，因此答案是 (B)。"
+      },
+      {
+        "question_en": "According to the e-mail, when did Driftwood Retail Group downgrade its plan?",
+        "question_zh": "根據這封電子郵件，Driftwood Retail Group 是何時將方案降級的?",
+        "options": [
+          "January 1",
+          "February 1",
+          "March 11",
+          "It has not downgraded yet"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第二段提到公司已於2月1日(February 1)降級為標準方案，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What can be inferred about Driftwood Retail Group's relationship with Cascade Cloud Systems?",
+        "question_zh": "從信中可以推論出 Driftwood Retail Group 與 Cascade Cloud Systems 之間的關係為何?",
+        "options": [
+          "It plans to end its contract with Cascade Cloud",
+          "It intends to continue doing business with Cascade Cloud",
+          "It has never been billed correctly",
+          "It is switching to a competitor next month"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到「我們重視與 Cascade Cloud 的合作關係，希望盡快解決此事」，顯示雙方仍打算繼續合作，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"deducted\" in paragraph 3 is closest in meaning to",
+        "question_zh": "第三段中的 \"deducted\" 一詞最接近下列何者的意思?",
+        "options": [
+          "subtracted",
+          "added",
+          "delayed",
+          "refunded"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "此處 \"deducted\" 指金額已從帳戶中「被扣除」，與 \"subtracted\"（被扣除、被減去）意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "memo",
+        "title": "Memo",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Priya Nandakumar, Human Resources Director"
+          },
+          {
+            "label": "To:",
+            "value": "All Remote Employees"
+          },
+          {
+            "label": "Subject:",
+            "value": "New Home-Office Equipment Stipend"
+          },
+          {
+            "label": "Date:",
+            "value": "May 19"
+          }
+        ],
+        "paragraphs": [
+          "This memo announces a new benefit for employees who work remotely at least three days per week.",
+          "Beginning June 1, eligible employees may request reimbursement of up to $300 per calendar year for home-office equipment, including desks, chairs, and monitors. Receipts must be submitted through the expense portal within 60 days of purchase.",
+          "Employees who are unsure whether they qualify should check their work arrangement status with their manager before submitting a claim, since the stipend does not apply to staff who work remotely fewer than three days per week.",
+          "Questions about the program can be directed to the Human Resources office."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the memo?",
+        "question_zh": "這份備忘錄的目的為何?",
+        "options": [
+          "To announce a new home-office equipment benefit",
+          "To cancel remote work arrangements",
+          "To request receipts for past purchases",
+          "To introduce a new performance review process"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "備忘錄開頭即說明要宣布一項新的居家辦公設備補助福利，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the memo, what is the maximum annual reimbursement amount?",
+        "question_zh": "根據備忘錄，每年最高可申請多少補助金額?",
+        "options": [
+          "$60",
+          "$150",
+          "$300",
+          "$500"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第二段明確指出每年最高可補助 $300，因此答案是 (C)。"
+      },
+      {
+        "question_en": "Who is NOT eligible for the stipend?",
+        "question_zh": "下列何者「不」符合申請此項補助的資格?",
+        "options": [
+          "Employees who work remotely five days per week",
+          "Employees who work remotely three days per week",
+          "Employees who work remotely fewer than three days per week",
+          "Employees who submit receipts within 60 days"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第三段說明此補助不適用於每週遠距工作少於三天的員工，因此答案是 (C)。"
+      },
+      {
+        "question_en": "The word \"eligible\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"eligible\" 一詞最接近下列何者的意思?",
+        "options": [
+          "qualified",
+          "curious",
+          "temporary",
+          "reluctant"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"eligible\" 意指「符合資格的」，與 \"qualified\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "letter",
+        "title": "Letter",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Helena Voss, Development Director, Ashcombe Museum of Natural History"
+          },
+          {
+            "label": "To:",
+            "value": "Mr. Dennis Okafor, CEO, Okafor & Bright Financial Group"
+          },
+          {
+            "label": "Date:",
+            "value": "September 2"
+          }
+        ],
+        "paragraphs": [
+          "Dear Mr. Okafor,",
+          "On behalf of everyone at the Ashcombe Museum of Natural History, thank you for renewing your company's sponsorship of our Discovery Hall exhibit for another two years. Your continued support allows us to keep admission free for local schoolchildren.",
+          "As a sponsor at the Platinum level, Okafor & Bright Financial Group will receive prominent signage at the Discovery Hall entrance, four passes to our annual gala, and recognition in our spring newsletter, which reaches more than twelve thousand households.",
+          "We are also pleased to invite you to a private preview of our upcoming dinosaur fossil exhibit on October 14, before it opens to the public.",
+          "With gratitude,\nHelena Voss\nDevelopment Director"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the main purpose of the letter?",
+        "question_zh": "這封信的主要目的為何?",
+        "options": [
+          "To request a new sponsorship",
+          "To thank a company for renewing its sponsorship",
+          "To announce the closing of an exhibit",
+          "To apply for a museum grant"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信件一開始即感謝對方公司續約贊助探索廳展覽，因此答案是 (B)。"
+      },
+      {
+        "question_en": "According to the letter, how many gala passes will Okafor & Bright Financial Group receive?",
+        "question_zh": "根據信件內容，Okafor & Bright Financial Group 將獲得幾張晚宴入場券?",
+        "options": [
+          "Two",
+          "Three",
+          "Four",
+          "Twelve"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第三段提到白金等級贊助商可獲得四張年度晚宴入場券，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What will most likely happen on October 14?",
+        "question_zh": "10月14日最有可能會發生什麼事?",
+        "options": [
+          "The newsletter will be mailed to households",
+          "Mr. Okafor will attend a private preview of a new exhibit",
+          "The sponsorship agreement will expire",
+          "The museum will open a new gift shop"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第四段提到10月14日將邀請對方參加恐龍化石展的私人預覽，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"prominent\" in paragraph 3 is closest in meaning to",
+        "question_zh": "第三段中的 \"prominent\" 一詞最接近下列何者的意思?",
+        "options": [
+          "noticeable",
+          "temporary",
+          "expensive",
+          "secondary"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"prominent signage\" 指「醒目、顯眼的標示」，與 \"noticeable\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "support@velocorider-bikes.com"
+          },
+          {
+            "label": "To:",
+            "value": "t.hendricks@quickmail-example.com"
+          },
+          {
+            "label": "Subject:",
+            "value": "Re: Warranty Claim - VeloCore Trail 5 Frame Crack"
+          },
+          {
+            "label": "Date:",
+            "value": "April 22"
+          }
+        ],
+        "paragraphs": [
+          "Dear Ms. Hendricks,",
+          "Thank you for sending the photographs of the crack near the seat post on your VeloCore Trail 5. After reviewing the images and your proof of purchase, we have confirmed that the frame is covered under our five-year manufacturer's warranty.",
+          "We will ship a replacement frame to the address on file within seven to ten business days at no cost to you. Please bring the bicycle to any authorized VeloCore dealer once the new frame arrives so a technician can transfer the components and complete the reassembly.",
+          "If you do not have an authorized dealer nearby, our customer service line can help arrange for a mobile mechanic to visit you instead.",
+          "Best regards,\nCustomer Support Team, VeloCore Bikes"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the main purpose of the e-mail?",
+        "question_zh": "這封電子郵件的主要目的為何?",
+        "options": [
+          "To request additional photographs",
+          "To inform a customer that a warranty claim has been approved",
+          "To ask a customer to pay for a repair",
+          "To cancel a warranty registration"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中確認車架裂痕在五年保固範圍內，並說明將寄送替換車架，因此答案是 (B)。"
+      },
+      {
+        "question_en": "According to the e-mail, how long will it take to ship the replacement frame?",
+        "question_zh": "根據信件內容，寄送替換車架大約需要多久時間?",
+        "options": [
+          "One to two business days",
+          "Seven to ten business days",
+          "Five years",
+          "Two to three weeks"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到替換車架將在七到十個工作天內寄出，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What is Ms. Hendricks instructed to do once the new frame arrives?",
+        "question_zh": "當新車架送達後，韓翠克斯女士被要求做什麼?",
+        "options": [
+          "Return the old frame by mail",
+          "Bring the bicycle to an authorized dealer",
+          "Assemble the frame herself",
+          "Contact the manufacturer for a refund instead"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段說明新車架送達後，應將腳踏車送至授權經銷商由技師組裝，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"authorized\" in paragraph 3 is closest in meaning to",
+        "question_zh": "第三段中的 \"authorized\" 一詞最接近下列何者的意思?",
+        "options": [
+          "officially approved",
+          "newly opened",
+          "conveniently located",
+          "independently owned"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"authorized dealer\" 指「經官方核准的經銷商」，與 \"officially approved\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "admissions@brindlewood-college.edu"
+          },
+          {
+            "label": "To:",
+            "value": "j.park@studentmail-example.com"
+          },
+          {
+            "label": "Subject:",
+            "value": "Your Campus Tour Has Been Moved"
+          },
+          {
+            "label": "Date:",
+            "value": "October 30"
+          }
+        ],
+        "paragraphs": [
+          "Dear Ms. Park,",
+          "We are writing to let you know that your scheduled campus tour on November 4 has been moved to November 6 at 10:00 a.m. because of a facilities inspection that will restrict access to several buildings on our original date.",
+          "The tour will still begin at the Admissions Welcome Center and will include visits to the science labs, the student residence halls, and the newly renovated library. A member of our admissions team will also be available afterward to answer any questions about financial aid.",
+          "If November 6 does not work with your schedule, please reply to this e-mail and we will be happy to arrange another date.",
+          "We look forward to welcoming you to Brindlewood College."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "Why was the e-mail sent to Ms. Park?",
+        "question_zh": "這封電子郵件為什麼會寄給朴女士?",
+        "options": [
+          "To confirm her admission to the college",
+          "To notify her of a change to her campus tour",
+          "To request her financial aid documents",
+          "To invite her to a graduation ceremony"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信件說明她原訂的校園參觀時間已更改，因此答案是 (B)。"
+      },
+      {
+        "question_en": "When was the tour originally scheduled to take place?",
+        "question_zh": "這場參觀活動原本排定於何時舉行?",
+        "options": [
+          "October 30",
+          "November 4",
+          "November 6",
+          "December 1"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第二段提到原訂日期為11月4日，因設施檢查而改期，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What should Ms. Park do if the new date is inconvenient for her?",
+        "question_zh": "如果新的日期對朴女士不方便，她應該怎麼做?",
+        "options": [
+          "Cancel her application",
+          "Visit the campus on her own",
+          "Reply to the e-mail to arrange another date",
+          "Contact the financial aid office directly"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第四段提到若11月6日不方便，可回覆此信另約時間，因此答案是 (C)。"
+      },
+      {
+        "question_en": "The word \"restrict\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"restrict\" 一詞最接近下列何者的意思?",
+        "options": [
+          "limit",
+          "expand",
+          "repair",
+          "advertise"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"restrict access\" 指「限制進出」，與 \"limit\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "it.support@parallax-financial.com"
+          },
+          {
+            "label": "To:",
+            "value": "All Staff"
+          },
+          {
+            "label": "Subject:",
+            "value": "Scheduled Network Outage This Weekend"
+          },
+          {
+            "label": "Date:",
+            "value": "November 12"
+          }
+        ],
+        "paragraphs": [
+          "Dear Colleagues,",
+          "As part of our transition to a new client-management platform, the internal network and e-mail system will be unavailable from 11:00 p.m. Friday, November 14, until 6:00 a.m. Monday, November 17.",
+          "During this window, employees will not be able to access shared drives, the client database, or company e-mail from any device, including personal phones connected to the corporate account. Please save any documents you need for Monday morning before you leave the office on Friday.",
+          "If a client emergency arises over the weekend, contact the IT help desk directly at the emergency line posted on the intranet home page.",
+          "We apologize for the inconvenience and appreciate your patience while we complete this upgrade."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "Why was this e-mail sent to all staff?",
+        "question_zh": "這封電子郵件為什麼會發送給全體員工?",
+        "options": [
+          "To announce a new company holiday",
+          "To inform staff of a scheduled network outage",
+          "To request feedback on a new software platform",
+          "To cancel all weekend client meetings"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中說明因系統升級，網路與電子郵件系統將於週末暫停服務，因此答案是 (B)。"
+      },
+      {
+        "question_en": "According to the e-mail, when will the network outage end?",
+        "question_zh": "根據信件內容，這次網路中斷何時結束?",
+        "options": [
+          "11:00 p.m. Friday",
+          "6:00 a.m. Saturday",
+          "6:00 a.m. Monday",
+          "11:00 p.m. Sunday"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第二段提到系統將於11月17日星期一上午6點恢復，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What are employees advised to do before leaving the office on Friday?",
+        "question_zh": "員工在週五離開辦公室前被建議做什麼?",
+        "options": [
+          "Turn off their computers completely",
+          "Save documents needed for Monday morning",
+          "Submit a report to the IT help desk",
+          "Back up their personal phones"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段建議員工在離開前先儲存週一上午需要用到的文件，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"unavailable\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"unavailable\" 一詞最接近下列何者的意思?",
+        "options": [
+          "inaccessible",
+          "unnecessary",
+          "unreliable",
+          "inexpensive"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"unavailable\" 指系統「無法使用、無法連線」，與 \"inaccessible\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "letter",
+        "title": "Letter",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Rosalind Kemp, Property Manager, Bellhaven Property Management"
+          },
+          {
+            "label": "To:",
+            "value": "Mr. Andre Silva, Unit 4B, Bellhaven Court Apartments"
+          },
+          {
+            "label": "Date:",
+            "value": "June 5"
+          }
+        ],
+        "paragraphs": [
+          "Dear Mr. Silva,",
+          "Your current lease for Unit 4B at Bellhaven Court Apartments is due to expire on August 31. We would like to offer you the opportunity to renew for an additional twelve months.",
+          "Due to increased property taxes and maintenance costs, the monthly rent for a renewed lease will be $1,450, an increase of $75 over your current rate. All other lease terms, including the assigned parking space, will remain unchanged.",
+          "If you would like to renew, please sign and return the enclosed renewal agreement by July 15. If we do not receive a response by that date, we will assume you do not intend to renew and will begin advertising the unit for new applicants.",
+          "Sincerely,\nRosalind Kemp\nProperty Manager"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the main purpose of the letter?",
+        "question_zh": "這封信的主要目的為何?",
+        "options": [
+          "To notify a tenant of an eviction",
+          "To offer a tenant the option to renew a lease at a new rate",
+          "To announce a building renovation",
+          "To request a security deposit"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中說明租約即將到期，並提供以新租金續租的機會，因此答案是 (B)。"
+      },
+      {
+        "question_en": "According to the letter, what will the new monthly rent be?",
+        "question_zh": "根據信件內容，新的每月租金將是多少?",
+        "options": [
+          "$75",
+          "$1,375",
+          "$1,450",
+          "$1,525"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第三段提到續約後的每月租金為 $1,450，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What will happen if Mr. Silva does not respond by July 15?",
+        "question_zh": "如果席爾瓦先生在7月15日前沒有回覆，將會發生什麼事?",
+        "options": [
+          "His rent will automatically decrease",
+          "The unit will be advertised to new applicants",
+          "His lease will renew automatically",
+          "He will lose his parking space immediately"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第四段說明若未在期限前回覆，管理公司將視為不續約並開始對外招租，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"enclosed\" in paragraph 4 is closest in meaning to",
+        "question_zh": "第四段中的 \"enclosed\" 一詞最接近下列何者的意思?",
+        "options": [
+          "included",
+          "canceled",
+          "revised",
+          "delayed"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"enclosed\" 指信件中「隨附、附上」的文件，與 \"included\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "purchasing@thimbleandthread.com"
+          },
+          {
+            "label": "To:",
+            "value": "sales@meadowbrook-textiles.com"
+          },
+          {
+            "label": "Subject:",
+            "value": "Request for Updated Fabric Catalog"
+          },
+          {
+            "label": "Date:",
+            "value": "January 27"
+          }
+        ],
+        "paragraphs": [
+          "Dear Meadowbrook Textiles Sales Team,",
+          "We noticed that several fabric patterns listed on your website, including the Harvest Plaid and Coastal Stripe lines, are no longer showing up in the catalog you sent us last October. Could you confirm whether these patterns have been discontinued?",
+          "We would like to place a spring reorder soon and want to be sure we are working from your most current product list and pricing before we finalize our order. If possible, please send an updated catalog with your latest wholesale prices by February 5.",
+          "We have enjoyed working with Meadowbrook Textiles for the past three years and hope to continue our partnership with the new season's order.",
+          "Best regards,\nOlivia Chen\nPurchasing Manager, Thimble & Thread"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "Why did Ms. Chen write the e-mail?",
+        "question_zh": "陳女士為什麼撰寫這封電子郵件?",
+        "options": [
+          "To request an updated catalog before placing an order",
+          "To complain about a late delivery",
+          "To cancel an existing order",
+          "To apply for a wholesale account"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "信中詢問特定花色是否停產，並要求在下訂前取得最新型錄與報價，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the e-mail, by when would Ms. Chen like to receive the updated catalog?",
+        "question_zh": "根據信件內容，陳女士希望在何時之前收到更新後的型錄?",
+        "options": [
+          "January 27",
+          "February 5",
+          "March 1",
+          "Next October"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到希望在2月5日前收到最新型錄與報價，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What can be inferred about the relationship between Thimble & Thread and Meadowbrook Textiles?",
+        "question_zh": "從信中可以推論出 Thimble & Thread 與 Meadowbrook Textiles 之間的關係為何?",
+        "options": [
+          "They are competitors",
+          "They have worked together for three years",
+          "They have never done business before",
+          "Their partnership recently ended"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第四段提到雙方已合作三年，並希望繼續合作，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"discontinued\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"discontinued\" 一詞最接近下列何者的意思?",
+        "options": [
+          "no longer produced",
+          "temporarily unavailable",
+          "recently redesigned",
+          "currently on sale"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"discontinued\" 指產品「已停止生產」，與 \"no longer produced\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "ad",
+        "title": "Advertisement",
+        "meta": [],
+        "paragraphs": [
+          "Ironclad Fitness Studio — New Year, New Member Special",
+          "Join Ironclad Fitness Studio before January 31 and pay no enrollment fee, a savings of $99. New members also receive a complimentary session with one of our certified personal trainers to help design a workout plan suited to their goals.",
+          "Our downtown location features a full weight room, twenty group fitness classes per week, and a heated indoor pool. Members with an annual plan can also reserve the private training studio for four hours per month at no extra charge.",
+          "Monthly memberships start at $45, or save 15 percent by choosing an annual plan. Stop by our front desk at 210 Harmon Street or visit ironcladfitness-example.com to sign up."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the main purpose of the advertisement?",
+        "question_zh": "這則廣告的主要目的為何?",
+        "options": [
+          "To announce a gym closing",
+          "To promote a new membership special",
+          "To advertise a job opening for a trainer",
+          "To recruit volunteers for a charity event"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "廣告內容在宣傳健身房限時的新會員優惠方案，因此答案是 (B)。"
+      },
+      {
+        "question_en": "According to the advertisement, what do new members receive at no extra cost?",
+        "question_zh": "根據廣告內容，新會員可免費獲得什麼?",
+        "options": [
+          "A free session with a personal trainer",
+          "A free gym bag",
+          "Unlimited guest passes",
+          "A discount on swimwear"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "第二段提到新會員可獲得一次免費的私人教練課程，因此答案是 (A)。"
+      },
+      {
+        "question_en": "Who is able to reserve the private training studio at no extra charge?",
+        "question_zh": "誰可以免費預約私人訓練室?",
+        "options": [
+          "Any first-time visitor",
+          "Members with an annual plan",
+          "Only certified trainers",
+          "Members who pay the enrollment fee"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到擁有年繳方案的會員每月可免費使用私人訓練室四小時，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"complimentary\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"complimentary\" 一詞最接近下列何者的意思?",
+        "options": [
+          "free of charge",
+          "highly rated",
+          "limited in time",
+          "physically demanding"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"complimentary session\" 指「免費贈送的課程」，與 \"free of charge\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "ad",
+        "title": "Job Posting",
+        "meta": [
+          {
+            "label": "Position:",
+            "value": "Quality Assurance Tester"
+          },
+          {
+            "label": "Location:",
+            "value": "Meridian Software Solutions, Austin, Texas"
+          }
+        ],
+        "paragraphs": [
+          "Meridian Software Solutions is looking for a detail-oriented Quality Assurance Tester to join our growing product team.",
+          "The successful candidate will design and execute test cases for new application features, document software defects, and work closely with developers to verify that fixes resolve reported issues before each release.",
+          "Candidates should have at least two years of experience in software testing, familiarity with bug-tracking tools such as Jira, and a working knowledge of basic SQL queries. Experience with automated testing tools is preferred but not required.",
+          "This is a full-time, on-site position with a starting salary range of $58,000 to $68,000, depending on experience. Interested candidates should send a resume and cover letter to careers@meridiansoftware-example.com by March 20."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the main purpose of the advertisement?",
+        "question_zh": "這則廣告的主要目的為何?",
+        "options": [
+          "To advertise a job opening",
+          "To announce a new software release",
+          "To promote a training course",
+          "To recruit customers for a beta test"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "廣告內容在說明公司正在招募品質保證測試人員的職缺，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the advertisement, how many years of testing experience are required?",
+        "question_zh": "根據廣告內容，應徵者至少需要幾年的測試經驗?",
+        "options": [
+          "No experience is required",
+          "At least one year",
+          "At least two years",
+          "At least five years"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第三段提到應徵者須具備至少兩年的軟體測試經驗，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What is suggested about experience with automated testing tools?",
+        "question_zh": "關於自動化測試工具的經驗，廣告中暗示了什麼?",
+        "options": [
+          "It is mandatory for all applicants",
+          "It is preferred but not required",
+          "It disqualifies a candidate",
+          "It is only needed for senior positions"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到具備自動化測試工具經驗為加分項目，但非必要條件，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"verify\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"verify\" 一詞最接近下列何者的意思?",
+        "options": [
+          "confirm",
+          "ignore",
+          "design",
+          "delay"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"verify that fixes resolve reported issues\" 指「確認」修復是否有效，與 \"confirm\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "ad",
+        "title": "Advertisement",
+        "meta": [],
+        "paragraphs": [
+          "Foothill Harvest Food & Wine Festival — October 10-11",
+          "Now in its eighth year, the Foothill Harvest Food & Wine Festival brings together more than sixty regional restaurants, wineries, and craft breweries for a weekend celebration of local flavor at Foothill Park.",
+          "This year's festival will feature cooking demonstrations from three award-winning chefs, a farmers' market pavilion, and live music each evening. A limited number of VIP passes include early entry, a reserved seating area, and a private tasting session with festival vendors.",
+          "General admission tickets are $25 in advance or $35 at the gate; children under twelve are admitted free. VIP passes are $95 and are expected to sell out, so early purchase is recommended. Tickets are available at foothillharvestfest-example.com."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the advertisement?",
+        "question_zh": "這則廣告的目的為何?",
+        "options": [
+          "To promote a food and wine festival",
+          "To announce a restaurant closing",
+          "To advertise cooking classes",
+          "To recruit festival vendors"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "廣告內容在宣傳一場美食美酒節，並提供票價資訊，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the advertisement, how much does a VIP pass cost?",
+        "question_zh": "根據廣告內容，VIP通行證的價格為多少?",
+        "options": [
+          "$25",
+          "$35",
+          "$60",
+          "$95"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "第三段提到VIP通行證的價格為 $95，因此答案是 (D)。"
+      },
+      {
+        "question_en": "Why does the advertisement recommend purchasing VIP passes early?",
+        "question_zh": "廣告為什麼建議提早購買VIP通行證?",
+        "options": [
+          "Prices will increase after October 10",
+          "The passes are expected to sell out",
+          "Only online orders are accepted after the festival begins",
+          "VIP passes are only sold at the gate"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到VIP通行證數量有限，預期將會售罄，因此建議提早購買，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"feature\" in paragraph 3 is closest in meaning to",
+        "question_zh": "第三段中的 \"feature\" 一詞最接近下列何者的意思?",
+        "options": [
+          "include",
+          "remove",
+          "replace",
+          "delay"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "此處 \"feature\" 作動詞，指活動「包含、以...為特色」，與 \"include\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "ad",
+        "title": "Advertisement",
+        "meta": [],
+        "paragraphs": [
+          "Retail Space for Lease — Copperfield Marketplace",
+          "A 1,200-square-foot storefront is now available for lease at Copperfield Marketplace, a busy shopping center located at the corner of Delacroix Avenue and Ninth Street.",
+          "The space was most recently occupied by a boutique clothing store and includes a large display window, a small stockroom, and a shared loading dock at the rear of the building. The unit is situated between a popular bakery and a pet supply shop, both of which draw steady foot traffic throughout the week.",
+          "Rent is $3,200 per month, including common area maintenance fees. Interested tenants should contact the leasing office to schedule a walkthrough before the space is listed publicly next month."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is being advertised?",
+        "question_zh": "這則廣告在宣傳什麼?",
+        "options": [
+          "A retail space available for lease",
+          "A clothing store's closing sale",
+          "A new bakery opening",
+          "A shopping center's grand opening"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "廣告開頭即說明有一處零售空間可供出租，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the advertisement, what is the size of the available space?",
+        "question_zh": "根據廣告內容，這個可租用空間的坪數大小為何?",
+        "options": [
+          "800 square feet",
+          "1,200 square feet",
+          "3,200 square feet",
+          "It is not mentioned"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第二段提到該店面面積為1,200平方英尺，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What can be inferred about foot traffic near the available space?",
+        "question_zh": "從廣告中可以推論出該空間附近的人潮狀況為何?",
+        "options": [
+          "It is generally low throughout the year",
+          "It is likely to be strong due to nearby businesses",
+          "It only increases on weekends",
+          "It has declined since the clothing store closed"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到該空間位於人氣麵包店與寵物用品店之間，兩者皆帶來穩定人潮，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"situated\" in paragraph 3 is closest in meaning to",
+        "question_zh": "第三段中的 \"situated\" 一詞最接近下列何者的意思?",
+        "options": [
+          "located",
+          "renovated",
+          "advertised",
+          "reserved"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"situated between\" 指「位於...之間」，與 \"located\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "ad",
+        "title": "Advertisement",
+        "meta": [],
+        "paragraphs": [
+          "ClearView Home Security — See Everything, Anywhere",
+          "The new ClearView 360 outdoor camera delivers crisp 4K video, night vision up to 30 meters, and two-way audio so you can speak with visitors directly from your phone.",
+          "Unlike many competing models, the ClearView 360 requires no monthly subscription for the first year; recorded footage is stored locally on an included memory card. After the first year, customers may choose to add cloud storage for $4.99 a month.",
+          "Order by August 15 and receive a free outdoor mounting kit, a $20 value. Visit clearviewhome-example.com or your nearest Bramwell Electronics store to learn more."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is being advertised?",
+        "question_zh": "這則廣告在宣傳什麼產品?",
+        "options": [
+          "A home security camera",
+          "A mobile phone plan",
+          "A memory card storage service",
+          "A home renovation service"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "廣告內容在介紹一款戶外居家安全攝影機的功能與優惠，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the advertisement, how far can the camera's night vision reach?",
+        "question_zh": "根據廣告內容，這款攝影機的夜視距離可達多遠?",
+        "options": [
+          "4 meters",
+          "20 meters",
+          "30 meters",
+          "It is not mentioned"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第二段提到夜視距離可達30公尺，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What is implied about many competing camera models?",
+        "question_zh": "廣告暗示許多競爭品牌的攝影機產品有什麼特點?",
+        "options": [
+          "They require a monthly subscription",
+          "They do not offer night vision",
+          "They are more expensive to purchase",
+          "They cannot be mounted outdoors"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "第三段提到「與許多競爭機型不同」，該產品第一年不需訂閱月費，暗示其他品牌多半需要月費，因此答案是 (A)。"
+      },
+      {
+        "question_en": "The word \"crisp\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"crisp\" 一詞最接近下列何者的意思?",
+        "options": [
+          "clear",
+          "expensive",
+          "wireless",
+          "outdated"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"crisp 4K video\" 指「清晰銳利的畫質」，與 \"clear\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "ad",
+        "title": "Job Posting",
+        "meta": [
+          {
+            "label": "Position:",
+            "value": "Veterinary Technician"
+          },
+          {
+            "label": "Location:",
+            "value": "Willowmere Animal Hospital, Eugene"
+          }
+        ],
+        "paragraphs": [
+          "Willowmere Animal Hospital is seeking a licensed Veterinary Technician to join our busy small-animal practice.",
+          "Responsibilities include assisting veterinarians during examinations and surgeries, administering medications, taking X-rays, and educating pet owners on post-operative care.",
+          "Applicants must hold a current veterinary technician license and have at least one year of clinical experience; experience with dental cleanings is a plus. This position requires occasional Saturday shifts.",
+          "We offer a starting wage of $22 to $26 per hour, health insurance, and a discount on veterinary services for employees' own pets. To apply, submit an application through our website at willowmereanimal-example.com."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the advertisement?",
+        "question_zh": "這則廣告的目的為何?",
+        "options": [
+          "To advertise a job opening for a veterinary technician",
+          "To promote a new pet insurance plan",
+          "To announce the hospital's grand opening",
+          "To recruit volunteers for animal rescue"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "廣告內容在說明動物醫院正在招募合格的獸醫技術員，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the advertisement, what is required of all applicants?",
+        "question_zh": "根據廣告內容，所有應徵者都必須具備什麼條件?",
+        "options": [
+          "A current veterinary technician license",
+          "Experience performing surgery independently",
+          "A university degree in biology",
+          "Prior management experience"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "第三段提到應徵者必須持有現行的獸醫技術員執照，因此答案是 (A)。"
+      },
+      {
+        "question_en": "What can be inferred about the work schedule for this position?",
+        "question_zh": "從廣告中可以推論出這份工作的排班方式為何?",
+        "options": [
+          "It only involves weekday shifts",
+          "It sometimes requires working on Saturdays",
+          "It is a part-time position only",
+          "It requires working overnight every day"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到此職位須不定期於週六排班，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"administering\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"administering\" 一詞最接近下列何者的意思?",
+        "options": [
+          "giving",
+          "monitoring",
+          "prescribing",
+          "refusing"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"administering medications\" 指「給予、施予藥物」，與 \"giving\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "ad",
+        "title": "Advertisement",
+        "meta": [],
+        "paragraphs": [
+          "Pemberton Books Closing-Down Clearance Sale",
+          "After eighteen years serving the Pemberton neighborhood, Pemberton Books will permanently close its doors on November 30. Everything in the store, including new releases, rare first editions, and gift items, is now discounted.",
+          "Discounts begin at 30 percent off and will increase each week as the closing date approaches, reaching up to 70 percent off during the final week. Store shelving, reading chairs, and display cases are also for sale.",
+          "The store will remain open seven days a week until closing. Store credit and gift cards must be used by November 25; no refunds will be issued after that date."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the advertisement?",
+        "question_zh": "這則廣告的目的為何?",
+        "options": [
+          "To announce a store's closing sale",
+          "To promote a new book release",
+          "To advertise a store's grand opening",
+          "To recruit new booksellers"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "廣告內容在宣布書店即將永久歇業並進行清倉特賣，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the advertisement, what is the maximum discount available?",
+        "question_zh": "根據廣告內容，最高的折扣為多少?",
+        "options": [
+          "30 percent off",
+          "50 percent off",
+          "70 percent off",
+          "100 percent off"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第三段提到最後一週折扣最高可達70%，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What can be inferred from the advertisement?",
+        "question_zh": "從這則廣告可以推論出什麼?",
+        "options": [
+          "Discounts will be the same every week",
+          "Customers who wait longer to shop may get better discounts",
+          "The store will reopen at a new location",
+          "Gift cards can be used indefinitely"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到折扣會隨著歇業日期接近而逐週提高，因此越晚採購折扣可能越高，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"permanently\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"permanently\" 一詞最接近下列何者的意思?",
+        "options": [
+          "temporarily",
+          "forever",
+          "occasionally",
+          "gradually"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "\"permanently close\" 指「永久性地關閉」，與 \"forever\" 意思最接近，因此答案是 (B)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Notice",
+        "meta": [
+          {
+            "label": "Date Posted:",
+            "value": "March 3"
+          }
+        ],
+        "paragraphs": [
+          "This notice is to inform all tenants of the Kingsley Office Tower that the north elevator bank (elevators 1 through 3) will be out of service for scheduled maintenance from March 8 through March 10.",
+          "During this period, tenants and visitors should use the south elevator bank or the stairwell located near the main lobby. Building management recommends allowing extra time when traveling to and from upper floors, particularly during peak morning and evening hours.",
+          "Deliveries requiring elevator access, including furniture and heavy equipment, should be scheduled for after 6:00 p.m. and coordinated with the building's front desk in advance.",
+          "We apologize for any inconvenience and thank you for your patience while we complete this necessary upgrade."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of this notice?",
+        "question_zh": "這則公告的目的為何?",
+        "options": [
+          "To inform tenants of elevator maintenance",
+          "To announce a new tenant move-in",
+          "To introduce a new front desk policy",
+          "To advertise office space for lease"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "公告開頭即說明北側電梯將進行例行維護保養，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the notice, from when to when will the north elevators be out of service?",
+        "question_zh": "根據公告內容，北側電梯將於何時停止使用?",
+        "options": [
+          "March 3 to March 8",
+          "March 8 to March 10",
+          "March 10 to March 20",
+          "It is not mentioned"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第一段提到北側電梯將於3月8日至3月10日停止使用，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What should someone do to deliver heavy equipment during this period?",
+        "question_zh": "在這段期間，若要運送重型設備應該怎麼做?",
+        "options": [
+          "Use the south elevator bank only",
+          "Schedule it after 6:00 p.m. with the front desk",
+          "Wait until March 10 to begin",
+          "Carry it up the stairwell instead"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到運送重型設備應安排在晚上6點後，並事先與櫃檯協調，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"peak\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"peak\" 一詞最接近下列何者的意思?",
+        "options": [
+          "busiest",
+          "quietest",
+          "earliest",
+          "final"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"peak morning and evening hours\" 指「最繁忙的尖峰時段」，與 \"busiest\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Notice",
+        "meta": [
+          {
+            "label": "Date Posted:",
+            "value": "July 8"
+          },
+          {
+            "label": "Effective:",
+            "value": "July 15"
+          }
+        ],
+        "paragraphs": [
+          "Please be advised that the west parking garage at Fairview Medical Center will be closed for structural repairs beginning July 15 and continuing through approximately August 5.",
+          "Patients and visitors should use the east parking garage or the surface lot on Redwood Avenue during this time. A free shuttle will run every fifteen minutes between the east garage and the main hospital entrance.",
+          "Employees who normally park in the west garage will be reassigned temporary spaces in the surface lot; parking permits will not need to be replaced, as garage access gates will accept the same permit at the alternate location.",
+          "Questions about parking arrangements during the closure should be directed to Hospital Facilities Management."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of this notice?",
+        "question_zh": "這則公告的目的為何?",
+        "options": [
+          "To announce new hospital visiting hours",
+          "To inform readers of a parking garage closure",
+          "To advertise a new shuttle service company",
+          "To request donations for hospital repairs"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "公告說明西側停車場將因結構維修而暫時關閉，因此答案是 (B)。"
+      },
+      {
+        "question_en": "According to the notice, how often will the shuttle run?",
+        "question_zh": "根據公告內容，接駁車多久發車一次?",
+        "options": [
+          "Every 5 minutes",
+          "Every 15 minutes",
+          "Every 30 minutes",
+          "Once an hour"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第二段提到接駁車每15分鐘發車一次，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What is true about employees' parking permits during the closure?",
+        "question_zh": "在停車場關閉期間，員工的停車許可證狀況為何?",
+        "options": [
+          "They must be replaced with new permits",
+          "They will still work at the alternate location",
+          "They will be temporarily suspended",
+          "They must be returned to Facilities Management"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到員工的許可證不需更換，仍可在替代地點的門禁使用，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"reassigned\" in paragraph 3 is closest in meaning to",
+        "question_zh": "第三段中的 \"reassigned\" 一詞最接近下列何者的意思?",
+        "options": [
+          "given new",
+          "denied",
+          "canceled",
+          "refunded"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"reassigned temporary spaces\" 指員工被「重新分配」到臨時車位，與 \"given new\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Press Release",
+        "meta": [],
+        "paragraphs": [
+          "Bramwell Robotics Secures $40 Million in Series C Funding",
+          "Bramwell Robotics, a maker of automated inventory-scanning drones for warehouses, announced today that it has raised $40 million in Series C funding led by Highcastle Ventures.",
+          "The company plans to use the funding to triple the size of its engineering team and expand manufacturing of its flagship drone, the ScanHawk, which is currently used in more than 200 distribution centers across North America.",
+          "\"This investment allows us to meet growing demand from retailers who want faster, more accurate inventory counts,\" said Bramwell Robotics co-founder and CEO Talia Osei. The company expects to open a second manufacturing facility in Ohio by next spring.",
+          "Bramwell Robotics was founded five years ago and has raised a total of $68 million to date."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the press release?",
+        "question_zh": "這則新聞稿的目的為何?",
+        "options": [
+          "To announce a company's new funding round",
+          "To announce a company's bankruptcy",
+          "To recall a defective product",
+          "To announce a merger between two companies"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "新聞稿主要在宣布公司完成一輪新的募資，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the press release, how much funding did Bramwell Robotics raise in this round?",
+        "question_zh": "根據新聞稿內容，Bramwell Robotics 在這一輪募資中籌得多少資金?",
+        "options": [
+          "$20 million",
+          "$40 million",
+          "$68 million",
+          "$200 million"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第二段提到公司在本輪募資中籌得4,000萬美元，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What does the company plan to do with the new funding?",
+        "question_zh": "公司計劃如何運用這筆新的資金?",
+        "options": [
+          "Sell its manufacturing facility",
+          "Expand its engineering team and manufacturing capacity",
+          "Reduce the number of distribution centers it serves",
+          "Merge with Highcastle Ventures"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到資金將用於擴大工程團隊並增加旗艦產品的產能，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"flagship\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"flagship\" 一詞最接近下列何者的意思?",
+        "options": [
+          "leading",
+          "inexpensive",
+          "experimental",
+          "discontinued"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"flagship drone\" 指公司「主力、旗艦級」的產品，與 \"leading\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Public Notice",
+        "meta": [],
+        "paragraphs": [
+          "Public Notice: Overlook Bridge to Close for Repainting",
+          "The Department of Transportation announces that Overlook Bridge, connecting Route 9 and Meridian Road, will be closed to all vehicle traffic from 9:00 p.m. on Friday, September 11, through 5:00 a.m. on Monday, September 14, for repainting and structural inspection.",
+          "Drivers should use the detour route via Route 9 to Harmon Parkway to Meridian Road, which adds approximately eight minutes to the normal travel time. Pedestrian and bicycle access across the bridge will remain open throughout the closure.",
+          "The closure was originally scheduled for August but was postponed due to weather conditions. Officials note that further delays are possible if heavy rain returns before or during the scheduled work.",
+          "Updates will be posted on the Department of Transportation's website and social media accounts."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of this public notice?",
+        "question_zh": "這則公告的目的為何?",
+        "options": [
+          "To inform the public of a bridge closure",
+          "To announce a new speed limit",
+          "To request public comments on a construction project",
+          "To announce the opening of a new bridge"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "公告主要在告知民眾一座橋樑將因重新粉刷及結構檢查而封閉，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the notice, who may still cross the bridge during the closure?",
+        "question_zh": "根據公告內容，在封閉期間誰仍可通過該橋樑?",
+        "options": [
+          "Delivery trucks only",
+          "Pedestrians and cyclists",
+          "Emergency vehicles only",
+          "No one may cross"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到行人與自行車在封閉期間仍可通行，因此答案是 (B)。"
+      },
+      {
+        "question_en": "Why was the closure originally postponed?",
+        "question_zh": "這次封閉工程原本為什麼被延後?",
+        "options": [
+          "Due to a lack of funding",
+          "Due to weather conditions",
+          "Due to a scheduling conflict with another project",
+          "Due to a shortage of workers"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第四段提到工程原訂於8月進行，因天候因素而延後，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"postponed\" in paragraph 4 is closest in meaning to",
+        "question_zh": "第四段中的 \"postponed\" 一詞最接近下列何者的意思?",
+        "options": [
+          "delayed",
+          "canceled",
+          "approved",
+          "completed"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"postponed\" 意指「延後」，與 \"delayed\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Company Announcement",
+        "meta": [],
+        "paragraphs": [
+          "Halcyon Freight Appoints New Chief Financial Officer",
+          "Halcyon Freight Corporation announced today that Vivian Marsh will become the company's new Chief Financial Officer, effective November 1, succeeding Gerald Boone, who is retiring after eleven years in the role.",
+          "Ms. Marsh joins Halcyon Freight from Continental Rail Systems, where she served as Vice President of Finance for six years and led the company's transition to a new financial reporting system.",
+          "\"Vivian's experience in the logistics industry and her track record of improving financial operations make her an excellent fit for Halcyon Freight as we continue to expand our regional routes,\" said CEO Daniel Voss.",
+          "Mr. Boone will remain with the company in an advisory capacity through the end of the year to ensure a smooth transition."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the announcement mainly about?",
+        "question_zh": "這則公告主要在說明什麼?",
+        "options": [
+          "A company's new CFO appointment",
+          "A merger between two companies",
+          "A new regional shipping route",
+          "A company's annual financial results"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "公告主要在宣布公司任命新任財務長，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the announcement, when will Ms. Marsh's appointment take effect?",
+        "question_zh": "根據公告內容，馬許女士何時正式上任?",
+        "options": [
+          "Immediately",
+          "November 1",
+          "At the end of the year",
+          "After eleven years"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第二段提到她將於11月1日正式生效上任，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What will Mr. Boone do after November 1?",
+        "question_zh": "波恩先生在11月1日之後將會做什麼?",
+        "options": [
+          "Leave the company immediately",
+          "Remain in an advisory role through the end of the year",
+          "Move to Continental Rail Systems",
+          "Become the new CEO"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第四段提到波恩先生將以顧問身分留任至年底，協助交接，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"succeeding\" in paragraph 1 is closest in meaning to",
+        "question_zh": "第一段中的 \"succeeding\" 一詞最接近下列何者的意思?",
+        "options": [
+          "replacing",
+          "assisting",
+          "opposing",
+          "promoting"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"succeeding Gerald Boone\" 指「接替」波恩先生的職位，與 \"replacing\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Notice",
+        "meta": [
+          {
+            "label": "Date Posted:",
+            "value": "February 20"
+          },
+          {
+            "label": "Effective:",
+            "value": "March 1"
+          }
+        ],
+        "paragraphs": [
+          "Effective March 1, all visitors to Thornwell Business Center will be required to sign in electronically at the lobby kiosk and display a printed or digital visitor badge at all times while in the building.",
+          "This change replaces the paper sign-in sheet previously kept at the security desk. Visitors will need to provide a valid photo ID, which will be scanned and returned immediately; no identification will be retained by building security.",
+          "Tenants are asked to notify the front desk at least fifteen minutes before a visitor's scheduled arrival so that a badge can be prepared in advance and delays at check-in can be minimized.",
+          "Employees of tenant companies will continue to use their existing key-card access and are not affected by this change."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of this notice?",
+        "question_zh": "這則公告的目的為何?",
+        "options": [
+          "To inform readers of a new visitor sign-in policy",
+          "To announce a building closure",
+          "To introduce a new security company",
+          "To request tenants to update their key cards"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "公告主要在說明新的訪客電子簽到制度即將實施，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the notice, what must visitors provide at the kiosk?",
+        "question_zh": "根據公告內容，訪客在電子櫃檯必須出示什麼?",
+        "options": [
+          "A credit card",
+          "A valid photo ID",
+          "A signed lease agreement",
+          "A key card"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第二段提到訪客須出示有效的附照片證件供掃描，因此答案是 (B)。"
+      },
+      {
+        "question_en": "Who is NOT affected by this change?",
+        "question_zh": "下列何者「不會」受到此項變更影響?",
+        "options": [
+          "First-time visitors",
+          "Delivery personnel",
+          "Employees of tenant companies",
+          "Building security staff"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第四段提到租戶員工仍使用原有的門禁卡，不受此變更影響，因此答案是 (C)。"
+      },
+      {
+        "question_en": "The word \"retained\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"retained\" 一詞最接近下列何者的意思?",
+        "options": [
+          "kept",
+          "damaged",
+          "copied",
+          "rejected"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"no identification will be retained\" 指證件不會被「留存、保留」，與 \"kept\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Press Release",
+        "meta": [],
+        "paragraphs": [
+          "Cobalt Hardware to Open Fifth Location in Millbrook Saturday",
+          "Cobalt Hardware will celebrate the grand opening of its fifth store location, at 88 Milltown Road in Millbrook, this Saturday, September 19, at 9:00 a.m.",
+          "The 15,000-square-foot store will carry the company's full range of tools, lumber, and gardening supplies, along with a new paint-mixing station and an expanded rental department for power equipment.",
+          "The first 100 customers through the door on opening day will receive a free tote bag filled with sample products, and all customers can enter a raffle for a $500 shopping spree. Local landscaping company Green Acres Design will also be on-site offering free garden consultations.",
+          "Cobalt Hardware was founded eighteen years ago in Millbrook and now operates stores in four other towns across the region."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the press release mainly about?",
+        "question_zh": "這則新聞稿主要在說明什麼?",
+        "options": [
+          "The grand opening of a new store location",
+          "The closing of a hardware store",
+          "A recall of gardening equipment",
+          "A change in store operating hours"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "新聞稿主要在宣布五金行第五家分店即將盛大開幕，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the press release, what will the first 100 customers receive?",
+        "question_zh": "根據新聞稿內容，前100名顧客可以獲得什麼?",
+        "options": [
+          "A $500 shopping spree",
+          "A free tote bag with sample products",
+          "Free garden consultations",
+          "A discount coupon for lumber"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到前100名進店的顧客將獲得裝有樣品的免費托特包，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What can be inferred about Cobalt Hardware?",
+        "question_zh": "從新聞稿中可以推論出關於 Cobalt Hardware 的什麼訊息?",
+        "options": [
+          "It has struggled to grow since it was founded",
+          "It has expanded from its original location over time",
+          "It plans to close its original store",
+          "It only sells gardening supplies"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第四段提到公司18年前創立於Millbrook，如今已在其他四個城鎮設有分店，顯示逐漸擴張，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"expanded\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"expanded\" 一詞最接近下列何者的意思?",
+        "options": [
+          "enlarged",
+          "canceled",
+          "relocated",
+          "shortened"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"expanded rental department\" 指「擴大後的」租賃部門，與 \"enlarged\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Notice",
+        "meta": [
+          {
+            "label": "Date Posted:",
+            "value": "April 10"
+          }
+        ],
+        "paragraphs": [
+          "The Ashford Public Library will operate on a reduced schedule beginning April 21 while the second-floor reading rooms undergo renovation.",
+          "During the renovation, which is expected to last through mid-June, the library will be open Tuesday through Saturday from 10:00 a.m. to 5:00 p.m. and will remain closed on Sundays and Mondays. The children's section and computer lab on the first floor will remain open during regular hours throughout the project.",
+          "Patrons with items on hold will still be able to pick them up at the first-floor circulation desk. Book drop returns will not be affected and will continue to be collected daily.",
+          "The library apologizes for any inconvenience and looks forward to unveiling the newly renovated reading rooms this summer."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of this notice?",
+        "question_zh": "這則公告的目的為何?",
+        "options": [
+          "To inform patrons of temporarily reduced library hours",
+          "To announce the library's permanent closing",
+          "To introduce new library membership cards",
+          "To request donations for a renovation project"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "公告說明因二樓閱覽室整修，圖書館將暫時縮短開放時間，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the notice, on which days will the library be closed?",
+        "question_zh": "根據公告內容，圖書館在哪些日子將休館?",
+        "options": [
+          "Tuesday and Wednesday",
+          "Saturday and Sunday",
+          "Sunday and Monday",
+          "The library will not close at all"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第二段提到圖書館將於週日及週一休館，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What will NOT be affected by the renovation?",
+        "question_zh": "下列何者「不會」受到整修工程影響?",
+        "options": [
+          "The second-floor reading rooms",
+          "The book drop return service",
+          "The library's Sunday hours",
+          "The renovation completion date"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到還書箱的收件服務不受影響，仍照常每日收取，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"unveiling\" in paragraph 4 is closest in meaning to",
+        "question_zh": "第四段中的 \"unveiling\" 一詞最接近下列何者的意思?",
+        "options": [
+          "revealing",
+          "postponing",
+          "canceling",
+          "reducing"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"unveiling the newly renovated reading rooms\" 指「揭曉、公開展示」整修後的空間，與 \"revealing\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Invoice",
+        "meta": [
+          {
+            "label": "Invoice No.:",
+            "value": "INV-45213"
+          },
+          {
+            "label": "Date:",
+            "value": "June 18"
+          },
+          {
+            "label": "Bill To:",
+            "value": "Larkspur Legal Group"
+          },
+          {
+            "label": "Payment Terms:",
+            "value": "Net 15"
+          }
+        ],
+        "paragraphs": [
+          "Please find below the itemized charges for office supply order #45213, shipped on June 17 by Union Square Office Supply. Payment is due within 15 days of the invoice date.",
+          "Items: 10 boxes of letter-size copy paper ($42.00), 25 black ink cartridges ($375.00), 5 ergonomic keyboard trays ($260.00), and 1 heavy-duty paper shredder ($189.00). Subtotal: $866.00. Shipping fee: $24.00. Total due: $890.00.",
+          "A late fee of 1.5 percent per month will be applied to any unpaid balance after the due date. Please remit payment by check or bank transfer using the account information provided on our website.",
+          "For questions about this invoice, contact our billing department at billing@unionsquareoffice-example.com."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of this document?",
+        "question_zh": "這份文件的目的為何?",
+        "options": [
+          "To bill a client for supplies that were ordered",
+          "To request a refund for damaged goods",
+          "To confirm a change in delivery address",
+          "To apply for a new business account"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "文件內容為列出訂單品項並向客戶請款，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the invoice, what is the total amount due?",
+        "question_zh": "根據發票內容，應付總金額為多少?",
+        "options": [
+          "$189.00",
+          "$260.00",
+          "$866.00",
+          "$890.00"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "第二段提到含運費在內，應付總金額為 $890.00，因此答案是 (D)。"
+      },
+      {
+        "question_en": "What will happen if the balance is not paid by the due date?",
+        "question_zh": "如果未在到期日前付清款項，將會發生什麼事?",
+        "options": [
+          "The order will be canceled",
+          "A late fee of 1.5 percent per month will apply",
+          "The shipment will be returned",
+          "The account will be closed immediately"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到逾期未付將按月加收1.5%的滯納金，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"remit\" in paragraph 3 is closest in meaning to",
+        "question_zh": "第三段中的 \"remit\" 一詞最接近下列何者的意思?",
+        "options": [
+          "send",
+          "request",
+          "delay",
+          "dispute"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"remit payment\" 指「寄送、繳納」款項，與 \"send\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Registration Form",
+        "meta": [
+          {
+            "label": "Event:",
+            "value": "Effective Leadership Workshop Series"
+          },
+          {
+            "label": "Date:",
+            "value": "October 8-9"
+          },
+          {
+            "label": "Location:",
+            "value": "Cedarview Conference Center, Room 204"
+          },
+          {
+            "label": "Registration Deadline:",
+            "value": "September 25"
+          }
+        ],
+        "paragraphs": [
+          "Complete the form below to register for the Effective Leadership Workshop Series. Registration includes all workshop materials, a working lunch each day, and a certificate of completion.",
+          "Two tracks are offered: the New Manager Track, designed for employees who have supervised staff for fewer than two years, and the Senior Leader Track, designed for department heads and directors. Participants should select only one track.",
+          "The registration fee is $175 for the New Manager Track and $225 for the Senior Leader Track. Group discounts of 10 percent are available for organizations registering four or more employees at the same time.",
+          "Space is limited to 40 participants per track. Registrations received after September 25 will be added to a waiting list."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of this form?",
+        "question_zh": "這份表格的目的為何?",
+        "options": [
+          "To register participants for a leadership workshop",
+          "To apply for a management position",
+          "To evaluate a completed training program",
+          "To request a refund for a canceled workshop"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "表格內容用於報名參加領導力工作坊系列課程，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the form, how much is the registration fee for the Senior Leader Track?",
+        "question_zh": "根據表格內容，資深領導者組別的報名費為多少?",
+        "options": [
+          "$40",
+          "$175",
+          "$225",
+          "$400"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第三段提到資深領導者組別的報名費為 $225，因此答案是 (C)。"
+      },
+      {
+        "question_en": "Who should register for the New Manager Track?",
+        "question_zh": "什麼樣的人應該報名新任主管組別?",
+        "options": [
+          "Employees who have supervised staff for fewer than two years",
+          "Department heads and directors only",
+          "Anyone registering four or more people",
+          "Employees with no supervisory experience"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "第二段提到新任主管組別適合督導年資少於兩年的員工，因此答案是 (A)。"
+      },
+      {
+        "question_en": "The word \"limited\" in paragraph 4 is closest in meaning to",
+        "question_zh": "第四段中的 \"limited\" 一詞最接近下列何者的意思?",
+        "options": [
+          "restricted",
+          "unlimited",
+          "canceled",
+          "discounted"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"space is limited\" 指名額「受到限制」，與 \"restricted\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Order Confirmation",
+        "meta": [
+          {
+            "label": "Order No.:",
+            "value": "OC-91076"
+          },
+          {
+            "label": "Customer:",
+            "value": "Bellmont School District"
+          },
+          {
+            "label": "Date:",
+            "value": "February 9"
+          },
+          {
+            "label": "Sales Rep:",
+            "value": "Tariq Osman"
+          }
+        ],
+        "paragraphs": [
+          "Thank you for your order. Because several of the tablets you ordered are currently on backorder from the manufacturer, your order will be shipped in two separate batches rather than as a single delivery.",
+          "The first batch, containing 40 laptop carts and 100 protective tablet cases, will ship by February 14. The second batch, containing 150 classroom tablets, is expected to ship by March 3 once the manufacturer's supply is replenished.",
+          "You will not be charged for either batch until it ships, and shipping charges will be waived for the second batch since the delay was on our end. A tracking number will be e-mailed to you as each batch leaves our warehouse.",
+          "If you have any questions about this order, please contact your sales representative directly."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of this document?",
+        "question_zh": "這份文件的目的為何?",
+        "options": [
+          "To confirm order details and explain a split shipment",
+          "To cancel a previous order",
+          "To request payment in advance",
+          "To apologize for a billing error"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "文件說明訂單將分兩批出貨的原因與時程，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the confirmation, when is the second batch expected to ship?",
+        "question_zh": "根據訂單確認內容，第二批貨物預計何時出貨?",
+        "options": [
+          "February 9",
+          "February 14",
+          "March 3",
+          "It will not ship"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第二段提到第二批商品預計於3月3日出貨，因此答案是 (C)。"
+      },
+      {
+        "question_en": "Why will shipping charges be waived for the second batch?",
+        "question_zh": "為什麼第二批貨物的運費將被免除?",
+        "options": [
+          "The customer requested a discount",
+          "The delay was the seller's responsibility",
+          "The batch contains fewer items",
+          "The customer paid in advance"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到因延遲責任在賣方，因此第二批運費將被免除，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"replenished\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"replenished\" 一詞最接近下列何者的意思?",
+        "options": [
+          "restocked",
+          "canceled",
+          "inspected",
+          "reduced"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"once the manufacturer's supply is replenished\" 指供應「重新補足」，與 \"restocked\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Membership Application",
+        "meta": [
+          {
+            "label": "Facility:",
+            "value": "Junction Coworking Hub"
+          },
+          {
+            "label": "Location:",
+            "value": "88 Foundry Lane, Suite 100"
+          },
+          {
+            "label": "Application Processing Time:",
+            "value": "3 business days"
+          }
+        ],
+        "paragraphs": [
+          "Complete this application to apply for membership at Junction Coworking Hub. New members must provide a valid government-issued ID and proof of a registered business or freelance activity.",
+          "Three membership levels are available: Hot Desk ($150/month, any open seating), Dedicated Desk ($275/month, a reserved desk in a shared room), and Private Office ($650/month, a lockable private office for up to three people). All levels include high-speed internet, printing credits, and access to conference rooms by reservation.",
+          "Members may upgrade or downgrade their membership level once per quarter by submitting a change request at least ten business days before their next billing date. A one-time key fob deposit of $25 applies to all levels and is refundable when the fob is returned.",
+          "Completed applications are typically processed within three business days. Approved applicants will receive a welcome e-mail with move-in instructions."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of this form?",
+        "question_zh": "這份表格的目的為何?",
+        "options": [
+          "To apply for membership at a coworking space",
+          "To reserve a conference room for a single meeting",
+          "To cancel an existing membership",
+          "To request a refund of a key fob deposit"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "表格用於申請共享辦公空間的會員資格，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the form, how much does a Dedicated Desk membership cost per month?",
+        "question_zh": "根據表格內容，專屬桌位會員的月費為多少?",
+        "options": [
+          "$25",
+          "$150",
+          "$275",
+          "$650"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第二段提到專屬桌位會員的月費為 $275，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What must a member do to change membership levels?",
+        "question_zh": "會員若想變更會員等級，必須怎麼做?",
+        "options": [
+          "Pay an additional annual fee",
+          "Submit a change request at least ten business days before the next billing date",
+          "Wait until the following calendar year",
+          "Cancel the current membership entirely first"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到需在下次計費日前至少十個工作天提出變更申請，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"refundable\" in paragraph 3 is closest in meaning to",
+        "question_zh": "第三段中的 \"refundable\" 一詞最接近下列何者的意思?",
+        "options": [
+          "returnable",
+          "mandatory",
+          "negotiable",
+          "temporary"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"refundable\" 指押金「可退還」，與 \"returnable\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Travel Expense Reimbursement Form",
+        "meta": [
+          {
+            "label": "Department:",
+            "value": "Sales"
+          },
+          {
+            "label": "Submission Deadline:",
+            "value": "Within 30 days of trip"
+          }
+        ],
+        "paragraphs": [
+          "Use this form to request reimbursement for business travel expenses. Attach original receipts for all expenses over $25; expenses without receipts cannot be reimbursed except for mileage, which is calculated automatically at the standard company rate.",
+          "Eligible expenses include airfare, hotel accommodations, ground transportation, and meals up to a daily limit of $60 per employee. Alcohol and entertainment expenses are not reimbursable under company policy and will be deducted from the requested total.",
+          "Completed forms must be submitted to the Finance Department within 30 days of the trip's end date. Forms submitted after this window will require additional approval from a department director before processing.",
+          "Reimbursements are typically issued within two pay cycles after a completed form is approved."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of this form?",
+        "question_zh": "這份表格的目的為何?",
+        "options": [
+          "To request reimbursement for business travel expenses",
+          "To book a business trip in advance",
+          "To report a lost company credit card",
+          "To request approval for a new hire's travel"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "表格用於申請出差相關費用的核銷，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the form, what is the daily meal limit per employee?",
+        "question_zh": "根據表格內容，每位員工每日餐費的上限為多少?",
+        "options": [
+          "$25",
+          "$30",
+          "$60",
+          "There is no limit"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第二段提到每位員工每日餐費上限為 $60，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What happens if a form is submitted after 30 days?",
+        "question_zh": "如果表格在30天後才提交，將會發生什麼事?",
+        "options": [
+          "It will be automatically rejected",
+          "It will require additional approval from a department director",
+          "The employee will be charged a penalty fee",
+          "It will be processed within one pay cycle"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到逾期提交的表格須經部門主管額外核准，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"issued\" in paragraph 4 is closest in meaning to",
+        "question_zh": "第四段中的 \"issued\" 一詞最接近下列何者的意思?",
+        "options": [
+          "given out",
+          "delayed",
+          "canceled",
+          "reduced"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"reimbursements are issued\" 指款項被「發放、給付」，與 \"given out\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Registration Form",
+        "meta": [
+          {
+            "label": "Event:",
+            "value": "Riverbend 5K Fun Run for Literacy"
+          },
+          {
+            "label": "Date:",
+            "value": "May 16"
+          },
+          {
+            "label": "Location:",
+            "value": "Riverbend Park, North Pavilion"
+          },
+          {
+            "label": "Registration Deadline:",
+            "value": "May 9"
+          }
+        ],
+        "paragraphs": [
+          "Complete this form to register for the third annual Riverbend 5K Fun Run for Literacy, benefiting the Riverbend Community Reading Program.",
+          "Registration is $20 per adult and $10 per child under 12 through May 9. Day-of registration will be available at the pavilion beginning at 7:00 a.m. for an additional $5 per person. All registered runners receive a T-shirt and a race bib; T-shirt sizes cannot be guaranteed for day-of registrants.",
+          "The race will begin promptly at 8:30 a.m., followed by an awards ceremony and pancake breakfast at 9:30 a.m. Strollers and leashed dogs are welcome on the course, but participants are asked to start toward the back of the group for everyone's safety.",
+          "All proceeds will be donated directly to the Riverbend Community Reading Program to purchase books for local elementary schools."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of this form?",
+        "question_zh": "這份表格的目的為何?",
+        "options": [
+          "To register for a charity fun run",
+          "To apply for a volunteer position",
+          "To donate books directly to a school",
+          "To reserve a spot at a pancake breakfast only"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "表格用於報名參加一場慈善路跑活動，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the form, what time does the race begin?",
+        "question_zh": "根據表格內容，比賽於何時開始?",
+        "options": [
+          "7:00 a.m.",
+          "8:30 a.m.",
+          "9:30 a.m.",
+          "10:00 a.m."
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段提到比賽將準時於上午8:30開始，因此答案是 (B)。"
+      },
+      {
+        "question_en": "Why might day-of registrants not receive their preferred T-shirt size?",
+        "question_zh": "為什麼當天現場報名的參加者可能無法獲得偏好的T恤尺寸?",
+        "options": [
+          "T-shirts are only given to advance registrants",
+          "T-shirt sizes cannot be guaranteed for day-of registrants",
+          "Day-of registrants do not receive a T-shirt",
+          "All T-shirts are the same size"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第二段明確提到現場報名者的T恤尺寸無法保證，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"proceeds\" in paragraph 4 is closest in meaning to",
+        "question_zh": "第四段中的 \"proceeds\" 一詞最接近下列何者的意思?",
+        "options": [
+          "earnings raised",
+          "expenses paid",
+          "participants counted",
+          "prizes awarded"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"all proceeds will be donated\" 指活動「所得款項」，與 \"earnings raised\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "single",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Equipment Service Request Form",
+        "meta": [
+          {
+            "label": "Requested By:",
+            "value": "Facilities Dept."
+          },
+          {
+            "label": "Department:",
+            "value": "Production"
+          }
+        ],
+        "paragraphs": [
+          "Use this form to request repair or maintenance service for shop or office equipment. Submit one form per piece of equipment and include the asset tag number found on the equipment's identification label.",
+          "Requests marked \"Urgent\" will receive a response from the maintenance team within four business hours; requests marked \"Standard\" are addressed within three business days. Equipment posing an immediate safety hazard should be marked \"Urgent\" and reported to a supervisor immediately, in addition to submitting this form.",
+          "Once a technician has evaluated the equipment, the requester will receive a follow-up notice indicating whether the issue was resolved on-site or whether the equipment must be sent to an outside vendor for repair. Equipment sent off-site is typically unavailable for two to three weeks.",
+          "Completed forms should be submitted through the maintenance request portal or left in the maintenance office mailbox on the second floor."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of this form?",
+        "question_zh": "這份表格的目的為何?",
+        "options": [
+          "To request repair or maintenance service for equipment",
+          "To order new office equipment",
+          "To report an employee injury",
+          "To schedule a routine safety inspection"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "表格用於申請設備的維修或保養服務，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the form, how quickly will an \"Urgent\" request be addressed?",
+        "question_zh": "根據表格內容，標示為「緊急」的申請多久內會獲得回應?",
+        "options": [
+          "Within one hour",
+          "Within four business hours",
+          "Within three business days",
+          "Within two to three weeks"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第二段提到標示為「緊急」的申請將於四個工作小時內獲得回應，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What should an employee do if equipment poses an immediate safety hazard?",
+        "question_zh": "如果設備造成立即的安全危害，員工應該怎麼做?",
+        "options": [
+          "Wait for the standard three-day response",
+          "Report it to a supervisor in addition to submitting the form",
+          "Send the equipment off-site immediately",
+          "Ignore it until a technician is available"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第二段提到有安全危害的設備除填寫表格外，應立即通報主管，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"evaluated\" in paragraph 3 is closest in meaning to",
+        "question_zh": "第三段中的 \"evaluated\" 一詞最接近下列何者的意思?",
+        "options": [
+          "assessed",
+          "replaced",
+          "discarded",
+          "purchased"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"evaluated the equipment\" 指技師「評估、檢查」設備狀況，與 \"assessed\" 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "type": "double",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "ad",
+        "title": "Grand Opening Advertisement",
+        "meta": [
+          {
+            "label": "Event:",
+            "value": "Grand Opening"
+          },
+          {
+            "label": "Date:",
+            "value": "October 3"
+          },
+          {
+            "label": "Location:",
+            "value": "220 Maple Street"
+          }
+        ],
+        "paragraphs": [
+          "Copper Kettle Bistro invites you to celebrate our grand opening on October 3! Join us for an evening of live jazz music, complimentary appetizers, and a specially priced three-course dinner for $35 per person (regular price $52).",
+          "Reservations are recommended, as seating is limited to 60 guests for opening night. Walk-ins will be accommodated only if tables remain available after 7:00 p.m. Parties of six or more should call ahead at least three days in advance.",
+          "Doors open at 5:30 p.m., and the last seating is at 9:00 p.m. Complimentary valet parking will be available for the first 40 vehicles."
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Dana Whitfield <dwhitfield@mailcity.com>"
+          },
+          {
+            "label": "To:",
+            "value": "reservations@copperkettlebistro.com"
+          },
+          {
+            "label": "Subject:",
+            "value": "Table for Eight on Opening Night"
+          },
+          {
+            "label": "Date:",
+            "value": "September 28"
+          }
+        ],
+        "paragraphs": [
+          "Hello, I saw your advertisement for the grand opening on October 3 and would like to reserve a table for a birthday celebration.",
+          "My party will include eight guests in total. I noticed your ad mentions calling ahead for larger groups, so I wanted to first confirm by e-mail that a table for eight would even be available that evening, since seating is limited to 60 guests overall.",
+          "We would like to arrive around 6:00 p.m. Could you also let me know whether the $35 dinner special applies to a party our size, or whether it is only offered for smaller tables?",
+          "Thank you, and I look forward to your reply. Dana Whitfield"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is Copper Kettle Bistro celebrating, according to the advertisement?",
+        "question_zh": "根據廣告內容，Copper Kettle Bistro 餐廳正在慶祝什麼？",
+        "options": [
+          "Its tenth anniversary",
+          "A grand opening",
+          "A change in ownership",
+          "A menu redesign"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "廣告開頭明確提到餐廳邀請大家一同慶祝 10 月 3 日的盛大開幕。"
+      },
+      {
+        "question_en": "According to the advertisement, what is the regular price of the three-course dinner?",
+        "question_zh": "根據廣告內容，三道式套餐的原價是多少？",
+        "options": [
+          "$35",
+          "$40",
+          "$52",
+          "$60"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "廣告提到特惠價為每人 35 美元，原價則為 52 美元。"
+      },
+      {
+        "question_en": "According to the advertisement, when will walk-in guests be seated?",
+        "question_zh": "根據廣告內容，未事先預約的客人何時才能入座？",
+        "options": [
+          "Only before 5:30 p.m.",
+          "Only if tables remain available after 7:00 p.m.",
+          "Only on weekends",
+          "Only with a valet parking ticket"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "廣告說明未預約的客人僅在晚上 7 點後仍有空位時才能入座。"
+      },
+      {
+        "question_en": "How many guests will be in Dana's party, according to her e-mail?",
+        "question_zh": "根據 Dana 的信件內容，她的聚會共有多少位賓客？",
+        "options": [
+          "Six",
+          "Seven",
+          "Eight",
+          "Ten"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "Dana 在信中提到她的聚會總共有八位賓客。"
+      },
+      {
+        "question_en": "Based on both documents, why did Dana mention calling ahead in her e-mail?",
+        "question_zh": "綜合兩篇文件，Dana 為什麼在信中提到要事先致電一事？",
+        "options": [
+          "Because the advertisement states that parties of six or more should call ahead, and her group of eight meets that condition",
+          "Because the restaurant does not accept e-mail reservations at all",
+          "Because she wants to cancel her reservation",
+          "Because the advertisement requires a deposit for all reservations"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這一題需要同時參考兩篇文件才能回答：廣告提到六人以上的聚會應事先致電，而 Dana 的信件顯示她的聚會共有八人，符合廣告中提到的門檻，因此她才在信中提及此事。"
+      },
+      {
+        "question_en": "Based on both documents, what is Dana most likely uncertain about regarding her reservation?",
+        "question_zh": "綜合兩篇文件，Dana 對於她的訂位最可能感到不確定的是什麼？",
+        "options": [
+          "Whether the restaurant offers valet parking",
+          "Whether a table for her eight-person party is available given the 60-guest limit and whether the $35 special applies to her group size",
+          "Whether the restaurant serves jazz music every night",
+          "Whether the restaurant is open on October 3"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "這一題需要同時參考兩篇文件：廣告提到開幕夜僅開放 60 位賓客座位，Dana 的信中則詢問八人的聚會是否能被安排，以及優惠價格是否適用於她的聚會人數，顯示她對這兩點感到不確定。"
+      }
+    ]
+  },
+  {
+    "type": "double",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "ad",
+        "title": "Course Advertisement",
+        "meta": [
+          {
+            "label": "Course:",
+            "value": "Data Analytics Fundamentals"
+          },
+          {
+            "label": "Provider:",
+            "value": "Northfield Online Academy"
+          },
+          {
+            "label": "Price:",
+            "value": "$149"
+          }
+        ],
+        "paragraphs": [
+          "Northfield Online Academy is now enrolling for Data Analytics Fundamentals, a six-week self-paced course covering spreadsheet analysis, data visualization, and basic statistics. No prior experience is required.",
+          "The course costs $149 and includes lifetime access to all video lectures and downloadable exercise files. Students who complete all twelve modules and pass the final quiz with a score of 70% or higher will receive a certificate of completion.",
+          "Enrollment closes on November 15. A 20% early-bird discount is available for anyone who registers before October 20."
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Marcus Ibe <m.ibe@quickmail.net>"
+          },
+          {
+            "label": "To:",
+            "value": "support@northfieldacademy.com"
+          },
+          {
+            "label": "Subject:",
+            "value": "Certificate Question"
+          },
+          {
+            "label": "Date:",
+            "value": "October 15"
+          }
+        ],
+        "paragraphs": [
+          "Hello,",
+          "I'm interested in enrolling in the Data Analytics Fundamentals course before the early-bird deadline, but I have a question about the certificate.",
+          "I noticed the course description says a 70% score is needed on the final quiz to earn the certificate. Is there a limit to how many times I can retake the quiz if I don't pass it the first time?",
+          "Also, since the course is self-paced, is there a deadline by which I must finish all twelve modules after enrolling, or can I take as long as I like?",
+          "Thank you, Marcus Ibe"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "How long is the Data Analytics Fundamentals course, according to the advertisement?",
+        "question_zh": "根據廣告內容，此資料分析基礎課程的長度為多久？",
+        "options": [
+          "Two weeks",
+          "Six weeks",
+          "Twelve weeks",
+          "One year"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "廣告說明此課程為期六週，且為自學進度課程。"
+      },
+      {
+        "question_en": "According to the advertisement, what score is needed on the final quiz to receive a certificate?",
+        "question_zh": "根據廣告內容，期末測驗需要達到多少分才能取得結業證書？",
+        "options": [
+          "50% or higher",
+          "60% or higher",
+          "70% or higher",
+          "90% or higher"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "廣告說明學生需在期末測驗達到 70% 以上分數才能取得結業證書。"
+      },
+      {
+        "question_en": "According to the advertisement, what discount is available before October 20?",
+        "question_zh": "根據廣告內容，10 月 20 日前註冊可享有什麼優惠？",
+        "options": [
+          "A free textbook",
+          "A 20% early-bird discount",
+          "A refund guarantee",
+          "Free one-on-one tutoring"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "廣告提到 10 月 20 日前註冊可享有 20% 的早鳥優惠。"
+      },
+      {
+        "question_en": "According to Marcus's e-mail, what does he want to know about the final quiz?",
+        "question_zh": "根據 Marcus 的信件內容，他想了解關於期末測驗的什麼資訊？",
+        "options": [
+          "Whether there is a limit on the number of retakes",
+          "Whether the quiz is open-book",
+          "Whether the quiz counts toward his final grade",
+          "Whether the quiz can be taken in person"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "Marcus 在信中詢問若第一次未通過測驗，是否有重考次數的限制。"
+      },
+      {
+        "question_en": "Based on both documents, why is Marcus writing to the academy on October 15?",
+        "question_zh": "綜合兩篇文件，Marcus 為什麼在 10 月 15 日寫信給學院？",
+        "options": [
+          "Because he wants to enroll before the October 20 early-bird deadline mentioned in the advertisement, and has questions before doing so",
+          "Because the course has already sold out",
+          "Because he wants to request a full refund",
+          "Because the advertisement listed the wrong price"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這一題需要同時參考兩篇文件才能回答：廣告提到 10 月 20 日前註冊享有早鳥優惠，而 Marcus 的信件日期為 10 月 15 日，顯示他是想在優惠截止前完成註冊，因此先詢問相關細節。"
+      },
+      {
+        "question_en": "Based on both documents, which piece of information from the advertisement most directly prompted Marcus's second question?",
+        "question_zh": "綜合兩篇文件，廣告中的哪項資訊最直接促使 Marcus 提出他的第二個問題？",
+        "options": [
+          "The fact that the course is self-paced, which led him to ask whether there is still a completion deadline",
+          "The fact that the course includes downloadable exercise files",
+          "The fact that the course costs $149",
+          "The fact that the course covers basic statistics"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這一題需要同時參考兩篇文件：廣告提到課程為自學進度制，Marcus 因此在信中詢問是否仍有完成所有課程模組的期限。"
+      }
+    ]
+  },
+  {
+    "type": "double",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "ad",
+        "title": "Membership Promotion",
+        "meta": [
+          {
+            "label": "Facility:",
+            "value": "Ironview Fitness Center"
+          },
+          {
+            "label": "Promotion:",
+            "value": "New Member Special"
+          },
+          {
+            "label": "Valid Through:",
+            "value": "end of month"
+          }
+        ],
+        "paragraphs": [
+          "Ironview Fitness Center is offering a New Member Special: sign up for a 12-month membership this month and receive the first two months free, plus a complimentary personal training session.",
+          "The promotion applies only to memberships purchased in person at the front desk or by phone; online sign-ups are not eligible for the free personal training session, though they still receive the two free months.",
+          "Members who sign up under this promotion must maintain their membership for a minimum of six months, or an early-cancellation fee of $75 will apply."
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Front Desk <info@ironviewfitness.com>"
+          },
+          {
+            "label": "To:",
+            "value": "Renata Cole <r.cole@webmail.com>"
+          },
+          {
+            "label": "Subject:",
+            "value": "Your Membership Sign-Up Confirmation"
+          },
+          {
+            "label": "Date:",
+            "value": "September 25"
+          }
+        ],
+        "paragraphs": [
+          "Dear Ms. Cole,",
+          "Thank you for signing up for a 12-month membership online through our website today. Your first payment will be processed on November 1, after your two free promotional months.",
+          "We noticed your sign-up was completed through our website. Please note that the complimentary personal training session mentioned in some of our advertising is available only to members who register in person or over the phone, so this session has not been added to your account.",
+          "If you would still like to schedule a personal training session, please visit the front desk and we would be happy to add it for a discounted rate.",
+          "Welcome to Ironview Fitness Center! Front Desk Team"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "According to the advertisement, what do new members receive with a 12-month membership this month?",
+        "question_zh": "根據廣告內容，本月申辦 12 個月會籍的新會員可獲得什麼？",
+        "options": [
+          "A free gym bag",
+          "The first two months free plus a complimentary personal training session",
+          "A lifetime discount",
+          "Free parking"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "廣告提到本月申辦 12 個月會籍者，可獲得前兩個月免費以及一堂免費的私人教練課程。"
+      },
+      {
+        "question_en": "According to the advertisement, what happens if a member cancels before six months?",
+        "question_zh": "根據廣告內容，若會員在六個月內取消會籍會發生什麼事？",
+        "options": [
+          "Nothing, cancellation is free at any time",
+          "A $75 early-cancellation fee applies",
+          "The membership is automatically renewed",
+          "The member loses access immediately with no fee"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "廣告說明若在六個月內提前取消會籍，須支付 75 美元的提前取消手續費。"
+      },
+      {
+        "question_en": "According to the e-mail, how did Renata sign up for her membership?",
+        "question_zh": "根據信件內容，Renata 是透過什麼方式申辦會籍的？",
+        "options": [
+          "In person at the front desk",
+          "By phone",
+          "Through the website",
+          "Through a mail-in form"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "信件中提到 Renata 是透過官網完成線上申辦。"
+      },
+      {
+        "question_en": "According to the e-mail, when will Renata's first payment be processed?",
+        "question_zh": "根據信件內容，Renata 的第一筆費用將於何時扣款？",
+        "options": [
+          "September 25",
+          "October 1",
+          "November 1",
+          "December 1"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "信件提到在兩個月的優惠免費期結束後，第一筆費用將於 11 月 1 日扣款。"
+      },
+      {
+        "question_en": "Based on both documents, why did Renata not receive a complimentary personal training session?",
+        "question_zh": "綜合兩篇文件，Renata 為什麼沒有獲得免費的私人教練課程？",
+        "options": [
+          "Because the advertisement states the free session applies only to in-person or phone sign-ups, and Renata signed up online",
+          "Because she canceled her membership early",
+          "Because the promotion had already ended by the time she signed up",
+          "Because she requested a refund instead"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這一題需要同時參考兩篇文件才能回答：廣告說明免費私人教練課程僅適用於臨櫃或電話申辦的會員，而信件顯示 Renata 是透過網站線上申辦，因此不符合此優惠資格。"
+      },
+      {
+        "question_en": "Based on both documents, what benefit will Renata still receive despite signing up online?",
+        "question_zh": "綜合兩篇文件，儘管 Renata 是透過線上申辦，她仍會獲得哪項優惠？",
+        "options": [
+          "The complimentary personal training session",
+          "The two free promotional months",
+          "A permanent fee waiver",
+          "A free upgrade to a 24-month plan"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "這一題需要同時參考兩篇文件：廣告提到線上申辦仍可獲得兩個月免費優惠，只是不含免費私人教練課程，信件也確認了這一點，說明她的扣款將從第三個月（11 月 1 日）才開始。"
+      }
+    ]
+  },
+  {
+    "type": "double",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Office Relocation Notice",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Facilities Management"
+          },
+          {
+            "label": "Effective Date:",
+            "value": "November 4"
+          },
+          {
+            "label": "New Address:",
+            "value": "88 Harborview Plaza, 6th Floor"
+          }
+        ],
+        "paragraphs": [
+          "Please be advised that all staff currently located on the 3rd floor of the Denton Street building will relocate to the new office at 88 Harborview Plaza, 6th Floor, effective November 4.",
+          "Moving crews will pack and transport desk items on November 1 and 2. Employees should remove personal items from drawers and label boxes with their name and new desk number by end of day October 31.",
+          "The new building offers underground parking for a monthly fee of $60, which is $20 more than our current arrangement. Employees who wish to reserve a spot should contact Facilities Management by October 25, as spaces are limited to 50."
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Owen Bryant <o.bryant@corpmail.com>"
+          },
+          {
+            "label": "To:",
+            "value": "facilities@corpmail.com"
+          },
+          {
+            "label": "Subject:",
+            "value": "Parking Question"
+          },
+          {
+            "label": "Date:",
+            "value": "October 22"
+          }
+        ],
+        "paragraphs": [
+          "Hi,",
+          "I read the notice about our move to Harborview Plaza and wanted to ask about parking before the reservation deadline.",
+          "I currently pay $40 per month for parking at the Denton Street building. Since the notice mentions the new rate will be $20 more, I want to confirm the new monthly cost before I decide whether to reserve a spot.",
+          "Also, since spaces are limited to 50, could you tell me how many employees have already reserved a spot, so I know whether I should register soon?",
+          "Thanks, Owen Bryant"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "According to the notice, when will the relocation take effect?",
+        "question_zh": "根據公告內容，遷移生效日期為何時？",
+        "options": [
+          "October 22",
+          "October 25",
+          "October 31",
+          "November 4"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "公告說明遷移生效日期為 11 月 4 日。"
+      },
+      {
+        "question_en": "According to the notice, what should employees do by October 31?",
+        "question_zh": "根據公告內容，員工應在 10 月 31 日前完成什麼事？",
+        "options": [
+          "Submit a parking request form",
+          "Remove personal items from drawers and label boxes",
+          "Return all office keys",
+          "Complete a relocation survey"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "公告要求員工在 10 月 31 日前清空抽屜個人物品並在箱子上標示姓名與新座位號碼。"
+      },
+      {
+        "question_en": "According to the notice, how many parking spaces are available at the new building?",
+        "question_zh": "根據公告內容，新大樓提供多少個停車位？",
+        "options": [
+          "20",
+          "40",
+          "50",
+          "60"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "公告說明新大樓的地下停車位數量限 50 個。"
+      },
+      {
+        "question_en": "According to Owen's e-mail, how much does he currently pay for parking?",
+        "question_zh": "根據 Owen 的信件內容，他目前每月支付多少停車費？",
+        "options": [
+          "$20",
+          "$40",
+          "$60",
+          "$80"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "Owen 在信中提到他目前每月支付 40 美元的停車費。"
+      },
+      {
+        "question_en": "Based on both documents, what will Owen's new monthly parking cost be if he reserves a spot?",
+        "question_zh": "綜合兩篇文件，如果 Owen 預約車位，他每月的新停車費用會是多少？",
+        "options": [
+          "$40",
+          "$50",
+          "$60",
+          "$80"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "這一題需要同時參考兩篇文件才能回答：公告說明新大樓停車費為每月 60 美元，比現行方案多 20 美元；Owen 的信件提到他目前支付 40 美元，兩者相加可推算新費用為 60 美元，這也與公告直接吻合。"
+      },
+      {
+        "question_en": "Based on both documents, why is Owen concerned about registering soon?",
+        "question_zh": "綜合兩篇文件，Owen 為什麼擔心需要盡快登記？",
+        "options": [
+          "Because the notice states parking spaces are limited to 50 and the reservation deadline is approaching, so he wants to know how many spots remain before deciding",
+          "Because he has already missed the relocation date",
+          "Because he wants to cancel his current parking arrangement immediately",
+          "Because the notice states the new building has no parking at all"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這一題需要同時參考兩篇文件：公告提到車位僅限 50 個且須在 10 月 25 日前登記，Owen 的信件顯示他因此想先了解已有多少人登記，以判斷是否該盡快申請。"
+      }
+    ]
+  },
+  {
+    "type": "double",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Library Closure Notice",
+        "meta": [
+          {
+            "label": "Location:",
+            "value": "Fernwood Public Library"
+          },
+          {
+            "label": "Closure Period:",
+            "value": "October 6 - October 20"
+          },
+          {
+            "label": "Reason:",
+            "value": "Roof Renovation"
+          }
+        ],
+        "paragraphs": [
+          "Fernwood Public Library will be closed to the public from October 6 through October 20 for roof renovation work. The building will reopen for normal hours on October 21.",
+          "During the closure, the outdoor book drop on the north side of the building will remain open 24 hours a day for returns. No late fees will be charged for items due during the closure period.",
+          "Patrons with holds waiting for pickup will have their pickup deadline automatically extended until November 3. Please note that the library's computer lab and meeting rooms will not be accessible until reopening."
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Isla Hartman <isla.hartman@mailnet.com"
+          },
+          {
+            "label": "To:",
+            "value": "info@fernwoodlibrary.org"
+          },
+          {
+            "label": "Subject:",
+            "value": "Overdue Book During Closure"
+          },
+          {
+            "label": "Date:",
+            "value": "October 9"
+          }
+        ],
+        "paragraphs": [
+          "Hello,",
+          "I have a book that was due back on October 8, right in the middle of your renovation closure. I still have the book at home and won't be able to visit until the library reopens.",
+          "I saw a sign on the front door mentioning the closure, but I wasn't sure whether the book drop is still open, since the doors themselves are locked. Could you confirm?",
+          "I'm also holding a copy of a novel I placed on hold before the closure. Since I can't pick it up right now, will I lose my place in line?",
+          "Thank you, Isla Hartman"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "According to the notice, why is the library closing?",
+        "question_zh": "根據公告內容，圖書館為什麼要關閉？",
+        "options": [
+          "Staff training",
+          "Roof renovation",
+          "A flooding incident",
+          "A change in ownership"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "公告說明圖書館因屋頂整修工程而暫停開放。"
+      },
+      {
+        "question_en": "According to the notice, until when has the hold pickup deadline been extended?",
+        "question_zh": "根據公告內容，預約取書的截止日期已延長至何時？",
+        "options": [
+          "October 20",
+          "October 21",
+          "October 25",
+          "November 3"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "公告提到有預約取書的讀者，取書期限已自動延長至 11 月 3 日。"
+      },
+      {
+        "question_en": "According to the notice, what will NOT be accessible until the library reopens?",
+        "question_zh": "根據公告內容，在圖書館重新開放前，什麼設施將無法使用？",
+        "options": [
+          "The outdoor book drop",
+          "The computer lab and meeting rooms",
+          "The parking lot",
+          "The front entrance sign"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "公告說明電腦室與會議室在重新開放前皆無法使用。"
+      },
+      {
+        "question_en": "According to Isla's e-mail, when was her book originally due?",
+        "question_zh": "根據 Isla 的信件內容，她的書原本應在何時歸還？",
+        "options": [
+          "October 6",
+          "October 8",
+          "October 9",
+          "October 20"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "Isla 在信中提到她的書原本應在 10 月 8 日歸還。"
+      },
+      {
+        "question_en": "Based on both documents, will Isla be charged a late fee for her overdue book?",
+        "question_zh": "綜合兩篇文件，Isla 逾期未還的書籍是否會被收取滯納金？",
+        "options": [
+          "Yes, because the book was already overdue before the closure began",
+          "No, because the notice states no late fees apply to items due during the closure period",
+          "Yes, but only half the usual fee",
+          "No, but only if she returns it within 24 hours of reopening"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "這一題需要同時參考兩篇文件才能回答：公告說明關閉期間到期的書籍不會被收取滯納金，而 Isla 的信件顯示她的書正好在 10 月 8 日到期，落在關閉期間內，因此不會產生滯納金。"
+      },
+      {
+        "question_en": "Based on both documents, does Isla need to worry about losing her place in line for her held novel?",
+        "question_zh": "綜合兩篇文件，Isla 是否需要擔心失去她預約書籍的排隊順位？",
+        "options": [
+          "Yes, because holds are canceled automatically during any closure",
+          "No, because the notice states hold pickup deadlines have been automatically extended until November 3",
+          "Yes, because the book drop is closed during renovation",
+          "No, because the library will mail the book to her home"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "這一題需要同時參考兩篇文件：公告說明所有預約取書的期限已自動延長至 11 月 3 日，而 Isla 的信件詢問她是否會失去排隊順位，依公告內容她不需擔心此問題。"
+      }
+    ]
+  },
+  {
+    "type": "double",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Pool Maintenance Notice",
+        "meta": [
+          {
+            "label": "Community:",
+            "value": "Willowbrook Residences"
+          },
+          {
+            "label": "Closure Dates:",
+            "value": "September 30 - October 2"
+          },
+          {
+            "label": "Posted By:",
+            "value": "Property Management"
+          }
+        ],
+        "paragraphs": [
+          "The community pool will be closed from September 30 through October 2 for annual filtration system maintenance. The pool will reopen at 8:00 a.m. on October 3.",
+          "During this time, the pool deck and surrounding lounge area will also be closed, but the adjacent fitness room will remain open on its normal schedule.",
+          "Residents who have reserved the pool area for private events during this period should contact the management office to reschedule. No refunds will be issued for cleaning fee deposits already paid, but deposits will be applied to the rescheduled date."
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Property Management <office@willowbrookresidences.com>"
+          },
+          {
+            "label": "To:",
+            "value": "Teo Alvarez <t.alvarez@mailhub.com>"
+          },
+          {
+            "label": "Subject:",
+            "value": "Your Pool Reservation for October 1"
+          },
+          {
+            "label": "Date:",
+            "value": "September 26"
+          }
+        ],
+        "paragraphs": [
+          "Dear Mr. Alvarez,",
+          "We are writing regarding your reservation of the pool area for a private gathering on October 1. As you may have seen in our recent notice, the pool will be undergoing maintenance from September 30 through October 2.",
+          "Since your event falls within this closure period, we will need to reschedule it. We have availability on October 8 or October 15; please let us know which date works better for you.",
+          "Your $50 cleaning fee deposit will be automatically applied to whichever new date you choose, so there is no need to submit payment again.",
+          "We apologize for the inconvenience. Property Management"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "According to the notice, why is the pool closing?",
+        "question_zh": "根據公告內容，泳池為什麼要關閉？",
+        "options": [
+          "Renovation of the lounge area",
+          "Annual filtration system maintenance",
+          "A water quality complaint",
+          "Installation of new furniture"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "公告說明泳池因年度過濾系統維護工程而暫停開放。"
+      },
+      {
+        "question_en": "According to the notice, what will remain open during the pool closure?",
+        "question_zh": "根據公告內容，泳池關閉期間什麼設施仍會開放？",
+        "options": [
+          "The pool deck",
+          "The lounge area",
+          "The fitness room",
+          "The private event space"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "公告提到健身房在泳池關閉期間仍會依原定時間開放。"
+      },
+      {
+        "question_en": "According to the notice, what happens to cleaning fee deposits for canceled events during the closure?",
+        "question_zh": "根據公告內容，關閉期間活動取消的清潔費保證金會如何處理？",
+        "options": [
+          "They are fully refunded",
+          "They are forfeited entirely",
+          "They are applied to the rescheduled date",
+          "They are donated to a community fund"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "公告說明保證金不會退還，但會轉用於改期後的活動日期。"
+      },
+      {
+        "question_en": "According to the e-mail, what event did Teo Alvarez reserve the pool for?",
+        "question_zh": "根據信件內容，Teo Alvarez 預約泳池是為了什麼活動？",
+        "options": [
+          "A private gathering",
+          "A swimming lesson",
+          "A community meeting",
+          "A fitness class"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "信件提到 Teo Alvarez 預約泳池是為了舉辦私人聚會。"
+      },
+      {
+        "question_en": "Based on both documents, why does Teo Alvarez's reservation need to be rescheduled?",
+        "question_zh": "綜合兩篇文件，為什麼 Teo Alvarez 的預約需要改期？",
+        "options": [
+          "Because his original date, October 1, falls within the pool closure period stated in the notice",
+          "Because he failed to pay his cleaning deposit on time",
+          "Because the fitness room is also closed on that date",
+          "Because he requested a different date himself"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這一題需要同時參考兩篇文件才能回答：公告說明泳池將於 9 月 30 日至 10 月 2 日關閉，而信件顯示 Teo Alvarez 原訂的活動日期為 10 月 1 日，正好落在關閉期間，因此必須改期。"
+      },
+      {
+        "question_en": "Based on both documents, does Teo Alvarez need to pay an additional fee to reschedule his event?",
+        "question_zh": "綜合兩篇文件，Teo Alvarez 若改期舉辦活動，是否需要額外支付費用？",
+        "options": [
+          "Yes, a new $50 deposit is required for the new date",
+          "No, because his existing deposit will be applied to whichever new date he selects",
+          "Yes, but only half of the original deposit amount",
+          "No, because the notice waives all cleaning fees during the closure period"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "這一題需要同時參考兩篇文件：公告提到保證金會轉用於改期後的日期，信件也向 Teo Alvarez 確認他已支付的 50 美元保證金將自動套用到新選擇的日期，不需要重新繳費。"
+      }
+    ]
+  },
+  {
+    "type": "double",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Yuki Tanaka <y.tanaka@brightpath.com>"
+          },
+          {
+            "label": "To:",
+            "value": "Colin Ferris <c.ferris@brightpath.com>"
+          },
+          {
+            "label": "Subject:",
+            "value": "Regional Sales Conference - Registration Deadline"
+          },
+          {
+            "label": "Date:",
+            "value": "August 11"
+          }
+        ],
+        "paragraphs": [
+          "Hi Colin,",
+          "Just a reminder that the registration deadline for the Regional Sales Conference in Denver is August 20. The early registration fee is $320, but after August 20 it increases to $420.",
+          "I already registered and booked my flight for the morning of September 14, arriving the day before the conference starts on September 15. The conference runs through September 17.",
+          "Our travel budget covers registration, flights, and up to three nights of hotel per person. Let me know if you're planning to attend so I can let Accounting know how many of us are going.",
+          "Thanks, Yuki"
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Colin Ferris <c.ferris@brightpath.com>"
+          },
+          {
+            "label": "To:",
+            "value": "Yuki Tanaka <y.tanaka@brightpath.com>"
+          },
+          {
+            "label": "Subject:",
+            "value": "RE: Regional Sales Conference - Registration Deadline"
+          },
+          {
+            "label": "Date:",
+            "value": "August 13"
+          }
+        ],
+        "paragraphs": [
+          "Hi Yuki,",
+          "Thanks for the reminder! I'd like to attend as well. I was hoping to arrive a day earlier than you, on September 13, so I can visit a client in Denver before the conference begins.",
+          "Since our travel budget only covers up to three nights of hotel, would my extra night on September 13 be covered, or would I need to pay for that night myself?",
+          "I'll go ahead and register today so we can take advantage of the $320 early rate before the deadline passes next week.",
+          "Best, Colin"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "According to Yuki's e-mail, what is the early registration fee for the conference?",
+        "question_zh": "根據 Yuki 的信件內容，會議的早鳥註冊費是多少？",
+        "options": [
+          "$220",
+          "$320",
+          "$420",
+          "$520"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "Yuki 在信中提到 8 月 20 日前註冊的早鳥費用為 320 美元。"
+      },
+      {
+        "question_en": "According to Yuki's e-mail, when does the conference start?",
+        "question_zh": "根據 Yuki 的信件內容，會議何時開始？",
+        "options": [
+          "September 13",
+          "September 14",
+          "September 15",
+          "September 17"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "Yuki 提到會議於 9 月 15 日開始，她計畫提前一天於 9 月 14 日抵達。"
+      },
+      {
+        "question_en": "According to Colin's e-mail, why does he want to arrive in Denver a day early?",
+        "question_zh": "根據 Colin 的信件內容，他為什麼想提早一天抵達丹佛？",
+        "options": [
+          "To attend a pre-conference workshop",
+          "To visit a client before the conference begins",
+          "To avoid a flight delay",
+          "To meet with Yuki privately"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "Colin 在信中說明他想提早一天抵達，以便在會議開始前拜訪一位客戶。"
+      },
+      {
+        "question_en": "Based on both documents, will Colin register before or after the early-fee deadline?",
+        "question_zh": "綜合兩篇文件，Colin 會在早鳥優惠截止日期前還是之後完成註冊？",
+        "options": [
+          "Before, since he plans to register today, which is before the August 20 deadline Yuki mentioned",
+          "After, since he missed the deadline",
+          "He does not plan to register at all",
+          "The documents do not specify a deadline"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這一題需要同時參考兩篇文件才能回答：Yuki 的信中提到早鳥註冊截止日為 8 月 20 日，Colin 的回信日期是 8 月 13 日，且他表示要今天就完成註冊以把握 320 美元的早鳥價，顯示他會在截止日前完成註冊。"
+      },
+      {
+        "question_en": "Based on both documents, why is Colin unsure whether his hotel stay will be fully covered?",
+        "question_zh": "綜合兩篇文件，Colin 為什麼不確定他的住宿費用是否會全額報銷？",
+        "options": [
+          "Because he plans to arrive on September 13, one night earlier than Yuki, and the company's travel budget only covers up to three nights per person",
+          "Because the hotel is fully booked on his arrival date",
+          "Because he has not yet registered for the conference",
+          "Because the conference has been shortened by one day"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這一題需要同時參考兩篇文件：Yuki 的信中說明差旅預算最多補助每人三晚住宿，Colin 的回信提到他打算比 Yuki 早一天於 9 月 13 日抵達，因此擔心多出的那一晚是否會超出補助範圍。"
+      }
+    ]
+  },
+  {
+    "type": "double",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Beatrix Solano <b.solano@quickmail.net>"
+          },
+          {
+            "label": "To:",
+            "value": "returns@homelycookware.com"
+          },
+          {
+            "label": "Subject:",
+            "value": "Damaged Cookware Set - Order #58213"
+          },
+          {
+            "label": "Date:",
+            "value": "July 6"
+          }
+        ],
+        "paragraphs": [
+          "To Whom It May Concern,",
+          "I ordered the 10-piece nonstick cookware set (Order #58213) on June 28, and it arrived on July 4 with a large dent in the lid of the largest pot. The rest of the set appears undamaged.",
+          "I would like to request a replacement lid rather than returning the entire set, since I only received one damaged piece. Please let me know if this is possible and what steps I need to take.",
+          "I have attached photos of the damage to this e-mail. Thank you for your prompt attention to this matter.",
+          "Regards, Beatrix Solano"
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Customer Care <returns@homelycookware.com>"
+          },
+          {
+            "label": "To:",
+            "value": "Beatrix Solano <b.solano@quickmail.net>"
+          },
+          {
+            "label": "Subject:",
+            "value": "RE: Damaged Cookware Set - Order #58213"
+          },
+          {
+            "label": "Date:",
+            "value": "July 8"
+          }
+        ],
+        "paragraphs": [
+          "Dear Ms. Solano,",
+          "Thank you for reaching out, and we're sorry to hear about the damage to your order. We received your photos, and unfortunately, we do not sell individual lids separately from a full set.",
+          "However, since your order was received within seven days of delivery and the item was damaged in transit, we can offer you a full replacement set at no additional cost, or a full refund if you prefer not to receive a replacement.",
+          "If you would like the replacement set, please reply within five business days, and we will ship it within 48 hours of your response. If we do not hear from you within that time, we will process a refund automatically.",
+          "Sincerely, Customer Care Team"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "According to Beatrix's e-mail, what was damaged in her order?",
+        "question_zh": "根據 Beatrix 的信件內容，她的訂單中哪個部分受損？",
+        "options": [
+          "The handle of a small pan",
+          "The lid of the largest pot",
+          "The entire packaging box",
+          "A glass measuring cup"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "Beatrix 在信中提到最大的鍋子的鍋蓋有一處明顯凹陷。"
+      },
+      {
+        "question_en": "According to Beatrix's e-mail, what did she originally request?",
+        "question_zh": "根據 Beatrix 的信件內容，她原本提出什麼要求？",
+        "options": [
+          "A full refund",
+          "A replacement lid only",
+          "A store credit",
+          "An apology letter"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "Beatrix 在信中表示她希望只更換受損的鍋蓋，而非整組退貨。"
+      },
+      {
+        "question_en": "According to the company's reply, why can't they fulfill Beatrix's original request?",
+        "question_zh": "根據公司回覆信件，為什麼他們無法滿足 Beatrix 原本的要求？",
+        "options": [
+          "Because lids are not sold separately from a full set",
+          "Because the item is out of stock",
+          "Because the order was placed too long ago",
+          "Because photos were not provided"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "公司回覆信中說明鍋蓋並不單獨販售，僅隨整組鍋具出售。"
+      },
+      {
+        "question_en": "According to the company's reply, what will happen if Beatrix does not respond within five business days?",
+        "question_zh": "根據公司回覆信件，若 Beatrix 未在五個工作天內回覆，會發生什麼事？",
+        "options": [
+          "Her order will be canceled",
+          "A refund will be processed automatically",
+          "A replacement lid will be mailed to her",
+          "Her account will be suspended"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "公司回覆信中說明若五個工作天內未收到回覆，將自動為她辦理退款。"
+      },
+      {
+        "question_en": "Based on both documents, what solution did the company offer instead of Beatrix's original request?",
+        "question_zh": "綜合兩篇文件，公司提供了什麼替代方案來取代 Beatrix 原本的要求？",
+        "options": [
+          "A full replacement set at no cost, or a full refund",
+          "A 50% discount on a future order",
+          "A store credit equal to double the order value",
+          "A repair kit mailed to her home"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這一題需要同時參考兩篇文件才能回答：Beatrix 原本只要求更換鍋蓋，但公司回覆信說明由於鍋蓋不單獨販售，因此改為提供免費全新整組替換，或全額退款兩種選項。"
+      },
+      {
+        "question_en": "Based on both documents, why does Beatrix qualify for a free replacement rather than having to pay for one?",
+        "question_zh": "綜合兩篇文件，為什麼 Beatrix 有資格獲得免費更換，而不需自行付費？",
+        "options": [
+          "Because her order was received within seven days of delivery and was damaged in transit, as stated in the company's policy",
+          "Because she is a long-time loyal customer",
+          "Because she paid for expedited shipping",
+          "Because the company made an error in the original order"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這一題需要同時參考兩篇文件：Beatrix 的信中提到訂單於 7 月 4 日送達，她於 7 月 6 日寫信反映，公司回覆信則說明只要在送達七天內反映且商品為運送途中受損，即可獲得免費更換，兩者相符，因此她符合資格。"
+      }
+    ]
+  },
+  {
+    "type": "double",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Conference Registration Form",
+        "meta": [
+          {
+            "label": "Event:",
+            "value": "Northeast Marketing Summit"
+          },
+          {
+            "label": "Dates:",
+            "value": "November 12-13"
+          },
+          {
+            "label": "Venue:",
+            "value": "Grand Concourse Hotel"
+          }
+        ],
+        "paragraphs": [
+          "Name: Priyanka Deshmukh",
+          "Company: Larkspur Media Group",
+          "Registration Type: Full Two-Day Pass ($280) — includes both keynote sessions, all breakout workshops, and lunch on both days.",
+          "Add-on: Networking Dinner, November 12 evening ($45, optional)",
+          "Dietary Restrictions: Vegetarian",
+          "Total Amount Due: $325",
+          "Note: Registrations received after November 1 are subject to a $30 late fee, which has not been applied to this total."
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Northeast Marketing Summit <registration@nemsummit.org>"
+          },
+          {
+            "label": "To:",
+            "value": "Priyanka Deshmukh <p.deshmukh@larkspurmedia.com>"
+          },
+          {
+            "label": "Subject:",
+            "value": "Registration Confirmed - Northeast Marketing Summit"
+          },
+          {
+            "label": "Date:",
+            "value": "October 29"
+          }
+        ],
+        "paragraphs": [
+          "Dear Ms. Deshmukh,",
+          "Thank you for registering for the Northeast Marketing Summit. Your Full Two-Day Pass and Networking Dinner add-on have been confirmed, and your vegetarian meal preference has been noted for all catered meals, including the dinner.",
+          "Since your registration was received before the November 1 deadline, no late fee applies, and your total charge remains $325 as listed on your form.",
+          "Please note that the Networking Dinner has moved to a new location, the Concourse Hotel's rooftop terrace, due to renovations in the originally planned ballroom. All other event details remain unchanged.",
+          "We look forward to seeing you in November! Summit Registration Team"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "According to the registration form, what does the Full Two-Day Pass include?",
+        "question_zh": "根據報名表內容，兩日全票包含哪些項目？",
+        "options": [
+          "Hotel accommodation for two nights",
+          "Both keynote sessions, all breakout workshops, and lunch on both days",
+          "Airport transportation",
+          "A one-year magazine subscription"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "報名表說明兩日全票包含兩場主題演講、所有分組工作坊，以及兩天的午餐。"
+      },
+      {
+        "question_en": "According to the registration form, what is Priyanka's dietary restriction?",
+        "question_zh": "根據報名表內容，Priyanka 的飲食限制為何？",
+        "options": [
+          "Gluten-free",
+          "Vegan",
+          "Vegetarian",
+          "No restrictions"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "報名表列出 Priyanka 的飲食限制為素食。"
+      },
+      {
+        "question_en": "According to the registration form, what fee applies to registrations received after November 1?",
+        "question_zh": "根據報名表內容，11 月 1 日後收到的報名會被收取什麼費用？",
+        "options": [
+          "A $30 late fee",
+          "A $45 late fee",
+          "A $50 late fee",
+          "No additional fee"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "報名表說明 11 月 1 日後收到的報名將被加收 30 美元的逾期費用。"
+      },
+      {
+        "question_en": "According to the e-mail, why has the Networking Dinner location changed?",
+        "question_zh": "根據信件內容，聯誼晚宴的地點為什麼變更？",
+        "options": [
+          "Due to renovations in the originally planned ballroom",
+          "Due to low attendance",
+          "Due to a scheduling conflict",
+          "Due to a change in caterers"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "信件說明原訂舉辦晚宴的宴會廳正在整修，因此地點變更至屋頂露台。"
+      },
+      {
+        "question_en": "Based on both documents, will Priyanka be charged the $30 late fee?",
+        "question_zh": "綜合兩篇文件，Priyanka 是否會被收取 30 美元的逾期費用？",
+        "options": [
+          "Yes, because her registration was submitted in October",
+          "No, because her registration was received before the November 1 deadline stated on the form",
+          "Yes, because she added the optional dinner",
+          "No, because the fee was waived due to the venue change"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "這一題需要同時參考兩篇文件才能回答：報名表說明 11 月 1 日後才會加收逾期費，而確認信提到她的報名是在 10 月 29 日收到的，早於截止日，因此不需支付逾期費用，總額維持表單上的 325 美元。"
+      },
+      {
+        "question_en": "Based on both documents, at which meal will Priyanka's vegetarian preference apply?",
+        "question_zh": "綜合兩篇文件，Priyanka 的素食偏好適用於哪些餐點？",
+        "options": [
+          "Only the lunch on the first day",
+          "Only the Networking Dinner",
+          "All catered meals, including the lunches and the Networking Dinner",
+          "None, since she must request it separately for each meal"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "這一題需要同時參考兩篇文件：報名表登記她為素食者，確認信進一步說明此偏好已套用於所有供餐場合，包含兩天的午餐與聯誼晚宴。"
+      }
+    ]
+  },
+  {
+    "type": "double",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Equipment Rental Order",
+        "meta": [
+          {
+            "label": "Customer:",
+            "value": "Greenway Landscaping Co."
+          },
+          {
+            "label": "Order #:",
+            "value": "RN-4471"
+          },
+          {
+            "label": "Rental Period:",
+            "value": "March 3 - March 6"
+          }
+        ],
+        "paragraphs": [
+          "Item: Compact Trencher, Model TR-220 — Quantity: 1 — Daily Rate: $85",
+          "Item: Wheelbarrow, Heavy-Duty — Quantity: 2 — Daily Rate: $12 each",
+          "Delivery: Included for orders over $200; delivery scheduled for March 3, 8:00 a.m.",
+          "Pickup: Scheduled for March 6, 5:00 p.m. A $25 fee applies for each additional day the equipment is kept beyond the return date.",
+          "Total Estimated Cost (4 days): $436"
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Farrukh Rashid <f.rashid@greenwaylandscaping.com>"
+          },
+          {
+            "label": "To:",
+            "value": "orders@citytoolrental.com"
+          },
+          {
+            "label": "Subject:",
+            "value": "Extending Order RN-4471"
+          },
+          {
+            "label": "Date:",
+            "value": "March 5"
+          }
+        ],
+        "paragraphs": [
+          "Hello,",
+          "We rented a trencher and two wheelbarrows under Order RN-4471, originally scheduled for pickup tomorrow, March 6. Due to a delay on our job site, we need to keep the equipment for two additional days, until March 8.",
+          "Could you let me know the extra cost this will add to our order? I want to make sure we budget correctly before confirming the extension.",
+          "Also, would it be possible to keep the delivery driver's contact number on file in case we need same-day support again on a future rental?",
+          "Thank you, Farrukh Rashid"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "According to the order form, what is the daily rate for the Compact Trencher?",
+        "question_zh": "根據租借訂單內容，微型開溝機的每日租金是多少？",
+        "options": [
+          "$12",
+          "$25",
+          "$85",
+          "$200"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "訂單列出微型開溝機的每日租金為 85 美元。"
+      },
+      {
+        "question_en": "According to the order form, when is delivery scheduled?",
+        "question_zh": "根據租借訂單內容，設備配送時間為何時？",
+        "options": [
+          "March 3, 8:00 a.m.",
+          "March 4, 8:00 a.m.",
+          "March 6, 5:00 p.m.",
+          "March 8, 5:00 p.m."
+        ],
+        "answer_index": 0,
+        "explanation_zh": "訂單說明配送時間安排在 3 月 3 日上午 8 點。"
+      },
+      {
+        "question_en": "According to the order form, what fee applies for keeping the equipment beyond the return date?",
+        "question_zh": "根據租借訂單內容，超過歸還日期繼續使用設備會產生什麼費用？",
+        "options": [
+          "$12 per extra day",
+          "$25 per extra day",
+          "$85 per extra day",
+          "No fee applies"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "訂單說明超過歸還日期每多留一天，須支付 25 美元的額外費用。"
+      },
+      {
+        "question_en": "According to Farrukh's e-mail, why does he need to extend the rental?",
+        "question_zh": "根據 Farrukh 的信件內容，他為什麼需要延長租借期限？",
+        "options": [
+          "Because of a delay on the job site",
+          "Because the equipment broke down",
+          "Because he ordered the wrong model",
+          "Because the delivery arrived late"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "Farrukh 在信中說明因工地作業延誤，需要多留設備兩天。"
+      },
+      {
+        "question_en": "Based on both documents, how much additional cost should Farrukh expect for extending the rental by two days?",
+        "question_zh": "綜合兩篇文件，Farrukh 延長租借兩天大約需要支付多少額外費用？",
+        "options": [
+          "$25",
+          "$50",
+          "$85",
+          "$110"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "這一題需要同時參考兩篇文件才能回答：訂單說明超過歸還日期每多一天須加收 25 美元，而信件提到 Farrukh 需要延長兩天，因此額外費用應為 25 美元乘以兩天，共 50 美元。"
+      },
+      {
+        "question_en": "Based on both documents, what was the original pickup date that Farrukh's e-mail is requesting a change to?",
+        "question_zh": "綜合兩篇文件，Farrukh 的信件所要求變更的原始取回日期是哪一天？",
+        "options": [
+          "March 3",
+          "March 5",
+          "March 6",
+          "March 8"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "這一題需要同時參考兩篇文件：訂單載明原訂取回日期為 3 月 6 日下午 5 點，Farrukh 的信件提到他想將此日期延後至 3 月 8 日，顯示他要求變更的正是訂單上原訂的 3 月 6 日。"
+      }
+    ]
+  },
+  {
+    "type": "triple",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "ad",
+        "title": "Advertisement",
+        "meta": [
+          {
+            "label": "Product:",
+            "value": "SonicWave Pro Earbuds"
+          },
+          {
+            "label": "Price:",
+            "value": "$89"
+          },
+          {
+            "label": "Battery Life:",
+            "value": "up to 8 hours"
+          }
+        ],
+        "paragraphs": [
+          "Introducing the SonicWave Pro Earbuds: crisp sound, active noise cancellation, and a compact charging case that adds three extra full charges on the go. Battery life is up to 8 hours per charge, or 32 hours total with the case.",
+          "Available in black, white, and sage green for $89. Each pair includes three sizes of ear tips for a customized fit and is rated IPX4 for splash resistance during workouts.",
+          "Order by 3:00 p.m. for same-day shipping. All orders include a 30-day return window; earbuds must be returned in original packaging with all accessories."
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Nadia Fekete <n.fekete@quickmail.net>"
+          },
+          {
+            "label": "To:",
+            "value": "support@sonicwaveaudio.com"
+          },
+          {
+            "label": "Subject:",
+            "value": "Questions Before Ordering SonicWave Pro"
+          },
+          {
+            "label": "Date:",
+            "value": "May 4"
+          }
+        ],
+        "paragraphs": [
+          "Hello,",
+          "I'm interested in ordering the SonicWave Pro Earbuds in sage green, but I have a couple of questions first.",
+          "The ad says the earbuds are IPX4 rated, but I run outdoors in fairly heavy rain sometimes. Would that level of water resistance be enough to protect them, or should I look at a different model?",
+          "Also, if I decide the fit isn't right for me, does the 30-day return window start from the order date or the delivery date?",
+          "Thank you, Nadia Fekete"
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "support@sonicwaveaudio.com"
+          },
+          {
+            "label": "To:",
+            "value": "Nadia Fekete <n.fekete@quickmail.net>"
+          },
+          {
+            "label": "Subject:",
+            "value": "RE: Questions Before Ordering SonicWave Pro"
+          },
+          {
+            "label": "Date:",
+            "value": "May 5"
+          }
+        ],
+        "paragraphs": [
+          "Dear Ms. Fekete,",
+          "Thank you for your interest in the SonicWave Pro Earbuds. IPX4 rating means the earbuds can handle light splashes and sweat, but they are not designed for heavy or prolonged rain exposure. For your use case, we'd recommend our SonicWave Trail model instead, which is rated IPX7 for full submersion resistance.",
+          "To answer your second question, the 30-day return window begins on the delivery date, not the order date, so you'll have the full 30 days from when the package arrives at your address.",
+          "Please let us know if you'd like us to help you place an order for either model.",
+          "Best regards, SonicWave Audio Support"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "According to the advertisement, what is the total battery life of the SonicWave Pro Earbuds with the charging case?",
+        "question_zh": "根據廣告內容，SonicWave Pro 耳機連同充電盒的總電池續航力是多少？",
+        "options": [
+          "8 hours",
+          "16 hours",
+          "24 hours",
+          "32 hours"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "廣告說明搭配充電盒可提供總計 32 小時的電力，單次充電則為 8 小時。"
+      },
+      {
+        "question_en": "According to the advertisement, what colors are available for the SonicWave Pro?",
+        "question_zh": "根據廣告內容，SonicWave Pro 提供哪些顏色選擇？",
+        "options": [
+          "Black, white, and sage green",
+          "Red, blue, and black",
+          "Only black",
+          "Silver and gold"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "廣告列出黑色、白色與鼠尾草綠三種顏色可選。"
+      },
+      {
+        "question_en": "According to Nadia's e-mail, what is she concerned about regarding the IPX4 rating?",
+        "question_zh": "根據 Nadia 的信件內容，她對 IPX4 防水等級有什麼疑慮？",
+        "options": [
+          "Whether it is enough protection for running in heavy rain",
+          "Whether it affects the sound quality",
+          "Whether it voids the warranty",
+          "Whether it adds extra weight to the earbuds"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "Nadia 在信中詢問 IPX4 等級是否足以保護耳機在大雨中使用。"
+      },
+      {
+        "question_en": "According to the support reply, which model does the company recommend for Nadia's situation?",
+        "question_zh": "根據客服回覆信件，公司針對 Nadia 的情況推薦哪個型號？",
+        "options": [
+          "SonicWave Pro",
+          "SonicWave Trail",
+          "SonicWave Mini",
+          "SonicWave Classic"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "客服回覆信中建議 Nadia 改選防水等級 IPX7、可完全防水的 SonicWave Trail 型號。"
+      },
+      {
+        "question_en": "Based on the advertisement and the support reply, why did the company suggest a different model to Nadia?",
+        "question_zh": "綜合廣告與客服回覆信件，公司為什麼建議 Nadia 選擇不同的型號？",
+        "options": [
+          "Because the advertised SonicWave Pro's IPX4 rating only handles light splashes, not the heavy rain Nadia described in her question",
+          "Because the SonicWave Pro is out of stock in her preferred color",
+          "Because the SonicWave Pro no longer comes with ear tips",
+          "Because the advertised price was incorrect"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這一題需要同時參考廣告與客服回覆信件：廣告說明 SonicWave Pro 為 IPX4 等級，僅能防輕微潑濺，而回覆信說明此等級不適合大雨環境，因此針對 Nadia 提到的重度雨天跑步需求，推薦防水等級更高的機型。"
+      },
+      {
+        "question_en": "Based on Nadia's e-mail and the support reply, when does the 30-day return period actually begin?",
+        "question_zh": "綜合 Nadia 的信件與客服回覆信件，30 天退貨期限實際上從何時開始計算？",
+        "options": [
+          "From the order date, as Nadia assumed",
+          "From the delivery date, as clarified in the reply",
+          "From the date the customer contacts support",
+          "There is no defined start date"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "這一題需要同時參考 Nadia 的信件與客服回覆信：Nadia 詢問退貨期限是從下單日還是到貨日起算，客服回覆明確說明是從到貨日開始計算 30 天。"
+      },
+      {
+        "question_en": "Based on all three documents, which product feature mentioned in the advertisement led Nadia to ask a follow-up question that resulted in a product recommendation change?",
+        "question_zh": "綜合三篇文件，廣告中提到的哪項產品特色促使 Nadia 提出後續問題，並因此導致產品推薦的變更？",
+        "options": [
+          "The IPX4 splash-resistance rating",
+          "The 8-hour battery life",
+          "The three included ear tip sizes",
+          "The same-day shipping cutoff time"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這一題需要同時參考三篇文件：廣告提到 SonicWave Pro 的 IPX4 防水等級，Nadia 的信中針對此等級是否適合大雨環境提出疑問，客服回覆信則因此建議她改用防水等級更高的 SonicWave Trail 型號。"
+      }
+    ]
+  },
+  {
+    "type": "triple",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "System Upgrade Notice",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "IT Department"
+          },
+          {
+            "label": "Scheduled Downtime:",
+            "value": "Saturday, 11:00 p.m. - Sunday, 5:00 a.m."
+          },
+          {
+            "label": "Systems Affected:",
+            "value": "Email, shared drives, timesheet portal"
+          }
+        ],
+        "paragraphs": [
+          "The IT Department will perform a scheduled system upgrade this weekend. Email, shared network drives, and the timesheet portal will be unavailable from Saturday at 11:00 p.m. until Sunday at 5:00 a.m.",
+          "All other systems, including the customer database and the internal messaging app, will remain accessible throughout the maintenance window.",
+          "Employees who need to submit timesheets before the weekend should do so by Friday at 5:00 p.m. Any timesheets not submitted by then can be entered after the system is restored Sunday morning, with no penalty for late entries caused by the maintenance window."
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Gemma Falk <g.falk@ridgeline.com>"
+          },
+          {
+            "label": "To:",
+            "value": "helpdesk@ridgeline.com"
+          },
+          {
+            "label": "Subject:",
+            "value": "Timesheet Question Before Maintenance"
+          },
+          {
+            "label": "Date:",
+            "value": "Friday, 2:15 p.m."
+          }
+        ],
+        "paragraphs": [
+          "Hi IT team,",
+          "I saw the notice about this weekend's system upgrade. I'm currently out of the office at a client site and won't be back at my desk until Monday, so I won't be able to submit my timesheet by 5:00 p.m. today as suggested.",
+          "Will I be marked late if I submit it Monday morning instead, after the maintenance window ends?",
+          "Also, will I still be able to use the internal messaging app this weekend if I need to reach a colleague, or is that affected by the upgrade too?",
+          "Thanks, Gemma"
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "helpdesk@ridgeline.com"
+          },
+          {
+            "label": "To:",
+            "value": "Gemma Falk <g.falk@ridgeline.com>"
+          },
+          {
+            "label": "Subject:",
+            "value": "RE: Timesheet Question Before Maintenance"
+          },
+          {
+            "label": "Date:",
+            "value": "Friday, 3:40 p.m."
+          }
+        ],
+        "paragraphs": [
+          "Hi Gemma,",
+          "Thanks for checking in. Since the timesheet portal will already be back online by the time you return on Monday, you're welcome to submit your timesheet then. As stated in our notice, late entries caused by the maintenance window carry no penalty, so there's nothing to worry about.",
+          "As for the messaging app, that system is not part of this weekend's maintenance, so you'll be able to use it normally to reach your colleague.",
+          "Let us know if you run into any other issues.",
+          "IT Help Desk"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "According to the notice, when will the scheduled maintenance take place?",
+        "question_zh": "根據公告內容，系統維護排定於何時進行？",
+        "options": [
+          "Friday, 5:00 p.m. to Saturday, 11:00 p.m.",
+          "Saturday, 11:00 p.m. to Sunday, 5:00 a.m.",
+          "Sunday, 5:00 a.m. to Monday morning",
+          "All weekend, with no fixed end time"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "公告說明系統維護時間為週六晚上 11 點至週日凌晨 5 點。"
+      },
+      {
+        "question_en": "According to the notice, which system will NOT be affected by the maintenance?",
+        "question_zh": "根據公告內容，哪個系統不會受到此次維護影響？",
+        "options": [
+          "The timesheet portal",
+          "Shared network drives",
+          "Email",
+          "The internal messaging app"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "公告說明內部通訊軟體與客戶資料庫在維護期間仍可正常使用。"
+      },
+      {
+        "question_en": "According to the notice, what is the deadline for submitting timesheets before the maintenance window?",
+        "question_zh": "根據公告內容，維護期間開始前，員工應於何時提交工時表？",
+        "options": [
+          "Friday at 5:00 p.m.",
+          "Saturday at 11:00 p.m.",
+          "Sunday at 5:00 a.m.",
+          "Monday at 9:00 a.m."
+        ],
+        "answer_index": 0,
+        "explanation_zh": "公告建議員工應在週五下午 5 點前提交工時表。"
+      },
+      {
+        "question_en": "According to Gemma's e-mail, why can't she submit her timesheet by the suggested deadline?",
+        "question_zh": "根據 Gemma 的信件內容，她為什麼無法在建議期限前提交工時表？",
+        "options": [
+          "She forgot about the deadline",
+          "She is at a client site and won't return until Monday",
+          "The timesheet portal is already down",
+          "She is on vacation this week"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "Gemma 在信中說明她目前在客戶現場出差，週一才會回到座位，因此無法趕在期限前提交工時表。"
+      },
+      {
+        "question_en": "Based on the notice and the help desk's reply, will Gemma face any penalty for submitting her timesheet on Monday?",
+        "question_zh": "綜合公告與客服回覆信件，Gemma 若在週一才提交工時表，是否會被視為遲交而受罰？",
+        "options": [
+          "Yes, because she missed the Friday deadline",
+          "No, because the notice states late entries caused by the maintenance window carry no penalty, which the reply confirms applies to her",
+          "Yes, but only a minor warning will be issued",
+          "No, but she must first request special permission"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "這一題需要同時參考公告與客服回覆信件：公告說明維護造成的遲交不會受罰，客服回覆信也向 Gemma 確認她週一提交工時表不會有任何問題，因此不會受罰。"
+      },
+      {
+        "question_en": "Based on Gemma's e-mail and the help desk's reply, will Gemma be able to contact her colleague through the messaging app this weekend?",
+        "question_zh": "綜合 Gemma 的信件與客服回覆信件，她這個週末是否能透過內部通訊軟體聯繫同事？",
+        "options": [
+          "No, because it is included in the maintenance window",
+          "Yes, because the help desk confirms the messaging app is not part of this weekend's maintenance",
+          "No, because only IT staff can access it during maintenance",
+          "Yes, but only for one hour each day"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "這一題需要同時參考 Gemma 的信件與客服回覆信：Gemma 詢問通訊軟體是否受影響，客服回覆確認該系統不在此次維護範圍內，因此她週末仍可正常使用。"
+      },
+      {
+        "question_en": "Based on all three documents, which detail from the notice did Gemma need clarified because her personal situation did not match the notice's general guidance?",
+        "question_zh": "綜合三篇文件，公告中的哪項細節因為與 Gemma 個人情況不符，而需要客服另外澄清？",
+        "options": [
+          "The Friday 5:00 p.m. timesheet deadline, since she would not be back at her desk until Monday",
+          "The list of systems affected by the upgrade",
+          "The exact start time of the maintenance window",
+          "The department responsible for the upgrade"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這一題需要同時參考三篇文件：公告建議員工於週五下午 5 點前提交工時表，但 Gemma 的信件說明她出差在外、週一才會回來，因此無法配合此一般性建議，客服回覆信便針對她的情況說明遲交不受罰。"
+      }
+    ]
+  },
+  {
+    "type": "triple",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Callum Bright <c.bright@driftwoodcafe.com>"
+          },
+          {
+            "label": "To:",
+            "value": "sales@baymillcoffee.com"
+          },
+          {
+            "label": "Subject:",
+            "value": "Bulk Coffee Bean Order Inquiry"
+          },
+          {
+            "label": "Date:",
+            "value": "February 2"
+          }
+        ],
+        "paragraphs": [
+          "Hello,",
+          "I run a small café and I'm interested in switching to your coffee beans as our primary supplier. Could you send me pricing for a bulk order of 50 kilograms of your medium-roast blend, delivered monthly?",
+          "I'd also like to know if there's a discount for signing a longer-term contract, such as six months or a year, rather than ordering month to month.",
+          "Thank you, Callum Bright, Driftwood Café"
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "sales@baymillcoffee.com"
+          },
+          {
+            "label": "To:",
+            "value": "Callum Bright <c.bright@driftwoodcafe.com>"
+          },
+          {
+            "label": "Subject:",
+            "value": "RE: Bulk Coffee Bean Order Inquiry"
+          },
+          {
+            "label": "Date:",
+            "value": "February 4"
+          }
+        ],
+        "paragraphs": [
+          "Dear Mr. Bright,",
+          "Thank you for considering Baymill Coffee. For a monthly order of 50 kilograms of our medium-roast blend, our standard rate is $9.50 per kilogram, or $475 per month, with free delivery included.",
+          "If you sign a 12-month contract, we offer a 10% discount on the per-kilogram rate, bringing the cost down to $8.55 per kilogram, or $427.50 per month. A 6-month contract carries a smaller 5% discount instead.",
+          "Please note that all contracts require a minimum order of 50 kilograms per month; orders cannot be reduced below this amount during the contract term, though they can be increased at any time.",
+          "Let us know which option you'd like to proceed with. Best regards, Baymill Coffee Sales"
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Callum Bright <c.bright@driftwoodcafe.com>"
+          },
+          {
+            "label": "To:",
+            "value": "sales@baymillcoffee.com"
+          },
+          {
+            "label": "Subject:",
+            "value": "RE: Bulk Coffee Bean Order Inquiry"
+          },
+          {
+            "label": "Date:",
+            "value": "February 6"
+          }
+        ],
+        "paragraphs": [
+          "Hello again,",
+          "Thank you for the detailed pricing. Given how busy our café has become, I'd like to proceed with the 12-month contract to lock in the better rate.",
+          "Since our minimum order under the contract will be 50 kilograms per month, I just want to confirm we could still increase to, say, 60 kilograms in a busy month like December without any issue.",
+          "Please send over the contract paperwork whenever it's ready. Thanks, Callum",
+          "P.S. Could the first delivery be arranged for March 1?"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "According to Callum's first e-mail, how much coffee does he want delivered monthly?",
+        "question_zh": "根據 Callum 第一封信件內容，他希望每月配送多少咖啡豆？",
+        "options": [
+          "25 kilograms",
+          "50 kilograms",
+          "75 kilograms",
+          "100 kilograms"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "Callum 在第一封信中詢問每月配送 50 公斤中焙咖啡豆的價格。"
+      },
+      {
+        "question_en": "According to Baymill's reply, what is the standard monthly rate without a long-term contract?",
+        "question_zh": "根據 Baymill 的回覆信件，若無長期合約，標準每月費用是多少？",
+        "options": [
+          "$427.50",
+          "$450",
+          "$475",
+          "$500"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "Baymill 回覆信中說明標準月費為每公斤 9.50 美元，換算每月 475 美元。"
+      },
+      {
+        "question_en": "According to Baymill's reply, what discount applies to a 12-month contract?",
+        "question_zh": "根據 Baymill 的回覆信件，簽訂 12 個月合約可享有多少折扣？",
+        "options": [
+          "5%",
+          "10%",
+          "15%",
+          "20%"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "Baymill 回覆信中說明簽訂 12 個月合約可享 10% 折扣，換算每公斤 8.55 美元。"
+      },
+      {
+        "question_en": "According to Callum's second e-mail, which contract length did he decide to choose?",
+        "question_zh": "根據 Callum 第二封信件內容，他決定選擇哪種合約期限？",
+        "options": [
+          "Month-to-month",
+          "6-month contract",
+          "12-month contract",
+          "2-year contract"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "Callum 在第二封信中表示要選擇 12 個月合約，以鎖定較優惠的價格。"
+      },
+      {
+        "question_en": "Based on Baymill's reply and Callum's second e-mail, will Callum be allowed to order 60 kilograms in December?",
+        "question_zh": "綜合 Baymill 的回覆信與 Callum 的第二封信件，Callum 是否可以在 12 月訂購 60 公斤咖啡豆？",
+        "options": [
+          "No, because contracts fix the order amount permanently",
+          "Yes, because Baymill's reply states orders can be increased above the 50-kilogram minimum at any time",
+          "No, because increases are only allowed with a month-to-month plan",
+          "Yes, but only with a new contract"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "這一題需要同時參考 Baymill 的回覆信與 Callum 的第二封信件：Baymill 回覆信說明合約期間訂單數量可隨時增加，只是不能低於 50 公斤的最低量，因此 Callum 詢問是否能在 12 月增加至 60 公斤時，答案是可以的。"
+      },
+      {
+        "question_en": "Based on Baymill's reply and Callum's second e-mail, approximately how much will Callum pay per month under his chosen contract?",
+        "question_zh": "綜合 Baymill 的回覆信與 Callum 的第二封信件，依他選擇的合約，每月大約需支付多少費用？",
+        "options": [
+          "$427.50",
+          "$451.25",
+          "$475",
+          "$500"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這一題需要同時參考 Baymill 的回覆信與 Callum 的第二封信件：回覆信說明 12 個月合約每月費用為 427.50 美元，而 Callum 第二封信確認選擇 12 個月合約，因此每月費用即為 427.50 美元。"
+      },
+      {
+        "question_en": "Based on all three e-mails, what does Callum ask for in his final message that neither of the earlier two e-mails addressed?",
+        "question_zh": "綜合三封信件，Callum 在最後一封信中提出了哪一項前兩封信件都未提及的請求？",
+        "options": [
+          "The price per kilogram",
+          "A specific date for the first delivery",
+          "The discount percentage for a 12-month contract",
+          "Whether free delivery is included"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "這一題需要同時參考三封信件：前兩封信討論的是價格與合約折扣，而 Callum 的第三封信在結尾額外提出希望首次配送安排在 3 月 1 日，這是前兩封信都未提到的新問題。"
+      }
+    ]
+  },
+  {
+    "type": "triple",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "ad",
+        "title": "Membership Advertisement",
+        "meta": [
+          {
+            "label": "Studio:",
+            "value": "Pulse Cycle Studio"
+          },
+          {
+            "label": "Offer:",
+            "value": "Founding Member Rate"
+          },
+          {
+            "label": "Deadline:",
+            "value": "April 30"
+          }
+        ],
+        "paragraphs": [
+          "Pulse Cycle Studio is opening its doors this May! Sign up as a Founding Member before April 30 and lock in a rate of $79 per month for unlimited classes, guaranteed for your first 12 months of membership.",
+          "After the founding member period ends, standard membership rates will apply, which are expected to be $99 per month. Founding members are also guaranteed a reserved bike for the same class time each week, for as long as they remain members.",
+          "Spots are limited to the first 150 sign-ups. Complete the membership application form and submit it online or in person to reserve your spot."
+        ],
+        "table": null
+      },
+      {
+        "kind": "form",
+        "title": "Membership Application Form",
+        "meta": [
+          {
+            "label": "Applicant:",
+            "value": "Soo-ah Bae"
+          },
+          {
+            "label": "Preferred Class Time:",
+            "value": "Tuesdays and Thursdays, 6:00 p.m."
+          },
+          {
+            "label": "Submitted:",
+            "value": "April 22"
+          }
+        ],
+        "paragraphs": [
+          "Membership Type: Founding Member — Monthly Rate: $79",
+          "Payment Method: Credit card on file, auto-renewed monthly",
+          "Reserved Bike Request: Yes, requesting the same bike (front row, left side) for all sessions",
+          "Emergency Contact: Jun Bae, spouse, (555) 019-2234",
+          "Signature confirms agreement to the 12-month founding member rate guarantee and studio policies."
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Pulse Cycle Studio <welcome@pulsecyclestudio.com>"
+          },
+          {
+            "label": "To:",
+            "value": "Soo-ah Bae <s.bae@mailhub.com>"
+          },
+          {
+            "label": "Subject:",
+            "value": "Welcome to Pulse Cycle Studio!"
+          },
+          {
+            "label": "Date:",
+            "value": "April 23"
+          }
+        ],
+        "paragraphs": [
+          "Dear Ms. Bae,",
+          "Congratulations, and welcome as one of our Founding Members! Your application has been processed, and your $79 monthly rate is locked in through April of next year.",
+          "We've noted your preferred class time of Tuesdays and Thursdays at 6:00 p.m., and your reserved bike request has been confirmed for the front row, left side, for as long as you remain a member.",
+          "Please note that your reserved bike guarantee applies specifically to your requested class time; if you attend a different class time on occasion, a reserved bike cannot be guaranteed for that session.",
+          "We can't wait to see you at your first class in May! Pulse Cycle Studio Team"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "According to the advertisement, what is the Founding Member monthly rate?",
+        "question_zh": "根據廣告內容，創始會員的每月費率是多少？",
+        "options": [
+          "$59",
+          "$79",
+          "$99",
+          "$120"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "廣告說明創始會員的每月費率為 79 美元。"
+      },
+      {
+        "question_en": "According to the advertisement, how many founding member spots are available?",
+        "question_zh": "根據廣告內容，創始會員名額共有多少個？",
+        "options": [
+          "50",
+          "100",
+          "150",
+          "200"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "廣告說明創始會員名額限前 150 位申請者。"
+      },
+      {
+        "question_en": "According to the application form, what class time did Soo-ah Bae request?",
+        "question_zh": "根據申請表內容，Soo-ah Bae 申請的課程時段為何？",
+        "options": [
+          "Mondays and Wednesdays, 7:00 p.m.",
+          "Tuesdays and Thursdays, 6:00 p.m.",
+          "Saturdays, 9:00 a.m.",
+          "Fridays, 6:00 p.m."
+        ],
+        "answer_index": 1,
+        "explanation_zh": "申請表列出 Soo-ah Bae 偏好的課程時段為週二、週四晚上 6 點。"
+      },
+      {
+        "question_en": "According to the welcome e-mail, how long is Soo-ah Bae's $79 rate guaranteed?",
+        "question_zh": "根據歡迎信件內容，Soo-ah Bae 的 79 美元費率保證維持多久？",
+        "options": [
+          "6 months",
+          "Through April of next year (12 months)",
+          "Indefinitely",
+          "Only for the first month"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "歡迎信中說明她的 79 美元費率保證維持到明年 4 月，即為期 12 個月。"
+      },
+      {
+        "question_en": "Based on the advertisement and the application form, why was it important for Soo-ah Bae to submit her form before April 30?",
+        "question_zh": "綜合廣告與申請表內容，為什麼 Soo-ah Bae 必須在 4 月 30 日前提交申請表相當重要？",
+        "options": [
+          "Because the advertisement states the Founding Member rate is only available to those who sign up before that deadline, and her form is dated April 22, within that window",
+          "Because the studio closes permanently after April 30",
+          "Because bikes are only available before that date",
+          "Because the application fee increases after that date"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這一題需要同時參考廣告與申請表：廣告說明創始會員優惠僅開放至 4 月 30 日前申請，申請表顯示 Soo-ah Bae 的提交日期為 4 月 22 日，正好在期限內，因此她才能取得此優惠資格。"
+      },
+      {
+        "question_en": "Based on the application form and the welcome e-mail, under what condition is Soo-ah Bae's reserved bike guaranteed?",
+        "question_zh": "綜合申請表與歡迎信件，Soo-ah Bae 的保留單車在什麼條件下才有保障？",
+        "options": [
+          "Only when she attends her requested Tuesday/Thursday 6:00 p.m. class time",
+          "At any class time she chooses to attend",
+          "Only during her first month of membership",
+          "Only if she brings a guest"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這一題需要同時參考申請表與歡迎信件：申請表記錄她要求保留前排左側單車，歡迎信進一步說明此保留僅適用於她申請的週二、週四晚上 6 點課程時段，若參加其他時段則不保證有保留座位。"
+      },
+      {
+        "question_en": "Based on all three documents, after Soo-ah Bae's founding member period ends, what rate will she likely need to pay unless otherwise stated?",
+        "question_zh": "綜合三篇文件，Soo-ah Bae 的創始會員優惠期滿後，若無其他說明，她可能需支付的費率是多少？",
+        "options": [
+          "$79 per month, unchanged",
+          "$99 per month, the standard rate mentioned in the advertisement",
+          "$120 per month",
+          "Membership ends automatically with no option to continue"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "這一題需要同時參考三篇文件：廣告說明創始會員優惠期滿後，將改為標準費率每月 99 美元，申請表與歡迎信雖確認她鎖定 79 美元費率長達 12 個月，但並未提及期滿後有特殊安排，因此依廣告內容推論期滿後將回歸每月 99 美元的標準費率。"
+      }
+    ]
+  },
+  {
+    "type": "triple",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "ad",
+        "title": "Advertisement",
+        "meta": [
+          {
+            "label": "Company:",
+            "value": "Anchorline Moving & Storage"
+          },
+          {
+            "label": "Service Area:",
+            "value": "Statewide"
+          },
+          {
+            "label": "Free Estimate:",
+            "value": "Available online"
+          }
+        ],
+        "paragraphs": [
+          "Moving soon? Anchorline Moving & Storage offers full-service moves, including packing, loading, transport, and unloading, anywhere in the state. Get a free online estimate in minutes at www.anchorlinemoving.com.",
+          "Our base rate starts at $0.80 per pound for moves under 100 miles, with a $150 minimum charge. Long-distance moves over 100 miles are calculated using a separate mileage-based rate.",
+          "Need temporary storage between homes? We offer climate-controlled storage units at $60 per month for up to 30 days free with any full-service move booked this season."
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Priyansh Kapoor <p.kapoor@mailhub.com>"
+          },
+          {
+            "label": "To:",
+            "value": "quotes@anchorlinemoving.com"
+          },
+          {
+            "label": "Subject:",
+            "value": "Quote Request for Local Move"
+          },
+          {
+            "label": "Date:",
+            "value": "June 10"
+          }
+        ],
+        "paragraphs": [
+          "Hello,",
+          "I'm planning a move within the same city, about 12 miles away, and I estimate my household items weigh around 4,000 pounds. Based on your advertised rate, I calculated an estimate, but I'd like to confirm the exact cost before booking.",
+          "I would also need about three weeks of storage between move-out and move-in dates. Since the ad mentions up to 30 days of free storage with a full-service move, would my three-week need fall within that free period, or does the offer only apply beyond 30 days?",
+          "Please let me know the total estimated cost. Thank you, Priyansh Kapoor"
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "quotes@anchorlinemoving.com"
+          },
+          {
+            "label": "To:",
+            "value": "Priyansh Kapoor <p.kapoor@mailhub.com>"
+          },
+          {
+            "label": "Subject:",
+            "value": "RE: Quote Request for Local Move"
+          },
+          {
+            "label": "Date:",
+            "value": "June 11"
+          }
+        ],
+        "paragraphs": [
+          "Dear Mr. Kapoor,",
+          "Thank you for reaching out. Based on your estimated weight of 4,000 pounds and a distance of 12 miles, your move falls under our local rate of $0.80 per pound, which comes to $3,200. Since this exceeds our $150 minimum charge, the minimum does not apply in your case.",
+          "Regarding storage, our free storage offer covers up to 30 days, so your three-week (21-day) storage need falls entirely within that free period at no additional cost, as long as you book the full-service move package.",
+          "We'd be happy to schedule your move whenever you're ready. Please reply to confirm a date.",
+          "Best regards, Anchorline Moving & Storage"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "According to the advertisement, what is the base rate for moves under 100 miles?",
+        "question_zh": "根據廣告內容，未滿 100 英里的搬家基本費率是多少？",
+        "options": [
+          "$0.50 per pound",
+          "$0.80 per pound",
+          "$1.00 per pound",
+          "$150 flat rate"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "廣告說明未滿 100 英里的搬家基本費率為每磅 0.80 美元。"
+      },
+      {
+        "question_en": "According to the advertisement, how much does temporary storage cost per month?",
+        "question_zh": "根據廣告內容，臨時倉儲每月費用是多少？",
+        "options": [
+          "$30",
+          "$60",
+          "$100",
+          "$150"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "廣告說明臨時倉儲每月費用為 60 美元，但搭配全套搬家服務可享 30 天免費。"
+      },
+      {
+        "question_en": "According to Priyansh's e-mail, approximately how far is his move?",
+        "question_zh": "根據 Priyansh 的信件內容，他的搬家距離大約是多遠？",
+        "options": [
+          "4 miles",
+          "12 miles",
+          "40 miles",
+          "100 miles"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "Priyansh 在信中提到他的搬家距離約為 12 英里，屬於同城搬遷。"
+      },
+      {
+        "question_en": "According to Priyansh's e-mail, how long does he estimate he will need storage?",
+        "question_zh": "根據 Priyansh 的信件內容，他預估需要多久的倉儲時間？",
+        "options": [
+          "One week",
+          "Two weeks",
+          "Three weeks",
+          "Six weeks"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "Priyansh 在信中提到他大約需要三週的倉儲時間。"
+      },
+      {
+        "question_en": "Based on the advertisement and the company's reply, how was Priyansh's total moving cost of $3,200 calculated?",
+        "question_zh": "綜合廣告與公司回覆信件，Priyansh 的搬家總費用 3,200 美元是如何計算出來的？",
+        "options": [
+          "By multiplying his estimated 4,000-pound weight by the advertised $0.80 per pound local rate",
+          "By applying the $150 minimum charge",
+          "By using the long-distance mileage rate",
+          "By adding a flat storage fee to the base rate"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這一題需要同時參考廣告與公司回覆信件：廣告列出未滿 100 英里的費率為每磅 0.80 美元，回覆信則以 Priyansh 信中提到的 4,000 磅重量乘以此費率，計算出總費用為 3,200 美元。"
+      },
+      {
+        "question_en": "Based on Priyansh's e-mail and the company's reply, will he be charged for his storage needs?",
+        "question_zh": "綜合 Priyansh 的信件與公司回覆信件，他的倉儲需求是否需要額外付費？",
+        "options": [
+          "Yes, because his need exceeds the free storage limit",
+          "No, because his three-week storage need falls within the 30-day free period offered with a full-service move",
+          "Yes, at the standard $60 monthly rate",
+          "No, because storage is always free regardless of move type"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "這一題需要同時參考 Priyansh 的信件與公司回覆信：Priyansh 詢問三週倉儲是否落在免費期間內，回覆信確認他的三週（21 天）需求完全在 30 天免費期限內，只要訂購全套搬家服務即可免費使用。"
+      },
+      {
+        "question_en": "Based on all three documents, which advertised condition determined that Priyansh would NOT be charged the $150 minimum fee?",
+        "question_zh": "綜合三篇文件，廣告中的哪項條件決定了 Priyansh 不會被收取 150 美元的最低收費？",
+        "options": [
+          "The fact that his calculated cost based on weight and distance already exceeded the $150 minimum",
+          "The fact that he booked storage along with his move",
+          "The fact that his move was local rather than long-distance",
+          "The fact that he requested a free online estimate first"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "這一題需要同時參考三篇文件：廣告說明未滿 100 英里的搬家設有 150 美元最低收費，Priyansh 的信件提供了重量與距離資訊，公司回覆信計算出的 3,200 美元已遠超過此最低收費門檻，因此最低收費規定對他不適用。"
+      }
+    ]
+  }
+]

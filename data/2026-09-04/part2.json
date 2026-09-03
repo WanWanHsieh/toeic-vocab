@@ -1,0 +1,442 @@
+[
+  {
+    "question": "Who's picking up the visitors from the airport?",
+    "options": [
+      "Grace is going to meet them at gate three.",
+      "The visitors arrived a bit early.",
+      "Yes, the flight landed on time."
+    ],
+    "answer_index": 0,
+    "question_type": "wh_question",
+    "explanation_zh": "問題問「誰」去接機，只有 (A) 明確指出是 Grace。(B) 講訪客提早到了，是話題轉移，沒有回答是誰去接。(C) 用 yes 回答 Wh- 問題，答非所問，所以答案是 (A)。"
+  },
+  {
+    "question": "What time does the pharmacy close tonight?",
+    "options": [
+      "It closes at ten tonight.",
+      "I bought some cold medicine there.",
+      "No, it opens at nine in the morning."
+    ],
+    "answer_index": 0,
+    "question_type": "wh_question",
+    "explanation_zh": "問題問藥局「幾點」關門，只有 (A) 給出明確時間。(B) 講在那裡買了感冒藥，是話題轉移，沒有回答關門時間。(C) 用 no 回答 Wh- 問題，且內容講的是開門時間而非關門時間，所以答案是 (A)。"
+  },
+  {
+    "question": "Where did you park the delivery truck?",
+    "options": [
+      "Right behind the loading dock.",
+      "The park down the street is closed.",
+      "It arrived a little late today."
+    ],
+    "answer_index": 0,
+    "question_type": "wh_question",
+    "explanation_zh": "問題問卡車停在「哪裡」，只有 (A) 給出具體位置。(B) 的 park 雖然重複出現，但意思變成「公園」，是詞義混淆陷阱。(C) 講貨車今天晚到，答非所問，是話題轉移，所以答案是 (A)。"
+  },
+  {
+    "question": "When does the new software update roll out?",
+    "options": [
+      "Next Monday, according to IT.",
+      "The software crashed twice today.",
+      "I rolled up the carpet already."
+    ],
+    "answer_index": 0,
+    "question_type": "wh_question",
+    "explanation_zh": "問題問軟體更新「何時」推出，只有 (A) 給出明確時間。(B) 講軟體當機了兩次，屬於話題轉移，沒有回答時間。(C) 的 rolled up 與 roll out 發音相近，是音似陷阱，內容卻與更新時間無關，所以答案是 (A)。"
+  },
+  {
+    "question": "Why did the vendor cancel the order?",
+    "options": [
+      "They ran out of raw materials.",
+      "The order arrived a day late.",
+      "I ordered lunch for the whole team."
+    ],
+    "answer_index": 0,
+    "question_type": "wh_question",
+    "explanation_zh": "問題問廠商「為什麼」取消訂單，只有 (A) 用具體原因回答。(B) 講訂單晚了一天送達，答非所問，是話題轉移。(C) 的 ordered 雖與問題重複，但講的是訂午餐，是詞彙重複陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "How do you access the shared drive from home?",
+    "options": [
+      "You need to log in through the VPN first.",
+      "I have a spare key to the front door.",
+      "The drive to the office takes about an hour."
+    ],
+    "answer_index": 0,
+    "question_type": "wh_question",
+    "explanation_zh": "問題問「如何」從家裡連上共用硬碟，只有 (A) 給出具體步驟。(B) 由 access 聯想到 key（鑰匙），是詞彙聯想陷阱，與硬碟存取無關。(C) 的 drive 雖然重複，但意思變成「開車」，是詞義混淆陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "What's the deadline for submitting expense reports?",
+    "options": [
+      "This Friday by five o'clock.",
+      "I already expensed my hotel stay.",
+      "No, the reports were all approved."
+    ],
+    "answer_index": 0,
+    "question_type": "wh_question",
+    "explanation_zh": "問題問報帳「截止日期」，只有 (A) 給出明確時間。(B) 的 expensed 與 expense 字根相同但答非所問，是同源詞混淆陷阱。(C) 用 no 回答 Wh- 問題，屬於答錯類型，所以答案是 (A)。"
+  },
+  {
+    "question": "Who approved the budget increase for marketing?",
+    "options": [
+      "The finance director signed off on it.",
+      "The marketing campaign launched last week.",
+      "Yes, it was a significant increase."
+    ],
+    "answer_index": 0,
+    "question_type": "wh_question",
+    "explanation_zh": "問題問「誰」核准了預算增加，只有 (A) 明確指出是財務總監。(B) 講行銷活動上週上線，屬於話題轉移，沒有回答是誰核准的。(C) 用 yes 回答 Wh- 問題，答非所問，所以答案是 (A)。"
+  },
+  {
+    "question": "Did you renew your parking permit yet?",
+    "options": [
+      "Yes, I renewed it online this morning.",
+      "The parking lot is under construction.",
+      "I permitted him to leave early."
+    ],
+    "answer_index": 0,
+    "question_type": "yes_no_question",
+    "explanation_zh": "這是 yes/no 問題，只有 (A) 明確以 yes 回答並補充細節。(B) 講停車場正在施工，是話題轉移，沒有回答是否更新。(C) 的 permitted 與 permit 字根相同但意思是「允許」，是同源詞混淆陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "Is the Wi-Fi password still the same?",
+    "options": [
+      "No, it was changed last week.",
+      "I forgot my email password again.",
+      "Yes, the connection is really fast today."
+    ],
+    "answer_index": 0,
+    "question_type": "yes_no_question",
+    "explanation_zh": "這是 yes/no 問題，只有 (A) 明確以 no 回答並說明現況。(B) 的 password 雖然重複，但講的是信箱密碼，是話題轉移。(C) 開頭說 yes 卻接著講網速很快，答非所問，是假肯定陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "Have you submitted your timesheet for this week?",
+    "options": [
+      "Not yet, I'll do it this afternoon.",
+      "The time difference is really confusing.",
+      "Yes, I worked a lot of overtime yesterday."
+    ],
+    "answer_index": 0,
+    "question_type": "yes_no_question",
+    "explanation_zh": "這是 yes/no 問題，只有 (A) 明確回答還沒交並說明何時會交。(B) 的 time 雖然重複，但講的是時差，是詞彙聯想陷阱。(C) 開頭說 yes 卻講加班的事，答非所問，屬於假肯定陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "Will the caterer arrive before the guests?",
+    "options": [
+      "Yes, they're setting up right now.",
+      "The guests are running a little late.",
+      "I've ordered catering for events before."
+    ],
+    "answer_index": 0,
+    "question_type": "yes_no_question",
+    "explanation_zh": "這是 yes/no 問題，只有 (A) 明確以 yes 回答並說明現況。(B) 講賓客會晚一點到，答非所問，是話題轉移。(C) 的 catering 雖然重複，但講的是過去經驗，並未回答本次順序問題，所以答案是 (A)。"
+  },
+  {
+    "question": "Did the courier pick up the package already?",
+    "options": [
+      "Yes, about twenty minutes ago.",
+      "The package was slightly damaged.",
+      "It weighs about five kilograms."
+    ],
+    "answer_index": 0,
+    "question_type": "yes_no_question",
+    "explanation_zh": "這是 yes/no 問題，只有 (A) 明確以 yes 回答並補充時間。(B) 講包裹有點損壞，屬於話題轉移，沒有回答是否已取件。(C) 講包裹重量，同樣答非所問，所以答案是 (A)。"
+  },
+  {
+    "question": "Is the projector working in the main conference room?",
+    "options": [
+      "No, we need to replace the bulb.",
+      "The conference starts at nine sharp.",
+      "I'm projecting a ten percent increase."
+    ],
+    "answer_index": 0,
+    "question_type": "yes_no_question",
+    "explanation_zh": "這是 yes/no 問題，只有 (A) 明確以 no 回答並說明原因。(B) 的 conference 雖然重複，但答非所問，是話題轉移。(C) 的 projecting 與 projector 字根相同但意思是「預估」，是同源詞混淆陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "Have you heard back from the supplier about the delay?",
+    "options": [
+      "Not yet, I'll call them again today.",
+      "The supplier just raised their prices.",
+      "Yes, the delay was fairly short."
+    ],
+    "answer_index": 0,
+    "question_type": "yes_no_question",
+    "explanation_zh": "這是 yes/no 問題，只有 (A) 明確回答還沒收到回覆並說明下一步。(B) 講供應商漲價，屬於話題轉移，沒有回答是否收到回覆。(C) 雖然說 yes，但只評論延誤時間長短，並未確認是否已收到回覆，是模糊的假肯定陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "Does this elevator go up to the rooftop terrace?",
+    "options": [
+      "No, you'll need to take the stairs from the tenth floor.",
+      "The terrace has a really great view.",
+      "I elevated my chair last week."
+    ],
+    "answer_index": 0,
+    "question_type": "yes_no_question",
+    "explanation_zh": "這是 yes/no 問題，只有 (A) 明確以 no 回答並提供替代方式。(B) 稱讚露台的視野很棒，是話題轉移，沒有回答電梯是否到得了。(C) 的 elevated 與 elevator 字根相同但意思是「調高」，是同源詞混淆陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "You've already set up the projector for the keynote, haven't you?",
+    "options": [
+      "Yes, it's all ready to go.",
+      "The keynote speaker arrives at noon.",
+      "I set the table for dinner last night."
+    ],
+    "answer_index": 0,
+    "question_type": "tag_question",
+    "explanation_zh": "附加問句在確認投影機是否已架設好，只有 (A) 明確肯定並說明狀態。(B) 講主講人中午到，屬於話題轉移，沒有確認投影機的事。(C) 的 set 雖然重複，但講的是擺餐桌，是詞彙重複但語意不同的陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "You already registered for the conference, didn't you?",
+    "options": [
+      "Yes, I registered last week.",
+      "The conference is being held downtown.",
+      "I registered a complaint with HR."
+    ],
+    "answer_index": 0,
+    "question_type": "tag_question",
+    "explanation_zh": "附加問句在確認對方是否已報名研討會，只有 (A) 明確肯定並補充時間。(B) 講研討會辦在市區，屬於話題轉移，沒有確認是否報名。(C) 的 registered 雖然重複，但講的是「提出申訴」，是詞義混淆陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "This is the last box for the move, isn't it?",
+    "options": [
+      "Yes, that's everything.",
+      "The movers arrive at nine tomorrow.",
+      "I moved to a new apartment last year."
+    ],
+    "answer_index": 0,
+    "question_type": "tag_question",
+    "explanation_zh": "附加問句在確認這是搬家的最後一箱，只有 (A) 明確肯定。(B) 的 movers 與 move 字根相同但答非所問，是同源詞混淆陷阱。(C) 講去年搬到新公寓，時態不符且屬於話題轉移，所以答案是 (A)。"
+  },
+  {
+    "question": "You haven't tried the new cafeteria menu yet, have you?",
+    "options": [
+      "Actually, I had lunch there yesterday.",
+      "The menu changes every month.",
+      "Yes, I'm currently on a diet."
+    ],
+    "answer_index": 0,
+    "question_type": "tag_question",
+    "explanation_zh": "附加問句在確認對方是否試過新菜單，只有 (A) 明確說明已經去吃過。(B) 講菜單每個月更換，屬於話題轉移，沒有正面回答。(C) 開頭說 yes 卻講在節食，答非所問，是假肯定陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "We're supposed to wear name tags at the event, aren't we?",
+    "options": [
+      "Yes, they're available at the registration desk.",
+      "The event was rescheduled to Friday.",
+      "I tagged along with my coworker."
+    ],
+    "answer_index": 0,
+    "question_type": "tag_question",
+    "explanation_zh": "附加問句在確認活動是否要戴名牌，只有 (A) 明確肯定並說明領取地點。(B) 講活動改期到週五，屬於話題轉移，沒有確認名牌的事。(C) 的 tagged 與 tag 字根相同但意思是「跟著去」，是同源詞混淆陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "The new hire starts next Monday, doesn't she?",
+    "options": [
+      "That's right, in the marketing department.",
+      "She hired a moving company last month.",
+      "Monday's meeting got canceled."
+    ],
+    "answer_index": 0,
+    "question_type": "tag_question",
+    "explanation_zh": "附加問句在確認新員工下週一到職，只有 (A) 明確肯定並補充部門。(B) 的 hired 與 hire 字根相同但意思是「僱用（搬家公司）」，是同源詞混淆陷阱。(C) 講週一的會議取消了，屬於話題轉移，所以答案是 (A)。"
+  },
+  {
+    "question": "You backed up the server before the migration, didn't you?",
+    "options": [
+      "Of course, I did it last night.",
+      "The migration took about three hours.",
+      "I backed the car out of the garage."
+    ],
+    "answer_index": 0,
+    "question_type": "tag_question",
+    "explanation_zh": "附加問句在確認是否已備份伺服器，只有 (A) 明確肯定並說明時間。(B) 講遷移花了三小時，屬於話題轉移，沒有確認是否備份。(C) 的 backed 雖然重複，但講的是「倒車」，是詞義混淆陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "This isn't the final version of the contract, is it?",
+    "options": [
+      "No, legal is still reviewing it.",
+      "The contract expires in June.",
+      "I finally finished the report."
+    ],
+    "answer_index": 0,
+    "question_type": "tag_question",
+    "explanation_zh": "附加問句在確認合約是否為最終版本，只有 (A) 明確否定並說明現況。(B) 講合約到期日，屬於話題轉移，沒有回答版本問題。(C) 的 finally 與 final 字根相近但意思不同，是音似／詞形混淆陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "Could you please forward me the minutes from yesterday's meeting?",
+    "options": [
+      "Sure, I'll send them right after this call.",
+      "I only have a few minutes to spare.",
+      "The next meeting starts at three."
+    ],
+    "answer_index": 0,
+    "question_type": "statement_or_request",
+    "explanation_zh": "這是一個請求，最佳回應是答應並說明何時處理，只有 (A) 符合。(B) 的 minutes 雖然重複，但意思變成「幾分鐘」，是詞義混淆陷阱。(C) 講下一場會議的時間，屬於話題轉移，所以答案是 (A)。"
+  },
+  {
+    "question": "The vending machine on this floor ate my money again.",
+    "options": [
+      "I'll report it to building maintenance.",
+      "I vent my frustrations by jogging.",
+      "The machine was installed last year."
+    ],
+    "answer_index": 0,
+    "question_type": "statement_or_request",
+    "explanation_zh": "這是一句抱怨自動販賣機故障的陳述，最佳回應應主動提供協助，只有 (A) 符合。(B) 的 vent 與 vending 發音相近，是音似陷阱，內容卻與販賣機無關。(C) 講機器是去年安裝的，屬於話題轉移，沒有回應目前的故障，所以答案是 (A)。"
+  },
+  {
+    "question": "You should really back up your photos before you sell your old phone.",
+    "options": [
+      "Good point, I'll do that tonight.",
+      "I sold my phone for a good price.",
+      "The photo album is in the top drawer."
+    ],
+    "answer_index": 0,
+    "question_type": "statement_or_request",
+    "explanation_zh": "這是一句建議，最佳回應應是對建議的反應，只有 (A) 表示同意並會照做。(B) 講手機賣了好價錢，時態不符且屬於話題轉移。(C) 的 photo 雖然重複，但講的是相簿放在抽屜，答非所問，所以答案是 (A)。"
+  },
+  {
+    "question": "Would you mind turning off the lights when you leave the lab?",
+    "options": [
+      "Not at all, I'll switch them off.",
+      "The lab results came back normal.",
+      "I left my badge at the front desk."
+    ],
+    "answer_index": 0,
+    "question_type": "statement_or_request",
+    "explanation_zh": "這是一個請求，最佳回應是答應並採取行動，只有 (A) 符合。(B) 的 lab 雖然重複，但講的是檢驗結果，屬於話題轉移。(C) 的 left 與 leave 字根相同但意思不同，是同源詞混淆陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "It looks like we're running low on printer paper.",
+    "options": [
+      "I'll order some more from the supply closet.",
+      "The printer jammed again this morning.",
+      "I printed the report double-sided."
+    ],
+    "answer_index": 0,
+    "question_type": "statement_or_request",
+    "explanation_zh": "這是一句提出問題的陳述，最佳回應應提出解決辦法，只有 (A) 符合。(B) 講印表機又卡紙了，屬於話題轉移，沒有回應紙張不足的問題。(C) 的 printed 與 printer 字根相同但答非所問，是同源詞混淆陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "Your presentation on the quarterly earnings was excellent.",
+    "options": [
+      "Thank you, I practiced a lot beforehand.",
+      "The earnings report comes out on Monday.",
+      "Yes, I earned a nice bonus this year."
+    ],
+    "answer_index": 0,
+    "question_type": "statement_or_request",
+    "explanation_zh": "這是一句稱讚的陳述，最佳回應是道謝並回應，只有 (A) 符合。(B) 講財報將於週一發布，時態不符，屬於話題轉移。(C) 的 earned 與 earnings 字根相同但答非所問，且用 yes 回答陳述句，屬於類型錯誤陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "Why don't you join us for the team lunch on Friday?",
+    "options": [
+      "I'd love to, thanks for asking.",
+      "Friday is usually our busiest day.",
+      "I already had lunch a while ago."
+    ],
+    "answer_index": 0,
+    "question_type": "statement_or_request",
+    "explanation_zh": "這是一個邀約，最佳回應是接受或回應邀約，只有 (A) 符合。(B) 講週五通常最忙，並未明確接受或婉拒邀約，是模糊的話題轉移。(C) 講稍早已經吃過午餐，時態與情境不符，所以答案是 (A)。"
+  },
+  {
+    "question": "Don't forget to badge in before you enter the server room.",
+    "options": [
+      "Thanks for reminding me, I almost forgot.",
+      "The server has been down since noon.",
+      "I have a spare badge in my bag."
+    ],
+    "answer_index": 0,
+    "question_type": "statement_or_request",
+    "explanation_zh": "這是一個提醒事項，最佳回應是表示會照做，只有 (A) 符合。(B) 講伺服器中午就當機了，屬於話題轉移，沒有回應刷卡的提醒。(C) 提到包包裡有備用識別證，看似相關卻答非所問，屬於誤導性陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "Should we send the client's order by air or by sea?",
+    "options": [
+      "Air would be faster for this order.",
+      "The order was quite heavy this time.",
+      "Yes, we should send it out soon."
+    ],
+    "answer_index": 0,
+    "question_type": "choice_question",
+    "explanation_zh": "這是選擇問句，只有 (A) 明確在兩個選項中選了空運。(B) 講這批貨很重，屬於話題轉移，沒有做出選擇。(C) 用 yes 回答選擇問句，是答非所問的類型陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "Do you want your coffee with milk or black?",
+    "options": [
+      "Black, please, no milk.",
+      "The coffee machine is broken again.",
+      "No, I don't really drink coffee."
+    ],
+    "answer_index": 0,
+    "question_type": "choice_question",
+    "explanation_zh": "這是選擇問句，只有 (A) 明確選了黑咖啡。(B) 講咖啡機又壞了，屬於話題轉移，沒有做出選擇。(C) 用 no 回答選擇問句，屬於答非所問的類型陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "Would you rather meet in person or join by video call?",
+    "options": [
+      "Video call works better for me.",
+      "The video was a bit too long.",
+      "Yes, let's meet up soon."
+    ],
+    "answer_index": 0,
+    "question_type": "choice_question",
+    "explanation_zh": "這是選擇問句，只有 (A) 明確選了視訊會議。(B) 的 video 雖然重複，但講的是影片太長，屬於話題轉移。(C) 用 yes 回答選擇問句，是答非所問的類型陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "Is the training session in the morning or the afternoon?",
+    "options": [
+      "It's scheduled for the afternoon.",
+      "The morning traffic was terrible today.",
+      "No, it's actually been canceled."
+    ],
+    "answer_index": 0,
+    "question_type": "choice_question",
+    "explanation_zh": "這是選擇問句，只有 (A) 明確選了下午。(B) 講今天早上塞車，屬於話題轉移，沒有做出選擇。(C) 用 no 回答選擇問句，屬於答非所問的類型陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "Should I file this under 'clients' or 'vendors'?",
+    "options": [
+      "Put it under 'vendors', I think.",
+      "The file cabinet is locked right now.",
+      "Yes, that folder is completely full."
+    ],
+    "answer_index": 0,
+    "question_type": "choice_question",
+    "explanation_zh": "這是選擇問句，只有 (A) 明確選了 vendors 這個分類。(B) 的 file 雖然重複，但講的是檔案櫃上鎖了，屬於話題轉移。(C) 用 yes 回答選擇問句，是答非所問的類型陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "Do you prefer the window seat or the aisle seat?",
+    "options": [
+      "I'll take the aisle seat, thanks.",
+      "The window needs a good cleaning.",
+      "Yes, the flight is completely full."
+    ],
+    "answer_index": 0,
+    "question_type": "choice_question",
+    "explanation_zh": "這是選擇問句，只有 (A) 明確選了走道座位。(B) 的 window 雖然重複，但講的是窗戶需要清潔，屬於話題轉移。(C) 用 yes 回答選擇問句，是答非所問的類型陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "Are we paying by credit card or by invoice?",
+    "options": [
+      "Let's go with the invoice this time.",
+      "The credit card was declined earlier.",
+      "Yes, the payment went through fine."
+    ],
+    "answer_index": 0,
+    "question_type": "choice_question",
+    "explanation_zh": "這是選擇問句，只有 (A) 明確選了用發票（月結）付款。(B) 講信用卡剛剛被拒絕，屬於話題轉移，沒有做出選擇。(C) 用 yes 回答選擇問句，是答非所問的類型陷阱，所以答案是 (A)。"
+  },
+  {
+    "question": "Should the banner go on the front wall or the side wall?",
+    "options": [
+      "The front wall would get more attention.",
+      "The wall was just repainted last week.",
+      "Yes, it looks great where it is."
+    ],
+    "answer_index": 0,
+    "question_type": "choice_question",
+    "explanation_zh": "這是選擇問句，只有 (A) 明確選了正面牆。(B) 講牆壁上週剛粉刷，屬於話題轉移，沒有做出選擇。(C) 用 yes 回答選擇問句，是答非所問的類型陷阱，所以答案是 (A)。"
+  }
+]

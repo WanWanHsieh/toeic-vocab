@@ -608,6 +608,67 @@ async function initAllProgress(){
   render();
 }
 
+/* Item counts per version, for showing progress on generations that aren't the active one (fetched lazily and cached). */
+let versionCountsCache = {};
+async function versionItemCounts(version){
+  if(versionCountsCache[version]) return versionCountsCache[version];
+  const files = {p1:"part1.json", p2:"part2.json", p3:"part3.json", p4:"part4.json", p5:"part5.json", p6:"part6.json", p7:"toeic_reading.json"};
+  const counts = {};
+  await Promise.all(Object.entries(files).map(async ([key, file])=>{
+    try{
+      const res = await fetch(`data/${version}/${file}`);
+      const data = res.ok ? await res.json() : [];
+      counts[key] = Array.isArray(data) ? data.length : 0;
+    }catch(e){ counts[key] = 0; }
+  }));
+  versionCountsCache[version] = counts;
+  return counts;
+}
+const PART_PROGRESS_KEYS = {p1:"toeic-p1-progress", p2:"toeic-p2-progress", p3:"toeic-p3-progress", p4:"toeic-p4-progress", p5:"toeic-p5-progress", p6:"toeic-p6-progress", p7:"toeic-reading-checked"};
+async function generationProgressSummary(version){
+  if(version === currentVersion){
+    let done = 0, total = 0;
+    TOEIC_PARTS.forEach(p=>{ const s = partProgressSummary(p.key); done += s.done; total += s.total; });
+    return {done, total};
+  }
+  const counts = await versionItemCounts(version);
+  let done = 0, total = 0;
+  TOEIC_PARTS.forEach(p=>{
+    const t = counts[p.key] || 0;
+    total += t;
+    const prog = loadVersionedProgress(PART_PROGRESS_KEYS[p.key], version);
+    done += Object.values(prog).filter(v => v === "correct" || v === "wrong").length;
+  });
+  return {done, total};
+}
+
+/* Switch the active content generation: reload every dataset + its own progress records for `newVersion`. */
+async function switchToVersion(newVersion){
+  if(newVersion === currentVersion) return;
+  currentVersion = newVersion;
+
+  cursor = 0; flipped = false; listPage = 1; quizWord = null;
+  p1Order = []; p1Idx = 0; p1Selected = null; p1Checked = false; p1ShowText = false;
+  p2Order = []; p2Idx = 0; p2Selected = null; p2Checked = false; p2ShowText = false;
+  p3Order = []; p3Idx = 0; p3Selected = {}; p3Checked = false; p3ShowText = false;
+  p4Order = []; p4Idx = 0; p4Selected = {}; p4Checked = false; p4ShowText = false;
+  p5Order = []; p5Idx = 0; p5Selected = null; p5Checked = false;
+  p6Order = []; p6Idx = 0; p6Selected = {}; p6Checked = false;
+  readingIdx = 0; readingOrder = []; readingDocTab = {};
+
+  progress = loadVersionedProgress("toeic-vocab-progress", newVersion);
+  readingAnswers = loadVersionedProgress("toeic-reading-answers", newVersion);
+  readingChecked = loadVersionedProgress("toeic-reading-checked", newVersion);
+  p5Progress = loadVersionedProgress("toeic-p5-progress", newVersion);
+  p6Progress = loadVersionedProgress("toeic-p6-progress", newVersion);
+  p1Progress = loadVersionedProgress("toeic-p1-progress", newVersion);
+  p2Progress = loadVersionedProgress("toeic-p2-progress", newVersion);
+  p3Progress = loadVersionedProgress("toeic-p3-progress", newVersion);
+  p4Progress = loadVersionedProgress("toeic-p4-progress", newVersion);
+
+  await Promise.all([loadVocab(), loadReading(), loadP1(), loadP2(), loadP3(), loadP4(), loadP5(), loadP6()]);
+}
+
 /* progressObj values are "correct" | "wrong" (older data may just be `true`, treated as "done" but not "wrong"). */
 function filterByMode(items, progressObj, mode){
   if(mode === "unfinished") return items.filter(it => !progressObj[it.id]);
@@ -1879,25 +1940,38 @@ function renderToeicHub(container){
     });
     return;
   }
-  const rows = allVersions.map(v=>{
-    let done = 0, total = 0;
-    TOEIC_PARTS.forEach(p=>{
-      const s = partProgressSummary(p.key);
-      done += s.done; total += s.total;
-    });
+  container.innerHTML = `
+    <div class="hub-intro">選擇要練習的內容</div>
+    <div class="hub-list" id="hubGenList"><div class="empty-state">正在載入進度…</div></div>`;
+  renderGenerationCards();
+}
+
+async function renderGenerationCards(){
+  const versions = allVersions;
+  const summaries = await Promise.all(versions.map(v=>generationProgressSummary(v)));
+  const listEl = document.getElementById("hubGenList");
+  if(!listEl) return; // user navigated away while this was loading
+  const rows = versions.map((v,i)=>{
+    const {done, total} = summaries[i];
     const pct = total ? Math.round(done/total*100) : 0;
+    const activeTag = v === currentVersion ? `<span class="chip pos" style="margin-left:8px;">目前使用中</span>` : "";
     return `
       <button class="hub-card" data-version="${v}">
-        <div class="hub-card-title">${v}</div>
+        <div class="hub-card-title">${v}${activeTag}</div>
         <div class="hub-card-sub">已完成 ${done} / ${total}</div>
         <div class="hub-card-bar"><div class="hub-card-bar-fill" style="width:${pct}%;"></div></div>
       </button>`;
   }).join("");
-  container.innerHTML = `
-    <div class="hub-intro">選擇要練習的內容</div>
-    <div class="hub-list">${rows}</div>`;
-  container.querySelectorAll(".hub-card[data-version]").forEach(btn=>{
-    btn.addEventListener("click", ()=>{
+  listEl.innerHTML = rows;
+  listEl.querySelectorAll(".hub-card[data-version]").forEach(btn=>{
+    btn.addEventListener("click", async ()=>{
+      const v = btn.dataset.version;
+      if(v !== currentVersion){
+        btn.disabled = true;
+        const sub = btn.querySelector(".hub-card-sub");
+        if(sub) sub.textContent = "載入中…";
+        await switchToVersion(v);
+      }
       toeicHubStage = "parts";
       renderStage();
     });

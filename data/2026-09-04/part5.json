@@ -1,0 +1,962 @@
+[
+  {
+    "sentence": "The board decided to ___________ the merger after months of negotiation.",
+    "options": [
+      "approve",
+      "approving",
+      "approved",
+      "approves"
+    ],
+    "answer_index": 0,
+    "category": "verb_form",
+    "explanation_zh": "\"decide to V\" 為固定用法,to 後面須接原形動詞 approve,而非 approving、approved 或 approves。"
+  },
+  {
+    "sentence": "By next spring, the firm ___________ its headquarters to Singapore.",
+    "options": [
+      "relocates",
+      "relocating",
+      "will have relocated",
+      "relocate"
+    ],
+    "answer_index": 2,
+    "category": "verb_form",
+    "explanation_zh": "by + 未來時間點,主句常用未來完成式表示「在該時間點之前已完成」,故用 will have relocated。"
+  },
+  {
+    "sentence": "The auditor is in charge of ___________ all financial statements before year-end.",
+    "options": [
+      "reviewed",
+      "review",
+      "to review",
+      "reviewing"
+    ],
+    "answer_index": 3,
+    "category": "verb_form",
+    "explanation_zh": "in charge of 為介系詞片語,of 後面須接動名詞作受詞,所以是 reviewing,而不能用原形動詞或不定詞。"
+  },
+  {
+    "sentence": "Before ___________ the new software, the IT team ran several test simulations.",
+    "options": [
+      "launch",
+      "launched",
+      "to launch",
+      "launching"
+    ],
+    "answer_index": 3,
+    "category": "verb_form",
+    "explanation_zh": "Before 在此作介系詞,後面須接動名詞 launching,表示「在啟用新軟體之前」。"
+  },
+  {
+    "sentence": "The parcel, ___________ by the courier this afternoon, contains fragile items.",
+    "options": [
+      "delivered",
+      "delivering",
+      "delivers",
+      "to deliver"
+    ],
+    "answer_index": 0,
+    "category": "verb_form",
+    "explanation_zh": "此處為分詞子句,parcel 與 deliver 是被動關係(包裹被遞送),故用過去分詞 delivered,相當於 which was delivered。"
+  },
+  {
+    "sentence": "The firm intends to ___________ its market share in Southeast Asia next year.",
+    "options": [
+      "expanding",
+      "expanded",
+      "expands",
+      "expand"
+    ],
+    "answer_index": 3,
+    "category": "verb_form",
+    "explanation_zh": "intend to V 為固定用法,to 後面須接原形動詞 expand。"
+  },
+  {
+    "sentence": "Mr. Alvarez has ___________ this branch since it opened five years ago.",
+    "options": [
+      "managing",
+      "manages",
+      "managed",
+      "manage"
+    ],
+    "answer_index": 2,
+    "category": "verb_form",
+    "explanation_zh": "since + 過去時間點,搭配 has,表示現在完成式,動詞須用過去分詞 managed。"
+  },
+  {
+    "sentence": "While ___________ the inventory, the clerk discovered several missing items.",
+    "options": [
+      "check",
+      "checked",
+      "to check",
+      "checking"
+    ],
+    "answer_index": 3,
+    "category": "verb_form",
+    "explanation_zh": "While 引導的分詞構句省略主詞與 be 動詞時,動詞須用現在分詞 checking,表示主動進行「清點庫存」的動作。"
+  },
+  {
+    "sentence": "Each of the branches ___________ required to submit monthly sales reports.",
+    "options": [
+      "is",
+      "are",
+      "be",
+      "were"
+    ],
+    "answer_index": 0,
+    "category": "subject_verb_agreement",
+    "explanation_zh": "\"Each of + 複數名詞\" 視為單數概念,動詞須用單數形式 is。"
+  },
+  {
+    "sentence": "The series of workshops ___________ scheduled for next month.",
+    "options": [
+      "are",
+      "were",
+      "have been",
+      "is"
+    ],
+    "answer_index": 3,
+    "category": "subject_verb_agreement",
+    "explanation_zh": "句子主詞是單數的 series,「of workshops」只是修飾語,動詞須配合 series 用單數 is。"
+  },
+  {
+    "sentence": "Neither the supervisor nor the technicians ___________ satisfied with the new system.",
+    "options": [
+      "was",
+      "has been",
+      "are",
+      "is"
+    ],
+    "answer_index": 2,
+    "category": "subject_verb_agreement",
+    "explanation_zh": "neither A nor B 的句型中,動詞須與最接近的主詞一致,此處最近的是複數的 technicians,故用 are。"
+  },
+  {
+    "sentence": "The amount of paperwork ___________ increased due to the new regulations.",
+    "options": [
+      "were",
+      "has",
+      "have",
+      "are"
+    ],
+    "answer_index": 1,
+    "category": "subject_verb_agreement",
+    "explanation_zh": "\"The amount of + 不可數名詞\" 視為單數,動詞須用單數 has。"
+  },
+  {
+    "sentence": "A number of clients ___________ expressed interest in the new product line.",
+    "options": [
+      "has",
+      "have",
+      "is",
+      "was"
+    ],
+    "answer_index": 1,
+    "category": "subject_verb_agreement",
+    "explanation_zh": "\"A number of + 複數名詞\" 表示「許多」,視為複數,動詞須用 have。"
+  },
+  {
+    "sentence": "Everybody on the project team ___________ expected to attend the kickoff meeting.",
+    "options": [
+      "are",
+      "were",
+      "have been",
+      "is"
+    ],
+    "answer_index": 3,
+    "category": "subject_verb_agreement",
+    "explanation_zh": "不定代名詞 everybody 視為單數,動詞須用 is。"
+  },
+  {
+    "sentence": "The staff ___________ divided on the proposed change in work hours.",
+    "options": [
+      "be",
+      "being",
+      "is",
+      "are"
+    ],
+    "answer_index": 2,
+    "category": "subject_verb_agreement",
+    "explanation_zh": "staff 為集合名詞,在此強調整體為一單位意見分歧,動詞用單數 is。"
+  },
+  {
+    "sentence": "Most of the equipment in the lab ___________ outdated and needs replacement.",
+    "options": [
+      "are",
+      "is",
+      "has been",
+      "were"
+    ],
+    "answer_index": 1,
+    "category": "subject_verb_agreement",
+    "explanation_zh": "equipment 為不可數名詞,\"Most of + 不可數名詞\" 動詞須用單數 is。"
+  },
+  {
+    "sentence": "The ___________ of the merger surprised many industry analysts.",
+    "options": [
+      "announce",
+      "announced",
+      "announcement",
+      "announcing"
+    ],
+    "answer_index": 2,
+    "category": "noun_form",
+    "explanation_zh": "空格為句子主詞,須用名詞 announcement,而非動詞 announce 或其分詞形式。"
+  },
+  {
+    "sentence": "Staff must submit a formal ___________ before requesting reimbursement for travel expenses.",
+    "options": [
+      "applying",
+      "applicant",
+      "applied",
+      "application"
+    ],
+    "answer_index": 3,
+    "category": "noun_form",
+    "explanation_zh": "formal 為形容詞,後面須接名詞 application(申請),而非動詞、動作者名詞 applicant 或分詞 applied。"
+  },
+  {
+    "sentence": "The ___________ between the vendor and the retailer took nearly a year to finalize.",
+    "options": [
+      "negotiate",
+      "negotiator",
+      "negotiation",
+      "negotiable"
+    ],
+    "answer_index": 2,
+    "category": "noun_form",
+    "explanation_zh": "空格為句子主詞,須用名詞 negotiation(協商),而非動詞 negotiate、人物名詞 negotiator 或形容詞 negotiable。"
+  },
+  {
+    "sentence": "The company announced a new ___________ package for all part-time workers.",
+    "options": [
+      "benefit",
+      "benefited",
+      "benefiting",
+      "beneficial"
+    ],
+    "answer_index": 0,
+    "category": "noun_form",
+    "explanation_zh": "空格與 package 組成複合名詞,須用名詞 benefit,而非動詞分詞形式或形容詞 beneficial。"
+  },
+  {
+    "sentence": "Customer ___________ dropped noticeably after the price increase last quarter.",
+    "options": [
+      "loyal",
+      "loyally",
+      "loyalty",
+      "loyalize"
+    ],
+    "answer_index": 2,
+    "category": "noun_form",
+    "explanation_zh": "空格與 customer 組成複合名詞作句子主詞,須用名詞 loyalty,而非形容詞 loyal 或副詞 loyally。"
+  },
+  {
+    "sentence": "The firm's ___________ into overseas markets has been remarkably successful.",
+    "options": [
+      "expand",
+      "expanded",
+      "expanding",
+      "expansion"
+    ],
+    "answer_index": 3,
+    "category": "noun_form",
+    "explanation_zh": "the firm's 為所有格,後面須接名詞 expansion 作主詞,而非動詞 expand 或其變化形。"
+  },
+  {
+    "sentence": "The manager requested a full ___________ of the incident before deciding on disciplinary action.",
+    "options": [
+      "investigate",
+      "investigating",
+      "investigation",
+      "investigative"
+    ],
+    "answer_index": 2,
+    "category": "noun_form",
+    "explanation_zh": "full 為形容詞修飾名詞,空格須用名詞 investigation,而非動詞 investigate 或形容詞 investigative。"
+  },
+  {
+    "sentence": "The ___________ of the new assembly line reduced production time by twenty percent.",
+    "options": [
+      "install",
+      "installed",
+      "installation",
+      "installing"
+    ],
+    "answer_index": 2,
+    "category": "noun_form",
+    "explanation_zh": "空格為句子主詞,須用名詞 installation(安裝),而非動詞 install 或其分詞形式。"
+  },
+  {
+    "sentence": "The new hire adapted ___________ to the fast-paced environment of the trading floor.",
+    "options": [
+      "quick",
+      "quickness",
+      "quickly",
+      "quickest"
+    ],
+    "answer_index": 2,
+    "category": "adjective_adverb",
+    "explanation_zh": "空格修飾動詞 adapted,須用副詞 quickly,而非形容詞 quick 或名詞 quickness。"
+  },
+  {
+    "sentence": "The revised contract terms were ___________ favorable to both parties involved.",
+    "options": [
+      "surprising",
+      "surprise",
+      "surprisingly",
+      "surprised"
+    ],
+    "answer_index": 2,
+    "category": "adjective_adverb",
+    "explanation_zh": "空格修飾形容詞 favorable,須用副詞 surprisingly,而非形容詞 surprising/surprised 或動詞 surprise。"
+  },
+  {
+    "sentence": "The shipment arrived ___________ late because of the severe storm along the coast.",
+    "options": [
+      "unusual",
+      "unusually",
+      "unusualness",
+      "unusualize"
+    ],
+    "answer_index": 1,
+    "category": "adjective_adverb",
+    "explanation_zh": "空格修飾形容詞 late,須用副詞 unusually,而非形容詞 unusual 或名詞 unusualness。"
+  },
+  {
+    "sentence": "It is ___________ essential that all staff attend the mandatory safety briefing.",
+    "options": [
+      "absolute",
+      "absolutely",
+      "absoluteness",
+      "absolutes"
+    ],
+    "answer_index": 1,
+    "category": "adjective_adverb",
+    "explanation_zh": "空格修飾形容詞 essential,須用副詞 absolutely,而非形容詞 absolute 或名詞 absoluteness。"
+  },
+  {
+    "sentence": "The technician repaired the assembly machine ___________ before the next shift began.",
+    "options": [
+      "swift",
+      "swiftly",
+      "swiftness",
+      "swiftest"
+    ],
+    "answer_index": 1,
+    "category": "adjective_adverb",
+    "explanation_zh": "空格修飾動詞 repaired,須用副詞 swiftly,而非形容詞 swift 或名詞 swiftness。"
+  },
+  {
+    "sentence": "Despite the ___________ delay at customs, the shipment reached the port on time.",
+    "options": [
+      "unexpectedly",
+      "unexpectedness",
+      "unexpected",
+      "expect"
+    ],
+    "answer_index": 2,
+    "category": "adjective_adverb",
+    "explanation_zh": "空格修飾名詞 delay,須用形容詞 unexpected,而非副詞 unexpectedly 或名詞 unexpectedness。"
+  },
+  {
+    "sentence": "The proposal to relocate the office was ___________ approved by the committee.",
+    "options": [
+      "unanimous",
+      "unanimity",
+      "unanimously",
+      "unanimousness"
+    ],
+    "answer_index": 2,
+    "category": "adjective_adverb",
+    "explanation_zh": "空格修飾被動語態動詞 was approved,須用副詞 unanimously,而非形容詞 unanimous 或名詞 unanimity。"
+  },
+  {
+    "sentence": "Clients found the redesigned website ___________ user-friendly and easy to navigate.",
+    "options": [
+      "exception",
+      "exceptional",
+      "exceptionally",
+      "exceptionalism"
+    ],
+    "answer_index": 2,
+    "category": "adjective_adverb",
+    "explanation_zh": "空格修飾形容詞 user-friendly,須用副詞 exceptionally,而非形容詞 exceptional 或名詞 exception。"
+  },
+  {
+    "sentence": "The workshop has been postponed ___________ next Tuesday due to a scheduling conflict.",
+    "options": [
+      "until",
+      "since",
+      "for",
+      "by"
+    ],
+    "answer_index": 0,
+    "category": "preposition",
+    "explanation_zh": "postpone until + 新時間,表示「延後至」,故用 until,強調延後到某個未來時間點。"
+  },
+  {
+    "sentence": "Payment must be made ___________ thirty days of receiving the invoice.",
+    "options": [
+      "within",
+      "during",
+      "among",
+      "between"
+    ],
+    "answer_index": 0,
+    "category": "preposition",
+    "explanation_zh": "within + 一段時間,表示「在……期限之內」,符合「三十天內」的語意。"
+  },
+  {
+    "sentence": "The new regional branch will officially open ___________ March 15th.",
+    "options": [
+      "in",
+      "at",
+      "on",
+      "since"
+    ],
+    "answer_index": 2,
+    "category": "preposition",
+    "explanation_zh": "特定日期前須用介系詞 on,故用 on March 15th,而非 at(用於時刻)或 in(用於月份、年份)。"
+  },
+  {
+    "sentence": "Please leave your visitor badge ___________ the security desk before you exit the building.",
+    "options": [
+      "to",
+      "in",
+      "at",
+      "on"
+    ],
+    "answer_index": 2,
+    "category": "preposition",
+    "explanation_zh": "表示某個具體地點(定點)時用 at,故用 at the security desk。"
+  },
+  {
+    "sentence": "Several flights were cancelled ___________ severe weather conditions at the airport.",
+    "options": [
+      "due to",
+      "although",
+      "unless",
+      "despite"
+    ],
+    "answer_index": 0,
+    "category": "preposition",
+    "explanation_zh": "due to 為介系詞片語,後接名詞片語表示原因;although/unless 是連接詞須接子句,despite 表讓步,皆不符合此處語意。"
+  },
+  {
+    "sentence": "The annual report must be completed ___________ the end of the fiscal year.",
+    "options": [
+      "until",
+      "since",
+      "during",
+      "by"
+    ],
+    "answer_index": 3,
+    "category": "preposition",
+    "explanation_zh": "by 表示「最晚不超過某期限」,符合「會計年度結束前完成」的語意。"
+  },
+  {
+    "sentence": "The training program is intended ___________ newly promoted supervisors.",
+    "options": [
+      "to",
+      "of",
+      "with",
+      "for"
+    ],
+    "answer_index": 3,
+    "category": "preposition",
+    "explanation_zh": "be intended for + 對象,表示「為……而設計」,故用 for。"
+  },
+  {
+    "sentence": "The meeting ran ___________ 6 p.m. before both sides finally reached an agreement.",
+    "options": [
+      "by",
+      "until",
+      "at",
+      "since"
+    ],
+    "answer_index": 1,
+    "category": "preposition",
+    "explanation_zh": "until 表示動作持續到某時間點為止,符合「會議持續到六點」的語意,而 by 強調期限而非持續。"
+  },
+  {
+    "sentence": "The vendor missed the delivery deadline; ___________, the client canceled the entire order.",
+    "options": [
+      "therefore",
+      "however",
+      "moreover",
+      "otherwise"
+    ],
+    "answer_index": 0,
+    "category": "conjunction_connector",
+    "explanation_zh": "前後句為因果關係(供應商未如期交貨,因此客戶取消訂單),須用表示結果的連接副詞 therefore。"
+  },
+  {
+    "sentence": "The prototype met all technical specifications; ___________, it failed the final safety test.",
+    "options": [
+      "therefore",
+      "similarly",
+      "furthermore",
+      "however"
+    ],
+    "answer_index": 3,
+    "category": "conjunction_connector",
+    "explanation_zh": "前後句語意轉折(符合規格卻未通過安全測試),須用表示對比的連接副詞 however。"
+  },
+  {
+    "sentence": "___________ the budget cuts, the department still managed to complete the project on time.",
+    "options": [
+      "Because",
+      "Although",
+      "Despite",
+      "Since"
+    ],
+    "answer_index": 2,
+    "category": "conjunction_connector",
+    "explanation_zh": "空格後接名詞片語 the budget cuts,須用介系詞性連接詞 despite,而 although/because/since 之後須接完整子句。"
+  },
+  {
+    "sentence": "___________ the price increased sharply, demand for the product remained strong.",
+    "options": [
+      "Despite",
+      "Although",
+      "Because of",
+      "Due to"
+    ],
+    "answer_index": 1,
+    "category": "conjunction_connector",
+    "explanation_zh": "空格後接完整子句(the price increased...),須用連接詞 although,而 despite/because of/due to 之後須接名詞片語。"
+  },
+  {
+    "sentence": "The airline raised its ticket prices; ___________, passenger numbers continued to grow.",
+    "options": [
+      "nevertheless",
+      "therefore",
+      "moreover",
+      "consequently"
+    ],
+    "answer_index": 0,
+    "category": "conjunction_connector",
+    "explanation_zh": "前後句語意轉折(漲價卻乘客人數仍成長),須用表示讓步轉折的連接副詞 nevertheless。"
+  },
+  {
+    "sentence": "The engineer identified the structural defect early; ___________, a costly recall was avoided.",
+    "options": [
+      "nonetheless",
+      "meanwhile",
+      "consequently",
+      "however"
+    ],
+    "answer_index": 2,
+    "category": "conjunction_connector",
+    "explanation_zh": "前後句為因果關係(及早發現瑕疵,因此避免召回),須用表示結果的連接副詞 consequently。"
+  },
+  {
+    "sentence": "The store extended its business hours; ___________, evening sales rose sharply.",
+    "options": [
+      "however",
+      "likewise",
+      "thus",
+      "otherwise"
+    ],
+    "answer_index": 2,
+    "category": "conjunction_connector",
+    "explanation_zh": "前後句為因果關係(延長營業時間,因此晚間業績上升),須用表示結果的連接副詞 thus。"
+  },
+  {
+    "sentence": "___________ the invoice is paid in full, the goods will not be released from the warehouse.",
+    "options": [
+      "Although",
+      "Unless",
+      "Despite",
+      "While"
+    ],
+    "answer_index": 1,
+    "category": "conjunction_connector",
+    "explanation_zh": "Unless 表示「除非」,相當於 if...not,符合「除非付清款項,否則不會放行」的條件語意。"
+  },
+  {
+    "sentence": "Please remember to bring ___________ own identification badge to the security office.",
+    "options": [
+      "you",
+      "yours",
+      "your",
+      "you're"
+    ],
+    "answer_index": 2,
+    "category": "pronoun",
+    "explanation_zh": "空格後接名詞 badge,須用所有格形容詞 your,而 yours 是所有格代名詞,不接名詞。"
+  },
+  {
+    "sentence": "The CEO addressed the shareholders ___________ during the annual meeting instead of sending a representative.",
+    "options": [
+      "her",
+      "hers",
+      "she",
+      "herself"
+    ],
+    "answer_index": 3,
+    "category": "pronoun",
+    "explanation_zh": "此處用強調用法的反身代名詞 herself,強調「執行長親自」出席致詞。"
+  },
+  {
+    "sentence": "If the vending machine malfunctions again, facilities will replace it with ___________.",
+    "options": [
+      "other",
+      "the other",
+      "another",
+      "others"
+    ],
+    "answer_index": 2,
+    "category": "pronoun",
+    "explanation_zh": "another 表示「另一台(同類但非特定的)」,符合泛指再換一台新機器的語意;the other 用於限定「兩者中的另一個」,不符此處語意。"
+  },
+  {
+    "sentence": "Of the two candidates shortlisted for the position, one accepted the offer, but ___________ declined.",
+    "options": [
+      "other",
+      "another",
+      "others",
+      "the other"
+    ],
+    "answer_index": 3,
+    "category": "pronoun",
+    "explanation_zh": "談到兩者中的「一個…另一個」時,第二個須用 the other,表示剩下唯一確定的那一個。"
+  },
+  {
+    "sentence": "The interns were instructed to hand in ___________ evaluation forms no later than Friday.",
+    "options": [
+      "theirs",
+      "they",
+      "their",
+      "them"
+    ],
+    "answer_index": 2,
+    "category": "pronoun",
+    "explanation_zh": "空格後接名詞 forms,須用所有格形容詞 their,而 theirs 是所有格代名詞,不可直接修飾名詞。"
+  },
+  {
+    "sentence": "This parking space is reserved for the director, and that one over there is ___________.",
+    "options": [
+      "theirs",
+      "their",
+      "them",
+      "they"
+    ],
+    "answer_index": 0,
+    "category": "pronoun",
+    "explanation_zh": "空格單獨作補語,不接名詞,須用所有格代名詞 theirs,而 their 是所有格形容詞須接名詞。"
+  },
+  {
+    "sentence": "Some employees prefer working remotely, while ___________ still choose to commute to the office.",
+    "options": [
+      "other",
+      "the other",
+      "others",
+      "another"
+    ],
+    "answer_index": 2,
+    "category": "pronoun",
+    "explanation_zh": "與前面的 some 相對應,表示「另一部分不特定的人」,須用代名詞 others,而 other 須接名詞、the other 限定為剩下唯一的一個。"
+  },
+  {
+    "sentence": "The board gave the newly appointed CEO of the company full authority to restructure ___________ management team.",
+    "options": [
+      "their",
+      "it's",
+      "its",
+      "it"
+    ],
+    "answer_index": 2,
+    "category": "pronoun",
+    "explanation_zh": "空格指的是前面提到的 the company(單數),須用所有格形容詞 its;it's 則是 it is 的縮寫,文法上不可修飾名詞。"
+  },
+  {
+    "sentence": "This year's export volume is ___________ than last year's.",
+    "options": [
+      "high",
+      "higher",
+      "highest",
+      "more high"
+    ],
+    "answer_index": 1,
+    "category": "comparison",
+    "explanation_zh": "句尾有 than,須用比較級 higher,而非原級 high 或最高級 highest。"
+  },
+  {
+    "sentence": "Of all the vendors reviewed, this one offered the ___________ contract terms.",
+    "options": [
+      "more favorable",
+      "favorable",
+      "favorably",
+      "most favorable"
+    ],
+    "answer_index": 3,
+    "category": "comparison",
+    "explanation_zh": "of all the vendors 表示三者以上的比較,須用最高級 the most favorable。"
+  },
+  {
+    "sentence": "The updated engine runs ___________ quietly than the previous model.",
+    "options": [
+      "very",
+      "so",
+      "more",
+      "most"
+    ],
+    "answer_index": 2,
+    "category": "comparison",
+    "explanation_zh": "多音節副詞 quietly 的比較級須加 more,並搭配句尾的 than 使用。"
+  },
+  {
+    "sentence": "The earlier the order is placed, the ___________ the discount offered.",
+    "options": [
+      "big",
+      "biggest",
+      "more big",
+      "bigger"
+    ],
+    "answer_index": 3,
+    "category": "comparison",
+    "explanation_zh": "\"The + 比較級..., the + 比較級...\" 為對等比較句型,前後都須用比較級,故用 bigger。"
+  },
+  {
+    "sentence": "This warehouse is far ___________ spacious than the old one, although the rent is higher.",
+    "options": [
+      "most",
+      "more",
+      "much",
+      "many"
+    ],
+    "answer_index": 1,
+    "category": "comparison",
+    "explanation_zh": "far 用來加強比較級語氣,多音節形容詞 spacious 的比較級須加 more,並搭配 than 使用。"
+  },
+  {
+    "sentence": "Among all the regional offices, the Tokyo branch reports the ___________ profit.",
+    "options": [
+      "many",
+      "much",
+      "more",
+      "most"
+    ],
+    "answer_index": 3,
+    "category": "comparison",
+    "explanation_zh": "among all the regional offices 表示三者以上的比較,須用最高級 the most,修飾不可數名詞 profit。"
+  },
+  {
+    "sentence": "As the product launch date nears, the team is working ___________ than before.",
+    "options": [
+      "hard",
+      "harder",
+      "hardest",
+      "more hard"
+    ],
+    "answer_index": 1,
+    "category": "comparison",
+    "explanation_zh": "句尾有 than before,須用比較級 harder,而非原級 hard 或最高級 hardest。"
+  },
+  {
+    "sentence": "The two supplier contracts are nearly identical, but this one is slightly ___________ comprehensive.",
+    "options": [
+      "very",
+      "much",
+      "more",
+      "most"
+    ],
+    "answer_index": 2,
+    "category": "comparison",
+    "explanation_zh": "多音節形容詞 comprehensive 的比較級須加 more,slightly 修飾比較級表示「些微地」。"
+  },
+  {
+    "sentence": "The employee ___________ presentation impressed the board works in the sales division.",
+    "options": [
+      "who",
+      "whose",
+      "which",
+      "that"
+    ],
+    "answer_index": 1,
+    "category": "relative_clause",
+    "explanation_zh": "空格後接名詞 presentation,表示「該員工的簡報」,須用所有格關係代名詞 whose。"
+  },
+  {
+    "sentence": "The internal memo, ___________ was distributed yesterday afternoon, outlined the new dress code.",
+    "options": [
+      "who",
+      "that",
+      "whose",
+      "which"
+    ],
+    "answer_index": 3,
+    "category": "relative_clause",
+    "explanation_zh": "逗號隔開的非限定用法子句,先行詞為事物 memo,須用 which,that 通常不用於非限定用法逗號子句。"
+  },
+  {
+    "sentence": "The supplier ___________ we selected last year has consistently delivered materials on time.",
+    "options": [
+      "whose",
+      "which",
+      "whom",
+      "who"
+    ],
+    "answer_index": 2,
+    "category": "relative_clause",
+    "explanation_zh": "先行詞 supplier 是人,且在子句中作受詞(we selected 供應商),正式用法須用受格關係代名詞 whom。"
+  },
+  {
+    "sentence": "This is the division ___________ oversees all international export operations.",
+    "options": [
+      "what",
+      "whom",
+      "that",
+      "whose"
+    ],
+    "answer_index": 2,
+    "category": "relative_clause",
+    "explanation_zh": "先行詞 division 是事物,且在子句中作主詞,須用 that(或 which),whom 用於人、whose 為所有格、what 不可接先行詞。"
+  },
+  {
+    "sentence": "Managers ___________ teams missed the quarterly quota must submit an improvement plan.",
+    "options": [
+      "whose",
+      "who",
+      "which",
+      "whom"
+    ],
+    "answer_index": 0,
+    "category": "relative_clause",
+    "explanation_zh": "空格後接名詞 teams,表示「經理的團隊」,須用所有格關係代名詞 whose。"
+  },
+  {
+    "sentence": "The overseas factory ___________ the components are manufactured is located near Ho Chi Minh City.",
+    "options": [
+      "which",
+      "that",
+      "when",
+      "where"
+    ],
+    "answer_index": 3,
+    "category": "relative_clause",
+    "explanation_zh": "先行詞 factory 為地點,子句中缺少地方副詞而非受詞,須用關係副詞 where。"
+  },
+  {
+    "sentence": "The exact reason ___________ the merger negotiations fell through has never been disclosed.",
+    "options": [
+      "where",
+      "which",
+      "why",
+      "whom"
+    ],
+    "answer_index": 2,
+    "category": "relative_clause",
+    "explanation_zh": "先行詞 reason 表示原因,須用關係副詞 why 引導子句說明原因。"
+  },
+  {
+    "sentence": "The supervisor, ___________ has been with the firm for over two decades, is retiring next month.",
+    "options": [
+      "which",
+      "whom",
+      "who",
+      "whose"
+    ],
+    "answer_index": 2,
+    "category": "relative_clause",
+    "explanation_zh": "逗號隔開的非限定用法子句,先行詞 supervisor 是人且在子句中作主詞,須用 who。"
+  },
+  {
+    "sentence": "The manager gave the new hire some ___________ advice about managing a heavy workload.",
+    "options": [
+      "sensitive",
+      "sense",
+      "sensibly",
+      "sensible"
+    ],
+    "answer_index": 3,
+    "category": "word_choice",
+    "explanation_zh": "sensible 表示「明智的、合理的」,符合語意;sensitive 表示「敏感的、易受傷害的」,兩字意思不同,是常見的字義混淆考點。"
+  },
+  {
+    "sentence": "The design team came up with an ___________ solution to the packaging problem.",
+    "options": [
+      "imaginary",
+      "imagination",
+      "imaginative",
+      "imagine"
+    ],
+    "answer_index": 2,
+    "category": "word_choice",
+    "explanation_zh": "imaginative 表示「有創意的、想像力豐富的」,符合語意;imaginary 表示「虛構的、不真實的」,兩字意思不同,容易混淆。"
+  },
+  {
+    "sentence": "The witness provided a ___________ account of the warehouse accident to investigators.",
+    "options": [
+      "credulous",
+      "credit",
+      "credibility",
+      "credible"
+    ],
+    "answer_index": 3,
+    "category": "word_choice",
+    "explanation_zh": "credible 表示「可信的」,符合語意;credulous 表示「輕信的、易受騙的」,兩字拼法相近但意思不同,是常見的混淆詞。"
+  },
+  {
+    "sentence": "The ___________ new hire finished the entire project two weeks ahead of schedule.",
+    "options": [
+      "industrial",
+      "industry",
+      "industriously",
+      "industrious"
+    ],
+    "answer_index": 3,
+    "category": "word_choice",
+    "explanation_zh": "industrious 表示「勤奮的」,符合語意;industrial 表示「工業的」,兩字拼法相近但意思完全不同,是常見的字義混淆考點。"
+  },
+  {
+    "sentence": "Over the past decade, the firm has built a ___________ reputation in the shipping industry.",
+    "options": [
+      "respectful",
+      "respective",
+      "respect",
+      "respectable"
+    ],
+    "answer_index": 3,
+    "category": "word_choice",
+    "explanation_zh": "respectable 表示「值得尊敬的、聲譽良好的」,符合語意;respectful 表示「表示尊敬的」,兩字意思不同,容易混淆。"
+  },
+  {
+    "sentence": "The new onboarding program has proven ___________ to first-year employees.",
+    "options": [
+      "benefiting",
+      "beneficiary",
+      "benefit",
+      "beneficial"
+    ],
+    "answer_index": 3,
+    "category": "word_choice",
+    "explanation_zh": "beneficial 表示「有益的」(形容詞),符合語意;beneficiary 表示「受益人」(名詞),兩字拼法相近但詞性與意思不同。"
+  },
+  {
+    "sentence": "All employee salary information is strictly ___________ and must not be shared.",
+    "options": [
+      "confident",
+      "confidence",
+      "confidentially",
+      "confidential"
+    ],
+    "answer_index": 3,
+    "category": "word_choice",
+    "explanation_zh": "confidential 表示「機密的」,符合語意;confident 表示「有自信的」,兩字拼法相近但意思完全不同,是常見的字義混淆考點。"
+  },
+  {
+    "sentence": "Only full-time staff members are ___________ for the year-end bonus program.",
+    "options": [
+      "illegible",
+      "eligibility",
+      "eligibly",
+      "eligible"
+    ],
+    "answer_index": 3,
+    "category": "word_choice",
+    "explanation_zh": "eligible 表示「符合資格的」,符合語意;illegible 表示「難以辨認的(字跡)」,兩字拼法相近但意思完全不同,是常見的混淆詞。"
+  }
+]

@@ -1,0 +1,164 @@
+[
+  {
+    "category": "announcement",
+    "talk": "Attention all swimmers. Due to an approaching thunderstorm, Lakeview Community Pool will be closing immediately for the remainder of the afternoon. Please gather your belongings and exit the pool area in an orderly manner; lifeguards will assist anyone needing help with lockers. Refunds will not be issued for today's admission, but all guests will receive a complimentary pass valid for any regular session within the next thirty days. These passes can be picked up at the front desk on your way out. We apologize for the inconvenience and hope to see you back once the weather clears. Please check our website tomorrow morning for updated pool hours.",
+    "questions": [
+      {"question_en": "Why is the pool closing early today?", "options": ["For routine cleaning", "Because of an approaching thunderstorm", "Because the pool is overcrowded", "Because of a staffing shortage"], "answer_index": 1, "explanation_zh": "廣播開頭說明是因為即將來襲的雷雨，泳池必須立即關閉，所以答案是 (B)。"},
+      {"question_en": "What will guests receive instead of a refund?", "options": ["A cash refund", "A complimentary pass valid for thirty days", "A free swimsuit", "A discount coupon for food"], "answer_index": 1, "explanation_zh": "廣播提到不會退費，但會提供三十天內可用的免費通行券，所以答案是 (B)。"},
+      {"question_en": "Where should guests go to get their pass?", "options": ["The lifeguard station", "The parking lot", "The front desk", "The locker room"], "answer_index": 2, "explanation_zh": "廣播提到離開時可到前台領取通行券，所以答案是 (C)。"}
+    ]
+  },
+  {
+    "category": "advertisement",
+    "talk": "Do you love home-cooked meals but hate grocery shopping? Harvest Table delivers pre-portioned ingredients and easy-to-follow recipes straight to your door every week. Choose from over twenty rotating menu options, including vegetarian and low-carb choices, and change your selections anytime before Thursday at midnight. New customers who sign up this month receive their first four boxes at half price, a savings of up to seventy dollars. Each box arrives in an insulated cooler bag that keeps ingredients fresh for up to two days, even if you're not home when it's delivered. Visit harvesttable dot com and enter code FRESH50 at checkout to claim this offer before it ends.",
+    "questions": [
+      {"question_en": "What service is being advertised?", "options": ["A restaurant delivery app", "A meal kit delivery service", "A grocery store chain", "A cooking class subscription"], "answer_index": 1, "explanation_zh": "廣告介紹的是每週配送食材與食譜的 Harvest Table 餐盒宅配服務，所以答案是 (B)。"},
+      {"question_en": "By when must customers change their weekly selections?", "options": ["Monday morning", "Wednesday evening", "Thursday at midnight", "Friday at noon"], "answer_index": 2, "explanation_zh": "廣告提到可在週四午夜前更改每週的餐點選擇，所以答案是 (C)。"},
+      {"question_en": "What can be inferred about the cooler bag packaging?", "options": ["It requires refrigeration immediately", "It keeps ingredients fresh even if no one is home", "It must be returned to the company", "It only works for two hours"], "answer_index": 1, "explanation_zh": "廣告提到保冷袋可讓食材保鮮長達兩天，即使收件時不在家也沒問題，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "voicemail",
+    "talk": "Hi, this message is for Mr. Ferreira. This is Sarah calling from Willowbrook Veterinary Clinic. I'm calling to confirm Max's annual check-up and vaccinations scheduled for tomorrow at two fifteen in the afternoon. Please remember to bring his vaccination record book if you have one at home, and try to keep him from eating for about two hours beforehand in case we need to draw blood. If tomorrow no longer works for you, please call us back at 555-0164 as soon as possible so we can offer the slot to another patient. We look forward to seeing Max tomorrow.",
+    "questions": [
+      {"question_en": "Why is Sarah calling Mr. Ferreira?", "options": ["To confirm a pet's appointment", "To cancel a delivery", "To offer a discount on pet food", "To request payment for surgery"], "answer_index": 0, "explanation_zh": "留言開頭說明是為了確認明天 Max 的年度健檢與疫苗接種預約，所以答案是 (A)。"},
+      {"question_en": "What is Mr. Ferreira asked to do before the appointment?", "options": ["Give Max a bath", "Keep Max from eating for about two hours", "Bring a photo of Max", "Arrive one hour early"], "answer_index": 1, "explanation_zh": "留言提到需讓 Max 空腹約兩小時，以備需要抽血，所以答案是 (B)。"},
+      {"question_en": "What should Mr. Ferreira do if he cannot make tomorrow's appointment?", "options": ["Ignore the message", "Call back so the slot can be given to another patient", "Bring Max in anyway", "Reschedule online"], "answer_index": 1, "explanation_zh": "留言提到若無法前來應盡快回電，以便將時段讓給其他病患，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "broadcast_news",
+    "talk": "Good afternoon. The National Weather Service has issued a heat advisory for all of Brookfield County, effective from noon today through Thursday evening. Temperatures are expected to reach the upper nineties, with the heat index feeling closer to one hundred and five degrees during peak afternoon hours. Officials are urging residents to stay hydrated, limit outdoor activity between noon and four p.m., and check on elderly neighbors who may not have air conditioning. Several cooling centers have been opened at community centers across the county, including the Brookfield Public Library and the Eastside Recreation Center, both open until eight p.m. daily during the advisory.",
+    "questions": [
+      {"question_en": "What is the main topic of this broadcast?", "options": ["A flood warning", "A heat advisory", "A snowstorm forecast", "A power outage"], "answer_index": 1, "explanation_zh": "報導主要在說明布魯克菲爾德郡發布的高溫警報，所以答案是 (B)。"},
+      {"question_en": "Until when is the heat advisory in effect?", "options": ["Noon today", "Wednesday morning", "Thursday evening", "The end of the month"], "answer_index": 2, "explanation_zh": "報導提到警報自今日中午起生效，持續到週四傍晚，所以答案是 (C)。"},
+      {"question_en": "What are residents advised to do during peak hours?", "options": ["Turn off their air conditioning", "Limit outdoor activity between noon and four p.m.", "Evacuate the county", "Avoid drinking water"], "answer_index": 1, "explanation_zh": "報導建議居民在中午到下午四點間應減少戶外活動，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "tour_guide",
+    "talk": "Welcome to Silver Ridge Winery. As we walk through the barrel cellar, you'll notice the temperature is kept at a constant fifty-five degrees, which is essential for the aging process. The oak barrels you see here are imported from France and are typically used for no more than three vintages before being retired. Our current harvest, which we'll see in the vineyard shortly, has been especially strong this year thanks to a mild growing season. At the end of the tour, everyone will receive a tasting of five different wines paired with local cheeses in our courtyard. Please remember that photography is welcome throughout, but flash photography is not permitted near the barrels, as light exposure can affect the aging wine.",
+    "questions": [
+      {"question_en": "Where is this tour taking place?", "options": ["A cheese factory", "A winery barrel cellar", "A vineyard museum", "A grocery warehouse"], "answer_index": 1, "explanation_zh": "導覽員正在帶團參觀酒莊的橡木桶儲藏地窖，所以答案是 (B)。"},
+      {"question_en": "How many vintages are the oak barrels typically used for?", "options": ["One", "Two", "Three", "Five"], "answer_index": 2, "explanation_zh": "導覽員提到橡木桶通常最多使用三個年份後就會淘汰，所以答案是 (C)。"},
+      {"question_en": "What will visitors do at the end of the tour?", "options": ["Pick grapes in the vineyard", "Taste five wines paired with cheese", "Take a cellar tour again", "Buy barrels to take home"], "answer_index": 1, "explanation_zh": "導覽員提到最後大家會在庭院品嚐五款酒並搭配當地起司，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "meeting_excerpt",
+    "talk": "Let's move on to the timeline for the Nova headphone launch. Engineering has confirmed that final product testing will wrap up by the end of next week, which keeps us on track for a production run in early November. Marketing, I understand the promotional video is still being edited — can you confirm it will be ready for our retail partners by October fifteenth? We need at least two weeks of lead time before launch day for stores to prepare their displays. Also, I'd like someone from the supply chain team to double-check that we have enough units at the warehouse to cover the first month of preorders, since last year we ran short within the first ten days.",
+    "questions": [
+      {"question_en": "What is mainly being discussed in this meeting?", "options": ["A budget cut", "The timeline for a product launch", "A customer complaint", "An employee performance review"], "answer_index": 1, "explanation_zh": "會議主要在討論 Nova 耳機上市的時程規劃，所以答案是 (B)。"},
+      {"question_en": "By what date does the promotional video need to be ready?", "options": ["End of next week", "October fifteenth", "Early November", "The first of the month"], "answer_index": 1, "explanation_zh": "談話中詢問行銷影片是否能在十月十五日前完成，所以答案是 (B)。"},
+      {"question_en": "What is the supply chain team asked to check?", "options": ["Shipping costs", "Warehouse inventory levels for preorders", "Retail partner contracts", "Product testing results"], "answer_index": 1, "explanation_zh": "說話者請供應鏈團隊確認倉庫是否有足夠庫存應付第一個月的預購，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "instructions_tutorial",
+    "talk": "Setting up your new wireless printer only takes a few minutes. First, remove all packaging tape and plastic inserts from inside the printer, including the piece protecting the ink cartridge holder. Next, press and hold the power button for three seconds until the display screen lights up. From the on-screen menu, select your home Wi-Fi network and enter your password when prompted. Once connected, insert the ink cartridges according to the color-coded slots, starting with black on the left. The printer will automatically run a short calibration test, which may take up to two minutes and will print a sample page. After calibration, download the companion app on your phone to enable wireless printing from any room in your house.",
+    "questions": [
+      {"question_en": "What is this talk mainly explaining?", "options": ["How to repair a broken printer", "How to set up a new wireless printer", "How to refill ink cartridges", "How to connect a printer to a computer cable"], "answer_index": 1, "explanation_zh": "整段說明主要在講解如何設定新的無線印表機，所以答案是 (B)。"},
+      {"question_en": "Which cartridge should be inserted first?", "options": ["Yellow, on the right", "Black, on the left", "Blue, in the center", "Red, on the right"], "answer_index": 1, "explanation_zh": "說明提到應先安裝左側的黑色墨水匣，所以答案是 (B)。"},
+      {"question_en": "What happens right after the cartridges are inserted?", "options": ["The printer shuts down", "The printer runs a calibration test and prints a sample page", "The Wi-Fi resets automatically", "The warranty is activated"], "answer_index": 1, "explanation_zh": "說明提到裝好墨水匣後，印表機會自動執行校準測試並列印樣張，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "announcement",
+    "talk": "Good morning, everyone. This is a reminder that a scheduled fire drill will take place at eleven o'clock this morning across all floors of the Bramwell Tower. When the alarm sounds, please stop what you are doing, save any open documents, and proceed calmly to the nearest stairwell exit. Do not use the elevators during the drill. Once outside, gather in the designated meeting area in the north parking lot, where floor captains will take attendance. The entire drill should last no more than twenty minutes, and employees may return to their desks once an all-clear announcement is made. Thank you for your cooperation in keeping our building safe.",
+    "questions": [
+      {"question_en": "What is the purpose of this announcement?", "options": ["To report a real fire", "To remind employees of a scheduled fire drill", "To announce a building closure", "To introduce new floor captains"], "answer_index": 1, "explanation_zh": "廣播主要在提醒員工今天上午將有一場消防演習，所以答案是 (B)。"},
+      {"question_en": "Where should employees gather once outside?", "options": ["The lobby", "The north parking lot", "The rooftop", "The nearest coffee shop"], "answer_index": 1, "explanation_zh": "廣播提到大家應到北側停車場的指定集合區集合，所以答案是 (B)。"},
+      {"question_en": "What are employees told not to do during the drill?", "options": ["Talk to coworkers", "Use the elevators", "Bring their belongings", "Leave their desks"], "answer_index": 1, "explanation_zh": "廣播明確指出演習期間不可搭乘電梯，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "advertisement",
+    "talk": "Do you really know who's at your front door? SecureView's new smart doorbell camera lets you see, hear, and speak to visitors right from your phone, no matter where you are. With night vision and motion-activated alerts, you'll never miss another delivery or unexpected guest. Installation takes less than fifteen minutes, and no additional wiring is required if you're replacing an existing doorbell. Order by September twentieth and receive a free indoor camera, a thirty-dollar value, along with your purchase. SecureView also offers a thirty-day money-back guarantee, so there's no risk in trying it. Visit any Home Tech Depot location or order online at secureview dot com today.",
+    "questions": [
+      {"question_en": "What product is being advertised?", "options": ["A home security alarm system", "A smart doorbell camera", "A wireless router", "A video streaming subscription"], "answer_index": 1, "explanation_zh": "廣告介紹的是 SecureView 的智慧門鈴攝影機，所以答案是 (B)。"},
+      {"question_en": "What free item comes with an order placed by September twentieth?", "options": ["A free installation service", "A free indoor camera", "A free phone charger", "A free extended warranty"], "answer_index": 1, "explanation_zh": "廣告提到九月二十日前下單可獲得一台免費的室內攝影機，所以答案是 (B)。"},
+      {"question_en": "What can be inferred about installing this camera?", "options": ["It requires a professional electrician", "It may not need extra wiring if replacing an existing doorbell", "It takes several hours to complete", "It only works with a specific phone brand"], "answer_index": 1, "explanation_zh": "廣告提到若是替換現有門鈴，通常不需要額外配線，安裝不到十五分鐘，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "voicemail",
+    "talk": "Hello, this message is for the Whitfield family. This is Carlos from Silver Oak Moving Services confirming your move scheduled for this Saturday. Our crew of three movers will arrive at your current address at eight o'clock in the morning and expects the entire job, including loading, transport, and unloading at your new home, to take about six hours. Please make sure all boxes are sealed and clearly labeled by room before we arrive, since this helps us place them correctly at the new house. If you have any large items like a piano or a safe that we should know about, please call our office back at 555-0157 before Friday afternoon.",
+    "questions": [
+      {"question_en": "Why is Carlos calling the Whitfield family?", "options": ["To cancel the move", "To confirm the details of their scheduled move", "To request a deposit", "To reschedule to next month"], "answer_index": 1, "explanation_zh": "留言主要是確認週六搬家的相關細節，所以答案是 (B)。"},
+      {"question_en": "How many movers will arrive on Saturday?", "options": ["One", "Two", "Three", "Four"], "answer_index": 2, "explanation_zh": "留言提到將有三名搬家工人於週六前來，所以答案是 (C)。"},
+      {"question_en": "What is the family asked to do before the movers arrive?", "options": ["Pack a suitcase for travel", "Seal and clearly label all boxes by room", "Empty the refrigerator", "Remove all furniture from the walls"], "answer_index": 1, "explanation_zh": "留言提到請事先將箱子封好並依房間清楚標示，以利搬運人員擺放，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "broadcast_news",
+    "talk": "In local news, organizers of the annual Riverside City Marathon remind residents that several downtown streets will be closed to traffic this Sunday from six in the morning until approximately one in the afternoon. The race route begins at City Hall Plaza and winds through the historic district before finishing at Riverside Park. Drivers are advised to avoid Main Street and Fourth Avenue entirely during those hours, as no through traffic will be permitted. Public buses will operate on a modified route for the day. This marks the marathon's fifteenth year, and organizers expect a record turnout of nearly six thousand runners, up from last year's four thousand five hundred.",
+    "questions": [
+      {"question_en": "What is the main topic of this news report?", "options": ["A new public bus route", "Road closures for an annual marathon", "A citywide traffic law change", "The opening of a new park"], "answer_index": 1, "explanation_zh": "報導主要在說明馬拉松賽事造成的市區道路封閉資訊，所以答案是 (B)。"},
+      {"question_en": "Which streets should drivers avoid on Sunday?", "options": ["Main Street and Fourth Avenue", "City Hall Plaza only", "Riverside Park Road", "The highway"], "answer_index": 0, "explanation_zh": "報導提醒駕駛應完全避開 Main Street 和 Fourth Avenue，所以答案是 (A)。"},
+      {"question_en": "What can be inferred about this year's marathon?", "options": ["It has been cancelled", "It is expected to have a record number of runners", "It will be shorter than last year", "It is the first year it has been held"], "answer_index": 1, "explanation_zh": "報導提到今年預計有近六千名跑者參賽，創下歷年紀錄，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "tour_guide",
+    "talk": "Welcome to Ashford Manor, built in eighteen ninety-two by shipping magnate Charles Ashford for his family of seven. As we enter the grand hallway, take note of the hand-painted ceiling, which took local artists nearly two years to complete. The library to your left contains over three thousand original books, though we ask that you view them from behind the rope barrier rather than handling them directly. Later in the tour, we'll visit the rooftop garden, which offers the best view of the harbor and is only accessible during the spring and summer months due to weather conditions. Our guided tour today will conclude in the gift shop, where you can purchase a reproduction of the estate's original blueprints.",
+    "questions": [
+      {"question_en": "What kind of place is being toured?", "options": ["A modern art gallery", "A historic mansion", "A shipping company office", "A public library"], "answer_index": 1, "explanation_zh": "導覽員正在介紹一棟建於一八九二年的歷史宅邸 Ashford Manor，所以答案是 (B)。"},
+      {"question_en": "How many original books does the library contain?", "options": ["About one hundred", "About one thousand", "Over three thousand", "Over ten thousand"], "answer_index": 2, "explanation_zh": "導覽員提到圖書室藏有超過三千本原版書籍，所以答案是 (C)。"},
+      {"question_en": "What can be inferred about the rooftop garden?", "options": ["It is open all year round", "It is only accessible in spring and summer", "It is currently closed for renovation", "It requires an extra ticket"], "answer_index": 1, "explanation_zh": "導覽員提到頂樓花園因天候因素僅在春夏季開放，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "meeting_excerpt",
+    "talk": "Next on the agenda is the proposed budget increase for our social media advertising. Based on last quarter's results, every dollar we spent on social ads returned about four dollars in sales, which is nearly double the return from our print advertising. I'm proposing we shift twenty percent of the print budget over to social media starting next quarter. I know some of you have concerns about losing our older customer base who still respond well to print, so we'll keep a reduced print campaign running through the holiday season to be safe. I'd like Sandra's team to put together a revised budget proposal for us to review at next month's meeting.",
+    "questions": [
+      {"question_en": "What is mainly being discussed in this meeting excerpt?", "options": ["A proposal to shift budget toward social media ads", "A plan to cancel all print advertising", "A new hiring strategy", "A review of employee performance"], "answer_index": 0, "explanation_zh": "談話主要在討論將部分預算從平面廣告轉移至社群媒體廣告的提案，所以答案是 (A)。"},
+      {"question_en": "According to the speaker, how did social ads perform compared to print ads?", "options": ["They performed about the same", "They returned nearly double the sales of print ads", "They performed worse than print ads", "They had no measurable return"], "answer_index": 1, "explanation_zh": "談話提到社群廣告的投報率幾乎是平面廣告的兩倍，所以答案是 (B)。"},
+      {"question_en": "What is Sandra's team asked to do?", "options": ["Cancel the holiday print campaign", "Prepare a revised budget proposal for next month", "Hire new marketing staff", "Survey older customers"], "answer_index": 1, "explanation_zh": "說話者請 Sandra 的團隊準備修訂後的預算提案，供下次會議討論，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "instructions_tutorial",
+    "talk": "Changing your air filter regularly keeps your heating and cooling system running efficiently, and the process takes less than five minutes. Begin by turning off the system at the thermostat to avoid dust being pulled into the unit while you work. Locate the filter compartment, usually a slim panel near the main return air duct, and slide out the old filter, noting the arrow printed on its frame that indicates airflow direction. When inserting the new filter, make sure the arrow points toward the unit, not away from it, or the system won't filter properly. Most households should replace this filter every ninety days, though homes with pets may need to change it monthly instead.",
+    "questions": [
+      {"question_en": "What is this talk mainly about?", "options": ["Installing a new thermostat", "Changing an HVAC air filter", "Cleaning air ducts professionally", "Repairing a broken heating unit"], "answer_index": 1, "explanation_zh": "整段說明主要在講解如何更換空調系統的空氣濾網，所以答案是 (B)。"},
+      {"question_en": "How often should most households replace the filter?", "options": ["Every thirty days", "Every sixty days", "Every ninety days", "Once a year"], "answer_index": 2, "explanation_zh": "說明提到一般家庭應每九十天更換一次濾網，所以答案是 (C)。"},
+      {"question_en": "Which direction should the arrow on the new filter point?", "options": ["Away from the unit", "Toward the unit", "Straight up", "It does not matter"], "answer_index": 1, "explanation_zh": "說明提到濾網上的箭頭必須朝向機組方向，否則無法正確過濾，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "announcement",
+    "talk": "May I have your attention please. This is a product safety notice for all shoppers currently in the store. Sunrise Farms brand frozen blueberries, specifically the twenty-four ounce bags with a best-by date of March fourth, are being recalled due to possible contamination. If you have purchased this item, please do not consume it. Bring the package, along with your receipt if available, to the customer service counter for a full refund, no questions asked. We apologize for any inconvenience and thank you for your understanding. If you have already eaten this product and feel unwell, please contact your physician. This announcement will repeat every ten minutes until the end of the day.",
+    "questions": [
+      {"question_en": "What is the purpose of this announcement?", "options": ["To advertise a sale on frozen fruit", "To notify shoppers of a product recall", "To announce a store closing", "To introduce a new product line"], "answer_index": 1, "explanation_zh": "廣播主要在通知顧客某項冷凍藍莓產品的召回訊息，所以答案是 (B)。"},
+      {"question_en": "What should customers bring to the customer service counter?", "options": ["A valid ID only", "The package and receipt if available", "A membership card", "An empty freezer bag"], "answer_index": 1, "explanation_zh": "廣播提到應攜帶包裝與收據（若有）至客服櫃台辦理退款，所以答案是 (B)。"},
+      {"question_en": "What should customers do if they feel unwell after eating the product?", "options": ["Return to the store immediately", "Contact their physician", "Call the manufacturer's hotline", "Wait and monitor symptoms"], "answer_index": 1, "explanation_zh": "廣播提醒若食用後感到不適，應聯絡自己的醫師，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "advertisement",
+    "talk": "Struggling to fall asleep at night? CloudNine Mattress uses cooling gel foam technology to keep you comfortable throughout the night, no matter the season. Every mattress comes with a one-hundred-night home trial, so you can test it risk-free, and if you're not satisfied, we'll pick it up and refund you in full. This week only, save three hundred dollars on our queen and king sizes when you use promo code REST300 at checkout. Each purchase also includes two free memory foam pillows, a fifty-dollar value. Delivery is free and typically arrives within five business days, compressed and rolled in a box small enough to fit through any doorway. Order today at cloudninemattress dot com.",
+    "questions": [
+      {"question_en": "What product is being advertised?", "options": ["A set of bed sheets", "A cooling gel foam mattress", "An air conditioning unit", "A pillow subscription service"], "answer_index": 1, "explanation_zh": "廣告介紹的是採用凝膠泡棉技術的 CloudNine 床墊，所以答案是 (B)。"},
+      {"question_en": "How much can customers save on queen and king sizes this week?", "options": ["One hundred dollars", "Two hundred dollars", "Three hundred dollars", "Five hundred dollars"], "answer_index": 2, "explanation_zh": "廣告提到本週使用優惠碼可省下三百美元，所以答案是 (C)。"},
+      {"question_en": "What is included free with every mattress purchase?", "options": ["A bed frame", "Two memory foam pillows", "A weighted blanket", "A mattress protector"], "answer_index": 1, "explanation_zh": "廣告提到每筆訂單皆附贈兩個記憶泡棉枕頭，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "voicemail",
+    "talk": "Hi, this message is for Ms. Okafor. This is Brian calling from Meridian Insurance regarding the claim you filed after your recent car accident. I've reviewed the repair estimate submitted by the body shop, and I'm happy to let you know it has been approved in full. A check for one thousand two hundred dollars will be mailed to the address we have on file within five to seven business days. If you'd prefer direct deposit instead, please call our claims department back at 555-0139 with your banking information before the check is processed. Thank you for your patience throughout this process.",
+    "questions": [
+      {"question_en": "Why is Brian calling Ms. Okafor?", "options": ["To request additional documents", "To inform her that her claim has been approved", "To deny her insurance claim", "To schedule a car inspection"], "answer_index": 1, "explanation_zh": "留言主要在通知 Ms. Okafor 她的保險理賠已全額核准，所以答案是 (B)。"},
+      {"question_en": "How will the payment be sent by default?", "options": ["By direct deposit", "By a check mailed within five to seven business days", "By cash pickup", "By wire transfer immediately"], "answer_index": 1, "explanation_zh": "留言提到將以支票方式在五到七個工作天內寄出一千兩百美元，所以答案是 (B)。"},
+      {"question_en": "What should Ms. Okafor do if she prefers direct deposit?", "options": ["Wait for the check to arrive first", "Call the claims department before the check is processed", "Visit the office in person", "Submit a new claim form"], "answer_index": 1, "explanation_zh": "留言提到若想改用直接存款，應在支票處理前致電理賠部門，所以答案是 (B)。"}
+    ]
+  },
+  {
+    "category": "broadcast_news",
+    "talk": "In business news, Miller's Bakehouse celebrated its fortieth anniversary this week with a special community event outside its original downtown location. The family-owned bakery, founded in nineteen eighty-six, now operates six locations across the region and employs over eighty people. To mark the occasion, the bakery gave away free pastries to the first two hundred customers each day this week and announced plans to open a seventh location next spring in the newly developed Harborview shopping district. Owner Diane Miller said the anniversary reflects decades of loyal customers who have supported the business through good times and difficult ones alike.",
+    "questions": [
+      {"question_en": "What is this news report mainly about?", "options": ["A bakery's fortieth anniversary celebration", "A new bakery opening for the first time", "A recall of bakery products", "A change in bakery ownership"], "answer_index": 0, "explanation_zh": "報導主要在敘述 Miller's Bakehouse 慶祝成立四十週年的活動，所以答案是 (A)。"},
+      {"question_en": "How many locations does the bakery currently operate?", "options": ["Two", "Four", "Six", "Eight"], "answer_index": 2, "explanation_zh": "報導提到這家烘焙坊目前在該地區共經營六家分店，所以答案是 (C)。"},
+      {"question_en": "What can be inferred about the bakery's future plans?", "options": ["It will close its original location", "It plans to open a seventh location next spring", "It will stop making pastries", "It is being sold to a larger company"], "answer_index": 1, "explanation_zh": "報導提到明年春天將在 Harborview 商圈開設第七家分店，所以答案是 (B)。"}
+    ]
+  }
+]
