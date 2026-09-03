@@ -1160,6 +1160,11 @@ function renderCardMode(container){
               <button class="speak-btn" id="speakWordBtn" title="播放發音" ${canSpeak?'':'disabled'}>🔊</button>
             </div>
           </div>
+          ${w.example_en ? `
+          <div class="example">
+            <button class="speak-btn" id="speakExampleFrontBtn" style="width:32px;height:32px;font-size:14px;flex:none;" title="播放例句" ${canSpeak?'':'disabled'}>🔊</button>
+            <div class="txt">${w.example_en}</div>
+          </div>` : ''}
           <p class="hint">${canSpeak?'':'（此瀏覽器不支援語音播放）'} 點卡片查看中文意思</p>
         </div>
         <div class="face back">
@@ -1194,6 +1199,8 @@ function renderCardMode(container){
   document.getElementById("flashcard").addEventListener("click", ()=>{ flipped = !flipped; renderStage(); });
   const sb = document.getElementById("speakWordBtn");
   if(sb) sb.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.word); });
+  const sebFront = document.getElementById("speakExampleFrontBtn");
+  if(sebFront) sebFront.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.example_en); });
   const seb = document.getElementById("speakExampleBtn");
   if(seb) seb.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.example_en); });
   document.getElementById("markUnknownBtn").addEventListener("click", (e)=>{ e.stopPropagation(); setStatus(w.id, "unknown"); renderStage(); });
