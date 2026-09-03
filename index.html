@@ -485,7 +485,7 @@ let order = [];
 let cursor = 0;
 let mode = "card";
 let flipped = false;
-let progress = loadProgress();
+let progress = {};
 let quizWord = null;
 let quizLocked = false;
 
@@ -493,8 +493,8 @@ let readingSets = [];
 let readingOrder = [];
 let readingIdx = 0;
 let readingDocTab = {};
-let readingAnswers = loadReadingAnswers();
-let readingChecked = loadReadingChecked();
+let readingAnswers = {};
+let readingChecked = {};
 
 /* Grammar (Part 5/6) */
 let p5Items = [];
@@ -502,8 +502,8 @@ let p6Items = [];
 let grammarPart = "p5";
 let p5Order = []; let p5Idx = 0; let p5Selected = null; let p5Checked = false;
 let p6Order = []; let p6Idx = 0; let p6Selected = {}; let p6Checked = false;
-let p5Progress = loadJSON("toeic-p5-progress"); // {idx: true} completed
-let p6Progress = loadJSON("toeic-p6-progress");
+let p5Progress = {}; // {idx: "correct"|"wrong"}, scoped to this part's content version — see initAllProgress()
+let p6Progress = {};
 
 /* Listening (Part 1/2/3/4) */
 let p1Items = []; let p2Items = []; let p3Items = []; let p4Items = [];
@@ -512,13 +512,53 @@ let p1Order = []; let p1Idx = 0; let p1Selected = null; let p1Checked = false; l
 let p2Order = []; let p2Idx = 0; let p2Selected = null; let p2Checked = false; let p2ShowText = false;
 let p3Order = []; let p3Idx = 0; let p3Selected = {}; let p3Checked = false; let p3ShowText = false;
 let p4Order = []; let p4Idx = 0; let p4Selected = {}; let p4Checked = false; let p4ShowText = false;
-let p1Progress = loadJSON("toeic-p1-progress");
-let p2Progress = loadJSON("toeic-p2-progress");
-let p3Progress = loadJSON("toeic-p3-progress");
-let p4Progress = loadJSON("toeic-p4-progress");
+let p1Progress = {};
+let p2Progress = {};
+let p3Progress = {};
+let p4Progress = {};
 
 function loadJSON(key){ try{ return JSON.parse(localStorage.getItem(key)||"{}"); }catch(e){ return {}; } }
 function saveJSON(key, val){ try{ localStorage.setItem(key, JSON.stringify(val)); }catch(e){} }
+
+/* ---------- Content versioning ----------
+   Each part's data file has a version tag in data/content_versions.json. Progress is stored
+   alongside the version it was recorded against; if the content for a part is later regenerated
+   (a new version), old right/wrong records for that part are treated as stale and not reused —
+   they simply don't apply to content the user hasn't actually seen, instead of silently mismatching. */
+let contentVersions = {};
+async function loadContentVersions(){
+  try{
+    const res = await fetch("data/content_versions.json");
+    contentVersions = res.ok ? await res.json() : {};
+  }catch(err){ contentVersions = {}; }
+}
+function versionOf(part){ return contentVersions[part] || "v1"; }
+
+function loadVersionedProgress(key, version){
+  const raw = loadJSON(key);
+  if(!raw || typeof raw !== "object") return {};
+  if("version" in raw) return (raw.version === version && raw.data) ? raw.data : {};
+  // Legacy data saved before content-versioning existed (a flat {id: status} map, no wrapper) —
+  // treat it as belonging to today's baseline version so this migration doesn't wipe existing progress.
+  return raw;
+}
+function saveVersionedProgress(key, version, dataObj){
+  saveJSON(key, { version, data: dataObj });
+}
+
+async function initAllProgress(){
+  await loadContentVersions();
+  progress = loadVersionedProgress("toeic-vocab-progress", versionOf("vocab"));
+  readingAnswers = loadVersionedProgress("toeic-reading-answers", versionOf("reading"));
+  readingChecked = loadVersionedProgress("toeic-reading-checked", versionOf("reading"));
+  p5Progress = loadVersionedProgress("toeic-p5-progress", versionOf("p5"));
+  p6Progress = loadVersionedProgress("toeic-p6-progress", versionOf("p6"));
+  p1Progress = loadVersionedProgress("toeic-p1-progress", versionOf("p1"));
+  p2Progress = loadVersionedProgress("toeic-p2-progress", versionOf("p2"));
+  p3Progress = loadVersionedProgress("toeic-p3-progress", versionOf("p3"));
+  p4Progress = loadVersionedProgress("toeic-p4-progress", versionOf("p4"));
+  render();
+}
 
 /* progressObj values are "correct" | "wrong" (older data may just be `true`, treated as "done" but not "wrong"). */
 function filterByMode(items, progressObj, mode){
@@ -533,34 +573,23 @@ function wrongCount(items, progressObj){
 let currentUser = null;
 let cloudSyncing = false; // true while we're applying a cloud snapshot, to avoid re-uploading it right back
 
-function loadProgress(){
-  try{ return JSON.parse(localStorage.getItem("toeic-vocab-progress")||"{}"); }catch(e){ return {}; }
-}
 function saveProgress(){
-  try{ localStorage.setItem("toeic-vocab-progress", JSON.stringify(progress)); }catch(e){}
+  saveVersionedProgress("toeic-vocab-progress", versionOf("vocab"), progress);
   pushCloudVocab();
 }
-function loadReadingAnswers(){
-  try{ return JSON.parse(localStorage.getItem("toeic-reading-answers")||"{}"); }catch(e){ return {}; }
-}
-function loadReadingChecked(){
-  try{ return JSON.parse(localStorage.getItem("toeic-reading-checked")||"{}"); }catch(e){ return {}; }
-}
 function saveReadingProgress(){
-  try{
-    localStorage.setItem("toeic-reading-answers", JSON.stringify(readingAnswers));
-    localStorage.setItem("toeic-reading-checked", JSON.stringify(readingChecked));
-  }catch(e){}
+  saveVersionedProgress("toeic-reading-answers", versionOf("reading"), readingAnswers);
+  saveVersionedProgress("toeic-reading-checked", versionOf("reading"), readingChecked);
   pushCloudReading();
 }
 
-function pushCloud(key, data){
+function pushCloud(key, payload){
   if(cloudSyncing || !currentUser || !window.cloudSync) return;
-  window.cloudSync.save(currentUser.uid, key, data).catch(()=>{});
+  window.cloudSync.save(currentUser.uid, key, payload).catch(()=>{});
 }
-function pushCloudVocab(){ pushCloud("vocab", progress); }
-function pushCloudReading(){ pushCloud("reading", {answers: readingAnswers, checked: readingChecked}); }
-function pushCloudPart(key, progressObj){ pushCloud(key, progressObj); }
+function pushCloudVocab(){ pushCloud("vocab", { version: versionOf("vocab"), progress }); }
+function pushCloudReading(){ pushCloud("reading", { version: versionOf("reading"), answers: readingAnswers, checked: readingChecked }); }
+function pushCloudPart(key, progressObj){ pushCloud(key, { version: versionOf(key), progress: progressObj }); }
 
 function renderAuthBar(){
   const bar = document.getElementById("authBar");
@@ -586,6 +615,16 @@ function renderAuthBar(){
 function mergeProgress(cloudMap, localMap){
   return { ...(cloudMap||{}), ...(localMap||{}) };
 }
+/* Only merge in a cloud record if it was recorded against the SAME content version we're currently showing —
+   a cloud record from a since-regenerated version of a part's content is discarded rather than merged in,
+   so old right/wrong marks never get misapplied to different questions that happen to share the same index. */
+function mergeVersioned(cloudEntry, localVal, part){
+  if(!cloudEntry) return localVal;
+  if("version" in cloudEntry) return cloudEntry.version === versionOf(part) ? mergeProgress(cloudEntry.progress, localVal) : localVal;
+  // Legacy cloud doc written before content-versioning existed (a flat progress map, no wrapper) —
+  // treat it as belonging to today's baseline version so this migration doesn't wipe synced progress.
+  return mergeProgress(cloudEntry, localVal);
+}
 
 window.addEventListener("cloud-auth-changed", async (e)=>{
   currentUser = e.detail.user;
@@ -593,25 +632,26 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
   if(!currentUser || !window.cloudSync) return;
   try{
     cloudSyncing = true;
+    await loadContentVersions(); // make sure we know current versions before comparing
     const cloud = await window.cloudSync.loadProgress(currentUser.uid);
 
-    progress = mergeProgress(cloud.vocab, progress);
-    try{ localStorage.setItem("toeic-vocab-progress", JSON.stringify(progress)); }catch(err){}
+    progress = mergeVersioned(cloud.vocab, progress, "vocab");
+    saveVersionedProgress("toeic-vocab-progress", versionOf("vocab"), progress);
 
-    readingChecked = mergeProgress(cloud.reading?.checked, readingChecked);
-    readingAnswers = { ...(cloud.reading?.answers||{}), ...readingAnswers };
-    try{
-      localStorage.setItem("toeic-reading-answers", JSON.stringify(readingAnswers));
-      localStorage.setItem("toeic-reading-checked", JSON.stringify(readingChecked));
-    }catch(err){}
+    const readingVersionOk = cloud.reading && (!("version" in cloud.reading) || cloud.reading.version === versionOf("reading"));
+    if(readingVersionOk){
+      readingChecked = mergeProgress(cloud.reading.checked, readingChecked);
+      readingAnswers = { ...(cloud.reading.answers||{}), ...readingAnswers };
+    }
+    saveVersionedProgress("toeic-reading-answers", versionOf("reading"), readingAnswers);
+    saveVersionedProgress("toeic-reading-checked", versionOf("reading"), readingChecked);
 
-    const partMap = {p5:"toeic-p5-progress", p6:"toeic-p6-progress", p1:"toeic-p1-progress", p2:"toeic-p2-progress", p3:"toeic-p3-progress", p4:"toeic-p4-progress"};
-    p5Progress = mergeProgress(cloud.p5, p5Progress); saveJSON(partMap.p5, p5Progress);
-    p6Progress = mergeProgress(cloud.p6, p6Progress); saveJSON(partMap.p6, p6Progress);
-    p1Progress = mergeProgress(cloud.p1, p1Progress); saveJSON(partMap.p1, p1Progress);
-    p2Progress = mergeProgress(cloud.p2, p2Progress); saveJSON(partMap.p2, p2Progress);
-    p3Progress = mergeProgress(cloud.p3, p3Progress); saveJSON(partMap.p3, p3Progress);
-    p4Progress = mergeProgress(cloud.p4, p4Progress); saveJSON(partMap.p4, p4Progress);
+    p5Progress = mergeVersioned(cloud.p5, p5Progress, "p5"); saveVersionedProgress("toeic-p5-progress", versionOf("p5"), p5Progress);
+    p6Progress = mergeVersioned(cloud.p6, p6Progress, "p6"); saveVersionedProgress("toeic-p6-progress", versionOf("p6"), p6Progress);
+    p1Progress = mergeVersioned(cloud.p1, p1Progress, "p1"); saveVersionedProgress("toeic-p1-progress", versionOf("p1"), p1Progress);
+    p2Progress = mergeVersioned(cloud.p2, p2Progress, "p2"); saveVersionedProgress("toeic-p2-progress", versionOf("p2"), p2Progress);
+    p3Progress = mergeVersioned(cloud.p3, p3Progress, "p3"); saveVersionedProgress("toeic-p3-progress", versionOf("p3"), p3Progress);
+    p4Progress = mergeVersioned(cloud.p4, p4Progress, "p4"); saveVersionedProgress("toeic-p4-progress", versionOf("p4"), p4Progress);
 
     cloudSyncing = false;
     // Always push the merged (union) result back up so the cloud copy converges too, not just on first sync.
@@ -1200,7 +1240,7 @@ function renderP5(container){
   document.getElementById("p5CheckBtn")?.addEventListener("click", ()=>{
     p5Checked = true;
     p5Progress[item.id] = (p5Selected === item.answer_index) ? "correct" : "wrong";
-    saveJSON("toeic-p5-progress", p5Progress); pushCloudPart("p5", p5Progress);
+    saveVersionedProgress("toeic-p5-progress", versionOf("p5"), p5Progress); pushCloudPart("p5", p5Progress);
     renderStage();
   });
   document.getElementById("p5RetryBtn")?.addEventListener("click", ()=>{
@@ -1298,7 +1338,7 @@ function renderP6(container){
   document.getElementById("p6CheckBtn")?.addEventListener("click", ()=>{
     p6Checked = true;
     p6Progress[item.id] = item.blanks.every((b,bi)=>p6Selected[bi]===b.answer_index) ? "correct" : "wrong";
-    saveJSON("toeic-p6-progress", p6Progress); pushCloudPart("p6", p6Progress);
+    saveVersionedProgress("toeic-p6-progress", versionOf("p6"), p6Progress); pushCloudPart("p6", p6Progress);
     renderStage();
   });
   document.getElementById("p6RetryBtn")?.addEventListener("click", ()=>{
@@ -1404,7 +1444,7 @@ function renderP1(container){
   document.getElementById("p1CheckBtn")?.addEventListener("click", ()=>{
     p1Checked = true;
     p1Progress[item.id] = (p1Selected === item.answer_index) ? "correct" : "wrong";
-    saveJSON("toeic-p1-progress", p1Progress); pushCloudPart("p1", p1Progress);
+    saveVersionedProgress("toeic-p1-progress", versionOf("p1"), p1Progress); pushCloudPart("p1", p1Progress);
     renderStage();
   });
   document.getElementById("p1RetryBtn")?.addEventListener("click", ()=>{
@@ -1498,7 +1538,7 @@ function renderP2(container){
   document.getElementById("p2CheckBtn")?.addEventListener("click", ()=>{
     p2Checked = true;
     p2Progress[item.id] = (p2Selected === item.answer_index) ? "correct" : "wrong";
-    saveJSON("toeic-p2-progress", p2Progress); pushCloudPart("p2", p2Progress);
+    saveVersionedProgress("toeic-p2-progress", versionOf("p2"), p2Progress); pushCloudPart("p2", p2Progress);
     renderStage();
   });
   document.getElementById("p2RetryBtn")?.addEventListener("click", ()=>{
@@ -1604,7 +1644,7 @@ function renderConversationOrTalk(container, kind){
   document.getElementById("lCheckBtn")?.addEventListener("click", ()=>{
     if(isP3) p3Checked = true; else p4Checked = true;
     progressObj[item.id] = item.questions.every((q,qi)=>selected[qi]===q.answer_index) ? "correct" : "wrong";
-    saveJSON(isP3 ? "toeic-p3-progress" : "toeic-p4-progress", progressObj);
+    saveVersionedProgress(isP3 ? "toeic-p3-progress" : "toeic-p4-progress", versionOf(isP3 ? "p3" : "p4"), progressObj);
     pushCloudPart(isP3 ? "p3" : "p4", progressObj);
     renderStage();
   });
@@ -1836,6 +1876,7 @@ async function loadP4(){
   if(mode === "listening" && listeningPart === "p4") renderStage();
 }
 
+initAllProgress();
 loadVocab();
 loadReading();
 loadP5();
