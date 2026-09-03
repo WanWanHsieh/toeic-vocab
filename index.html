@@ -1171,7 +1171,10 @@ function renderCardMode(container){
         <div class="face front">
           <div class="face-top">
             <span class="chip cat">${categoryLabel(w.category)}</span>
-            <span class="chip pos">${w.pos}</span>
+            <div style="display:flex; gap:6px; align-items:center;">
+              <span class="chip pos">${w.pos}</span>
+              <button class="speak-btn card-save-btn" style="width:28px;height:28px;font-size:13px;" title="加入收藏，之後複習">${isWordSaved(w.word) ? '❤️' : '🤍'}</button>
+            </div>
           </div>
           <div class="word-block">
             <p class="word">${w.word}</p>
@@ -1190,7 +1193,10 @@ function renderCardMode(container){
         <div class="face back">
           <div class="face-top">
             <span class="chip cat">${categoryLabel(w.category)}</span>
-            <span class="chip pos">${w.pos}</span>
+            <div style="display:flex; gap:6px; align-items:center;">
+              <span class="chip pos">${w.pos}</span>
+              <button class="speak-btn card-save-btn" style="width:28px;height:28px;font-size:13px;" title="加入收藏，之後複習">${isWordSaved(w.word) ? '❤️' : '🤍'}</button>
+            </div>
           </div>
           <p class="meaning">${w.meaning_zh}</p>
           <div class="example">
@@ -1224,6 +1230,9 @@ function renderCardMode(container){
   if(sebFront) sebFront.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.example_en); });
   const seb = document.getElementById("speakExampleBtn");
   if(seb) seb.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.example_en); });
+  container.querySelectorAll(".card-save-btn").forEach(btn=>{
+    btn.addEventListener("click", (e)=>{ e.stopPropagation(); toggleSavedWord(w); renderStage(); });
+  });
   document.getElementById("markUnknownBtn").addEventListener("click", (e)=>{ e.stopPropagation(); setStatus(w.id, "unknown"); renderStage(); });
   document.getElementById("markKnownBtn").addEventListener("click", (e)=>{ e.stopPropagation(); setStatus(w.id, "known"); renderStage(); });
   document.getElementById("prevBtn").addEventListener("click", ()=>{ cursor = (cursor-1+finalList.length)%finalList.length; flipped=false; renderStage(); });
