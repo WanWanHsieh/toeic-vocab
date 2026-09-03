@@ -580,6 +580,13 @@ function renderAuthBar(){
   }
 }
 
+/* Union-merge: keep every key from either side; on conflict, local (this device's current in-memory state) wins,
+   since it's always at least as fresh as whatever we last managed to push. This guarantees a cloud sync can
+   only ADD progress, never silently erase progress made locally before the cloud copy was written. */
+function mergeProgress(cloudMap, localMap){
+  return { ...(cloudMap||{}), ...(localMap||{}) };
+}
+
 window.addEventListener("cloud-auth-changed", async (e)=>{
   currentUser = e.detail.user;
   renderAuthBar();
@@ -587,34 +594,35 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
   try{
     cloudSyncing = true;
     const cloud = await window.cloudSync.loadProgress(currentUser.uid);
-    if(cloud.vocab){
-      progress = cloud.vocab;
-      try{ localStorage.setItem("toeic-vocab-progress", JSON.stringify(progress)); }catch(err){}
-    }
-    if(cloud.reading){
-      readingAnswers = cloud.reading.answers || {};
-      readingChecked = cloud.reading.checked || {};
-      try{
-        localStorage.setItem("toeic-reading-answers", JSON.stringify(readingAnswers));
-        localStorage.setItem("toeic-reading-checked", JSON.stringify(readingChecked));
-      }catch(err){}
-    }
+
+    progress = mergeProgress(cloud.vocab, progress);
+    try{ localStorage.setItem("toeic-vocab-progress", JSON.stringify(progress)); }catch(err){}
+
+    readingChecked = mergeProgress(cloud.reading?.checked, readingChecked);
+    readingAnswers = { ...(cloud.reading?.answers||{}), ...readingAnswers };
+    try{
+      localStorage.setItem("toeic-reading-answers", JSON.stringify(readingAnswers));
+      localStorage.setItem("toeic-reading-checked", JSON.stringify(readingChecked));
+    }catch(err){}
+
     const partMap = {p5:"toeic-p5-progress", p6:"toeic-p6-progress", p1:"toeic-p1-progress", p2:"toeic-p2-progress", p3:"toeic-p3-progress", p4:"toeic-p4-progress"};
-    if(cloud.p5) { p5Progress = cloud.p5; saveJSON(partMap.p5, p5Progress); }
-    if(cloud.p6) { p6Progress = cloud.p6; saveJSON(partMap.p6, p6Progress); }
-    if(cloud.p1) { p1Progress = cloud.p1; saveJSON(partMap.p1, p1Progress); }
-    if(cloud.p2) { p2Progress = cloud.p2; saveJSON(partMap.p2, p2Progress); }
-    if(cloud.p3) { p3Progress = cloud.p3; saveJSON(partMap.p3, p3Progress); }
-    if(cloud.p4) { p4Progress = cloud.p4; saveJSON(partMap.p4, p4Progress); }
+    p5Progress = mergeProgress(cloud.p5, p5Progress); saveJSON(partMap.p5, p5Progress);
+    p6Progress = mergeProgress(cloud.p6, p6Progress); saveJSON(partMap.p6, p6Progress);
+    p1Progress = mergeProgress(cloud.p1, p1Progress); saveJSON(partMap.p1, p1Progress);
+    p2Progress = mergeProgress(cloud.p2, p2Progress); saveJSON(partMap.p2, p2Progress);
+    p3Progress = mergeProgress(cloud.p3, p3Progress); saveJSON(partMap.p3, p3Progress);
+    p4Progress = mergeProgress(cloud.p4, p4Progress); saveJSON(partMap.p4, p4Progress);
+
     cloudSyncing = false;
-    if(!cloud.vocab) pushCloudVocab();
-    if(!cloud.reading) pushCloudReading();
-    if(!cloud.p5) pushCloudPart("p5", p5Progress);
-    if(!cloud.p6) pushCloudPart("p6", p6Progress);
-    if(!cloud.p1) pushCloudPart("p1", p1Progress);
-    if(!cloud.p2) pushCloudPart("p2", p2Progress);
-    if(!cloud.p3) pushCloudPart("p3", p3Progress);
-    if(!cloud.p4) pushCloudPart("p4", p4Progress);
+    // Always push the merged (union) result back up so the cloud copy converges too, not just on first sync.
+    pushCloudVocab();
+    pushCloudReading();
+    pushCloudPart("p5", p5Progress);
+    pushCloudPart("p6", p6Progress);
+    pushCloudPart("p1", p1Progress);
+    pushCloudPart("p2", p2Progress);
+    pushCloudPart("p3", p3Progress);
+    pushCloudPart("p4", p4Progress);
     render();
   }catch(err){
     cloudSyncing = false;
