@@ -292,6 +292,12 @@
   .hub-card-bar-fill{ height:100%; background:var(--success); border-radius:999px; }
   .hub-intro{ text-align:center; color:var(--text-muted); font-size:13px; margin-bottom:16px; }
 
+  /* Saved words (collected from the word-lookup popup) */
+  .saved-word-head{ display:flex; align-items:center; gap:10px; margin-bottom:10px; }
+  .saved-word-head .word-card-word{ font-size:18px; font-weight:700; }
+  .saved-word-head .speak-btn{ width:30px; height:30px; font-size:12px; }
+  .saved-word-head .unsave-btn{ margin-left:auto; }
+
   footer.note{ text-align:center; color:var(--text-muted); font-size:12px; margin-top:36px; }
 
   @media (prefers-reduced-motion: reduce){
@@ -326,6 +332,7 @@
     <button class="tab" data-mode="list" role="tab" aria-selected="false">單字列表</button>
     <button class="tab" data-mode="quiz" role="tab" aria-selected="false">小測驗</button>
     <button class="tab" data-mode="toeic_hub" role="tab" aria-selected="false">TOEIC 測驗</button>
+    <button class="tab" data-mode="saved" role="tab" aria-selected="false">❤️ 收藏單字</button>
   </div>
 
   <div class="controls" id="vocabControls">
@@ -518,6 +525,10 @@ let p2Progress = {};
 let p3Progress = {};
 let p4Progress = {};
 
+/* Words saved (❤️'d) from the word-lookup popup, for later review — keyed by lowercase word.
+   Not tied to any content version/generation: a saved word is a personal reference note, not a graded answer. */
+let savedWords = {};
+
 /* TOEIC hub: generations list -> parts list -> existing practice UI */
 let toeicHubStage = "generations"; // "generations" | "parts"
 const TOEIC_PARTS = [
@@ -699,6 +710,20 @@ function pushCloud(key, payload){
 function pushCloudVocab(){ pushCloud("vocab", { version: versionOf("vocab"), progress }); }
 function pushCloudReading(){ pushCloud("reading", { version: versionOf("reading"), answers: readingAnswers, checked: readingChecked }); }
 function pushCloudPart(key, progressObj){ pushCloud(key, { version: versionOf(key), progress: progressObj }); }
+function pushCloudSaved(){ pushCloud("savedWords", savedWords); }
+
+function isWordSaved(word){ return !!savedWords[word.toLowerCase()]; }
+function toggleSavedWord(r){
+  const key = r.word.toLowerCase();
+  if(savedWords[key]){
+    delete savedWords[key];
+  }else{
+    savedWords[key] = { word: r.word, ipa: r.ipa||"", pos: r.pos||"", meaning_zh: r.meaning_zh||"", example_en: r.example_en||"", example_zh: r.example_zh||"", savedAt: Date.now() };
+  }
+  saveJSON("toeic-saved-words", savedWords);
+  pushCloudSaved();
+  if(mode === "saved") renderStage();
+}
 
 function renderAuthBar(){
   const bar = document.getElementById("authBar");
@@ -762,6 +787,9 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
     p3Progress = mergeVersioned(cloud.p3, p3Progress, "p3"); saveVersionedProgress("toeic-p3-progress", versionOf("p3"), p3Progress);
     p4Progress = mergeVersioned(cloud.p4, p4Progress, "p4"); saveVersionedProgress("toeic-p4-progress", versionOf("p4"), p4Progress);
 
+    savedWords = mergeProgress(cloud.savedWords, savedWords);
+    saveJSON("toeic-saved-words", savedWords);
+
     cloudSyncing = false;
     // Always push the merged (union) result back up so the cloud copy converges too, not just on first sync.
     pushCloudVocab();
@@ -772,6 +800,7 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
     pushCloudPart("p2", p2Progress);
     pushCloudPart("p3", p3Progress);
     pushCloudPart("p4", p4Progress);
+    pushCloudSaved();
     render();
   }catch(err){
     cloudSyncing = false;
@@ -930,9 +959,10 @@ function showWordPopup(word){
     card.innerHTML = `
       <button class="wp-close" id="wpClose">×</button>
       <div class="wp-word">${r.word}</div>
-      <div class="speak-row" style="justify-content:flex-start; margin-bottom:10px;">
+      <div class="speak-row" style="justify-content:flex-start; margin-bottom:10px; gap:8px;">
         ${r.ipa ? `<span class="wp-ipa mono">${r.ipa}</span>` : ''}
         <button class="speak-btn" id="wpSpeak" style="width:34px;height:34px;font-size:14px;">🔊</button>
+        <button class="speak-btn" id="wpSave" style="width:34px;height:34px;font-size:14px;" title="加入收藏，之後複習">${isWordSaved(r.word) ? '❤️' : '🤍'}</button>
       </div>
       ${r.pos ? `<div class="wp-pos">${r.pos}</div>` : ''}
       <div class="wp-meaning">${r.meaning_zh || (r.example_en ? '(查無中文翻譯，見下方英文釋義)' : '查無此字的資料')}</div>
@@ -947,6 +977,10 @@ function showWordPopup(word){
       }else{
         speak(r.word);
       }
+    });
+    document.getElementById("wpSave").addEventListener("click", ()=>{
+      toggleSavedWord(r);
+      document.getElementById("wpSave").textContent = isWordSaved(r.word) ? '❤️' : '🤍';
     });
   }).catch(()=>{
     if(!overlay.classList.contains("open")) return;
@@ -1908,7 +1942,42 @@ function renderStage(){
   else if(mode === "grammar") renderGrammarMode(container);
   else if(mode === "listening") renderListeningMode(container);
   else if(mode === "toeic_hub") renderToeicHub(container);
+  else if(mode === "saved") renderSavedMode(container);
   else renderQuizMode(container);
+}
+
+/* ---------- Saved words (collected from the lookup popup) ---------- */
+function renderSavedMode(container){
+  const list = Object.values(savedWords).sort((a,b)=> (b.savedAt||0)-(a.savedAt||0));
+  if(list.length === 0){
+    container.innerHTML = `<div class="empty-state">還沒有收藏任何單字。閱讀或文法測驗時點擊不懂的單字查詢意思，再按 🤍 即可加入收藏，方便之後複習。</div>`;
+    return;
+  }
+  const rows = list.map(w=>`
+    <div class="hub-card" style="cursor:default;">
+      <div class="saved-word-head">
+        <span class="word-card-word">${w.word}</span>
+        ${w.ipa ? `<span class="mono">${w.ipa}</span>` : ''}
+        <button class="speak-btn" data-speak="${w.word}">🔊</button>
+        <button class="speak-btn unsave-btn" data-unsave="${w.word}" title="移除收藏">❤️</button>
+      </div>
+      ${w.pos ? `<div class="wp-pos">${w.pos}</div>` : ''}
+      <div class="wp-meaning">${w.meaning_zh || '（無中文翻譯）'}</div>
+      ${w.example_en ? `<div class="wp-example"><div>${w.example_en}</div>${w.example_zh ? `<div class="zh">${w.example_zh}</div>` : ''}</div>` : ''}
+    </div>
+  `).join("");
+  container.innerHTML = `<div class="hub-intro">已收藏 ${list.length} 個單字</div><div class="hub-list">${rows}</div>`;
+  container.querySelectorAll("[data-speak]").forEach(btn=>{
+    btn.addEventListener("click", ()=> speak(btn.dataset.speak));
+  });
+  container.querySelectorAll("[data-unsave]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      delete savedWords[btn.dataset.unsave.toLowerCase()];
+      saveJSON("toeic-saved-words", savedWords);
+      pushCloudSaved();
+      renderStage();
+    });
+  });
 }
 
 /* ---------- TOEIC hub: generations -> parts -> existing practice UI ---------- */
@@ -2058,6 +2127,7 @@ async function loadP4(){
   if(mode === "listening" && listeningPart === "p4") renderStage();
 }
 
+savedWords = loadJSON("toeic-saved-words");
 initAllProgress();
 loadVocab();
 loadReading();
@@ -2097,7 +2167,7 @@ loadP4();
     signOut: () => signOut(auth)
   };
 
-  const PROGRESS_KEYS = ["vocab","reading","p5","p6","p1","p2","p3","p4"];
+  const PROGRESS_KEYS = ["vocab","reading","p5","p6","p1","p2","p3","p4","savedWords"];
 
   window.cloudSync = {
     async loadProgress(uid){
