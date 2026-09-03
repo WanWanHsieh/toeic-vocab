@@ -1132,6 +1132,26 @@ function renderStats(){
   document.getElementById("statUnknown").textContent = unknown;
 }
 
+/* Both card faces are absolutely positioned (inset:0) so the flip transform overlays them exactly, which means
+   the card's own height doesn't grow with its content — a face taller than the card's fixed min-height just
+   spills out past the card's edge. Fix: briefly lay each face out in normal flow to measure its real content
+   height, then size the card to fit whichever face (front or back) needs the most room. */
+function autosizeFlashcard(){
+  const card = document.getElementById("flashcard");
+  if(!card) return;
+  const front = card.querySelector(".face.front");
+  const back = card.querySelector(".face.back");
+  if(!front || !back) return;
+  card.style.minHeight = "0px";
+  front.style.position = "static";
+  const frontH = front.offsetHeight;
+  front.style.position = "";
+  back.style.position = "static";
+  const backH = back.offsetHeight;
+  back.style.position = "";
+  card.style.minHeight = Math.max(frontH, backH, 320) + "px";
+}
+
 /* ---------- Render: card mode ---------- */
 function renderCardMode(container){
   const list = currentFilterList();
@@ -1196,6 +1216,7 @@ function renderCardMode(container){
     <div class="progress-bar"><div class="progress-fill" style="width:${((cursor+1)/finalList.length*100).toFixed(1)}%"></div></div>
   `;
 
+  autosizeFlashcard();
   document.getElementById("flashcard").addEventListener("click", ()=>{ flipped = !flipped; renderStage(); });
   const sb = document.getElementById("speakWordBtn");
   if(sb) sb.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.word); });
