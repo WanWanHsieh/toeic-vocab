@@ -676,15 +676,58 @@ function fetchWithTimeout(url, ms){
   return fetch(url, {signal: controller.signal}).finally(()=>clearTimeout(timer));
 }
 
+/* Cheap English inflection guesses, so "employees"/"orders"/"planning" etc. resolve to a base form already in our dictionaries without needing a full lemmatizer. */
+function wordVariants(w){
+  const vs = new Set([w]);
+  if(w.endsWith("ies")) vs.add(w.slice(0,-3)+"y");
+  if(w.endsWith("es")){ vs.add(w.slice(0,-2)); vs.add(w.slice(0,-1)); }
+  if(w.endsWith("s") && !w.endsWith("ss")) vs.add(w.slice(0,-1));
+  if(w.endsWith("ing")){
+    vs.add(w.slice(0,-3)); vs.add(w.slice(0,-3)+"e");
+    if(w.length>4 && w[w.length-4]===w[w.length-5]) vs.add(w.slice(0,-4));
+  }
+  if(w.endsWith("ed")){
+    vs.add(w.slice(0,-2)); vs.add(w.slice(0,-1));
+    if(w.length>3 && w[w.length-3]===w[w.length-4]) vs.add(w.slice(0,-3));
+  }
+  if(w.endsWith("er")){ vs.add(w.slice(0,-2)); vs.add(w.slice(0,-1)); }
+  if(w.endsWith("est")){ vs.add(w.slice(0,-3)); vs.add(w.slice(0,-2)); }
+  if(w.endsWith("ly")) vs.add(w.slice(0,-2));
+  return [...vs];
+}
+
+let supplementaryDict = null;
+async function loadSupplementaryDict(){
+  if(supplementaryDict) return supplementaryDict;
+  try{
+    const res = await fetch("data/supplementary_dict.json");
+    supplementaryDict = res.ok ? await res.json() : [];
+  }catch(err){ supplementaryDict = []; }
+  return supplementaryDict;
+}
+
 async function lookupWord(word){
   const key = word.toLowerCase();
   if(wordLookupCache[key]) return wordLookupCache[key];
-  const local = words.find(w=>w.word.toLowerCase() === key);
+  const variants = wordVariants(key);
+
+  let local = words.find(w=>w.word.toLowerCase() === key);
+  if(!local){ for(const v of variants){ local = words.find(w=>w.word.toLowerCase() === v); if(local) break; } }
   if(local){
     const result = { word: local.word, ipa: local.ipa, pos: local.pos, meaning_zh: local.meaning_zh, example_en: local.example_en, example_zh: local.example_zh, audioUrl: null, source: "local" };
     wordLookupCache[key] = result;
     return result;
   }
+
+  const supp = await loadSupplementaryDict();
+  let match = supp.find(w=>w.word === key);
+  if(!match){ for(const v of variants){ match = supp.find(w=>w.word === v); if(match) break; } }
+  if(match){
+    const result = { word: match.word, ipa: match.ipa, pos: match.pos, meaning_zh: match.meaning_zh, example_en: "", example_zh: "", audioUrl: null, source: "supplementary" };
+    wordLookupCache[key] = result;
+    return result;
+  }
+
   let ipa = "", audioUrl = null, defEn = "", pos = "", meaningZh = "";
 
   const dictPromise = fetchWithTimeout(`https://api.dictionaryapi.dev/api/v2/entries/en/${encodeURIComponent(key)}`)
