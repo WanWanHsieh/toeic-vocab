@@ -525,14 +525,26 @@ function saveJSON(key, val){ try{ localStorage.setItem(key, JSON.stringify(val))
    alongside the version it was recorded against; if the content for a part is later regenerated
    (a new version), old right/wrong records for that part are treated as stale and not reused —
    they simply don't apply to content the user hasn't actually seen, instead of silently mismatching. */
-let contentVersions = {};
-async function loadContentVersions(){
-  try{
-    const res = await fetch("data/content_versions.json");
-    contentVersions = res.ok ? await res.json() : {};
-  }catch(err){ contentVersions = {}; }
+/* All content for one "generation" lives together under data/<version>/ (e.g. data/2026-09-03/part1.json,
+   .../toeic_vocab.json, .../images/...). Regenerating content later means adding a NEW dated folder and
+   bumping this pointer — the old folder (and any progress recorded against it) is simply left behind,
+   never touched or merged into the new generation. */
+let currentVersion = "v1";
+let currentVersionPromise = null;
+/* Shared/deduped: whichever loader calls this first triggers the one fetch; everyone else awaits the same
+   promise, so every loader is guaranteed a resolved currentVersion before building its data path — no matter
+   what order loadVocab()/loadReading()/loadP1()..loadP6()/initAllProgress() happen to fire in. */
+function ensureCurrentVersion(){
+  if(!currentVersionPromise){
+    currentVersionPromise = fetch("data/current_version.json")
+      .then(res => res.ok ? res.json() : null)
+      .then(d => { currentVersion = (d && d.version) || "v1"; })
+      .catch(()=>{ currentVersion = "v1"; });
+  }
+  return currentVersionPromise;
 }
-function versionOf(part){ return contentVersions[part] || "v1"; }
+function versionOf(part){ return currentVersion; }
+function dataPath(relPath){ return `data/${currentVersion}/${relPath}`; }
 
 function loadVersionedProgress(key, version){
   const raw = loadJSON(key);
@@ -547,7 +559,7 @@ function saveVersionedProgress(key, version, dataObj){
 }
 
 async function initAllProgress(){
-  await loadContentVersions();
+  await ensureCurrentVersion();
   progress = loadVersionedProgress("toeic-vocab-progress", versionOf("vocab"));
   readingAnswers = loadVersionedProgress("toeic-reading-answers", versionOf("reading"));
   readingChecked = loadVersionedProgress("toeic-reading-checked", versionOf("reading"));
@@ -632,7 +644,7 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
   if(!currentUser || !window.cloudSync) return;
   try{
     cloudSyncing = true;
-    await loadContentVersions(); // make sure we know current versions before comparing
+    await ensureCurrentVersion(); // make sure we know current versions before comparing
     const cloud = await window.cloudSync.loadProgress(currentUser.uid);
 
     progress = mergeVersioned(cloud.vocab, progress, "vocab");
@@ -748,7 +760,8 @@ let supplementaryDict = null;
 async function loadSupplementaryDict(){
   if(supplementaryDict) return supplementaryDict;
   try{
-    const res = await fetch("data/supplementary_dict.json");
+    await ensureCurrentVersion();
+    const res = await fetch(dataPath("supplementary_dict.json"));
     supplementaryDict = res.ok ? await res.json() : [];
   }catch(err){ supplementaryDict = []; }
   return supplementaryDict;
@@ -1415,7 +1428,7 @@ function renderP1(container){
       </div>
     </div>
     <div class="listen-card">
-      <div class="p1-scene-wrap">${item.photo ? `<img src="${item.photo}" alt="TOEIC Part 1 photo" loading="lazy">` : item.scene_svg}</div>
+      <div class="p1-scene-wrap">${item.photo ? `<img src="${dataPath(item.photo)}" alt="TOEIC Part 1 photo" loading="lazy">` : item.scene_svg}</div>
       ${item.photo && item.photo_credit ? `<div class="p1-credit">${item.photo_credit}</div>` : ''}
       <div class="listen-play-row">
         <button class="big-play-btn" id="p1PlayBtn" ${canSpeak?'':'disabled'}>▶ 播放四個敘述</button>
@@ -1808,13 +1821,14 @@ async function loadVocab(){
   const stage = document.getElementById("stage");
   stage.innerHTML = `<div class="empty-state">正在載入單字資料…</div>`;
   try{
-    const res = await fetch("data/toeic_vocab.json");
+    await ensureCurrentVersion();
+    const res = await fetch(dataPath("toeic_vocab.json"));
     if(!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
     words = data.map((w,i)=>({...w, id: w.id ?? i}));
   }catch(err){
     words = FALLBACK_VOCAB.map((w,i)=>({...w, id:i}));
-    stage.innerHTML = `<div class="empty-state">找不到 data/toeic_vocab.json，暫時顯示少量範例單字。<br>（若是直接雙擊開啟 index.html，瀏覽器會擋掉本機檔案讀取，請改用網站連結或本機伺服器開啟。）</div>`;
+    stage.innerHTML = `<div class="empty-state">找不到單字資料，暫時顯示少量範例單字。<br>（若是直接雙擊開啟 index.html，瀏覽器會擋掉本機檔案讀取，請改用網站連結或本機伺服器開啟。）</div>`;
   }
   order = words.map(w=>w.id);
   populateCategories();
@@ -1823,7 +1837,8 @@ async function loadVocab(){
 
 async function loadReading(){
   try{
-    const res = await fetch("data/toeic_reading.json");
+    await ensureCurrentVersion();
+    const res = await fetch(dataPath("toeic_reading.json"));
     if(!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
     readingSets = data.map((s,i)=>({...s, id: s.id ?? i}));
@@ -1834,9 +1849,10 @@ async function loadReading(){
   if(mode === "reading") renderStage();
 }
 
-async function loadJSONData(path, fallback){
+async function loadJSONData(relPath, fallback){
   try{
-    const res = await fetch(path);
+    await ensureCurrentVersion();
+    const res = await fetch(dataPath(relPath));
     if(!res.ok) throw new Error("HTTP " + res.status);
     const data = await res.json();
     return data.map((it,i)=>({...it, id: it.id ?? i}));
@@ -1846,32 +1862,32 @@ async function loadJSONData(path, fallback){
 }
 
 async function loadP5(){
-  p5Items = await loadJSONData("data/part5.json", FALLBACK_P5);
+  p5Items = await loadJSONData("part5.json", FALLBACK_P5);
   p5Order = p5Items.map(it=>it.id);
   if(mode === "grammar" && grammarPart === "p5") renderStage();
 }
 async function loadP6(){
-  p6Items = await loadJSONData("data/part6.json", FALLBACK_P6);
+  p6Items = await loadJSONData("part6.json", FALLBACK_P6);
   p6Order = p6Items.map(it=>it.id);
   if(mode === "grammar" && grammarPart === "p6") renderStage();
 }
 async function loadP1(){
-  p1Items = await loadJSONData("data/part1.json", FALLBACK_P1);
+  p1Items = await loadJSONData("part1.json", FALLBACK_P1);
   p1Order = p1Items.map(it=>it.id);
   if(mode === "listening" && listeningPart === "p1") renderStage();
 }
 async function loadP2(){
-  p2Items = await loadJSONData("data/part2.json", FALLBACK_P2);
+  p2Items = await loadJSONData("part2.json", FALLBACK_P2);
   p2Order = p2Items.map(it=>it.id);
   if(mode === "listening" && listeningPart === "p2") renderStage();
 }
 async function loadP3(){
-  p3Items = await loadJSONData("data/part3.json", FALLBACK_P3);
+  p3Items = await loadJSONData("part3.json", FALLBACK_P3);
   p3Order = p3Items.map(it=>it.id);
   if(mode === "listening" && listeningPart === "p3") renderStage();
 }
 async function loadP4(){
-  p4Items = await loadJSONData("data/part4.json", FALLBACK_P4);
+  p4Items = await loadJSONData("part4.json", FALLBACK_P4);
   p4Order = p4Items.map(it=>it.id);
   if(mode === "listening" && listeningPart === "p4") renderStage();
 }
