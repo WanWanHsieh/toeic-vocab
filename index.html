@@ -179,6 +179,14 @@
   .row .example-inline .zh{ color:var(--text-muted); }
   .row .cat-badge{ font-size:11px; color:var(--gold); font-family:"IBM Plex Mono",monospace; white-space:nowrap; padding-top:2px; }
   .row .speak-btn{ width:36px; height:36px; font-size:15px; }
+  /* Below ~640px the fixed grid columns leave almost no room for the word/example text, forcing it to
+     wrap into a cramped sliver. Switch to a wrapping flex row instead: the word block claims the full
+     width of its own line, and the badge/status/buttons flow onto a second line beneath it. */
+  @media (max-width:640px){
+    .row{ display:flex; flex-wrap:wrap; align-items:center; }
+    .row > div:first-child{ flex:1 0 100%; }
+    .row .cat-badge{ margin-right:auto; }
+  }
   .empty-state{ text-align:center; color:var(--text-muted); padding:60px 20px; font-size:14px; }
   .load-more-wrap{ display:flex; justify-content:center; padding:18px 0 6px; }
   .list-count{ text-align:center; font-size:12px; color:var(--text-muted); margin-bottom:10px; font-family:"IBM Plex Mono",monospace; }
