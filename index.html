@@ -282,6 +282,16 @@
   .wp-note{ margin-top:12px; font-size:11.5px; color:var(--text-muted); }
   .wp-loading{ text-align:center; color:var(--text-muted); padding:20px 0; }
 
+  /* TOEIC hub (generation picker -> Part picker) */
+  .hub-list{ display:grid; gap:12px; max-width:640px; margin:0 auto; }
+  .hub-card{ display:block; width:100%; text-align:left; background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:18px 20px; cursor:pointer; box-shadow:var(--shadow); }
+  .hub-card:hover{ border-color:var(--accent); }
+  .hub-card-title{ font-size:17px; font-weight:700; margin-bottom:4px; }
+  .hub-card-sub{ font-size:13px; color:var(--text-muted); font-family:"IBM Plex Mono",monospace; }
+  .hub-card-bar{ margin-top:10px; height:6px; border-radius:999px; background:var(--surface-2); overflow:hidden; }
+  .hub-card-bar-fill{ height:100%; background:var(--success); border-radius:999px; }
+  .hub-intro{ text-align:center; color:var(--text-muted); font-size:13px; margin-bottom:16px; }
+
   footer.note{ text-align:center; color:var(--text-muted); font-size:12px; margin-top:36px; }
 
   @media (prefers-reduced-motion: reduce){
@@ -315,9 +325,7 @@
     <button class="tab" data-mode="card" role="tab" aria-selected="true">字卡模式</button>
     <button class="tab" data-mode="list" role="tab" aria-selected="false">單字列表</button>
     <button class="tab" data-mode="quiz" role="tab" aria-selected="false">小測驗</button>
-    <button class="tab" data-mode="grammar" role="tab" aria-selected="false">文法選字 Part 5-6</button>
-    <button class="tab" data-mode="reading" role="tab" aria-selected="false">閱讀測驗 Part 7</button>
-    <button class="tab" data-mode="listening" role="tab" aria-selected="false">聽力測驗 Part 1-4</button>
+    <button class="tab" data-mode="toeic_hub" role="tab" aria-selected="false">TOEIC 測驗</button>
   </div>
 
   <div class="controls" id="vocabControls">
@@ -329,6 +337,7 @@
   </div>
 
   <div class="controls" id="readingControls" style="display:none;">
+    <button class="icon-btn back-to-hub-btn">◀ 返回 Part 列表</button>
     <select id="readingTypeSelect">
       <option value="all">全部題型</option>
       <option value="single">單篇文章</option>
@@ -351,10 +360,7 @@
   </div>
 
   <div class="controls" id="grammarControls" style="display:none;">
-    <div class="subtabs">
-      <button class="subtab" data-gpart="p5" aria-selected="true">單句填空 Part 5</button>
-      <button class="subtab" data-gpart="p6" aria-selected="false">短文填空 Part 6</button>
-    </div>
+    <button class="icon-btn back-to-hub-btn">◀ 返回 Part 列表</button>
     <select id="grammarFilterMode">
       <option value="all">全部題目</option>
       <option value="unfinished">只看未完成</option>
@@ -364,12 +370,7 @@
   </div>
 
   <div class="controls" id="listeningControls" style="display:none;">
-    <div class="subtabs">
-      <button class="subtab" data-lpart="p1" aria-selected="true">照片描述 Part 1</button>
-      <button class="subtab" data-lpart="p2" aria-selected="false">問答 Part 2</button>
-      <button class="subtab" data-lpart="p3" aria-selected="false">對話 Part 3</button>
-      <button class="subtab" data-lpart="p4" aria-selected="false">簡短獨白 Part 4</button>
-    </div>
+    <button class="icon-btn back-to-hub-btn">◀ 返回 Part 列表</button>
     <select id="listeningFilterMode">
       <option value="all">全部題目</option>
       <option value="unfinished">只看未完成</option>
@@ -517,6 +518,37 @@ let p2Progress = {};
 let p3Progress = {};
 let p4Progress = {};
 
+/* TOEIC hub: generations list -> parts list -> existing practice UI */
+let toeicHubStage = "generations"; // "generations" | "parts"
+const TOEIC_PARTS = [
+  {key:"p1", label:"Part 1 照片描述", mode:"listening", sub:"p1"},
+  {key:"p2", label:"Part 2 應答問題", mode:"listening", sub:"p2"},
+  {key:"p3", label:"Part 3 簡短對話", mode:"listening", sub:"p3"},
+  {key:"p4", label:"Part 4 簡短獨白", mode:"listening", sub:"p4"},
+  {key:"p5", label:"Part 5 單句填空", mode:"grammar", sub:"p5"},
+  {key:"p6", label:"Part 6 段落填空", mode:"grammar", sub:"p6"},
+  {key:"p7", label:"Part 7 閱讀測驗", mode:"reading", sub:null}
+];
+function partProgressSummary(key){
+  const table = {
+    p1:[p1Items, p1Progress], p2:[p2Items, p2Progress],
+    p3:[p3Items, p3Progress], p4:[p4Items, p4Progress],
+    p5:[p5Items, p5Progress], p6:[p6Items, p6Progress],
+    p7:[readingSets, readingChecked]
+  };
+  const [items, prog] = table[key] || [[], {}];
+  const total = items.length;
+  let done = 0, wrong = 0;
+  items.forEach(it=>{
+    const st = prog[it.id];
+    if(st === "correct" || st === "wrong"){
+      done++;
+      if(st === "wrong") wrong++;
+    }
+  });
+  return {done, total, wrong};
+}
+
 function loadJSON(key){ try{ return JSON.parse(localStorage.getItem(key)||"{}"); }catch(e){ return {}; } }
 function saveJSON(key, val){ try{ localStorage.setItem(key, JSON.stringify(val)); }catch(e){} }
 
@@ -534,12 +566,16 @@ let currentVersionPromise = null;
 /* Shared/deduped: whichever loader calls this first triggers the one fetch; everyone else awaits the same
    promise, so every loader is guaranteed a resolved currentVersion before building its data path — no matter
    what order loadVocab()/loadReading()/loadP1()..loadP6()/initAllProgress() happen to fire in. */
+let allVersions = [];
 function ensureCurrentVersion(){
   if(!currentVersionPromise){
     currentVersionPromise = fetch("data/current_version.json")
       .then(res => res.ok ? res.json() : null)
-      .then(d => { currentVersion = (d && d.version) || "v1"; })
-      .catch(()=>{ currentVersion = "v1"; });
+      .then(d => {
+        currentVersion = (d && d.version) || "v1";
+        allVersions = (d && d.all_versions && d.all_versions.length) ? d.all_versions : [currentVersion];
+      })
+      .catch(()=>{ currentVersion = "v1"; allVersions = ["v1"]; });
   }
   return currentVersionPromise;
 }
@@ -902,27 +938,36 @@ document.getElementById("resetBtn").addEventListener("click", ()=>{
     render();
   }
 });
+function updateControlBarVisibility(){
+  document.getElementById("vocabControls").style.display = (mode === "card" || mode === "list" || mode === "quiz") ? "flex" : "none";
+  document.getElementById("readingControls").style.display = mode === "reading" ? "flex" : "none";
+  document.getElementById("grammarControls").style.display = mode === "grammar" ? "flex" : "none";
+  document.getElementById("listeningControls").style.display = mode === "listening" ? "flex" : "none";
+}
+
 document.querySelectorAll(".tab").forEach(btn=>{
   btn.addEventListener("click", ()=>{
     mode = btn.dataset.mode;
     document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected", b===btn?"true":"false"));
     cursor = 0; flipped = false; listPage = 1;
     if(mode === "quiz") quizWord = null;
-    document.getElementById("vocabControls").style.display = mode === "card" || mode === "list" || mode === "quiz" ? "flex" : "none";
-    document.getElementById("readingControls").style.display = mode === "reading" ? "flex" : "none";
-    document.getElementById("grammarControls").style.display = mode === "grammar" ? "flex" : "none";
-    document.getElementById("listeningControls").style.display = mode === "listening" ? "flex" : "none";
+    if(mode === "toeic_hub") toeicHubStage = "generations";
+    updateControlBarVisibility();
     renderStage();
   });
 });
 
-document.querySelectorAll(".subtab[data-gpart]").forEach(btn=>{
+document.querySelectorAll(".back-to-hub-btn").forEach(btn=>{
   btn.addEventListener("click", ()=>{
-    grammarPart = btn.dataset.gpart;
-    document.querySelectorAll(".subtab[data-gpart]").forEach(b=>b.setAttribute("aria-selected", b===btn?"true":"false"));
+    speechSynthesis.cancel();
+    mode = "toeic_hub";
+    toeicHubStage = "parts";
+    document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected", b.dataset.mode==="toeic_hub" ? "true" : "false"));
+    updateControlBarVisibility();
     renderStage();
   });
 });
+
 document.getElementById("grammarFilterMode").addEventListener("change", ()=>{
   p5Idx = 0; p5Selected = null; p5Checked = false;
   p6Idx = 0; p6Selected = {}; p6Checked = false;
@@ -939,14 +984,6 @@ document.getElementById("grammarShuffleBtn").addEventListener("click", ()=>{
   renderStage();
 });
 
-document.querySelectorAll(".subtab[data-lpart]").forEach(btn=>{
-  btn.addEventListener("click", ()=>{
-    listeningPart = btn.dataset.lpart;
-    document.querySelectorAll(".subtab[data-lpart]").forEach(b=>b.setAttribute("aria-selected", b===btn?"true":"false"));
-    speechSynthesis.cancel();
-    renderStage();
-  });
-});
 document.getElementById("listeningFilterMode").addEventListener("change", ()=>{
   speechSynthesis.cancel();
   p1Idx = 0; p1Selected = null; p1Checked = false; p1ShowText = false;
@@ -1809,7 +1846,62 @@ function renderStage(){
   else if(mode === "reading") renderReadingMode(container);
   else if(mode === "grammar") renderGrammarMode(container);
   else if(mode === "listening") renderListeningMode(container);
+  else if(mode === "toeic_hub") renderToeicHub(container);
   else renderQuizMode(container);
+}
+
+/* ---------- TOEIC hub: generations -> parts -> existing practice UI ---------- */
+function renderToeicHub(container){
+  if(toeicHubStage === "parts"){
+    const rows = TOEIC_PARTS.map(p=>{
+      const {done, total, wrong} = partProgressSummary(p.key);
+      const pct = total ? Math.round(done/total*100) : 0;
+      return `
+        <button class="hub-card" data-part="${p.key}">
+          <div class="hub-card-title">${p.label}</div>
+          <div class="hub-card-sub">已完成 ${done} / ${total}${wrong ? `　答錯 ${wrong}` : ""}</div>
+          <div class="hub-card-bar"><div class="hub-card-bar-fill" style="width:${pct}%;"></div></div>
+        </button>`;
+    }).join("");
+    container.innerHTML = `
+      <div class="hub-intro">${currentVersion} 這次的內容</div>
+      <div class="hub-list">${rows}</div>`;
+    container.querySelectorAll(".hub-card[data-part]").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        const part = TOEIC_PARTS.find(p=>p.key === btn.dataset.part);
+        mode = part.mode;
+        if(part.mode === "grammar") grammarPart = part.sub;
+        if(part.mode === "listening") listeningPart = part.sub;
+        document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected", b.dataset.mode==="toeic_hub" ? "true" : "false"));
+        updateControlBarVisibility();
+        renderStage();
+      });
+    });
+    return;
+  }
+  const rows = allVersions.map(v=>{
+    let done = 0, total = 0;
+    TOEIC_PARTS.forEach(p=>{
+      const s = partProgressSummary(p.key);
+      done += s.done; total += s.total;
+    });
+    const pct = total ? Math.round(done/total*100) : 0;
+    return `
+      <button class="hub-card" data-version="${v}">
+        <div class="hub-card-title">${v}</div>
+        <div class="hub-card-sub">已完成 ${done} / ${total}</div>
+        <div class="hub-card-bar"><div class="hub-card-bar-fill" style="width:${pct}%;"></div></div>
+      </button>`;
+  }).join("");
+  container.innerHTML = `
+    <div class="hub-intro">選擇要練習的內容</div>
+    <div class="hub-list">${rows}</div>`;
+  container.querySelectorAll(".hub-card[data-version]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      toeicHubStage = "parts";
+      renderStage();
+    });
+  });
 }
 function render(){
   renderStats();
