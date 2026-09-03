@@ -195,6 +195,7 @@
   .opt-btn.correct{ background:var(--success-soft); border-color:var(--success); color:var(--success); }
   .opt-btn.wrong{ background:var(--danger-soft); border-color:var(--danger); color:var(--danger); }
   .opt-btn:disabled{ cursor:default; }
+  .quiz-next{ margin-top:20px; }
 
   /* Reading */
   .reading-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:10px; }
@@ -1339,6 +1340,9 @@ function renderQuizMode(container){
       <div class="quiz-options">
         ${w.options.map((o,i)=>`<button class="opt-btn" data-idx="${i}">${o.meaning_zh}</button>`).join("")}
       </div>
+      <div class="quiz-next" id="quizNextWrap" style="display:none;">
+        <button class="icon-btn" id="quizNextBtn">下一題 ▶</button>
+      </div>
     </div>
   `;
   document.getElementById("quizSpeakBtn")?.addEventListener("click", ()=> speak(w.word));
@@ -1359,12 +1363,20 @@ function renderQuizMode(container){
         else if(i === idx) b.classList.add("wrong");
       });
       document.querySelector(".quiz-score").textContent = `本次測驗　答對 ${quizScore.correct} / ${quizScore.total}`;
-      setTimeout(()=>{
-        if(mode !== "quiz" || quizWord !== w) return; // user navigated away or a new question already loaded
-        pickQuizWord();
-        renderStage();
-      }, isCorrect ? 700 : 1200);
+      if(isCorrect){
+        setTimeout(()=>{
+          if(mode !== "quiz" || quizWord !== w) return; // user navigated away or a new question already loaded
+          pickQuizWord();
+          renderStage();
+        }, 700);
+      }else{
+        document.getElementById("quizNextWrap").style.display = "block";
+      }
     });
+  });
+  document.getElementById("quizNextBtn")?.addEventListener("click", ()=>{
+    pickQuizWord();
+    renderStage();
   });
 }
 
