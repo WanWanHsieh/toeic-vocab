@@ -1392,6 +1392,13 @@ function loadQuizPosition(){
   return (raw && typeof raw.id === "number") ? raw.id : null;
 }
 function saveQuizPosition(id){
+  /* Only stamp a fresh updatedAt when the position actually changed — this gets called on every
+     render, including the very first one after a reload that's just restoring the same word that
+     was already stored. Re-stamping "now" there would make this device always look most-recently-
+     touched (even though nothing happened), permanently winning the cross-device merge regardless
+     of what another device actually did more recently. */
+  const existing = loadJSON("toeic-quiz-pos");
+  if(existing && existing.id === id) return;
   const entry = { id, updatedAt: Date.now() };
   saveJSON("toeic-quiz-pos", entry);
   pushCloudQuizPos(entry);
@@ -2266,6 +2273,10 @@ function loadCardPosition(){
   return (raw && typeof raw.id === "number") ? raw : null;
 }
 function saveCardPosition(id){
+  /* Same reasoning as saveQuizPosition: don't re-stamp updatedAt when the position hasn't actually
+     changed, or a mere page reload always wins the cross-device merge no matter what. */
+  const existing = loadCardPosition();
+  if(existing && existing.id === id) return;
   const entry = { id, updatedAt: Date.now() };
   saveJSON("toeic-card-pos", entry);
   pushCloudCardPos(entry);
