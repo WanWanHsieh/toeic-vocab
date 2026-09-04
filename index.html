@@ -2370,7 +2370,7 @@ loadP4();
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
   import {
-    getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged
+    getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult, signOut, onAuthStateChanged
   } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js";
   import {
     getFirestore, doc, getDoc, setDoc
@@ -2391,9 +2391,13 @@ loadP4();
   const provider = new GoogleAuthProvider();
 
   window.cloudAuth = {
-    signIn: () => signInWithPopup(auth, provider).catch(err => alert("登入失敗：" + err.message)),
+    /* Popup-based sign-in (signInWithPopup) is unreliable on mobile browsers — popups get blocked or
+       silently mishandled there, so a mobile "sign in" could look like it worked but never actually
+       authenticated, meaning nothing ever synced. Redirect works the same way on every platform. */
+    signIn: () => signInWithRedirect(auth, provider),
     signOut: () => signOut(auth)
   };
+  getRedirectResult(auth).catch(err => alert("登入失敗：" + err.message));
 
   const PROGRESS_KEYS = ["vocab","reading","p5","p6","p1","p2","p3","p4","savedWords","cardPos","quizPos"];
 
