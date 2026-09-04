@@ -1292,8 +1292,14 @@ function renderCardMode(container){
   container.querySelectorAll(".card-save-btn").forEach(btn=>{
     btn.addEventListener("click", (e)=>{ e.stopPropagation(); toggleSavedWord(w); renderStage(); });
   });
-  document.getElementById("markUnknownBtn").addEventListener("click", (e)=>{ e.stopPropagation(); setStatus(w.id, "unknown"); renderStage(); });
-  document.getElementById("markKnownBtn").addEventListener("click", (e)=>{ e.stopPropagation(); setStatus(w.id, "known"); renderStage(); });
+  document.getElementById("markUnknownBtn").addEventListener("click", (e)=>{
+    e.stopPropagation(); setStatus(w.id, "unknown");
+    cursor = (cursor+1)%finalList.length; flipped = false; renderStage();
+  });
+  document.getElementById("markKnownBtn").addEventListener("click", (e)=>{
+    e.stopPropagation(); setStatus(w.id, "known");
+    cursor = (cursor+1)%finalList.length; flipped = false; renderStage();
+  });
   document.getElementById("prevBtn").addEventListener("click", ()=>{ cursor = (cursor-1+finalList.length)%finalList.length; flipped=false; renderStage(); });
   document.getElementById("nextBtn").addEventListener("click", ()=>{ cursor = (cursor+1)%finalList.length; flipped=false; renderStage(); });
 }
