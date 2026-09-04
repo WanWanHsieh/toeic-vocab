@@ -1296,8 +1296,9 @@ function renderCardMode(container){
       <button class="mark-btn known ${st==='known'?'active':''}" id="markKnownBtn">✅ 已熟記</button>
     </div>
     <div class="card-nav-row">
-      <button class="icon-btn" id="skipBtn" title="只是想看下一個，不算已看過">跳過 ▶</button>
+      <button class="nav-btn" id="prevBtn" title="上一個，不算已看過">◀</button>
       <span class="mono" style="color:var(--text-muted);font-size:13px;">${cursor+1} / ${finalList.length}</span>
+      <button class="nav-btn" id="nextBtn" title="下一個，不算已看過">▶</button>
     </div>
     <div class="progress-bar"><div class="progress-fill" style="width:${((cursor+1)/finalList.length*100).toFixed(1)}%"></div></div>
   `;
@@ -1323,7 +1324,11 @@ function renderCardMode(container){
     e.stopPropagation(); setStatus(w.id, "known");
     cursor = (cursor+1)%finalList.length; flipped = false; renderStage();
   });
-  document.getElementById("skipBtn").addEventListener("click", (e)=>{
+  document.getElementById("prevBtn").addEventListener("click", (e)=>{
+    e.stopPropagation();
+    cursor = (cursor-1+finalList.length)%finalList.length; flipped = false; renderStage();
+  });
+  document.getElementById("nextBtn").addEventListener("click", (e)=>{
     e.stopPropagation();
     cursor = (cursor+1)%finalList.length; flipped = false; renderStage();
   });
