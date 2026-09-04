@@ -1369,11 +1369,21 @@ function saveQuizPosition(id){
   try{ localStorage.setItem("toeic-quiz-pos", String(id)); }catch(e){}
 }
 
+/* Only quiz on words the user has actually reviewed before (marked known/unknown via flashcard
+   or a previous quiz answer) — quizzing on words never seen felt meaningless. */
+function seenFilterList(){
+  return currentFilterList().filter(w => progress[w.id] !== undefined);
+}
+
 function pickQuizWord(forceId){
-  const list = currentFilterList();
-  const pool = list.length >= 4 ? list : words;
   const forced = (forceId !== undefined && forceId !== null) ? words.find(w=>w.id===forceId) : null;
-  quizWord = forced || pool[Math.floor(Math.random()*pool.length)];
+  let candidate = forced;
+  if(!candidate){
+    const pool = seenFilterList();
+    if(pool.length === 0) return; // nothing seen yet under the current filter; renderQuizMode shows an empty state instead
+    candidate = pool[Math.floor(Math.random()*pool.length)];
+  }
+  quizWord = candidate;
   const distractorsPool = words.filter(w=>w.id !== quizWord.id);
   const distractors = [];
   const shuffled = distractorsPool.slice().sort(()=>Math.random()-0.5);
@@ -1390,7 +1400,12 @@ function pickQuizWord(forceId){
 let quizScore = {correct:0, total:0};
 
 function renderQuizMode(container){
-  if(!quizWord) pickQuizWord();
+  const seenPool = seenFilterList();
+  if(seenPool.length === 0){
+    container.innerHTML = `<div class="empty-state">你還沒有複習過符合篩選條件的單字，先到「字卡模式」看幾個單字（按 ✅ 已熟記或 ❌ 還不熟）之後，小測驗就會從你看過的單字出題。</div>`;
+    return;
+  }
+  if(!quizWord || !seenPool.some(x=>x.id===quizWord.id)) pickQuizWord();
   const w = quizWord;
   container.innerHTML = `
     <div class="quiz-score mono">本次測驗　答對 ${quizScore.correct} / ${quizScore.total}</div>
