@@ -289,6 +289,7 @@
   .wp-example{ background:var(--surface-2); border-radius:10px; padding:12px 14px; font-size:13.5px; line-height:1.6; }
   .wp-example .zh{ color:var(--text-muted); margin-top:4px; }
   .wp-note{ margin-top:12px; font-size:11.5px; color:var(--text-muted); }
+  .note-zh{ margin-top:10px; font-size:13px; line-height:1.6; color:var(--text-muted); }
   .wp-loading{ text-align:center; color:var(--text-muted); padding:20px 0; }
 
   /* TOEIC hub (generation picker -> Part picker) */
@@ -737,7 +738,7 @@ function saveWordFromQuizMistake(r){
   const key = r.word.toLowerCase();
   const existing = savedWords[key];
   savedWords[key] = {
-    word: r.word, ipa: r.ipa||"", pos: r.pos||"", meaning_zh: r.meaning_zh||"", example_en: r.example_en||"", example_zh: r.example_zh||"", importance: r.importance||"",
+    word: r.word, ipa: r.ipa||"", pos: r.pos||"", meaning_zh: r.meaning_zh||"", note_zh: r.note_zh||"", example_en: r.example_en||"", example_zh: r.example_zh||"", importance: r.importance||"",
     savedAt: existing ? existing.savedAt : Date.now(),
     lastWrongAt: Date.now(),
     wrongCount: (existing?.wrongCount || 0) + 1
@@ -750,7 +751,7 @@ function toggleSavedWord(r){
   if(savedWords[key]){
     delete savedWords[key];
   }else{
-    savedWords[key] = { word: r.word, ipa: r.ipa||"", pos: r.pos||"", meaning_zh: r.meaning_zh||"", example_en: r.example_en||"", example_zh: r.example_zh||"", importance: r.importance||"", savedAt: Date.now() };
+    savedWords[key] = { word: r.word, ipa: r.ipa||"", pos: r.pos||"", meaning_zh: r.meaning_zh||"", note_zh: r.note_zh||"", example_en: r.example_en||"", example_zh: r.example_zh||"", importance: r.importance||"", savedAt: Date.now() };
   }
   saveJSON("toeic-saved-words", savedWords);
   pushCloudSaved();
@@ -933,7 +934,7 @@ async function lookupWord(word){
   let local = words.find(w=>w.word.toLowerCase() === key);
   if(!local){ for(const v of variants){ local = words.find(w=>w.word.toLowerCase() === v); if(local) break; } }
   if(local){
-    const result = { word: local.word, ipa: local.ipa, pos: local.pos, meaning_zh: local.meaning_zh, example_en: local.example_en, example_zh: local.example_zh, importance: local.importance, audioUrl: null, source: "local" };
+    const result = { word: local.word, ipa: local.ipa, pos: local.pos, meaning_zh: local.meaning_zh, note_zh: local.note_zh, example_en: local.example_en, example_zh: local.example_zh, importance: local.importance, audioUrl: null, source: "local" };
     wordLookupCache[key] = result;
     return result;
   }
@@ -1001,6 +1002,7 @@ function showWordPopup(word){
         ${r.importance ? `<div class="wp-pos" style="background:var(--surface-2);color:var(--text-muted);">${importanceLabel(r.importance)}</div>` : ''}
       </div>
       <div class="wp-meaning">${r.meaning_zh || (r.example_en ? '(查無中文翻譯，見下方英文釋義)' : '查無此字的資料')}</div>
+      ${r.note_zh ? `<div class="note-zh">💡 ${r.note_zh}</div>` : ''}
       ${r.example_en ? `<div class="wp-example"><div>${r.example_en}</div>${r.example_zh ? `<div class="zh">${r.example_zh}</div>` : ''}</div>` : ''}
       ${r.source === 'api' ? `<div class="wp-note">此字不在多益單字庫中，資料來自線上字典／翻譯服務，僅供參考。</div>` : ''}
     `;
@@ -1243,6 +1245,7 @@ function renderCardMode(container){
             </div>
           </div>
           <p class="meaning">${w.meaning_zh}</p>
+          ${w.note_zh ? `<div class="note-zh">💡 ${w.note_zh}</div>` : ''}
           <div class="example">
             <button class="speak-btn" id="speakExampleBtn" style="width:32px;height:32px;font-size:14px;flex:none;" title="播放例句" ${canSpeak?'':'disabled'}>🔊</button>
             <div>
@@ -1306,6 +1309,7 @@ function renderListMode(container){
           <span class="w">${w.word}</span>
           <span class="ipa mono">${w.ipa}</span>
           <div class="meaning-inline">${w.pos} ${w.meaning_zh}</div>
+          ${w.note_zh ? `<div class="note-zh" style="margin-top:4px;">💡 ${w.note_zh}</div>` : ''}
           ${w.example_en ? `<div class="example-inline"><div class="en">${w.example_en}</div>${w.example_zh ? `<div class="zh">${w.example_zh}</div>` : ''}</div>` : ''}
         </div>
         <div>
@@ -2070,6 +2074,7 @@ function renderSavedMode(container){
         ${w.importance ? `<div class="wp-pos" style="background:var(--surface-2);color:var(--text-muted);">${importanceLabel(w.importance)}</div>` : ''}
       </div>
       <div class="wp-meaning">${w.meaning_zh || '（無中文翻譯）'}</div>
+      ${w.note_zh ? `<div class="note-zh">💡 ${w.note_zh}</div>` : ''}
       ${w.example_en ? `<div class="wp-example"><div>${w.example_en}</div>${w.example_zh ? `<div class="zh">${w.example_zh}</div>` : ''}</div>` : ''}
       ${w.wrongCount ? `<div class="hub-card-sub" style="margin-top:8px;">⚠️ 小測驗答錯 ${w.wrongCount} 次${w.lastWrongAt ? `，最近一次 ${new Date(w.lastWrongAt).toLocaleDateString('zh-TW')}` : ''}</div>` : ''}
     </div>
