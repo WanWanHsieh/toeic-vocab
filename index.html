@@ -1374,7 +1374,10 @@ function seenFilterList(){
 }
 
 function pickQuizWord(forceId){
-  const forced = (forceId !== undefined && forceId !== null) ? words.find(w=>w.id===forceId) : null;
+  /* A forced id only counts if it's actually a seen (progress-tracked) word — a saved quiz
+     position from before this restriction existed could otherwise restore a never-reviewed word. */
+  const forced = (forceId !== undefined && forceId !== null && progress[forceId] !== undefined)
+    ? words.find(w=>w.id===forceId) : null;
   let candidate = forced;
   if(!candidate){
     const pool = seenFilterList();
