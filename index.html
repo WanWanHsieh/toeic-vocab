@@ -1272,6 +1272,7 @@ function renderCardMode(container){
       <button class="mark-btn known ${st==='known'?'active':''}" id="markKnownBtn">✅ 已熟記</button>
     </div>
     <div class="card-nav-row">
+      <button class="icon-btn" id="skipBtn" title="只是想看下一個，不算已看過">跳過 ▶</button>
       <span class="mono" style="color:var(--text-muted);font-size:13px;">${cursor+1} / ${finalList.length}</span>
     </div>
     <div class="progress-bar"><div class="progress-fill" style="width:${((cursor+1)/finalList.length*100).toFixed(1)}%"></div></div>
@@ -1296,6 +1297,10 @@ function renderCardMode(container){
   });
   document.getElementById("markKnownBtn").addEventListener("click", (e)=>{
     e.stopPropagation(); setStatus(w.id, "known");
+    cursor = (cursor+1)%finalList.length; flipped = false; renderStage();
+  });
+  document.getElementById("skipBtn").addEventListener("click", (e)=>{
+    e.stopPropagation();
     cursor = (cursor+1)%finalList.length; flipped = false; renderStage();
   });
 }
