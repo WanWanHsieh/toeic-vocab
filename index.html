@@ -732,6 +732,8 @@ function pushCloudVocab(){ pushCloud("vocab", { version: versionOf("vocab"), pro
 function pushCloudReading(){ pushCloud("reading", { version: versionOf("reading"), answers: readingAnswers, checked: readingChecked }); }
 function pushCloudPart(key, progressObj){ pushCloud(key, { version: versionOf(key), progress: progressObj }); }
 function pushCloudSaved(){ pushCloud("savedWords", savedWords); }
+function pushCloudCardPos(entry){ pushCloud("cardPos", entry); }
+function pushCloudQuizPos(entry){ pushCloud("quizPos", entry); }
 
 function isWordSaved(word){ return !!savedWords[word.toLowerCase()]; }
 /* Auto-save (never un-save) a word the user just got wrong in the quiz, and note it was missed —
@@ -825,6 +827,26 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
     savedWords = mergeProgress(cloud.savedWords, savedWords);
     saveJSON("toeic-saved-words", savedWords);
 
+    /* Card/quiz position aren't maps to union-merge — they're "where was I", a single spot.
+       Whichever device touched it most recently (by timestamp) wins, so switching devices
+       resumes wherever you actually left off last, not always word 1 on a fresh device. */
+    const localCardPos = loadCardPosition();
+    const cloudCardPos = (cloud.cardPos && typeof cloud.cardPos.id === "number") ? cloud.cardPos : null;
+    const winningCardPos = (cloudCardPos && (!localCardPos || cloudCardPos.updatedAt > localCardPos.updatedAt)) ? cloudCardPos : localCardPos;
+    if(winningCardPos){
+      saveJSON("toeic-card-pos", winningCardPos);
+      const idx = order.indexOf(winningCardPos.id);
+      if(idx >= 0) cursor = idx;
+    }
+
+    const localQuizRaw = loadJSON("toeic-quiz-pos");
+    const localQuizPos = (localQuizRaw && typeof localQuizRaw.id === "number") ? localQuizRaw : null;
+    const cloudQuizPos = (cloud.quizPos && typeof cloud.quizPos.id === "number") ? cloud.quizPos : null;
+    const winningQuizPos = (cloudQuizPos && (!localQuizPos || cloudQuizPos.updatedAt > localQuizPos.updatedAt)) ? cloudQuizPos : localQuizPos;
+    if(winningQuizPos && progress[winningQuizPos.id] !== undefined){
+      pickQuizWord(winningQuizPos.id);
+    }
+
     cloudSyncing = false;
     // Always push the merged (union) result back up so the cloud copy converges too, not just on first sync.
     pushCloudVocab();
@@ -836,6 +858,8 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
     pushCloudPart("p3", p3Progress);
     pushCloudPart("p4", p4Progress);
     pushCloudSaved();
+    pushCloudCardPos(loadJSON("toeic-card-pos"));
+    pushCloudQuizPos(loadJSON("toeic-quiz-pos"));
     render();
   }catch(err){
     cloudSyncing = false;
@@ -1361,15 +1385,16 @@ function renderListMode(container){
 
 /* ---------- Render: quiz mode ---------- */
 /* Remembers which quiz question was last showing, so reopening the app resumes there
-   instead of always rolling a brand-new random word. */
+   instead of always rolling a brand-new random word. Timestamped like the flashcard position,
+   for the same cross-device sync-on-login reason. */
 function loadQuizPosition(){
-  try{
-    const raw = localStorage.getItem("toeic-quiz-pos");
-    return raw === null ? null : Number(raw);
-  }catch(e){ return null; }
+  const raw = loadJSON("toeic-quiz-pos");
+  return (raw && typeof raw.id === "number") ? raw.id : null;
 }
 function saveQuizPosition(id){
-  try{ localStorage.setItem("toeic-quiz-pos", String(id)); }catch(e){}
+  const entry = { id, updatedAt: Date.now() };
+  saveJSON("toeic-quiz-pos", entry);
+  pushCloudQuizPos(entry);
 }
 
 /* Only quiz on words the user has actually reviewed before (marked known/unknown via flashcard
@@ -2234,15 +2259,16 @@ function render(){
 
 /* ---------- Load data ---------- */
 /* Remembers which word the flashcard was last showing, so reopening the app resumes there
-   instead of always starting back at word 1. */
+   instead of always starting back at word 1. Stored with a timestamp (not just the bare id) so
+   this can sync across devices via cloud-auth-changed: whichever device moved most recently wins. */
 function loadCardPosition(){
-  try{
-    const raw = localStorage.getItem("toeic-card-pos");
-    return raw === null ? null : Number(raw);
-  }catch(e){ return null; }
+  const raw = loadJSON("toeic-card-pos");
+  return (raw && typeof raw.id === "number") ? raw : null;
 }
 function saveCardPosition(id){
-  try{ localStorage.setItem("toeic-card-pos", String(id)); }catch(e){}
+  const entry = { id, updatedAt: Date.now() };
+  saveJSON("toeic-card-pos", entry);
+  pushCloudCardPos(entry);
 }
 
 async function loadVocab(){
@@ -2259,9 +2285,9 @@ async function loadVocab(){
     stage.innerHTML = `<div class="empty-state">找不到單字資料，暫時顯示少量範例單字。<br>（若是直接雙擊開啟 index.html，瀏覽器會擋掉本機檔案讀取，請改用網站連結或本機伺服器開啟。）</div>`;
   }
   order = words.map(w=>w.id);
-  const savedId = loadCardPosition();
-  if(savedId !== null){
-    const idx = order.indexOf(savedId);
+  const savedCard = loadCardPosition();
+  if(savedCard !== null){
+    const idx = order.indexOf(savedCard.id);
     if(idx >= 0) cursor = idx;
   }
   const savedQuizId = loadQuizPosition();
@@ -2369,7 +2395,7 @@ loadP4();
     signOut: () => signOut(auth)
   };
 
-  const PROGRESS_KEYS = ["vocab","reading","p5","p6","p1","p2","p3","p4","savedWords"];
+  const PROGRESS_KEYS = ["vocab","reading","p5","p6","p1","p2","p3","p4","savedWords","cardPos","quizPos"];
 
   window.cloudSync = {
     async loadProgress(uid){
