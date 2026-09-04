@@ -1204,6 +1204,7 @@ function renderCardMode(container){
   if(cursor >= finalList.length) cursor = 0;
   const w = words.find(x=>x.id===finalList[cursor]);
   const st = statusOf(w.id);
+  saveCardPosition(w.id);
 
   container.innerHTML = `
     <div class="card-wrap">
@@ -2165,6 +2166,18 @@ function render(){
 }
 
 /* ---------- Load data ---------- */
+/* Remembers which word the flashcard was last showing, so reopening the app resumes there
+   instead of always starting back at word 1. */
+function loadCardPosition(){
+  try{
+    const raw = localStorage.getItem("toeic-card-pos");
+    return raw === null ? null : Number(raw);
+  }catch(e){ return null; }
+}
+function saveCardPosition(id){
+  try{ localStorage.setItem("toeic-card-pos", String(id)); }catch(e){}
+}
+
 async function loadVocab(){
   const stage = document.getElementById("stage");
   stage.innerHTML = `<div class="empty-state">正在載入單字資料…</div>`;
@@ -2179,6 +2192,11 @@ async function loadVocab(){
     stage.innerHTML = `<div class="empty-state">找不到單字資料，暫時顯示少量範例單字。<br>（若是直接雙擊開啟 index.html，瀏覽器會擋掉本機檔案讀取，請改用網站連結或本機伺服器開啟。）</div>`;
   }
   order = words.map(w=>w.id);
+  const savedId = loadCardPosition();
+  if(savedId !== null){
+    const idx = order.indexOf(savedId);
+    if(idx >= 0) cursor = idx;
+  }
   populateCategories();
   render();
 }
