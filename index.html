@@ -1086,8 +1086,10 @@ document.querySelectorAll(".tab").forEach(btn=>{
   btn.addEventListener("click", ()=>{
     mode = btn.dataset.mode;
     document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected", b===btn?"true":"false"));
-    cursor = 0; flipped = false; listPage = 1;
-    if(mode === "quiz") quizWord = null;
+    /* Deliberately do NOT reset cursor/quizWord here — switching tabs and coming back should
+       resume where you were, not restart. Only listPage/flipped reset since those are purely
+       cosmetic (list scroll depth, which card face is showing). */
+    flipped = false; listPage = 1;
     if(mode === "toeic_hub") toeicHubStage = "generations";
     updateControlBarVisibility();
     renderStage();
@@ -1345,10 +1347,23 @@ function renderListMode(container){
 }
 
 /* ---------- Render: quiz mode ---------- */
-function pickQuizWord(){
+/* Remembers which quiz question was last showing, so reopening the app resumes there
+   instead of always rolling a brand-new random word. */
+function loadQuizPosition(){
+  try{
+    const raw = localStorage.getItem("toeic-quiz-pos");
+    return raw === null ? null : Number(raw);
+  }catch(e){ return null; }
+}
+function saveQuizPosition(id){
+  try{ localStorage.setItem("toeic-quiz-pos", String(id)); }catch(e){}
+}
+
+function pickQuizWord(forceId){
   const list = currentFilterList();
   const pool = list.length >= 4 ? list : words;
-  quizWord = pool[Math.floor(Math.random()*pool.length)];
+  const forced = (forceId !== undefined && forceId !== null) ? words.find(w=>w.id===forceId) : null;
+  quizWord = forced || pool[Math.floor(Math.random()*pool.length)];
   const distractorsPool = words.filter(w=>w.id !== quizWord.id);
   const distractors = [];
   const shuffled = distractorsPool.slice().sort(()=>Math.random()-0.5);
@@ -1359,6 +1374,7 @@ function pickQuizWord(){
   const options = [quizWord, ...distractors].sort(()=>Math.random()-0.5);
   quizWord.options = options;
   quizLocked = false;
+  saveQuizPosition(quizWord.id);
 }
 
 let quizScore = {correct:0, total:0};
@@ -2199,6 +2215,10 @@ async function loadVocab(){
   if(savedId !== null){
     const idx = order.indexOf(savedId);
     if(idx >= 0) cursor = idx;
+  }
+  const savedQuizId = loadQuizPosition();
+  if(savedQuizId !== null && words.some(w=>w.id===savedQuizId)){
+    pickQuizWord(savedQuizId);
   }
   populateCategories();
   render();
