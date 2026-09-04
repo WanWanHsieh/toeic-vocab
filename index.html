@@ -2370,7 +2370,7 @@ loadP4();
 <script type="module">
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js";
   import {
-    getAuth, GoogleAuthProvider, signInWithRedirect, getRedirectResult, signOut, onAuthStateChanged
+    getAuth, GoogleAuthProvider, signInWithPopup, signInWithRedirect, getRedirectResult, signOut, onAuthStateChanged
   } from "https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js";
   import {
     getFirestore, doc, getDoc, setDoc
@@ -2391,10 +2391,23 @@ loadP4();
   const provider = new GoogleAuthProvider();
 
   window.cloudAuth = {
-    /* Popup-based sign-in (signInWithPopup) is unreliable on mobile browsers — popups get blocked or
-       silently mishandled there, so a mobile "sign in" could look like it worked but never actually
-       authenticated, meaning nothing ever synced. Redirect works the same way on every platform. */
-    signIn: () => signInWithRedirect(auth, provider).catch(err => alert("登入失敗：" + err.code + " " + err.message)),
+    /* Popup is actually the more reliable path on most desktop browsers — redirect can silently fail
+       to complete on Chrome/Firefox when third-party storage is restricted (a common privacy default),
+       coming back from Google still signed out with no error at all. But popups get blocked on many
+       mobile browsers. So: try popup first, and only fall back to redirect if the popup itself couldn't
+       open — not if the user just closed it. */
+    signIn: async () => {
+      try{
+        await signInWithPopup(auth, provider);
+      }catch(err){
+        if(err.code === "auth/popup-blocked" || err.code === "auth/operation-not-supported-in-this-environment"){
+          try{ await signInWithRedirect(auth, provider); }
+          catch(err2){ alert("登入失敗：" + err2.code + " " + err2.message); }
+        }else if(err.code !== "auth/popup-closed-by-user" && err.code !== "auth/cancelled-popup-request"){
+          alert("登入失敗：" + err.code + " " + err.message);
+        }
+      }
+    },
     signOut: () => signOut(auth)
   };
   getRedirectResult(auth).catch(err => alert("登入失敗：" + err.code + " " + err.message));
