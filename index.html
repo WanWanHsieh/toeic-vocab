@@ -1272,7 +1272,6 @@ function renderCardMode(container){
       <button class="mark-btn known ${st==='known'?'active':''}" id="markKnownBtn">✅ 已熟記</button>
     </div>
     <div class="card-nav-row">
-      <button class="nav-btn" id="prevBtn" title="上一個">◀</button>
       <span class="mono" style="color:var(--text-muted);font-size:13px;">${cursor+1} / ${finalList.length}</span>
     </div>
     <div class="progress-bar"><div class="progress-fill" style="width:${((cursor+1)/finalList.length*100).toFixed(1)}%"></div></div>
@@ -1299,7 +1298,6 @@ function renderCardMode(container){
     e.stopPropagation(); setStatus(w.id, "known");
     cursor = (cursor+1)%finalList.length; flipped = false; renderStage();
   });
-  document.getElementById("prevBtn").addEventListener("click", ()=>{ cursor = (cursor-1+finalList.length)%finalList.length; flipped=false; renderStage(); });
 }
 
 /* ---------- Render: list mode ---------- */
