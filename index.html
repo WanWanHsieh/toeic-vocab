@@ -1274,7 +1274,6 @@ function renderCardMode(container){
     <div class="card-nav-row">
       <button class="nav-btn" id="prevBtn" title="上一個">◀</button>
       <span class="mono" style="color:var(--text-muted);font-size:13px;">${cursor+1} / ${finalList.length}</span>
-      <button class="nav-btn" id="nextBtn" title="下一個">▶</button>
     </div>
     <div class="progress-bar"><div class="progress-fill" style="width:${((cursor+1)/finalList.length*100).toFixed(1)}%"></div></div>
   `;
@@ -1301,7 +1300,6 @@ function renderCardMode(container){
     cursor = (cursor+1)%finalList.length; flipped = false; renderStage();
   });
   document.getElementById("prevBtn").addEventListener("click", ()=>{ cursor = (cursor-1+finalList.length)%finalList.length; flipped=false; renderStage(); });
-  document.getElementById("nextBtn").addEventListener("click", ()=>{ cursor = (cursor+1)%finalList.length; flipped=false; renderStage(); });
 }
 
 /* ---------- Render: list mode ---------- */
