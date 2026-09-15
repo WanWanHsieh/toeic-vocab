@@ -208,6 +208,18 @@
   .opt-btn:disabled{ cursor:default; }
   .quiz-next{ margin-top:20px; }
 
+  /* Spelling quiz */
+  .spelling-input{
+    width:100%; box-sizing:border-box; background:var(--surface-2); border:1px solid var(--border); color:var(--text);
+    padding:14px 16px; border-radius:10px; font-size:20px; text-align:center; font-family:"IBM Plex Mono",monospace;
+    letter-spacing:.03em;
+  }
+  .spelling-input:focus{ outline:none; border-color:var(--accent); }
+  .spelling-input:disabled{ opacity:.85; }
+  .spelling-feedback{ margin-top:16px; font-size:16px; font-weight:600; }
+  .spelling-feedback.correct{ color:var(--success); }
+  .spelling-feedback.wrong{ color:var(--danger); }
+
   /* Reading */
   .reading-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; flex-wrap:wrap; gap:10px; }
   .reading-tag{ display:flex; gap:8px; align-items:center; }
@@ -346,6 +358,7 @@
     <button class="tab" data-mode="toeic_hub" role="tab" aria-selected="false">TOEIC 測驗</button>
     <button class="tab" data-mode="theme" role="tab" aria-selected="false">主題單字</button>
     <button class="tab" data-mode="saved" role="tab" aria-selected="false">❤️ 收藏單字</button>
+    <button class="tab" data-mode="spelling" role="tab" aria-selected="false">✍️ 拼字測驗</button>
   </div>
 
   <div class="controls" id="vocabControls">
@@ -581,6 +594,21 @@ let currentTheme = null;
 let themeCursor = 0;
 let themeFlipped = false;
 function themeWordsFor(theme){ return themeWords.filter(w=>w.theme===theme); }
+
+/* 拼字測驗：從收藏單字裡隨機（不重複地輪流）抽題，看中文意思／聽發音，考輸入英文拼法。
+   只在這個分頁裡即時計分，不寫進 progress，但拼錯會跟小測驗答錯一樣記在收藏單字的 wrongCount 上。 */
+let spellingOrder = [];
+let spellingIdx = 0;
+let spellingChecked = false;
+let spellingCorrect = null;
+let spellingStats = { correct: 0, wrong: 0 };
+function rebuildSpellingOrder(){
+  spellingOrder = shuffleArr(Object.keys(savedWords));
+  spellingIdx = 0;
+  spellingChecked = false;
+  spellingCorrect = null;
+  spellingStats = { correct: 0, wrong: 0 };
+}
 
 /* TOEIC hub: generations list -> parts list -> existing practice UI */
 let toeicHubStage = "generations"; // "generations" | "parts"
@@ -1153,6 +1181,7 @@ document.querySelectorAll(".tab").forEach(btn=>{
     flipped = false; listPage = 1;
     if(mode === "toeic_hub") toeicHubStage = "generations";
     if(mode === "theme") themeStage = "picker";
+    if(mode === "spelling") rebuildSpellingOrder();
     updateControlBarVisibility();
     renderStage();
   });
@@ -2194,6 +2223,7 @@ function renderStage(){
   else if(mode === "toeic_hub") renderToeicHub(container);
   else if(mode === "theme") renderThemeMode(container);
   else if(mode === "saved") renderSavedMode(container);
+  else if(mode === "spelling") renderSpellingMode(container);
   else renderQuizMode(container);
 }
 
@@ -2235,6 +2265,103 @@ function renderSavedMode(container){
       renderStage();
     });
   });
+}
+
+/* ---------- Spelling quiz: dictation from saved (❤️) words ---------- */
+function renderSpellingMode(container){
+  const keys = Object.keys(savedWords);
+  if(keys.length === 0){
+    container.innerHTML = `<div class="empty-state">還沒有收藏任何單字，沒辦法出拼字題。先在字卡、主題單字或小測驗按 🤍 收藏幾個單字，再回來挑戰拼字吧！</div>`;
+    return;
+  }
+  if(spellingOrder.length === 0) rebuildSpellingOrder();
+
+  if(spellingIdx >= spellingOrder.length){
+    container.innerHTML = `
+      <div class="quiz-card">
+        <p style="font-size:18px;font-weight:700;margin:0 0 10px;">🎉 這輪拼字測驗完成了！</p>
+        <p style="color:var(--text-muted);">正確 ${spellingStats.correct} 題，錯誤 ${spellingStats.wrong} 題（共 ${spellingOrder.length} 題）</p>
+        <div class="mark-row" style="margin-top:18px;">
+          <button class="mark-btn known" id="spellingRestartBtn">🔄 再測一輪</button>
+        </div>
+      </div>`;
+    document.getElementById("spellingRestartBtn").addEventListener("click", ()=>{
+      rebuildSpellingOrder();
+      renderStage();
+    });
+    return;
+  }
+
+  const key = spellingOrder[spellingIdx];
+  const w = savedWords[key];
+  if(!w){ spellingIdx++; renderStage(); return; } // was un-saved mid-round
+
+  container.innerHTML = `
+    <div class="quiz-score mono">第 ${spellingIdx+1} / ${spellingOrder.length} 題　✅ ${spellingStats.correct}　❌ ${spellingStats.wrong}</div>
+    <div class="quiz-card">
+      <div style="display:flex; gap:6px; align-items:center; justify-content:center;">
+        ${w.pos ? `<span class="chip pos">${w.pos}</span>` : ''}
+        ${w.importance ? `<span class="chip imp">${importanceLabel(w.importance)}</span>` : ''}
+      </div>
+      <p class="meaning" style="margin-top:16px;">${w.meaning_zh || '（無中文翻譯）'}</p>
+      ${w.note_zh ? `<div class="note-zh">💡 ${w.note_zh}</div>` : ''}
+      <div class="speak-row" style="margin:18px 0;">
+        <button class="speak-btn" id="spellingPlayBtn" title="播放發音" ${canSpeak?'':'disabled'}>🔊</button>
+      </div>
+      <input type="text" id="spellingInput" class="spelling-input" placeholder="請輸入英文拼法" autocomplete="off" autocapitalize="off" spellcheck="false" ${spellingChecked?'disabled':''}>
+      <div class="mark-row">
+        ${spellingChecked
+          ? `<button class="mark-btn known" id="spellingNextBtn">下一題 ▶</button>`
+          : `<button class="mark-btn known" id="spellingCheckBtn">送出答案</button>`}
+      </div>
+      ${spellingChecked ? `
+        <div class="spelling-feedback ${spellingCorrect ? 'correct' : 'wrong'}">
+          ${spellingCorrect ? '✅ 正確！' : `❌ 正確拼法：${w.word}`}
+          ${w.ipa ? `<span class="ipa mono" style="margin-left:8px;">${w.ipa}</span>` : ''}
+        </div>
+        ${w.example_en ? `<div class="example" style="margin-top:14px;text-align:left;"><div><div class="txt">${w.example_en}</div>${w.example_zh ? `<div class="txt-zh">${w.example_zh}</div>` : ''}</div></div>` : ''}
+      ` : ''}
+    </div>
+  `;
+
+  const input = document.getElementById("spellingInput");
+  if(!spellingChecked) input.focus();
+
+  const playBtn = document.getElementById("spellingPlayBtn");
+  if(playBtn) playBtn.addEventListener("click", ()=> speak(w.word));
+
+  function checkAnswer(){
+    if(spellingChecked) return;
+    const answer = input.value.trim().toLowerCase();
+    spellingCorrect = answer.length > 0 && answer === w.word.trim().toLowerCase();
+    spellingChecked = true;
+    if(spellingCorrect){
+      spellingStats.correct++;
+    }else{
+      spellingStats.wrong++;
+      w.wrongCount = (w.wrongCount || 0) + 1;
+      w.lastWrongAt = Date.now();
+      saveJSON("toeic-saved-words", savedWords);
+      pushCloudSaved();
+    }
+    renderStage();
+  }
+  document.getElementById("spellingCheckBtn")?.addEventListener("click", checkAnswer);
+  const nextBtn = document.getElementById("spellingNextBtn");
+  if(nextBtn) nextBtn.addEventListener("click", ()=>{
+    spellingIdx++;
+    spellingChecked = false;
+    spellingCorrect = null;
+    renderStage();
+  });
+  if(input){
+    input.addEventListener("keydown", (e)=>{
+      if(e.key !== "Enter") return;
+      e.preventDefault();
+      if(!spellingChecked) checkAnswer();
+      else document.getElementById("spellingNextBtn")?.click();
+    });
+  }
 }
 
 /* ---------- Theme vocab: theme picker -> per-theme flashcard browser ---------- */
