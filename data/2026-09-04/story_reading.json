@@ -1,0 +1,838 @@
+[
+  {
+    "title": "The New Kid at Lunch",
+    "title_zh": "午餐時間的新同學",
+    "level": "beginner",
+    "genre": "friendship",
+    "intro_zh": "這是一個關於轉學生 Mia 的故事。她第一天到新學校,獨自一人坐在吵鬧的餐廳裡,感到緊張又不自在。故事描述她如何遇見一位主動伸出友誼之手的同學,進而慢慢融入新環境。",
+    "key_vocab": [
+      {
+        "word": "cafeteria",
+        "meaning_zh": "學校餐廳"
+      },
+      {
+        "word": "tray",
+        "meaning_zh": "餐盤"
+      },
+      {
+        "word": "disappear",
+        "meaning_zh": "消失"
+      },
+      {
+        "word": "curly",
+        "meaning_zh": "捲曲的(頭髮)"
+      },
+      {
+        "word": "introduce",
+        "meaning_zh": "介紹"
+      },
+      {
+        "word": "relax",
+        "meaning_zh": "放鬆"
+      },
+      {
+        "word": "hesitate",
+        "meaning_zh": "猶豫"
+      },
+      {
+        "word": "notice",
+        "meaning_zh": "注意到"
+      }
+    ],
+    "paragraphs": [
+      "Mia sat alone at a small table near the window. It was her first day at Lincoln Middle School, and she did not know anyone in the entire building. She held her lunch tray tightly and looked around the noisy cafeteria, hoping nobody would notice how nervous she felt.",
+      "Every table was full of students who were laughing and talking about summer vacation, video games, and a soccer game from the weekend. Mia felt her face turn red. She wanted to disappear into the wall behind her. She looked down at her sandwich and tried very hard not to cry in front of a room full of strangers.",
+      "Back at her old school, Mia had always had a group of friends to sit with. Here, she didn't even know where the bathrooms were, let alone which table she was supposed to sit at. She began quietly counting the ceiling tiles just to keep her mind busy.",
+      "Suddenly, a girl with curly hair walked over, carrying her own tray. \"Hi, I'm Jasmine,\" she said with a big smile. \"Do you want to sit with us? We have an extra chair, and honestly, this table gets kind of loud.\"",
+      "Mia looked up, surprised. \"Really? Are you sure?\" she asked quietly, half expecting Jasmine to change her mind. Jasmine nodded and picked up Mia's tray for her before she could say no. \"Come on, we don't bite,\" she joked, and Mia laughed for the first time that day.",
+      "At the table, Jasmine introduced Mia to her friends, Tom and Aki, who were arguing cheerfully about which lunch food was the worst. They asked Mia about her old school, her favorite movies, and whether she had chosen an elective class yet. Mia relaxed a little more with every question and started to talk more and more.",
+      "By the end of lunch, Mia had learned three new names, one very bad joke about a chicken nugget, and a plan to eat together again tomorrow. She walked to her next class feeling much lighter than before, as if she had been carrying a heavy bag all morning and had finally set it down.",
+      "That night, Mia told her mom about Jasmine over dinner. \"She just walked right over and asked me to sit down,\" Mia said, still a little amazed. \"I didn't think anyone would notice me at all.\" Her mom smiled and said, \"Sometimes one small kind action changes someone's entire day, even if the person doing it never realizes it.\"",
+      "The next day, Mia arrived at the cafeteria early and picked a table near the door, just in case. When Jasmine waved from across the room, Mia did not hesitate. She walked over, sat down, and, without really planning to, saved the empty seat beside her for the next new student who might need one."
+    ],
+    "summary_zh": "Mia 轉到新學校的第一天,原本一個人孤單地坐在餐廳角落。同學 Jasmine 主動邀請她一起坐,並介紹她認識其他朋友,讓 Mia 感受到溫暖與被接納。隔天,Mia 也用同樣的方式,主動邀請另一位新同學一起坐下,把善意傳遞下去。故事說明一個小小的善舉,可能為別人帶來很大的改變。",
+    "questions": [
+      {
+        "question_en": "What is the story mainly about?",
+        "question_zh": "這篇故事主要在講什麼?",
+        "options": [
+          "A girl who forgets her lunch",
+          "A new student who makes a friend on her first day",
+          "A cafeteria that serves bad food",
+          "A teacher who helps new students"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "故事描述 Mia 剛轉學,原本一個人坐在角落,後來 Jasmine 主動邀請她一起坐,兩人因此成為朋友。故事重點在「交朋友」而不是食物或老師,因此答案是 (B)。"
+      },
+      {
+        "question_en": "Who first invited Mia to sit with them?",
+        "question_zh": "一開始是誰邀請 Mia 一起坐?",
+        "options": [
+          "Tom",
+          "Aki",
+          "Jasmine",
+          "Mia's mom"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "文中寫道一位捲髮女孩走過來說「Hi, I'm Jasmine」並邀請 Mia 一起坐,因此答案是 (C)。"
+      },
+      {
+        "question_en": "Why did Mia's face turn red at the beginning of the story?",
+        "question_zh": "故事一開始,為什麼 Mia 的臉會變紅?",
+        "options": [
+          "She was sick",
+          "She felt embarrassed and alone",
+          "She was angry at her mom",
+          "The cafeteria was too hot"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "故事提到她一個人坐著,看著別人有說有笑,想要「disappear」,顯示她感到尷尬孤單,因此答案是 (B)。"
+      },
+      {
+        "question_en": "How did Mia probably feel when she saved a seat for a new student the next day?",
+        "question_zh": "隔天當 Mia 幫另一位新同學留座位時,她的心情最可能是什麼?",
+        "options": [
+          "Annoyed",
+          "Confused",
+          "Kind and confident, remembering how she felt",
+          "Bored"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "因為她自己經歷過被邀請的溫暖,所以她想把同樣的善意傳給下一位新同學,顯示她變得更有自信也更願意主動關心別人,因此答案是 (C)。"
+      }
+    ]
+  },
+  {
+    "title": "Reply All",
+    "title_zh": "全部回覆的意外",
+    "level": "beginner",
+    "genre": "workplace",
+    "intro_zh": "Ben 在一間辦公椅公司上班,某個星期一早上,他因為太累而不小心犯下一個尷尬的電子郵件失誤。這篇故事描述這個看似糟糕的意外,最後如何為整間辦公室帶來意想不到的正面結果。",
+    "key_vocab": [
+      {
+        "word": "complain",
+        "meaning_zh": "抱怨"
+      },
+      {
+        "word": "reply all",
+        "meaning_zh": "回覆全部收件人"
+      },
+      {
+        "word": "buzzed",
+        "meaning_zh": "(手機)嗡嗡震動"
+      },
+      {
+        "word": "stomach dropped",
+        "meaning_zh": "心一沉、嚇一跳的感覺"
+      },
+      {
+        "word": "apologize",
+        "meaning_zh": "道歉"
+      },
+      {
+        "word": "honestly",
+        "meaning_zh": "老實說"
+      },
+      {
+        "word": "double-check",
+        "meaning_zh": "再三確認"
+      },
+      {
+        "word": "accident",
+        "meaning_zh": "意外"
+      }
+    ],
+    "paragraphs": [
+      "Ben worked in a small office that sold office chairs to businesses all over the city. Every Monday morning, his boss sent a long email listing the week's goals, meetings, and reminders. Most employees skimmed the first two lines and did not read the rest carefully.",
+      "One Monday morning, Ben was especially tired. He had stayed up too late watching a show and had barely slept. Sitting through the weekly planning meeting felt almost impossible, so he decided to complain about it to his friend, Carla, who worked two desks away. He typed a message: \"This meeting is SO boring, I could fall asleep right now!\"",
+      "Ben meant to send the message only to Carla, the way he always did when the meetings dragged on. But his tired fingers clicked the wrong button on the email program. He pressed \"Reply All\" instead of \"Reply.\" Without realizing it, the message went to all forty people in the company, including his own boss.",
+      "A few seconds later, Ben's phone buzzed on his desk. Then it buzzed again, and again, and again. He looked at his screen and his stomach dropped. Everyone in the company had already seen his message, and several coworkers were replying with laughing emojis and comments like \"same, honestly.\"",
+      "Ben's face turned bright red, and his hands felt cold. He wanted to hide under his desk and never come out. Instead, he stood up slowly and walked toward his boss's office, fully expecting to apologize, get a warning, and maybe even lose his job over one careless click.",
+      "To his surprise, when he stepped inside, his boss was laughing quietly at her computer screen. \"Honestly, Ben, I agree with you,\" she said, waving him toward a chair. \"These meetings really are too long. Let's shorten them starting today.\" When the announcement went out that afternoon, the whole office cheered.",
+      "From that day on, Ben became a little famous around the office. People joked that his accidental email was the most useful message anyone had ever sent to the entire company. He always double-checked the recipient list before clicking \"send\" again, but he never forgot how one small, embarrassing accident led to a big, happy change for everyone."
+    ],
+    "summary_zh": "Ben 原本只想私下向朋友 Carla 抱怨會議太無聊,卻不小心按到「回覆全部」,把抱怨訊息傳給全公司四十個人,包括老闆。他原本以為自己會被責罵,沒想到老闆其實也認同他的看法,決定把會議縮短。Ben 因此在公司裡小有名氣,也學會在傳送郵件前一定要再三確認。",
+    "questions": [
+      {
+        "question_en": "What is this story mainly about?",
+        "question_zh": "這篇故事主要在講什麼?",
+        "options": [
+          "A boss who fires an employee",
+          "An email mistake that leads to a positive change",
+          "A company that sells chairs online",
+          "A meeting that gets longer"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "故事描述 Ben 不小心按到「回覆全部」,結果意外讓大家的抱怨被看見,反而讓會議變短,故事重點是這個意外帶來正面改變,因此答案是 (B)。"
+      },
+      {
+        "question_en": "What mistake did Ben make?",
+        "question_zh": "Ben 犯了什麼錯誤?",
+        "options": [
+          "He forgot to attend the meeting",
+          "He sent a private complaint to everyone in the company",
+          "He deleted his boss's email",
+          "He was late for work"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "文中提到他本來只想傳給 Carla,卻按到「Reply All」讓全公司四十人都收到,因此答案是 (B)。"
+      },
+      {
+        "question_en": "Why did some coworkers reply with laughing emojis?",
+        "question_zh": "為什麼有些同事用笑臉表情符號回覆?",
+        "options": [
+          "They were angry at Ben",
+          "They agreed with what Ben said and found it funny",
+          "They wanted Ben to get in trouble",
+          "They didn't understand English"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "從後面老闆也同意會議太長、大家聽到縮短會議都歡呼可以推測,同事們其實也有同感,覺得 Ben 講出了大家的心聲,因此答案是 (B)。"
+      },
+      {
+        "question_en": "How did Ben feel while walking to his boss's office?",
+        "question_zh": "Ben 走向老闆辦公室時,心情是什麼?",
+        "options": [
+          "Proud and excited",
+          "Bored",
+          "Nervous, expecting punishment",
+          "Angry at his boss"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "文中寫他「wanted to hide under his desk」並準備道歉甚至可能丟工作,顯示他非常緊張,以為會被處罰,因此答案是 (C)。"
+      }
+    ]
+  },
+  {
+    "title": "Grandma's Recipe Box",
+    "title_zh": "奶奶的食譜盒",
+    "level": "beginner",
+    "genre": "family",
+    "intro_zh": "Lily 每年夏天都會去奶奶 Nana 家度假。這一年,Lily 注意到奶奶的身體狀況似乎有些不同,而奶奶也決定做一件她從未做過的事——把家傳食譜親手教給孫女。",
+    "key_vocab": [
+      {
+        "word": "shaking",
+        "meaning_zh": "顫抖"
+      },
+      {
+        "word": "recipe",
+        "meaning_zh": "食譜"
+      },
+      {
+        "word": "pinch of salt",
+        "meaning_zh": "一小撮鹽"
+      },
+      {
+        "word": "dough",
+        "meaning_zh": "麵團"
+      },
+      {
+        "word": "mention",
+        "meaning_zh": "提到"
+      },
+      {
+        "word": "tightly",
+        "meaning_zh": "緊緊地"
+      },
+      {
+        "word": "autumn",
+        "meaning_zh": "秋天"
+      },
+      {
+        "word": "beside",
+        "meaning_zh": "在旁邊"
+      }
+    ],
+    "paragraphs": [
+      "Every summer, Lily visited her grandmother's small house by the lake, the same house her mother had grown up in. Her grandmother, whom everyone called Nana, always smelled like cinnamon and fresh bread, and her kitchen window looked out over the water where ducks liked to gather in the mornings.",
+      "This summer was different. Nana's hands were shaking more than before, and she moved more slowly around the kitchen, resting one hand on the counter whenever she stood up from a chair. Lily noticed the small changes but did not say anything, unsure how to bring it up without upsetting her.",
+      "One afternoon, Nana pulled out an old wooden box full of recipe cards, its corners worn soft from decades of handling. Some cards were so old that the ink had faded to brown, and a few were stained with butter from years of use. \"These recipes are from your great-great-grandmother,\" Nana said, running a finger along the edge of the box. \"I want to teach you everything before I forget how.\"",
+      "Lily was surprised. Nana had never talked like this before, not once in all the summers Lily could remember. \"You're not going to forget anything, Nana,\" Lily said firmly, but her voice came out a little shaky too, betraying the worry she was trying to hide.",
+      "For the next two weeks, they cooked together every single day, filling the small kitchen with flour, laughter, and the radio playing softly in the background. They made apple pie, chicken soup, and Nana's famous cinnamon rolls. Lily wrote down every small detail in a notebook, even the ones Nana usually forgot to mention out loud, like \"add a pinch of salt at the very end\" or \"let the dough rest until it stops fighting you.\"",
+      "On Lily's last night at the lake house, they made cinnamon rolls together one more time. Nana sat in a chair by the counter and watched carefully as Lily rolled the dough by herself, without any help or reminders. \"You did it exactly right,\" Nana said softly, smiling with tears gathering in the corners of her eyes.",
+      "Before Lily left the next morning, Nana handed her the wooden recipe box with both hands, as if passing along something far heavier than paper and cardboard. \"Now it's yours,\" Nana said. \"Cook these for your own family one day, and remember me every single time you do.\" Lily hugged the box tightly against her chest the entire drive home, unable to speak for the first hour.",
+      "That autumn, Lily made cinnamon rolls in her own kitchen for the first time, following the handwritten card without needing to check her notebook once. The smell of cinnamon and fresh bread filled the house exactly the way it always had at the lake, and for one quiet moment, it felt like Nana was standing right there beside her, watching to make sure she got it exactly right."
+    ],
+    "summary_zh": "Lily 發現奶奶的手比以往顫抖,行動也變得緩慢。奶奶拿出裝滿家傳食譜卡片的木盒,決定利用這個暑假手把手教 Lily 做菜。兩人一起做了蘋果派、雞湯和肉桂捲,最後奶奶把整個食譜盒送給 Lily,希望她未來也能傳承下去。故事結尾,Lily 在自己家中做肉桂捲時,彷彿感覺奶奶就在身邊。",
+    "questions": [
+      {
+        "question_en": "What is the story mainly about?",
+        "question_zh": "這篇故事主要在講什麼?",
+        "options": [
+          "A girl learning to bake and treasuring time with her grandmother",
+          "A recipe contest",
+          "A lake vacation",
+          "A grandmother who forgets everything"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "故事主要描述 Lily 和奶奶一起做菜、學習食譜,並珍惜與奶奶相處的時光,因此答案是 (A)。"
+      },
+      {
+        "question_en": "What did Nana give Lily before she left?",
+        "question_zh": "Lily 離開前,奶奶送給她什麼東西?",
+        "options": [
+          "A photo album",
+          "Money for college",
+          "The wooden recipe box",
+          "A new oven"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "文中明確寫道奶奶把木製食譜盒送給了 Lily,因此答案是 (C)。"
+      },
+      {
+        "question_en": "Why did Nana want to teach Lily the recipes now?",
+        "question_zh": "為什麼奶奶現在想教 Lily 這些食譜?",
+        "options": [
+          "She was bored during the summer",
+          "She sensed her health was declining and wanted to pass on the family's tradition",
+          "Lily asked her to",
+          "She wanted Lily to open a restaurant"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "文中提到奶奶的手比以前抖得更厲害、動作也變慢,並說「我想在忘記怎麼做之前教你」,可以推測她感覺自己身體狀況在變化,想把家族傳統傳承下去,因此答案是 (B)。"
+      },
+      {
+        "question_en": "How did Lily likely feel when she made cinnamon rolls in her own kitchen that autumn?",
+        "question_zh": "那年秋天,Lily 在自己廚房做肉桂捲時,心情最可能是什麼?",
+        "options": [
+          "Nervous and confused",
+          "Warm and connected to her grandmother's memory",
+          "Annoyed by the mess",
+          "Indifferent"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "最後一段描述聞到味道時「感覺奶奶好像就站在旁邊」,顯示 Lily 感受到溫暖與思念,和奶奶的情感連結,因此答案是 (B)。"
+      }
+    ]
+  },
+  {
+    "title": "The Umbrella Thief",
+    "title_zh": "消失的雨傘",
+    "level": "intermediate",
+    "genre": "mystery",
+    "intro_zh": "在 Maple Court 公寓,Daniel 的雨傘接連好幾次莫名其妙地消失。他決定自己動手調查這個小小的謎團,而調查的結果卻完全出乎他的意料。",
+    "key_vocab": [
+      {
+        "word": "elderly",
+        "meaning_zh": "年長的"
+      },
+      {
+        "word": "shuffled",
+        "meaning_zh": "拖著腳步走"
+      },
+      {
+        "word": "precious",
+        "meaning_zh": "珍貴的"
+      },
+      {
+        "word": "confront",
+        "meaning_zh": "當面對質"
+      },
+      {
+        "word": "embarrassed",
+        "meaning_zh": "尷尬的"
+      },
+      {
+        "word": "afford",
+        "meaning_zh": "負擔得起"
+      },
+      {
+        "word": "guilt",
+        "meaning_zh": "愧疚感"
+      },
+      {
+        "word": "unlikely",
+        "meaning_zh": "意想不到的"
+      }
+    ],
+    "paragraphs": [
+      "Every rainy morning, someone in the Maple Court apartment building took Daniel's umbrella from the stand near the front door. It happened three times in one month, always on the wettest days, and Daniel was starting to get genuinely annoyed. He had even bought a cheap replacement twice, only to have that one disappear as well.",
+      "\"Maybe it's just bad luck,\" his neighbor Priya suggested over coffee one morning, but Daniel wasn't convinced. Bad luck didn't usually repeat itself so neatly, only on rainy days and only with his umbrella. He decided to solve the mystery himself. That night, he set up his old phone on a shelf near the door to quietly record the hallway.",
+      "The next morning, it was raining again, right on schedule. Daniel checked his phone with excitement over his morning coffee, half expecting to catch a stranger sneaking through the building or a mischievous kid from the third floor. Instead, the grainy video showed something he never expected to see.",
+      "At exactly 6:45 a.m., a small, elderly woman from apartment 2B shuffled slowly out of her door. She looked left, then right, and carefully picked up Daniel's umbrella. She held it close, as if it were something precious, and walked toward the elevator.",
+      "Daniel recognized her immediately. Her name was Mrs. Alvarez, and she lived alone. He had barely spoken to her before. Curious rather than angry now, he decided to knock on her door that evening instead of confronting her in anger.",
+      "When she opened the door, Mrs. Alvarez looked embarrassed. \"I'm so sorry,\" she said quietly. \"My umbrella broke last month, and I couldn't afford a new one. I only borrow yours on the days it rains, and I always return it before you wake up.\"",
+      "Daniel felt a wave of guilt for ever being annoyed. \"You could have just asked me,\" he said gently. The next day, he bought two new umbrellas and left one hanging on Mrs. Alvarez's doorknob with a small note: \"For rainy days. No need to sneak around anymore.\"",
+      "From then on, whenever it rained, Mrs. Alvarez waved to Daniel from across the lobby, her new umbrella in hand. What started as an annoying mystery became the beginning of an unlikely friendship between two neighbors who had never really spoken before."
+    ],
+    "summary_zh": "Daniel 架設手機錄下走廊,發現原來是獨居的鄰居 Mrs. Alvarez 每逢下雨天都會借用他的雨傘。她坦承自己的傘壞了卻買不起新的,才不好意思偷偷借用。Daniel 沒有生氣,反而買了兩把新傘送給她,兩人也因此從陌生鄰居變成朋友。故事說明一件看似惱人的小事,也可能成為建立情誼的契機。",
+    "questions": [
+      {
+        "question_en": "What is this story mainly about?",
+        "question_zh": "這篇故事主要在講什麼?",
+        "options": [
+          "A thief who steals valuable jewelry",
+          "A man who solves a small mystery and discovers an unexpected friendship",
+          "A building manager fixing broken elevators",
+          "A woman who is arrested for stealing"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "整篇故事描述 Daniel 調查雨傘失蹤之謎,發現是鄰居 Mrs. Alvarez 因為傘壞了才借用,最後兩人因此成為朋友,因此答案是 (B)。"
+      },
+      {
+        "question_en": "How did Daniel discover who was taking his umbrella?",
+        "question_zh": "Daniel 是怎麼發現是誰拿走他的雨傘的?",
+        "options": [
+          "A neighbor told him directly",
+          "He set up his phone to record the hallway",
+          "He hid in the hallway all night",
+          "The building manager showed him a security camera"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "文中提到他把舊手機架在架子上錄下走廊的畫面,隔天早上查看影片才發現真相,因此答案是 (B)。"
+      },
+      {
+        "question_en": "Why did Mrs. Alvarez always return the umbrella before Daniel woke up?",
+        "question_zh": "為什麼 Mrs. Alvarez 總是在 Daniel 醒來前把雨傘還回去?",
+        "options": [
+          "She didn't think it was a big deal",
+          "She wanted to avoid being caught and causing trouble",
+          "She wanted to surprise him",
+          "The building rules required it"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "從她道歉時尷尬的態度以及一直偷偷借用又歸還可以推測,她其實知道這樣做不太好,想避免被發現或造成困擾,因此答案是 (B)。"
+      },
+      {
+        "question_en": "Why did Daniel buy two new umbrellas instead of being angry?",
+        "question_zh": "為什麼 Daniel 選擇買兩把新雨傘,而不是生氣?",
+        "options": [
+          "He felt guilty and wanted to help her instead of confronting her harshly",
+          "He wanted to sell them for profit",
+          "The building manager told him to",
+          "He was still angry and wanted revenge"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "文中寫他「felt a wave of guilt for ever being annoyed」,因此決定用善意的方式解決問題,買新傘送給她而不是責備,因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "title": "The Wrong Train to Kanazawa",
+    "title_zh": "搭錯往金澤的列車",
+    "level": "intermediate",
+    "genre": "travel",
+    "intro_zh": "Sofia 只有短短六小時可以在轉機前遊覽日本,原本計畫搭快速列車去京都一日遊,卻在不知情的狀況下搭上了開往金澤的列車。這篇故事描述她如何在語言不通的情況下,靠著一位陌生人的幫助化解危機。",
+    "key_vocab": [
+      {
+        "word": "connecting flight",
+        "meaning_zh": "轉機班機"
+      },
+      {
+        "word": "sleek",
+        "meaning_zh": "流線型的、時髦的"
+      },
+      {
+        "word": "efficient",
+        "meaning_zh": "有效率的"
+      },
+      {
+        "word": "panic",
+        "meaning_zh": "驚慌"
+      },
+      {
+        "word": "limited",
+        "meaning_zh": "有限的"
+      },
+      {
+        "word": "gesture",
+        "meaning_zh": "手勢"
+      },
+      {
+        "word": "relieved",
+        "meaning_zh": "鬆一口氣的"
+      },
+      {
+        "word": "bamboo grove",
+        "meaning_zh": "竹林"
+      },
+      {
+        "word": "stranger",
+        "meaning_zh": "陌生人"
+      }
+    ],
+    "paragraphs": [
+      "Sofia had exactly six hours to spend in Japan before her connecting flight, so she decided to take a quick day trip from Osaka instead of waiting at the airport. She checked the schedule twice, bought a ticket at a small machine near the platform, and hurried onto a sleek bullet train just as the doors were closing.",
+      "She settled into her seat, congratulating herself on planning such an efficient adventure. It was only after the train had left the station that she noticed the electronic sign above the door: it was heading to Kanazawa, not Kyoto, the city she had actually planned to visit.",
+      "Panic set in immediately. Sofia's Japanese was limited to a handful of phrases, and her phone had almost no signal in the tunnel the train was passing through. She considered getting off at the very next stop and catching a train back, but that would eat up most of her remaining time.",
+      "An older gentleman sitting across from her noticed her worried expression and the map open on her lap. \"Kyoto?\" he asked, pointing gently at her phone screen. Sofia nodded, relieved that someone understood her situation.",
+      "Using simple English words, hand gestures, and a translation app, the man explained that Sofia could get off at the next station, cross the platform, and catch a train heading back in the correct direction within fifteen minutes. He even walked her to the right platform himself, checking the departure board twice to be sure.",
+      "As they waited, he told her, through his phone's translator, that his daughter had studied abroad and often got lost the same way. \"Travel always makes stories,\" he said with a warm laugh, \"even the mistakes.\"",
+      "Sofia made it back to Kyoto with just enough time to see the famous bamboo grove before rushing to catch her flight. She never learned the kind stranger's name, but she still tells the story of her \"wrong train adventure\" more often than she tells stories about the temples she actually planned to see.",
+      "Looking back, Sofia realized that getting lost had taught her something the guidebooks never could: that kindness from strangers can turn a stressful mistake into the best part of a trip."
+    ],
+    "summary_zh": "Sofia 搭錯列車後十分慌張,幸好一位親切的老先生用簡單英文和翻譯軟體協助她找到正確的月台,還親自帶她過去確認。老先生提到自己的女兒出國讀書時也常迷路,因此特別能體會她的處境。最後 Sofia 順利趕回京都,也體會到旅行中最難忘的部分,往往來自陌生人的善意,而不是原本計畫要去的景點。",
+    "questions": [
+      {
+        "question_en": "What is this story mainly about?",
+        "question_zh": "這篇故事主要在講什麼?",
+        "options": [
+          "A woman who loses her passport in Japan",
+          "A traveler who takes the wrong train and is helped by a kind stranger",
+          "A man who works as a train conductor",
+          "A story about visiting temples in Kyoto"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "故事描述 Sofia 搭錯開往金澤的列車,慌張之中受到一位陌生老先生的幫助,最後順利趕回京都,重點在於「搭錯車」與「陌生人的善意」,因此答案是 (B)。"
+      },
+      {
+        "question_en": "How did Sofia first realize she was on the wrong train?",
+        "question_zh": "Sofia 是怎麼發現自己搭錯車的?",
+        "options": [
+          "A conductor told her",
+          "She saw the electronic sign showing \"Kanazawa\"",
+          "Her phone gave her directions",
+          "The old man told her immediately"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "文中提到她在車上才注意到門上方的電子看板顯示「開往金澤」,而不是她原本要去的京都,因此答案是 (B)。"
+      },
+      {
+        "question_en": "Why did the old man go out of his way to walk Sofia to the correct platform?",
+        "question_zh": "為什麼那位老先生會特地帶 Sofia 走到正確的月台?",
+        "options": [
+          "He was going to Kyoto himself anyway",
+          "He was reminded of his own daughter's experience abroad and wanted to help",
+          "He worked for the railway company",
+          "Sofia paid him for his help"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "文中提到他透過翻譯提到自己的女兒出國讀書時也常常迷路,可以推測他因此對 Sofia 的處境特別有同理心,主動熱心地帶她到正確的月台,因此答案是 (B)。"
+      },
+      {
+        "question_en": "How did Sofia most likely feel after reflecting on the experience at the end of the story?",
+        "question_zh": "故事結尾,Sofia 回顧這次經驗時,心情最可能是什麼?",
+        "options": [
+          "Regretful that she wasted her trip",
+          "Grateful, realizing the mistake became a meaningful memory",
+          "Angry at herself for being careless",
+          "Indifferent about what happened"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "最後一段提到她體會到迷路教會她書上學不到的事——陌生人的善意能把壓力滿滿的意外變成旅程中最美好的部分,顯示她心懷感激,因此答案是 (B)。"
+      }
+    ]
+  },
+  {
+    "title": "The Memory Café",
+    "title_zh": "回憶咖啡館",
+    "level": "intermediate",
+    "genre": "sci-fi",
+    "intro_zh": "在西元 2041 年的近未來世界,一間小小的咖啡館提供的不是咖啡,而是讓顧客重新體驗自己過去回憶的服務。故事主角 Noah 在奶奶過世後,開始頻繁造訪這間咖啡館,沉浸在對過去的回憶中。",
+    "key_vocab": [
+      {
+        "word": "lightweight headset",
+        "meaning_zh": "輕便頭戴裝置"
+      },
+      {
+        "word": "relive",
+        "meaning_zh": "重新體驗"
+      },
+      {
+        "word": "session",
+        "meaning_zh": "(使用或療程的)一次"
+      },
+      {
+        "word": "volunteer",
+        "meaning_zh": "當志工"
+      },
+      {
+        "word": "shovel",
+        "meaning_zh": "鏟子"
+      },
+      {
+        "word": "replace",
+        "meaning_zh": "取代"
+      },
+      {
+        "word": "niece",
+        "meaning_zh": "姪女、外甥女"
+      },
+      {
+        "word": "wires",
+        "meaning_zh": "電線"
+      }
+    ],
+    "paragraphs": [
+      "In the year 2041, a small café opened on the corner of Elm Street that did not sell coffee at all. Instead, for a small fee, customers could sit in a comfortable chair, put on a lightweight headset, and relive any memory from their own past in perfect detail.",
+      "Noah visited the Memory Café every single day after his grandmother passed away. He replayed the same memory over and over: her kitchen, her laugh, the smell of her cooking. Each session felt real enough to make him forget, just for twenty minutes, that she was gone.",
+      "The café's owner, a quiet woman named Delphine, noticed that Noah was coming in more and more often, sometimes staying for three or four sessions in a row. Most customers visited once a week; Noah had started visiting twice a day.",
+      "One afternoon, Delphine sat down across from him instead of simply handing him a headset. \"The machine can show you what happened,\" she said gently, \"but it can't show you what hasn't happened yet. You're the only one who can go make new memories.\"",
+      "Noah didn't want to hear it at first. The real world felt gray and slow compared to the warm, golden memories in the headset. But Delphine's words stayed with him for days, quietly repeating in his mind.",
+      "The following week, instead of walking into the café, Noah walked past it and kept going, all the way to the community garden where his grandmother used to volunteer. He picked up a shovel and, for the first time in months, did something new instead of replaying something old.",
+      "He still visited the Memory Café sometimes, on birthdays or hard days, and there was nothing wrong with that. But he no longer let the past replace his present. Slowly, the garden gave him something the headset never could: memories that were still being made.",
+      "A year later, Noah brought his own niece to the community garden and taught her how to plant tomatoes, just as his grandmother had once taught him. Somewhere, he thought, this counted as a new kind of memory café — one built from dirt and sunlight instead of wires and code."
+    ],
+    "summary_zh": "Noah 因為思念過世的奶奶,幾乎每天都到「回憶咖啡館」重溫她的記憶,次數越來越頻繁。咖啡館老闆 Delphine 提醒他,機器只能重現過去,卻無法創造未來,只有他自己才能創造新的回憶。Noah 因此走進奶奶曾經當志工的社區花園,開始動手做些新的事情。故事最後,他把這份精神傳承給姪女,體會到活在當下、創造新回憶的重要性。",
+    "questions": [
+      {
+        "question_en": "What is this story mainly about?",
+        "question_zh": "這篇故事主要在講什麼?",
+        "options": [
+          "A café that becomes famous for its coffee",
+          "A man who uses a memory machine to cope with grief, then learns to live in the present",
+          "A scientist who invents a time machine",
+          "A story about a café owner's business struggles"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "故事描述 Noah 因為思念過世的奶奶而不斷使用回憶機器重溫過去,後來在咖啡館老闆的提醒下,學會走出過去、開始創造新的回憶,因此答案是 (B)。"
+      },
+      {
+        "question_en": "What did the Memory Café allow customers to do?",
+        "question_zh": "回憶咖啡館讓顧客可以做什麼?",
+        "options": [
+          "Buy old-fashioned coffee",
+          "Relive their own past memories using a headset",
+          "Predict their future",
+          "Talk to a robot version of a loved one"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "文中說明顧客可以付費戴上輕便的頭戴裝置,身歷其境地重溫自己過去的任何一段記憶,因此答案是 (B)。"
+      },
+      {
+        "question_en": "Why did Delphine decide to talk to Noah instead of just giving him a headset?",
+        "question_zh": "為什麼 Delphine 決定跟 Noah 談話,而不是直接把頭戴裝置給他?",
+        "options": [
+          "She wanted to charge him more money",
+          "She was worried he was relying on the past too much instead of living his life",
+          "The machine was broken that day",
+          "She wanted him to stop being a customer entirely"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "文中提到她注意到 Noah 來的次數越來越頻繁,甚至一天使用好幾次,可以推測她擔心他過度依賴回憶、逃避現實生活,因此答案是 (B)。"
+      },
+      {
+        "question_en": "Why did Noah eventually walk past the café toward the community garden?",
+        "question_zh": "為什麼 Noah 後來會直接走過咖啡館,前往社區花園?",
+        "options": [
+          "The café was closed that day",
+          "He decided to create new memories instead of only replaying old ones",
+          "He was told to leave by Delphine",
+          "He wanted to buy a shovel"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "這呼應了 Delphine 說的「機器只能重現過去,無法創造未來」,Noah 因此決定去奶奶曾經當志工的社區花園,主動創造新的回憶,因此答案是 (B)。"
+      }
+    ]
+  },
+  {
+    "title": "The Dog Who Waited at Platform Nine",
+    "title_zh": "在九號月台等待的狗",
+    "level": "advanced",
+    "genre": "animal",
+    "intro_zh": "在 Alderbrook 小鎮的火車站,通勤族們每天傍晚都會看到一隻名叫 Biscuit 的棕色流浪狗,準時坐在九號月台等待固定班次的列車進站。這篇故事將揭曉這隻狗為何風雨無阻地在此等候,以及背後令人動容的原因。",
+    "key_vocab": [
+      {
+        "word": "peculiar",
+        "meaning_zh": "奇特的"
+      },
+      {
+        "word": "accustomed",
+        "meaning_zh": "習慣於…的"
+      },
+      {
+        "word": "widower",
+        "meaning_zh": "鰥夫"
+      },
+      {
+        "word": "attentiveness",
+        "meaning_zh": "專注、留心"
+      },
+      {
+        "word": "unsettled",
+        "meaning_zh": "使人不安的"
+      },
+      {
+        "word": "shoo away",
+        "meaning_zh": "把…趕走"
+      },
+      {
+        "word": "perpetually",
+        "meaning_zh": "持續不斷地"
+      },
+      {
+        "word": "commemorate",
+        "meaning_zh": "紀念"
+      },
+      {
+        "word": "whimper",
+        "meaning_zh": "嗚咽、低聲哀鳴"
+      },
+      {
+        "word": "plaque",
+        "meaning_zh": "紀念牌匾"
+      }
+    ],
+    "paragraphs": [
+      "For nearly two years, commuters at the small train station in Alderbrook grew accustomed to a peculiar sight: a scruffy brown dog sitting patiently on platform nine every weekday evening, precisely when the 6:15 train pulled in. Nobody knew where the dog came from, but everybody eventually learned his name, because the ticket collector had taken to calling him Biscuit.",
+      "The story, as the older residents told it, began with a man named Arthur Pell, a widower who had ridden that same train home from the accounting firm for eleven years. He had adopted Biscuit as a stray puppy, and for reasons nobody could quite explain, the dog had taken to walking him to the station each morning and meeting him again each evening without fail.",
+      "Then, one bitter January, Arthur suffered a heart attack on his morning commute and never returned. Biscuit, who had no way of understanding what had happened, continued to appear at platform nine at exactly 6:15 every evening, sitting in the same spot, watching each carriage door with an attentiveness that unsettled and moved the regular passengers in equal measure.",
+      "At first, station staff tried repeatedly to shoo him away or find him a shelter, worried that a stray roaming the platform posed a safety risk. But commuters began quietly leaving food, and eventually a retired schoolteacher named Mrs. Okonkwo started bringing a blanket for him on cold nights, unofficially appointing herself his guardian.",
+      "Word of the loyal dog spread through the small town, then through local news, until a journalist wrote a short article that was shared widely online. Within days, dozens of people had contacted the station asking how they might adopt Biscuit or otherwise help him.",
+      "Mrs. Okonkwo, who had grown genuinely attached to the dog by then, ultimately decided to formally adopt him herself, reasoning that Biscuit deserved a home rather than a life spent perpetually waiting on a cold platform for someone who would never return.",
+      "Remarkably, even after moving into her house three streets away, Biscuit continued to appear at platform nine most evenings for several more months, though gradually the visits became less frequent as he settled into his new routine, gained weight, and, according to Mrs. Okonkwo, finally began sleeping through the night without whimpering.",
+      "The station eventually installed a small brass plaque near platform nine, commemorating \"Biscuit, who taught this town what loyalty looks like.\" Commuters still glance at that spot from time to time, some of them swearing that on certain evenings, if the light hits it a certain way, they can still picture a scruffy brown dog sitting quietly, keeping watch."
+    ],
+    "summary_zh": "Biscuit 原本是主人 Arthur 收養的流浪幼犬,每天固定到車站接送他上下班。某個一月,Arthur 在通勤途中心臟病發過世,再也沒有回來,但 Biscuit 仍然每天傍晚準時出現在月台等待。車站員工原本想把牠帶走,幸好社區居民開始餵食照顧牠,最後一位退休教師 Mrs. Okonkwo 正式收養了 Biscuit。故事說明動物的忠誠如何感動整個社區,也讓大家重新思考陪伴與失去的意義。",
+    "questions": [
+      {
+        "question_en": "What is this story mainly about?",
+        "question_zh": "這篇故事主要在講什麼?",
+        "options": [
+          "A dog trained to work for the railway company",
+          "A loyal dog who keeps waiting for his deceased owner and is eventually adopted by the community",
+          "A journalist who investigates a mysterious animal",
+          "A story about station safety rules for animals"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "故事描述 Biscuit 在主人 Arthur 過世後仍每天到月台等待,最後被社區的 Mrs. Okonkwo 收養,重點在忠誠與社區的關懷,因此答案是 (B)。"
+      },
+      {
+        "question_en": "What eventually happened to Arthur Pell?",
+        "question_zh": "Arthur Pell 後來發生了什麼事?",
+        "options": [
+          "He moved to another city",
+          "He suffered a heart attack during his commute and did not return",
+          "He gave Biscuit to the station staff",
+          "He retired and stopped taking the train"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "文中明確提到「Arthur suffered a heart attack on his morning commute and never returned」,因此答案是 (B)。"
+      },
+      {
+        "question_en": "Why did station staff initially want to remove Biscuit from the platform?",
+        "question_zh": "為什麼車站員工一開始想把 Biscuit 帶離月台?",
+        "options": [
+          "They disliked dogs in general",
+          "They were concerned about safety with a stray animal on the platform",
+          "Biscuit was aggressive toward passengers",
+          "The station was going to be closed"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "文中提到工作人員「worried that a stray roaming the platform posed a safety risk」,顯示他們的顧慮主要是安全問題而非討厭狗,因此答案是 (B)。"
+      },
+      {
+        "question_en": "Why did Mrs. Okonkwo decide to formally adopt Biscuit?",
+        "question_zh": "為什麼 Mrs. Okonkwo 決定正式收養 Biscuit?",
+        "options": [
+          "She wanted a guard dog for her house",
+          "She felt he deserved a real home instead of endlessly waiting on a cold platform",
+          "The station forced her to take him",
+          "She wanted to win a reward from the news article"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "文中提到她認為「Biscuit deserved a home rather than a life spent perpetually waiting on a cold platform for someone who would never return」,顯示她是出於關愛與同情才決定收養他,因此答案是 (B)。"
+      }
+    ]
+  },
+  {
+    "title": "Learning to Float",
+    "title_zh": "學會漂浮",
+    "level": "advanced",
+    "genre": "growth",
+    "intro_zh": "四十三歲的 Renata 從七歲那次差點溺水的經驗後,就再也不敢讓臉浸入水中,這份恐懼甚至讓她刻意避開游泳池、湖泊,甚至裝滿水的浴缸長達數十年。這篇故事描述她因為女兒即將在海邊舉辦婚禮,決定正視這份深植已久的恐懼。",
+    "key_vocab": [
+      {
+        "word": "submerge",
+        "meaning_zh": "浸入水中"
+      },
+      {
+        "word": "voluntarily",
+        "meaning_zh": "自願地"
+      },
+      {
+        "word": "deeply rooted",
+        "meaning_zh": "根深蒂固的"
+      },
+      {
+        "word": "dread",
+        "meaning_zh": "恐懼、畏懼"
+      },
+      {
+        "word": "agonizingly",
+        "meaning_zh": "令人痛苦地"
+      },
+      {
+        "word": "nonlinear",
+        "meaning_zh": "非線性的、起伏不定的"
+      },
+      {
+        "word": "anticlimactic",
+        "meaning_zh": "虎頭蛇尾的、不如預期戲劇化的"
+      },
+      {
+        "word": "brace (oneself)",
+        "meaning_zh": "讓自己做好心理準備"
+      },
+      {
+        "word": "instinctively",
+        "meaning_zh": "本能地"
+      },
+      {
+        "word": "exaggeration",
+        "meaning_zh": "誇大"
+      }
+    ],
+    "paragraphs": [
+      "At forty-three, Renata had never once submerged her face in water voluntarily. A near-drowning incident at age seven had left her with a fear so deeply rooted that she had spent decades constructing an entire life around avoiding pools, lakes, and even bathtubs filled past her ankles.",
+      "Her daughter's wedding, however, was to take place on a beach in Thailand, and the reception included an evening swim that every guest was expected, gently but unmistakably, to join. Renata realized, with something between dread and quiet determination, that she would rather confront her fear than spend the happiest day of her daughter's life sitting rigidly on the sand.",
+      "She found a swimming instructor named Priya who specialized, according to her website, in \"adult beginners with complicated histories.\" During their first session, Priya didn't even ask Renata to enter the pool; instead, they simply sat on the edge together, feet in the water, while Renata described exactly what had happened at seven years old.",
+      "Over the following weeks, progress was agonizingly slow and entirely nonlinear. Some sessions ended with Renata sobbing quietly in the shallow end, overwhelmed by sensations she hadn't confronted in thirty-six years. Others ended with small, almost embarrassing victories, like successfully blowing bubbles underwater for three full seconds without panicking.",
+      "The breakthrough, when it finally arrived, was almost anticlimactic. On a gray Tuesday afternoon, Priya asked her to simply lie back, let her ears sink beneath the surface, and trust that the water would hold her weight without any additional effort. Renata closed her eyes, braced for panic, and instead felt something she could only describe afterward as an unfamiliar, unearned calm.",
+      "She floated for perhaps four seconds before instinctively grabbing for the pool's edge, but four seconds was enough. She had done the one thing her body had insisted, for thirty-six years, was fundamentally impossible.",
+      "By the time the wedding arrived four months later, Renata could not yet call herself a strong swimmer, but she waded into the warm Thai water up to her shoulders alongside her daughter, laughing, salt water stinging her eyes, entirely unafraid.",
+      "Watching her mother float on her back beneath the darkening sky that evening, Renata's daughter later admitted it was, without exaggeration, more moving to her than any part of the ceremony itself. Renata, for her part, said only that fear, however old and deeply rooted, was never quite as permanent as it insisted on seeming."
+    ],
+    "summary_zh": "為了不錯過女兒海灘婚禮上的下水活動,Renata 找了專門教導「有複雜經歷成人初學者」的教練 Priya 學游泳。過程並不順利,經歷了多次情緒崩潰與微小的進步,直到某天她終於學會放鬆躺在水面上漂浮數秒。婚禮當天,她終於能和女兒一起走入溫暖的海水中,不再感到恐懼。故事最後說明,即使是深植多年的恐懼,也未必如想像中那樣永遠無法克服。",
+    "questions": [
+      {
+        "question_en": "What is this story mainly about?",
+        "question_zh": "這篇故事主要在講什麼?",
+        "options": [
+          "A woman preparing for her own wedding",
+          "A woman confronting a decades-old fear of water with the help of an instructor",
+          "A swimming coach's biography",
+          "A story about a wedding that gets cancelled"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "故事核心是 Renata 因為女兒即將在海灘辦婚禮,決定正視自己三十幾年來對水的恐懼,並在教練 Priya 的協助下逐漸克服,因此答案是 (B)。"
+      },
+      {
+        "question_en": "What caused Renata's fear of water in the first place?",
+        "question_zh": "Renata 對水的恐懼最初是怎麼產生的?",
+        "options": [
+          "A swimming lesson gone wrong as an adult",
+          "A near-drowning incident when she was seven years old",
+          "A story she read as a child",
+          "Her daughter's fear of water"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "文中第一段就說明「A near-drowning incident at age seven」是恐懼的起源,因此答案是 (B)。"
+      },
+      {
+        "question_en": "Why did Priya begin the first lesson by sitting on the edge of the pool instead of asking Renata to get in the water?",
+        "question_zh": "為什麼 Priya 第一堂課選擇坐在池邊,而不是要求 Renata 下水?",
+        "options": [
+          "The pool was closed for cleaning",
+          "She wanted to build trust gradually given Renata's traumatic history",
+          "Priya herself was afraid of water",
+          "It was required by the swimming school's rules"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "從 Priya 的教學方式和她專門服務「有複雜經歷的成人初學者」可以推測,她刻意採取循序漸進、建立信任的方式,而不是強迫 Renata 立刻下水,因此答案是 (B)。"
+      },
+      {
+        "question_en": "How did Renata's daughter feel watching her mother float on her back at the wedding?",
+        "question_zh": "婚禮上,看到媽媽在水面上漂浮時,女兒的心情是什麼?",
+        "options": [
+          "Embarrassed by her mother's behavior",
+          "Indifferent, since it wasn't part of the ceremony",
+          "Deeply moved, more so than by the ceremony itself",
+          "Worried that her mother might drown"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "文中提到女兒事後坦言,看到媽媽漂浮的那一刻,比婚禮儀式本身還要令她感動,因此答案是 (C)。"
+      }
+    ]
+  }
+]

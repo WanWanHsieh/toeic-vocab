@@ -261,6 +261,16 @@
   .reading-actions{ display:flex; justify-content:center; gap:10px; margin-top:20px; }
   .reading-score{ text-align:center; font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--text-muted); margin-top:14px; }
 
+  /* Story reading (導讀) */
+  .story-guide{ margin-top:14px; padding-top:14px; border-top:1px dashed var(--border); }
+  .story-guide-head{ font-weight:700; font-size:13px; letter-spacing:.04em; color:var(--accent); margin-bottom:8px; }
+  .story-guide-intro{ margin:0 0 14px; font-size:14px; line-height:1.7; color:var(--text); }
+  .story-vocab-list{ display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:8px; }
+  .story-vocab-item{ background:var(--surface-2); border-radius:8px; padding:8px 10px; font-size:13px; }
+  .story-vocab-item .w{ display:block; font-weight:700; font-family:"IBM Plex Mono",monospace; }
+  .story-vocab-item .m{ color:var(--text-muted); }
+  .story-summary p{ margin:0; font-size:14px; line-height:1.7; color:var(--text); }
+
   /* Grammar (Part 5/6) */
   .p5-card{ max-width:640px; margin:0 auto; background:var(--surface); border:1px solid var(--border); border-radius:16px; box-shadow:var(--shadow); padding:28px; }
   .p5-cat{ margin-bottom:14px; }
@@ -368,6 +378,7 @@
     <button class="tab" data-mode="saved" role="tab" aria-selected="false">❤️ 收藏單字</button>
     <button class="tab" data-mode="spelling" role="tab" aria-selected="false">✍️ 拼字測驗</button>
     <button class="tab" data-mode="daily" role="tab" aria-selected="false">📅 每日一篇</button>
+    <button class="tab" data-mode="story" role="tab" aria-selected="false">📖 故事閱讀</button>
   </div>
 
   <div class="controls" id="vocabControls">
@@ -580,6 +591,16 @@ let dailyDocTab = {};
 let dailyAnswers = {};
 let dailyChecked = {};
 
+/* 故事閱讀：一批固定的一般興趣短篇故事（非商業情境），附「導讀」（背景簡介＋重點生詞）
+   跟「重點摘要」，用來培養每日閱讀習慣；跟主要 Part 7 閱讀池一樣是版本內的資料，
+   用陣列位置當 id，答題進度依內容版本區分（regenerate 後舊進度不會誤套用到新故事）。 */
+let storySets = [];
+let storyStage = "picker"; // "picker" | "story"
+let currentStoryId = null;
+let storyAnswers = {};
+let storyChecked = {};
+const STORY_LEVEL_LABELS = { beginner:"🟢 初級", intermediate:"🟡 中級", advanced:"🔴 進階" };
+
 /* Grammar (Part 5/6) */
 let p5Items = [];
 let p6Items = [];
@@ -756,6 +777,8 @@ async function initAllProgress(){
   p4Progress = loadVersionedProgress("toeic-p4-progress", versionOf("p4"));
   dailyAnswers = loadJSON("toeic-daily-answers");
   dailyChecked = loadJSON("toeic-daily-checked");
+  storyAnswers = loadVersionedProgress("toeic-story-answers", versionOf("story"));
+  storyChecked = loadVersionedProgress("toeic-story-checked", versionOf("story"));
   render();
 }
 
@@ -859,6 +882,12 @@ function saveDailyProgress(){
   saveJSON("toeic-daily-checked", dailyChecked);
   pushCloudDailyReading();
 }
+function pushCloudStory(){ pushCloud("story", { version: versionOf("story"), answers: storyAnswers, checked: storyChecked }); }
+function saveStoryProgress(){
+  saveVersionedProgress("toeic-story-answers", versionOf("story"), storyAnswers);
+  saveVersionedProgress("toeic-story-checked", versionOf("story"), storyChecked);
+  pushCloudStory();
+}
 
 function isWordSaved(word){ return !!savedWords[word.toLowerCase()]; }
 /* Auto-save (never un-save) a word the user just got wrong in the quiz, and note it was missed —
@@ -961,6 +990,14 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
     saveJSON("toeic-daily-answers", dailyAnswers);
     saveJSON("toeic-daily-checked", dailyChecked);
 
+    const storyVersionOk = cloud.story && (!("version" in cloud.story) || cloud.story.version === versionOf("story"));
+    if(storyVersionOk){
+      storyChecked = mergeProgress(cloud.story.checked, storyChecked);
+      storyAnswers = { ...(cloud.story.answers||{}), ...storyAnswers };
+    }
+    saveVersionedProgress("toeic-story-answers", versionOf("story"), storyAnswers);
+    saveVersionedProgress("toeic-story-checked", versionOf("story"), storyChecked);
+
     /* Card/quiz position aren't maps to union-merge — they're "where was I", a single spot.
        Whichever device touched it most recently (by timestamp) wins, so switching devices
        resumes wherever you actually left off last, not always word 1 on a fresh device. */
@@ -995,6 +1032,7 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
     pushCloudCardPos(loadJSON("toeic-card-pos"));
     pushCloudQuizPos(loadJSON("toeic-quiz-pos"));
     pushCloudDailyReading();
+    pushCloudStory();
     render();
   }catch(err){
     cloudSyncing = false;
@@ -1258,6 +1296,7 @@ document.querySelectorAll(".tab").forEach(btn=>{
     if(mode === "theme") themeStage = "picker";
     if(mode === "spelling") rebuildSpellingOrder();
     if(mode === "daily") dailyStage = "picker";
+    if(mode === "story") storyStage = "picker";
     updateControlBarVisibility();
     renderStage();
   });
@@ -2432,6 +2471,136 @@ function renderDailyReadingMode(container){
   });
 }
 
+/* ---------- Story reading: general-interest stories with a 導讀 (reading guide) ---------- */
+function renderStoryMode(container){
+  if(storySets.length === 0){
+    container.innerHTML = `<div class="empty-state">故事還在準備中，稍後再回來看看！</div>`;
+    return;
+  }
+
+  if(storyStage === "picker"){
+    const rows = storySets.map(s=>{
+      const st = storyChecked[s.id];
+      return `
+        <button class="hub-card" data-id="${s.id}">
+          <div class="hub-card-title">${s.title}<br><span style="font-weight:400;font-size:13px;color:var(--text-muted);">${s.title_zh || ''}</span></div>
+          <div class="hub-card-sub" style="display:flex; gap:6px; flex-wrap:wrap; align-items:center; margin-top:6px;">
+            <span class="chip pos">${STORY_LEVEL_LABELS[s.level] || s.level}</span>
+            <span class="chip cat">${s.genre}</span>
+            ${st==='correct' ? `<span class="chip pos" style="background:var(--success-soft);color:var(--success);">✅ 答對</span>` : ''}
+            ${st==='wrong' ? `<span class="chip pos" style="background:var(--danger-soft);color:var(--danger);">❌ 答錯</span>` : ''}
+          </div>
+        </button>`;
+    }).join("");
+    container.innerHTML = `<div class="hub-intro">每天讀一篇小故事，養成閱讀習慣</div><div class="hub-list">${rows}</div>`;
+    container.querySelectorAll(".hub-card[data-id]").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        currentStoryId = Number(btn.dataset.id);
+        storyStage = "story";
+        renderStage();
+      });
+    });
+    return;
+  }
+
+  const s = storySets.find(x=>x.id===currentStoryId) || storySets[0];
+  currentStoryId = s.id;
+  const answers = storyAnswers[s.id] || {};
+  const checked = !!storyChecked[s.id];
+
+  const vocabHtml = s.key_vocab.map(v=>`<div class="story-vocab-item"><span class="w">${v.word}</span><span class="m">${v.meaning_zh}</span></div>`).join("");
+  const paragraphsHtml = s.paragraphs.map(p=>`<p class="doc-para">${wrapWords(p)}</p>`).join("");
+
+  let correctCount = 0;
+  const questionsHtml = s.questions.map((q,qi)=>{
+    const chosen = answers[qi];
+    const showResult = checked && chosen !== undefined;
+    if(showResult && chosen === q.answer_index) correctCount++;
+    const optsHtml = q.options.map((opt,oi)=>{
+      let cls = "q-opt";
+      if(checked){
+        if(oi === q.answer_index) cls += " correct";
+        else if(oi === chosen) cls += " wrong";
+      }
+      return `<button class="${cls}" data-qi="${qi}" data-oi="${oi}" aria-pressed="${chosen===oi}" ${checked?'disabled':''}>${String.fromCharCode(65+oi)}. ${opt}</button>`;
+    }).join("");
+    const explainHtml = (checked && chosen !== undefined) ? `<div class="q-explain">${chosen===q.answer_index ? '✅ 答對了！' : '❌ 答錯了。'} 正確答案是 (${String.fromCharCode(65+q.answer_index)})。<br>${q.question_zh ? `題目：${q.question_zh}<br>` : ""}${q.explanation_zh}</div>` : "";
+    return `
+      <div class="q-card">
+        <div class="q-head">${qi+1}. ${q.question_en}</div>
+        ${optsHtml}
+        ${explainHtml}
+      </div>
+    `;
+  }).join("");
+
+  const answeredCount = Object.keys(answers).length;
+
+  container.innerHTML = `
+    <button class="icon-btn" id="storyBackBtn" style="margin-bottom:14px;">◀ 返回列表</button>
+    <div class="reading-tag" style="margin-bottom:14px;">
+      <span class="chip pos">${STORY_LEVEL_LABELS[s.level] || s.level}</span>
+      <span class="chip cat">${s.genre}</span>
+      ${storyChecked[s.id]==='correct' ? `<span class="chip pos" style="background:var(--success-soft);color:var(--success);">✅ 答對</span>` : ''}
+      ${storyChecked[s.id]==='wrong' ? `<span class="chip pos" style="background:var(--danger-soft);color:var(--danger);">❌ 答錯</span>` : ''}
+    </div>
+    <div class="doc-card">
+      <div class="doc-title">${s.title}${s.title_zh ? ` <span style="font-weight:400;color:var(--text-muted);font-size:15px;text-transform:none;letter-spacing:0;">${s.title_zh}</span>` : ''}</div>
+      <div class="story-guide">
+        <div class="story-guide-head">📖 導讀</div>
+        <p class="story-guide-intro">${s.intro_zh}</p>
+        <div class="story-vocab-list">${vocabHtml}</div>
+      </div>
+    </div>
+    <div class="doc-card" style="margin-top:14px;">
+      <div class="speak-row" style="justify-content:flex-start; gap:10px; margin-bottom:16px;">
+        <button class="speak-btn" id="storyPlayBtn" title="播放全文" ${canSpeak?'':'disabled'}>🔊</button>
+        <span style="font-size:13px;color:var(--text-muted);">播放全文朗讀</span>
+      </div>
+      ${paragraphsHtml}
+    </div>
+    <div class="doc-card story-summary" style="margin-top:14px;">
+      <div class="story-guide-head">📝 重點摘要</div>
+      <p>${s.summary_zh}</p>
+    </div>
+    <div class="questions-col" style="margin-top:14px;">${questionsHtml}</div>
+    <div class="reading-actions">
+      ${!checked ? `<button class="icon-btn" id="storyCheckBtn" ${answeredCount===0?'disabled':''}>提交答案（已作答 ${answeredCount}/${s.questions.length}）</button>` : `<button class="icon-btn" id="storyRetryBtn">🔄 重新作答</button>`}
+    </div>
+    ${checked ? `<div class="reading-score">本篇答對 ${correctCount} / ${s.questions.length} 題</div>` : ""}
+  `;
+
+  document.getElementById("storyBackBtn").addEventListener("click", ()=>{
+    speechSynthesis.cancel();
+    storyStage = "picker";
+    renderStage();
+  });
+  document.getElementById("storyPlayBtn")?.addEventListener("click", ()=> speakSequence(s.paragraphs));
+  if(!checked){
+    container.querySelectorAll(".q-opt").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        const qi = Number(btn.dataset.qi), oi = Number(btn.dataset.oi);
+        if(!storyAnswers[s.id]) storyAnswers[s.id] = {};
+        storyAnswers[s.id][qi] = oi;
+        saveStoryProgress();
+        renderStage();
+      });
+    });
+  }
+  document.getElementById("storyCheckBtn")?.addEventListener("click", ()=>{
+    const curAnswers = storyAnswers[s.id] || {};
+    storyChecked[s.id] = s.questions.every((q,qi)=>curAnswers[qi]===q.answer_index) ? "correct" : "wrong";
+    saveStoryProgress();
+    renderStage();
+  });
+  document.getElementById("storyRetryBtn")?.addEventListener("click", ()=>{
+    storyChecked[s.id] = false;
+    storyAnswers[s.id] = {};
+    saveStoryProgress();
+    renderStage();
+  });
+}
+
 /* ---------- Master render ---------- */
 function renderStage(){
   const container = document.getElementById("stage");
@@ -2445,6 +2614,7 @@ function renderStage(){
   else if(mode === "saved") renderSavedMode(container);
   else if(mode === "spelling") renderSpellingMode(container);
   else if(mode === "daily") renderDailyReadingMode(container);
+  else if(mode === "story") renderStoryMode(container);
   else renderQuizMode(container);
 }
 
@@ -2922,6 +3092,10 @@ async function loadDailyReading(){
   dailyReadingSets = await loadJSONData("daily_reading.json", []);
   if(mode === "daily") renderStage();
 }
+async function loadStoryReading(){
+  storySets = await loadJSONData("story_reading.json", []);
+  if(mode === "story") renderStage();
+}
 async function loadP1(){
   p1Items = await loadJSONData("part1.json", FALLBACK_P1);
   p1Order = p1Items.map(it=>it.id);
@@ -2955,6 +3129,7 @@ loadP3();
 loadP4();
 loadThemeVocab();
 loadDailyReading();
+loadStoryReading();
 </script>
 
 <script type="module">
@@ -3002,7 +3177,7 @@ loadDailyReading();
   };
   getRedirectResult(auth).catch(err => alert("登入失敗：" + err.code + " " + err.message));
 
-  const PROGRESS_KEYS = ["vocab","reading","p5","p6","p1","p2","p3","p4","savedWords","cardPos","quizPos","dailyReading"];
+  const PROGRESS_KEYS = ["vocab","reading","p5","p6","p1","p2","p3","p4","savedWords","cardPos","quizPos","dailyReading","story"];
 
   window.cloudSync = {
     async loadProgress(uid){
