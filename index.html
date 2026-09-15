@@ -267,8 +267,11 @@
   .story-guide-intro{ margin:0 0 14px; font-size:14px; line-height:1.7; color:var(--text); }
   .story-vocab-list{ display:grid; grid-template-columns:repeat(auto-fill,minmax(160px,1fr)); gap:8px; }
   .story-vocab-item{ background:var(--surface-2); border-radius:8px; padding:8px 10px; font-size:13px; }
-  .story-vocab-item .w{ display:block; font-weight:700; font-family:"IBM Plex Mono",monospace; }
-  .story-vocab-item .m{ color:var(--text-muted); }
+  .story-vocab-item .w-row{ display:flex; align-items:center; gap:6px; }
+  .story-vocab-item .w{ font-weight:700; font-family:"IBM Plex Mono",monospace; }
+  .story-vocab-item .ipa{ font-size:11.5px; }
+  .story-vocab-item .speak-btn{ width:22px; height:22px; font-size:10px; flex:none; margin-left:auto; }
+  .story-vocab-item .m{ color:var(--text-muted); display:block; margin-top:2px; }
   .story-summary p{ margin:0; font-size:14px; line-height:1.7; color:var(--text); }
 
   /* Grammar (Part 5/6) */
@@ -2508,7 +2511,15 @@ function renderStoryMode(container){
   const answers = storyAnswers[s.id] || {};
   const checked = !!storyChecked[s.id];
 
-  const vocabHtml = s.key_vocab.map(v=>`<div class="story-vocab-item"><span class="w">${v.word}</span><span class="m">${v.meaning_zh}</span></div>`).join("");
+  const vocabHtml = s.key_vocab.map((v,vi)=>`
+    <div class="story-vocab-item">
+      <div class="w-row">
+        <span class="w">${v.word}</span>
+        ${v.ipa ? `<span class="ipa mono">${v.ipa}</span>` : ''}
+        <button class="speak-btn" data-vocab-idx="${vi}" title="播放發音" ${canSpeak?'':'disabled'}>🔊</button>
+      </div>
+      <span class="m">${v.meaning_zh}</span>
+    </div>`).join("");
   const paragraphsHtml = s.paragraphs.map(p=>`<p class="doc-para">${wrapWords(p)}</p>`).join("");
 
   let correctCount = 0;
@@ -2576,6 +2587,9 @@ function renderStoryMode(container){
     renderStage();
   });
   document.getElementById("storyPlayBtn")?.addEventListener("click", ()=> speakSequence(s.paragraphs));
+  container.querySelectorAll("[data-vocab-idx]").forEach(btn=>{
+    btn.addEventListener("click", ()=> speak(s.key_vocab[Number(btn.dataset.vocabIdx)].word));
+  });
   if(!checked){
     container.querySelectorAll(".q-opt").forEach(btn=>{
       btn.addEventListener("click", ()=>{

@@ -8,35 +8,43 @@
     "key_vocab": [
       {
         "word": "cafeteria",
-        "meaning_zh": "學校餐廳"
+        "meaning_zh": "學校餐廳",
+        "ipa": "/ˌkæfəˈtɪriə/"
       },
       {
         "word": "tray",
-        "meaning_zh": "餐盤"
+        "meaning_zh": "餐盤",
+        "ipa": "/treɪ/"
       },
       {
         "word": "disappear",
-        "meaning_zh": "消失"
+        "meaning_zh": "消失",
+        "ipa": "/ˌdɪsəˈpɪr/"
       },
       {
         "word": "curly",
-        "meaning_zh": "捲曲的(頭髮)"
+        "meaning_zh": "捲曲的(頭髮)",
+        "ipa": "/ˈkɜrli/"
       },
       {
         "word": "introduce",
-        "meaning_zh": "介紹"
+        "meaning_zh": "介紹",
+        "ipa": "/ˌɪntrəˈdus/"
       },
       {
         "word": "relax",
-        "meaning_zh": "放鬆"
+        "meaning_zh": "放鬆",
+        "ipa": "/rɪˈlæks/"
       },
       {
         "word": "hesitate",
-        "meaning_zh": "猶豫"
+        "meaning_zh": "猶豫",
+        "ipa": "/ˈhezɪteɪt/"
       },
       {
         "word": "notice",
-        "meaning_zh": "注意到"
+        "meaning_zh": "注意到",
+        "ipa": "/ˈnoʊtɪs/"
       }
     ],
     "paragraphs": [
@@ -111,35 +119,43 @@
     "key_vocab": [
       {
         "word": "complain",
-        "meaning_zh": "抱怨"
+        "meaning_zh": "抱怨",
+        "ipa": "/kəmˈpleɪn/"
       },
       {
         "word": "reply all",
-        "meaning_zh": "回覆全部收件人"
+        "meaning_zh": "回覆全部收件人",
+        "ipa": "/rɪˈplaɪ ɔl/"
       },
       {
         "word": "buzzed",
-        "meaning_zh": "(手機)嗡嗡震動"
+        "meaning_zh": "(手機)嗡嗡震動",
+        "ipa": "/bʌzd/"
       },
       {
         "word": "stomach dropped",
-        "meaning_zh": "心一沉、嚇一跳的感覺"
+        "meaning_zh": "心一沉、嚇一跳的感覺",
+        "ipa": "/ˈstʌmək drɑpt/"
       },
       {
         "word": "apologize",
-        "meaning_zh": "道歉"
+        "meaning_zh": "道歉",
+        "ipa": "/əˈpɑləˌdʒaɪz/"
       },
       {
         "word": "honestly",
-        "meaning_zh": "老實說"
+        "meaning_zh": "老實說",
+        "ipa": "/ˈɑnɪstli/"
       },
       {
         "word": "double-check",
-        "meaning_zh": "再三確認"
+        "meaning_zh": "再三確認",
+        "ipa": "/ˈdʌbəl tʃɛk/"
       },
       {
         "word": "accident",
-        "meaning_zh": "意外"
+        "meaning_zh": "意外",
+        "ipa": "/ˈæksɪdənt/"
       }
     ],
     "paragraphs": [
@@ -212,35 +228,43 @@
     "key_vocab": [
       {
         "word": "shaking",
-        "meaning_zh": "顫抖"
+        "meaning_zh": "顫抖",
+        "ipa": "/ˈʃeɪkɪŋ/"
       },
       {
         "word": "recipe",
-        "meaning_zh": "食譜"
+        "meaning_zh": "食譜",
+        "ipa": "/ˈrɛsəpi/"
       },
       {
         "word": "pinch of salt",
-        "meaning_zh": "一小撮鹽"
+        "meaning_zh": "一小撮鹽",
+        "ipa": "/pɪntʃ əv sɔlt/"
       },
       {
         "word": "dough",
-        "meaning_zh": "麵團"
+        "meaning_zh": "麵團",
+        "ipa": "/doʊ/"
       },
       {
         "word": "mention",
-        "meaning_zh": "提到"
+        "meaning_zh": "提到",
+        "ipa": "/ˈmɛnʃən/"
       },
       {
         "word": "tightly",
-        "meaning_zh": "緊緊地"
+        "meaning_zh": "緊緊地",
+        "ipa": "/ˈtaɪtli/"
       },
       {
         "word": "autumn",
-        "meaning_zh": "秋天"
+        "meaning_zh": "秋天",
+        "ipa": "/ˈɔtəm/"
       },
       {
         "word": "beside",
-        "meaning_zh": "在旁邊"
+        "meaning_zh": "在旁邊",
+        "ipa": "/bɪˈsaɪd/"
       }
     ],
     "paragraphs": [
@@ -314,35 +338,43 @@
     "key_vocab": [
       {
         "word": "elderly",
-        "meaning_zh": "年長的"
+        "meaning_zh": "年長的",
+        "ipa": "/ˈɛldərli/"
       },
       {
         "word": "shuffled",
-        "meaning_zh": "拖著腳步走"
+        "meaning_zh": "拖著腳步走",
+        "ipa": "/ˈʃʌfəld/"
       },
       {
         "word": "precious",
-        "meaning_zh": "珍貴的"
+        "meaning_zh": "珍貴的",
+        "ipa": "/ˈprɛʃəs/"
       },
       {
         "word": "confront",
-        "meaning_zh": "當面對質"
+        "meaning_zh": "當面對質",
+        "ipa": "/kənˈfrʌnt/"
       },
       {
         "word": "embarrassed",
-        "meaning_zh": "尷尬的"
+        "meaning_zh": "尷尬的",
+        "ipa": "/ɪmˈbærəst/"
       },
       {
         "word": "afford",
-        "meaning_zh": "負擔得起"
+        "meaning_zh": "負擔得起",
+        "ipa": "/əˈfɔrd/"
       },
       {
         "word": "guilt",
-        "meaning_zh": "愧疚感"
+        "meaning_zh": "愧疚感",
+        "ipa": "/gɪlt/"
       },
       {
         "word": "unlikely",
-        "meaning_zh": "意想不到的"
+        "meaning_zh": "意想不到的",
+        "ipa": "/ʌnˈlaɪkli/"
       }
     ],
     "paragraphs": [
@@ -416,39 +448,48 @@
     "key_vocab": [
       {
         "word": "connecting flight",
-        "meaning_zh": "轉機班機"
+        "meaning_zh": "轉機班機",
+        "ipa": "/kəˈnɛktɪŋ flaɪt/"
       },
       {
         "word": "sleek",
-        "meaning_zh": "流線型的、時髦的"
+        "meaning_zh": "流線型的、時髦的",
+        "ipa": "/slik/"
       },
       {
         "word": "efficient",
-        "meaning_zh": "有效率的"
+        "meaning_zh": "有效率的",
+        "ipa": "/ɪˈfɪʃənt/"
       },
       {
         "word": "panic",
-        "meaning_zh": "驚慌"
+        "meaning_zh": "驚慌",
+        "ipa": "/ˈpænɪk/"
       },
       {
         "word": "limited",
-        "meaning_zh": "有限的"
+        "meaning_zh": "有限的",
+        "ipa": "/ˈlɪmɪtɪd/"
       },
       {
         "word": "gesture",
-        "meaning_zh": "手勢"
+        "meaning_zh": "手勢",
+        "ipa": "/ˈdʒɛstʃər/"
       },
       {
         "word": "relieved",
-        "meaning_zh": "鬆一口氣的"
+        "meaning_zh": "鬆一口氣的",
+        "ipa": "/rɪˈlivd/"
       },
       {
         "word": "bamboo grove",
-        "meaning_zh": "竹林"
+        "meaning_zh": "竹林",
+        "ipa": "/bæmˈbu groʊv/"
       },
       {
         "word": "stranger",
-        "meaning_zh": "陌生人"
+        "meaning_zh": "陌生人",
+        "ipa": "/ˈstreɪndʒər/"
       }
     ],
     "paragraphs": [
@@ -522,35 +563,43 @@
     "key_vocab": [
       {
         "word": "lightweight headset",
-        "meaning_zh": "輕便頭戴裝置"
+        "meaning_zh": "輕便頭戴裝置",
+        "ipa": "/ˈlaɪtweɪt ˈhɛdsɛt/"
       },
       {
         "word": "relive",
-        "meaning_zh": "重新體驗"
+        "meaning_zh": "重新體驗",
+        "ipa": "/riˈlɪv/"
       },
       {
         "word": "session",
-        "meaning_zh": "(使用或療程的)一次"
+        "meaning_zh": "(使用或療程的)一次",
+        "ipa": "/ˈsɛʃən/"
       },
       {
         "word": "volunteer",
-        "meaning_zh": "當志工"
+        "meaning_zh": "當志工",
+        "ipa": "/ˌvɑlənˈtɪr/"
       },
       {
         "word": "shovel",
-        "meaning_zh": "鏟子"
+        "meaning_zh": "鏟子",
+        "ipa": "/ˈʃʌvəl/"
       },
       {
         "word": "replace",
-        "meaning_zh": "取代"
+        "meaning_zh": "取代",
+        "ipa": "/rɪˈpleɪs/"
       },
       {
         "word": "niece",
-        "meaning_zh": "姪女、外甥女"
+        "meaning_zh": "姪女、外甥女",
+        "ipa": "/nis/"
       },
       {
         "word": "wires",
-        "meaning_zh": "電線"
+        "meaning_zh": "電線",
+        "ipa": "/ˈwaɪərz/"
       }
     ],
     "paragraphs": [
@@ -624,43 +673,53 @@
     "key_vocab": [
       {
         "word": "peculiar",
-        "meaning_zh": "奇特的"
+        "meaning_zh": "奇特的",
+        "ipa": "/pɪˈkjuljər/"
       },
       {
         "word": "accustomed",
-        "meaning_zh": "習慣於…的"
+        "meaning_zh": "習慣於…的",
+        "ipa": "/əˈkʌstəmd/"
       },
       {
         "word": "widower",
-        "meaning_zh": "鰥夫"
+        "meaning_zh": "鰥夫",
+        "ipa": "/ˈwɪdoʊər/"
       },
       {
         "word": "attentiveness",
-        "meaning_zh": "專注、留心"
+        "meaning_zh": "專注、留心",
+        "ipa": "/əˈtɛntɪvnəs/"
       },
       {
         "word": "unsettled",
-        "meaning_zh": "使人不安的"
+        "meaning_zh": "使人不安的",
+        "ipa": "/ʌnˈsɛtəld/"
       },
       {
         "word": "shoo away",
-        "meaning_zh": "把…趕走"
+        "meaning_zh": "把…趕走",
+        "ipa": "/ʃu əˈweɪ/"
       },
       {
         "word": "perpetually",
-        "meaning_zh": "持續不斷地"
+        "meaning_zh": "持續不斷地",
+        "ipa": "/pərˈpɛtʃuəli/"
       },
       {
         "word": "commemorate",
-        "meaning_zh": "紀念"
+        "meaning_zh": "紀念",
+        "ipa": "/kəˈmɛməreɪt/"
       },
       {
         "word": "whimper",
-        "meaning_zh": "嗚咽、低聲哀鳴"
+        "meaning_zh": "嗚咽、低聲哀鳴",
+        "ipa": "/ˈwɪmpər/"
       },
       {
         "word": "plaque",
-        "meaning_zh": "紀念牌匾"
+        "meaning_zh": "紀念牌匾",
+        "ipa": "/plæk/"
       }
     ],
     "paragraphs": [
@@ -734,43 +793,53 @@
     "key_vocab": [
       {
         "word": "submerge",
-        "meaning_zh": "浸入水中"
+        "meaning_zh": "浸入水中",
+        "ipa": "/səbˈmɜrdʒ/"
       },
       {
         "word": "voluntarily",
-        "meaning_zh": "自願地"
+        "meaning_zh": "自願地",
+        "ipa": "/ˌvɑlənˈtɛrəli/"
       },
       {
         "word": "deeply rooted",
-        "meaning_zh": "根深蒂固的"
+        "meaning_zh": "根深蒂固的",
+        "ipa": "/ˈdipli ˈrutɪd/"
       },
       {
         "word": "dread",
-        "meaning_zh": "恐懼、畏懼"
+        "meaning_zh": "恐懼、畏懼",
+        "ipa": "/drɛd/"
       },
       {
         "word": "agonizingly",
-        "meaning_zh": "令人痛苦地"
+        "meaning_zh": "令人痛苦地",
+        "ipa": "/ˈægəˌnaɪzɪŋli/"
       },
       {
         "word": "nonlinear",
-        "meaning_zh": "非線性的、起伏不定的"
+        "meaning_zh": "非線性的、起伏不定的",
+        "ipa": "/nɑnˈlɪniər/"
       },
       {
         "word": "anticlimactic",
-        "meaning_zh": "虎頭蛇尾的、不如預期戲劇化的"
+        "meaning_zh": "虎頭蛇尾的、不如預期戲劇化的",
+        "ipa": "/ˌæntiklaɪˈmæktɪk/"
       },
       {
         "word": "brace (oneself)",
-        "meaning_zh": "讓自己做好心理準備"
+        "meaning_zh": "讓自己做好心理準備",
+        "ipa": "/breɪs/"
       },
       {
         "word": "instinctively",
-        "meaning_zh": "本能地"
+        "meaning_zh": "本能地",
+        "ipa": "/ɪnˈstɪŋktɪvli/"
       },
       {
         "word": "exaggeration",
-        "meaning_zh": "誇大"
+        "meaning_zh": "誇大",
+        "ipa": "/ɪgˌzædʒəˈreɪʃən/"
       }
     ],
     "paragraphs": [
