@@ -217,6 +217,13 @@
   .spelling-input:focus{ outline:none; border-color:var(--accent); }
   .spelling-input:disabled{ opacity:.85; }
   .spelling-hint{ font-size:22px; letter-spacing:.12em; color:var(--text-muted); text-align:center; }
+  .spelling-diff{ margin-top:10px; text-align:center; }
+  .spelling-diff-ch{
+    display:inline-block; min-width:1em; font-family:"IBM Plex Mono",monospace; font-size:22px;
+    font-weight:700; padding:0 2px; border-bottom:3px solid transparent;
+  }
+  .spelling-diff-ch.ok{ color:var(--success); border-color:var(--success); }
+  .spelling-diff-ch.bad{ color:var(--danger); border-color:var(--danger); }
   .spelling-feedback{ margin-top:16px; font-size:16px; font-weight:600; }
   .spelling-feedback.correct{ color:var(--success); }
   .spelling-feedback.wrong{ color:var(--danger); }
@@ -604,6 +611,8 @@ let spellingChecked = false;
 let spellingCorrect = null;
 let spellingStats = { correct: 0, wrong: 0 };
 let spellingHintCount = 0; // how many letters of the current word the hint has revealed so far
+let spellingMissed = false; // whether the current question has already been counted as a miss (only counts once, however many retries follow)
+let spellingLastAttempt = null; // most recent wrong attempt, shown as a letter-by-letter diff so the user can correct it
 function rebuildSpellingOrder(){
   spellingOrder = shuffleArr(Object.keys(savedWords));
   spellingIdx = 0;
@@ -611,6 +620,24 @@ function rebuildSpellingOrder(){
   spellingCorrect = null;
   spellingStats = { correct: 0, wrong: 0 };
   spellingHintCount = 0;
+  spellingMissed = false;
+  spellingLastAttempt = null;
+}
+/* Position-by-position comparison of what the user typed against the correct spelling —
+   green for letters that are right, red for letters that are wrong (or missing/extra),
+   so the user can see exactly what to fix instead of just being told "wrong". */
+function spellingDiffHtml(attempt, correct){
+  const a = attempt.trim();
+  const c = correct.trim();
+  const len = Math.max(a.length, c.length);
+  let html = "";
+  for(let i=0;i<len;i++){
+    const ac = a[i] || "";
+    const cc = c[i] || "";
+    const ok = ac !== "" && ac.toLowerCase() === cc.toLowerCase();
+    html += `<span class="spelling-diff-ch ${ok?'ok':'bad'}">${ac || "_"}</span>`;
+  }
+  return html;
 }
 /* Renders the word as spaced-out letters/blanks, e.g. "a d _ _ _ _ _ _ _ _" — non-letter
    characters (spaces, hyphens) always show through so multi-word entries stay readable. */
@@ -2313,7 +2340,11 @@ function renderSpellingMode(container){
 
   const key = spellingOrder[spellingIdx];
   const w = savedWords[key];
-  if(!w){ spellingIdx++; renderStage(); return; } // was un-saved mid-round
+  if(!w){ // was un-saved mid-round
+    spellingIdx++; spellingChecked = false; spellingCorrect = null;
+    spellingHintCount = 0; spellingMissed = false; spellingLastAttempt = null;
+    renderStage(); return;
+  }
 
   container.innerHTML = `
     <div class="quiz-score mono">第 ${spellingIdx+1} / ${spellingOrder.length} 題　✅ ${spellingStats.correct}　❌ ${spellingStats.wrong}</div>
@@ -2333,14 +2364,16 @@ function renderSpellingMode(container){
         <button class="icon-btn" id="spellingHintBtn" ${spellingHintCount >= spellingMaxHint(w.word) ? 'disabled' : ''}>💡 提示（看下一個字母）</button>
       </div>` : ''}
       <input type="text" id="spellingInput" class="spelling-input" placeholder="請輸入英文拼法" autocomplete="off" autocapitalize="off" spellcheck="false" ${spellingChecked?'disabled':''}>
+      <div id="spellingDiffRow" class="spelling-diff">${(!spellingChecked && spellingLastAttempt) ? spellingDiffHtml(spellingLastAttempt, w.word) : ''}</div>
       <div class="mark-row">
         ${spellingChecked
           ? `<button class="mark-btn known" id="spellingNextBtn">下一題 ▶</button>`
           : `<button class="mark-btn known" id="spellingCheckBtn">送出答案</button>`}
       </div>
+      ${!spellingChecked && spellingLastAttempt ? `<p class="spelling-feedback wrong">❌ 還不對，紅色的字母是拼錯的地方，改一下再送出一次！</p>` : ''}
       ${spellingChecked ? `
-        <div class="spelling-feedback ${spellingCorrect ? 'correct' : 'wrong'}">
-          ${spellingCorrect ? '✅ 正確！' : `❌ 正確拼法：${w.word}`}
+        <div class="spelling-feedback correct">
+          ✅ 正確！
           ${w.ipa ? `<span class="ipa mono" style="margin-left:8px;">${w.ipa}</span>` : ''}
         </div>
         ${w.example_en ? `<div class="example" style="margin-top:14px;text-align:left;"><div><div class="txt">${w.example_en}</div>${w.example_zh ? `<div class="txt-zh">${w.example_zh}</div>` : ''}</div></div>` : ''}
@@ -2366,19 +2399,29 @@ function renderSpellingMode(container){
 
   function checkAnswer(){
     if(spellingChecked) return;
-    const answer = input.value.trim().toLowerCase();
-    spellingCorrect = answer.length > 0 && answer === w.word.trim().toLowerCase();
-    spellingChecked = true;
-    if(spellingCorrect){
+    const answer = input.value.trim();
+    const isCorrect = answer.length > 0 && answer.toLowerCase() === w.word.trim().toLowerCase();
+    if(isCorrect){
+      spellingCorrect = true;
+      spellingChecked = true;
+      spellingLastAttempt = null;
       spellingStats.correct++;
+      renderStage();
     }else{
-      spellingStats.wrong++;
-      w.wrongCount = (w.wrongCount || 0) + 1;
-      w.lastWrongAt = Date.now();
-      saveJSON("toeic-saved-words", savedWords);
-      pushCloudSaved();
+      /* Wrong: only counts once per question no matter how many times they retry, but they
+         keep the same question — see the letter-by-letter diff and fix it themselves rather
+         than being handed the answer outright. */
+      if(!spellingMissed){
+        spellingMissed = true;
+        spellingStats.wrong++;
+        w.wrongCount = (w.wrongCount || 0) + 1;
+        w.lastWrongAt = Date.now();
+        saveJSON("toeic-saved-words", savedWords);
+        pushCloudSaved();
+      }
+      spellingLastAttempt = answer;
+      renderStage();
     }
-    renderStage();
   }
   document.getElementById("spellingCheckBtn")?.addEventListener("click", checkAnswer);
   const nextBtn = document.getElementById("spellingNextBtn");
@@ -2387,6 +2430,8 @@ function renderSpellingMode(container){
     spellingChecked = false;
     spellingCorrect = null;
     spellingHintCount = 0;
+    spellingMissed = false;
+    spellingLastAttempt = null;
     renderStage();
   });
   if(input){
