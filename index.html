@@ -2365,11 +2365,7 @@ function renderSpellingMode(container){
       </div>` : ''}
       <input type="text" id="spellingInput" class="spelling-input" placeholder="請輸入英文拼法" autocomplete="off" autocapitalize="off" spellcheck="false" ${spellingChecked?'disabled':''}>
       <div id="spellingDiffRow" class="spelling-diff">${(!spellingChecked && spellingLastAttempt) ? spellingDiffHtml(spellingLastAttempt, w.word) : ''}</div>
-      <div class="mark-row">
-        ${spellingChecked
-          ? `<button class="mark-btn known" id="spellingNextBtn">下一題 ▶</button>`
-          : `<button class="mark-btn known" id="spellingCheckBtn">送出答案</button>`}
-      </div>
+      ${!spellingChecked ? `<div class="mark-row"><button class="mark-btn known" id="spellingCheckBtn">送出答案</button></div>` : ''}
       ${!spellingChecked && spellingLastAttempt ? `<p class="spelling-feedback wrong">❌ 還不對，紅色的字母是拼錯的地方，改一下再送出一次！</p>` : ''}
       ${spellingChecked ? `
         <div class="spelling-feedback correct">
@@ -2397,6 +2393,16 @@ function renderSpellingMode(container){
     if(spellingHintCount >= spellingMaxHint(w.word)) hintBtn.disabled = true;
   });
 
+  function advanceToNextQuestion(){
+    spellingIdx++;
+    spellingChecked = false;
+    spellingCorrect = null;
+    spellingHintCount = 0;
+    spellingMissed = false;
+    spellingLastAttempt = null;
+    renderStage();
+  }
+
   function checkAnswer(){
     if(spellingChecked) return;
     const answer = input.value.trim();
@@ -2407,6 +2413,12 @@ function renderSpellingMode(container){
       spellingLastAttempt = null;
       spellingStats.correct++;
       renderStage();
+      const idxAtAnswer = spellingIdx;
+      setTimeout(()=>{
+        // bail out if the user already navigated away or moved on some other way meanwhile
+        if(mode !== "spelling" || spellingIdx !== idxAtAnswer || !spellingChecked) return;
+        advanceToNextQuestion();
+      }, 900);
     }else{
       /* Wrong: only counts once per question no matter how many times they retry, but they
          keep the same question — see the letter-by-letter diff and fix it themselves rather
@@ -2424,22 +2436,11 @@ function renderSpellingMode(container){
     }
   }
   document.getElementById("spellingCheckBtn")?.addEventListener("click", checkAnswer);
-  const nextBtn = document.getElementById("spellingNextBtn");
-  if(nextBtn) nextBtn.addEventListener("click", ()=>{
-    spellingIdx++;
-    spellingChecked = false;
-    spellingCorrect = null;
-    spellingHintCount = 0;
-    spellingMissed = false;
-    spellingLastAttempt = null;
-    renderStage();
-  });
   if(input){
     input.addEventListener("keydown", (e)=>{
       if(e.key !== "Enter") return;
       e.preventDefault();
-      if(!spellingChecked) checkAnswer();
-      else document.getElementById("spellingNextBtn")?.click();
+      checkAnswer();
     });
   }
 }
