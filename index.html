@@ -273,6 +273,11 @@
   .story-vocab-item .speak-btn{ width:22px; height:22px; font-size:10px; flex:none; margin-left:auto; }
   .story-vocab-item .m{ color:var(--text-muted); display:block; margin-top:2px; }
   .story-summary p{ margin:0; font-size:14px; line-height:1.7; color:var(--text); }
+  .story-para-block{ margin-bottom:18px; }
+  .story-para-block:last-child{ margin-bottom:0; }
+  .story-para-row{ display:flex; gap:10px; align-items:flex-start; }
+  .story-para-row .doc-para{ flex:1; margin:0; }
+  .doc-para-zh{ margin:6px 0 0 40px; font-size:13.5px; line-height:1.65; color:var(--text-muted); }
 
   /* Grammar (Part 5/6) */
   .p5-card{ max-width:640px; margin:0 auto; background:var(--surface); border:1px solid var(--border); border-radius:16px; box-shadow:var(--shadow); padding:28px; }
@@ -2520,7 +2525,15 @@ function renderStoryMode(container){
       </div>
       <span class="m">${v.meaning_zh}</span>
     </div>`).join("");
-  const paragraphsHtml = s.paragraphs.map(p=>`<p class="doc-para">${wrapWords(p)}</p>`).join("");
+  const paragraphsHtml = s.paragraphs.map((p,pi)=>`
+    <div class="story-para-block">
+      <div class="story-para-row">
+        <button class="speak-btn story-para-speak" data-para-idx="${pi}" style="width:30px;height:30px;font-size:13px;flex:none;" title="播放這一段" ${canSpeak?'':'disabled'}>🔊</button>
+        <p class="doc-para">${wrapWords(p)}</p>
+      </div>
+      ${s.paragraphs_zh && s.paragraphs_zh[pi] ? `<p class="doc-para-zh">${s.paragraphs_zh[pi]}</p>` : ''}
+    </div>
+  `).join("");
 
   let correctCount = 0;
   const questionsHtml = s.questions.map((q,qi)=>{
@@ -2564,10 +2577,6 @@ function renderStoryMode(container){
       </div>
     </div>
     <div class="doc-card" style="margin-top:14px;">
-      <div class="speak-row" style="justify-content:flex-start; gap:10px; margin-bottom:16px;">
-        <button class="speak-btn" id="storyPlayBtn" title="播放全文" ${canSpeak?'':'disabled'}>🔊</button>
-        <span style="font-size:13px;color:var(--text-muted);">播放全文朗讀</span>
-      </div>
       ${paragraphsHtml}
     </div>
     <div class="doc-card story-summary" style="margin-top:14px;">
@@ -2586,7 +2595,9 @@ function renderStoryMode(container){
     storyStage = "picker";
     renderStage();
   });
-  document.getElementById("storyPlayBtn")?.addEventListener("click", ()=> speakSequence(s.paragraphs));
+  container.querySelectorAll(".story-para-speak").forEach(btn=>{
+    btn.addEventListener("click", ()=> speak(s.paragraphs[Number(btn.dataset.paraIdx)]));
+  });
   container.querySelectorAll("[data-vocab-idx]").forEach(btn=>{
     btn.addEventListener("click", ()=> speak(s.key_vocab[Number(btn.dataset.vocabIdx)].word));
   });
