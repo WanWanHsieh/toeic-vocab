@@ -2376,7 +2376,14 @@ function renderSpellingMode(container){
           ✅ 正確！ <span class="mono">${w.word}</span>
           ${w.ipa ? `<span class="ipa mono" style="margin-left:8px;">${w.ipa}</span>` : ''}
         </div>
-        ${w.example_en ? `<div class="example" style="margin-top:14px;text-align:left;"><div><div class="txt">${w.example_en}</div>${w.example_zh ? `<div class="txt-zh">${w.example_zh}</div>` : ''}</div></div>` : ''}
+        ${w.example_en ? `
+        <div class="example" style="margin-top:14px;">
+          <button class="speak-btn" id="spellingSpeakExampleBtn" style="width:32px;height:32px;font-size:14px;flex:none;" title="播放例句" ${canSpeak?'':'disabled'}>🔊</button>
+          <div>
+            <div class="txt">${w.example_en}</div>
+            ${w.example_zh ? `<div class="txt-zh">${w.example_zh}</div>` : ''}
+          </div>
+        </div>` : ''}
       ` : ''}
     </div>
   `;
@@ -2386,6 +2393,8 @@ function renderSpellingMode(container){
 
   const playBtn = document.getElementById("spellingPlayBtn");
   if(playBtn) playBtn.addEventListener("click", ()=> speak(w.word));
+  const exampleSpeakBtn = document.getElementById("spellingSpeakExampleBtn");
+  if(exampleSpeakBtn) exampleSpeakBtn.addEventListener("click", ()=> speak(w.example_en));
   const hintBtn = document.getElementById("spellingHintBtn");
   if(hintBtn) hintBtn.addEventListener("click", ()=>{
     /* Update the hint text and button state directly instead of a full renderStage() —
