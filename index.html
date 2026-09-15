@@ -344,6 +344,7 @@
     <button class="tab" data-mode="list" role="tab" aria-selected="false">單字列表</button>
     <button class="tab" data-mode="quiz" role="tab" aria-selected="false">小測驗</button>
     <button class="tab" data-mode="toeic_hub" role="tab" aria-selected="false">TOEIC 測驗</button>
+    <button class="tab" data-mode="theme" role="tab" aria-selected="false">主題單字</button>
     <button class="tab" data-mode="saved" role="tab" aria-selected="false">❤️ 收藏單字</button>
   </div>
 
@@ -429,6 +430,28 @@ function categoryLabel(cat){ return CATEGORY_LABELS[cat] || cat; }
 
 const IMPORTANCE_LABELS = { core:"🔴 必考", common:"🟡 常考", extended:"🟢 延伸" };
 function importanceLabel(imp){ return IMPORTANCE_LABELS[imp] || ""; }
+
+/* 主題單字：跟 CATEGORY_LABELS（商業情境分類）不同，這是日常生活的具體主題，
+   照「多益常考程度」由高到低排序，決定了主題選單的顯示順序。 */
+const THEME_LABELS = {
+  office_supplies: "🖇️ 辦公用品與設備",
+  numbers_time: "🕐 數字、時間與日期",
+  transportation: "🚗 交通工具與通勤方式",
+  health_body: "🩺 身體部位與健康症狀",
+  kitchen_dining: "🍽️ 廚房與餐飲用品",
+  weather: "☁️ 天氣與氣候",
+  clothing: "👕 服裝與外觀",
+  furniture_appliances: "🛋️ 居家家具與家電",
+  shopping: "🛍️ 購物與消費場景",
+  electronics: "💻 3C 科技產品",
+  colors_shapes: "🎨 顏色與形狀",
+  emotions: "😊 情緒與感受",
+  sports_leisure: "⚽ 運動與休閒活動",
+  directions: "🧭 方向與位置",
+  family_relationships: "👨‍👩‍👧 家庭與人際關係"
+};
+const THEME_ORDER = Object.keys(THEME_LABELS);
+function themeLabel(t){ return THEME_LABELS[t] || t; }
 
 /* Tiny fallback set — only used if data/toeic_vocab.json fails to load. */
 const FALLBACK_VOCAB = [
@@ -549,6 +572,15 @@ let p4Progress = {};
 /* Words saved (❤️'d) from the word-lookup popup, for later review — keyed by lowercase word.
    Not tied to any content version/generation: a saved word is a personal reference note, not a graded answer. */
 let savedWords = {};
+
+/* 主題單字：獨立於主單字庫之外的小型情境單字表，只用來瀏覽、發音、收藏，
+   不計入已熟記/待複習進度，也不會出現在小測驗裡。 */
+let themeWords = [];
+let themeStage = "picker"; // "picker" | "browse"
+let currentTheme = null;
+let themeCursor = 0;
+let themeFlipped = false;
+function themeWordsFor(theme){ return themeWords.filter(w=>w.theme===theme); }
 
 /* TOEIC hub: generations list -> parts list -> existing practice UI */
 let toeicHubStage = "generations"; // "generations" | "parts"
@@ -1115,6 +1147,7 @@ document.querySelectorAll(".tab").forEach(btn=>{
        cosmetic (list scroll depth, which card face is showing). */
     flipped = false; listPage = 1;
     if(mode === "toeic_hub") toeicHubStage = "generations";
+    if(mode === "theme") themeStage = "picker";
     updateControlBarVisibility();
     renderStage();
   });
@@ -2154,6 +2187,7 @@ function renderStage(){
   else if(mode === "grammar") renderGrammarMode(container);
   else if(mode === "listening") renderListeningMode(container);
   else if(mode === "toeic_hub") renderToeicHub(container);
+  else if(mode === "theme") renderThemeMode(container);
   else if(mode === "saved") renderSavedMode(container);
   else renderQuizMode(container);
 }
@@ -2195,6 +2229,140 @@ function renderSavedMode(container){
       pushCloudSaved();
       renderStage();
     });
+  });
+}
+
+/* ---------- Theme vocab: theme picker -> per-theme flashcard browser ---------- */
+function renderThemeMode(container){
+  if(themeWords.length === 0){
+    container.innerHTML = `<div class="empty-state">正在載入主題單字…</div>`;
+    return;
+  }
+  if(themeStage === "picker"){
+    const rows = THEME_ORDER.filter(t=>THEME_LABELS[t]).map(t=>{
+      const list = themeWordsFor(t);
+      if(list.length === 0) return "";
+      return `
+        <button class="hub-card" data-theme="${t}">
+          <div class="hub-card-title">${themeLabel(t)}</div>
+          <div class="hub-card-sub">${list.length} 個單字</div>
+        </button>`;
+    }).join("");
+    container.innerHTML = `
+      <div class="hub-intro">依多益常考程度排序，選一個主題開始瀏覽單字</div>
+      <div class="hub-list">${rows}</div>`;
+    container.querySelectorAll(".hub-card[data-theme]").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        currentTheme = btn.dataset.theme;
+        themeStage = "browse";
+        themeCursor = 0;
+        themeFlipped = false;
+        renderStage();
+      });
+    });
+    return;
+  }
+
+  const list = themeWordsFor(currentTheme);
+  if(list.length === 0){
+    themeStage = "picker";
+    renderStage();
+    return;
+  }
+  if(themeCursor >= list.length) themeCursor = 0;
+  const w = list[themeCursor];
+
+  container.innerHTML = `
+    <button class="icon-btn theme-back-btn" style="margin-bottom:14px;">◀ 返回主題列表</button>
+    <div class="card-wrap">
+      <div class="flashcard ${themeFlipped?'flipped':''}" id="flashcard">
+        <div class="face front">
+          <div class="face-top">
+            <div style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
+              <span class="chip cat">${themeLabel(w.theme)}</span>
+              ${w.importance ? `<span class="chip imp">${importanceLabel(w.importance)}</span>` : ''}
+            </div>
+            <div style="display:flex; gap:6px; align-items:center;">
+              <span class="chip pos">${w.pos}</span>
+              <button class="speak-btn theme-save-btn" style="width:28px;height:28px;font-size:13px;" title="加入收藏，之後複習">${isWordSaved(w.word) ? '❤️' : '🤍'}</button>
+            </div>
+          </div>
+          <div class="word-block">
+            <p class="word">${w.word}</p>
+            <p class="ipa mono">${w.ipa}</p>
+            <div class="speak-row">
+              <button class="speak-btn" id="themeSpeakWordBtn" title="播放發音" ${canSpeak?'':'disabled'}>🔊</button>
+            </div>
+          </div>
+          ${w.example_en ? `
+          <div class="example">
+            <button class="speak-btn" id="themeSpeakExampleFrontBtn" style="width:32px;height:32px;font-size:14px;flex:none;" title="播放例句" ${canSpeak?'':'disabled'}>🔊</button>
+            <div class="txt">${w.example_en}</div>
+          </div>` : ''}
+          <p class="hint">${canSpeak?'':'（此瀏覽器不支援語音播放）'} 點卡片查看中文意思</p>
+        </div>
+        <div class="face back">
+          <div class="face-top">
+            <div style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
+              <span class="chip cat">${themeLabel(w.theme)}</span>
+              ${w.importance ? `<span class="chip imp">${importanceLabel(w.importance)}</span>` : ''}
+            </div>
+            <div style="display:flex; gap:6px; align-items:center;">
+              <span class="chip pos">${w.pos}</span>
+              <button class="speak-btn theme-save-btn" style="width:28px;height:28px;font-size:13px;" title="加入收藏，之後複習">${isWordSaved(w.word) ? '❤️' : '🤍'}</button>
+            </div>
+          </div>
+          <div class="back-word">
+            <span>${w.word}</span>
+            <span class="ipa mono">${w.ipa}</span>
+            <button class="speak-btn" id="themeSpeakWordBackBtn" style="width:24px;height:24px;font-size:11px;" title="播放發音" ${canSpeak?'':'disabled'}>🔊</button>
+          </div>
+          <p class="meaning">${w.meaning_zh}</p>
+          ${w.note_zh ? `<div class="note-zh">💡 ${w.note_zh}</div>` : ''}
+          <div class="example">
+            <button class="speak-btn" id="themeSpeakExampleBtn" style="width:32px;height:32px;font-size:14px;flex:none;" title="播放例句" ${canSpeak?'':'disabled'}>🔊</button>
+            <div>
+              <div class="txt">${w.example_en}</div>
+              ${w.example_zh ? `<div class="txt-zh">${w.example_zh}</div>` : ''}
+            </div>
+          </div>
+          <p class="hint">再點一次回到正面</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-nav-row">
+      <button class="nav-btn" id="themePrevBtn">◀</button>
+      <span class="mono" style="color:var(--text-muted);font-size:13px;">${themeCursor+1} / ${list.length}</span>
+      <button class="nav-btn" id="themeNextBtn">▶</button>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" style="width:${((themeCursor+1)/list.length*100).toFixed(1)}%"></div></div>
+  `;
+
+  autosizeFlashcard();
+  container.querySelector(".theme-back-btn").addEventListener("click", ()=>{
+    speechSynthesis.cancel();
+    themeStage = "picker";
+    renderStage();
+  });
+  document.getElementById("flashcard").addEventListener("click", ()=>{ themeFlipped = !themeFlipped; renderStage(); });
+  const sb = document.getElementById("themeSpeakWordBtn");
+  if(sb) sb.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.word); });
+  const sbBack = document.getElementById("themeSpeakWordBackBtn");
+  if(sbBack) sbBack.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.word); });
+  const sebFront = document.getElementById("themeSpeakExampleFrontBtn");
+  if(sebFront) sebFront.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.example_en); });
+  const seb = document.getElementById("themeSpeakExampleBtn");
+  if(seb) seb.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.example_en); });
+  container.querySelectorAll(".theme-save-btn").forEach(btn=>{
+    btn.addEventListener("click", (e)=>{ e.stopPropagation(); toggleSavedWord(w); renderStage(); });
+  });
+  document.getElementById("themePrevBtn").addEventListener("click", (e)=>{
+    e.stopPropagation();
+    themeCursor = (themeCursor-1+list.length)%list.length; themeFlipped = false; renderStage();
+  });
+  document.getElementById("themeNextBtn").addEventListener("click", (e)=>{
+    e.stopPropagation();
+    themeCursor = (themeCursor+1)%list.length; themeFlipped = false; renderStage();
   });
 }
 
@@ -2350,6 +2518,10 @@ async function loadP6(){
   p6Order = p6Items.map(it=>it.id);
   if(mode === "grammar" && grammarPart === "p6") renderStage();
 }
+async function loadThemeVocab(){
+  themeWords = await loadJSONData("theme_vocab.json", []);
+  if(mode === "theme") renderStage();
+}
 async function loadP1(){
   p1Items = await loadJSONData("part1.json", FALLBACK_P1);
   p1Order = p1Items.map(it=>it.id);
@@ -2381,6 +2553,7 @@ loadP1();
 loadP2();
 loadP3();
 loadP4();
+loadThemeVocab();
 </script>
 
 <script type="module">
