@@ -367,6 +367,7 @@
     <button class="tab" data-mode="theme" role="tab" aria-selected="false">主題單字</button>
     <button class="tab" data-mode="saved" role="tab" aria-selected="false">❤️ 收藏單字</button>
     <button class="tab" data-mode="spelling" role="tab" aria-selected="false">✍️ 拼字測驗</button>
+    <button class="tab" data-mode="daily" role="tab" aria-selected="false">📅 每日一篇</button>
   </div>
 
   <div class="controls" id="vocabControls">
@@ -569,6 +570,16 @@ let readingDocTab = {};
 let readingAnswers = {};
 let readingChecked = {};
 
+/* 每日一篇：跟主要的 Part 7 閱讀文章池（readingSets）完全獨立的一個小池子，
+   每天由排程自動新增一篇，用日期字串（而非陣列位置）當作識別碼，跟目前使用中的
+   內容版本一起儲存在 data/<version>/daily_reading.json。 */
+let dailyReadingSets = [];
+let dailyStage = "picker"; // "picker" | "article"
+let currentDailyDate = null;
+let dailyDocTab = {};
+let dailyAnswers = {};
+let dailyChecked = {};
+
 /* Grammar (Part 5/6) */
 let p5Items = [];
 let p6Items = [];
@@ -743,6 +754,8 @@ async function initAllProgress(){
   p2Progress = loadVersionedProgress("toeic-p2-progress", versionOf("p2"));
   p3Progress = loadVersionedProgress("toeic-p3-progress", versionOf("p3"));
   p4Progress = loadVersionedProgress("toeic-p4-progress", versionOf("p4"));
+  dailyAnswers = loadJSON("toeic-daily-answers");
+  dailyChecked = loadJSON("toeic-daily-checked");
   render();
 }
 
@@ -840,6 +853,12 @@ function pushCloudPart(key, progressObj){ pushCloud(key, { version: versionOf(ke
 function pushCloudSaved(){ pushCloud("savedWords", savedWords); }
 function pushCloudCardPos(entry){ pushCloud("cardPos", entry); }
 function pushCloudQuizPos(entry){ pushCloud("quizPos", entry); }
+function pushCloudDailyReading(){ pushCloud("dailyReading", { answers: dailyAnswers, checked: dailyChecked }); }
+function saveDailyProgress(){
+  saveJSON("toeic-daily-answers", dailyAnswers);
+  saveJSON("toeic-daily-checked", dailyChecked);
+  pushCloudDailyReading();
+}
 
 function isWordSaved(word){ return !!savedWords[word.toLowerCase()]; }
 /* Auto-save (never un-save) a word the user just got wrong in the quiz, and note it was missed —
@@ -933,6 +952,15 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
     savedWords = mergeProgress(cloud.savedWords, savedWords);
     saveJSON("toeic-saved-words", savedWords);
 
+    /* Daily-reading progress isn't version-gated like p1-p7 — it's keyed by date string,
+       which is globally unique regardless of which content generation happens to be active. */
+    if(cloud.dailyReading){
+      dailyChecked = mergeProgress(cloud.dailyReading.checked, dailyChecked);
+      dailyAnswers = { ...(cloud.dailyReading.answers||{}), ...dailyAnswers };
+    }
+    saveJSON("toeic-daily-answers", dailyAnswers);
+    saveJSON("toeic-daily-checked", dailyChecked);
+
     /* Card/quiz position aren't maps to union-merge — they're "where was I", a single spot.
        Whichever device touched it most recently (by timestamp) wins, so switching devices
        resumes wherever you actually left off last, not always word 1 on a fresh device. */
@@ -966,6 +994,7 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
     pushCloudSaved();
     pushCloudCardPos(loadJSON("toeic-card-pos"));
     pushCloudQuizPos(loadJSON("toeic-quiz-pos"));
+    pushCloudDailyReading();
     render();
   }catch(err){
     cloudSyncing = false;
@@ -1228,6 +1257,7 @@ document.querySelectorAll(".tab").forEach(btn=>{
     if(mode === "toeic_hub") toeicHubStage = "generations";
     if(mode === "theme") themeStage = "picker";
     if(mode === "spelling") rebuildSpellingOrder();
+    if(mode === "daily") dailyStage = "picker";
     updateControlBarVisibility();
     renderStage();
   });
@@ -2258,6 +2288,150 @@ function renderReadingMode(container){
   });
 }
 
+/* ---------- Daily reading: one auto-generated Part 7 style article per day ---------- */
+function findDailySet(date){ return dailyReadingSets.find(s=>s.date===date); }
+function sortedDailyDates(){ return dailyReadingSets.map(s=>s.date).sort().reverse(); } // newest first
+function formatDailyDate(dateStr){
+  const today = new Date().toISOString().slice(0,10);
+  const d = new Date(dateStr+"T00:00:00");
+  const label = `${d.getMonth()+1}月${d.getDate()}日`;
+  return dateStr === today ? `${label}（今天）` : label;
+}
+
+function renderDailyReadingMode(container){
+  if(dailyReadingSets.length === 0){
+    container.innerHTML = `<div class="empty-state">還沒有每日文章。每天早上 6 點會自動產生一篇新的閱讀練習，明天回來看看吧！</div>`;
+    return;
+  }
+  const dates = sortedDailyDates();
+
+  if(dailyStage === "picker"){
+    const rows = dates.map(date=>{
+      const set = findDailySet(date);
+      const title = set.passages[0].title || docLabel(set.passages[0].kind);
+      const st = dailyChecked[date];
+      return `
+        <button class="hub-card" data-date="${date}">
+          <div class="hub-card-title">${formatDailyDate(date)}　${title}</div>
+          <div class="hub-card-sub" style="display:flex; gap:6px; flex-wrap:wrap; align-items:center;">
+            <span class="chip cat">${READING_TYPE_LABELS[set.type]}</span>
+            <span class="chip pos">${READING_CATEGORY_LABELS[set.category] || set.category}</span>
+            ${st==='correct' ? `<span class="chip pos" style="background:var(--success-soft);color:var(--success);">✅ 答對</span>` : ''}
+            ${st==='wrong' ? `<span class="chip pos" style="background:var(--danger-soft);color:var(--danger);">❌ 答錯</span>` : ''}
+          </div>
+        </button>`;
+    }).join("");
+    container.innerHTML = `<div class="hub-intro">每天一篇全新的 TOEIC Part 7 閱讀文章，練習不間斷</div><div class="hub-list">${rows}</div>`;
+    container.querySelectorAll(".hub-card[data-date]").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        currentDailyDate = btn.dataset.date;
+        dailyStage = "article";
+        renderStage();
+      });
+    });
+    return;
+  }
+
+  if(!currentDailyDate || !findDailySet(currentDailyDate)) currentDailyDate = dates[0];
+  const set = findDailySet(currentDailyDate);
+  const idx = dates.indexOf(currentDailyDate);
+  const activeDocIdx = dailyDocTab[set.date] ?? 0;
+  const answers = dailyAnswers[set.date] || {};
+  const checked = !!dailyChecked[set.date];
+
+  const docTabsHtml = set.passages.length > 1
+    ? `<div class="doc-tabs">${set.passages.map((d,i)=>`<button class="doc-tab" data-doc="${i}" aria-selected="${i===activeDocIdx}">${d.title || docLabel(d.kind)}</button>`).join("")}</div>`
+    : "";
+
+  let correctCount = 0;
+  const questionsHtml = set.questions.map((q,qi)=>{
+    const chosen = answers[qi];
+    const showResult = checked && chosen !== undefined;
+    if(showResult && chosen === q.answer_index) correctCount++;
+    const optsHtml = q.options.map((opt,oi)=>{
+      let cls = "q-opt";
+      if(checked){
+        if(oi === q.answer_index) cls += " correct";
+        else if(oi === chosen) cls += " wrong";
+      }
+      return `<button class="${cls}" data-qi="${qi}" data-oi="${oi}" aria-pressed="${chosen===oi}" ${checked?'disabled':''}>${String.fromCharCode(65+oi)}. ${opt}</button>`;
+    }).join("");
+    const explainHtml = (checked && chosen !== undefined) ? `<div class="q-explain">${chosen===q.answer_index ? '✅ 答對了！' : '❌ 答錯了。'} 正確答案是 (${String.fromCharCode(65+q.answer_index)})。<br>${q.question_zh ? `題目：${q.question_zh}<br>` : ""}${q.explanation_zh}</div>` : "";
+    return `
+      <div class="q-card">
+        <div class="q-head">${qi+1}. ${q.question_en}</div>
+        ${optsHtml}
+        ${explainHtml}
+      </div>
+    `;
+  }).join("");
+
+  const answeredCount = Object.keys(answers).length;
+
+  container.innerHTML = `
+    <button class="icon-btn" id="dailyBackBtn" style="margin-bottom:14px;">◀ 返回列表</button>
+    <div class="reading-head">
+      <div class="reading-tag">
+        <span class="chip cat">${formatDailyDate(set.date)}</span>
+        <span class="chip pos">${READING_TYPE_LABELS[set.type]}</span>
+        <span class="chip pos">${READING_CATEGORY_LABELS[set.category] || set.category}</span>
+        ${dailyChecked[set.date]==='correct' ? `<span class="chip pos" style="background:var(--success-soft);color:var(--success);">✅ 答對</span>` : ''}
+        ${dailyChecked[set.date]==='wrong' ? `<span class="chip pos" style="background:var(--danger-soft);color:var(--danger);">❌ 答錯</span>` : ''}
+      </div>
+      <div class="reading-nav">
+        <button class="nav-btn" id="dailyPrevBtn" title="前一天" style="width:36px;height:36px;" ${idx>=dates.length-1?'disabled':''}>◀</button>
+        <span>${idx+1} / ${dates.length}</span>
+        <button class="nav-btn" id="dailyNextBtn" title="後一天" style="width:36px;height:36px;" ${idx<=0?'disabled':''}>▶</button>
+      </div>
+    </div>
+    <div class="reading-layout">
+      <div>
+        ${docTabsHtml}
+        <div class="doc-card">${renderDoc(set.passages[activeDocIdx])}</div>
+      </div>
+      <div class="questions-col">${questionsHtml}</div>
+    </div>
+    <div class="reading-actions">
+      ${!checked ? `<button class="icon-btn" id="dailyCheckBtn" ${answeredCount===0?'disabled':''}>提交答案（已作答 ${answeredCount}/${set.questions.length}）</button>` : `<button class="icon-btn" id="dailyRetryBtn">🔄 重新作答</button>`}
+    </div>
+    ${checked ? `<div class="reading-score">本篇答對 ${correctCount} / ${set.questions.length} 題</div>` : ""}
+  `;
+
+  document.getElementById("dailyBackBtn").addEventListener("click", ()=>{ dailyStage = "picker"; renderStage(); });
+  container.querySelectorAll(".doc-tab").forEach(btn=>{
+    btn.addEventListener("click", ()=>{ dailyDocTab[set.date] = Number(btn.dataset.doc); renderStage(); });
+  });
+  if(!checked){
+    container.querySelectorAll(".q-opt").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        const qi = Number(btn.dataset.qi), oi = Number(btn.dataset.oi);
+        if(!dailyAnswers[set.date]) dailyAnswers[set.date] = {};
+        dailyAnswers[set.date][qi] = oi;
+        saveDailyProgress();
+        renderStage();
+      });
+    });
+  }
+  document.getElementById("dailyCheckBtn")?.addEventListener("click", ()=>{
+    const curAnswers = dailyAnswers[set.date] || {};
+    dailyChecked[set.date] = set.questions.every((q,qi)=>curAnswers[qi]===q.answer_index) ? "correct" : "wrong";
+    saveDailyProgress();
+    renderStage();
+  });
+  document.getElementById("dailyRetryBtn")?.addEventListener("click", ()=>{
+    dailyChecked[set.date] = false;
+    dailyAnswers[set.date] = {};
+    saveDailyProgress();
+    renderStage();
+  });
+  document.getElementById("dailyPrevBtn")?.addEventListener("click", ()=>{
+    if(idx < dates.length-1){ currentDailyDate = dates[idx+1]; renderStage(); }
+  });
+  document.getElementById("dailyNextBtn")?.addEventListener("click", ()=>{
+    if(idx > 0){ currentDailyDate = dates[idx-1]; renderStage(); }
+  });
+}
+
 /* ---------- Master render ---------- */
 function renderStage(){
   const container = document.getElementById("stage");
@@ -2270,6 +2444,7 @@ function renderStage(){
   else if(mode === "theme") renderThemeMode(container);
   else if(mode === "saved") renderSavedMode(container);
   else if(mode === "spelling") renderSpellingMode(container);
+  else if(mode === "daily") renderDailyReadingMode(container);
   else renderQuizMode(container);
 }
 
@@ -2743,6 +2918,10 @@ async function loadThemeVocab(){
   themeWords = await loadJSONData("theme_vocab.json", []);
   if(mode === "theme") renderStage();
 }
+async function loadDailyReading(){
+  dailyReadingSets = await loadJSONData("daily_reading.json", []);
+  if(mode === "daily") renderStage();
+}
 async function loadP1(){
   p1Items = await loadJSONData("part1.json", FALLBACK_P1);
   p1Order = p1Items.map(it=>it.id);
@@ -2775,6 +2954,7 @@ loadP2();
 loadP3();
 loadP4();
 loadThemeVocab();
+loadDailyReading();
 </script>
 
 <script type="module">
@@ -2822,7 +3002,7 @@ loadThemeVocab();
   };
   getRedirectResult(auth).catch(err => alert("登入失敗：" + err.code + " " + err.message));
 
-  const PROGRESS_KEYS = ["vocab","reading","p5","p6","p1","p2","p3","p4","savedWords","cardPos","quizPos"];
+  const PROGRESS_KEYS = ["vocab","reading","p5","p6","p1","p2","p3","p4","savedWords","cardPos","quizPos","dailyReading"];
 
   window.cloudSync = {
     async loadProgress(uid){
