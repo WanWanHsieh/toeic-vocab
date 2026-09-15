@@ -216,6 +216,7 @@
   }
   .spelling-input:focus{ outline:none; border-color:var(--accent); }
   .spelling-input:disabled{ opacity:.85; }
+  .spelling-hint{ font-size:22px; letter-spacing:.12em; color:var(--text-muted); text-align:center; }
   .spelling-feedback{ margin-top:16px; font-size:16px; font-weight:600; }
   .spelling-feedback.correct{ color:var(--success); }
   .spelling-feedback.wrong{ color:var(--danger); }
@@ -602,12 +603,30 @@ let spellingIdx = 0;
 let spellingChecked = false;
 let spellingCorrect = null;
 let spellingStats = { correct: 0, wrong: 0 };
+let spellingHintCount = 0; // how many letters of the current word the hint has revealed so far
 function rebuildSpellingOrder(){
   spellingOrder = shuffleArr(Object.keys(savedWords));
   spellingIdx = 0;
   spellingChecked = false;
   spellingCorrect = null;
   spellingStats = { correct: 0, wrong: 0 };
+  spellingHintCount = 0;
+}
+/* Renders the word as spaced-out letters/blanks, e.g. "a d _ _ _ _ _ _ _ _" — non-letter
+   characters (spaces, hyphens) always show through so multi-word entries stay readable. */
+function spellingHintDisplay(word, n){
+  let shown = 0;
+  return word.split("").map(ch=>{
+    if(/[a-zA-Z]/.test(ch)){
+      shown++;
+      return shown <= n ? ch : "_";
+    }
+    return ch;
+  }).join(" ");
+}
+function spellingMaxHint(word){
+  const letters = word.replace(/[^a-zA-Z]/g, "").length;
+  return Math.max(0, letters - 1); // never reveal the very last letter via hint
 }
 
 /* TOEIC hub: generations list -> parts list -> existing practice UI */
@@ -2308,6 +2327,11 @@ function renderSpellingMode(container){
       <div class="speak-row" style="margin:18px 0;">
         <button class="speak-btn" id="spellingPlayBtn" title="播放發音" ${canSpeak?'':'disabled'}>🔊</button>
       </div>
+      ${!spellingChecked ? `
+      <div class="spelling-hint mono">${spellingHintDisplay(w.word, spellingHintCount)}</div>
+      <div style="margin:10px 0 18px;">
+        <button class="icon-btn" id="spellingHintBtn" ${spellingHintCount >= spellingMaxHint(w.word) ? 'disabled' : ''}>💡 提示（看下一個字母）</button>
+      </div>` : ''}
       <input type="text" id="spellingInput" class="spelling-input" placeholder="請輸入英文拼法" autocomplete="off" autocapitalize="off" spellcheck="false" ${spellingChecked?'disabled':''}>
       <div class="mark-row">
         ${spellingChecked
@@ -2329,6 +2353,16 @@ function renderSpellingMode(container){
 
   const playBtn = document.getElementById("spellingPlayBtn");
   if(playBtn) playBtn.addEventListener("click", ()=> speak(w.word));
+  const hintBtn = document.getElementById("spellingHintBtn");
+  if(hintBtn) hintBtn.addEventListener("click", ()=>{
+    /* Update the hint text and button state directly instead of a full renderStage() —
+       a full re-render would recreate the input element and wipe whatever the user had
+       already typed. */
+    if(spellingHintCount < spellingMaxHint(w.word)) spellingHintCount++;
+    const hintEl = container.querySelector(".spelling-hint");
+    if(hintEl) hintEl.textContent = spellingHintDisplay(w.word, spellingHintCount);
+    if(spellingHintCount >= spellingMaxHint(w.word)) hintBtn.disabled = true;
+  });
 
   function checkAnswer(){
     if(spellingChecked) return;
@@ -2352,6 +2386,7 @@ function renderSpellingMode(container){
     spellingIdx++;
     spellingChecked = false;
     spellingCorrect = null;
+    spellingHintCount = 0;
     renderStage();
   });
   if(input){
