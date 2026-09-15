@@ -2369,7 +2369,7 @@ function renderSpellingMode(container){
       ${!spellingChecked && spellingLastAttempt ? `<p class="spelling-feedback wrong">❌ 還不對，紅色的字母是拼錯的地方，改一下再送出一次！</p>` : ''}
       ${spellingChecked ? `
         <div class="spelling-feedback correct">
-          ✅ 正確！
+          ✅ 正確！ <span class="mono">${w.word}</span>
           ${w.ipa ? `<span class="ipa mono" style="margin-left:8px;">${w.ipa}</span>` : ''}
         </div>
         ${w.example_en ? `<div class="example" style="margin-top:14px;text-align:left;"><div><div class="txt">${w.example_en}</div>${w.example_zh ? `<div class="txt-zh">${w.example_zh}</div>` : ''}</div></div>` : ''}
