@@ -90,6 +90,7 @@
   .subtabs{ display:flex; gap:4px; background:var(--surface-2); border:1px solid var(--border); border-radius:10px; padding:3px; }
   .subtab{ border:none; background:transparent; color:var(--text-muted); padding:7px 14px; border-radius:8px; font-size:13px; font-weight:600; cursor:pointer; white-space:nowrap; }
   .subtab[aria-selected="true"]{ background:var(--accent); color:var(--accent-contrast); }
+  .subtab:not([aria-selected="true"]):hover{ color:var(--text); }
   .tab:not([aria-selected="true"]):hover{ color:var(--text); }
 
   .controls{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:22px; }
@@ -377,14 +378,24 @@
     </div>
   </div>
 
-  <div class="tabs" role="tablist">
+  <div class="subtabs" id="categoryTabs" role="tablist" style="margin-bottom:10px;">
+    <button class="subtab" data-cat="vocab" role="tab" aria-selected="true">單字學習</button>
+    <button class="subtab" data-cat="toeic" role="tab" aria-selected="false">TOEIC 模擬</button>
+    <button class="subtab" data-cat="reading" role="tab" aria-selected="false">閱讀練習</button>
+  </div>
+
+  <div class="tabs" role="tablist" data-cat-group="vocab">
     <button class="tab" data-mode="card" role="tab" aria-selected="true">字卡模式</button>
     <button class="tab" data-mode="list" role="tab" aria-selected="false">單字列表</button>
+    <button class="tab" data-mode="theme" role="tab" aria-selected="false">主題單字</button>
+    <button class="tab" data-mode="spelling" role="tab" aria-selected="false">✍️ 拼字測驗</button>
+    <button class="tab" data-mode="saved" role="tab" aria-selected="false">❤️ 收藏單字</button>
+  </div>
+  <div class="tabs" role="tablist" data-cat-group="toeic" style="display:none;">
     <button class="tab" data-mode="quiz" role="tab" aria-selected="false">小測驗</button>
     <button class="tab" data-mode="toeic_hub" role="tab" aria-selected="false">TOEIC 測驗</button>
-    <button class="tab" data-mode="theme" role="tab" aria-selected="false">主題單字</button>
-    <button class="tab" data-mode="saved" role="tab" aria-selected="false">❤️ 收藏單字</button>
-    <button class="tab" data-mode="spelling" role="tab" aria-selected="false">✍️ 拼字測驗</button>
+  </div>
+  <div class="tabs" role="tablist" data-cat-group="reading" style="display:none;">
     <button class="tab" data-mode="daily" role="tab" aria-selected="false">📅 每日一篇</button>
     <button class="tab" data-mode="story" role="tab" aria-selected="false">📖 故事閱讀</button>
   </div>
@@ -1307,6 +1318,34 @@ document.querySelectorAll(".tab").forEach(btn=>{
     if(mode === "story") storyStage = "picker";
     updateControlBarVisibility();
     renderStage();
+  });
+});
+
+/* Top-level nav is grouped into 3 categories (單字學習/TOEIC 模擬/閱讀練習), each showing its
+   own row of .tab buttons — keeps the tab bar from growing into an ever-longer flat wrapped list
+   as more features get added. MODE_TO_CATEGORY covers every mode value, including the "internal"
+   ones (listening/grammar/reading) that TOEIC 測驗's own generations->parts hub drills into, so the
+   right category stays highlighted even when the active mode isn't one of the top-level tabs. */
+const MODE_TO_CATEGORY = {
+  card:"vocab", list:"vocab", theme:"vocab", spelling:"vocab", saved:"vocab",
+  quiz:"toeic", toeic_hub:"toeic", listening:"toeic", grammar:"toeic", reading:"toeic",
+  daily:"reading", story:"reading"
+};
+function showCategory(cat){
+  document.querySelectorAll(".tabs[data-cat-group]").forEach(el=>{
+    el.style.display = el.dataset.catGroup === cat ? "flex" : "none";
+  });
+  document.querySelectorAll("#categoryTabs .subtab").forEach(b=>{
+    b.setAttribute("aria-selected", b.dataset.cat === cat ? "true" : "false");
+  });
+}
+document.querySelectorAll("#categoryTabs .subtab").forEach(btn=>{
+  btn.addEventListener("click", ()=>{
+    if(btn.getAttribute("aria-selected") === "true") return; // already on this category
+    const cat = btn.dataset.cat;
+    showCategory(cat);
+    // Land on that category's first tab, reusing its existing click handler/reset logic.
+    document.querySelector(`.tabs[data-cat-group="${cat}"] .tab`)?.click();
   });
 });
 
