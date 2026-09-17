@@ -84,5 +84,83 @@
         "explanation_zh": "\"cannot be guaranteed\" 指「無法保證」，與 \"assured\" 意思最接近，因此答案是 (A)。"
       }
     ]
+  },
+  {
+    "date": "2026-09-17",
+    "type": "single",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "advertisement",
+        "title": "Cedar Ridge Outdoor Gear – Autumn Clearance Sale",
+        "meta": [
+          {
+            "label": "Sale Dates:",
+            "value": "October 12–19"
+          },
+          {
+            "label": "Locations:",
+            "value": "Portland, Salem, and Eugene stores"
+          }
+        ],
+        "paragraphs": [
+          "Cedar Ridge Outdoor Gear is holding its annual Autumn Clearance Sale from October 12 to October 19 at all three of our stores. Save up to 40% on select hiking boots, tents, and sleeping bags while supplies last.",
+          "Cedar Ridge Rewards members get early access starting October 10, two days before the sale opens to the public, plus an additional 10% off with the code AUTUMN10 at checkout. Joining Cedar Ridge Rewards is free and can be done in-store or on our website.",
+          "New arrivals from the Summit Trail brand will debut during the sale, but quantities are limited and no rain checks will be issued once an item sells out. Any footwear purchase over $150 also comes with a free pair of wool socks and a lifetime warranty against stitching defects.",
+          "Store hours will be extended to 7 p.m. throughout the sale week to give shoppers more time to browse. For help with sizing or product questions, call (555) 209-4471 or use the chat feature on our website."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the advertisement?",
+        "question_zh": "這則廣告的目的為何?",
+        "options": [
+          "To announce a seasonal clearance sale",
+          "To recruit new store employees",
+          "To recall defective merchandise",
+          "To announce a store closing"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "廣告開頭即說明 Cedar Ridge Outdoor Gear 將於10月12日至19日舉辦年度秋季清倉特賣，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the advertisement, when can Cedar Ridge Rewards members begin shopping the sale?",
+        "question_zh": "根據廣告內容，Cedar Ridge Rewards 會員何時可以開始搶先購買特賣商品?",
+        "options": [
+          "October 7",
+          "October 10",
+          "October 12",
+          "October 19"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第二段提到會員可從10月10日起提前選購，比特賣正式開始的日期還早兩天，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What is offered with footwear purchases over $150?",
+        "question_zh": "根據廣告內容，購買超過150美元的鞋類商品可獲得什麼贈品或保障?",
+        "options": [
+          "A store credit for future purchases",
+          "Free shipping on the order",
+          "A free pair of wool socks and a lifetime stitching warranty",
+          "An additional 10% discount"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第三段提到超過150美元的鞋類購買可獲得一雙免費羊毛襪，並享有針對縫線瑕疵的終身保固，因此答案是 (C)。"
+      },
+      {
+        "question_en": "The word \"extended\" in paragraph 4 is closest in meaning to",
+        "question_zh": "第四段中的 \"extended\" 一詞最接近下列何者的意思?",
+        "options": [
+          "shortened",
+          "lengthened",
+          "canceled",
+          "reduced"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "\"extended to 7 p.m.\" 指營業時間「延長」至晚上七點，與 \"lengthened\" 意思最接近，因此答案是 (B)。"
+      }
+    ]
   }
 ]
