@@ -388,6 +388,7 @@
     <button class="tab" data-mode="card" role="tab" aria-selected="true">字卡模式</button>
     <button class="tab" data-mode="list" role="tab" aria-selected="false">單字列表</button>
     <button class="tab" data-mode="theme" role="tab" aria-selected="false">主題單字</button>
+    <button class="tab" data-mode="phrase" role="tab" aria-selected="false">📎 常考片語</button>
     <button class="tab" data-mode="spelling" role="tab" aria-selected="false">✍️ 拼字測驗</button>
     <button class="tab" data-mode="saved" role="tab" aria-selected="false">❤️ 收藏單字</button>
   </div>
@@ -504,6 +505,21 @@ const THEME_LABELS = {
 };
 const THEME_ORDER = Object.keys(THEME_LABELS);
 function themeLabel(t){ return THEME_LABELS[t] || t; }
+
+/* 常考片語：多字固定搭配/片語（跟主單字庫是單一詞彙不同），依情境分類，
+   排列順序大致依商業書信/會議/財務等常見程度排序。 */
+const PHRASE_CATEGORY_LABELS = {
+  office_correspondence: "✉️ 辦公室書信與溝通",
+  meetings_decisions: "🗣️ 會議與決策",
+  finance_numbers: "📊 財務與數據",
+  hr_workplace: "🧑‍💼 人資與職場",
+  contracts_legal: "📜 契約與法律",
+  scheduling_time: "🗓️ 時間與排程",
+  logical_connectors: "🔗 邏輯轉折與連接語",
+  customer_marketing: "📣 客服與行銷"
+};
+const PHRASE_CATEGORY_ORDER = Object.keys(PHRASE_CATEGORY_LABELS);
+function phraseCategoryLabel(c){ return PHRASE_CATEGORY_LABELS[c] || c; }
 
 /* Tiny fallback set — only used if data/toeic_vocab.json fails to load. */
 const FALLBACK_VOCAB = [
@@ -653,6 +669,15 @@ let currentTheme = null;
 let themeCursor = 0;
 let themeFlipped = false;
 function themeWordsFor(theme){ return themeWords.filter(w=>w.theme===theme); }
+
+/* 常考片語：跟主題單字同樣是「分類選單 -> 單字卡瀏覽」的兩段式介面，只是資料換成
+   phrase_bank.json，用 category 對應 PHRASE_CATEGORY_LABELS 分組。 */
+let phraseBank = [];
+let phraseStage = "picker"; // "picker" | "browse"
+let currentPhraseCategory = null;
+let phraseCursor = 0;
+let phraseFlipped = false;
+function phrasesForCategory(cat){ return phraseBank.filter(p=>p.category===cat); }
 
 /* 拼字測驗：從收藏單字裡隨機（不重複地輪流）抽題，看中文意思／聽發音，考輸入英文拼法。
    只在這個分頁裡即時計分，不寫進 progress，但拼錯會跟小測驗答錯一樣記在收藏單字的 wrongCount 上。 */
@@ -1313,6 +1338,7 @@ document.querySelectorAll(".tab").forEach(btn=>{
     flipped = false; listPage = 1;
     if(mode === "toeic_hub") toeicHubStage = "generations";
     if(mode === "theme") themeStage = "picker";
+    if(mode === "phrase") phraseStage = "picker";
     if(mode === "spelling") rebuildSpellingOrder();
     if(mode === "daily") dailyStage = "picker";
     if(mode === "story") storyStage = "picker";
@@ -1327,7 +1353,7 @@ document.querySelectorAll(".tab").forEach(btn=>{
    ones (listening/grammar/reading) that TOEIC 測驗's own generations->parts hub drills into, so the
    right category stays highlighted even when the active mode isn't one of the top-level tabs. */
 const MODE_TO_CATEGORY = {
-  card:"vocab", list:"vocab", theme:"vocab", spelling:"vocab", saved:"vocab",
+  card:"vocab", list:"vocab", theme:"vocab", phrase:"vocab", spelling:"vocab", saved:"vocab",
   quiz:"toeic", toeic_hub:"toeic", listening:"toeic", grammar:"toeic", reading:"toeic",
   daily:"reading", story:"reading"
 };
@@ -2675,6 +2701,7 @@ function renderStage(){
   else if(mode === "listening") renderListeningMode(container);
   else if(mode === "toeic_hub") renderToeicHub(container);
   else if(mode === "theme") renderThemeMode(container);
+  else if(mode === "phrase") renderPhraseMode(container);
   else if(mode === "saved") renderSavedMode(container);
   else if(mode === "spelling") renderSpellingMode(container);
   else if(mode === "daily") renderDailyReadingMode(container);
@@ -2996,6 +3023,140 @@ function renderThemeMode(container){
   });
 }
 
+/* ---------- Phrase bank: category picker -> phrase flashcard browser ---------- */
+function renderPhraseMode(container){
+  if(phraseBank.length === 0){
+    container.innerHTML = `<div class="empty-state">正在載入常考片語…</div>`;
+    return;
+  }
+  if(phraseStage === "picker"){
+    const rows = PHRASE_CATEGORY_ORDER.filter(c=>PHRASE_CATEGORY_LABELS[c]).map(c=>{
+      const list = phrasesForCategory(c);
+      if(list.length === 0) return "";
+      return `
+        <button class="hub-card" data-phrase-cat="${c}">
+          <div class="hub-card-title">${phraseCategoryLabel(c)}</div>
+          <div class="hub-card-sub">${list.length} 個片語</div>
+        </button>`;
+    }).join("");
+    container.innerHTML = `
+      <div class="hub-intro">依常見情境分類，選一個開始瀏覽常考片語</div>
+      <div class="hub-list">${rows}</div>`;
+    container.querySelectorAll(".hub-card[data-phrase-cat]").forEach(btn=>{
+      btn.addEventListener("click", ()=>{
+        currentPhraseCategory = btn.dataset.phraseCat;
+        phraseStage = "browse";
+        phraseCursor = 0;
+        phraseFlipped = false;
+        renderStage();
+      });
+    });
+    return;
+  }
+
+  const list = phrasesForCategory(currentPhraseCategory);
+  if(list.length === 0){
+    phraseStage = "picker";
+    renderStage();
+    return;
+  }
+  if(phraseCursor >= list.length) phraseCursor = 0;
+  const w = list[phraseCursor];
+
+  container.innerHTML = `
+    <button class="icon-btn phrase-back-btn" style="margin-bottom:14px;">◀ 返回分類列表</button>
+    <div class="card-wrap">
+      <div class="flashcard ${phraseFlipped?'flipped':''}" id="flashcard">
+        <div class="face front">
+          <div class="face-top">
+            <div style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
+              <span class="chip cat">${phraseCategoryLabel(w.category)}</span>
+              ${w.importance ? `<span class="chip imp">${importanceLabel(w.importance)}</span>` : ''}
+            </div>
+            <div style="display:flex; gap:6px; align-items:center;">
+              <span class="chip pos">${w.pos}</span>
+              <button class="speak-btn phrase-save-btn" style="width:28px;height:28px;font-size:13px;" title="加入收藏，之後複習">${isWordSaved(w.word) ? '❤️' : '🤍'}</button>
+            </div>
+          </div>
+          <div class="word-block">
+            <p class="word" style="font-size:clamp(22px,4vw,32px);">${w.word}</p>
+            <p class="ipa mono">${w.ipa}</p>
+            <div class="speak-row">
+              <button class="speak-btn" id="phraseSpeakWordBtn" title="播放發音" ${canSpeak?'':'disabled'}>🔊</button>
+            </div>
+          </div>
+          ${w.example_en ? `
+          <div class="example">
+            <button class="speak-btn" id="phraseSpeakExampleFrontBtn" style="width:32px;height:32px;font-size:14px;flex:none;" title="播放例句" ${canSpeak?'':'disabled'}>🔊</button>
+            <div class="txt">${w.example_en}</div>
+          </div>` : ''}
+          <p class="hint">${canSpeak?'':'（此瀏覽器不支援語音播放）'} 點卡片查看中文意思</p>
+        </div>
+        <div class="face back">
+          <div class="face-top">
+            <div style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
+              <span class="chip cat">${phraseCategoryLabel(w.category)}</span>
+              ${w.importance ? `<span class="chip imp">${importanceLabel(w.importance)}</span>` : ''}
+            </div>
+            <div style="display:flex; gap:6px; align-items:center;">
+              <span class="chip pos">${w.pos}</span>
+              <button class="speak-btn phrase-save-btn" style="width:28px;height:28px;font-size:13px;" title="加入收藏，之後複習">${isWordSaved(w.word) ? '❤️' : '🤍'}</button>
+            </div>
+          </div>
+          <div class="back-word">
+            <span>${w.word}</span>
+            <span class="ipa mono">${w.ipa}</span>
+            <button class="speak-btn" id="phraseSpeakWordBackBtn" style="width:24px;height:24px;font-size:11px;" title="播放發音" ${canSpeak?'':'disabled'}>🔊</button>
+          </div>
+          <p class="meaning" style="font-size:20px;">${w.meaning_zh}</p>
+          ${w.note_zh ? `<div class="note-zh">💡 ${w.note_zh}</div>` : ''}
+          <div class="example">
+            <button class="speak-btn" id="phraseSpeakExampleBtn" style="width:32px;height:32px;font-size:14px;flex:none;" title="播放例句" ${canSpeak?'':'disabled'}>🔊</button>
+            <div>
+              <div class="txt">${w.example_en}</div>
+              ${w.example_zh ? `<div class="txt-zh">${w.example_zh}</div>` : ''}
+            </div>
+          </div>
+          <p class="hint">再點一次回到正面</p>
+        </div>
+      </div>
+    </div>
+    <div class="card-nav-row">
+      <button class="nav-btn" id="phrasePrevBtn">◀</button>
+      <span class="mono" style="color:var(--text-muted);font-size:13px;">${phraseCursor+1} / ${list.length}</span>
+      <button class="nav-btn" id="phraseNextBtn">▶</button>
+    </div>
+    <div class="progress-bar"><div class="progress-fill" style="width:${((phraseCursor+1)/list.length*100).toFixed(1)}%"></div></div>
+  `;
+
+  autosizeFlashcard();
+  container.querySelector(".phrase-back-btn").addEventListener("click", ()=>{
+    speechSynthesis.cancel();
+    phraseStage = "picker";
+    renderStage();
+  });
+  document.getElementById("flashcard").addEventListener("click", ()=>{ phraseFlipped = !phraseFlipped; renderStage(); });
+  const sb = document.getElementById("phraseSpeakWordBtn");
+  if(sb) sb.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.word); });
+  const sbBack = document.getElementById("phraseSpeakWordBackBtn");
+  if(sbBack) sbBack.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.word); });
+  const sebFront = document.getElementById("phraseSpeakExampleFrontBtn");
+  if(sebFront) sebFront.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.example_en); });
+  const seb = document.getElementById("phraseSpeakExampleBtn");
+  if(seb) seb.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.example_en); });
+  container.querySelectorAll(".phrase-save-btn").forEach(btn=>{
+    btn.addEventListener("click", (e)=>{ e.stopPropagation(); toggleSavedWord(w); renderStage(); });
+  });
+  document.getElementById("phrasePrevBtn").addEventListener("click", (e)=>{
+    e.stopPropagation();
+    phraseCursor = (phraseCursor-1+list.length)%list.length; phraseFlipped = false; renderStage();
+  });
+  document.getElementById("phraseNextBtn").addEventListener("click", (e)=>{
+    e.stopPropagation();
+    phraseCursor = (phraseCursor+1)%list.length; phraseFlipped = false; renderStage();
+  });
+}
+
 /* ---------- TOEIC hub: generations -> parts -> existing practice UI ---------- */
 function renderToeicHub(container){
   if(toeicHubStage === "parts"){
@@ -3152,6 +3313,10 @@ async function loadThemeVocab(){
   themeWords = await loadJSONData("theme_vocab.json", []);
   if(mode === "theme") renderStage();
 }
+async function loadPhraseBank(){
+  phraseBank = await loadJSONData("phrase_bank.json", []);
+  if(mode === "phrase") renderStage();
+}
 async function loadDailyReading(){
   dailyReadingSets = await loadJSONData("daily_reading.json", []);
   if(mode === "daily") renderStage();
@@ -3192,6 +3357,7 @@ loadP2();
 loadP3();
 loadP4();
 loadThemeVocab();
+loadPhraseBank();
 loadDailyReading();
 loadStoryReading();
 </script>
