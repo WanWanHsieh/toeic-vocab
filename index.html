@@ -1050,8 +1050,7 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
     const winningCardPos = (cloudCardPos && (!localCardPos || cloudCardPos.updatedAt > localCardPos.updatedAt)) ? cloudCardPos : localCardPos;
     if(winningCardPos){
       saveJSON("toeic-card-pos", winningCardPos);
-      const idx = order.indexOf(winningCardPos.id);
-      if(idx >= 0) cursor = idx;
+      if(order.length) restoreCardCursor(winningCardPos.id);
     }
 
     const localQuizRaw = loadJSON("toeic-quiz-pos");
@@ -1475,11 +1474,38 @@ function autosizeFlashcard(){
   card.style.minHeight = Math.max(frontH, backH, 320) + "px";
 }
 
+/* The ids the flashcard actually steps through: the active filter applied to the current (possibly
+   shuffled) order. `cursor` is an index into THIS list, not into the full `order` — so any code that
+   restores a saved position must resolve it against this list, or the card lands on the wrong word
+   whenever a filter (e.g. the default 必考 filter) is active. */
+function cardFinalIds(){
+  const list = currentFilterList();
+  const inList = new Set(list.map(w=>w.id));
+  const filteredOrder = order.filter(id=>inList.has(id));
+  return filteredOrder.length ? filteredOrder : list.map(w=>w.id);
+}
+/* Point `cursor` at the saved word. If that word isn't in the active filter (say it's a 常考 word but
+   the filter is 必考), resume at the next visible word after it in the order, so you land roughly
+   where you left off instead of jumping to a random card. */
+function restoreCardCursor(id){
+  const finalIds = cardFinalIds();
+  if(finalIds.length === 0) return;
+  let idx = finalIds.indexOf(id);
+  if(idx < 0){
+    const visible = new Set(finalIds);
+    const from = order.indexOf(id);
+    if(from >= 0){
+      for(let i=from+1;i<order.length;i++){
+        if(visible.has(order[i])){ idx = finalIds.indexOf(order[i]); break; }
+      }
+    }
+  }
+  cursor = idx >= 0 ? idx : 0;
+}
+
 /* ---------- Render: card mode ---------- */
 function renderCardMode(container){
-  const list = currentFilterList();
-  const filteredOrder = order.filter(id=>list.some(w=>w.id===id));
-  const finalList = filteredOrder.length ? filteredOrder : list.map(w=>w.id);
+  const finalList = cardFinalIds();
   if(finalList.length === 0){
     container.innerHTML = `<div class="empty-state">找不到符合條件的單字，試著調整搜尋或分類。</div>`;
     return;
@@ -3260,16 +3286,15 @@ async function loadVocab(){
     stage.innerHTML = `<div class="empty-state">找不到單字資料，暫時顯示少量範例單字。<br>（若是直接雙擊開啟 index.html，瀏覽器會擋掉本機檔案讀取，請改用網站連結或本機伺服器開啟。）</div>`;
   }
   order = words.map(w=>w.id);
+  // Categories must be populated first: with an empty category <select>, its value is "" and the
+  // filter would match nothing, so the saved position couldn't be resolved against the filtered list.
+  populateCategories();
   const savedCard = loadCardPosition();
-  if(savedCard !== null){
-    const idx = order.indexOf(savedCard.id);
-    if(idx >= 0) cursor = idx;
-  }
+  if(savedCard !== null) restoreCardCursor(savedCard.id);
   const savedQuizId = loadQuizPosition();
   if(savedQuizId !== null && words.some(w=>w.id===savedQuizId)){
     pickQuizWord(savedQuizId);
   }
-  populateCategories();
   render();
 }
 
