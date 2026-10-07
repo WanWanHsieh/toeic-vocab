@@ -2306,7 +2306,7 @@ function renderConversationOrTalk(container, kind){
 
 /* ---------- Render: reading mode ---------- */
 function docLabel(kind){
-  return {email:"E-mail", memo:"Memo", letter:"Letter", ad:"Advertisement", notice:"Notice", article:"Article", form:"Form"}[kind] || kind;
+  return {email:"E-mail", memo:"Memo", letter:"Letter", ad:"Advertisement", advertisement:"Advertisement", notice:"Notice", article:"Article", webpage:"Web page", form:"Form"}[kind] || kind;
 }
 function renderDoc(doc){
   const metaHtml = (doc.meta && doc.meta.length) ? `<div class="doc-meta">${doc.meta.map(m=>`<div class="row2"><span class="label">${m.label}</span><span>${m.value}</span></div>`).join("")}</div>` : "";
@@ -2429,8 +2429,13 @@ function renderReadingMode(container){
 /* ---------- Daily reading: one auto-generated Part 7 style article per day ---------- */
 function findDailySet(date){ return dailyReadingSets.find(s=>s.date===date); }
 function sortedDailyDates(){ return dailyReadingSets.map(s=>s.date).sort().reverse(); } // newest first
+/* The viewer's LOCAL calendar date (toISOString() is UTC, which is a day behind in Taiwan until 8 AM). */
+function todayLocalStr(){
+  const d = new Date();
+  return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0");
+}
 function formatDailyDate(dateStr){
-  const today = new Date().toISOString().slice(0,10);
+  const today = todayLocalStr();
   const d = new Date(dateStr+"T00:00:00");
   const label = `${d.getMonth()+1}月${d.getDate()}日`;
   return dateStr === today ? `${label}（今天）` : label;
@@ -3343,7 +3348,12 @@ async function loadPhraseBank(){
   if(mode === "phrase") renderStage();
 }
 async function loadDailyReading(){
-  dailyReadingSets = await loadJSONData("daily_reading.json", []);
+  /* Articles are written ahead of time with their release date; the site only reveals the ones whose
+     date has arrived. That makes "one new article a day" happen on its own at the viewer's local
+     midnight, with no daily job that has to fire for it to work. */
+  const all = await loadJSONData("daily_reading.json", []);
+  const today = todayLocalStr();
+  dailyReadingSets = all.filter(s => s.date <= today);
   if(mode === "daily") renderStage();
 }
 async function loadStoryReading(){
