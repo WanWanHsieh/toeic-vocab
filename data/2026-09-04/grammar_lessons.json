@@ -10,11 +10,11 @@
         "explain_zh": "a / an / the、所有格（my, their, the company's）以及形容詞後面，通常要接名詞（noun）。看到空格前面是這些詞，就先想「這裡需要一個名詞」，再從選項中挑出名詞形式。",
         "examples": [
           {
-            "en": "Please submit your application before the deadline.",
+            "en": "Please submit your **application** before the deadline.",
             "zh": "請在截止日期前提交你的申請。"
           },
           {
-            "en": "The new manager gave a clear explanation of the revised policy.",
+            "en": "The new manager gave a clear **explanation** of the revised policy.",
             "zh": "新任經理對修訂後的政策做了清楚的說明。"
           }
         ]
@@ -24,11 +24,11 @@
         "explain_zh": "表示事物或抽象概念的名詞字尾常見有 -tion / -sion、-ment、-ness、-ity、-ance / -ence。表示人的名詞字尾常見有 -er / -or、-ant、-ist、-ee，其中 -er / -or 有時也指工具（如 printer）。同一個字根常有「事」與「人」兩個名詞，要依語意選擇，例如 application（申請）與 applicant（申請人）。",
         "examples": [
           {
-            "en": "The reliability of the new equipment impressed the engineers.",
+            "en": "The **reliability** of the new equipment impressed the **engineers**.",
             "zh": "新設備的可靠度讓工程師們印象深刻。"
           },
           {
-            "en": "All applicants must attach a copy of their résumé to the form.",
+            "en": "All **applicants** must attach a copy of their résumé to the form.",
             "zh": "所有申請人都必須在表格上附上履歷表影本。"
           }
         ]
@@ -38,11 +38,11 @@
         "explain_zh": "名詞可以當句子的主詞，也可以放在及物動詞之後當受詞，或放在介系詞之後。若空格是句子主詞，或前面是 of、for、in、on 等介系詞，且後面沒有其他名詞可修飾，就要選名詞（或動名詞）。",
         "examples": [
           {
-            "en": "The delivery of the goods was delayed by bad weather.",
+            "en": "The **delivery** of the goods was delayed by bad weather.",
             "zh": "貨物的運送因天候不佳而延誤。"
           },
           {
-            "en": "Mr. Chen is responsible for the maintenance of the production line.",
+            "en": "Mr. Chen is responsible for the **maintenance** of the production line.",
             "zh": "陳先生負責生產線的維護。"
           }
         ]
@@ -52,11 +52,11 @@
         "explain_zh": "可數名詞（countable noun）有單複數，可搭配 a / an、many、a few、several、a number of。不可數名詞（uncountable noun）如 advice、information、equipment、furniture、luggage、news、feedback，不加 -s，也不加 a / an，要搭配 much、little、some、a lot of、a piece of 等。",
         "examples": [
           {
-            "en": "Our legal team offered useful advice on the contract.",
+            "en": "Our legal team offered useful **advice** on the contract.",
             "zh": "我們的法務團隊對這份合約提供了實用的建議。"
           },
           {
-            "en": "The warehouse needs more equipment to handle the increased orders.",
+            "en": "The warehouse needs more **equipment** to handle the increased orders.",
             "zh": "倉庫需要更多設備來處理增加的訂單。"
           }
         ]
@@ -66,22 +66,22 @@
         "explain_zh": "兩個名詞可以連在一起組成複合名詞（compound noun），前面的名詞當修飾語，通常用單數形式，如 job application、safety regulations、customer satisfaction。少數固定用語例外，例如 sales report、savings account 的前一個字帶有 -s。遇到這類題目時，空格常落在複合名詞的最後一個字，應選名詞。",
         "examples": [
           {
-            "en": "The customer satisfaction survey will be sent by e-mail next week.",
+            "en": "The **customer satisfaction** survey will be sent by e-mail next week.",
             "zh": "客戶滿意度調查將於下週以電子郵件寄出。"
           },
           {
-            "en": "Employees must attend the annual safety training.",
+            "en": "Employees must attend the annual **safety training**.",
             "zh": "員工必須參加年度安全訓練。"
           }
         ]
       }
     ],
     "traps_zh": [
-      "陷阱：同字根的「事」與「人」名詞選錯。❌ Please submit your applicant. → ✅ Please submit your application.（要交的是申請書，不是申請人）",
-      "陷阱：不可數名詞加 -s 或加 a / an。❌ informations / an advice → ✅ information / a piece of advice（information、advice、equipment 都是不可數名詞）",
-      "陷阱：所有格或形容詞後面誤選動詞或形容詞。❌ their decide → ✅ their decision（所有格後面需要名詞）",
-      "陷阱：the 加 -ing 名詞化後，後面要接 of。❌ the opening a new branch → ✅ the opening of a new branch（若省略 the，則可寫成 opening a new branch，此時是動名詞直接接受詞）",
-      "陷阱：複合名詞前面的名詞誤用複數。❌ the products description → ✅ the product description（名詞當修飾語時通常用單數，sales 等固定用語除外）"
+      "陷阱：同字根的「事」與「人」名詞選錯。❌ Please submit your **applicant**. → ✅ Please submit your **application**.（要交的是申請書，不是申請人）",
+      "陷阱：不可數名詞加 -s 或加 a / an。❌ **informations** / **an advice** → ✅ **information** / **a piece of advice**（information、advice、equipment 都是不可數名詞）",
+      "陷阱：所有格或形容詞後面誤選動詞或形容詞。❌ their **decide** → ✅ their **decision**（所有格後面需要名詞）",
+      "陷阱：the 加 -ing 名詞化後，後面要接 of。❌ the **opening a** new branch → ✅ the **opening of** a new branch（若省略 the，則可寫成 opening a new branch，此時是動名詞直接接受詞）",
+      "陷阱：複合名詞前面的名詞誤用複數。❌ the **products** description → ✅ the **product** description（名詞當修飾語時通常用單數，sales 等固定用語除外）"
     ],
     "tip_zh": "先看空格前面的詞（冠詞、所有格、形容詞、介系詞）→ 判斷空格需要名詞 → 再用字尾（-tion, -ment, -ness, -ity）比對選項；若選項有「事」與「人」兩種名詞，回頭看語意決定。看到 information、advice、equipment 這類字，記得不加 -s。",
     "quick_check": [
@@ -120,11 +120,11 @@
         "explain_zh": "形容詞（adjective）放在名詞前面修飾名詞，副詞（adverb）修飾動詞，位置常在動詞之後，或在助動詞與主要動詞之間。多個形容詞並列時，一般順序是：意見 → 大小 → 新舊 → 顏色 → 產地 → 材質 → 名詞，例如 a large wooden table。",
         "examples": [
           {
-            "en": "The new hire is a quick learner who completes every task efficiently.",
+            "en": "The new hire is a **quick** learner who completes every task **efficiently**.",
             "zh": "這位新進員工學習很快，每項任務都能有效率地完成。"
           },
           {
-            "en": "The company has significantly reduced its energy costs.",
+            "en": "The company has **significantly** reduced its energy costs.",
             "zh": "公司已大幅降低能源成本。"
           }
         ]
@@ -134,11 +134,11 @@
         "explain_zh": "副詞除了修飾動詞，還能放在形容詞或副詞前面加強語氣（如 extremely, highly, very, quite），也能放在句首修飾整個句子，通常用逗號隔開（如 Unfortunately, Fortunately, Currently）。空格後面緊接形容詞時，通常應選副詞。",
         "examples": [
           {
-            "en": "The test results were extremely encouraging.",
+            "en": "The test results were **extremely** encouraging.",
             "zh": "測試結果令人非常振奮。"
           },
           {
-            "en": "Unfortunately, the keynote speaker canceled at the last minute.",
+            "en": "**Unfortunately**, the keynote speaker canceled at the last minute.",
             "zh": "很遺憾，主講人在最後一刻取消了。"
           }
         ]
@@ -148,11 +148,11 @@
         "explain_zh": "be、become、remain、seem、appear、look、sound、feel、stay、get、prove 等連綴動詞（linking verb）後面要接形容詞當補語，描述主詞的狀態，不能接副詞。另外，make、keep、find 加受詞之後也接形容詞，例如 make the process easier。",
         "examples": [
           {
-            "en": "The revised schedule seems reasonable to most employees.",
+            "en": "The revised schedule **seems reasonable** to most employees.",
             "zh": "對大多數員工來說，修訂後的時程似乎很合理。"
           },
           {
-            "en": "Prices remained stable throughout the quarter.",
+            "en": "Prices **remained stable** throughout the quarter.",
             "zh": "整個季度中，價格維持穩定。"
           }
         ]
@@ -162,11 +162,11 @@
         "explain_zh": "有些字雖然以 -ly 結尾，其實是形容詞，如 friendly、timely、costly、likely、lively。有些字的形容詞與副詞同形，如 hard、fast、early、late、daily、weekly。還有些字加 -ly 後意思會改變，例如 hard（努力地）與 hardly（幾乎不），late（晚）與 lately（最近），near（靠近）與 nearly（幾乎）。",
         "examples": [
           {
-            "en": "The agency offers friendly service to all of its clients.",
+            "en": "The agency offers **friendly** service to all of its clients.",
             "zh": "該機構為所有客戶提供親切的服務。"
           },
           {
-            "en": "The staff worked hard to meet the deadline.",
+            "en": "The staff worked **hard** to meet the deadline.",
             "zh": "員工為了趕上截止期限而努力工作。"
           }
         ]
@@ -176,22 +176,22 @@
         "explain_zh": "-ing 形容詞（現在分詞）表示「令人感到…」，通常修飾造成這種感受的事物，如 interesting offer。-ed 形容詞（過去分詞）表示「感到…」，通常描述感受的人，如 satisfied customers。判斷時問自己：主詞是「讓人覺得」還是「覺得」？",
         "examples": [
           {
-            "en": "The CEO gave an inspiring speech at the annual conference.",
+            "en": "The CEO gave an **inspiring** speech at the annual conference.",
             "zh": "執行長在年度大會上發表了一場鼓舞人心的演說。"
           },
           {
-            "en": "Several customers were disappointed with the repair work.",
+            "en": "Several customers were **disappointed** with the repair work.",
             "zh": "有幾位客戶對維修的成果感到失望。"
           }
         ]
       }
     ],
     "traps_zh": [
-      "陷阱：連綴動詞後面誤用副詞。❌ The new plan sounds reasonably. → ✅ The new plan sounds reasonable.（sounds 是連綴動詞，後面要接形容詞）",
-      "陷阱：副詞不能直接放在名詞前面修飾名詞。❌ a significantly increase → ✅ a significant increase（名詞前面用形容詞）",
-      "陷阱：hard 與 hardly 意思不同。❌ The team hardly worked to meet the deadline. → ✅ The team worked hard to meet the deadline.（hardly 是「幾乎不」，hard 才是「努力地」）",
-      "陷阱：人感到…用 -ed，事物令人…用 -ing。❌ The customers were disappointing with the delay. → ✅ The customers were disappointed with the delay.（客戶是「感到失望」的人）",
-      "陷阱：多個形容詞順序錯誤。❌ a wooden large table → ✅ a large wooden table（一般順序是大小在材質之前）"
+      "陷阱：連綴動詞後面誤用副詞。❌ The new plan sounds **reasonably**. → ✅ The new plan sounds **reasonable**.（sounds 是連綴動詞，後面要接形容詞）",
+      "陷阱：副詞不能直接放在名詞前面修飾名詞。❌ a **significantly** increase → ✅ a **significant** increase（名詞前面用形容詞）",
+      "陷阱：hard 與 hardly 意思不同。❌ The team **hardly** worked to meet the deadline. → ✅ The team worked **hard** to meet the deadline.（hardly 是「幾乎不」，hard 才是「努力地」）",
+      "陷阱：人感到…用 -ed，事物令人…用 -ing。❌ The customers were **disappointing** with the delay. → ✅ The customers were **disappointed** with the delay.（客戶是「感到失望」的人）",
+      "陷阱：多個形容詞順序錯誤。❌ a **wooden large** table → ✅ a **large wooden** table（一般順序是大小在材質之前）"
     ],
     "tip_zh": "先看空格後面：緊接名詞 → 選形容詞；空格前是 be / seem / become 等連綴動詞 → 選形容詞；空格修飾動詞、形容詞、副詞或整個句子 → 選副詞。遇到 -ed 與 -ing 兩種選項，就問主詞是「感到」還是「令人」。",
     "quick_check": [
@@ -230,11 +230,11 @@
         "explain_zh": "can、could、will、would、should、must、may、might 等情態動詞（modal verb），以及 do / does / did 後面，都要接原形動詞（base form），不加 -s、-ed 或 -ing。不定詞 to 後面也是原形動詞。另外，每個完整句子都需要有時態的定式動詞（finite verb），分詞或 to V 不能單獨當句子的述語動詞。",
         "examples": [
           {
-            "en": "All employees must submit their timesheets by Friday.",
+            "en": "All employees **must submit** their timesheets by Friday.",
             "zh": "所有員工都必須在週五前繳交工時表。"
           },
           {
-            "en": "The manager did not approve the revised budget.",
+            "en": "The manager **did not approve** the revised budget.",
             "zh": "經理沒有核准修訂後的預算。"
           }
         ]
@@ -244,11 +244,11 @@
         "explain_zh": "有些動詞後面接不定詞 to V，如 decide、agree、plan、expect、hope、offer、refuse、fail、manage、promise、want、need。有些動詞後面接動名詞 V-ing，如 enjoy、avoid、consider、suggest、recommend、postpone、delay、finish、discuss。這些要靠記憶，並且要特別注意：介系詞後面一律接 V-ing。",
         "examples": [
           {
-            "en": "The board decided to expand into the Asian market.",
+            "en": "The board **decided to expand** into the Asian market.",
             "zh": "董事會決定拓展至亞洲市場。"
           },
           {
-            "en": "The company is considering opening a second office in Taipei.",
+            "en": "The company is **considering opening** a second office in Taipei.",
             "zh": "公司正考慮在台北開設第二間辦公室。"
           }
         ]
@@ -258,11 +258,11 @@
         "explain_zh": "yesterday、last week、ago 搭配過去式；since、for、so far、over the past few years 搭配現在完成式；by the time 或 before 搭配過去完成式（過去的基準點）；by 加未來時間點，主句常用未來完成式。時間或條件副詞子句（when、before、after、if、as soon as、by the time）中，用現在式表示未來，不加 will。",
         "examples": [
           {
-            "en": "Sales have increased steadily since the new campaign began.",
+            "en": "Sales **have increased** steadily **since** the new campaign began.",
             "zh": "自從新的宣傳活動開始以來，銷售額穩定成長。"
           },
           {
-            "en": "By the time the auditors arrive, we will have finished the report.",
+            "en": "**By the time** the auditors arrive, we **will have finished** the report.",
             "zh": "等到稽核人員抵達時，我們已經完成報告了。"
           }
         ]
@@ -272,11 +272,11 @@
         "explain_zh": "當主詞是動作的接受者，而不是執行者時，要用被動語態（passive voice），形式是 be 動詞加過去分詞（p.p.）。判斷方法：若空格後面直接接受詞，通常用主動語態；若空格後面沒有受詞，且主詞是被處理的對象，通常用被動語態。情態動詞後則用 be + p.p.。",
         "examples": [
           {
-            "en": "The new product line will be launched in March.",
+            "en": "The new product line **will be launched** in March.",
             "zh": "新的產品線將於三月上市。"
           },
           {
-            "en": "Applications must be received by May 15.",
+            "en": "Applications **must be received** by May 15.",
             "zh": "申請文件必須在五月十五日前收到。"
           }
         ]
@@ -286,22 +286,22 @@
         "explain_zh": "分詞可以放在名詞前面或後面當形容詞。現在分詞（V-ing）表示主動或進行，意思是「該名詞正在做這個動作」。過去分詞（p.p.）表示被動或完成，意思是「該名詞被…」。例如 an increasing number（數量正在增加）、the attached file（被附上的檔案）。",
         "examples": [
           {
-            "en": "Please review the attached document before the meeting.",
+            "en": "Please review the **attached** document before the meeting.",
             "zh": "請在會議前先閱讀所附的文件。"
           },
           {
-            "en": "An increasing number of employees are working remotely.",
+            "en": "An **increasing** number of employees are working remotely.",
             "zh": "越來越多員工採遠距工作。"
           }
         ]
       }
     ],
     "traps_zh": [
-      "陷阱：look forward to 的 to 是介系詞。❌ We look forward to meet you. → ✅ We look forward to meeting you.（介系詞 to 後面要接 V-ing）",
-      "陷阱：時間或條件子句中誤用 will。❌ If the shipment will arrive late, call us. → ✅ If the shipment arrives late, call us.（if 子句用現在式表示未來）",
-      "陷阱：since 搭配的時態錯誤。❌ She works at this company since 2015. → ✅ She has worked at this company since 2015.（since 加時間點，主句要用現在完成式）",
-      "陷阱：該用被動卻用主動。❌ Invoices must pay within 30 days. → ✅ Invoices must be paid within 30 days.（發票是被支付的對象，空格後面沒有受詞）",
-      "陷阱：分詞的主動與被動搞混。❌ the attaching file → ✅ the attached file（檔案是被附上的，要用過去分詞）"
+      "陷阱：look forward to 的 to 是介系詞。❌ We look forward to **meet** you. → ✅ We look forward to **meeting** you.（介系詞 to 後面要接 V-ing）",
+      "陷阱：時間或條件子句中誤用 will。❌ If the shipment **will arrive** late, call us. → ✅ If the shipment **arrives** late, call us.（if 子句用現在式表示未來）",
+      "陷阱：since 搭配的時態錯誤。❌ She **works** at this company since 2015. → ✅ She **has worked** at this company since 2015.（since 加時間點，主句要用現在完成式）",
+      "陷阱：該用被動卻用主動。❌ Invoices must **pay** within 30 days. → ✅ Invoices must **be paid** within 30 days.（發票是被支付的對象，空格後面沒有受詞）",
+      "陷阱：分詞的主動與被動搞混。❌ the **attaching** file → ✅ the **attached** file（檔案是被附上的，要用過去分詞）"
     ],
     "tip_zh": "先看空格前面有沒有助動詞、to 或介系詞 → 再找時間標記（since, by the time, yesterday）決定時態 → 最後看空格後面有沒有受詞：有受詞用主動，沒有受詞且主詞是被處理的對象就用被動。",
     "quick_check": [
@@ -340,11 +340,11 @@
         "explain_zh": "單數主詞搭配單數動詞（現在式加 -s、is、was、has、does），複數主詞搭配複數動詞（are、were、have、do）。不可數名詞（如 information、equipment、advice、news）視為單數，動詞用單數形式。",
         "examples": [
           {
-            "en": "The new regulations apply to all branch offices.",
+            "en": "The new **regulations apply** to all branch offices.",
             "zh": "新的規定適用於所有分公司。"
           },
           {
-            "en": "The equipment in the warehouse needs regular maintenance.",
+            "en": "The **equipment** in the warehouse **needs** regular maintenance.",
             "zh": "倉庫裡的設備需要定期維護。"
           }
         ]
@@ -354,11 +354,11 @@
         "explain_zh": "介系詞片語（of、in、for…）、關係子句與插入語常夾在主詞和動詞之間，動詞要跟真正的主詞（中心名詞）一致，而不是跟離動詞最近的名詞一致。along with、together with、as well as、in addition to 引導的片語也不會改變主詞的單複數。",
         "examples": [
           {
-            "en": "The list of qualified candidates is posted on the bulletin board.",
+            "en": "The **list** of qualified candidates **is** posted on the bulletin board.",
             "zh": "合格應徵者的名單張貼在佈告欄上。"
           },
           {
-            "en": "The manager, along with her assistants, is attending the conference.",
+            "en": "The **manager**, along with her assistants, **is** attending the conference.",
             "zh": "經理與她的助理們將一起參加這場研討會。"
           }
         ]
@@ -368,11 +368,11 @@
         "explain_zh": "each、every、either、neither 以及 each of、one of、either of、neither of 加複數名詞時，主詞視為單數，動詞用單數形式。everyone、everybody、someone、anyone、nobody 等不定代名詞也是單數。",
         "examples": [
           {
-            "en": "Each of the employees has received a security badge.",
+            "en": "**Each of** the employees **has** received a security badge.",
             "zh": "每位員工都已收到一張門禁識別證。"
           },
           {
-            "en": "Neither of the proposals was approved by the committee.",
+            "en": "**Neither of** the proposals **was** approved by the committee.",
             "zh": "這兩份提案都沒有獲得委員會核准。"
           }
         ]
@@ -382,11 +382,11 @@
         "explain_zh": "A number of 加複數名詞表示「許多」，動詞用複數。The number of 加複數名詞表示「…的數量」，主詞是 number，動詞用單數。團體名詞（company、committee、team、board）當作一個整體時，用單數動詞，例如 The committee has made its decision。",
         "examples": [
           {
-            "en": "A number of customers have complained about the delay.",
+            "en": "**A number of** customers **have** complained about the delay.",
             "zh": "有許多客戶對延誤提出了抱怨。"
           },
           {
-            "en": "The number of online orders has doubled this year.",
+            "en": "**The number of** online orders **has** doubled this year.",
             "zh": "今年線上訂單的數量已經增加為兩倍。"
           }
         ]
@@ -396,22 +396,22 @@
         "explain_zh": "there is / are 句型中，動詞要與後面的真正主詞一致。A and B 通常視為複數；A or B、either A or B、neither A nor B、not only A but also B 的動詞與最靠近動詞的那個主詞一致；A as well as B 的動詞則與前面的 A 一致。",
         "examples": [
           {
-            "en": "There are several vacancies in the marketing department.",
+            "en": "**There are** several **vacancies** in the marketing department.",
             "zh": "行銷部門有好幾個職缺。"
           },
           {
-            "en": "Neither the manager nor the assistants were told about the schedule change.",
+            "en": "Neither the manager nor the **assistants were** told about the schedule change.",
             "zh": "經理和助理們都沒有被告知時程變更。"
           }
         ]
       }
     ],
     "traps_zh": [
-      "陷阱：被插入的名詞誤導。❌ The cost of the repairs are high. → ✅ The cost of the repairs is high.（主詞是 cost，of the repairs 只是修飾語）",
-      "陷阱：each of 後面接複數名詞，動詞仍然是單數。❌ Each of the employees have a badge. → ✅ Each of the employees has a badge.（each 視為單數）",
-      "陷阱：a number of 與 the number of 搞混。❌ The number of applicants have increased. → ✅ The number of applicants has increased.（the number of 的主詞是 number，用單數動詞；a number of 才是複數）",
-      "陷阱：不可數名詞配複數動詞。❌ The information are confidential. → ✅ The information is confidential.（information 是不可數名詞，視為單數）",
-      "陷阱：there 句型的動詞要看後面的主詞。❌ There is several vacancies. → ✅ There are several vacancies.（vacancies 是複數）"
+      "陷阱：被插入的名詞誤導。❌ The cost of the repairs **are** high. → ✅ The cost of the repairs **is** high.（主詞是 cost，of the repairs 只是修飾語）",
+      "陷阱：each of 後面接複數名詞，動詞仍然是單數。❌ Each of the employees **have** a badge. → ✅ Each of the employees **has** a badge.（each 視為單數）",
+      "陷阱：a number of 與 the number of 搞混。❌ The number of applicants **have** increased. → ✅ The number of applicants **has** increased.（the number of 的主詞是 number，用單數動詞；a number of 才是複數）",
+      "陷阱：不可數名詞配複數動詞。❌ The information **are** confidential. → ✅ The information **is** confidential.（information 是不可數名詞，視為單數）",
+      "陷阱：there 句型的動詞要看後面的主詞。❌ There **is** several vacancies. → ✅ There **are** several vacancies.（vacancies 是複數）"
     ],
     "tip_zh": "先找出真正的主詞，把 of 片語、逗號中間的插入語和關係子句都先劃掉 → 判斷主詞是單數還是複數 → 再選動詞。看到 each、every、-one、the number of 就選單數；看到 a number of、both、several 就選複數；there is / are 要看後面的名詞。",
     "quick_check": [
@@ -450,11 +450,11 @@
         "explain_zh": "主格（I, he, she, we, they）放在動詞前面當主詞，受格（me, him, her, us, them）放在動詞或介系詞後面當受詞，所有格形容詞（my, his, her, our, their）放在名詞前面。判斷時先看空格在句中的位置，再選對應的格位。",
         "examples": [
           {
-            "en": "Ms. Kim asked him to review the contract.",
+            "en": "Ms. Kim asked **him** to review the contract.",
             "zh": "金小姐請他審閱這份合約。"
           },
           {
-            "en": "The employees must show their ID badges at the entrance.",
+            "en": "The employees must show **their** ID badges at the entrance.",
             "zh": "員工必須在入口處出示他們的識別證。"
           }
         ]
@@ -464,11 +464,11 @@
         "explain_zh": "所有格形容詞（my, your, his, her, our, their）後面必須接名詞。所有格代名詞（mine, yours, his, hers, ours, theirs）等於「所有格加名詞」，後面不再接名詞，可以當主詞、受詞或補語使用，常用來避免重複前面出現的名詞。",
         "examples": [
           {
-            "en": "Our sales figures are higher than theirs.",
+            "en": "Our sales figures are higher than **theirs**.",
             "zh": "我們的銷售數字比他們的更高。"
           },
           {
-            "en": "The proposal you submitted was stronger than mine.",
+            "en": "The proposal you submitted was stronger than **mine**.",
             "zh": "你提交的提案比我的更有力。"
           }
         ]
@@ -478,11 +478,11 @@
         "explain_zh": "反身代名詞（myself, himself, themselves 等）有兩種用法。一是動作的主詞與受詞是同一人，如 introduce yourself；二是強調「親自」，放在名詞之後或句尾，如 The CEO himself。by + 反身代名詞表示「獨自、靠自己」。反身代名詞不能單獨當主詞。",
         "examples": [
           {
-            "en": "The CEO himself greeted the visitors at the entrance.",
+            "en": "The CEO **himself** greeted the visitors at the entrance.",
             "zh": "執行長親自在入口處迎接訪客。"
           },
           {
-            "en": "Please make sure to introduce yourself to the new clients.",
+            "en": "Please make sure to introduce **yourself** to the new clients.",
             "zh": "請務必向新客戶自我介紹。"
           }
         ]
@@ -492,11 +492,11 @@
         "explain_zh": "another 表示「（不特定的）另一個」。the other 表示「兩者之中的另一個」，是特定的。others 表示「（不特定的）其他幾個」，the others 則是「其餘全部」。one 與 the other 搭配，用於只有兩個的情況；some 與 others 搭配，用於不特定的多數。",
         "examples": [
           {
-            "en": "One of the two printers is broken, but the other works fine.",
+            "en": "**One** of the two printers is broken, but **the other** works fine.",
             "zh": "兩台印表機中有一台壞了，但另一台運作正常。"
           },
           {
-            "en": "Some employees prefer remote work, while others prefer working in the office.",
+            "en": "**Some** employees prefer remote work, while **others** prefer working in the office.",
             "zh": "有些員工偏好遠距工作，而其他人則偏好在辦公室工作。"
           }
         ]
@@ -506,22 +506,22 @@
         "explain_zh": "代名詞必須與它所指的名詞（先行詞，antecedent）在單複數上一致。公司、機構等視為單數時，用 it 或 its，複數名詞則用 they 或 their。若句中有兩個可能的先行詞，代名詞指誰會不清楚，如 When Ms. Lee spoke with Ms. Park, she was upset，這時應改寫，不要只用 she。",
         "examples": [
           {
-            "en": "Zenith Corp. reported that its profits rose in the third quarter.",
+            "en": "Zenith Corp. reported that **its** profits rose in the third quarter.",
             "zh": "Zenith 公司報告其第三季獲利成長。"
           },
           {
-            "en": "Customers who purchase the premium plan will receive their invoices by e-mail.",
+            "en": "**Customers** who purchase the premium plan will receive **their** invoices by e-mail.",
             "zh": "購買進階方案的客戶將透過電子郵件收到他們的發票。"
           }
         ]
       }
     ],
     "traps_zh": [
-      "陷阱：名詞前面誤用代名詞。❌ Please bring you own badge. → ✅ Please bring your own badge.（名詞前面要用所有格形容詞 your）",
-      "陷阱：and 連接的受詞誤用主格。❌ The manager sent the invitation to Ms. Lin and I. → ✅ The manager sent the invitation to Ms. Lin and me.（介系詞 to 後面要用受格 me）",
-      "陷阱：主詞與受詞是同一人，卻用一般受格。❌ We should not blame us for the delay. → ✅ We should not blame ourselves for the delay.（動作回到主詞自己，要用反身代名詞）",
-      "陷阱：只有兩個時，另一個要用 the other。❌ I have two laptops; one is new and another is old. → ✅ I have two laptops; one is new and the other is old.（兩者之中剩下的那一個是特定的，不用 another）",
-      "陷阱：公司名稱搭配複數所有格。❌ The company raised their prices. → ✅ The company raised its prices.（公司視為單數，用 it / its）"
+      "陷阱：名詞前面誤用代名詞。❌ Please bring **you** own badge. → ✅ Please bring **your** own badge.（名詞前面要用所有格形容詞 your）",
+      "陷阱：and 連接的受詞誤用主格。❌ The manager sent the invitation to Ms. Lin and **I**. → ✅ The manager sent the invitation to Ms. Lin and **me**.（介系詞 to 後面要用受格 me）",
+      "陷阱：主詞與受詞是同一人，卻用一般受格。❌ We should not blame **us** for the delay. → ✅ We should not blame **ourselves** for the delay.（動作回到主詞自己，要用反身代名詞）",
+      "陷阱：只有兩個時，另一個要用 the other。❌ I have two laptops; one is new and **another** is old. → ✅ I have two laptops; one is new and **the other** is old.（兩者之中剩下的那一個是特定的，不用 another）",
+      "陷阱：公司名稱搭配複數所有格。❌ The company raised **their** prices. → ✅ The company raised **its** prices.（公司視為單數，用 it / its）"
     ],
     "tip_zh": "先看空格在句中的位置：動詞前是主格，動詞或介系詞後是受格，名詞前是所有格形容詞，後面沒有名詞則是所有格代名詞。若主詞與受詞是同一個人，或有「親自、獨自」的意思，就選反身代名詞。最後確認代名詞指的是誰、單複數是否一致。",
     "quick_check": [
@@ -560,11 +560,11 @@
         "explain_zh": "at 用於時刻或時間點（at 9 a.m.、at noon、at night）；on 用於日期與星期（on May 3、on Monday、on Monday morning）；in 用於月份、季節、年份與一天中的時段（in March、in 2026、in the afternoon）。口訣是範圍由小到大：at 最小、on 其次、in 最大。另外，in + 一段時間也可表示「從現在起多久之後」（in two weeks）。",
         "examples": [
           {
-            "en": "The shareholders' meeting will begin at 10 a.m. on Thursday, June 12.",
+            "en": "The shareholders' meeting will begin **at** 10 a.m. **on** Thursday, June 12.",
             "zh": "股東會將於六月十二日星期四上午十點開始。"
           },
           {
-            "en": "The new software will be installed in two weeks, and the final report is due in September.",
+            "en": "The new software will be installed **in** two weeks, and the final report is due **in** September.",
             "zh": "新軟體將在兩週後安裝，最終報告的截止期限在九月。"
           }
         ]
@@ -574,11 +574,11 @@
         "explain_zh": "by 表示「最晚在……之前」的期限，搭配一次完成的動作（submit、complete、finish）；until 表示狀態或動作「持續到……為止」。for + 一段時間的長度（for three years），回答「多久」；during + 特定期間的名詞（during the conference、during the summer），回答「什麼時候」；within + 一段時間表示「在……之內」（within ten days）。",
         "examples": [
           {
-            "en": "Please submit your expense report by Friday because the finance office will be closed until Monday.",
+            "en": "Please submit your expense report **by** Friday because the finance office will be closed **until** Monday.",
             "zh": "請在週五前提交費用報告，因為財務部將休息到週一。"
           },
           {
-            "en": "The warehouse was closed for two weeks during the renovation, and all orders must be shipped within ten days.",
+            "en": "The warehouse was closed **for** two weeks **during** the renovation, and all orders must be shipped **within** ten days.",
             "zh": "倉庫在整修期間關閉了兩週，所有訂單必須在十天內出貨。"
           }
         ]
@@ -588,11 +588,11 @@
         "explain_zh": "at 用於定點或特定位置（at the front desk、at the airport），也用於活動場合（at the conference）；on 用於表面、樓層與街道（on the second floor、on Main Street）；in 用於範圍較大或有包圍感的空間（in the office、in the warehouse、in Taipei）。",
         "examples": [
           {
-            "en": "The registration desk is located on the second floor, next to the elevators.",
+            "en": "The registration desk is located **on** the second floor, next to the elevators.",
             "zh": "報到櫃檯位於二樓電梯旁。"
           },
           {
-            "en": "Please wait at the reception desk, and Ms. Lee will meet you in the conference room.",
+            "en": "Please wait **at** the reception desk, and Ms. Lee will meet you **in** the conference room.",
             "zh": "請在接待櫃檯等候，李小姐會在會議室與您會面。"
           }
         ]
@@ -602,11 +602,11 @@
         "explain_zh": "許多字詞後面固定接某個介系詞，必須整組記：be responsible for、be in charge of、depend on、be eligible for、be familiar with、be interested in、be committed to、look forward to、in response to、an increase in。介系詞之後只能接名詞或動名詞（V-ing），不能接原形動詞或 to V；特別注意 look forward to、be committed to 的 to 是介系詞，後面要接 V-ing。",
         "examples": [
           {
-            "en": "Ms. Lin is responsible for training all new sales staff.",
+            "en": "Ms. Lin is **responsible for** training all new sales staff.",
             "zh": "林小姐負責訓練所有新進業務人員。"
           },
           {
-            "en": "We look forward to working with your team on the upcoming project.",
+            "en": "We **look forward to** working with your team on the upcoming project.",
             "zh": "我們期待與貴團隊合作即將展開的專案。"
           }
         ]
@@ -616,22 +616,22 @@
         "explain_zh": "介系詞後面接名詞（片語）或動名詞，連接詞後面接完整子句（主詞 + 動詞）。常考的對應組合：during / while（期間）、despite / although（讓步）、because of / because、due to / because（原因）、in case of / in case（萬一）。before、after、since、until 兩種詞性都可以，要看後面接什麼。先看空格後面是什麼，再決定詞性。",
         "examples": [
           {
-            "en": "Several flights were delayed because of heavy fog.",
+            "en": "Several flights were delayed **because of** heavy fog.",
             "zh": "數班航班因濃霧而延誤。"
           },
           {
-            "en": "Several flights were delayed because heavy fog covered the airport.",
+            "en": "Several flights were delayed **because** heavy fog covered the airport.",
             "zh": "數班航班因濃霧籠罩機場而延誤。"
           }
         ]
       }
     ],
     "traps_zh": [
-      "陷阱：by 與 until 混用。❌ The offer is valid by Friday. → ✅ The offer is valid until Friday.（until 表示狀態持續到某時間點；by 用於一次性動作的最後期限，如 submit by Friday）",
-      "陷阱：during 後面接子句。❌ during we were renovating → ✅ while we were renovating / during the renovation（during 是介系詞，只接名詞；while 是連接詞，才能接子句）",
-      "陷阱：despite 後面多加 of。❌ despite of the delay → ✅ despite the delay / in spite of the delay（despite 本身就是介系詞，後面不加 of）",
-      "陷阱：look forward to 後面接原形動詞。❌ We look forward to meet you. → ✅ We look forward to meeting you.（這裡的 to 是介系詞，後面要接名詞或動名詞）",
-      "陷阱：及物動詞後多加介系詞。❌ We will discuss about the budget. → ✅ We will discuss the budget.（discuss、attend、enter、contact、reach 等及物動詞後面直接接受詞，不加介系詞）"
+      "陷阱：by 與 until 混用。❌ The offer is valid **by** Friday. → ✅ The offer is valid **until** Friday.（until 表示狀態持續到某時間點；by 用於一次性動作的最後期限，如 submit by Friday）",
+      "陷阱：during 後面接子句。❌ **during** we were renovating → ✅ **while** we were renovating / **during** the renovation（during 是介系詞，只接名詞；while 是連接詞，才能接子句）",
+      "陷阱：despite 後面多加 of。❌ **despite of** the delay → ✅ **despite** the delay / **in spite of** the delay（despite 本身就是介系詞，後面不加 of）",
+      "陷阱：look forward to 後面接原形動詞。❌ We look forward to **meet** you. → ✅ We look forward to **meeting** you.（這裡的 to 是介系詞，後面要接名詞或動名詞）",
+      "陷阱：及物動詞後多加介系詞。❌ We will **discuss about** the budget. → ✅ We will **discuss** the budget.（discuss、attend、enter、contact、reach 等及物動詞後面直接接受詞，不加介系詞）"
     ],
     "tip_zh": "先看空格後面接什麼：接名詞或 V-ing 才選介系詞；接完整子句就要選連接詞。時間題先分類：時間點（at / on / in）、最晚期限（by）、持續到（until）、長度（for）、期間（during）、之內（within）。搭配題直接背整組片語，看到 responsible ___、depend ___ 就能立刻作答。",
     "quick_check": [
@@ -670,11 +670,11 @@
         "explain_zh": "對等連接詞（coordinating conjunctions）如 and、but、or、so、yet，連接地位相同的字詞或子句；從屬連接詞（subordinating conjunctions）引導附屬子句，依語意分為：原因 because / since / as、讓步 although / though / even though / while / whereas、條件 if / unless / provided that、時間 when / before / after / until / as soon as、目的 so that。含從屬連接詞的子句不能單獨成句，必須搭配主要子句。",
         "examples": [
           {
-            "en": "The proposal was well written, but the board still asked for several changes.",
+            "en": "The proposal was well written, **but** the board still asked for several changes.",
             "zh": "這份提案寫得很好，但董事會仍要求做幾項修改。"
           },
           {
-            "en": "Because the supplier shipped the parts late, we missed our delivery deadline.",
+            "en": "**Because** the supplier shipped the parts late, we missed our delivery deadline.",
             "zh": "因為供應商延遲出貨零件，我們錯過了交貨期限。"
           }
         ]
@@ -684,11 +684,11 @@
         "explain_zh": "連接詞（although、because、while）連接兩個子句，可放在句首或句中，不需要分號；介系詞（despite、because of、during）後面只接名詞片語；連接副詞（conjunctive adverb，如 however、therefore、moreover）本身不能連接兩個句子，前面必須有句號或分號，後面通常加逗號。看到空格前有分號或句號，就優先考慮連接副詞。",
         "examples": [
           {
-            "en": "Although it rained heavily, the outdoor event went ahead as planned.",
+            "en": "**Although** it rained heavily, the outdoor event went ahead as planned.",
             "zh": "雖然下大雨，戶外活動仍照原定計畫舉行。"
           },
           {
-            "en": "It rained heavily; nevertheless, the outdoor event went ahead as planned.",
+            "en": "It rained heavily; **nevertheless**, the outdoor event went ahead as planned.",
             "zh": "雨下得很大；然而，戶外活動仍照原定計畫舉行。"
           }
         ]
@@ -698,11 +698,11 @@
         "explain_zh": "選連接副詞要看前後句的邏輯：表示結果用 therefore、thus、consequently、as a result；表示轉折或讓步用 however、nevertheless、nonetheless、on the other hand；表示追加用 moreover、furthermore、in addition；表示同時用 meanwhile。otherwise 表示「否則」，前面通常是要求、建議或條件。",
         "examples": [
           {
-            "en": "Raw material costs rose sharply; as a result, the company raised its prices.",
+            "en": "Raw material costs rose sharply; **as a result**, the company raised its prices.",
             "zh": "原物料成本大幅上漲；因此，公司調漲了價格。"
           },
           {
-            "en": "Please bring a valid ID; otherwise, you will not be allowed into the building.",
+            "en": "Please bring a valid ID; **otherwise**, you will not be allowed into the building.",
             "zh": "請攜帶有效證件；否則您將無法進入大樓。"
           }
         ]
@@ -712,11 +712,11 @@
         "explain_zh": "常考的成對連接詞有 both A and B（A 和 B 兩者都）、either A or B（二選一）、neither A nor B（兩者都不）、not only A but also B（不但……而且……）。A 與 B 的詞性與結構必須對等（平行結構，parallelism）。either…or、neither…nor、not only…but also 連接兩個主詞時，動詞與最靠近動詞的主詞一致；both…and 連接的主詞視為複數。",
         "examples": [
           {
-            "en": "Both the sales team and the marketing team will attend the workshop.",
+            "en": "**Both** the sales team **and** the marketing team will attend the workshop.",
             "zh": "業務團隊與行銷團隊都將參加這場工作坊。"
           },
           {
-            "en": "Customers may place orders either by phone or by email.",
+            "en": "Customers may place orders **either** by phone **or** by email.",
             "zh": "客戶可以透過電話或電子郵件下訂單。"
           }
         ]
@@ -726,22 +726,22 @@
         "explain_zh": "whether 引導名詞子句，可作主詞、補語或介系詞的受詞，也可接 or not；if 表示「是否」時只能接在 ask、wonder、know 等動詞之後，不能放在介系詞後面。表示目的時，so that 後面接完整子句（通常含 can、could、will），in order to 後面接原形動詞，兩者語意相同但結構不同。",
         "examples": [
           {
-            "en": "The final decision depends on whether the budget is approved this month.",
+            "en": "The final decision depends on **whether** the budget is approved this month.",
             "zh": "最後的決定取決於預算本月是否獲得核准。"
           },
           {
-            "en": "We hired two extra clerks so that every order could ship before the holiday.",
+            "en": "We hired two extra clerks **so that** every order could ship before the holiday.",
             "zh": "我們多聘了兩名店員，好讓所有訂單能在假期前出貨。"
           }
         ]
       }
     ],
     "traps_zh": [
-      "陷阱：中文「雖然……但是……」直譯。❌ Although the fee is high, but many clients still sign up. → ✅ Although the fee is high, many clients still sign up.（although 與 but 不能同時連接同一組子句，擇一即可）",
-      "陷阱：despite 與 although 混用。❌ Despite the fee was high → ✅ Although the fee was high / Despite the high fee（despite 後接名詞，although 後接子句）",
-      "陷阱：只用逗號加 however 連接兩個句子。❌ The report was late, however, the client accepted it. → ✅ The report was late; however, the client accepted it. / The report was late, but the client accepted it.（however 是副詞，不能單靠逗號連接兩個子句，會變成逗號連接句 comma splice）",
-      "陷阱：時間與條件子句使用 will。❌ If the shipment will arrive tomorrow, we will start production. → ✅ If the shipment arrives tomorrow, we will start production.（時間、條件副詞子句用現在式代替未來式；if 表示「是否」的名詞子句不在此限）",
-      "陷阱：in order to 後面接子句。❌ We left early in order to we could catch the train. → ✅ We left early in order to catch the train. / so that we could catch the train.（in order to 後接原形動詞，so that 後才接完整子句）"
+      "陷阱：中文「雖然……但是……」直譯。❌ **Although** the fee is high, **but** many clients still sign up. → ✅ **Although** the fee is high, many clients still sign up.（although 與 but 不能同時連接同一組子句，擇一即可）",
+      "陷阱：despite 與 although 混用。❌ **Despite** the fee was high → ✅ **Although** the fee was high / Despite **the high fee**（despite 後接名詞，although 後接子句）",
+      "陷阱：只用逗號加 however 連接兩個句子。❌ The report was late**, however,** the client accepted it. → ✅ The report was late**; however,** the client accepted it. / The report was late, **but** the client accepted it.（however 是副詞，不能單靠逗號連接兩個子句，會變成逗號連接句 comma splice）",
+      "陷阱：時間與條件子句使用 will。❌ If the shipment **will arrive** tomorrow, we will start production. → ✅ If the shipment **arrives** tomorrow, we will start production.（時間、條件副詞子句用現在式代替未來式；if 表示「是否」的名詞子句不在此限）",
+      "陷阱：in order to 後面接子句。❌ We left early **in order to we could** catch the train. → ✅ We left early **in order to catch** the train. / **so that we could** catch the train.（in order to 後接原形動詞，so that 後才接完整子句）"
     ],
     "tip_zh": "第一步看空格後面：名詞 → 介系詞；完整子句 → 連接詞或連接副詞。第二步看空格前面：有分號或句號 → 連接副詞；沒有 → 連接詞。第三步看語意：因果（therefore / because）、轉折（however / although）、追加（moreover）、條件（unless / if）。成對連接詞則直接看另一半：either 配 or、neither 配 nor、not only 配 but also。",
     "quick_check": [
@@ -780,11 +780,11 @@
         "explain_zh": "單音節形容詞（副詞）加 -er / -est：high → higher → highest；以 e 結尾只加 -r / -st（large → larger → largest）；「短母音 + 單子音」要重複字尾（big → bigger → biggest）；子音 + y 要改成 -ier / -iest（busy → busier → busiest）。多音節形容詞和 -ly 結尾的副詞則加 more / most（more efficient、most expensive、more quickly）。兩種方式不能同時使用，例如 more higher 是錯的。",
         "examples": [
           {
-            "en": "Shipping by air is faster than shipping by sea, but it is more expensive.",
+            "en": "Shipping by air is **faster than** shipping by sea, but it is **more expensive**.",
             "zh": "空運比海運快，但費用也更高。"
           },
           {
-            "en": "Orders placed online are processed more quickly than those placed by phone.",
+            "en": "Orders placed online are processed **more quickly than** those placed by phone.",
             "zh": "線上下的訂單處理速度比電話訂單更快。"
           }
         ]
@@ -794,11 +794,11 @@
         "explain_zh": "比較級後面接 than 引出比較對象，than 兩邊必須是同類事物（This year's revenue 對 last year's）。兩者程度相同用 as + 原級 + as，否定為 not as / not so + 原級 + as。「the + 比較級…, the + 比較級…」表示「越……就越……」，兩個空格都要用比較級。",
         "examples": [
           {
-            "en": "The new office is as spacious as the old one, but its rent is lower.",
+            "en": "The new office is **as spacious as** the old one, but its rent is lower.",
             "zh": "新辦公室和舊的一樣寬敞，但租金比較低。"
           },
           {
-            "en": "The sooner we submit the application, the faster we will receive a reply.",
+            "en": "**The sooner** we submit the application, **the faster** we will receive a reply.",
             "zh": "我們越早提交申請，就越快收到回覆。"
           }
         ]
@@ -808,11 +808,11 @@
         "explain_zh": "要加強比較級的語氣，用 much、far、even、still、a lot、considerably（……得多）；表示小幅差距用 slightly、a little。very、so、too 不能直接修飾比較級，它們只能修飾原級（very high）。加強最高級則用 by far（by far the largest）。",
         "examples": [
           {
-            "en": "Fuel costs were much higher this quarter than we had forecast.",
+            "en": "Fuel costs were **much** higher this quarter than we had forecast.",
             "zh": "本季燃料成本比我們的預測高出許多。"
           },
           {
-            "en": "The new model is slightly more expensive, but it is far more reliable than the old one.",
+            "en": "The new model is **slightly** more expensive, but it is **far** more reliable than the old one.",
             "zh": "新款稍微貴一點，但可靠度遠高於舊款。"
           }
         ]
@@ -822,11 +822,11 @@
         "explain_zh": "最高級用於三者以上的比較，前面一定要有 the（或所有格），後面常用 in + 範圍（in the department）、of + 複數名詞或數量（of all the candidates）、或 that 子句（常搭配 ever 與現在完成式）來界定範圍。表示「最……之一」用 one of the + 最高級 + 複數名詞。",
         "examples": [
           {
-            "en": "Ms. Park is the most experienced negotiator in our department.",
+            "en": "Ms. Park is **the most experienced** negotiator **in** our department.",
             "zh": "朴小姐是我們部門經驗最豐富的談判人員。"
           },
           {
-            "en": "This is the largest order that our company has ever received.",
+            "en": "This is **the largest** order **that** our company has ever received.",
             "zh": "這是我們公司有史以來收到最大的訂單。"
           }
         ]
@@ -836,22 +836,22 @@
         "explain_zh": "不規則變化要整組背：good / well → better → best；bad / badly → worse → worst；many / much → more → most；little → less → least；far → farther（距離）或 further（程度、進一步）→ farthest / furthest。fewer 修飾可數複數名詞（fewer employees），less 修飾不可數名詞（less time、less money）。",
         "examples": [
           {
-            "en": "Customer satisfaction scores are better this year than they were last year.",
+            "en": "Customer satisfaction scores are **better** this year than they were last year.",
             "zh": "今年的顧客滿意度分數比去年好。"
           },
           {
-            "en": "The new process requires less time and fewer employees than the old one.",
+            "en": "The new process requires **less** time and **fewer** employees than the old one.",
             "zh": "新流程所需的時間和人力都比舊流程少。"
           }
         ]
       }
     ],
     "traps_zh": [
-      "陷阱：雙重比較級。❌ more higher / more cheaper → ✅ higher / cheaper（-er 與 more 擇一使用，不能同時出現）",
-      "陷阱：用 very 修飾比較級。❌ This model is very better than the old one. → ✅ This model is much better than the old one.（very 只能修飾原級；修飾比較級要用 much、far、even、a lot）",
-      "陷阱：as…as 與 than 混用。❌ This model is as expensive than that one. → ✅ This model is as expensive as that one.（原級比較用 as…as；than 只搭配比較級；then 是「然後」，不能拿來比較）",
-      "陷阱：fewer / less 與名詞可數性不符。❌ less employees → ✅ fewer employees；❌ fewer money → ✅ less money（可數複數名詞用 fewer，不可數名詞用 less）",
-      "陷阱：最高級漏掉 the 或重複使用。❌ Mr. Cho is most experienced employee in the office. → ✅ Mr. Cho is the most experienced employee in the office.（最高級前面必須加 the；也不可寫成 the most fastest 這種雙重最高級）"
+      "陷阱：雙重比較級。❌ **more higher** / **more cheaper** → ✅ **higher** / **cheaper**（-er 與 more 擇一使用，不能同時出現）",
+      "陷阱：用 very 修飾比較級。❌ This model is **very better** than the old one. → ✅ This model is **much better** than the old one.（very 只能修飾原級；修飾比較級要用 much、far、even、a lot）",
+      "陷阱：as…as 與 than 混用。❌ This model is **as expensive than** that one. → ✅ This model is **as expensive as** that one.（原級比較用 as…as；than 只搭配比較級；then 是「然後」，不能拿來比較）",
+      "陷阱：fewer / less 與名詞可數性不符。❌ **less employees** → ✅ **fewer employees**；❌ **fewer money** → ✅ **less money**（可數複數名詞用 fewer，不可數名詞用 less）",
+      "陷阱：最高級漏掉 the 或重複使用。❌ Mr. Cho is **most** experienced employee in the office. → ✅ Mr. Cho is **the most** experienced employee in the office.（最高級前面必須加 the；也不可寫成 the most fastest 這種雙重最高級）"
     ],
     "tip_zh": "先找信號詞：句中有 than → 比較級；有 as…as → 原級；有 of all / in the… / ever → 最高級（前面要有 the）；有 the…, the… → 兩個空格都是比較級。空格前出現 much / far / even / a lot，後面一定是比較級；出現 very，後面一定是原級。最後再用音節數判斷是加 -er 還是 more。",
     "quick_check": [
@@ -890,11 +890,11 @@
         "explain_zh": "關係代名詞要看兩件事：先行詞（antecedent）是人還是事物，以及它在關係子句中的角色。人 + 主詞用 who（或 that）；人 + 受詞用 whom（口語也可用 who 或 that）；事物 + 主詞或受詞用 which（或 that）；表示所有關係（……的）用 whose + 名詞，人與事物都可以。",
         "examples": [
           {
-            "en": "The consultant who led the workshop will join our team next month.",
+            "en": "The consultant **who** led the workshop will join our team next month.",
             "zh": "主持工作坊的顧問下個月將加入我們團隊。"
           },
           {
-            "en": "Employees whose contracts expire in June should contact the HR department.",
+            "en": "Employees **whose** contracts expire in June should contact the HR department.",
             "zh": "合約在六月到期的員工應聯絡人資部門。"
           }
         ]
@@ -904,11 +904,11 @@
         "explain_zh": "當關係子句本身已經完整（不缺主詞或受詞），且先行詞表示地點、時間或原因時，用關係副詞：地點用 where（相當於 in / at which），時間用 when（相當於 in / on which），原因用 why（先行詞為 reason）。若子句缺主詞或受詞，就要用關係代名詞。判斷方式是把空格拿掉，檢查後面的子句是否完整。",
         "examples": [
           {
-            "en": "The hotel where the conference will be held offers a discount for large groups.",
+            "en": "The hotel **where** the conference will be held offers a discount for large groups.",
             "zh": "舉辦會議的飯店為大型團體提供優惠。"
           },
           {
-            "en": "Please let us know the date when your team will be available.",
+            "en": "Please let us know the date **when** your team will be available.",
             "zh": "請告訴我們貴團隊有空的日期。"
           }
         ]
@@ -918,11 +918,11 @@
         "explain_zh": "限定用法（restrictive）的子句用來「限定」是哪一個先行詞，前後沒有逗號，可用 that、which 或 who。非限定用法（non-restrictive）只是補充說明，前後有逗號，只能用 who、whom、which、whose，不能用 that，關係詞也不可省略。人名、公司名等專有名詞後面的補充說明通常屬於非限定用法。",
         "examples": [
           {
-            "en": "The software that our team developed last year saves us hours of work every week.",
+            "en": "The software **that** our team developed last year saves us hours of work every week.",
             "zh": "我們團隊去年開發的軟體每週為我們節省數小時的工作時間。"
           },
           {
-            "en": "Our CEO, who joined the company in 2018, will announce the new strategy.",
+            "en": "Our CEO, **who** joined the company in 2018, will announce the new strategy.",
             "zh": "我們的執行長於 2018 年加入公司，他將宣布新策略。"
           }
         ]
@@ -932,11 +932,11 @@
         "explain_zh": "作受詞的關係代名詞（whom、which、that）可以省略，作主詞的則不能省略：the report I wrote 可以，但 the employee who works here 的 who 不能省。當介系詞放在關係詞前面時，只能用 whom（指人）或 which（指事物），不能用 who 或 that，例如 the colleague with whom I worked。",
         "examples": [
           {
-            "en": "The proposal Mr. Evans submitted was approved by the board.",
+            "en": "The proposal **Mr. Evans** submitted was approved by the board.",
             "zh": "伊凡斯先生提出的提案獲得董事會核准。"
           },
           {
-            "en": "The client with whom we negotiated last week has agreed to the new terms.",
+            "en": "The client **with whom** we negotiated last week has agreed to the new terms.",
             "zh": "我們上週洽談的客戶已同意新條款。"
           }
         ]
@@ -946,22 +946,22 @@
         "explain_zh": "關係詞作主詞時，可以省略「關係代名詞 + be 動詞」，把子句縮減為分詞片語：主動意義用現在分詞（V-ing），被動意義用過去分詞（p.p.）。例如 the report which was submitted yesterday → the report submitted yesterday。若子句沒有 be 動詞（一般動詞），可直接把動詞改成 V-ing，例如 employees who work in the lab → employees working in the lab。",
         "examples": [
           {
-            "en": "Customers using the mobile app can track their orders in real time.",
+            "en": "Customers **using** the mobile app can track their orders in real time.",
             "zh": "使用行動應用程式的顧客可以即時追蹤訂單。"
           },
           {
-            "en": "The report submitted by the audit team contains several recommendations.",
+            "en": "The report **submitted** by the audit team contains several recommendations.",
             "zh": "稽核小組提交的報告包含數項建議。"
           }
         ]
       }
     ],
     "traps_zh": [
-      "陷阱：關係代名詞後又重複代名詞。❌ The manager whom I met him yesterday → ✅ The manager whom I met yesterday（whom 已經代替 him 作受詞，不可重複）",
-      "陷阱：非限定用法（逗號後）使用 that。❌ The Osaka branch, that opened in 2020, is our largest. → ✅ The Osaka branch, which opened in 2020, is our largest.（逗號後的補充說明不能用 that）",
-      "陷阱：地點先行詞但子句完整，卻用 which。❌ The city which we opened a new office → ✅ The city where we opened a new office / The city in which we opened a new office（子句已完整，須用 where 或 in which）",
-      "陷阱：所有關係誤用 who。❌ The employee who performance improved → ✅ The employee whose performance improved（空格後面直接接名詞，表示「……的」，須用 whose）",
-      "陷阱：關係子句動詞未與先行詞一致。❌ The employees who works in the lab → ✅ The employees who work in the lab（關係代名詞作主詞時，動詞須與先行詞的單複數一致）"
+      "陷阱：關係代名詞後又重複代名詞。❌ The manager whom I **met him** yesterday → ✅ The manager whom I **met** yesterday（whom 已經代替 him 作受詞，不可重複）",
+      "陷阱：非限定用法（逗號後）使用 that。❌ The Osaka branch, **that** opened in 2020, is our largest. → ✅ The Osaka branch, **which** opened in 2020, is our largest.（逗號後的補充說明不能用 that）",
+      "陷阱：地點先行詞但子句完整，卻用 which。❌ The city **which** we opened a new office → ✅ The city **where** we opened a new office / The city **in which** we opened a new office（子句已完整，須用 where 或 in which）",
+      "陷阱：所有關係誤用 who。❌ The employee **who** performance improved → ✅ The employee **whose** performance improved（空格後面直接接名詞，表示「……的」，須用 whose）",
+      "陷阱：關係子句動詞未與先行詞一致。❌ The employees who **works** in the lab → ✅ The employees who **work** in the lab（關係代名詞作主詞時，動詞須與先行詞的單複數一致）"
     ],
     "tip_zh": "三步驟：(1) 找先行詞，判斷是人、事物、地點、時間還是原因；(2) 看子句缺什麼：缺主詞 → who / which / that；缺受詞 → whom / which / that（可省略）；後面直接接名詞 → whose；子句完整 → where / when / why。(3) 有逗號就不能用 that，介系詞後面只能用 whom / which。選項若是 V-ing 或 p.p.，就判斷是主動還是被動。",
     "quick_check": [
@@ -1000,11 +1000,11 @@
         "explain_zh": "多益最常考的是字根相同、字尾不同的形容詞：considerable（相當大的）vs. considerate（體貼的）；confident（有自信的）vs. confidential（機密的）；sensible（明智的）vs. sensitive（敏感的）；eligible（有資格的）vs. illegible（無法辨認的）；industrious（勤奮的）vs. industrial（工業的）；economic（經濟上的）vs. economical（節省的、經濟實惠的）。必須依句意判斷，不能憑印象選字。",
         "examples": [
           {
-            "en": "Mr. Chen made a considerable contribution to the success of the product launch.",
+            "en": "Mr. Chen made a **considerable** contribution to the success of the product launch.",
             "zh": "陳先生對產品上市的成功貢獻良多。"
           },
           {
-            "en": "Buying supplies in bulk is a more economical choice for small businesses.",
+            "en": "Buying supplies in bulk is a more **economical** choice for small businesses.",
             "zh": "大量採購物資對小型企業來說是更經濟實惠的選擇。"
           }
         ]
@@ -1014,11 +1014,11 @@
         "explain_zh": "price 指商品的標價（reasonable price、price tag）；cost 指製造或營運所需的成本與花費（labor cost、cost of living）；fee 指服務、會員、報名、專業人士的費用（membership fee、registration fee、consultant's fee）；fare 專指交通票價（bus fare、airfare）；charge 指實際收取的費用，常見 service charge、extra charge、free of charge。rate 則是依單位計算的費率（interest rate、room rate）。",
         "examples": [
           {
-            "en": "The company will cover the cost of the trip, including airfare and local taxi fares.",
+            "en": "The company will cover the **cost** of the trip, including **airfare** and local taxi **fares**.",
             "zh": "公司將負擔此趟行程的費用，包括機票和當地計程車車資。"
           },
           {
-            "en": "A small service charge is added to every bill, and the membership fee is waived for the first year.",
+            "en": "A small **service charge** is added to every bill, and the **membership fee** is waived for the first year.",
             "zh": "每張帳單都會加收少額服務費，且第一年免收會員費。"
           }
         ]
@@ -1028,11 +1028,11 @@
         "explain_zh": "affect 是動詞，意思是「影響」，後面直接接受詞（affect sales）；effect 通常是名詞，意思是「效果、影響」，常與冠詞、形容詞搭配（have an effect on、a positive effect、take effect 生效）。簡單判斷：空格需要動詞選 affect，空格需要名詞選 effect。（effect 也可作動詞表示「實現」，如 effect a change，但考題中少見。）",
         "examples": [
           {
-            "en": "The new import tax will affect the prices of electronic products.",
+            "en": "The new import tax will **affect** the prices of electronic products.",
             "zh": "新的進口稅將影響電子產品的價格。"
           },
           {
-            "en": "The price increase had little effect on customer demand.",
+            "en": "The price increase had little **effect** on customer demand.",
             "zh": "漲價對顧客需求幾乎沒有影響。"
           }
         ]
@@ -1042,11 +1042,11 @@
         "explain_zh": "rise（rose, risen）是不及物動詞，意思是「上升」，後面不接受詞；raise（raised, raised）是及物動詞，意思是「提高、提出」，後面必須有受詞。lend 是「借出」，borrow 是「借入」（borrow A from B）。bring 是「帶來（朝說話者或目的地）」，take 是「帶走（離開說話者）」。",
         "examples": [
           {
-            "en": "The company plans to raise its prices because the cost of materials has risen.",
+            "en": "The company plans to **raise** its prices because the cost of materials has **risen**.",
             "zh": "由於原料成本上漲，公司計畫調高售價。"
           },
           {
-            "en": "Staff may borrow laptops from the IT department, which lends them out for up to one week.",
+            "en": "Staff may **borrow** laptops from the IT department, which **lends** them out for up to one week.",
             "zh": "員工可向資訊部門借用筆電，資訊部門最多出借一週。"
           }
         ]
@@ -1056,22 +1056,22 @@
         "explain_zh": "商務英文有許多固定搭配，選項若是近義字，要選與前後字搭配的那一個：reach an agreement、make a decision、meet a deadline、hold a meeting、place an order、submit a report、conduct a survey。解題時先蓋住選項想想空格需要什麼意思，再用詞性刪去不合的選項，最後比較剩下選項的搭配。",
         "examples": [
           {
-            "en": "After three rounds of negotiation, the two companies finally reached an agreement.",
+            "en": "After three rounds of negotiation, the two companies finally **reached an agreement**.",
             "zh": "經過三輪協商，兩家公司終於達成協議。"
           },
           {
-            "en": "We must meet the deadline, so please submit your reports by noon tomorrow.",
+            "en": "We must **meet the deadline**, so please **submit** your reports by noon tomorrow.",
             "zh": "我們必須趕上期限，所以請在明天中午前提交報告。"
           }
         ]
       }
     ],
     "traps_zh": [
-      "陷阱：confident 與 confidential 混淆。❌ The salary data is strictly confident. → ✅ The salary data is strictly confidential.（confident 是「有自信的」，confidential 才是「機密的」）",
-      "陷阱：affect 與 effect 詞性搞錯。❌ The weather may effect our delivery schedule. → ✅ The weather may affect our delivery schedule.（空格需要動詞，用 affect；effect 通常是名詞，如 the effect of the weather）",
-      "陷阱：把 rise 當及物動詞用。❌ Our sales raised by ten percent last year. → ✅ Our sales rose by ten percent last year.（sales 是主詞、後面沒有受詞，須用不及物動詞 rise 的過去式 rose）",
-      "陷阱：lend 與 borrow 方向弄反。❌ May I lend your stapler? → ✅ May I borrow your stapler?（向別人借東西用 borrow；lend 是把東西借給別人）",
-      "陷阱：considerable 與 considerate 混淆。❌ The firm reported a considerate increase in profits. → ✅ The firm reported a considerable increase in profits.（considerate 是「體貼的」，用來形容人；considerable 才是「可觀的、相當大的」）"
+      "陷阱：confident 與 confidential 混淆。❌ The salary data is strictly **confident**. → ✅ The salary data is strictly **confidential**.（confident 是「有自信的」，confidential 才是「機密的」）",
+      "陷阱：affect 與 effect 詞性搞錯。❌ The weather may **effect** our delivery schedule. → ✅ The weather may **affect** our delivery schedule.（空格需要動詞，用 affect；effect 通常是名詞，如 the effect of the weather）",
+      "陷阱：把 rise 當及物動詞用。❌ Our sales **raised** by ten percent last year. → ✅ Our sales **rose** by ten percent last year.（sales 是主詞、後面沒有受詞，須用不及物動詞 rise 的過去式 rose）",
+      "陷阱：lend 與 borrow 方向弄反。❌ May I **lend** your stapler? → ✅ May I **borrow** your stapler?（向別人借東西用 borrow；lend 是把東西借給別人）",
+      "陷阱：considerable 與 considerate 混淆。❌ The firm reported a **considerate** increase in profits. → ✅ The firm reported a **considerable** increase in profits.（considerate 是「體貼的」，用來形容人；considerable 才是「可觀的、相當大的」）"
     ],
     "tip_zh": "三步驟：(1) 先蓋住選項，用中文想空格該是什麼意思；(2) 看空格前後的搭配（動詞 + 受詞、形容詞 + 名詞），並用詞性刪去不合的選項；(3) 遇到拼法相似的選項，逐一翻成中文代回句子比較，不要因為「看起來眼熟」就選。",
     "quick_check": [

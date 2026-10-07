@@ -278,6 +278,10 @@
   .lesson-ex{ background:var(--surface-2); border-radius:10px; padding:10px 12px; margin-top:8px; display:flex; gap:10px; align-items:flex-start; font-size:14px; line-height:1.55; }
   .lesson-ex .en{ font-style:italic; }
   .lesson-ex .zh{ color:var(--text-muted); margin-top:2px; }
+  .en-term{ color:var(--accent); font-weight:700; }
+  mark.hl{ background:color-mix(in srgb, var(--gold) 38%, transparent); color:var(--text); font-weight:700; font-style:normal; border-radius:4px; padding:1px 4px; box-shadow:inset 0 -2px 0 var(--gold); }
+  mark.hl.bad{ background:color-mix(in srgb, var(--danger) 24%, transparent); color:var(--danger); box-shadow:none; text-decoration:line-through; text-decoration-thickness:1.5px; }
+  mark.hl.good{ background:color-mix(in srgb, var(--success) 24%, transparent); color:var(--success); box-shadow:none; }
   .lesson-trap{ border-left:3px solid var(--danger); background:var(--danger-soft); border-radius:6px; padding:10px 12px; margin-bottom:8px; font-size:14px; line-height:1.65; }
   .lesson-tip{ background:var(--accent-soft); border-radius:10px; padding:12px 14px; font-size:14.5px; line-height:1.7; }
   .p5-filter-banner{ display:flex; flex-wrap:wrap; align-items:center; gap:8px; background:var(--accent-soft); border-radius:10px; padding:8px 12px; margin-bottom:12px; font-size:13.5px; }
@@ -3279,6 +3283,31 @@ function practiceGrammarCategory(cat){
   renderStage();
 }
 
+/* Highlighting so learners can see WHICH word a sentence is teaching:
+   - lessonProse(): Chinese explanations mention English terms (a / an / the, -tion, by the time…);
+     give each run of English its own colour.
+   - lessonMarked(): example sentences carry **word** markers around the exact word being illustrated.
+   - lessonTrapHtml(): traps look like "陷阱：…❌ wrong → ✅ right（原因）"; markers inside the ❌ part render
+     red (the mistake) and inside the ✅ part green (the fix). */
+function lessonProse(text){
+  return text.replace(/-?[A-Za-z][A-Za-z.'’\-]*(?:\s+-?[A-Za-z][A-Za-z.'’\-]*)*/g, m=>`<span class="en-term">${m}</span>`);
+}
+function lessonMarked(text){
+  return text.split("**").map((seg,i)=> i%2 ? `<mark class="hl">${wrapWords(seg)}</mark>` : wrapWords(seg)).join("");
+}
+function lessonTrapHtml(text){
+  const i = text.indexOf("❌");
+  const head = i > 0 ? lessonProse(text.slice(0,i)) : "";
+  let body = i >= 0 ? text.slice(i) : text;
+  body = body.replace(/（[^）]*）/g, m=>lessonProse(m));
+  body = body.replace(/\*\*(.+?)\*\*/g, (m, seg, off, whole)=>{
+    const before = whole.slice(0, off);
+    const cls = before.lastIndexOf("✅") > before.lastIndexOf("❌") ? "hl good" : "hl bad";
+    return `<mark class="${cls}">${seg}</mark>`;
+  });
+  return head + body;
+}
+
 function renderLessonMode(container){
   if(grammarLessons.length === 0){
     container.innerHTML = `<div class="empty-state">文法課程準備中，稍後再回來看看！</div>`;
@@ -3314,19 +3343,19 @@ function renderLessonMode(container){
   const exTexts = [];
   const kpHtml = l.key_points.map((kp,ki)=>`
     <div class="lesson-sec">
-      <div class="lesson-h"><span class="lesson-num">${ki+1}</span>${kp.heading_zh}</div>
-      <p class="lesson-p">${kp.explain_zh}</p>
+      <div class="lesson-h"><span class="lesson-num">${ki+1}</span><span>${lessonProse(kp.heading_zh)}</span></div>
+      <p class="lesson-p">${lessonProse(kp.explain_zh)}</p>
       ${kp.examples.map(ex=>{
-        const n = exTexts.push(ex.en) - 1;
+        const n = exTexts.push(ex.en.replace(/\*\*/g, "")) - 1;
         return `
         <div class="lesson-ex">
           <button class="speak-btn" data-ex="${n}" style="width:30px;height:30px;font-size:13px;flex:none;" title="播放例句" ${canSpeak?'':'disabled'}>🔊</button>
-          <div><div class="en">${wrapWords(ex.en)}</div><div class="zh">${ex.zh}</div></div>
+          <div><div class="en">${lessonMarked(ex.en)}</div><div class="zh">${ex.zh}</div></div>
         </div>`;
       }).join("")}
     </div>`).join("");
 
-  const trapsHtml = l.traps_zh.map(t=>`<div class="lesson-trap">${t}</div>`).join("");
+  const trapsHtml = l.traps_zh.map(t=>`<div class="lesson-trap">${lessonTrapHtml(t)}</div>`).join("");
 
   const checkHtml = l.quick_check.map((q,qi)=>{
     const key = l.category + ":" + qi;
@@ -3342,7 +3371,7 @@ function renderLessonMode(container){
       }
       return `<button class="${cls}" data-qc="${qi}" data-oi="${oi}" ${answered?'disabled':''}>${String.fromCharCode(65+oi)}. ${opt}</button>`;
     }).join("");
-    const explain = answered ? `<div class="q-explain">${chosen===q.answer_index?'✅ 答對了！':'❌ 答錯了。'} 正確答案是 (${String.fromCharCode(65+q.answer_index)})。<br>${q.explanation_zh}</div>` : "";
+    const explain = answered ? `<div class="q-explain">${chosen===q.answer_index?'✅ 答對了！':'❌ 答錯了。'} 正確答案是 (${String.fromCharCode(65+q.answer_index)})。<br>${lessonProse(q.explanation_zh)}</div>` : "";
     return `<div class="q-card"><div class="q-head" style="margin-bottom:8px;">${qi+1}. ${sentence}</div>${opts}${explain}</div>`;
   }).join("");
 
@@ -3357,13 +3386,13 @@ function renderLessonMode(container){
       <div class="lesson-title-zh">${idx+1}. ${l.title_zh}</div>
       <div class="lesson-title-en">${l.title_en||''}</div>
     </div>
-    <p class="lesson-summary">${l.summary_zh}</p>
+    <p class="lesson-summary">${lessonProse(l.summary_zh)}</p>
     <div class="lesson-label">📚 重點規則</div>
     ${kpHtml}
     <div class="lesson-label">⚠️ 多益常見陷阱</div>
     ${trapsHtml}
     <div class="lesson-label">💡 快速解題</div>
-    <div class="lesson-tip">${l.tip_zh}</div>
+    <div class="lesson-tip">${lessonProse(l.tip_zh)}</div>
     <div class="lesson-label">✏️ 小試身手</div>
     <div class="questions-col">${checkHtml}</div>
     <div class="reading-actions" style="flex-direction:column;align-items:center;">
