@@ -262,6 +262,24 @@
   .reading-actions{ display:flex; justify-content:center; gap:10px; margin-top:20px; }
   .reading-score{ text-align:center; font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--text-muted); margin-top:14px; }
 
+  /* Grammar lessons */
+  .lesson-title{ margin-bottom:6px; }
+  .lesson-title-zh{ font-size:24px; font-weight:700; }
+  .lesson-title-en{ font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:var(--text-muted); letter-spacing:.04em; }
+  .lesson-summary{ margin:8px 0 18px; font-size:14.5px; line-height:1.7; color:var(--text-muted); }
+  .lesson-label{ font-weight:700; font-size:13px; letter-spacing:.04em; color:var(--accent); margin:22px 0 10px; }
+  .lesson-sec{ background:var(--surface); border:1px solid var(--border); border-radius:12px; box-shadow:var(--shadow); padding:16px 18px; margin-bottom:12px; }
+  .lesson-h{ font-weight:700; font-size:15.5px; margin-bottom:6px; display:flex; align-items:center; gap:8px; }
+  .lesson-num{ display:inline-flex; align-items:center; justify-content:center; width:22px; height:22px; border-radius:50%; background:var(--accent); color:var(--accent-contrast); font-size:12px; font-family:"IBM Plex Mono",monospace; flex:none; }
+  .lesson-p{ margin:0 0 6px; font-size:14.5px; line-height:1.75; }
+  .lesson-ex{ background:var(--surface-2); border-radius:10px; padding:10px 12px; margin-top:8px; display:flex; gap:10px; align-items:flex-start; font-size:14px; line-height:1.55; }
+  .lesson-ex .en{ font-style:italic; }
+  .lesson-ex .zh{ color:var(--text-muted); margin-top:2px; }
+  .lesson-trap{ border-left:3px solid var(--danger); background:var(--danger-soft); border-radius:6px; padding:10px 12px; margin-bottom:8px; font-size:14px; line-height:1.65; }
+  .lesson-tip{ background:var(--accent-soft); border-radius:10px; padding:12px 14px; font-size:14.5px; line-height:1.7; }
+  .p5-filter-banner{ display:flex; flex-wrap:wrap; align-items:center; gap:8px; background:var(--accent-soft); border-radius:10px; padding:8px 12px; margin-bottom:12px; font-size:13.5px; }
+  .p5-filter-banner span{ margin-right:auto; font-weight:600; }
+
   /* Story reading (導讀) */
   .story-guide{ margin-top:14px; padding-top:14px; border-top:1px dashed var(--border); }
   .story-guide-head{ font-weight:700; font-size:13px; letter-spacing:.04em; color:var(--accent); margin-bottom:8px; }
@@ -382,6 +400,7 @@
     <button class="subtab" data-cat="vocab" role="tab" aria-selected="true">單字學習</button>
     <button class="subtab" data-cat="toeic" role="tab" aria-selected="false">TOEIC 模擬</button>
     <button class="subtab" data-cat="reading" role="tab" aria-selected="false">閱讀練習</button>
+    <button class="subtab" data-cat="teach" role="tab" aria-selected="false">文法教學</button>
   </div>
 
   <div class="tabs" role="tablist" data-cat-group="vocab">
@@ -399,6 +418,9 @@
   <div class="tabs" role="tablist" data-cat-group="reading" style="display:none;">
     <button class="tab" data-mode="daily" role="tab" aria-selected="false">📅 每日一篇</button>
     <button class="tab" data-mode="story" role="tab" aria-selected="false">📖 故事閱讀</button>
+  </div>
+  <div class="tabs" role="tablist" data-cat-group="teach" style="display:none;">
+    <button class="tab" data-mode="lesson" role="tab" aria-selected="false">📘 文法課程</button>
   </div>
 
   <div class="controls" id="vocabControls">
@@ -641,6 +663,17 @@ let p5Items = [];
 let p6Items = [];
 let grammarPart = "p5";
 let p5Order = []; let p5Idx = 0; let p5Selected = null; let p5Checked = false;
+/* When set (a P5 category key), Part 5 practice is limited to that grammar type — used by the 文法教學
+   lessons' "練習這個類型" button. Cleared whenever Part 5 is opened from the TOEIC 測驗 hub. */
+let p5CategoryFilter = null;
+
+/* 文法教學：每堂課對應 Part 5 題庫的一個文法類型（category），先講規則/陷阱，再接到同類型題目練習。 */
+let grammarLessons = [];
+let lessonStage = "picker"; // "picker" | "lesson"
+let currentLessonCat = null;
+let lessonAnswers = {}; // quick-check answers for this visit only, keyed "<category>:<index>"
+const LESSON_ORDER = ["noun_form","adjective_adverb","verb_form","subject_verb_agreement","pronoun",
+  "preposition","conjunction_connector","relative_clause","comparison","word_choice"];
 let p6Order = []; let p6Idx = 0; let p6Selected = {}; let p6Checked = false;
 let p5Progress = {}; // {idx: "correct"|"wrong"}, scoped to this part's content version — see initAllProgress()
 let p6Progress = {};
@@ -1338,6 +1371,7 @@ document.querySelectorAll(".tab").forEach(btn=>{
     if(mode === "toeic_hub") toeicHubStage = "generations";
     if(mode === "theme") themeStage = "picker";
     if(mode === "phrase") phraseStage = "picker";
+    if(mode === "lesson") lessonStage = "picker";
     if(mode === "spelling") rebuildSpellingOrder();
     if(mode === "daily") dailyStage = "picker";
     if(mode === "story") storyStage = "picker";
@@ -1354,7 +1388,8 @@ document.querySelectorAll(".tab").forEach(btn=>{
 const MODE_TO_CATEGORY = {
   card:"vocab", list:"vocab", theme:"vocab", phrase:"vocab", spelling:"vocab", saved:"vocab",
   quiz:"toeic", toeic_hub:"toeic", listening:"toeic", grammar:"toeic", reading:"toeic",
-  daily:"reading", story:"reading"
+  daily:"reading", story:"reading",
+  lesson:"teach"
 };
 function showCategory(cat){
   document.querySelectorAll(".tabs[data-cat-group]").forEach(el=>{
@@ -1819,7 +1854,8 @@ function renderGrammarMode(container){
 
 function p5FilterList(){
   const mode = document.getElementById("grammarFilterMode").value;
-  return filterByMode(p5Items, p5Progress, mode);
+  const base = p5CategoryFilter ? p5Items.filter(it=>it.category === p5CategoryFilter) : p5Items;
+  return filterByMode(base, p5Progress, mode);
 }
 
 function renderP5(container){
@@ -1850,7 +1886,15 @@ function renderP5(container){
 
   const explainHtml = checked ? `<div class="q-explain">${p5Selected===item.answer_index?'✅ 答對了！':'❌ 答錯了。'} 正確答案是 (${String.fromCharCode(65+item.answer_index)})。<br>${item.explanation_zh}</div>` : "";
 
+  const filterBanner = p5CategoryFilter ? `
+    <div class="p5-filter-banner">
+      <span>只練習「${P5_CATEGORY_LABELS[p5CategoryFilter]||p5CategoryFilter}」類型</span>
+      <button class="icon-btn" id="p5BackToLessonBtn" style="padding:5px 10px;font-size:12.5px;">📘 回到這堂課</button>
+      <button class="icon-btn" id="p5ClearFilterBtn" style="padding:5px 10px;font-size:12.5px;">看全部題目</button>
+    </div>` : "";
+
   container.innerHTML = `
+    ${filterBanner}
     <div class="reading-head">
       <div class="reading-tag"><span class="chip cat">${P5_CATEGORY_LABELS[item.category]||item.category}</span></div>
       <div class="reading-nav">
@@ -1870,6 +1914,10 @@ function renderP5(container){
     </div>
   `;
 
+  document.getElementById("p5ClearFilterBtn")?.addEventListener("click", ()=>{
+    p5CategoryFilter = null; p5Idx = 0; p5Selected = null; p5Checked = false; renderStage();
+  });
+  document.getElementById("p5BackToLessonBtn")?.addEventListener("click", ()=> goToLesson(p5CategoryFilter));
   if(!checked){
     container.querySelectorAll(".q-opt").forEach(btn=>{
       btn.addEventListener("click", ()=>{ p5Selected = Number(btn.dataset.oi); renderStage(); });
@@ -2733,6 +2781,7 @@ function renderStage(){
   else if(mode === "toeic_hub") renderToeicHub(container);
   else if(mode === "theme") renderThemeMode(container);
   else if(mode === "phrase") renderPhraseMode(container);
+  else if(mode === "lesson") renderLessonMode(container);
   else if(mode === "saved") renderSavedMode(container);
   else if(mode === "spelling") renderSpellingMode(container);
   else if(mode === "daily") renderDailyReadingMode(container);
@@ -3188,6 +3237,145 @@ function renderPhraseMode(container){
   });
 }
 
+/* ---------- Grammar lessons: lesson list -> one lesson (rules, traps, tip, quick check) -> Part 5 practice ---------- */
+function goToLesson(cat){
+  speechSynthesis.cancel();
+  mode = "lesson";
+  lessonStage = "lesson";
+  currentLessonCat = cat;
+  showCategory("teach");
+  document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected", b.dataset.mode==="lesson" ? "true" : "false"));
+  updateControlBarVisibility();
+  renderStage();
+}
+/* Jump into Part 5 practice limited to this lesson's grammar type. Part 5 lives under the TOEIC 模擬
+   category, so switch the category row/tab highlight to match. */
+function practiceGrammarCategory(cat){
+  speechSynthesis.cancel();
+  p5CategoryFilter = cat; p5Idx = 0; p5Selected = null; p5Checked = false;
+  grammarPart = "p5";
+  mode = "grammar";
+  showCategory("toeic");
+  document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected", b.dataset.mode==="toeic_hub" ? "true" : "false"));
+  updateControlBarVisibility();
+  renderStage();
+}
+
+function renderLessonMode(container){
+  if(grammarLessons.length === 0){
+    container.innerHTML = `<div class="empty-state">文法課程準備中，稍後再回來看看！</div>`;
+    return;
+  }
+  const byCat = {};
+  grammarLessons.forEach(l=>{ byCat[l.category] = l; });
+  const ordered = LESSON_ORDER.filter(c=>byCat[c]);
+
+  if(lessonStage === "picker" || !byCat[currentLessonCat]){
+    const rows = ordered.map((c,i)=>{
+      const l = byCat[c];
+      const qs = p5Items.filter(it=>it.category === c);
+      const done = qs.filter(it=>p5Progress[it.id]).length;
+      return `
+        <button class="hub-card" data-lesson="${c}">
+          <div class="hub-card-title">${i+1}. ${l.title_zh}　<span style="font-weight:400;font-size:13px;color:var(--text-muted);">${l.title_en||''}</span></div>
+          <div class="hub-card-sub">${l.summary_zh}</div>
+          ${qs.length ? `<div class="hub-card-sub" style="margin-top:6px;">Part 5 同類型練習：已完成 ${done} / ${qs.length}</div>` : ''}
+        </button>`;
+    }).join("");
+    container.innerHTML = `
+      <div class="hub-intro">先看規則與常見陷阱，再接著練習同類型的 Part 5 題目</div>
+      <div class="hub-list">${rows}</div>`;
+    container.querySelectorAll(".hub-card[data-lesson]").forEach(btn=>{
+      btn.addEventListener("click", ()=> goToLesson(btn.dataset.lesson));
+    });
+    return;
+  }
+
+  const l = byCat[currentLessonCat];
+  const idx = ordered.indexOf(currentLessonCat);
+  const exTexts = [];
+  const kpHtml = l.key_points.map((kp,ki)=>`
+    <div class="lesson-sec">
+      <div class="lesson-h"><span class="lesson-num">${ki+1}</span>${kp.heading_zh}</div>
+      <p class="lesson-p">${kp.explain_zh}</p>
+      ${kp.examples.map(ex=>{
+        const n = exTexts.push(ex.en) - 1;
+        return `
+        <div class="lesson-ex">
+          <button class="speak-btn" data-ex="${n}" style="width:30px;height:30px;font-size:13px;flex:none;" title="播放例句" ${canSpeak?'':'disabled'}>🔊</button>
+          <div><div class="en">${wrapWords(ex.en)}</div><div class="zh">${ex.zh}</div></div>
+        </div>`;
+      }).join("")}
+    </div>`).join("");
+
+  const trapsHtml = l.traps_zh.map(t=>`<div class="lesson-trap">${t}</div>`).join("");
+
+  const checkHtml = l.quick_check.map((q,qi)=>{
+    const key = l.category + ":" + qi;
+    const chosen = lessonAnswers[key];
+    const answered = chosen !== undefined;
+    const blank = answered ? `<span class="p5-blank">${q.options[chosen]}</span>` : `<span class="p5-blank">＿＿＿＿</span>`;
+    const sentence = wrapWords(q.sentence).replace(/_{4,}/, blank);
+    const opts = q.options.map((opt,oi)=>{
+      let cls = "q-opt";
+      if(answered){
+        if(oi === q.answer_index) cls += " correct";
+        else if(oi === chosen) cls += " wrong";
+      }
+      return `<button class="${cls}" data-qc="${qi}" data-oi="${oi}" ${answered?'disabled':''}>${String.fromCharCode(65+oi)}. ${opt}</button>`;
+    }).join("");
+    const explain = answered ? `<div class="q-explain">${chosen===q.answer_index?'✅ 答對了！':'❌ 答錯了。'} 正確答案是 (${String.fromCharCode(65+q.answer_index)})。<br>${q.explanation_zh}</div>` : "";
+    return `<div class="q-card"><div class="q-head" style="margin-bottom:8px;">${qi+1}. ${sentence}</div>${opts}${explain}</div>`;
+  }).join("");
+
+  const qs = p5Items.filter(it=>it.category === l.category);
+  const done = qs.filter(it=>p5Progress[it.id]).length;
+  const prevCat = idx > 0 ? ordered[idx-1] : null;
+  const nextCat = idx < ordered.length-1 ? ordered[idx+1] : null;
+
+  container.innerHTML = `
+    <button class="icon-btn" id="lessonBackBtn" style="margin-bottom:14px;">◀ 返回課程列表</button>
+    <div class="lesson-title">
+      <div class="lesson-title-zh">${idx+1}. ${l.title_zh}</div>
+      <div class="lesson-title-en">${l.title_en||''}</div>
+    </div>
+    <p class="lesson-summary">${l.summary_zh}</p>
+    <div class="lesson-label">📚 重點規則</div>
+    ${kpHtml}
+    <div class="lesson-label">⚠️ 多益常見陷阱</div>
+    ${trapsHtml}
+    <div class="lesson-label">💡 快速解題</div>
+    <div class="lesson-tip">${l.tip_zh}</div>
+    <div class="lesson-label">✏️ 小試身手</div>
+    <div class="questions-col">${checkHtml}</div>
+    <div class="reading-actions" style="flex-direction:column;align-items:center;">
+      ${qs.length ? `<button class="mark-btn known" id="lessonPracticeBtn">練習這個類型的 Part 5 題目（${qs.length} 題${done?`，已完成 ${done}`:''}）▶</button>` : ''}
+    </div>
+    <div class="card-nav-row" style="margin-top:22px;">
+      <button class="icon-btn" id="lessonPrevBtn" ${prevCat?'':'disabled'}>◀ 上一課</button>
+      <button class="icon-btn" id="lessonNextBtn" ${nextCat?'':'disabled'}>下一課 ▶</button>
+    </div>
+  `;
+
+  document.getElementById("lessonBackBtn").addEventListener("click", ()=>{
+    speechSynthesis.cancel();
+    lessonStage = "picker";
+    renderStage();
+  });
+  container.querySelectorAll("[data-ex]").forEach(btn=>{
+    btn.addEventListener("click", ()=> speak(exTexts[Number(btn.dataset.ex)]));
+  });
+  container.querySelectorAll(".q-opt[data-qc]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      lessonAnswers[l.category + ":" + btn.dataset.qc] = Number(btn.dataset.oi);
+      renderStage();
+    });
+  });
+  document.getElementById("lessonPracticeBtn")?.addEventListener("click", ()=> practiceGrammarCategory(l.category));
+  document.getElementById("lessonPrevBtn")?.addEventListener("click", ()=>{ if(prevCat){ goToLesson(prevCat); window.scrollTo(0,0); } });
+  document.getElementById("lessonNextBtn")?.addEventListener("click", ()=>{ if(nextCat){ goToLesson(nextCat); window.scrollTo(0,0); } });
+}
+
 /* ---------- TOEIC hub: generations -> parts -> existing practice UI ---------- */
 function renderToeicHub(container){
   if(toeicHubStage === "parts"){
@@ -3209,6 +3397,7 @@ function renderToeicHub(container){
         const part = TOEIC_PARTS.find(p=>p.key === btn.dataset.part);
         mode = part.mode;
         if(part.mode === "grammar") grammarPart = part.sub;
+        p5CategoryFilter = null; // opening Part 5 from the hub always means the full bank
         if(part.mode === "listening") listeningPart = part.sub;
         document.querySelectorAll(".tab").forEach(b=>b.setAttribute("aria-selected", b.dataset.mode==="toeic_hub" ? "true" : "false"));
         updateControlBarVisibility();
@@ -3347,6 +3536,10 @@ async function loadPhraseBank(){
   phraseBank = await loadJSONData("phrase_bank.json", []);
   if(mode === "phrase") renderStage();
 }
+async function loadGrammarLessons(){
+  grammarLessons = await loadJSONData("grammar_lessons.json", []);
+  if(mode === "lesson") renderStage();
+}
 async function loadDailyReading(){
   /* Articles are written ahead of time with their release date; the site only reveals the ones whose
      date has arrived. That makes "one new article a day" happen on its own at the viewer's local
@@ -3393,6 +3586,7 @@ loadP3();
 loadP4();
 loadThemeVocab();
 loadPhraseBank();
+loadGrammarLessons();
 loadDailyReading();
 loadStoryReading();
 </script>
