@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
   :root{
+    color-scheme:light;
     --bg:#f6f3ec;
     --surface:#ffffff;
     --surface-2:#efeae0;
@@ -26,6 +27,7 @@
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
+      color-scheme:dark;
       --bg:#15181a;
       --surface:#1d2124;
       --surface-2:#23282b;
@@ -45,6 +47,7 @@
     }
   }
   :root[data-theme="dark"]{
+    color-scheme:dark;
     --bg:#15181a;
     --surface:#1d2124;
     --surface-2:#23282b;
@@ -353,7 +356,7 @@
 
   /* TOEIC hub (generation picker -> Part picker) */
   .hub-list{ display:grid; gap:12px; max-width:640px; margin:0 auto; }
-  .hub-card{ display:block; width:100%; text-align:left; background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:18px 20px; cursor:pointer; box-shadow:var(--shadow); }
+  .hub-card{ display:block; width:100%; text-align:left; background:var(--surface); color:var(--text); border:1px solid var(--border); border-radius:14px; padding:18px 20px; cursor:pointer; box-shadow:var(--shadow); }
   .hub-card:hover{ border-color:var(--accent); }
   .hub-card-title{ font-size:17px; font-weight:700; margin-bottom:4px; }
   .hub-card-sub{ font-size:13px; color:var(--text-muted); font-family:"IBM Plex Mono",monospace; }
@@ -380,10 +383,17 @@
   .auth-btn.secondary{ background:var(--surface-2); color:var(--text-muted); border:1px solid var(--border); }
   .sync-note{ font-family:"IBM Plex Mono",monospace; font-size:11px; }
 </style>
+<script>
+/* Apply a saved theme choice before first paint so a light/dark override doesn't flash. */
+try{ var t = localStorage.getItem("toeic-theme"); if(t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t); }catch(e){}
+</script>
 </head>
 <body>
 <div class="app">
-  <div class="auth-bar" id="authBar"></div>
+  <div class="auth-bar">
+    <button class="auth-btn secondary" id="themeToggle" title="切換外觀：自動／淺色／深色">🌓 自動</button>
+    <span id="authBar" style="display:contents;"></span>
+  </div>
   <div class="top">
     <div class="brand">
       <span class="kicker">TOEIC Core Vocabulary</span>
@@ -2773,6 +2783,14 @@ function renderStoryMode(container){
 /* ---------- Master render ---------- */
 function renderStage(){
   const container = document.getElementById("stage");
+  if(vocabLoadFailed && (mode === "card" || mode === "list" || mode === "quiz")){
+    container.innerHTML = `
+      <div class="empty-state">單字資料載入失敗（可能是網路不穩）。<br>你的學習進度都還在，沒有受到影響。<br><br>
+        <button class="icon-btn" id="vocabRetryBtn" style="margin:0 auto;">🔄 重新載入單字</button>
+      </div>`;
+    document.getElementById("vocabRetryBtn").addEventListener("click", ()=> loadVocab());
+    return;
+  }
   if(mode === "card") renderCardMode(container);
   else if(mode === "list") renderListMode(container);
   else if(mode === "reading") renderReadingMode(container);
@@ -3466,18 +3484,36 @@ function saveCardPosition(id){
   pushCloudCardPos(entry);
 }
 
+/* True when the real word bank couldn't be downloaded (flaky network). The vocab tabs then show a retry
+   button instead of the 3 built-in sample words — showing samples on the live site made 總字數 read 3 and,
+   worse, let the card/quiz overwrite your saved position (and cloud copy) with a sample word's id. */
+let vocabLoadFailed = false;
 async function loadVocab(){
   const stage = document.getElementById("stage");
   stage.innerHTML = `<div class="empty-state">正在載入單字資料…</div>`;
-  try{
-    await ensureCurrentVersion();
-    const res = await fetch(dataPath("toeic_vocab.json"));
-    if(!res.ok) throw new Error("HTTP " + res.status);
-    const data = await res.json();
+  vocabLoadFailed = false;
+  let data = null;
+  for(let attempt=0; attempt<3 && !data; attempt++){
+    try{
+      await ensureCurrentVersion();
+      const res = await fetch(dataPath("toeic_vocab.json"));
+      if(!res.ok) throw new Error("HTTP " + res.status);
+      const parsed = await res.json();
+      if(!Array.isArray(parsed) || parsed.length === 0) throw new Error("empty vocab file");
+      data = parsed;
+    }catch(err){
+      if(attempt < 2) await new Promise(r=>setTimeout(r, 1000*(attempt+1)));
+    }
+  }
+  if(data){
     words = data.map((w,i)=>({...w, id: w.id ?? i}));
-  }catch(err){
+  }else if(location.protocol === "file:"){
+    // Opened by double-clicking the file: the browser blocks reading local data, so show a tiny sample set.
     words = FALLBACK_VOCAB.map((w,i)=>({...w, id:i}));
     stage.innerHTML = `<div class="empty-state">找不到單字資料，暫時顯示少量範例單字。<br>（若是直接雙擊開啟 index.html，瀏覽器會擋掉本機檔案讀取，請改用網站連結或本機伺服器開啟。）</div>`;
+  }else{
+    words = [];
+    vocabLoadFailed = true;
   }
   order = words.map(w=>w.id);
   // Categories must be populated first: with an empty category <select>, its value is "" and the
@@ -3573,6 +3609,27 @@ async function loadP4(){
   p4Order = p4Items.map(it=>it.id);
   if(mode === "listening" && listeningPart === "p4") renderStage();
 }
+
+/* Appearance: "auto" follows the computer's light/dark setting (the default, and why the site turns
+   dark on a dark-mode computer); "light"/"dark" force one. Saved per browser. */
+const THEME_LABELS_UI = { auto:"🌓 自動", light:"☀️ 淺色", dark:"🌙 深色" };
+function currentThemeChoice(){
+  let t = "auto";
+  try{ const s = localStorage.getItem("toeic-theme"); if(s === "light" || s === "dark") t = s; }catch(e){}
+  return t;
+}
+function applyThemeChoice(t){
+  if(t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+  else document.documentElement.removeAttribute("data-theme");
+  try{ if(t === "auto") localStorage.removeItem("toeic-theme"); else localStorage.setItem("toeic-theme", t); }catch(e){}
+  const btn = document.getElementById("themeToggle");
+  if(btn) btn.textContent = THEME_LABELS_UI[t];
+}
+document.getElementById("themeToggle").addEventListener("click", ()=>{
+  const next = { auto:"light", light:"dark", dark:"auto" }[currentThemeChoice()];
+  applyThemeChoice(next);
+});
+applyThemeChoice(currentThemeChoice());
 
 savedWords = loadJSON("toeic-saved-words");
 initAllProgress();
