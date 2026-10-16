@@ -1,7 +1,7 @@
 [
   {
     "word": "stapler",
-    "ipa": "/ˈsteɪplər/",
+    "ipa": "[ˋsteplɚ]",
     "pos": "n.",
     "meaning_zh": "釘書機",
     "note_zh": "辦公室最常見的桌上文具之一，Part 1 照片常見於桌面擺設，搭配 staple（釘）當動詞使用。",
@@ -12,7 +12,7 @@
   },
   {
     "word": "staple remover",
-    "ipa": "/ˈsteɪpl rɪˈmuːvər/",
+    "ipa": "[ˋstepḷ rɪˋmuvɚ]",
     "pos": "n.",
     "meaning_zh": "拔釘器",
     "note_zh": "與 stapler 成對的工具，用來移除釘書針，屬於文具用品的常見延伸詞彙。",
@@ -23,7 +23,7 @@
   },
   {
     "word": "paper clip",
-    "ipa": "/ˈpeɪpər klɪp/",
+    "ipa": "[ˋpepɚ klɪp]",
     "pos": "n.",
     "meaning_zh": "迴紋針",
     "note_zh": "比 staple 更輕便的暫時固定方式，常與 binder clip 做比較，TOEIC 照片題常見物件。",
@@ -34,7 +34,7 @@
   },
   {
     "word": "binder clip",
-    "ipa": "/ˈbaɪndər klɪp/",
+    "ipa": "[ˋbaɪndɚ klɪp]",
     "pos": "n.",
     "meaning_zh": "長尾夾",
     "note_zh": "比迴紋針夾力更強，適合固定較厚的文件疊，辦公室照片題常出現在桌面或文件夾上。",
@@ -45,7 +45,7 @@
   },
   {
     "word": "hole punch",
-    "ipa": "/hoʊl pʌntʃ/",
+    "ipa": "[hol pʌntʃ]",
     "pos": "n.",
     "meaning_zh": "打孔機",
     "note_zh": "用來在紙張上打洞以便裝訂進活頁夾，常與 stapler、binder 等文具一起出現。",
@@ -56,7 +56,7 @@
   },
   {
     "word": "filing cabinet",
-    "ipa": "/ˈfaɪlɪŋ ˈkæbɪnət/",
+    "ipa": "[ˋfaɪlɪŋ ˋkæbɪnət]",
     "pos": "n.",
     "meaning_zh": "檔案櫃",
     "note_zh": "辦公室常見大型收納家具，Part 1 照片描述常提到 cabinet 的抽屜是開啟或關閉狀態。",
@@ -67,7 +67,7 @@
   },
   {
     "word": "file folder",
-    "ipa": "/faɪl ˈfoʊldər/",
+    "ipa": "[faɪl ˋfoldɚ]",
     "pos": "n.",
     "meaning_zh": "文件夾",
     "note_zh": "用來分類、保存紙本文件，常見於辦公室桌面或檔案櫃內，是 filing 的具體工具。",
@@ -78,7 +78,7 @@
   },
   {
     "word": "sticky note",
-    "ipa": "/ˈstɪki noʊt/",
+    "ipa": "[ˋstɪkɪ not]",
     "pos": "n.",
     "meaning_zh": "便利貼",
     "note_zh": "常用於留言提醒，Part 1 照片常見貼在螢幕或牆上的小紙條。",
@@ -89,7 +89,7 @@
   },
   {
     "word": "notepad",
-    "ipa": "/ˈnoʊtpæd/",
+    "ipa": "[ˋnotˌpæd]",
     "pos": "n.",
     "meaning_zh": "筆記本；便條本",
     "note_zh": "泛指用來隨手記錄的本子，比 notebook 更強調輕便、隨手撕頁的用途。",
@@ -100,7 +100,7 @@
   },
   {
     "word": "ballpoint pen",
-    "ipa": "/ˈbɔːlpɔɪnt pen/",
+    "ipa": "[ˋbɔlpɔɪnt pɛn]",
     "pos": "n.",
     "meaning_zh": "原子筆",
     "note_zh": "最常見的書寫工具，考題中常與 highlighter、marker 並列出現在辦公桌照片。",
@@ -111,7 +111,7 @@
   },
   {
     "word": "highlighter",
-    "ipa": "/ˈhaɪlaɪtər/",
+    "ipa": "[ˋhaɪlaɪtɚ]",
     "pos": "n.",
     "meaning_zh": "螢光筆",
     "note_zh": "用來標記重點文字，常見於審閱文件或準備報告的情境。",
@@ -122,7 +122,7 @@
   },
   {
     "word": "whiteboard",
-    "ipa": "/ˈwaɪtbɔːrd/",
+    "ipa": "[ˋwaɪtbɔrd]",
     "pos": "n.",
     "meaning_zh": "白板",
     "note_zh": "會議室常見設備，用來寫下重點或畫圖說明，常搭配 marker 一起出現。",
@@ -133,7 +133,7 @@
   },
   {
     "word": "whiteboard marker",
-    "ipa": "/ˈwaɪtbɔːrd ˈmɑːrkər/",
+    "ipa": "[ˋwaɪtbɔrd ˋmɑrkɚ]",
     "pos": "n.",
     "meaning_zh": "白板筆",
     "note_zh": "專門用於白板的筆，乾擦式，與一般 marker（麥克筆）用途不同，需搭配 eraser 使用。",
@@ -144,7 +144,7 @@
   },
   {
     "word": "bulletin board",
-    "ipa": "/ˈbʊlətɪn bɔːrd/",
+    "ipa": "[ˋbʊlətɪn bɔrd]",
     "pos": "n.",
     "meaning_zh": "佈告欄",
     "note_zh": "用來張貼公告、通知的板子，辦公室或公司走廊常見，常與 notice、memo 搭配出現。",
@@ -155,7 +155,7 @@
   },
   {
     "word": "photocopier",
-    "ipa": "/ˈfoʊtoʊˌkɑːpiər/",
+    "ipa": "[ˋfotoˌkɑpɪɚ]",
     "pos": "n.",
     "meaning_zh": "影印機",
     "note_zh": "與 printer 功能不同，專門用於複印紙本文件，考題常出現故障報修情境。",
@@ -166,7 +166,7 @@
   },
   {
     "word": "scanner",
-    "ipa": "/ˈskænər/",
+    "ipa": "[ˋskænɚ]",
     "pos": "n.",
     "meaning_zh": "掃描機",
     "note_zh": "用來把紙本文件轉成電子檔，常與 printer、photocopier 併入「多功能事務機」情境。",
@@ -177,7 +177,7 @@
   },
   {
     "word": "fax machine",
-    "ipa": "/fæks məˈʃiːn/",
+    "ipa": "[fæks məˋʃin]",
     "pos": "n.",
     "meaning_zh": "傳真機",
     "note_zh": "傳統辦公設備，雖現代使用減少，但仍偶爾出現在 TOEIC 情境中，如傳送訂單確認。",
@@ -188,7 +188,7 @@
   },
   {
     "word": "shredder",
-    "ipa": "/ˈʃredər/",
+    "ipa": "[ˋʃrɛdɚ]",
     "pos": "n.",
     "meaning_zh": "碎紙機",
     "note_zh": "用於銷毀機密文件，常見情境為「請將舊文件用碎紙機處理掉」。",
@@ -199,7 +199,7 @@
   },
   {
     "word": "projector",
-    "ipa": "/prəˈdʒektər/",
+    "ipa": "[prəˋdʒɛktɚ]",
     "pos": "n.",
     "meaning_zh": "投影機",
     "note_zh": "會議室常見設備，用於簡報，考題常提到投影機連接筆電或畫面模糊等情境。",
@@ -210,7 +210,7 @@
   },
   {
     "word": "desktop computer",
-    "ipa": "/ˈdesktɑːp kəmˈpjuːtər/",
+    "ipa": "[ˋdɛsktɑp kəmˋpjutɚ]",
     "pos": "n.",
     "meaning_zh": "桌上型電腦",
     "note_zh": "固定式電腦，與可攜式的 laptop 相對，常見於辦公桌照片描述。",
@@ -221,7 +221,7 @@
   },
   {
     "word": "monitor",
-    "ipa": "/ˈmɑːnɪtər/",
+    "ipa": "[ˋmɑnɪtɚ]",
     "pos": "n.",
     "meaning_zh": "螢幕",
     "note_zh": "電腦顯示器，Part 1 照片常描述人「面對螢幕」或「螢幕已關閉」等狀態。",
@@ -232,7 +232,7 @@
   },
   {
     "word": "keyboard",
-    "ipa": "/ˈkiːbɔːrd/",
+    "ipa": "[ˋkiˌbɔrd]",
     "pos": "n.",
     "meaning_zh": "鍵盤",
     "note_zh": "電腦輸入設備，常與 mouse 一起出現在辦公桌照片中。",
@@ -243,7 +243,7 @@
   },
   {
     "word": "mouse",
-    "ipa": "/maʊs/",
+    "ipa": "[maʊs]",
     "pos": "n.",
     "meaning_zh": "滑鼠",
     "note_zh": "電腦輸入設備，注意複數形為 mice，但辦公情境多用單數。",
@@ -254,7 +254,7 @@
   },
   {
     "word": "extension cord",
-    "ipa": "/ɪkˈstenʃn kɔːrd/",
+    "ipa": "[ɪkˋstɛnʃn kɔrd]",
     "pos": "n.",
     "meaning_zh": "延長線",
     "note_zh": "用來延伸電源插座的距離，辦公室或會議室布線常見詞彙。",
@@ -265,7 +265,7 @@
   },
   {
     "word": "power strip",
-    "ipa": "/ˈpaʊər strɪp/",
+    "ipa": "[paʊr strɪp]",
     "pos": "n.",
     "meaning_zh": "電源延長插座；排插",
     "note_zh": "多孔插座裝置，與 extension cord 常一起出現，用於同時連接多台設備。",
@@ -276,7 +276,7 @@
   },
   {
     "word": "envelope",
-    "ipa": "/ˈenvəloʊp/",
+    "ipa": "[ˋɛnvəˌlop]",
     "pos": "n.",
     "meaning_zh": "信封",
     "note_zh": "用於郵寄信件或文件，商務書信情境常見詞，如「將發票裝入信封寄出」。",
@@ -287,7 +287,7 @@
   },
   {
     "word": "letterhead",
-    "ipa": "/ˈletərhed/",
+    "ipa": "[ˋlɛtɚˌhɛd]",
     "pos": "n.",
     "meaning_zh": "信頭；印有公司抬頭的信紙",
     "note_zh": "印有公司名稱、地址、標誌的正式信紙，常用於正式商業書信。",
@@ -298,7 +298,7 @@
   },
   {
     "word": "rubber stamp",
-    "ipa": "/ˈrʌbər stæmp/",
+    "ipa": "[ˋrʌbɚ stæmp]",
     "pos": "n.",
     "meaning_zh": "橡皮圖章",
     "note_zh": "用來蓋章確認文件（如日期章、核准章），常見於行政流程情境。",
@@ -309,7 +309,7 @@
   },
   {
     "word": "ink cartridge",
-    "ipa": "/ɪŋk ˈkɑːrtrɪdʒ/",
+    "ipa": "[ɪŋk ˋkɑrtrɪdʒ]",
     "pos": "n.",
     "meaning_zh": "墨水匣",
     "note_zh": "印表機耗材，考題常見「墨水匣用完，需要更換」的情境。",
@@ -320,7 +320,7 @@
   },
   {
     "word": "toner cartridge",
-    "ipa": "/ˈtoʊnər ˈkɑːrtrɪdʒ/",
+    "ipa": "[ˋtonɚ ˋkɑrtrɪdʒ]",
     "pos": "n.",
     "meaning_zh": "碳粉匣",
     "note_zh": "雷射印表機專用耗材，與噴墨印表機的 ink cartridge 不同，考題常混用測試考生辨別。",
@@ -331,7 +331,7 @@
   },
   {
     "word": "desk lamp",
-    "ipa": "/desk læmp/",
+    "ipa": "[dɛsk læmp]",
     "pos": "n.",
     "meaning_zh": "檯燈",
     "note_zh": "辦公桌常見照明設備，Part 1 照片描述桌面擺設時常提到。",
@@ -342,7 +342,7 @@
   },
   {
     "word": "swivel chair",
-    "ipa": "/ˈswɪvl tʃer/",
+    "ipa": "[swɪvl tʃɛr]",
     "pos": "n.",
     "meaning_zh": "旋轉椅",
     "note_zh": "辦公室常見的可旋轉辦公椅，Part 1 照片常描述人「坐在旋轉椅上」。",
@@ -353,7 +353,7 @@
   },
   {
     "word": "cubicle",
-    "ipa": "/ˈkjuːbɪkl/",
+    "ipa": "[ˋkjubɪkḷ]",
     "pos": "n.",
     "meaning_zh": "隔間辦公桌",
     "note_zh": "以隔板區隔出的個人辦公空間，常見於開放式辦公室描述。",
@@ -364,7 +364,7 @@
   },
   {
     "word": "drawer",
-    "ipa": "/drɔːr/",
+    "ipa": "[drɔr]",
     "pos": "n.",
     "meaning_zh": "抽屜",
     "note_zh": "書桌或櫃子的收納空間，考題常描述「抽屜是打開或關閉的」。",
@@ -375,7 +375,7 @@
   },
   {
     "word": "calculator",
-    "ipa": "/ˈkælkjəleɪtər/",
+    "ipa": "[ˋkælkjəˌletɚ]",
     "pos": "n.",
     "meaning_zh": "計算機",
     "note_zh": "用於快速計算數字，常見於財務、會計相關辦公情境。",
@@ -386,7 +386,7 @@
   },
   {
     "word": "tape dispenser",
-    "ipa": "/teɪp dɪˈspensər/",
+    "ipa": "[tep dɪˋspɛnsɚ]",
     "pos": "n.",
     "meaning_zh": "膠帶台",
     "note_zh": "用來固定並方便撕取膠帶的文具，常見於包裝或黏貼文件情境。",
@@ -397,7 +397,7 @@
   },
   {
     "word": "scissors",
-    "ipa": "/ˈsɪzərz/",
+    "ipa": "[ˋsɪzɚz]",
     "pos": "n.",
     "meaning_zh": "剪刀",
     "note_zh": "常用複數形，用於裁剪紙張或包裝，辦公室基本文具之一。",
@@ -408,7 +408,7 @@
   },
   {
     "word": "thumbtack",
-    "ipa": "/ˈθʌmtæk/",
+    "ipa": "[ˋθʌmtæk]",
     "pos": "n.",
     "meaning_zh": "圖釘",
     "note_zh": "用來將紙張固定在佈告欄或牆上，與 sticky note 常一起出現在情境中。",
@@ -419,7 +419,7 @@
   },
   {
     "word": "schedule",
-    "ipa": "/ˈskedʒuːl/",
+    "ipa": "[ˋskɛdʒul]",
     "pos": "n./v.",
     "meaning_zh": "行程；排程",
     "note_zh": "TOEIC 高頻詞，可作名詞（會議行程）或動詞（安排會議），常見於信件與通知。",
@@ -430,7 +430,7 @@
   },
   {
     "word": "appointment",
-    "ipa": "/əˈpɔɪntmənt/",
+    "ipa": "[əˋpɔɪntmənt]",
     "pos": "n.",
     "meaning_zh": "預約；約定",
     "note_zh": "指與人事先約定好的會面時間，常用於醫療、業務拜訪等情境，搭配 make/reschedule。",
@@ -441,7 +441,7 @@
   },
   {
     "word": "deadline",
-    "ipa": "/ˈdedlaɪn/",
+    "ipa": "[ˋdɛdˌlaɪn]",
     "pos": "n.",
     "meaning_zh": "截止日期",
     "note_zh": "指工作或申請必須完成的最後期限，商務情境極高頻詞彙，常搭配 meet/miss a deadline。",
@@ -452,7 +452,7 @@
   },
   {
     "word": "quarter",
-    "ipa": "/ˈkwɔːrtər/",
+    "ipa": "[ˋkwɔrtɚ]",
     "pos": "n.",
     "meaning_zh": "季度",
     "note_zh": "財務報告常用單位，一年分四個 quarter，與表示「四分之一」的用法不同但相關。",
@@ -463,7 +463,7 @@
   },
   {
     "word": "fiscal year",
-    "ipa": "/ˈfɪskl jɪr/",
+    "ipa": "[ˋfɪskḷ jɪr]",
     "pos": "n.",
     "meaning_zh": "會計年度",
     "note_zh": "公司用於財務報告的年度區間，不一定與日曆年一致，常見於財報、預算情境。",
@@ -474,7 +474,7 @@
   },
   {
     "word": "annual",
-    "ipa": "/ˈænjuəl/",
+    "ipa": "[ˋænjuəl]",
     "pos": "adj.",
     "meaning_zh": "每年的；年度的",
     "note_zh": "常搭配 report、meeting、review 等名詞，表示一年一次的活動或報告。",
@@ -485,7 +485,7 @@
   },
   {
     "word": "quarterly",
-    "ipa": "/ˈkwɔːrtərli/",
+    "ipa": "[ˋkwɔrtɚlɪ]",
     "pos": "adj./adv.",
     "meaning_zh": "季度的；每季一次",
     "note_zh": "與 annual 相對，表示每三個月一次，常見於財報、業績檢討情境。",
@@ -496,7 +496,7 @@
   },
   {
     "word": "biweekly",
-    "ipa": "/ˌbaɪˈwiːkli/",
+    "ipa": "[ˌbaɪˋwiklɪ]",
     "pos": "adj./adv.",
     "meaning_zh": "兩週一次的",
     "note_zh": "注意此字可指「每兩週一次」或「一週兩次」，需依上下文判斷，考試常考此易混詞。",
@@ -507,7 +507,7 @@
   },
   {
     "word": "monthly",
-    "ipa": "/ˈmʌnθli/",
+    "ipa": "[ˋmʌnθlɪ]",
     "pos": "adj./adv.",
     "meaning_zh": "每月的",
     "note_zh": "常搭配 report、fee、meeting 等詞，表示一個月一次的頻率。",
@@ -518,7 +518,7 @@
   },
   {
     "word": "overtime",
-    "ipa": "/ˈoʊvərtaɪm/",
+    "ipa": "[ˋovɚˌtaɪm]",
     "pos": "n.",
     "meaning_zh": "加班；加班費",
     "note_zh": "指超過正常工時的工作，常搭配 work overtime 或 overtime pay 使用。",
@@ -529,7 +529,7 @@
   },
   {
     "word": "business hours",
-    "ipa": "/ˈbɪznəs ˈaʊərz/",
+    "ipa": "[ˋbɪznəs aʊrz]",
     "pos": "n.",
     "meaning_zh": "營業時間",
     "note_zh": "指公司或商店正常運作的時間範圍，常見於通知或公告中。",
@@ -540,7 +540,7 @@
   },
   {
     "word": "time off",
-    "ipa": "/taɪm ɔːf/",
+    "ipa": "[taɪm ɔf]",
     "pos": "n.",
     "meaning_zh": "休假；請假時間",
     "note_zh": "泛指員工暫停工作的時間，可能是有薪或無薪，較 vacation 更廣義。",
@@ -551,7 +551,7 @@
   },
   {
     "word": "extension",
-    "ipa": "/ɪkˈstenʃn/",
+    "ipa": "[ɪkˋstɛnʃn]",
     "pos": "n.",
     "meaning_zh": "延長期限",
     "note_zh": "在時間語境中指截止日的延後，需與 extension cord（延長線）的用法區分。",
@@ -562,7 +562,7 @@
   },
   {
     "word": "postpone",
-    "ipa": "/poʊstˈpoʊn/",
+    "ipa": "[postˋpon]",
     "pos": "v.",
     "meaning_zh": "延後；延期",
     "note_zh": "指將活動改到較晚的時間舉行，同義詞為 put off，反義為 move up。",
@@ -573,7 +573,7 @@
   },
   {
     "word": "reschedule",
-    "ipa": "/riːˈskedʒuːl/",
+    "ipa": "[riˋskɛdʒul]",
     "pos": "v.",
     "meaning_zh": "重新安排時間",
     "note_zh": "指更改原定的行程或會議時間，可能提前或延後，用途比 postpone 更中性。",
@@ -584,7 +584,7 @@
   },
   {
     "word": "in advance",
-    "ipa": "/ɪn ədˈvæns/",
+    "ipa": "[ɪn ədˋvæns]",
     "pos": "phr.",
     "meaning_zh": "事先；提前",
     "note_zh": "常搭配 book、pay、notify 等動詞，表示在某事發生之前先完成。",
@@ -595,7 +595,7 @@
   },
   {
     "word": "ahead of schedule",
-    "ipa": "/əˈhed əv ˈskedʒuːl/",
+    "ipa": "[əˋhɛd əv ˋskɛdʒul]",
     "pos": "phr.",
     "meaning_zh": "超前進度",
     "note_zh": "表示工作進度比預定計畫更快完成，與 behind schedule 相對。",
@@ -606,7 +606,7 @@
   },
   {
     "word": "behind schedule",
-    "ipa": "/bɪˈhaɪnd ˈskedʒuːl/",
+    "ipa": "[bɪˋhaɪnd ˋskɛdʒul]",
     "pos": "phr.",
     "meaning_zh": "落後進度",
     "note_zh": "表示進度比預定計畫慢，常見於專案管理或工程延誤情境。",
@@ -617,7 +617,7 @@
   },
   {
     "word": "on time",
-    "ipa": "/ɑːn taɪm/",
+    "ipa": "[ɑn taɪm]",
     "pos": "phr.",
     "meaning_zh": "準時",
     "note_zh": "指在預定時間內完成或抵達，注意與 in time（來得及）意思不同。",
@@ -628,7 +628,7 @@
   },
   {
     "word": "punctual",
-    "ipa": "/ˈpʌŋktʃuəl/",
+    "ipa": "[ˋpʌŋktʃuəl]",
     "pos": "adj.",
     "meaning_zh": "準時的",
     "note_zh": "形容人守時的特質，常用來稱讚員工或描述會議要求準時到場。",
@@ -639,7 +639,7 @@
   },
   {
     "word": "duration",
-    "ipa": "/dʊˈreɪʃn/",
+    "ipa": "[dʊˋreʃn]",
     "pos": "n.",
     "meaning_zh": "持續期間",
     "note_zh": "表示一段時間的長度，常見於合約、活動或會議長度的描述。",
@@ -650,7 +650,7 @@
   },
   {
     "word": "decade",
-    "ipa": "/ˈdekeɪd/",
+    "ipa": "[ˋdɛked]",
     "pos": "n.",
     "meaning_zh": "十年",
     "note_zh": "表示十年的時間單位，常見於描述公司歷史或長期趨勢。",
@@ -661,7 +661,7 @@
   },
   {
     "word": "estimate",
-    "ipa": "/ˈestɪmeɪt/",
+    "ipa": "[ˋɛstɪmet]",
     "pos": "n./v.",
     "meaning_zh": "估計；估算",
     "note_zh": "可指報價的初步金額，也可作動詞表示預估數量或時間，商用書信常見詞。",
@@ -672,7 +672,7 @@
   },
   {
     "word": "approximately",
-    "ipa": "/əˈprɑːksɪmətli/",
+    "ipa": "[əˋprɑksɪmətlɪ]",
     "pos": "adv.",
     "meaning_zh": "大約",
     "note_zh": "用於數字或時間前表示概數，正式文件與口語皆常用，同義詞 roughly、about。",
@@ -683,7 +683,7 @@
   },
   {
     "word": "at least",
-    "ipa": "/æt liːst/",
+    "ipa": "[æt list]",
     "pos": "phr.",
     "meaning_zh": "至少",
     "note_zh": "表示數量或時間的下限，常見於要求或條件描述中。",
@@ -694,7 +694,7 @@
   },
   {
     "word": "at most",
-    "ipa": "/æt moʊst/",
+    "ipa": "[æt most]",
     "pos": "phr.",
     "meaning_zh": "至多；最多",
     "note_zh": "表示數量或時間的上限，與 at least 相對，常見於規定或限制描述。",
@@ -705,7 +705,7 @@
   },
   {
     "word": "a dozen",
-    "ipa": "/ə ˈdʌzn/",
+    "ipa": "[ə dʌzn]",
     "pos": "phr.",
     "meaning_zh": "一打；十二個",
     "note_zh": "固定表達，等於十二個，常用於訂購數量的描述，如辦公用品採購。",
@@ -716,7 +716,7 @@
   },
   {
     "word": "a couple of",
-    "ipa": "/ə ˈkʌpl əv/",
+    "ipa": "[ə ˋkʌpḷ əv]",
     "pos": "phr.",
     "meaning_zh": "幾個；兩三個",
     "note_zh": "口語中常指「兩個」或概略的「少數幾個」，需依語境判斷。",
@@ -727,7 +727,7 @@
   },
   {
     "word": "several",
-    "ipa": "/ˈsevrəl/",
+    "ipa": "[ˋsɛvrəl]",
     "pos": "adj.",
     "meaning_zh": "數個；好幾個",
     "note_zh": "表示不確定但不算少的數量，通常大於 a couple of，常見於書面報告。",
@@ -738,7 +738,7 @@
   },
   {
     "word": "numerous",
-    "ipa": "/ˈnuːmərəs/",
+    "ipa": "[ˋnumərəs]",
     "pos": "adj.",
     "meaning_zh": "眾多的",
     "note_zh": "比 several 更正式、數量更多，常見於書面報告或正式信函中。",
@@ -749,7 +749,7 @@
   },
   {
     "word": "percentage",
-    "ipa": "/pərˈsentɪdʒ/",
+    "ipa": "[pɚˋsɛntɪdʒ]",
     "pos": "n.",
     "meaning_zh": "百分比",
     "note_zh": "常見於銷售、市場分析報告中，用來描述比例變化。",
@@ -760,7 +760,7 @@
   },
   {
     "word": "double",
-    "ipa": "/ˈdʌbl/",
+    "ipa": "[ˋdʌbḷ]",
     "pos": "v./adj.",
     "meaning_zh": "使加倍；兩倍的",
     "note_zh": "可作動詞（使增加為兩倍）或形容詞，常見於業績成長描述。",
@@ -771,7 +771,7 @@
   },
   {
     "word": "triple",
-    "ipa": "/ˈtrɪpl/",
+    "ipa": "[ˋtrɪpḷ]",
     "pos": "v./adj.",
     "meaning_zh": "使成三倍；三倍的",
     "note_zh": "與 double 用法相似但表示三倍，常見於銷售額或數量的誇張成長描述。",
@@ -782,7 +782,7 @@
   },
   {
     "word": "half",
-    "ipa": "/hæf/",
+    "ipa": "[hæf]",
     "pos": "n./adj.",
     "meaning_zh": "一半",
     "note_zh": "表示二分之一的數量或時間，常見於折扣、進度描述。",
@@ -793,7 +793,7 @@
   },
   {
     "word": "fraction",
-    "ipa": "/ˈfrækʃn/",
+    "ipa": "[frækʃn]",
     "pos": "n.",
     "meaning_zh": "一小部分；分數",
     "note_zh": "可指數學上的分數，也可比喻指「一小部分」，常見於成本或時間的比較描述。",
@@ -804,7 +804,7 @@
   },
   {
     "word": "consecutive",
-    "ipa": "/kənˈsekjətɪv/",
+    "ipa": "[kənˋsɛkjətɪv]",
     "pos": "adj.",
     "meaning_zh": "連續的",
     "note_zh": "表示事件一個接一個不間斷發生，常搭配 days、years、quarters 使用。",
@@ -815,7 +815,7 @@
   },
   {
     "word": "interval",
-    "ipa": "/ˈɪntərvl/",
+    "ipa": "[ˋɪntɚvl]",
     "pos": "n.",
     "meaning_zh": "間隔；時間間距",
     "note_zh": "指兩個事件之間的時間差距，常見於班表、會議安排的描述。",
@@ -826,7 +826,7 @@
   },
   {
     "word": "periodically",
-    "ipa": "/ˌpɪriˈɑːdɪkli/",
+    "ipa": "[ˌpɪriˋɑdɪklɪ]",
     "pos": "adv.",
     "meaning_zh": "定期地",
     "note_zh": "表示每隔一段固定時間重複發生，常見於維護、檢查等制度性描述。",
@@ -837,7 +837,7 @@
   },
   {
     "word": "renewal",
-    "ipa": "/rɪˈnuːəl/",
+    "ipa": "[rɪˋnuəl]",
     "pos": "n.",
     "meaning_zh": "續約；更新",
     "note_zh": "常見於合約、會員或訂閱到期後重新延續的情境，搭配 contract renewal。",
@@ -848,7 +848,7 @@
   },
   {
     "word": "expiration date",
-    "ipa": "/ˌekspəˈreɪʃn deɪt/",
+    "ipa": "[ˌɛkspəˋreʃn det]",
     "pos": "n.",
     "meaning_zh": "到期日；有效期限",
     "note_zh": "指產品、保固或合約失效的日期，與 deadline（完成期限）意義不同。",
@@ -859,7 +859,7 @@
   },
   {
     "word": "commute",
-    "ipa": "/kəˈmjuːt/",
+    "ipa": "[kəˋmjut]",
     "pos": "v./n.",
     "meaning_zh": "通勤",
     "note_zh": "指日常往返住家與工作地點的行程，可作動詞或名詞，TOEIC 高頻詞。",
@@ -870,7 +870,7 @@
   },
   {
     "word": "subway",
-    "ipa": "/ˈsʌbweɪ/",
+    "ipa": "[ˋsʌbwe]",
     "pos": "n.",
     "meaning_zh": "地下鐵",
     "note_zh": "美式英語用詞，英式英語常用 underground 或 tube，考題常見兩者對照。",
@@ -881,7 +881,7 @@
   },
   {
     "word": "bus stop",
-    "ipa": "/bʌs stɑːp/",
+    "ipa": "[bʌs stɑp]",
     "pos": "n.",
     "meaning_zh": "公車站",
     "note_zh": "公車乘客上下車的固定地點，常與 schedule、route 一起出現在情境對話中。",
@@ -892,7 +892,7 @@
   },
   {
     "word": "train station",
-    "ipa": "/treɪn ˈsteɪʃn/",
+    "ipa": "[tren steʃn]",
     "pos": "n.",
     "meaning_zh": "火車站",
     "note_zh": "常見交通樞紐地點，考題常涉及班次查詢、月台位置等情境。",
@@ -903,7 +903,7 @@
   },
   {
     "word": "platform",
-    "ipa": "/ˈplætfɔːrm/",
+    "ipa": "[ˋplætfɔrm]",
     "pos": "n.",
     "meaning_zh": "月台",
     "note_zh": "火車或地鐵站內乘客候車的地方，考題常提及班次改變月台號碼。",
@@ -914,7 +914,7 @@
   },
   {
     "word": "fare",
-    "ipa": "/fer/",
+    "ipa": "[fɛr]",
     "pos": "n.",
     "meaning_zh": "車資；票價",
     "note_zh": "指搭乘大眾運輸需支付的費用，與商品的 price 用詞不同。",
@@ -925,7 +925,7 @@
   },
   {
     "word": "ticket",
-    "ipa": "/ˈtɪkɪt/",
+    "ipa": "[ˋtɪkɪt]",
     "pos": "n.",
     "meaning_zh": "票；車票",
     "note_zh": "泛指各種交通或活動的票券，常搭配 purchase、book、valid 使用。",
@@ -936,7 +936,7 @@
   },
   {
     "word": "boarding pass",
-    "ipa": "/ˈbɔːrdɪŋ pæs/",
+    "ipa": "[ˋbɔrdɪŋ pæs]",
     "pos": "n.",
     "meaning_zh": "登機證",
     "note_zh": "搭機時用於確認座位與登機資格的憑證，常見於機場情境對話。",
@@ -947,7 +947,7 @@
   },
   {
     "word": "transfer",
-    "ipa": "/trænsˈfɜːr/",
+    "ipa": "[trænsˋfɝ]",
     "pos": "v./n.",
     "meaning_zh": "轉乘；轉運",
     "note_zh": "指從一種交通工具換到另一種，也可指行李轉運，商務差旅常見詞。",
@@ -958,7 +958,7 @@
   },
   {
     "word": "layover",
-    "ipa": "/ˈleɪoʊvər/",
+    "ipa": "[ˋleˌovɚ]",
     "pos": "n.",
     "meaning_zh": "轉機停留",
     "note_zh": "指飛行途中在某機場短暫停留等待下一段航班，與 transfer 意義相關但更具體。",
@@ -969,7 +969,7 @@
   },
   {
     "word": "delay",
-    "ipa": "/dɪˈleɪ/",
+    "ipa": "[dɪˋle]",
     "pos": "n./v.",
     "meaning_zh": "延誤",
     "note_zh": "常見於交通、班機情境，指行程比原定時間晚，考題高頻詞。",
@@ -980,7 +980,7 @@
   },
   {
     "word": "depart",
-    "ipa": "/dɪˈpɑːrt/",
+    "ipa": "[dɪˋpɑrt]",
     "pos": "v.",
     "meaning_zh": "出發；離開",
     "note_zh": "正式用詞，常見於交通時刻表，名詞形為 departure。",
@@ -991,7 +991,7 @@
   },
   {
     "word": "arrival",
-    "ipa": "/əˈraɪvl/",
+    "ipa": "[əˋraɪvl]",
     "pos": "n.",
     "meaning_zh": "抵達",
     "note_zh": "與 departure 相對，常見於機場、車站的告示看板用語。",
@@ -1002,7 +1002,7 @@
   },
   {
     "word": "flight",
-    "ipa": "/flaɪt/",
+    "ipa": "[flaɪt]",
     "pos": "n.",
     "meaning_zh": "航班",
     "note_zh": "泛指飛機的班次，商務差旅情境高頻詞，常搭配 book、cancel、delay 等動詞。",
@@ -1013,7 +1013,7 @@
   },
   {
     "word": "airline",
-    "ipa": "/ˈerlaɪn/",
+    "ipa": "[ˋɛrˌlaɪn]",
     "pos": "n.",
     "meaning_zh": "航空公司",
     "note_zh": "提供航空運輸服務的公司，考題常提及航空公司政策或服務內容。",
@@ -1024,7 +1024,7 @@
   },
   {
     "word": "taxi",
-    "ipa": "/ˈtæksi/",
+    "ipa": "[ˋtæksɪ]",
     "pos": "n.",
     "meaning_zh": "計程車",
     "note_zh": "常見市內短程交通方式，考題常提及叫車、搭乘至機場等情境。",
@@ -1035,7 +1035,7 @@
   },
   {
     "word": "ride-sharing",
-    "ipa": "/raɪd ˈʃerɪŋ/",
+    "ipa": "[raɪd ˋʃɛrɪŋ]",
     "pos": "n.",
     "meaning_zh": "共乘服務",
     "note_zh": "指透過應用程式媒合共乘的交通方式，屬於較新但已高頻出現的商務差旅詞彙。",
@@ -1046,7 +1046,7 @@
   },
   {
     "word": "carpool",
-    "ipa": "/ˈkɑːrpuːl/",
+    "ipa": "[ˋkɑrˌpul]",
     "pos": "v./n.",
     "meaning_zh": "共乘上下班",
     "note_zh": "指多人共用一輛車通勤以節省成本，常見於公司鼓勵員工共乘的政策情境。",
@@ -1057,7 +1057,7 @@
   },
   {
     "word": "traffic jam",
-    "ipa": "/ˈtræfɪk dʒæm/",
+    "ipa": "[ˋtræfɪk dʒæm]",
     "pos": "n.",
     "meaning_zh": "交通壅塞",
     "note_zh": "指車輛因擁擠而無法順暢通行，常見於解釋遲到原因的情境。",
@@ -1068,7 +1068,7 @@
   },
   {
     "word": "rush hour",
-    "ipa": "/rʌʃ ˈaʊər/",
+    "ipa": "[rʌʃ aʊr]",
     "pos": "n.",
     "meaning_zh": "尖峰時間",
     "note_zh": "指上下班時段交通特別繁忙的時間，常與 traffic jam 一起出現。",
@@ -1079,7 +1079,7 @@
   },
   {
     "word": "parking lot",
-    "ipa": "/ˈpɑːrkɪŋ lɑːt/",
+    "ipa": "[ˋpɑrkɪŋ lɑt]",
     "pos": "n.",
     "meaning_zh": "停車場",
     "note_zh": "美式英語用法，指供車輛停放的露天或室內場地。",
@@ -1090,7 +1090,7 @@
   },
   {
     "word": "parking space",
-    "ipa": "/ˈpɑːrkɪŋ speɪs/",
+    "ipa": "[ˋpɑrkɪŋ spes]",
     "pos": "n.",
     "meaning_zh": "停車位",
     "note_zh": "指停車場內單一車輛可停放的位置，常見於辦公大樓管理情境。",
@@ -1101,7 +1101,7 @@
   },
   {
     "word": "toll",
-    "ipa": "/toʊl/",
+    "ipa": "[tol]",
     "pos": "n.",
     "meaning_zh": "通行費",
     "note_zh": "指使用高速公路或橋樑須支付的費用，常見於差旅報帳情境。",
@@ -1112,7 +1112,7 @@
   },
   {
     "word": "highway",
-    "ipa": "/ˈhaɪweɪ/",
+    "ipa": "[ˋhaɪˌwe]",
     "pos": "n.",
     "meaning_zh": "公路；高速公路",
     "note_zh": "泛指主要道路，美式英語常用，英式英語則多用 motorway。",
@@ -1123,7 +1123,7 @@
   },
   {
     "word": "pedestrian",
-    "ipa": "/pəˈdestriən/",
+    "ipa": "[pəˋdɛstrɪən]",
     "pos": "n.",
     "meaning_zh": "行人",
     "note_zh": "指步行的人，Part 1 照片常描述行人過馬路或走在人行道上的畫面。",
@@ -1134,7 +1134,7 @@
   },
   {
     "word": "bicycle",
-    "ipa": "/ˈbaɪsɪkl/",
+    "ipa": "[ˋbaɪsɪkḷ]",
     "pos": "n.",
     "meaning_zh": "腳踏車",
     "note_zh": "常見交通工具，考題常提及騎腳踏車通勤或租借共享單車的情境。",
@@ -1145,7 +1145,7 @@
   },
   {
     "word": "motorcycle",
-    "ipa": "/ˈmoʊtərsaɪkl/",
+    "ipa": "[ˋmotɚˌsaɪkḷ]",
     "pos": "n.",
     "meaning_zh": "機車；摩托車",
     "note_zh": "常見交通工具，Part 1 照片常出現停放在路邊或行駛中的機車畫面。",
@@ -1156,7 +1156,7 @@
   },
   {
     "word": "ferry",
-    "ipa": "/ˈferi/",
+    "ipa": "[ˋfɛrɪ]",
     "pos": "n.",
     "meaning_zh": "渡輪",
     "note_zh": "用於載運乘客或車輛橫渡水域的交通工具，常見於觀光或跨海通勤情境。",
@@ -1167,7 +1167,7 @@
   },
   {
     "word": "cargo",
-    "ipa": "/ˈkɑːrɡoʊ/",
+    "ipa": "[ˋkɑrgo]",
     "pos": "n.",
     "meaning_zh": "貨物",
     "note_zh": "指以船舶、飛機或貨車運送的物品，常見於物流、貿易情境。",
@@ -1178,7 +1178,7 @@
   },
   {
     "word": "shipment",
-    "ipa": "/ˈʃɪpmənt/",
+    "ipa": "[ˋʃɪpmənt]",
     "pos": "n.",
     "meaning_zh": "貨運；一批貨",
     "note_zh": "指運送中的一批貨物，常搭配 delay、arrive、track 等動詞，商業書信高頻詞。",
@@ -1189,7 +1189,7 @@
   },
   {
     "word": "freight",
-    "ipa": "/freɪt/",
+    "ipa": "[fret]",
     "pos": "n.",
     "meaning_zh": "貨運；運費",
     "note_zh": "泛指大宗貨物運輸，常見於物流合約與運費計算情境，較 shipment 更強調運輸方式本身。",
@@ -1200,7 +1200,7 @@
   },
   {
     "word": "luggage",
-    "ipa": "/ˈlʌɡɪdʒ/",
+    "ipa": "[ˋlʌgɪdʒ]",
     "pos": "n.",
     "meaning_zh": "行李",
     "note_zh": "不可數名詞，泛指旅行時攜帶的行李，與 baggage 同義，常見於機場情境。",
@@ -1211,7 +1211,7 @@
   },
   {
     "word": "baggage claim",
-    "ipa": "/ˈbæɡɪdʒ kleɪm/",
+    "ipa": "[ˋbægɪdʒ klem]",
     "pos": "n.",
     "meaning_zh": "行李提領處",
     "note_zh": "機場內乘客領取託運行李的區域，考題常見於機場相關對話。",
@@ -1222,7 +1222,7 @@
   },
   {
     "word": "itinerary",
-    "ipa": "/aɪˈtɪnəreri/",
+    "ipa": "[aɪˋtɪnəˌrɛrɪ]",
     "pos": "n.",
     "meaning_zh": "行程表",
     "note_zh": "指旅行或出差的詳細計畫表，包含日期、地點與交通安排，商務差旅高頻詞。",
@@ -1233,7 +1233,7 @@
   },
   {
     "word": "detour",
-    "ipa": "/ˈdiːtʊr/",
+    "ipa": "[ˋditʊr]",
     "pos": "n.",
     "meaning_zh": "繞道；改道",
     "note_zh": "指因道路施工或事故而必須繞行的路線，常見於交通公告情境。",
@@ -1244,7 +1244,7 @@
   },
   {
     "word": "vehicle",
-    "ipa": "/ˈviːɪkl/",
+    "ipa": "[ˋviɪkḷ]",
     "pos": "n.",
     "meaning_zh": "車輛",
     "note_zh": "泛指各種交通工具的統稱詞，較正式，常見於公司政策或保險文件中。",
@@ -1255,7 +1255,7 @@
   },
   {
     "word": "fuel",
-    "ipa": "/ˈfjuːəl/",
+    "ipa": "[ˋfjuəl]",
     "pos": "n./v.",
     "meaning_zh": "燃料；加油",
     "note_zh": "指驅動交通工具所需的能源，也可作動詞表示「加油、補充燃料」。",
@@ -1266,7 +1266,7 @@
   },
   {
     "word": "headache",
-    "ipa": "/ˈhedeɪk/",
+    "ipa": "[ˋhɛdˌek]",
     "pos": "n.",
     "meaning_zh": "頭痛",
     "note_zh": "常見身體不適症狀，TOEIC 情境常用來說明員工請假或延後會議的原因。",
@@ -1277,7 +1277,7 @@
   },
   {
     "word": "fever",
-    "ipa": "/ˈfiːvər/",
+    "ipa": "[ˋfivɚ]",
     "pos": "n.",
     "meaning_zh": "發燒",
     "note_zh": "體溫升高的症狀，常搭配 have a fever、run a fever 使用。",
@@ -1288,7 +1288,7 @@
   },
   {
     "word": "cough",
-    "ipa": "/kɔːf/",
+    "ipa": "[kɔf]",
     "pos": "n./v.",
     "meaning_zh": "咳嗽",
     "note_zh": "常見感冒症狀，可作名詞或動詞，考題常見於請假理由或藥局對話。",
@@ -1299,7 +1299,7 @@
   },
   {
     "word": "sore throat",
-    "ipa": "/sɔːr θroʊt/",
+    "ipa": "[sɔr θrot]",
     "pos": "n.",
     "meaning_zh": "喉嚨痛",
     "note_zh": "常見感冒或過敏症狀，與單純的 throat（喉嚨）不同，是具體的不適描述。",
@@ -1310,7 +1310,7 @@
   },
   {
     "word": "stomachache",
-    "ipa": "/ˈstʌməkeɪk/",
+    "ipa": "[ˋstʌməkek]",
     "pos": "n.",
     "meaning_zh": "胃痛；肚子痛",
     "note_zh": "常見身體不適詞彙，考題常作為請假或提前離開會議的理由。",
@@ -1321,7 +1321,7 @@
   },
   {
     "word": "nausea",
-    "ipa": "/ˈnɔːziə/",
+    "ipa": "[ˋnɔzɪə]",
     "pos": "n.",
     "meaning_zh": "噁心；想吐",
     "note_zh": "描述胃部不適想嘔吐的感覺，常見於健康檢查或藥物副作用描述。",
@@ -1332,7 +1332,7 @@
   },
   {
     "word": "dizziness",
-    "ipa": "/ˈdɪziːnəs/",
+    "ipa": "[ˋdɪzinəs]",
     "pos": "n.",
     "meaning_zh": "頭暈",
     "note_zh": "描述頭暈目眩的狀態，形容詞為 dizzy，常見於健康或安全相關情境。",
@@ -1343,7 +1343,7 @@
   },
   {
     "word": "fatigue",
-    "ipa": "/fəˈtiːɡ/",
+    "ipa": "[fəˋtig]",
     "pos": "n.",
     "meaning_zh": "疲勞；倦怠",
     "note_zh": "比一般 tired 更正式、程度更深的疲勞感，常見於健康報告或工作過勞情境。",
@@ -1354,7 +1354,7 @@
   },
   {
     "word": "allergy",
-    "ipa": "/ˈælərdʒi/",
+    "ipa": "[ˋælɚdʒɪ]",
     "pos": "n.",
     "meaning_zh": "過敏",
     "note_zh": "指對特定物質產生不良反應，形容詞為 allergic，常見於飲食或藥物情境。",
@@ -1365,7 +1365,7 @@
   },
   {
     "word": "symptom",
-    "ipa": "/ˈsɪmptəm/",
+    "ipa": "[ˋsɪmptəm]",
     "pos": "n.",
     "meaning_zh": "症狀",
     "note_zh": "描述疾病或不適的具體表現，常見於醫療對話或健康公告中。",
@@ -1376,7 +1376,7 @@
   },
   {
     "word": "prescription",
-    "ipa": "/prɪˈskrɪpʃn/",
+    "ipa": "[prɪˋskrɪpʃn]",
     "pos": "n.",
     "meaning_zh": "處方箋",
     "note_zh": "醫師開立供藥局配藥用的文件，與不需處方箋的 over-the-counter 藥物不同。",
@@ -1387,7 +1387,7 @@
   },
   {
     "word": "medication",
-    "ipa": "/ˌmedɪˈkeɪʃn/",
+    "ipa": "[ˌmɛdɪˋkeʃn]",
     "pos": "n.",
     "meaning_zh": "藥物",
     "note_zh": "泛指治療用藥，比口語的 medicine 更正式，常見於醫療與健康保險文件。",
@@ -1398,7 +1398,7 @@
   },
   {
     "word": "pharmacy",
-    "ipa": "/ˈfɑːrməsi/",
+    "ipa": "[ˋfɑrməsɪ]",
     "pos": "n.",
     "meaning_zh": "藥局",
     "note_zh": "販售與調配藥物的場所，考題常見於購買藥品或領取處方箋的情境。",
@@ -1409,7 +1409,7 @@
   },
   {
     "word": "clinic",
-    "ipa": "/ˈklɪnɪk/",
+    "ipa": "[ˋklɪnɪk]",
     "pos": "n.",
     "meaning_zh": "診所",
     "note_zh": "規模較小的醫療機構，與規模較大的 hospital 相對，常見於健康檢查情境。",
@@ -1420,7 +1420,7 @@
   },
   {
     "word": "check-up",
-    "ipa": "/tʃek ʌp/",
+    "ipa": "[tʃɛk ʌp]",
     "pos": "n.",
     "meaning_zh": "健康檢查",
     "note_zh": "指定期進行的身體檢查，常搭配 annual、routine 使用，公司健檢常見詞。",
@@ -1431,7 +1431,7 @@
   },
   {
     "word": "physician",
-    "ipa": "/fɪˈzɪʃn/",
+    "ipa": "[fɪˋzɪʃn]",
     "pos": "n.",
     "meaning_zh": "醫師",
     "note_zh": "較正式的醫師稱呼，常見於書面或保險文件，口語則更常用 doctor。",
@@ -1442,7 +1442,7 @@
   },
   {
     "word": "nurse",
-    "ipa": "/nɜːrs/",
+    "ipa": "[nɝs]",
     "pos": "n.",
     "meaning_zh": "護理師",
     "note_zh": "協助醫師照護病患的醫療人員，常見於診所或醫院情境對話。",
@@ -1453,7 +1453,7 @@
   },
   {
     "word": "patient",
-    "ipa": "/ˈpeɪʃnt/",
+    "ipa": "[peʃnt]",
     "pos": "n.",
     "meaning_zh": "病患",
     "note_zh": "接受醫療照護的人，注意此字也可作形容詞「有耐心的」，需依語境判斷。",
@@ -1464,7 +1464,7 @@
   },
   {
     "word": "sick leave",
-    "ipa": "/sɪk liːv/",
+    "ipa": "[sɪk liv]",
     "pos": "n.",
     "meaning_zh": "病假",
     "note_zh": "員工因病無法上班時申請的假別，常見於人資政策與請假流程情境。",
@@ -1475,7 +1475,7 @@
   },
   {
     "word": "recover",
-    "ipa": "/rɪˈkʌvər/",
+    "ipa": "[rɪˋkʌvɚ]",
     "pos": "v.",
     "meaning_zh": "康復；恢復",
     "note_zh": "指從疾病或傷害中恢復健康，名詞形為 recovery，常見於請假後回報情況。",
@@ -1486,7 +1486,7 @@
   },
   {
     "word": "recovery",
-    "ipa": "/rɪˈkʌvəri/",
+    "ipa": "[rɪˋkʌvərɪ]",
     "pos": "n.",
     "meaning_zh": "康復；復原",
     "note_zh": "recover 的名詞形式，常搭配 full recovery、speedy recovery 等固定用法。",
@@ -1497,7 +1497,7 @@
   },
   {
     "word": "injury",
-    "ipa": "/ˈɪndʒəri/",
+    "ipa": "[ˋɪndʒərɪ]",
     "pos": "n.",
     "meaning_zh": "傷害；受傷",
     "note_zh": "指身體受到的傷害，常見於職業安全或意外事故報告中。",
@@ -1508,7 +1508,7 @@
   },
   {
     "word": "sprain",
-    "ipa": "/spreɪn/",
+    "ipa": "[spren]",
     "pos": "n./v.",
     "meaning_zh": "扭傷",
     "note_zh": "指關節或韌帶因扭轉而受傷，常見於運動傷害或意外情境。",
@@ -1519,7 +1519,7 @@
   },
   {
     "word": "fracture",
-    "ipa": "/ˈfræktʃər/",
+    "ipa": "[ˋfræktʃɚ]",
     "pos": "n./v.",
     "meaning_zh": "骨折",
     "note_zh": "指骨頭斷裂或裂開，程度比 sprain 更嚴重，常見於意外傷害報告。",
@@ -1530,7 +1530,7 @@
   },
   {
     "word": "bandage",
-    "ipa": "/ˈbændɪdʒ/",
+    "ipa": "[ˋbændɪdʒ]",
     "pos": "n./v.",
     "meaning_zh": "繃帶；包紮",
     "note_zh": "用來包紮傷口的醫療用品，也可作動詞表示「用繃帶包紮」。",
@@ -1541,7 +1541,7 @@
   },
   {
     "word": "wrist",
-    "ipa": "/rɪst/",
+    "ipa": "[rɪst]",
     "pos": "n.",
     "meaning_zh": "手腕",
     "note_zh": "身體部位詞彙，常見於受傷或健康相關情境描述。",
@@ -1552,7 +1552,7 @@
   },
   {
     "word": "ankle",
-    "ipa": "/ˈæŋkl/",
+    "ipa": "[ˋæŋkḷ]",
     "pos": "n.",
     "meaning_zh": "腳踝",
     "note_zh": "身體部位詞彙，常與 sprain 搭配出現，描述扭傷情境。",
@@ -1563,7 +1563,7 @@
   },
   {
     "word": "shoulder",
-    "ipa": "/ˈʃoʊldər/",
+    "ipa": "[ˋʃoldɚ]",
     "pos": "n.",
     "meaning_zh": "肩膀",
     "note_zh": "身體部位詞彙，常見於健康或姿勢相關的描述中。",
@@ -1574,7 +1574,7 @@
   },
   {
     "word": "chest",
-    "ipa": "/tʃest/",
+    "ipa": "[tʃɛst]",
     "pos": "n.",
     "meaning_zh": "胸部；胸腔",
     "note_zh": "身體部位詞彙，常見於健康檢查或呼吸道症狀描述。",
@@ -1585,7 +1585,7 @@
   },
   {
     "word": "lower back",
-    "ipa": "/ˈloʊər bæk/",
+    "ipa": "[ˋloɚ bæk]",
     "pos": "n.",
     "meaning_zh": "下背部；腰部",
     "note_zh": "身體部位詞彙，常見於久坐辦公族的職業傷害描述。",
@@ -1596,7 +1596,7 @@
   },
   {
     "word": "stomach",
-    "ipa": "/ˈstʌmək/",
+    "ipa": "[ˋstʌmək]",
     "pos": "n.",
     "meaning_zh": "胃；腹部",
     "note_zh": "身體部位詞彙，也可泛指腹部區域，與 stomachache（胃痛）相關。",
@@ -1607,7 +1607,7 @@
   },
   {
     "word": "throat",
-    "ipa": "/θroʊt/",
+    "ipa": "[θrot]",
     "pos": "n.",
     "meaning_zh": "喉嚨",
     "note_zh": "身體部位詞彙，常與 sore throat（喉嚨痛）一起出現在健康情境中。",
@@ -1618,7 +1618,7 @@
   },
   {
     "word": "lung",
-    "ipa": "/lʌŋ/",
+    "ipa": "[lʌŋ]",
     "pos": "n.",
     "meaning_zh": "肺；肺部",
     "note_zh": "身體部位詞彙，常見於呼吸道相關健康檢查或症狀描述。",
@@ -1629,7 +1629,7 @@
   },
   {
     "word": "blood pressure",
-    "ipa": "/blʌd ˈpreʃər/",
+    "ipa": "[blʌd ˋprɛʃɚ]",
     "pos": "n.",
     "meaning_zh": "血壓",
     "note_zh": "健康檢查常測量的項目，常搭配 high/low blood pressure 使用。",
@@ -1640,7 +1640,7 @@
   },
   {
     "word": "vaccine",
-    "ipa": "/vækˈsiːn/",
+    "ipa": "[vækˋsin]",
     "pos": "n.",
     "meaning_zh": "疫苗",
     "note_zh": "用於預防疾病的醫療製劑，常見於公司健康政策或公共衛生公告中。",
@@ -1651,7 +1651,7 @@
   },
   {
     "word": "injection",
-    "ipa": "/ɪnˈdʒekʃn/",
+    "ipa": "[ɪnˋdʒɛkʃn]",
     "pos": "n.",
     "meaning_zh": "注射；打針",
     "note_zh": "指以針筒將藥物或疫苗注入體內的醫療行為，較 shot 更正式。",
@@ -1662,7 +1662,7 @@
   },
   {
     "word": "diagnosis",
-    "ipa": "/ˌdaɪəɡˈnoʊsɪs/",
+    "ipa": "[ˌdaɪəgˋnosɪs]",
     "pos": "n.",
     "meaning_zh": "診斷",
     "note_zh": "醫師判斷病情的結果，常見於病假申請或醫療報告情境。",
@@ -1673,7 +1673,7 @@
   },
   {
     "word": "treatment",
-    "ipa": "/ˈtriːtmənt/",
+    "ipa": "[ˋtritmənt]",
     "pos": "n.",
     "meaning_zh": "治療",
     "note_zh": "指針對疾病或傷害採取的醫療處置，常搭配 receive、undergo treatment 使用。",
@@ -1684,7 +1684,7 @@
   },
   {
     "word": "immune system",
-    "ipa": "/ɪˈmjuːn ˈsɪstəm/",
+    "ipa": "[ɪˋmjun ˋsɪstəm]",
     "pos": "n.",
     "meaning_zh": "免疫系統",
     "note_zh": "身體抵抗疾病的防禦機制，常見於健康報導或養生相關文章中。",
@@ -1695,7 +1695,7 @@
   },
   {
     "word": "stove",
-    "ipa": "/stoʊv/",
+    "ipa": "[stov]",
     "pos": "n.",
     "meaning_zh": "爐子",
     "note_zh": "用於加熱烹飪的廚房設備，Part 1 照片常見有人在爐子前烹煮食物。",
@@ -1706,7 +1706,7 @@
   },
   {
     "word": "oven",
-    "ipa": "/ˈʌvn/",
+    "ipa": "[ʌvn]",
     "pos": "n.",
     "meaning_zh": "烤箱",
     "note_zh": "用於烘烤食物的廚房設備，與 stove（爐子）不同，考題常區分兩者用途。",
@@ -1717,7 +1717,7 @@
   },
   {
     "word": "microwave",
-    "ipa": "/ˈmaɪkroʊweɪv/",
+    "ipa": "[ˋmaɪkroˌwev]",
     "pos": "n.",
     "meaning_zh": "微波爐",
     "note_zh": "常見廚房電器，用於快速加熱食物，辦公室茶水間也常見。",
@@ -1728,7 +1728,7 @@
   },
   {
     "word": "refrigerator",
-    "ipa": "/rɪˈfrɪdʒəreɪtər/",
+    "ipa": "[rɪˋfrɪdʒəˌretɚ]",
     "pos": "n.",
     "meaning_zh": "冰箱",
     "note_zh": "口語常簡稱 fridge，用於冷藏食物，考題常見於廚房或茶水間描述。",
@@ -1739,7 +1739,7 @@
   },
   {
     "word": "dishwasher",
-    "ipa": "/ˈdɪʃwɑːʃər/",
+    "ipa": "[ˋdɪʃˌwɑʃɚ]",
     "pos": "n.",
     "meaning_zh": "洗碗機",
     "note_zh": "用於自動清洗餐具的家電，Part 1 照片常描述廚房設備擺設。",
@@ -1750,7 +1750,7 @@
   },
   {
     "word": "sink",
-    "ipa": "/sɪŋk/",
+    "ipa": "[sɪŋk]",
     "pos": "n.",
     "meaning_zh": "水槽",
     "note_zh": "廚房或洗手間用於盛水清洗的設施，Part 1 照片高頻出現的廚房元件。",
@@ -1761,7 +1761,7 @@
   },
   {
     "word": "faucet",
-    "ipa": "/ˈfɔːsɪt/",
+    "ipa": "[ˋfɔsɪt]",
     "pos": "n.",
     "meaning_zh": "水龍頭",
     "note_zh": "美式英語用詞，英式英語常用 tap，考題常提及水龍頭漏水需要維修的情境。",
@@ -1772,7 +1772,7 @@
   },
   {
     "word": "cutting board",
-    "ipa": "/ˈkʌtɪŋ bɔːrd/",
+    "ipa": "[ˋkʌtɪŋ bɔrd]",
     "pos": "n.",
     "meaning_zh": "砧板",
     "note_zh": "用於切菜或切肉的廚房工具，常與 knife 一起出現在照片描述中。",
@@ -1783,7 +1783,7 @@
   },
   {
     "word": "knife",
-    "ipa": "/naɪf/",
+    "ipa": "[naɪf]",
     "pos": "n.",
     "meaning_zh": "刀子",
     "note_zh": "廚房基本工具，複數形為 knives，Part 1 照片常見廚師或員工使用刀具的畫面。",
@@ -1794,7 +1794,7 @@
   },
   {
     "word": "spatula",
-    "ipa": "/ˈspætʃələ/",
+    "ipa": "[ˋspætʃələ]",
     "pos": "n.",
     "meaning_zh": "鍋鏟",
     "note_zh": "用於翻炒或翻煎食物的廚房工具，Part 1 照片常描述廚師使用鍋鏟的動作。",
@@ -1805,7 +1805,7 @@
   },
   {
     "word": "ladle",
-    "ipa": "/ˈleɪdl/",
+    "ipa": "[ˋledḷ]",
     "pos": "n.",
     "meaning_zh": "湯勺",
     "note_zh": "用於舀取湯品或液狀食物的長柄勺具，常見於廚房或自助餐情境。",
@@ -1816,7 +1816,7 @@
   },
   {
     "word": "whisk",
-    "ipa": "/wɪsk/",
+    "ipa": "[wɪsk]",
     "pos": "n./v.",
     "meaning_zh": "打蛋器；攪拌",
     "note_zh": "用於攪拌或打發食材的工具，也可作動詞表示攪拌的動作。",
@@ -1827,7 +1827,7 @@
   },
   {
     "word": "pot",
-    "ipa": "/pɑːt/",
+    "ipa": "[pɑt]",
     "pos": "n.",
     "meaning_zh": "鍋子",
     "note_zh": "泛指用來煮湯或燉煮食物的深鍋，與 pan（平底鍋）用途略有不同。",
@@ -1838,7 +1838,7 @@
   },
   {
     "word": "pan",
-    "ipa": "/pæn/",
+    "ipa": "[pæn]",
     "pos": "n.",
     "meaning_zh": "平底鍋",
     "note_zh": "用於煎炒食物的淺鍋，常搭配 frying pan 使用，與深鍋 pot 相對。",
@@ -1849,7 +1849,7 @@
   },
   {
     "word": "skillet",
-    "ipa": "/ˈskɪlɪt/",
+    "ipa": "[ˋskɪlɪt]",
     "pos": "n.",
     "meaning_zh": "煎鍋；平底鍋",
     "note_zh": "與 pan 意義相近，通常指較厚重、常為鑄鐵材質的煎鍋，美式英語常用詞。",
@@ -1860,7 +1860,7 @@
   },
   {
     "word": "kettle",
-    "ipa": "/ˈketl/",
+    "ipa": "[ˋkɛtḷ]",
     "pos": "n.",
     "meaning_zh": "水壺",
     "note_zh": "用於燒開水的容器，辦公室茶水間或廚房常見小家電。",
@@ -1871,7 +1871,7 @@
   },
   {
     "word": "blender",
-    "ipa": "/ˈblendər/",
+    "ipa": "[ˋblɛndɚ]",
     "pos": "n.",
     "meaning_zh": "果汁機；攪拌機",
     "note_zh": "用於打碎或混合食材的電器，常見於製作果汁或醬料的情境。",
@@ -1882,7 +1882,7 @@
   },
   {
     "word": "toaster",
-    "ipa": "/ˈtoʊstər/",
+    "ipa": "[ˋtostɚ]",
     "pos": "n.",
     "meaning_zh": "烤麵包機",
     "note_zh": "用於烤麵包片的小家電，常見於辦公室茶水間或飯店早餐情境。",
@@ -1893,7 +1893,7 @@
   },
   {
     "word": "plate",
-    "ipa": "/pleɪt/",
+    "ipa": "[plet]",
     "pos": "n.",
     "meaning_zh": "盤子",
     "note_zh": "用於盛裝食物的餐具，Part 1 照片極常見的餐桌物件之一。",
@@ -1904,7 +1904,7 @@
   },
   {
     "word": "bowl",
-    "ipa": "/boʊl/",
+    "ipa": "[bol]",
     "pos": "n.",
     "meaning_zh": "碗",
     "note_zh": "用於盛裝湯品或飯食的餐具，常見於餐廳或自助餐情境描述。",
@@ -1915,7 +1915,7 @@
   },
   {
     "word": "cup",
-    "ipa": "/kʌp/",
+    "ipa": "[kʌp]",
     "pos": "n.",
     "meaning_zh": "杯子",
     "note_zh": "泛指小型飲用容器，也可作為容量單位使用於食譜情境。",
@@ -1926,7 +1926,7 @@
   },
   {
     "word": "mug",
-    "ipa": "/mʌɡ/",
+    "ipa": "[mʌg]",
     "pos": "n.",
     "meaning_zh": "馬克杯",
     "note_zh": "有把手的厚身杯子，通常用於裝熱飲，與一般 cup 略有不同。",
@@ -1937,7 +1937,7 @@
   },
   {
     "word": "glass",
-    "ipa": "/ɡlæs/",
+    "ipa": "[glæs]",
     "pos": "n.",
     "meaning_zh": "玻璃杯",
     "note_zh": "用於裝冷飲的透明容器，Part 1 照片常描述桌上擺放的玻璃杯。",
@@ -1948,7 +1948,7 @@
   },
   {
     "word": "fork",
-    "ipa": "/fɔːrk/",
+    "ipa": "[fɔrk]",
     "pos": "n.",
     "meaning_zh": "叉子",
     "note_zh": "西式餐具之一，常與 knife、spoon 一起出現在餐桌擺設描述中。",
@@ -1959,7 +1959,7 @@
   },
   {
     "word": "spoon",
-    "ipa": "/spuːn/",
+    "ipa": "[spun]",
     "pos": "n.",
     "meaning_zh": "湯匙",
     "note_zh": "用於舀取食物的餐具，常見於餐桌擺設或用餐情境描述。",
@@ -1970,7 +1970,7 @@
   },
   {
     "word": "chopsticks",
-    "ipa": "/ˈtʃɑːpstɪks/",
+    "ipa": "[ˋtʃɑpˌstɪks]",
     "pos": "n.",
     "meaning_zh": "筷子",
     "note_zh": "亞洲飲食文化常用餐具，恆為複數形，常見於描述亞式餐廳情境。",
@@ -1981,7 +1981,7 @@
   },
   {
     "word": "napkin",
-    "ipa": "/ˈnæpkɪn/",
+    "ipa": "[ˋnæpkɪn]",
     "pos": "n.",
     "meaning_zh": "餐巾",
     "note_zh": "用餐時擦拭嘴部或手部的布巾或紙巾，Part 1 照片常見於餐桌擺設。",
@@ -1992,7 +1992,7 @@
   },
   {
     "word": "tablecloth",
-    "ipa": "/ˈteɪblklɔːθ/",
+    "ipa": "[ˋteblklɔθ]",
     "pos": "n.",
     "meaning_zh": "桌布",
     "note_zh": "覆蓋在餐桌上的布料，常見於餐廳或宴會場地佈置描述。",
@@ -2003,7 +2003,7 @@
   },
   {
     "word": "tray",
-    "ipa": "/treɪ/",
+    "ipa": "[tre]",
     "pos": "n.",
     "meaning_zh": "托盤",
     "note_zh": "用於端送食物或飲料的平板餐具，常見於自助餐或飯店服務情境。",
@@ -2014,7 +2014,7 @@
   },
   {
     "word": "pitcher",
-    "ipa": "/ˈpɪtʃər/",
+    "ipa": "[ˋpɪtʃɚ]",
     "pos": "n.",
     "meaning_zh": "水壺；水罐",
     "note_zh": "用於盛裝並倒出飲料的容器，常見於餐廳桌面或宴會擺設。",
@@ -2025,7 +2025,7 @@
   },
   {
     "word": "cutlery",
-    "ipa": "/ˈkʌtləri/",
+    "ipa": "[ˋkʌtlərɪ]",
     "pos": "n.",
     "meaning_zh": "餐具（刀叉匙統稱）",
     "note_zh": "英式英語用詞，泛指刀叉匙等金屬餐具的集合名詞，美式常用 silverware。",
@@ -2036,7 +2036,7 @@
   },
   {
     "word": "utensil",
-    "ipa": "/juːˈtensl/",
+    "ipa": "[juˋtɛnsl]",
     "pos": "n.",
     "meaning_zh": "器具；用具",
     "note_zh": "泛指廚房或用餐使用的工具，範圍比 cutlery 更廣，也包含烹飪工具。",
@@ -2047,7 +2047,7 @@
   },
   {
     "word": "apron",
-    "ipa": "/ˈeɪprən/",
+    "ipa": "[ˋeprən]",
     "pos": "n.",
     "meaning_zh": "圍裙",
     "note_zh": "廚師或服務生穿戴以保護衣物的服飾，Part 1 照片常見廚房人員穿著圍裙。",
@@ -2058,7 +2058,7 @@
   },
   {
     "word": "menu",
-    "ipa": "/ˈmenjuː/",
+    "ipa": "[ˋmɛnju]",
     "pos": "n.",
     "meaning_zh": "菜單",
     "note_zh": "餐廳提供顧客選擇餐點的清單，考題常見於餐廳點餐情境對話。",
@@ -2069,7 +2069,7 @@
   },
   {
     "word": "reservation",
-    "ipa": "/ˌrezərˈveɪʃn/",
+    "ipa": "[ˌrɛzɚˋveʃn]",
     "pos": "n.",
     "meaning_zh": "訂位；預訂",
     "note_zh": "常見於餐廳或飯店預訂座位或房間的情境，商務接待高頻詞。",
@@ -2080,7 +2080,7 @@
   },
   {
     "word": "waiter",
-    "ipa": "/ˈweɪtər/",
+    "ipa": "[ˋwetɚ]",
     "pos": "n.",
     "meaning_zh": "服務生（男）",
     "note_zh": "餐廳負責點餐與上菜服務的男性工作人員，女性則稱 waitress。",
@@ -2091,7 +2091,7 @@
   },
   {
     "word": "waitress",
-    "ipa": "/ˈweɪtrəs/",
+    "ipa": "[ˋwetrəs]",
     "pos": "n.",
     "meaning_zh": "服務生（女）",
     "note_zh": "餐廳負責點餐與上菜服務的女性工作人員，與 waiter 相對。",
@@ -2102,7 +2102,7 @@
   },
   {
     "word": "tip",
-    "ipa": "/tɪp/",
+    "ipa": "[tɪp]",
     "pos": "n./v.",
     "meaning_zh": "小費",
     "note_zh": "顧客對服務人員支付的額外酬勞，也可作動詞表示「給小費」。",
@@ -2113,7 +2113,7 @@
   },
   {
     "word": "buffet",
-    "ipa": "/bəˈfeɪ/",
+    "ipa": "[bəˋfe]",
     "pos": "n.",
     "meaning_zh": "自助餐",
     "note_zh": "顧客自行取用多樣菜餚的用餐形式，常見於飯店早餐或宴會情境。",
@@ -2124,7 +2124,7 @@
   },
   {
     "word": "weather forecast",
-    "ipa": "/ˈwɛðər ˌfɔːrkæst/",
+    "ipa": "[ˋwɛðɚ ˌfɔrkæst]",
     "pos": "n.",
     "meaning_zh": "天氣預報",
     "note_zh": "常與 according to、check 搭配，新聞播報常見開場語。",
@@ -2135,7 +2135,7 @@
   },
   {
     "word": "temperature",
-    "ipa": "/ˈtɛmpərətʃər/",
+    "ipa": "[ˋtɛmpərətʃɚ]",
     "pos": "n.",
     "meaning_zh": "溫度",
     "note_zh": "常與 rise/drop/fluctuate 搭配，TOEIC 常考氣溫變化描述。",
@@ -2146,7 +2146,7 @@
   },
   {
     "word": "humidity",
-    "ipa": "/hjuˈmɪdəti/",
+    "ipa": "[hjuˋmɪdətɪ]",
     "pos": "n.",
     "meaning_zh": "濕度",
     "note_zh": "與 humid（形容詞）同源，常用於天氣預報描述悶熱潮濕。",
@@ -2157,7 +2157,7 @@
   },
   {
     "word": "rainfall",
-    "ipa": "/ˈreɪnfɔːl/",
+    "ipa": "[ˋrenˌfɔl]",
     "pos": "n.",
     "meaning_zh": "降雨量",
     "note_zh": "指降雨的量，常與 heavy/annual 搭配，不同於單純的 rain（下雨動作）。",
@@ -2168,7 +2168,7 @@
   },
   {
     "word": "drizzle",
-    "ipa": "/ˈdrɪzəl/",
+    "ipa": "[ˋdrɪzḷ]",
     "pos": "n.",
     "meaning_zh": "毛毛雨",
     "note_zh": "指細小綿密的小雨，雨勢比 rain 弱，常見於旅遊或戶外活動描述。",
@@ -2179,7 +2179,7 @@
   },
   {
     "word": "downpour",
-    "ipa": "/ˈdaʊnpɔːr/",
+    "ipa": "[ˋdaʊnpɔr]",
     "pos": "n.",
     "meaning_zh": "傾盆大雨",
     "note_zh": "強調雨勢突然且猛烈，常用於解釋班機延誤或活動取消原因。",
@@ -2190,7 +2190,7 @@
   },
   {
     "word": "thunderstorm",
-    "ipa": "/ˈθʌndərstɔːrm/",
+    "ipa": "[ˋθʌndɚˌstɔrm]",
     "pos": "n.",
     "meaning_zh": "雷雨",
     "note_zh": "常出現在天氣警報與活動延期公告中。",
@@ -2201,7 +2201,7 @@
   },
   {
     "word": "lightning",
-    "ipa": "/ˈlaɪtnɪŋ/",
+    "ipa": "[ˋlaɪtnɪŋ]",
     "pos": "n.",
     "meaning_zh": "閃電",
     "note_zh": "常與 thunder 一起出現，注意拼字易與 lightening（變輕）混淆。",
@@ -2212,7 +2212,7 @@
   },
   {
     "word": "thunder",
-    "ipa": "/ˈθʌndər/",
+    "ipa": "[ˋθʌndɚ]",
     "pos": "n.",
     "meaning_zh": "雷聲",
     "note_zh": "指雷聲本身，與 lightning（閃電，視覺）相對，常合用描述暴風雨。",
@@ -2223,7 +2223,7 @@
   },
   {
     "word": "flood",
-    "ipa": "/flʌd/",
+    "ipa": "[flʌd]",
     "pos": "n.",
     "meaning_zh": "洪水",
     "note_zh": "TOEIC 閱讀常見於保險理賠或天災報導文章。",
@@ -2234,7 +2234,7 @@
   },
   {
     "word": "drought",
-    "ipa": "/draʊt/",
+    "ipa": "[draʊt]",
     "pos": "n.",
     "meaning_zh": "乾旱",
     "note_zh": "與 flood 相對，常見於農業或氣候變遷相關文章。",
@@ -2245,7 +2245,7 @@
   },
   {
     "word": "humid",
-    "ipa": "/ˈhjuːmɪd/",
+    "ipa": "[ˋhjumɪd]",
     "pos": "adj.",
     "meaning_zh": "潮濕悶熱的",
     "note_zh": "描述天氣濕熱，常與 hot 連用如 hot and humid。",
@@ -2256,7 +2256,7 @@
   },
   {
     "word": "overcast",
-    "ipa": "/ˈoʊvərkæst/",
+    "ipa": "[ˋovɚˌkæst]",
     "pos": "adj.",
     "meaning_zh": "陰天的",
     "note_zh": "比 cloudy 程度更重，指天空完全被雲層覆蓋。",
@@ -2267,7 +2267,7 @@
   },
   {
     "word": "cloudy",
-    "ipa": "/ˈklaʊdi/",
+    "ipa": "[ˋklaʊdɪ]",
     "pos": "adj.",
     "meaning_zh": "多雲的",
     "note_zh": "天氣預報常用詞，常與 partly 搭配成 partly cloudy。",
@@ -2278,7 +2278,7 @@
   },
   {
     "word": "sunny",
-    "ipa": "/ˈsʌni/",
+    "ipa": "[ˋsʌnɪ]",
     "pos": "adj.",
     "meaning_zh": "晴朗的",
     "note_zh": "天氣預報高頻詞，亦可比喻個性開朗（sunny personality）。",
@@ -2289,7 +2289,7 @@
   },
   {
     "word": "windy",
-    "ipa": "/ˈwɪndi/",
+    "ipa": "[ˋwɪndɪ]",
     "pos": "adj.",
     "meaning_zh": "有風的",
     "note_zh": "常見於機場公告解釋航班延誤或搖晃原因。",
@@ -2300,7 +2300,7 @@
   },
   {
     "word": "breeze",
-    "ipa": "/briːz/",
+    "ipa": "[briz]",
     "pos": "n.",
     "meaning_zh": "微風",
     "note_zh": "指輕柔的風，語感正面，常用於描述宜人天氣。",
@@ -2311,7 +2311,7 @@
   },
   {
     "word": "gust",
-    "ipa": "/ɡʌst/",
+    "ipa": "[gʌst]",
     "pos": "n.",
     "meaning_zh": "陣風；強風",
     "note_zh": "指突然而猛烈的一陣風，常見於強風特報。",
@@ -2322,7 +2322,7 @@
   },
   {
     "word": "fog",
-    "ipa": "/fɔːɡ/",
+    "ipa": "[fɔg]",
     "pos": "n.",
     "meaning_zh": "霧",
     "note_zh": "常導致班機延誤或能見度不佳，TOEIC 旅遊情境常考。",
@@ -2333,7 +2333,7 @@
   },
   {
     "word": "foggy",
-    "ipa": "/ˈfɔːɡi/",
+    "ipa": "[ˋfɔgɪ]",
     "pos": "adj.",
     "meaning_zh": "有霧的",
     "note_zh": "fog 的形容詞形式，常修飾 morning、weather 等名詞。",
@@ -2344,7 +2344,7 @@
   },
   {
     "word": "mist",
-    "ipa": "/mɪst/",
+    "ipa": "[mɪst]",
     "pos": "n.",
     "meaning_zh": "薄霧",
     "note_zh": "比 fog 輕薄，常見於山區或清晨景色描述。",
@@ -2355,7 +2355,7 @@
   },
   {
     "word": "frost",
-    "ipa": "/frɔːst/",
+    "ipa": "[frɔst]",
     "pos": "n.",
     "meaning_zh": "霜",
     "note_zh": "指地表或植物上結的霜，常見於農業損害報導。",
@@ -2366,7 +2366,7 @@
   },
   {
     "word": "freezing",
-    "ipa": "/ˈfriːzɪŋ/",
+    "ipa": "[ˋfrizɪŋ]",
     "pos": "adj.",
     "meaning_zh": "冰凍的；酷寒的",
     "note_zh": "常用來形容極低溫，如 freezing temperatures。",
@@ -2377,7 +2377,7 @@
   },
   {
     "word": "chilly",
-    "ipa": "/ˈtʃɪli/",
+    "ipa": "[ˋtʃɪlɪ]",
     "pos": "adj.",
     "meaning_zh": "寒冷的",
     "note_zh": "程度介於 cool 與 cold 之間，常用於日常對話描述天氣稍冷。",
@@ -2388,7 +2388,7 @@
   },
   {
     "word": "mild",
-    "ipa": "/maɪld/",
+    "ipa": "[maɪld]",
     "pos": "adj.",
     "meaning_zh": "（氣候）溫和的",
     "note_zh": "常用來形容宜人不極端的氣候，與 severe/harsh 相對。",
@@ -2399,7 +2399,7 @@
   },
   {
     "word": "heat wave",
-    "ipa": "/hiːt weɪv/",
+    "ipa": "[hit wev]",
     "pos": "n.",
     "meaning_zh": "熱浪",
     "note_zh": "指持續多日的異常高溫，常見於新聞報導與健康提醒。",
@@ -2410,7 +2410,7 @@
   },
   {
     "word": "cold front",
-    "ipa": "/koʊld frʌnt/",
+    "ipa": "[kold frʌnt]",
     "pos": "n.",
     "meaning_zh": "冷鋒",
     "note_zh": "氣象學用詞，指冷空氣團前緣，常見於天氣預報播報。",
@@ -2421,7 +2421,7 @@
   },
   {
     "word": "precipitation",
-    "ipa": "/prɪˌsɪpəˈteɪʃən/",
+    "ipa": "[prɪˌsɪpəˋteʃən]",
     "pos": "n.",
     "meaning_zh": "降水",
     "note_zh": "比 rain 更正式的氣象學用詞，涵蓋雨、雪、冰雹等。",
@@ -2432,7 +2432,7 @@
   },
   {
     "word": "hail",
-    "ipa": "/heɪl/",
+    "ipa": "[hel]",
     "pos": "n.",
     "meaning_zh": "冰雹",
     "note_zh": "常造成農作物或車輛損害，保險相關文章常見。",
@@ -2443,7 +2443,7 @@
   },
   {
     "word": "blizzard",
-    "ipa": "/ˈblɪzərd/",
+    "ipa": "[ˋblɪzɚd]",
     "pos": "n.",
     "meaning_zh": "暴風雪",
     "note_zh": "指強風伴隨大雪的極端天氣，常見於北美地區報導。",
@@ -2454,7 +2454,7 @@
   },
   {
     "word": "typhoon",
-    "ipa": "/taɪˈfuːn/",
+    "ipa": "[taɪˋfun]",
     "pos": "n.",
     "meaning_zh": "颱風",
     "note_zh": "亞洲地區常見天災詞彙，與 hurricane 指同種現象但用於不同地區。",
@@ -2465,7 +2465,7 @@
   },
   {
     "word": "hurricane",
-    "ipa": "/ˈhɜːrəkeɪn/",
+    "ipa": "[ˋhɝəˌken]",
     "pos": "n.",
     "meaning_zh": "颶風",
     "note_zh": "與 typhoon 相同現象，但用於大西洋及東太平洋地區。",
@@ -2476,7 +2476,7 @@
   },
   {
     "word": "tornado",
-    "ipa": "/tɔːrˈneɪdoʊ/",
+    "ipa": "[tɔrˋneˌdo]",
     "pos": "n.",
     "meaning_zh": "龍捲風",
     "note_zh": "常見於美國中西部報導，強調破壞力強大。",
@@ -2487,7 +2487,7 @@
   },
   {
     "word": "climate",
-    "ipa": "/ˈklaɪmət/",
+    "ipa": "[ˋklaɪmət]",
     "pos": "n.",
     "meaning_zh": "氣候",
     "note_zh": "指長期的天氣型態，與 weather（短期天氣狀況）不同。",
@@ -2498,7 +2498,7 @@
   },
   {
     "word": "forecast",
-    "ipa": "/fɔːrˈkæst/",
+    "ipa": "[fɔrˋkæst]",
     "pos": "v.",
     "meaning_zh": "預測（天氣、趨勢）",
     "note_zh": "動詞用法，亦可作名詞；常見 forecast to do 或 be forecast 句型。",
@@ -2509,7 +2509,7 @@
   },
   {
     "word": "temperature drop",
-    "ipa": "/ˈtɛmpərətʃər drɑːp/",
+    "ipa": "[ˋtɛmpərətʃɚ drɑp]",
     "pos": "n.",
     "meaning_zh": "溫度下降",
     "note_zh": "描述氣溫驟降的常用片語，常見於旅遊提醒。",
@@ -2520,7 +2520,7 @@
   },
   {
     "word": "clear up",
-    "ipa": "/klɪr ʌp/",
+    "ipa": "[klɪr ʌp]",
     "pos": "phr.",
     "meaning_zh": "（天氣）轉晴",
     "note_zh": "片語動詞，指壞天氣逐漸好轉，常用於對話與廣播。",
@@ -2531,7 +2531,7 @@
   },
   {
     "word": "sunshine",
-    "ipa": "/ˈsʌnʃaɪn/",
+    "ipa": "[ˋsʌnˌʃaɪn]",
     "pos": "n.",
     "meaning_zh": "陽光",
     "note_zh": "與 sunny（形容詞）同源，常見於旅遊廣告與天氣描述。",
@@ -2542,7 +2542,7 @@
   },
   {
     "word": "visibility",
-    "ipa": "/ˌvɪzəˈbɪləti/",
+    "ipa": "[ˌvɪzəˋbɪlətɪ]",
     "pos": "n.",
     "meaning_zh": "能見度",
     "note_zh": "常見於機場、航班延誤公告，描述霧、雨造成的視線不良。",
@@ -2553,7 +2553,7 @@
   },
   {
     "word": "weather advisory",
-    "ipa": "/ˈwɛðər ədˈvaɪzəri/",
+    "ipa": "[ˋwɛðɚ ədˋvaɪzərɪ]",
     "pos": "n.",
     "meaning_zh": "天氣特報",
     "note_zh": "官方發布的天氣警示，程度通常低於 warning（警報）。",
@@ -2564,7 +2564,7 @@
   },
   {
     "word": "outfit",
-    "ipa": "/ˈaʊtfɪt/",
+    "ipa": "[ˋaʊtfɪt]",
     "pos": "n.",
     "meaning_zh": "一套服裝",
     "note_zh": "泛指整套穿著打扮，常用於 Part 1 描述人物穿著。",
@@ -2575,7 +2575,7 @@
   },
   {
     "word": "attire",
-    "ipa": "/əˈtaɪər/",
+    "ipa": "[əˋtaɪr]",
     "pos": "n.",
     "meaning_zh": "服裝（正式用語）",
     "note_zh": "比 clothes 更正式，常見於邀請函 dress code，如 business attire。",
@@ -2586,7 +2586,7 @@
   },
   {
     "word": "garment",
-    "ipa": "/ˈɡɑːrmənt/",
+    "ipa": "[ˋgɑrmənt]",
     "pos": "n.",
     "meaning_zh": "衣物；衣服",
     "note_zh": "較正式的統稱詞，常見於製造業或洗滌標籤說明。",
@@ -2597,7 +2597,7 @@
   },
   {
     "word": "blouse",
-    "ipa": "/blaʊs/",
+    "ipa": "[blaʊs]",
     "pos": "n.",
     "meaning_zh": "女用襯衫",
     "note_zh": "專指女性穿的襯衫，與男用 shirt 做區別。",
@@ -2608,7 +2608,7 @@
   },
   {
     "word": "cardigan",
-    "ipa": "/ˈkɑːrdɪɡən/",
+    "ipa": "[ˋkɑrdɪgən]",
     "pos": "n.",
     "meaning_zh": "開襟毛衣",
     "note_zh": "指前開襟、常有釦子的針織外套，常見於 Part 1 照片描述。",
@@ -2619,7 +2619,7 @@
   },
   {
     "word": "sweater",
-    "ipa": "/ˈswɛtər/",
+    "ipa": "[ˋswɛtɚ]",
     "pos": "n.",
     "meaning_zh": "毛衣",
     "note_zh": "泛指套頭式針織上衣，美式用語（英式常用 jumper）。",
@@ -2630,7 +2630,7 @@
   },
   {
     "word": "trousers",
-    "ipa": "/ˈtraʊzərz/",
+    "ipa": "[ˋtraʊzɚz]",
     "pos": "n.",
     "meaning_zh": "長褲",
     "note_zh": "英式英語常用詞，美式較常用 pants，TOEIC 兩者皆可能出現。",
@@ -2641,7 +2641,7 @@
   },
   {
     "word": "slacks",
-    "ipa": "/slæks/",
+    "ipa": "[slæks]",
     "pos": "n.",
     "meaning_zh": "休閒長褲",
     "note_zh": "指較正式但不屬西裝的長褲，常見於商務休閒穿著描述。",
@@ -2652,7 +2652,7 @@
   },
   {
     "word": "suit",
-    "ipa": "/suːt/",
+    "ipa": "[sut]",
     "pos": "n.",
     "meaning_zh": "西裝（套裝）",
     "note_zh": "常搭配 wear/put on，商務情境高頻詞。",
@@ -2663,7 +2663,7 @@
   },
   {
     "word": "tie",
-    "ipa": "/taɪ/",
+    "ipa": "[taɪ]",
     "pos": "n.",
     "meaning_zh": "領帶",
     "note_zh": "Part 1 常考配件，常與 loosen/adjust 搭配。",
@@ -2674,7 +2674,7 @@
   },
   {
     "word": "scarf",
-    "ipa": "/skɑːrf/",
+    "ipa": "[skɑrf]",
     "pos": "n.",
     "meaning_zh": "圍巾",
     "note_zh": "冬季配件，亦可指裝飾用絲巾，注意複數 scarves。",
@@ -2685,7 +2685,7 @@
   },
   {
     "word": "blazer",
-    "ipa": "/ˈbleɪzər/",
+    "ipa": "[ˋblezɚ]",
     "pos": "n.",
     "meaning_zh": "西裝外套；運動外套",
     "note_zh": "比 suit jacket 更休閒，常見於商務休閒穿著。",
@@ -2696,7 +2696,7 @@
   },
   {
     "word": "coat",
-    "ipa": "/koʊt/",
+    "ipa": "[kot]",
     "pos": "n.",
     "meaning_zh": "大衣；外套",
     "note_zh": "泛指較長、較厚重的外衣，常與 hang up 搭配出現在 Part 1。",
@@ -2707,7 +2707,7 @@
   },
   {
     "word": "jacket",
-    "ipa": "/ˈdʒækɪt/",
+    "ipa": "[ˋdʒækɪt]",
     "pos": "n.",
     "meaning_zh": "夾克；外套",
     "note_zh": "比 coat 短且輕便，是 Part 1 照片最常見的穿著單品之一。",
@@ -2718,7 +2718,7 @@
   },
   {
     "word": "vest",
-    "ipa": "/vɛst/",
+    "ipa": "[vɛst]",
     "pos": "n.",
     "meaning_zh": "背心",
     "note_zh": "無袖上衣，可指西裝背心或休閒背心，注意與英式 waistcoat 對應。",
@@ -2729,7 +2729,7 @@
   },
   {
     "word": "collar",
-    "ipa": "/ˈkɑːlər/",
+    "ipa": "[ˋkɑlɚ]",
     "pos": "n.",
     "meaning_zh": "衣領",
     "note_zh": "常見於服裝描述細節，如 button-down collar。",
@@ -2740,7 +2740,7 @@
   },
   {
     "word": "sleeve",
-    "ipa": "/sliːv/",
+    "ipa": "[sliv]",
     "pos": "n.",
     "meaning_zh": "袖子",
     "note_zh": "常見片語 short-sleeved/long-sleeved，用於描述服裝款式。",
@@ -2751,7 +2751,7 @@
   },
   {
     "word": "hem",
-    "ipa": "/hɛm/",
+    "ipa": "[hɛm]",
     "pos": "n.",
     "meaning_zh": "衣服下擺；褲腳",
     "note_zh": "常見於服裝修改情境，如裁縫店對話。",
@@ -2762,7 +2762,7 @@
   },
   {
     "word": "pattern",
-    "ipa": "/ˈpætərn/",
+    "ipa": "[ˋpætɚn]",
     "pos": "n.",
     "meaning_zh": "花紋；圖案",
     "note_zh": "描述布料設計，常與 floral/striped 等詞搭配。",
@@ -2773,7 +2773,7 @@
   },
   {
     "word": "stripe",
-    "ipa": "/straɪp/",
+    "ipa": "[straɪp]",
     "pos": "n.",
     "meaning_zh": "條紋",
     "note_zh": "形容詞為 striped，常見於 Part 1 服裝描述。",
@@ -2784,7 +2784,7 @@
   },
   {
     "word": "plaid",
-    "ipa": "/plæd/",
+    "ipa": "[plæd]",
     "pos": "n.",
     "meaning_zh": "格紋（布料）",
     "note_zh": "常指蘇格蘭格紋樣式，與 checkered 意思相近但花紋更複雜。",
@@ -2795,7 +2795,7 @@
   },
   {
     "word": "checkered",
-    "ipa": "/ˈtʃɛkərd/",
+    "ipa": "[ˋtʃɛkɚd]",
     "pos": "adj.",
     "meaning_zh": "格子圖案的",
     "note_zh": "指棋盤式的方格花紋，與 plaid 相比較為規則。",
@@ -2806,7 +2806,7 @@
   },
   {
     "word": "fabric",
-    "ipa": "/ˈfæbrɪk/",
+    "ipa": "[ˋfæbrɪk]",
     "pos": "n.",
     "meaning_zh": "布料",
     "note_zh": "泛稱紡織材質，常與 durable/soft/lightweight 搭配。",
@@ -2817,7 +2817,7 @@
   },
   {
     "word": "cotton",
-    "ipa": "/ˈkɑːtn/",
+    "ipa": "[kɑtn]",
     "pos": "n.",
     "meaning_zh": "棉（布料）",
     "note_zh": "常見於服裝標籤，強調透氣舒適，如 100% cotton。",
@@ -2828,7 +2828,7 @@
   },
   {
     "word": "wool",
-    "ipa": "/wʊl/",
+    "ipa": "[wʊl]",
     "pos": "n.",
     "meaning_zh": "羊毛",
     "note_zh": "常見於冬季服飾材質說明，如 wool sweater。",
@@ -2839,7 +2839,7 @@
   },
   {
     "word": "leather",
-    "ipa": "/ˈlɛðər/",
+    "ipa": "[ˋlɛðɚ]",
     "pos": "n.",
     "meaning_zh": "皮革",
     "note_zh": "常修飾 jacket、shoes、belt 等，強調材質高級耐用。",
@@ -2850,7 +2850,7 @@
   },
   {
     "word": "footwear",
-    "ipa": "/ˈfʊtwɛr/",
+    "ipa": "[ˋfʊtˌwɛr]",
     "pos": "n.",
     "meaning_zh": "鞋類",
     "note_zh": "泛指所有鞋類產品，常見於零售業或型錄用語。",
@@ -2861,7 +2861,7 @@
   },
   {
     "word": "sandals",
-    "ipa": "/ˈsændəlz/",
+    "ipa": "[ˋsændəlz]",
     "pos": "n.",
     "meaning_zh": "涼鞋",
     "note_zh": "常見於 Part 1 夏季或海灘場景描述，注意恆為複數。",
@@ -2872,7 +2872,7 @@
   },
   {
     "word": "sneakers",
-    "ipa": "/ˈsniːkərz/",
+    "ipa": "[ˋsnikɚz]",
     "pos": "n.",
     "meaning_zh": "運動鞋",
     "note_zh": "美式用語，英式常用 trainers，Part 1 高頻詞。",
@@ -2883,7 +2883,7 @@
   },
   {
     "word": "loafers",
-    "ipa": "/ˈloʊfərz/",
+    "ipa": "[ˋlofɚz]",
     "pos": "n.",
     "meaning_zh": "樂福鞋（無鞋帶便鞋）",
     "note_zh": "指無需綁鞋帶的休閒皮鞋，常見於商務休閒穿著描述。",
@@ -2894,7 +2894,7 @@
   },
   {
     "word": "barefoot",
-    "ipa": "/ˈbɛrfʊt/",
+    "ipa": "[ˋbɛrˌfʊt]",
     "pos": "adj.",
     "meaning_zh": "赤腳的",
     "note_zh": "描述未穿鞋的狀態，常見於海灘或戶外休閒場景。",
@@ -2905,7 +2905,7 @@
   },
   {
     "word": "eyeglasses",
-    "ipa": "/ˈaɪɡlæsɪz/",
+    "ipa": "[ˋaɪˌglæsɪz]",
     "pos": "n.",
     "meaning_zh": "眼鏡",
     "note_zh": "正式用語，口語常簡稱 glasses，Part 1 常見配件。",
@@ -2916,7 +2916,7 @@
   },
   {
     "word": "accessory",
-    "ipa": "/əkˈsɛsəri/",
+    "ipa": "[əkˋsɛsərɪ]",
     "pos": "n.",
     "meaning_zh": "配件；飾品",
     "note_zh": "泛指手錶、包包、珠寶等搭配物品，零售情境常用複數 accessories。",
@@ -2927,7 +2927,7 @@
   },
   {
     "word": "jewelry",
-    "ipa": "/ˈdʒuːəlri/",
+    "ipa": "[ˋdʒuəlrɪ]",
     "pos": "n.",
     "meaning_zh": "珠寶；首飾",
     "note_zh": "不可數名詞，泛稱項鍊、戒指、耳環等飾品的統稱。",
@@ -2938,7 +2938,7 @@
   },
   {
     "word": "bracelet",
-    "ipa": "/ˈbreɪslɪt/",
+    "ipa": "[ˋbreslɪt]",
     "pos": "n.",
     "meaning_zh": "手鍊；手環",
     "note_zh": "常見於 Part 1 配件描述，注意與 necklace（項鍊）區分。",
@@ -2949,7 +2949,7 @@
   },
   {
     "word": "earring",
-    "ipa": "/ˈɪrɪŋ/",
+    "ipa": "[ˋɪrɪŋ]",
     "pos": "n.",
     "meaning_zh": "耳環",
     "note_zh": "通常成對出現，故常用複數 earrings。",
@@ -2960,7 +2960,7 @@
   },
   {
     "word": "hairstyle",
-    "ipa": "/ˈhɛrstaɪl/",
+    "ipa": "[ˋhɛrˌstaɪl]",
     "pos": "n.",
     "meaning_zh": "髮型",
     "note_zh": "描述人物外觀特徵的常見詞，Part 1 人物照片描述用詞。",
@@ -2971,7 +2971,7 @@
   },
   {
     "word": "bald",
-    "ipa": "/bɔːld/",
+    "ipa": "[bɔld]",
     "pos": "adj.",
     "meaning_zh": "禿頭的",
     "note_zh": "描述外觀特徵，Part 1 常見用於區分人物的形容詞。",
@@ -2982,7 +2982,7 @@
   },
   {
     "word": "beard",
-    "ipa": "/bɪrd/",
+    "ipa": "[bɪrd]",
     "pos": "n.",
     "meaning_zh": "鬍鬚",
     "note_zh": "描述臉部特徵，常見於 Part 1 人物外觀描述。",
@@ -2993,7 +2993,7 @@
   },
   {
     "word": "well-dressed",
-    "ipa": "/ˌwɛlˈdrɛst/",
+    "ipa": "[ˌwɛlˋdrɛst]",
     "pos": "adj.",
     "meaning_zh": "穿著得體的",
     "note_zh": "複合形容詞，強調穿著整齊講究，常見於形容專業人士。",
@@ -3004,7 +3004,7 @@
   },
   {
     "word": "furniture",
-    "ipa": "/ˈfɜːrnɪtʃər/",
+    "ipa": "[ˋfɝnɪtʃɚ]",
     "pos": "n.",
     "meaning_zh": "家具",
     "note_zh": "不可數名詞，統稱各類家具，常見於房屋租賃或搬家情境。",
@@ -3015,7 +3015,7 @@
   },
   {
     "word": "cabinet",
-    "ipa": "/ˈkæbɪnət/",
+    "ipa": "[ˋkæbɪnət]",
     "pos": "n.",
     "meaning_zh": "櫥櫃",
     "note_zh": "常指有門片的收納櫃，如 filing cabinet（檔案櫃）、kitchen cabinet（廚櫃）。",
@@ -3026,7 +3026,7 @@
   },
   {
     "word": "shelf",
-    "ipa": "/ʃɛlf/",
+    "ipa": "[ʃɛlf]",
     "pos": "n.",
     "meaning_zh": "架子",
     "note_zh": "複數為 shelves，常見於 Part 1 描述物品擺放位置。",
@@ -3037,7 +3037,7 @@
   },
   {
     "word": "bookshelf",
-    "ipa": "/ˈbʊkʃɛlf/",
+    "ipa": "[ˋbʊkˌʃɛlf]",
     "pos": "n.",
     "meaning_zh": "書架",
     "note_zh": "shelf 的複合詞，專指放書用的架子。",
@@ -3048,7 +3048,7 @@
   },
   {
     "word": "couch",
-    "ipa": "/kaʊtʃ/",
+    "ipa": "[kaʊtʃ]",
     "pos": "n.",
     "meaning_zh": "沙發",
     "note_zh": "與 sofa 同義，美式口語更常用 couch。",
@@ -3059,7 +3059,7 @@
   },
   {
     "word": "sofa",
-    "ipa": "/ˈsoʊfə/",
+    "ipa": "[ˋsofə]",
     "pos": "n.",
     "meaning_zh": "沙發",
     "note_zh": "與 couch 同義，較常見於正式或家具型錄用語。",
@@ -3070,7 +3070,7 @@
   },
   {
     "word": "armchair",
-    "ipa": "/ˈɑːrmtʃɛr/",
+    "ipa": "[ˋɑrmˌtʃɛr]",
     "pos": "n.",
     "meaning_zh": "扶手椅",
     "note_zh": "指單人座且附扶手的椅子，常見於 Part 1 室內場景。",
@@ -3081,7 +3081,7 @@
   },
   {
     "word": "recliner",
-    "ipa": "/rɪˈklaɪnər/",
+    "ipa": "[rɪˋklaɪnɚ]",
     "pos": "n.",
     "meaning_zh": "躺椅（可調式）",
     "note_zh": "可調整椅背角度躺臥的椅子，常見於家具廣告。",
@@ -3092,7 +3092,7 @@
   },
   {
     "word": "coffee table",
-    "ipa": "/ˈkɔːfi ˌteɪbəl/",
+    "ipa": "[ˋkɔfɪ ˌtebḷ]",
     "pos": "n.",
     "meaning_zh": "茶几",
     "note_zh": "客廳中央矮桌，常擺放於沙發前，Part 1 常見物件。",
@@ -3103,7 +3103,7 @@
   },
   {
     "word": "desk",
-    "ipa": "/dɛsk/",
+    "ipa": "[dɛsk]",
     "pos": "n.",
     "meaning_zh": "書桌；辦公桌",
     "note_zh": "辦公室情境高頻詞，常與 office 搭配。",
@@ -3114,7 +3114,7 @@
   },
   {
     "word": "nightstand",
-    "ipa": "/ˈnaɪtstænd/",
+    "ipa": "[ˋnaɪtˌstænd]",
     "pos": "n.",
     "meaning_zh": "床頭櫃",
     "note_zh": "臥室常見小型家具，常放置檯燈或鬧鐘。",
@@ -3125,7 +3125,7 @@
   },
   {
     "word": "wardrobe",
-    "ipa": "/ˈwɔːrdroʊb/",
+    "ipa": "[ˋwɔrdˌrob]",
     "pos": "n.",
     "meaning_zh": "衣櫃",
     "note_zh": "亦可指「全部衣物」的統稱，需依上下文判斷。",
@@ -3136,7 +3136,7 @@
   },
   {
     "word": "dresser",
-    "ipa": "/ˈdrɛsər/",
+    "ipa": "[ˋdrɛsɚ]",
     "pos": "n.",
     "meaning_zh": "梳妝台；五斗櫃",
     "note_zh": "臥室常見家具，兼具收納與鏡子功能。",
@@ -3147,7 +3147,7 @@
   },
   {
     "word": "mattress",
-    "ipa": "/ˈmætrəs/",
+    "ipa": "[ˋmætrəs]",
     "pos": "n.",
     "meaning_zh": "床墊",
     "note_zh": "常見於家具賣場或床具廣告情境。",
@@ -3158,7 +3158,7 @@
   },
   {
     "word": "cushion",
-    "ipa": "/ˈkʊʃən/",
+    "ipa": "[ˋkʊʃən]",
     "pos": "n.",
     "meaning_zh": "靠墊；坐墊",
     "note_zh": "常見於沙發、椅子上的軟墊，Part 1 描述細節詞。",
@@ -3169,7 +3169,7 @@
   },
   {
     "word": "curtain",
-    "ipa": "/ˈkɜːrtn/",
+    "ipa": "[kɝtn]",
     "pos": "n.",
     "meaning_zh": "窗簾",
     "note_zh": "常與 draw/open/close 搭配，Part 1 室內場景常見物件。",
@@ -3180,7 +3180,7 @@
   },
   {
     "word": "blinds",
-    "ipa": "/blaɪndz/",
+    "ipa": "[blaɪndz]",
     "pos": "n.",
     "meaning_zh": "百葉窗",
     "note_zh": "通常用複數形式，材質多為金屬或塑膠片。",
@@ -3191,7 +3191,7 @@
   },
   {
     "word": "rug",
-    "ipa": "/rʌɡ/",
+    "ipa": "[rʌg]",
     "pos": "n.",
     "meaning_zh": "小地毯",
     "note_zh": "比 carpet 小且可移動，常見於局部鋪設。",
@@ -3202,7 +3202,7 @@
   },
   {
     "word": "carpet",
-    "ipa": "/ˈkɑːrpɪt/",
+    "ipa": "[ˋkɑrpɪt]",
     "pos": "n.",
     "meaning_zh": "地毯",
     "note_zh": "通常指整片鋪滿地面的地毯，與可移動的 rug 不同。",
@@ -3213,7 +3213,7 @@
   },
   {
     "word": "lamp",
-    "ipa": "/læmp/",
+    "ipa": "[læmp]",
     "pos": "n.",
     "meaning_zh": "燈；檯燈",
     "note_zh": "常見於 Part 1 室內場景，如 floor lamp、desk lamp。",
@@ -3224,7 +3224,7 @@
   },
   {
     "word": "chandelier",
-    "ipa": "/ˌʃændəˈlɪr/",
+    "ipa": "[ˌʃændəˋlɪr]",
     "pos": "n.",
     "meaning_zh": "吊燈（水晶燈）",
     "note_zh": "指懸掛在天花板、通常較華麗的裝飾燈具。",
@@ -3235,7 +3235,7 @@
   },
   {
     "word": "ceiling fan",
-    "ipa": "/ˈsiːlɪŋ fæn/",
+    "ipa": "[ˋsilɪŋ fæn]",
     "pos": "n.",
     "meaning_zh": "吊扇",
     "note_zh": "常見於溫暖氣候地區的室內描述。",
@@ -3246,7 +3246,7 @@
   },
   {
     "word": "washing machine",
-    "ipa": "/ˈwɑːʃɪŋ məˌʃiːn/",
+    "ipa": "[ˋwɑʃɪŋ məˌʃin]",
     "pos": "n.",
     "meaning_zh": "洗衣機",
     "note_zh": "常見於租屋設備清單，美式口語亦可簡稱 washer。",
@@ -3257,7 +3257,7 @@
   },
   {
     "word": "dryer",
-    "ipa": "/ˈdraɪər/",
+    "ipa": "[draɪr]",
     "pos": "n.",
     "meaning_zh": "烘乾機",
     "note_zh": "常與 washing machine 一起出現於家電描述。",
@@ -3268,7 +3268,7 @@
   },
   {
     "word": "vacuum cleaner",
-    "ipa": "/ˈvækjuːm ˌkliːnər/",
+    "ipa": "[ˋvækjum ˌklinɚ]",
     "pos": "n.",
     "meaning_zh": "吸塵器",
     "note_zh": "口語常簡稱 vacuum，亦可作動詞使用（to vacuum）。",
@@ -3279,7 +3279,7 @@
   },
   {
     "word": "air conditioner",
-    "ipa": "/ɛr kənˈdɪʃənər/",
+    "ipa": "[ɛr kənˋdɪʃənɚ]",
     "pos": "n.",
     "meaning_zh": "冷氣機",
     "note_zh": "常縮寫為 AC，租屋或辦公室設備常見詞。",
@@ -3290,7 +3290,7 @@
   },
   {
     "word": "water heater",
-    "ipa": "/ˈwɔːtər ˌhiːtər/",
+    "ipa": "[ˋwɔtɚ ˌhitɚ]",
     "pos": "n.",
     "meaning_zh": "熱水器",
     "note_zh": "常見於房屋維修或租賃相關文章。",
@@ -3301,7 +3301,7 @@
   },
   {
     "word": "thermostat",
-    "ipa": "/ˈθɜːrməstæt/",
+    "ipa": "[ˋθɝməˌstæt]",
     "pos": "n.",
     "meaning_zh": "溫控器；恆溫器",
     "note_zh": "用於調節室內冷暖氣溫度，常見於辦公大樓管理文章。",
@@ -3312,7 +3312,7 @@
   },
   {
     "word": "appliance",
-    "ipa": "/əˈplaɪəns/",
+    "ipa": "[əˋplaɪəns]",
     "pos": "n.",
     "meaning_zh": "家電用品",
     "note_zh": "泛稱電器產品的統稱詞，常見片語 home appliance/kitchen appliance。",
@@ -3323,7 +3323,7 @@
   },
   {
     "word": "upholstery",
-    "ipa": "/əˈpoʊlstəri/",
+    "ipa": "[əˋpolstərɪ]",
     "pos": "n.",
     "meaning_zh": "（家具的）布套；裝潢材質",
     "note_zh": "指沙發、椅子等的表面布料或皮革，較少見但偶見於家具描述。",
@@ -3334,7 +3334,7 @@
   },
   {
     "word": "shelving unit",
-    "ipa": "/ˈʃɛlvɪŋ ˌjuːnɪt/",
+    "ipa": "[ˋʃɛlvɪŋ ˌjunɪt]",
     "pos": "n.",
     "meaning_zh": "置物架",
     "note_zh": "指多層組合式收納架，常見於倉庫或辦公室描述。",
@@ -3345,7 +3345,7 @@
   },
   {
     "word": "countertop",
-    "ipa": "/ˈkaʊntərtɑːp/",
+    "ipa": "[ˋkaʊntɚˌtɑp]",
     "pos": "n.",
     "meaning_zh": "流理台；檯面",
     "note_zh": "指廚房或浴室的工作檯面，常見於裝修或房地產文章。",
@@ -3356,7 +3356,7 @@
   },
   {
     "word": "retailer",
-    "ipa": "/ˈriːteɪlər/",
+    "ipa": "[ˋritˌelɚ]",
     "pos": "n.",
     "meaning_zh": "零售商",
     "note_zh": "與 wholesaler（批發商）相對，常見於商業文章。",
@@ -3367,7 +3367,7 @@
   },
   {
     "word": "merchandise",
-    "ipa": "/ˈmɜːrtʃəndaɪz/",
+    "ipa": "[ˋmɝtʃənˌdaɪz]",
     "pos": "n.",
     "meaning_zh": "商品",
     "note_zh": "不可數名詞，泛指店內銷售的貨品總稱。",
@@ -3378,7 +3378,7 @@
   },
   {
     "word": "inventory",
-    "ipa": "/ˈɪnvəntɔːri/",
+    "ipa": "[ˋɪnvəntɔrɪ]",
     "pos": "n.",
     "meaning_zh": "庫存",
     "note_zh": "常見於商業文章，如 inventory management（庫存管理）。",
@@ -3389,7 +3389,7 @@
   },
   {
     "word": "receipt",
-    "ipa": "/rɪˈsiːt/",
+    "ipa": "[rɪˋsit]",
     "pos": "n.",
     "meaning_zh": "收據",
     "note_zh": "證明已付款的憑證，退換貨常需出示，與 invoice（請款單）不同。",
@@ -3400,7 +3400,7 @@
   },
   {
     "word": "refund",
-    "ipa": "/ˈriːfʌnd/",
+    "ipa": "[ˋrifʌnd]",
     "pos": "n.",
     "meaning_zh": "退款",
     "note_zh": "常與 request/issue/get a refund 搭配。",
@@ -3411,7 +3411,7 @@
   },
   {
     "word": "exchange",
-    "ipa": "/ɪksˈtʃeɪndʒ/",
+    "ipa": "[ɪksˋtʃendʒ]",
     "pos": "v.",
     "meaning_zh": "換貨",
     "note_zh": "指以商品換取另一商品，與 refund（退款）不同。",
@@ -3422,7 +3422,7 @@
   },
   {
     "word": "discount",
-    "ipa": "/ˈdɪskaʊnt/",
+    "ipa": "[ˋdɪskaʊnt]",
     "pos": "n.",
     "meaning_zh": "折扣",
     "note_zh": "常見片語 give a discount、at a discount。",
@@ -3433,7 +3433,7 @@
   },
   {
     "word": "markdown",
-    "ipa": "/ˈmɑːrkdaʊn/",
+    "ipa": "[ˋmɑrkˌdaʊn]",
     "pos": "n.",
     "meaning_zh": "降價",
     "note_zh": "較正式的商業用語，指店家主動調降售價。",
@@ -3444,7 +3444,7 @@
   },
   {
     "word": "clearance sale",
-    "ipa": "/ˈklɪrəns seɪl/",
+    "ipa": "[ˋklɪrəns sel]",
     "pos": "n.",
     "meaning_zh": "清倉拍賣",
     "note_zh": "指為清空庫存而進行的大幅折扣活動。",
@@ -3455,7 +3455,7 @@
   },
   {
     "word": "checkout",
-    "ipa": "/ˈtʃɛkaʊt/",
+    "ipa": "[ˋtʃɛkˌaʊt]",
     "pos": "n.",
     "meaning_zh": "結帳（櫃檯）",
     "note_zh": "亦可作動詞 check out，指付款流程。",
@@ -3466,7 +3466,7 @@
   },
   {
     "word": "cashier",
-    "ipa": "/kæˈʃɪr/",
+    "ipa": "[kæˋʃɪr]",
     "pos": "n.",
     "meaning_zh": "收銀員",
     "note_zh": "負責結帳收款的店員，零售情境高頻詞。",
@@ -3477,7 +3477,7 @@
   },
   {
     "word": "shopper",
-    "ipa": "/ˈʃɑːpər/",
+    "ipa": "[ˋʃɑpɚ]",
     "pos": "n.",
     "meaning_zh": "購物者",
     "note_zh": "泛指消費者，常見於市場調查或零售文章。",
@@ -3488,7 +3488,7 @@
   },
   {
     "word": "shopping cart",
-    "ipa": "/ˈʃɑːpɪŋ kɑːrt/",
+    "ipa": "[ˋʃɑpɪŋ kɑrt]",
     "pos": "n.",
     "meaning_zh": "購物車",
     "note_zh": "英式英語為 trolley，美式常用 cart。",
@@ -3499,7 +3499,7 @@
   },
   {
     "word": "price tag",
-    "ipa": "/praɪs tæɡ/",
+    "ipa": "[praɪs tæg]",
     "pos": "n.",
     "meaning_zh": "價格標籤",
     "note_zh": "常見於 Part 1 商品描述，標示商品售價。",
@@ -3510,7 +3510,7 @@
   },
   {
     "word": "warranty",
-    "ipa": "/ˈwɔːrənti/",
+    "ipa": "[ˋwɔrəntɪ]",
     "pos": "n.",
     "meaning_zh": "保固",
     "note_zh": "指製造商對產品品質提供的保證期限，常見於電器或3C商品說明。",
@@ -3521,7 +3521,7 @@
   },
   {
     "word": "voucher",
-    "ipa": "/ˈvaʊtʃər/",
+    "ipa": "[ˋvaʊtʃɚ]",
     "pos": "n.",
     "meaning_zh": "抵用券；禮券",
     "note_zh": "可折抵消費金額的憑證，常作為促銷或補償贈品。",
@@ -3532,7 +3532,7 @@
   },
   {
     "word": "coupon",
-    "ipa": "/ˈkuːpɑːn/",
+    "ipa": "[ˋkupɑn]",
     "pos": "n.",
     "meaning_zh": "折價券",
     "note_zh": "與 voucher 相似，常指印刷或電子的折扣券。",
@@ -3543,7 +3543,7 @@
   },
   {
     "word": "loyalty program",
-    "ipa": "/ˈlɔɪəlti ˌproʊɡræm/",
+    "ipa": "[ˋlɔɪəltɪ ˌprogræm]",
     "pos": "n.",
     "meaning_zh": "忠誠度計畫",
     "note_zh": "指商家為留住顧客而設計的集點或回饋制度。",
@@ -3554,7 +3554,7 @@
   },
   {
     "word": "installment",
-    "ipa": "/ɪnˈstɔːlmənt/",
+    "ipa": "[ɪnˋstɔlmənt]",
     "pos": "n.",
     "meaning_zh": "分期付款",
     "note_zh": "常見片語 pay in installments，指分次支付款項。",
@@ -3565,7 +3565,7 @@
   },
   {
     "word": "purchase",
-    "ipa": "/ˈpɜːrtʃəs/",
+    "ipa": "[ˋpɝtʃəs]",
     "pos": "v.",
     "meaning_zh": "購買",
     "note_zh": "比 buy 更正式，常見於書面商業英文。",
@@ -3576,7 +3576,7 @@
   },
   {
     "word": "transaction",
-    "ipa": "/trænˈzækʃən/",
+    "ipa": "[trænˋzækʃən]",
     "pos": "n.",
     "meaning_zh": "交易",
     "note_zh": "泛指買賣行為，常見於財務或銀行相關文章。",
@@ -3587,7 +3587,7 @@
   },
   {
     "word": "bargain",
-    "ipa": "/ˈbɑːrɡən/",
+    "ipa": "[ˋbɑrgən]",
     "pos": "n.",
     "meaning_zh": "划算的交易；便宜貨",
     "note_zh": "指物超所值的商品，亦可作動詞表示「討價還價」。",
@@ -3598,7 +3598,7 @@
   },
   {
     "word": "browse",
-    "ipa": "/braʊz/",
+    "ipa": "[braʊz]",
     "pos": "v.",
     "meaning_zh": "瀏覽（商品）",
     "note_zh": "指隨意查看商品而非直接購買，常見於網購情境。",
@@ -3609,7 +3609,7 @@
   },
   {
     "word": "try on",
-    "ipa": "/traɪ ɑːn/",
+    "ipa": "[traɪ ɑn]",
     "pos": "phr.",
     "meaning_zh": "試穿",
     "note_zh": "片語動詞，常見於服飾店購物情境對話。",
@@ -3620,7 +3620,7 @@
   },
   {
     "word": "out of stock",
-    "ipa": "/aʊt əv stɑːk/",
+    "ipa": "[aʊt əv stɑk]",
     "pos": "phr.",
     "meaning_zh": "缺貨",
     "note_zh": "常見於商店對話或線上購物頁面提示。",
@@ -3631,7 +3631,7 @@
   },
   {
     "word": "in stock",
-    "ipa": "/ɪn stɑːk/",
+    "ipa": "[ɪn stɑk]",
     "pos": "phr.",
     "meaning_zh": "有現貨",
     "note_zh": "與 out of stock 相對，表示商品可供購買。",
@@ -3642,7 +3642,7 @@
   },
   {
     "word": "delivery",
-    "ipa": "/dɪˈlɪvəri/",
+    "ipa": "[dɪˋlɪvərɪ]",
     "pos": "n.",
     "meaning_zh": "遞送；送貨",
     "note_zh": "常與 free/same-day/express 搭配出現於零售廣告。",
@@ -3653,7 +3653,7 @@
   },
   {
     "word": "order confirmation",
-    "ipa": "/ˈɔːrdər ˌkɑːnfərˈmeɪʃən/",
+    "ipa": "[ˋɔrdɚ ˌkɑnfɚˋmeʃən]",
     "pos": "n.",
     "meaning_zh": "訂單確認（信）",
     "note_zh": "線上購物完成後收到的確認通知，常包含訂單編號。",
@@ -3664,7 +3664,7 @@
   },
   {
     "word": "customer service",
-    "ipa": "/ˈkʌstəmər ˌsɜːrvɪs/",
+    "ipa": "[ˋkʌstəmɚ ˌsɝvɪs]",
     "pos": "n.",
     "meaning_zh": "客戶服務",
     "note_zh": "泛指售前售後的顧客協助部門或服務，商業文章高頻詞。",
@@ -3675,7 +3675,7 @@
   },
   {
     "word": "complaint",
-    "ipa": "/kəmˈpleɪnt/",
+    "ipa": "[kəmˋplent]",
     "pos": "n.",
     "meaning_zh": "投訴；抱怨",
     "note_zh": "常見片語 file/lodge a complaint，客訴情境高頻詞。",
@@ -3686,7 +3686,7 @@
   },
   {
     "word": "return policy",
-    "ipa": "/rɪˈtɜːrn ˌpɑːləsi/",
+    "ipa": "[rɪˋtɝn ˌpɑləsɪ]",
     "pos": "n.",
     "meaning_zh": "退貨政策",
     "note_zh": "商家規定顧客可退換商品的條件與期限。",
@@ -3697,7 +3697,7 @@
   },
   {
     "word": "size chart",
-    "ipa": "/saɪz tʃɑːrt/",
+    "ipa": "[saɪz tʃɑrt]",
     "pos": "n.",
     "meaning_zh": "尺寸表",
     "note_zh": "常見於服飾網購頁面，協助顧客選擇合適尺寸。",
@@ -3708,7 +3708,7 @@
   },
   {
     "word": "sold out",
-    "ipa": "/soʊld aʊt/",
+    "ipa": "[sold aʊt]",
     "pos": "phr.",
     "meaning_zh": "售完",
     "note_zh": "表示商品已全數賣出，常見於促銷活動報導。",
@@ -3719,7 +3719,7 @@
   },
   {
     "word": "storefront",
-    "ipa": "/ˈstɔːrfrʌnt/",
+    "ipa": "[ˋstɔrˌfrʌnt]",
     "pos": "n.",
     "meaning_zh": "店面",
     "note_zh": "指商店面對街道的外觀或門面，亦可指線上商店首頁。",
@@ -3730,7 +3730,7 @@
   },
   {
     "word": "department store",
-    "ipa": "/dɪˈpɑːrtmənt stɔːr/",
+    "ipa": "[dɪˋpɑrtmənt stɔr]",
     "pos": "n.",
     "meaning_zh": "百貨公司",
     "note_zh": "指販售多種商品類別的大型零售商店。",
@@ -3741,7 +3741,7 @@
   },
   {
     "word": "boutique",
-    "ipa": "/buːˈtiːk/",
+    "ipa": "[buˋtik]",
     "pos": "n.",
     "meaning_zh": "精品店",
     "note_zh": "指規模較小、專營特定風格或高端商品的商店。",
@@ -3752,7 +3752,7 @@
   },
   {
     "word": "online shopping",
-    "ipa": "/ˈɑːnlaɪn ˌʃɑːpɪŋ/",
+    "ipa": "[ˋɑnlaɪn ˌʃɑpɪŋ]",
     "pos": "n.",
     "meaning_zh": "網路購物",
     "note_zh": "與 in-store shopping（實體店購物）相對，現代商業文章常見主題。",
@@ -3763,7 +3763,7 @@
   },
   {
     "word": "subscription",
-    "ipa": "/səbˈskrɪpʃən/",
+    "ipa": "[səbˋskrɪpʃən]",
     "pos": "n.",
     "meaning_zh": "訂閱服務",
     "note_zh": "指定期付費取得商品或服務的模式，常見於雜誌、串流平台。",
@@ -3774,7 +3774,7 @@
   },
   {
     "word": "gadget",
-    "ipa": "/ˈɡædʒɪt/",
+    "ipa": "[ˋgædʒɪt]",
     "pos": "n.",
     "meaning_zh": "小裝置；新奇小工具",
     "note_zh": "泛指便利實用的小型電子產品，常帶有新奇、有趣的語感。",
@@ -3785,7 +3785,7 @@
   },
   {
     "word": "device",
-    "ipa": "/dɪˈvaɪs/",
+    "ipa": "[dɪˋvaɪs]",
     "pos": "n.",
     "meaning_zh": "裝置；設備",
     "note_zh": "泛稱電子產品的通用詞，如 mobile device（行動裝置）。",
@@ -3796,7 +3796,7 @@
   },
   {
     "word": "smartphone",
-    "ipa": "/ˈsmɑːrtfoʊn/",
+    "ipa": "[ˋsmɑrtˌfon]",
     "pos": "n.",
     "meaning_zh": "智慧型手機",
     "note_zh": "現代3C核心詞，常見於廣告及產品評論文章。",
@@ -3807,7 +3807,7 @@
   },
   {
     "word": "laptop",
-    "ipa": "/ˈlæptɑːp/",
+    "ipa": "[ˋlæptɑp]",
     "pos": "n.",
     "meaning_zh": "筆記型電腦",
     "note_zh": "與 desktop computer（桌上型電腦）相對，強調可攜性。",
@@ -3818,7 +3818,7 @@
   },
   {
     "word": "tablet",
-    "ipa": "/ˈtæblət/",
+    "ipa": "[ˋtæblət]",
     "pos": "n.",
     "meaning_zh": "平板電腦",
     "note_zh": "介於手機與筆電之間的裝置，常見於3C廣告。",
@@ -3829,7 +3829,7 @@
   },
   {
     "word": "charger",
-    "ipa": "/ˈtʃɑːrdʒər/",
+    "ipa": "[ˋtʃɑrdʒɚ]",
     "pos": "n.",
     "meaning_zh": "充電器",
     "note_zh": "常與 phone/laptop 搭配，如 phone charger。",
@@ -3840,7 +3840,7 @@
   },
   {
     "word": "battery",
-    "ipa": "/ˈbætəri/",
+    "ipa": "[ˋbætərɪ]",
     "pos": "n.",
     "meaning_zh": "電池",
     "note_zh": "常見片語 battery life、rechargeable battery。",
@@ -3851,7 +3851,7 @@
   },
   {
     "word": "battery life",
-    "ipa": "/ˈbætəri laɪf/",
+    "ipa": "[ˋbætərɪ laɪf]",
     "pos": "n.",
     "meaning_zh": "電池續航力",
     "note_zh": "指裝置單次充電可使用的時間長度，產品評論常見用詞。",
@@ -3862,7 +3862,7 @@
   },
   {
     "word": "screen",
-    "ipa": "/skriːn/",
+    "ipa": "[skrin]",
     "pos": "n.",
     "meaning_zh": "螢幕",
     "note_zh": "泛指顯示器，常見於手機、電視、電腦等產品描述。",
@@ -3873,7 +3873,7 @@
   },
   {
     "word": "touchscreen",
-    "ipa": "/ˈtʌtʃskriːn/",
+    "ipa": "[ˋtʌtʃskrin]",
     "pos": "n.",
     "meaning_zh": "觸控螢幕",
     "note_zh": "強調可用手指直接操作的螢幕技術。",
@@ -3884,7 +3884,7 @@
   },
   {
     "word": "resolution",
-    "ipa": "/ˌrɛzəˈluːʃən/",
+    "ipa": "[ˌrɛzəˋluʃən]",
     "pos": "n.",
     "meaning_zh": "解析度",
     "note_zh": "常見於螢幕或相機規格描述，如 high resolution。",
@@ -3895,7 +3895,7 @@
   },
   {
     "word": "speaker",
-    "ipa": "/ˈspiːkər/",
+    "ipa": "[ˋspikɚ]",
     "pos": "n.",
     "meaning_zh": "喇叭；揚聲器",
     "note_zh": "亦可指「演講者」，需依上下文判斷語意。",
@@ -3906,7 +3906,7 @@
   },
   {
     "word": "headphones",
-    "ipa": "/ˈhɛdfoʊnz/",
+    "ipa": "[ˋhɛdˌfonz]",
     "pos": "n.",
     "meaning_zh": "耳機（頭戴式）",
     "note_zh": "通常用複數形式，與 earbuds（耳塞式）做區分。",
@@ -3917,7 +3917,7 @@
   },
   {
     "word": "earbuds",
-    "ipa": "/ˈɪrbʌdz/",
+    "ipa": "[ˋɪrbʌdz]",
     "pos": "n.",
     "meaning_zh": "無線耳塞式耳機",
     "note_zh": "指小型入耳式耳機，常見無線藍牙款式。",
@@ -3928,7 +3928,7 @@
   },
   {
     "word": "wireless",
-    "ipa": "/ˈwaɪərləs/",
+    "ipa": "[ˋwaɪrləs]",
     "pos": "adj.",
     "meaning_zh": "無線的",
     "note_zh": "常修飾 headphones、charger、network 等，強調不需實體線材。",
@@ -3939,7 +3939,7 @@
   },
   {
     "word": "bluetooth",
-    "ipa": "/ˈbluːtuːθ/",
+    "ipa": "[ˋbluˌtuθ]",
     "pos": "n.",
     "meaning_zh": "藍牙",
     "note_zh": "短距離無線傳輸技術，3C產品說明高頻詞。",
@@ -3950,7 +3950,7 @@
   },
   {
     "word": "Wi-Fi",
-    "ipa": "/ˈwaɪfaɪ/",
+    "ipa": "[ˋwaɪfaɪ]",
     "pos": "n.",
     "meaning_zh": "無線網路",
     "note_zh": "現代辦公室與旅館常見設施，常見片語 free Wi-Fi。",
@@ -3961,7 +3961,7 @@
   },
   {
     "word": "router",
-    "ipa": "/ˈruːtər/",
+    "ipa": "[ˋrutɚ]",
     "pos": "n.",
     "meaning_zh": "路由器",
     "note_zh": "提供網路連線的裝置，常見於居家或辦公室設備描述。",
@@ -3972,7 +3972,7 @@
   },
   {
     "word": "software",
-    "ipa": "/ˈsɔːftwɛr/",
+    "ipa": "[ˋsɔftˌwɛr]",
     "pos": "n.",
     "meaning_zh": "軟體",
     "note_zh": "不可數名詞，與 hardware（硬體）相對。",
@@ -3983,7 +3983,7 @@
   },
   {
     "word": "hardware",
-    "ipa": "/ˈhɑːrdwɛr/",
+    "ipa": "[ˋhɑrdˌwɛr]",
     "pos": "n.",
     "meaning_zh": "硬體",
     "note_zh": "指電腦或裝置的實體零件，與 software（軟體）相對。",
@@ -3994,7 +3994,7 @@
   },
   {
     "word": "upgrade",
-    "ipa": "/ʌpˈɡreɪd/",
+    "ipa": "[ʌpˋgred]",
     "pos": "v.",
     "meaning_zh": "升級",
     "note_zh": "常見片語 upgrade to，指提升裝置或方案等級。",
@@ -4005,7 +4005,7 @@
   },
   {
     "word": "install",
-    "ipa": "/ɪnˈstɔːl/",
+    "ipa": "[ɪnˋstɔl]",
     "pos": "v.",
     "meaning_zh": "安裝",
     "note_zh": "常見於軟體或設備使用說明，如 install an app。",
@@ -4016,7 +4016,7 @@
   },
   {
     "word": "compatible",
-    "ipa": "/kəmˈpætəbəl/",
+    "ipa": "[kəmˋpætəbḷ]",
     "pos": "adj.",
     "meaning_zh": "相容的",
     "note_zh": "常見片語 compatible with，描述裝置或軟體能否搭配使用。",
@@ -4027,7 +4027,7 @@
   },
   {
     "word": "malfunction",
-    "ipa": "/mælˈfʌŋkʃən/",
+    "ipa": "[mælˋfʌŋkʃən]",
     "pos": "v.",
     "meaning_zh": "故障",
     "note_zh": "指裝置無法正常運作，常見於產品退換貨或客服情境。",
@@ -4038,7 +4038,7 @@
   },
   {
     "word": "warranty card",
-    "ipa": "/ˈwɔːrənti kɑːrd/",
+    "ipa": "[ˋwɔrəntɪ kɑrd]",
     "pos": "n.",
     "meaning_zh": "保固卡",
     "note_zh": "購買電子產品時附贈的憑證，用於申請保固服務。",
@@ -4049,7 +4049,7 @@
   },
   {
     "word": "user manual",
-    "ipa": "/ˈjuːzər ˌmænjuəl/",
+    "ipa": "[ˋjuzɚ ˌmænjuəl]",
     "pos": "n.",
     "meaning_zh": "使用手冊",
     "note_zh": "說明產品操作方式的文件，常見於產品包裝內。",
@@ -4060,7 +4060,7 @@
   },
   {
     "word": "remote control",
-    "ipa": "/rɪˌmoʊt kənˈtroʊl/",
+    "ipa": "[rɪˌmot kənˋtrol]",
     "pos": "n.",
     "meaning_zh": "遙控器",
     "note_zh": "常見於電視、冷氣等家電操作，口語可簡稱 remote。",
@@ -4071,7 +4071,7 @@
   },
   {
     "word": "camera",
-    "ipa": "/ˈkæmərə/",
+    "ipa": "[ˋkæmərə]",
     "pos": "n.",
     "meaning_zh": "相機；攝影鏡頭",
     "note_zh": "現為手機規格重點，常見於產品評論與廣告文章。",
@@ -4082,7 +4082,7 @@
   },
   {
     "word": "webcam",
-    "ipa": "/ˈwɛbkæm/",
+    "ipa": "[ˋwɛbkæm]",
     "pos": "n.",
     "meaning_zh": "網路攝影機",
     "note_zh": "用於視訊通話或直播的裝置，遠距工作情境常見詞。",
@@ -4093,7 +4093,7 @@
   },
   {
     "word": "printer",
-    "ipa": "/ˈprɪntər/",
+    "ipa": "[ˋprɪntɚ]",
     "pos": "n.",
     "meaning_zh": "印表機",
     "note_zh": "辦公室常見設備，常見片語 out of paper/ink。",
@@ -4104,7 +4104,7 @@
   },
   {
     "word": "USB flash drive",
-    "ipa": "/ˌjuː ɛs ˈbiː flæʃ draɪv/",
+    "ipa": "[ju ɛs bi flæʃ draɪv]",
     "pos": "n.",
     "meaning_zh": "USB隨身碟",
     "note_zh": "小型可攜式儲存裝置，常見於辦公室資料傳輸情境。",
@@ -4115,7 +4115,7 @@
   },
   {
     "word": "memory card",
-    "ipa": "/ˈmɛməri kɑːrd/",
+    "ipa": "[ˋmɛmərɪ kɑrd]",
     "pos": "n.",
     "meaning_zh": "記憶卡",
     "note_zh": "常見於相機或手機的外接儲存裝置。",
@@ -4126,7 +4126,7 @@
   },
   {
     "word": "power outlet",
-    "ipa": "/ˈpaʊər ˌaʊtlɛt/",
+    "ipa": "[paʊr ˌaʊtlɛt]",
     "pos": "n.",
     "meaning_zh": "電源插座",
     "note_zh": "常見於機場、辦公室等場所描述，英式英語常用 socket。",
@@ -4137,7 +4137,7 @@
   },
   {
     "word": "adapter",
-    "ipa": "/əˈdæptər/",
+    "ipa": "[əˋdæptɚ]",
     "pos": "n.",
     "meaning_zh": "轉接器",
     "note_zh": "用於連接不同規格的插頭或裝置，旅行情境常見詞。",
@@ -4148,7 +4148,7 @@
   },
   {
     "word": "cable",
-    "ipa": "/ˈkeɪbəl/",
+    "ipa": "[ˋkebḷ]",
     "pos": "n.",
     "meaning_zh": "電纜線",
     "note_zh": "泛指各類連接線，如 charging cable、HDMI cable。",
@@ -4159,7 +4159,7 @@
   },
   {
     "word": "specification",
-    "ipa": "/ˌspɛsəfəˈkeɪʃən/",
+    "ipa": "[ˌspɛsəfəˋkeʃən]",
     "pos": "n.",
     "meaning_zh": "規格",
     "note_zh": "常用複數 specifications，列出產品詳細技術參數。",
@@ -4170,7 +4170,7 @@
   },
   {
     "word": "update",
-    "ipa": "/ʌpˈdeɪt/",
+    "ipa": "[ʌpˋdet]",
     "pos": "v.",
     "meaning_zh": "更新",
     "note_zh": "亦可作名詞（an update），常見於軟體或系統相關描述。",
@@ -4181,7 +4181,7 @@
   },
   {
     "word": "drone",
-    "ipa": "/droʊn/",
+    "ipa": "[dron]",
     "pos": "n.",
     "meaning_zh": "無人機",
     "note_zh": "常見於新科技產品評論或攝影相關文章。",
@@ -4192,7 +4192,7 @@
   },
   {
     "word": "smartwatch",
-    "ipa": "/ˈsmɑːrtwɑːtʃ/",
+    "ipa": "[ˋsmɑrtwɑtʃ]",
     "pos": "n.",
     "meaning_zh": "智慧型手錶",
     "note_zh": "結合手錶與行動裝置功能的穿戴式產品，近年科技產品常見詞。",
@@ -4203,7 +4203,7 @@
   },
   {
     "word": "e-reader",
-    "ipa": "/ˈiː ˌriːdər/",
+    "ipa": "[i ˌridɚ]",
     "pos": "n.",
     "meaning_zh": "電子書閱讀器",
     "note_zh": "專門用於閱讀電子書的裝置，螢幕通常採用電子紙技術。",
@@ -4214,7 +4214,7 @@
   },
   {
     "word": "red",
-    "ipa": "/rɛd/",
+    "ipa": "[rɛd]",
     "pos": "adj.",
     "meaning_zh": "紅色的",
     "note_zh": "基本顏色詞，也可當名詞表示「紅色」，常見於描述衣物與標誌顏色。",
@@ -4225,7 +4225,7 @@
   },
   {
     "word": "orange",
-    "ipa": "/ˈɔːrɪndʒ/",
+    "ipa": "[ˋɔrɪndʒ]",
     "pos": "adj.",
     "meaning_zh": "橘色的",
     "note_zh": "同時可作水果「柳橙」解，圖片描述中常見於背心、水果顏色。",
@@ -4236,7 +4236,7 @@
   },
   {
     "word": "yellow",
-    "ipa": "/ˈjɛloʊ/",
+    "ipa": "[ˋjɛlo]",
     "pos": "adj.",
     "meaning_zh": "黃色的",
     "note_zh": "常用於描述警示標誌、計程車、花朵等鮮明物品的顏色。",
@@ -4247,7 +4247,7 @@
   },
   {
     "word": "green",
-    "ipa": "/ɡriːn/",
+    "ipa": "[grin]",
     "pos": "adj.",
     "meaning_zh": "綠色的",
     "note_zh": "除顏色外也常引申為「環保的」，如 green energy。",
@@ -4258,7 +4258,7 @@
   },
   {
     "word": "blue",
-    "ipa": "/bluː/",
+    "ipa": "[blu]",
     "pos": "adj.",
     "meaning_zh": "藍色的",
     "note_zh": "常見於制服、天空、海洋描述，也可比喻「憂鬱的」。",
@@ -4269,7 +4269,7 @@
   },
   {
     "word": "purple",
-    "ipa": "/ˈpɜːrpəl/",
+    "ipa": "[ˋpɝpḷ]",
     "pos": "adj.",
     "meaning_zh": "紫色的",
     "note_zh": "Part 1照片中較少見，但常出現於花卉、包裝顏色描述。",
@@ -4280,7 +4280,7 @@
   },
   {
     "word": "pink",
-    "ipa": "/pɪŋk/",
+    "ipa": "[pɪŋk]",
     "pos": "adj.",
     "meaning_zh": "粉紅色的",
     "note_zh": "常用於形容淺色系物品，如包裝、服飾。",
@@ -4291,7 +4291,7 @@
   },
   {
     "word": "brown",
-    "ipa": "/braʊn/",
+    "ipa": "[braʊn]",
     "pos": "adj.",
     "meaning_zh": "棕色的",
     "note_zh": "常用於描述木製家具、頭髮、包裹顏色。",
@@ -4302,7 +4302,7 @@
   },
   {
     "word": "black",
-    "ipa": "/blæk/",
+    "ipa": "[blæk]",
     "pos": "adj.",
     "meaning_zh": "黑色的",
     "note_zh": "常見於描述正式服裝、設備顏色，如 black suit。",
@@ -4313,7 +4313,7 @@
   },
   {
     "word": "white",
-    "ipa": "/waɪt/",
+    "ipa": "[waɪt]",
     "pos": "adj.",
     "meaning_zh": "白色的",
     "note_zh": "常用於描述牆壁、紙張、制服等，也常見於 white paper（白皮書）。",
@@ -4324,7 +4324,7 @@
   },
   {
     "word": "gray",
-    "ipa": "/ɡreɪ/",
+    "ipa": "[gre]",
     "pos": "adj.",
     "meaning_zh": "灰色的",
     "note_zh": "英式拼法為 grey，常用於形容天空、西裝、金屬材質。",
@@ -4335,7 +4335,7 @@
   },
   {
     "word": "gold",
-    "ipa": "/ɡoʊld/",
+    "ipa": "[gold]",
     "pos": "adj.",
     "meaning_zh": "金色的",
     "note_zh": "也可作名詞指「黃金」，常見於獎牌、珠寶描述。",
@@ -4346,7 +4346,7 @@
   },
   {
     "word": "silver",
-    "ipa": "/ˈsɪlvər/",
+    "ipa": "[ˋsɪlvɚ]",
     "pos": "adj.",
     "meaning_zh": "銀色的",
     "note_zh": "常用於描述金屬物品，如汽車、餐具、獎牌。",
@@ -4357,7 +4357,7 @@
   },
   {
     "word": "beige",
-    "ipa": "/beɪʒ/",
+    "ipa": "[beʒ]",
     "pos": "adj.",
     "meaning_zh": "米色的；淺褐色的",
     "note_zh": "常見於室內裝潢、服裝描述，屬於中性色調。",
@@ -4368,7 +4368,7 @@
   },
   {
     "word": "navy",
-    "ipa": "/ˈneɪvi/",
+    "ipa": "[ˋnevɪ]",
     "pos": "adj.",
     "meaning_zh": "深藍色的",
     "note_zh": "常與 blue 連用為 navy blue，多用於制服描述。",
@@ -4379,7 +4379,7 @@
   },
   {
     "word": "striped",
-    "ipa": "/straɪpt/",
+    "ipa": "[straɪpt]",
     "pos": "adj.",
     "meaning_zh": "條紋的",
     "note_zh": "Part 1常描述衣服圖案，如 striped shirt。",
@@ -4390,7 +4390,7 @@
   },
   {
     "word": "colorful",
-    "ipa": "/ˈkʌlərfəl/",
+    "ipa": "[ˋkʌlɚfəl]",
     "pos": "adj.",
     "meaning_zh": "色彩繽紛的",
     "note_zh": "用於整體描述多種顏色混合的場景，如市集、花園。",
@@ -4401,7 +4401,7 @@
   },
   {
     "word": "dark",
-    "ipa": "/dɑːrk/",
+    "ipa": "[dɑrk]",
     "pos": "adj.",
     "meaning_zh": "深色的；暗的",
     "note_zh": "可修飾顏色（dark blue）也可獨立描述光線昏暗。",
@@ -4412,7 +4412,7 @@
   },
   {
     "word": "light",
-    "ipa": "/laɪt/",
+    "ipa": "[laɪt]",
     "pos": "adj.",
     "meaning_zh": "淺色的；亮的",
     "note_zh": "修飾顏色時表示「淺～色」，如 light green，與 dark 相對。",
@@ -4423,7 +4423,7 @@
   },
   {
     "word": "bright",
-    "ipa": "/braɪt/",
+    "ipa": "[braɪt]",
     "pos": "adj.",
     "meaning_zh": "鮮豔的；明亮的",
     "note_zh": "形容顏色飽和度高或光線充足，如 bright colors。",
@@ -4434,7 +4434,7 @@
   },
   {
     "word": "pale",
-    "ipa": "/peɪl/",
+    "ipa": "[pel]",
     "pos": "adj.",
     "meaning_zh": "淡色的；蒼白的",
     "note_zh": "常修飾顏色表示「淡～」，也可形容臉色蒼白。",
@@ -4445,7 +4445,7 @@
   },
   {
     "word": "shade",
-    "ipa": "/ʃeɪd/",
+    "ipa": "[ʃed]",
     "pos": "n.",
     "meaning_zh": "色調；陰影",
     "note_zh": "指顏色的深淺變化，如 a darker shade of blue。",
@@ -4456,7 +4456,7 @@
   },
   {
     "word": "round",
-    "ipa": "/raʊnd/",
+    "ipa": "[raʊnd]",
     "pos": "adj.",
     "meaning_zh": "圓形的",
     "note_zh": "描述立體或平面的圓形物品，如 round table。",
@@ -4467,7 +4467,7 @@
   },
   {
     "word": "square",
-    "ipa": "/skwɛr/",
+    "ipa": "[skwɛr]",
     "pos": "adj.",
     "meaning_zh": "正方形的",
     "note_zh": "也可作名詞指「廣場」或「正方形」，Part1常描述物品形狀。",
@@ -4478,7 +4478,7 @@
   },
   {
     "word": "rectangular",
-    "ipa": "/rɛkˈtæŋɡjələr/",
+    "ipa": "[rɛkˋtæŋgjəlɚ]",
     "pos": "adj.",
     "meaning_zh": "長方形的",
     "note_zh": "常用於描述桌子、螢幕、建築物等物品外形。",
@@ -4489,7 +4489,7 @@
   },
   {
     "word": "triangular",
-    "ipa": "/traɪˈæŋɡjələr/",
+    "ipa": "[traɪˋæŋgjəlɚ]",
     "pos": "adj.",
     "meaning_zh": "三角形的",
     "note_zh": "較少見但偶爾出現於描述路標或建築結構。",
@@ -4500,7 +4500,7 @@
   },
   {
     "word": "circular",
-    "ipa": "/ˈsɜːrkjələr/",
+    "ipa": "[ˋsɝkjəlɚ]",
     "pos": "adj.",
     "meaning_zh": "圓形的；環狀的",
     "note_zh": "與 round 意思相近，但較常用於正式或書面描述。",
@@ -4511,7 +4511,7 @@
   },
   {
     "word": "oval",
-    "ipa": "/ˈoʊvəl/",
+    "ipa": "[ˋovḷ]",
     "pos": "adj.",
     "meaning_zh": "橢圓形的",
     "note_zh": "常用於描述鏡子、盤子等物品形狀。",
@@ -4522,7 +4522,7 @@
   },
   {
     "word": "curved",
-    "ipa": "/kɜːrvd/",
+    "ipa": "[kɝvd]",
     "pos": "adj.",
     "meaning_zh": "彎曲的",
     "note_zh": "形容線條或物體表面不呈直線，如 curved staircase。",
@@ -4533,7 +4533,7 @@
   },
   {
     "word": "straight",
-    "ipa": "/streɪt/",
+    "ipa": "[stret]",
     "pos": "adj.",
     "meaning_zh": "筆直的",
     "note_zh": "常用於描述道路、線條，也可作副詞 go straight。",
@@ -4544,7 +4544,7 @@
   },
   {
     "word": "diagonal",
-    "ipa": "/daɪˈæɡənəl/",
+    "ipa": "[daɪˋægənḷ]",
     "pos": "adj.",
     "meaning_zh": "對角線的",
     "note_zh": "描述物品排列或線條走向，如 diagonal stripes。",
@@ -4555,7 +4555,7 @@
   },
   {
     "word": "symmetrical",
-    "ipa": "/sɪˈmɛtrɪkəl/",
+    "ipa": "[sɪˋmɛtrɪkḷ]",
     "pos": "adj.",
     "meaning_zh": "對稱的",
     "note_zh": "常用於描述建築或設計的左右對稱結構。",
@@ -4566,7 +4566,7 @@
   },
   {
     "word": "flat",
-    "ipa": "/flæt/",
+    "ipa": "[flæt]",
     "pos": "adj.",
     "meaning_zh": "平坦的",
     "note_zh": "描述表面沒有起伏，如 flat surface，也可指「公寓」(英式)。",
@@ -4577,7 +4577,7 @@
   },
   {
     "word": "pointed",
-    "ipa": "/ˈpɔɪntɪd/",
+    "ipa": "[ˋpɔɪntɪd]",
     "pos": "adj.",
     "meaning_zh": "尖的",
     "note_zh": "描述物體末端呈尖形，如 pointed roof。",
@@ -4588,7 +4588,7 @@
   },
   {
     "word": "cube",
-    "ipa": "/kjuːb/",
+    "ipa": "[kjub]",
     "pos": "n.",
     "meaning_zh": "立方體",
     "note_zh": "常見於描述包裝盒、冰塊等立體方形物品。",
@@ -4599,7 +4599,7 @@
   },
   {
     "word": "sphere",
-    "ipa": "/sfɪr/",
+    "ipa": "[sfɪr]",
     "pos": "n.",
     "meaning_zh": "球體",
     "note_zh": "較正式的用詞，日常口語較常用 ball。",
@@ -4610,7 +4610,7 @@
   },
   {
     "word": "rectangle",
-    "ipa": "/ˈrɛktæŋɡəl/",
+    "ipa": "[ˋrɛktæŋgəl]",
     "pos": "n.",
     "meaning_zh": "長方形",
     "note_zh": "rectangular 的名詞形式，指長方形這個形狀本身。",
@@ -4621,7 +4621,7 @@
   },
   {
     "word": "triangle",
-    "ipa": "/ˈtraɪæŋɡəl/",
+    "ipa": "[ˋtraɪˌæŋgəl]",
     "pos": "n.",
     "meaning_zh": "三角形",
     "note_zh": "triangular 的名詞形式，也可指樂器「三角鐵」。",
@@ -4632,7 +4632,7 @@
   },
   {
     "word": "pleased",
-    "ipa": "/pliːzd/",
+    "ipa": "[plizd]",
     "pos": "adj.",
     "meaning_zh": "高興的；滿意的",
     "note_zh": "語氣正式，常用於商務書信表達滿意，如 We are pleased to inform you。",
@@ -4643,7 +4643,7 @@
   },
   {
     "word": "satisfied",
-    "ipa": "/ˈsætɪsfaɪd/",
+    "ipa": "[ˋsætɪsˌfaɪd]",
     "pos": "adj.",
     "meaning_zh": "滿意的",
     "note_zh": "常見於顧客滿意度調查，satisfied with 表示對某事感到滿意。",
@@ -4654,7 +4654,7 @@
   },
   {
     "word": "delighted",
-    "ipa": "/dɪˈlaɪtɪd/",
+    "ipa": "[dɪˋlaɪtɪd]",
     "pos": "adj.",
     "meaning_zh": "非常高興的",
     "note_zh": "比 pleased 語氣更強烈，常用於正式邀請函或感謝信。",
@@ -4665,7 +4665,7 @@
   },
   {
     "word": "thrilled",
-    "ipa": "/θrɪld/",
+    "ipa": "[θrɪld]",
     "pos": "adj.",
     "meaning_zh": "興奮不已的",
     "note_zh": "語氣較口語化，強調強烈的興奮與期待感。",
@@ -4676,7 +4676,7 @@
   },
   {
     "word": "excited",
-    "ipa": "/ɪkˈsaɪtɪd/",
+    "ipa": "[ɪkˋsaɪtɪd]",
     "pos": "adj.",
     "meaning_zh": "興奮的",
     "note_zh": "常搭配 about，excited about the new project 表示對計畫感到興奮。",
@@ -4687,7 +4687,7 @@
   },
   {
     "word": "relieved",
-    "ipa": "/rɪˈliːvd/",
+    "ipa": "[rɪˋlivd]",
     "pos": "adj.",
     "meaning_zh": "鬆了一口氣的",
     "note_zh": "常用於問題解決後的情緒描述，如 relieved to hear the news。",
@@ -4698,7 +4698,7 @@
   },
   {
     "word": "content",
-    "ipa": "/kənˈtɛnt/",
+    "ipa": "[kənˋtɛnt]",
     "pos": "adj.",
     "meaning_zh": "知足的；滿足的",
     "note_zh": "語氣比 satisfied 更平淡，強調內心平和滿足。",
@@ -4709,7 +4709,7 @@
   },
   {
     "word": "grateful",
-    "ipa": "/ˈɡreɪtfəl/",
+    "ipa": "[ˋgretfəl]",
     "pos": "adj.",
     "meaning_zh": "感激的",
     "note_zh": "常用 grateful for/to 表達對人或事的感謝，商務信件常見。",
@@ -4720,7 +4720,7 @@
   },
   {
     "word": "proud",
-    "ipa": "/praʊd/",
+    "ipa": "[praʊd]",
     "pos": "adj.",
     "meaning_zh": "驕傲的；自豪的",
     "note_zh": "常搭配 of，proud of the team's achievement 表示為成就感到驕傲。",
@@ -4731,7 +4731,7 @@
   },
   {
     "word": "confident",
-    "ipa": "/ˈkɑːnfɪdənt/",
+    "ipa": "[ˋkɑnfɪdənt]",
     "pos": "adj.",
     "meaning_zh": "有信心的",
     "note_zh": "常搭配 in/about，也可指對自己能力有自信。",
@@ -4742,7 +4742,7 @@
   },
   {
     "word": "disappointed",
-    "ipa": "/dɪsəˈpɔɪntɪd/",
+    "ipa": "[dɪsəˋpɔɪntɪd]",
     "pos": "adj.",
     "meaning_zh": "失望的",
     "note_zh": "常搭配 with/in/about，用於表達期望落空的情緒。",
@@ -4753,7 +4753,7 @@
   },
   {
     "word": "frustrated",
-    "ipa": "/ˈfrʌstreɪtɪd/",
+    "ipa": "[ˋfrʌˌstretɪd]",
     "pos": "adj.",
     "meaning_zh": "沮喪的；受挫的",
     "note_zh": "強調因障礙或阻礙而產生的挫折感，常見於客服對話。",
@@ -4764,7 +4764,7 @@
   },
   {
     "word": "annoyed",
-    "ipa": "/əˈnɔɪd/",
+    "ipa": "[əˋnɔɪd]",
     "pos": "adj.",
     "meaning_zh": "惱怒的",
     "note_zh": "語氣較輕微的生氣，常因小事而感到不耐煩。",
@@ -4775,7 +4775,7 @@
   },
   {
     "word": "upset",
-    "ipa": "/ʌpˈsɛt/",
+    "ipa": "[ʌpˋsɛt]",
     "pos": "adj.",
     "meaning_zh": "心煩的；難過的",
     "note_zh": "可形容情緒低落或生氣，也可作動詞「使不安」。",
@@ -4786,7 +4786,7 @@
   },
   {
     "word": "anxious",
-    "ipa": "/ˈæŋkʃəs/",
+    "ipa": "[ˋæŋkʃəs]",
     "pos": "adj.",
     "meaning_zh": "焦慮的",
     "note_zh": "常搭配 about，強調對未來不確定事物的擔憂。",
@@ -4797,7 +4797,7 @@
   },
   {
     "word": "nervous",
-    "ipa": "/ˈnɜːrvəs/",
+    "ipa": "[ˋnɝvəs]",
     "pos": "adj.",
     "meaning_zh": "緊張的",
     "note_zh": "常用於考試、演講、面試前的情緒，與 anxious 意思相近。",
@@ -4808,7 +4808,7 @@
   },
   {
     "word": "worried",
-    "ipa": "/ˈwɜːrid/",
+    "ipa": "[ˋwɝid]",
     "pos": "adj.",
     "meaning_zh": "擔心的",
     "note_zh": "常搭配 about，日常對話中最常用來表達擔憂的詞。",
@@ -4819,7 +4819,7 @@
   },
   {
     "word": "concerned",
-    "ipa": "/kənˈsɜːrnd/",
+    "ipa": "[kənˋsɝnd]",
     "pos": "adj.",
     "meaning_zh": "擔憂的；關切的",
     "note_zh": "語氣較正式，常見於商務信件，如 We are concerned about。",
@@ -4830,7 +4830,7 @@
   },
   {
     "word": "overwhelmed",
-    "ipa": "/ˌoʊvərˈwɛlmd/",
+    "ipa": "[ˌovɚˋwɛlmd]",
     "pos": "adj.",
     "meaning_zh": "不知所措的；應接不暇的",
     "note_zh": "強調事情過多導致無法負荷，常見於工作量描述。",
@@ -4841,7 +4841,7 @@
   },
   {
     "word": "exhausted",
-    "ipa": "/ɪɡˈzɔːstɪd/",
+    "ipa": "[ɪgˋzɔstɪd]",
     "pos": "adj.",
     "meaning_zh": "精疲力盡的",
     "note_zh": "比 tired 語氣更強烈，強調體力或精神完全耗盡。",
@@ -4852,7 +4852,7 @@
   },
   {
     "word": "stressed",
-    "ipa": "/strɛst/",
+    "ipa": "[strɛst]",
     "pos": "adj.",
     "meaning_zh": "有壓力的",
     "note_zh": "常搭配 out（stressed out），形容因工作或期限產生的壓力。",
@@ -4863,7 +4863,7 @@
   },
   {
     "word": "confused",
-    "ipa": "/kənˈfjuːzd/",
+    "ipa": "[kənˋfjuzd]",
     "pos": "adj.",
     "meaning_zh": "困惑的",
     "note_zh": "常搭配 about/by，形容因資訊不清而感到疑惑。",
@@ -4874,7 +4874,7 @@
   },
   {
     "word": "puzzled",
-    "ipa": "/ˈpʌzəld/",
+    "ipa": "[ˋpʌzəld]",
     "pos": "adj.",
     "meaning_zh": "疑惑不解的",
     "note_zh": "語氣與 confused 相近，但更強調對某個具體謎題感到困惑。",
@@ -4885,7 +4885,7 @@
   },
   {
     "word": "embarrassed",
-    "ipa": "/ɪmˈbærəst/",
+    "ipa": "[ɪmˋbærəst]",
     "pos": "adj.",
     "meaning_zh": "尷尬的",
     "note_zh": "形容因失誤或被注意而感到難為情，非 embarrassing（令人尷尬的）。",
@@ -4896,7 +4896,7 @@
   },
   {
     "word": "ashamed",
-    "ipa": "/əˈʃeɪmd/",
+    "ipa": "[əˋʃemd]",
     "pos": "adj.",
     "meaning_zh": "羞愧的",
     "note_zh": "語氣比 embarrassed 更強烈，帶有自責、羞恥的成分。",
@@ -4907,7 +4907,7 @@
   },
   {
     "word": "surprised",
-    "ipa": "/sərˈpraɪzd/",
+    "ipa": "[sɚˋpraɪzd]",
     "pos": "adj.",
     "meaning_zh": "驚訝的",
     "note_zh": "常搭配 at/by，表達對意外事件的反應。",
@@ -4918,7 +4918,7 @@
   },
   {
     "word": "amazed",
-    "ipa": "/əˈmeɪzd/",
+    "ipa": "[əˋmezd]",
     "pos": "adj.",
     "meaning_zh": "驚嘆的",
     "note_zh": "比 surprised 語氣更強，強調對某事物感到驚豔佩服。",
@@ -4929,7 +4929,7 @@
   },
   {
     "word": "astonished",
-    "ipa": "/əˈstɑːnɪʃt/",
+    "ipa": "[əˋstɑnɪʃt]",
     "pos": "adj.",
     "meaning_zh": "震驚的",
     "note_zh": "語氣正式且強烈，常見於書面描述極度意外的反應。",
@@ -4940,7 +4940,7 @@
   },
   {
     "word": "curious",
-    "ipa": "/ˈkjʊriəs/",
+    "ipa": "[ˋkjʊrɪəs]",
     "pos": "adj.",
     "meaning_zh": "好奇的",
     "note_zh": "常搭配 about，形容對新事物或資訊想進一步了解。",
@@ -4951,7 +4951,7 @@
   },
   {
     "word": "hopeful",
-    "ipa": "/ˈhoʊpfəl/",
+    "ipa": "[ˋhopfəl]",
     "pos": "adj.",
     "meaning_zh": "抱持希望的",
     "note_zh": "常搭配 that/about，表達對未來正向結果的期待。",
@@ -4962,7 +4962,7 @@
   },
   {
     "word": "optimistic",
-    "ipa": "/ˌɑːptɪˈmɪstɪk/",
+    "ipa": "[ˌɑptɪˋmɪstɪk]",
     "pos": "adj.",
     "meaning_zh": "樂觀的",
     "note_zh": "常搭配 about，與 pessimistic（悲觀的）相對。",
@@ -4973,7 +4973,7 @@
   },
   {
     "word": "reluctant",
-    "ipa": "/rɪˈlʌktənt/",
+    "ipa": "[rɪˋlʌktənt]",
     "pos": "adj.",
     "meaning_zh": "不情願的",
     "note_zh": "常搭配 to V，表示對做某事有所猶豫或不願意。",
@@ -4984,7 +4984,7 @@
   },
   {
     "word": "hesitant",
-    "ipa": "/ˈhɛzɪtənt/",
+    "ipa": "[ˋhɛzɪtənt]",
     "pos": "adj.",
     "meaning_zh": "猶豫的",
     "note_zh": "與 reluctant 意思相近，強調做決定前的遲疑不決。",
@@ -4995,7 +4995,7 @@
   },
   {
     "word": "indifferent",
-    "ipa": "/ɪnˈdɪfrənt/",
+    "ipa": "[ɪnˋdɪfrənt]",
     "pos": "adj.",
     "meaning_zh": "漠不關心的",
     "note_zh": "表示對某事既不特別喜歡也不討厭，缺乏興趣或情感反應。",
@@ -5006,7 +5006,7 @@
   },
   {
     "word": "bored",
-    "ipa": "/bɔːrd/",
+    "ipa": "[bɔrd]",
     "pos": "adj.",
     "meaning_zh": "感到無聊的",
     "note_zh": "注意 bored（感到無聊）與 boring（令人無聊的）用法不同。",
@@ -5017,7 +5017,7 @@
   },
   {
     "word": "sympathetic",
-    "ipa": "/ˌsɪmpəˈθɛtɪk/",
+    "ipa": "[ˌsɪmpəˋθɛtɪk]",
     "pos": "adj.",
     "meaning_zh": "同情的；有同理心的",
     "note_zh": "常搭配 to/toward，表示理解並體諒他人處境。",
@@ -5028,7 +5028,7 @@
   },
   {
     "word": "regretful",
-    "ipa": "/rɪˈɡrɛtfəl/",
+    "ipa": "[rɪˋgrɛtfəl]",
     "pos": "adj.",
     "meaning_zh": "後悔的；遺憾的",
     "note_zh": "商務書信常用 We regret to inform you 表達遺憾，此為其形容詞。",
@@ -5039,7 +5039,7 @@
   },
   {
     "word": "impressed",
-    "ipa": "/ɪmˈprɛst/",
+    "ipa": "[ɪmˋprɛst]",
     "pos": "adj.",
     "meaning_zh": "印象深刻的",
     "note_zh": "常搭配 with/by，形容對某人表現或成果感到欣賞。",
@@ -5050,7 +5050,7 @@
   },
   {
     "word": "discouraged",
-    "ipa": "/dɪsˈkɜːrɪdʒd/",
+    "ipa": "[dɪsˋkɝɪdʒd]",
     "pos": "adj.",
     "meaning_zh": "氣餒的",
     "note_zh": "表示因失敗或困難而失去信心，與 encouraged 相對。",
@@ -5061,7 +5061,7 @@
   },
   {
     "word": "motivated",
-    "ipa": "/ˈmoʊtɪveɪtɪd/",
+    "ipa": "[ˋmotɪˌvetɪd]",
     "pos": "adj.",
     "meaning_zh": "有動力的",
     "note_zh": "常搭配 to V，形容因目標或誘因而積極行動。",
@@ -5072,7 +5072,7 @@
   },
   {
     "word": "jogging",
-    "ipa": "/ˈdʒɑːɡɪŋ/",
+    "ipa": "[ˋdʒɑgɪŋ]",
     "pos": "n.",
     "meaning_zh": "慢跑",
     "note_zh": "常見於描述公園場景或健康習慣，動詞為 jog。",
@@ -5083,7 +5083,7 @@
   },
   {
     "word": "hiking",
-    "ipa": "/ˈhaɪkɪŋ/",
+    "ipa": "[ˋhaɪkɪŋ]",
     "pos": "n.",
     "meaning_zh": "健行；登山",
     "note_zh": "常出現在週末計畫或戶外活動邀約對話中。",
@@ -5094,7 +5094,7 @@
   },
   {
     "word": "swimming",
-    "ipa": "/ˈswɪmɪŋ/",
+    "ipa": "[ˋswɪmɪŋ]",
     "pos": "n.",
     "meaning_zh": "游泳",
     "note_zh": "常搭配 pool，swimming pool 為聽力對話常見場景。",
@@ -5105,7 +5105,7 @@
   },
   {
     "word": "cycling",
-    "ipa": "/ˈsaɪklɪŋ/",
+    "ipa": "[ˋsaɪklɪŋ]",
     "pos": "n.",
     "meaning_zh": "騎自行車",
     "note_zh": "也常寫作 biking，常見於休閒活動或通勤方式討論。",
@@ -5116,7 +5116,7 @@
   },
   {
     "word": "tennis",
-    "ipa": "/ˈtɛnɪs/",
+    "ipa": "[ˋtɛnɪs]",
     "pos": "n.",
     "meaning_zh": "網球",
     "note_zh": "常搭配 court（網球場）、racket（球拍）等詞出現。",
@@ -5127,7 +5127,7 @@
   },
   {
     "word": "golf",
-    "ipa": "/ɡɑːlf/",
+    "ipa": "[gɑlf]",
     "pos": "n.",
     "meaning_zh": "高爾夫球",
     "note_zh": "常見於商務應酬或休閒活動邀約的對話情境。",
@@ -5138,7 +5138,7 @@
   },
   {
     "word": "gym",
-    "ipa": "/dʒɪm/",
+    "ipa": "[dʒɪm]",
     "pos": "n.",
     "meaning_zh": "健身房",
     "note_zh": "gymnasium 的縮寫，日常口語中最常用的說法。",
@@ -5149,7 +5149,7 @@
   },
   {
     "word": "workout",
-    "ipa": "/ˈwɜːrkaʊt/",
+    "ipa": "[ˋwɝkˌaʊt]",
     "pos": "n.",
     "meaning_zh": "健身運動",
     "note_zh": "可指整套運動內容，也可作動詞片語 work out。",
@@ -5160,7 +5160,7 @@
   },
   {
     "word": "exercise",
-    "ipa": "/ˈɛksərsaɪz/",
+    "ipa": "[ˋɛksɚˌsaɪz]",
     "pos": "n.",
     "meaning_zh": "運動",
     "note_zh": "用途廣泛，可作名詞或動詞，也可指「練習題」。",
@@ -5171,7 +5171,7 @@
   },
   {
     "word": "stretch",
-    "ipa": "/strɛtʃ/",
+    "ipa": "[strɛtʃ]",
     "pos": "v.",
     "meaning_zh": "伸展；伸展身體",
     "note_zh": "運動前常做的暖身動作，也可作名詞。",
@@ -5182,7 +5182,7 @@
   },
   {
     "word": "marathon",
-    "ipa": "/ˈmærəθɑːn/",
+    "ipa": "[ˋmærəˌθɑn]",
     "pos": "n.",
     "meaning_zh": "馬拉松",
     "note_zh": "常見於報名活動、贊助商合作等閱讀文章情境。",
@@ -5193,7 +5193,7 @@
   },
   {
     "word": "tournament",
-    "ipa": "/ˈtʊrnəmənt/",
+    "ipa": "[ˋtʊrnəmənt]",
     "pos": "n.",
     "meaning_zh": "錦標賽",
     "note_zh": "常見於公司內部或社區舉辦的比賽公告。",
@@ -5204,7 +5204,7 @@
   },
   {
     "word": "league",
-    "ipa": "/liːɡ/",
+    "ipa": "[lig]",
     "pos": "n.",
     "meaning_zh": "聯盟；聯賽",
     "note_zh": "常搭配 sports league，也可比喻「同一等級」。",
@@ -5215,7 +5215,7 @@
   },
   {
     "word": "coach",
-    "ipa": "/koʊtʃ/",
+    "ipa": "[kotʃ]",
     "pos": "n.",
     "meaning_zh": "教練",
     "note_zh": "也可作動詞「指導」，常見於運動或職涯輔導情境。",
@@ -5226,7 +5226,7 @@
   },
   {
     "word": "referee",
-    "ipa": "/ˌrɛfəˈriː/",
+    "ipa": "[ˌrɛfəˋri]",
     "pos": "n.",
     "meaning_zh": "裁判",
     "note_zh": "用於足球、籃球等球類比賽，另有 umpire 用於棒球、網球。",
@@ -5237,7 +5237,7 @@
   },
   {
     "word": "teammate",
-    "ipa": "/ˈtiːmmeɪt/",
+    "ipa": "[ˋtimˌmet]",
     "pos": "n.",
     "meaning_zh": "隊友",
     "note_zh": "強調同一隊伍中的夥伴關係，常見於運動或團隊合作情境。",
@@ -5248,7 +5248,7 @@
   },
   {
     "word": "opponent",
-    "ipa": "/əˈpoʊnənt/",
+    "ipa": "[əˋponənt]",
     "pos": "n.",
     "meaning_zh": "對手",
     "note_zh": "可指比賽對手，也可泛指意見相左的人，如政治對手。",
@@ -5259,7 +5259,7 @@
   },
   {
     "word": "score",
-    "ipa": "/skɔːr/",
+    "ipa": "[skɔr]",
     "pos": "n.",
     "meaning_zh": "分數",
     "note_zh": "也可作動詞「得分」，常見於運動賽事報導。",
@@ -5270,7 +5270,7 @@
   },
   {
     "word": "stadium",
-    "ipa": "/ˈsteɪdiəm/",
+    "ipa": "[ˋstedɪəm]",
     "pos": "n.",
     "meaning_zh": "體育場",
     "note_zh": "大型戶外運動場地，常見於門票、活動地點描述。",
@@ -5281,7 +5281,7 @@
   },
   {
     "word": "court",
-    "ipa": "/kɔːrt/",
+    "ipa": "[kɔrt]",
     "pos": "n.",
     "meaning_zh": "球場",
     "note_zh": "用於網球、籃球、羽球等場地，也可指「法庭」。",
@@ -5292,7 +5292,7 @@
   },
   {
     "word": "field",
-    "ipa": "/fiːld/",
+    "ipa": "[fild]",
     "pos": "n.",
     "meaning_zh": "場地；田野",
     "note_zh": "常指足球場、棒球場等開放式運動場地。",
@@ -5303,7 +5303,7 @@
   },
   {
     "word": "track",
-    "ipa": "/træk/",
+    "ipa": "[træk]",
     "pos": "n.",
     "meaning_zh": "跑道",
     "note_zh": "常見於田徑運動情境，如 running track。",
@@ -5314,7 +5314,7 @@
   },
   {
     "word": "membership",
-    "ipa": "/ˈmɛmbərʃɪp/",
+    "ipa": "[ˋmɛmbɚˌʃɪp]",
     "pos": "n.",
     "meaning_zh": "會員資格",
     "note_zh": "常見於健身房、俱樂部相關廣告與方案介紹。",
@@ -5325,7 +5325,7 @@
   },
   {
     "word": "equipment",
-    "ipa": "/ɪˈkwɪpmənt/",
+    "ipa": "[ɪˋkwɪpmənt]",
     "pos": "n.",
     "meaning_zh": "器材；裝備",
     "note_zh": "不可數名詞，常搭配 sports equipment、camping equipment。",
@@ -5336,7 +5336,7 @@
   },
   {
     "word": "gear",
-    "ipa": "/ɡɪr/",
+    "ipa": "[gɪr]",
     "pos": "n.",
     "meaning_zh": "裝備；用具",
     "note_zh": "語氣較口語，常指特定活動所需的裝備，如 hiking gear。",
@@ -5347,7 +5347,7 @@
   },
   {
     "word": "racket",
-    "ipa": "/ˈrækɪt/",
+    "ipa": "[ˋrækɪt]",
     "pos": "n.",
     "meaning_zh": "球拍",
     "note_zh": "用於網球、羽球等球類運動，注意勿與 racquet 拼法混淆。",
@@ -5358,7 +5358,7 @@
   },
   {
     "word": "treadmill",
-    "ipa": "/ˈtrɛdmɪl/",
+    "ipa": "[ˋtrɛdˌmɪl]",
     "pos": "n.",
     "meaning_zh": "跑步機",
     "note_zh": "健身房常見器材，也可比喻「一成不變的例行工作」。",
@@ -5369,7 +5369,7 @@
   },
   {
     "word": "yoga",
-    "ipa": "/ˈjoʊɡə/",
+    "ipa": "[ˋjogə]",
     "pos": "n.",
     "meaning_zh": "瑜珈",
     "note_zh": "常見於健身房課程表或休閒活動清單中。",
@@ -5380,7 +5380,7 @@
   },
   {
     "word": "hobby",
-    "ipa": "/ˈhɑːbi/",
+    "ipa": "[ˋhɑbɪ]",
     "pos": "n.",
     "meaning_zh": "嗜好",
     "note_zh": "泛指休閒時從事的活動，常用於自我介紹或問卷。",
@@ -5391,7 +5391,7 @@
   },
   {
     "word": "leisure",
-    "ipa": "/ˈliːʒər/",
+    "ipa": "[ˋliʒɚ]",
     "pos": "n.",
     "meaning_zh": "休閒",
     "note_zh": "常搭配 leisure time / leisure activities，強調非工作時間的活動。",
@@ -5402,7 +5402,7 @@
   },
   {
     "word": "camping",
-    "ipa": "/ˈkæmpɪŋ/",
+    "ipa": "[ˋkæmpɪŋ]",
     "pos": "n.",
     "meaning_zh": "露營",
     "note_zh": "常見於戶外活動邀約或旅遊行程規劃對話。",
@@ -5413,7 +5413,7 @@
   },
   {
     "word": "fishing",
-    "ipa": "/ˈfɪʃɪŋ/",
+    "ipa": "[ˋfɪʃɪŋ]",
     "pos": "n.",
     "meaning_zh": "釣魚",
     "note_zh": "常見於休閒活動或退休生活描述中。",
@@ -5424,7 +5424,7 @@
   },
   {
     "word": "photography",
-    "ipa": "/fəˈtɑːɡrəfi/",
+    "ipa": "[fəˋtɑgrəfɪ]",
     "pos": "n.",
     "meaning_zh": "攝影",
     "note_zh": "常作為嗜好或職業描述，如 wildlife photography。",
@@ -5435,7 +5435,7 @@
   },
   {
     "word": "board game",
-    "ipa": "/bɔːrd ɡeɪm/",
+    "ipa": "[bɔrd gem]",
     "pos": "n.",
     "meaning_zh": "桌遊",
     "note_zh": "指需要棋盤或卡牌的室內遊戲，如 chess、Monopoly。",
@@ -5446,7 +5446,7 @@
   },
   {
     "word": "chess",
-    "ipa": "/tʃɛs/",
+    "ipa": "[tʃɛs]",
     "pos": "n.",
     "meaning_zh": "西洋棋",
     "note_zh": "常見於休閒活動描述或智力競賽相關文章。",
@@ -5457,7 +5457,7 @@
   },
   {
     "word": "concert",
-    "ipa": "/ˈkɑːnsərt/",
+    "ipa": "[ˋkɑnsɚt]",
     "pos": "n.",
     "meaning_zh": "音樂會；演唱會",
     "note_zh": "常見於週末計畫或票券購買情境對話。",
@@ -5468,7 +5468,7 @@
   },
   {
     "word": "museum",
-    "ipa": "/mjuːˈziːəm/",
+    "ipa": "[mjuˋziəm]",
     "pos": "n.",
     "meaning_zh": "博物館",
     "note_zh": "常見於觀光、休閒活動安排相關對話與文章。",
@@ -5479,7 +5479,7 @@
   },
   {
     "word": "exhibit",
-    "ipa": "/ɪɡˈzɪbɪt/",
+    "ipa": "[ɪgˋzɪbɪt]",
     "pos": "n.",
     "meaning_zh": "展覽品；展覽",
     "note_zh": "也可作動詞「展出」，常見於博物館或藝廊情境。",
@@ -5490,7 +5490,7 @@
   },
   {
     "word": "spectator",
-    "ipa": "/ˈspɛkteɪtər/",
+    "ipa": "[ˋspɛktetɚ]",
     "pos": "n.",
     "meaning_zh": "觀眾",
     "note_zh": "特指運動賽事的旁觀者，與 audience（表演觀眾）略有不同。",
@@ -5501,7 +5501,7 @@
   },
   {
     "word": "recreational",
-    "ipa": "/ˌrɛkriˈeɪʃənəl/",
+    "ipa": "[ˌrɛkrɪˋeʃənḷ]",
     "pos": "adj.",
     "meaning_zh": "休閒娛樂的",
     "note_zh": "常搭配 activities，如 recreational activities（休閒活動）。",
@@ -5512,7 +5512,7 @@
   },
   {
     "word": "turn left",
-    "ipa": "/tɜːrn lɛft/",
+    "ipa": "[tɝn lɛft]",
     "pos": "phr.",
     "meaning_zh": "向左轉",
     "note_zh": "給予方向指示的基本用語，常見於問路對話。",
@@ -5523,7 +5523,7 @@
   },
   {
     "word": "turn right",
-    "ipa": "/tɜːrn raɪt/",
+    "ipa": "[tɝn raɪt]",
     "pos": "phr.",
     "meaning_zh": "向右轉",
     "note_zh": "與 turn left 對應，問路對話中最常見的指令之一。",
@@ -5534,7 +5534,7 @@
   },
   {
     "word": "go straight",
-    "ipa": "/ɡoʊ streɪt/",
+    "ipa": "[go stret]",
     "pos": "phr.",
     "meaning_zh": "直走",
     "note_zh": "常搭配 ahead，go straight ahead 表示一直往前走。",
@@ -5545,7 +5545,7 @@
   },
   {
     "word": "across from",
-    "ipa": "/əˈkrɔːs frʌm/",
+    "ipa": "[əˋkrɔs frʌm]",
     "pos": "phr.",
     "meaning_zh": "在～對面",
     "note_zh": "表示兩者位置相對，常用於描述建築物相對位置。",
@@ -5556,7 +5556,7 @@
   },
   {
     "word": "next to",
-    "ipa": "/nɛkst tuː/",
+    "ipa": "[nɛkst tu]",
     "pos": "phr.",
     "meaning_zh": "在～旁邊",
     "note_zh": "表示緊鄰的位置關係，是描述位置最常用的片語之一。",
@@ -5567,7 +5567,7 @@
   },
   {
     "word": "beside",
-    "ipa": "/bɪˈsaɪd/",
+    "ipa": "[bɪˋsaɪd]",
     "pos": "prep.",
     "meaning_zh": "在～旁邊",
     "note_zh": "與 next to 意思相近，但語氣稍正式，常用於書面描述。",
@@ -5578,7 +5578,7 @@
   },
   {
     "word": "between",
-    "ipa": "/bɪˈtwiːn/",
+    "ipa": "[bɪˋtwin]",
     "pos": "prep.",
     "meaning_zh": "在～之間",
     "note_zh": "用於描述兩個地標或物體之間的位置關係。",
@@ -5589,7 +5589,7 @@
   },
   {
     "word": "behind",
-    "ipa": "/bɪˈhaɪnd/",
+    "ipa": "[bɪˋhaɪnd]",
     "pos": "prep.",
     "meaning_zh": "在～後面",
     "note_zh": "表示位置在某物之後，與 in front of 相對。",
@@ -5600,7 +5600,7 @@
   },
   {
     "word": "in front of",
-    "ipa": "/ɪn frʌnt ʌv/",
+    "ipa": "[ɪn frʌnt ʌv]",
     "pos": "phr.",
     "meaning_zh": "在～前面",
     "note_zh": "描述位置在某物之前，是方向題中極常見的片語。",
@@ -5611,7 +5611,7 @@
   },
   {
     "word": "near",
-    "ipa": "/nɪr/",
+    "ipa": "[nɪr]",
     "pos": "prep.",
     "meaning_zh": "靠近",
     "note_zh": "表示距離不遠，常用於描述地點的相對位置。",
@@ -5622,7 +5622,7 @@
   },
   {
     "word": "intersection",
-    "ipa": "/ˌɪntərˈsɛkʃən/",
+    "ipa": "[ˌɪntɚˋsɛkʃən]",
     "pos": "n.",
     "meaning_zh": "十字路口",
     "note_zh": "常見於問路對話中，作為方向轉折的參考點。",
@@ -5633,7 +5633,7 @@
   },
   {
     "word": "corner",
-    "ipa": "/ˈkɔːrnər/",
+    "ipa": "[ˋkɔrnɚ]",
     "pos": "n.",
     "meaning_zh": "街角；角落",
     "note_zh": "常搭配 on the corner of，用於描述位置。",
@@ -5644,7 +5644,7 @@
   },
   {
     "word": "block",
-    "ipa": "/blɑːk/",
+    "ipa": "[blɑk]",
     "pos": "n.",
     "meaning_zh": "街區",
     "note_zh": "表示街道間的一個區段，常用於距離描述，如 two blocks away。",
@@ -5655,7 +5655,7 @@
   },
   {
     "word": "crosswalk",
-    "ipa": "/ˈkrɔːswɔːk/",
+    "ipa": "[ˋkrɔsˌwɔk]",
     "pos": "n.",
     "meaning_zh": "斑馬線；人行穿越道",
     "note_zh": "行人穿越馬路的指定區域，常見於安全相關描述。",
@@ -5666,7 +5666,7 @@
   },
   {
     "word": "sidewalk",
-    "ipa": "/ˈsaɪdwɔːk/",
+    "ipa": "[ˋsaɪdˌwɔk]",
     "pos": "n.",
     "meaning_zh": "人行道",
     "note_zh": "美式用法，英式英文則常用 pavement。",
@@ -5677,7 +5677,7 @@
   },
   {
     "word": "avenue",
-    "ipa": "/ˈævənuː/",
+    "ipa": "[ˋævəˌnu]",
     "pos": "n.",
     "meaning_zh": "大道",
     "note_zh": "常用於美式地址中的道路名稱，如 Fifth Avenue。",
@@ -5688,7 +5688,7 @@
   },
   {
     "word": "entrance",
-    "ipa": "/ˈɛntrəns/",
+    "ipa": "[ˋɛntrəns]",
     "pos": "n.",
     "meaning_zh": "入口",
     "note_zh": "常搭配 main entrance，是描述建築物位置的重要參考點。",
@@ -5699,7 +5699,7 @@
   },
   {
     "word": "exit",
-    "ipa": "/ˈɛksɪt/",
+    "ipa": "[ˋɛksɪt]",
     "pos": "n.",
     "meaning_zh": "出口",
     "note_zh": "與 entrance 相對，也可作動詞「離開」，如高速公路出口。",
@@ -5710,7 +5710,7 @@
   },
   {
     "word": "elevator",
-    "ipa": "/ˈɛləveɪtər/",
+    "ipa": "[ˋɛləˌvetɚ]",
     "pos": "n.",
     "meaning_zh": "電梯",
     "note_zh": "美式用法，英式英文為 lift，常見於室內方向指示。",
@@ -5721,7 +5721,7 @@
   },
   {
     "word": "escalator",
-    "ipa": "/ˈɛskəleɪtər/",
+    "ipa": "[ˋɛskəˌletɚ]",
     "pos": "n.",
     "meaning_zh": "手扶梯",
     "note_zh": "常見於購物中心、機場等場所的方向指示。",
@@ -5732,7 +5732,7 @@
   },
   {
     "word": "staircase",
-    "ipa": "/ˈstɛrkeɪs/",
+    "ipa": "[ˋstɛrˌkes]",
     "pos": "n.",
     "meaning_zh": "樓梯",
     "note_zh": "泛指整組樓梯結構，也可用 stairs 表示。",
@@ -5743,7 +5743,7 @@
   },
   {
     "word": "floor",
-    "ipa": "/flɔːr/",
+    "ipa": "[flɔr]",
     "pos": "n.",
     "meaning_zh": "樓層",
     "note_zh": "常搭配序數詞使用，如 the third floor，也可指「地板」。",
@@ -5754,7 +5754,7 @@
   },
   {
     "word": "lobby",
-    "ipa": "/ˈlɑːbi/",
+    "ipa": "[ˋlɑbɪ]",
     "pos": "n.",
     "meaning_zh": "大廳",
     "note_zh": "常見於飯店、辦公大樓的入口空間描述。",
@@ -5765,7 +5765,7 @@
   },
   {
     "word": "hallway",
-    "ipa": "/ˈhɔːlweɪ/",
+    "ipa": "[ˋhɔlˌwe]",
     "pos": "n.",
     "meaning_zh": "走廊",
     "note_zh": "指建築物內部連接房間的通道，也可用 corridor。",
@@ -5776,7 +5776,7 @@
   },
   {
     "word": "aisle",
-    "ipa": "/aɪl/",
+    "ipa": "[aɪl]",
     "pos": "n.",
     "meaning_zh": "走道",
     "note_zh": "常見於超市、飛機、劇院等場所的座位或貨架間走道。",
@@ -5787,7 +5787,7 @@
   },
   {
     "word": "signpost",
-    "ipa": "/ˈsaɪnpoʊst/",
+    "ipa": "[ˋsaɪnˌpost]",
     "pos": "n.",
     "meaning_zh": "路標",
     "note_zh": "指標示方向或地名的立牌，常見於戶外道路情境。",
@@ -5798,7 +5798,7 @@
   },
   {
     "word": "map",
-    "ipa": "/mæp/",
+    "ipa": "[mæp]",
     "pos": "n.",
     "meaning_zh": "地圖",
     "note_zh": "問路情境常見道具，也可作動詞「繪製地圖」。",
@@ -5809,7 +5809,7 @@
   },
   {
     "word": "landmark",
-    "ipa": "/ˈlændmɑːrk/",
+    "ipa": "[ˋlændˌmɑrk]",
     "pos": "n.",
     "meaning_zh": "地標",
     "note_zh": "常用於問路時作為方向參考的知名建築或標的物。",
@@ -5820,7 +5820,7 @@
   },
   {
     "word": "north",
-    "ipa": "/nɔːrθ/",
+    "ipa": "[nɔrθ]",
     "pos": "n.",
     "meaning_zh": "北方",
     "note_zh": "基本方位詞之一，也可作形容詞或副詞使用。",
@@ -5831,7 +5831,7 @@
   },
   {
     "word": "south",
-    "ipa": "/saʊθ/",
+    "ipa": "[saʊθ]",
     "pos": "n.",
     "meaning_zh": "南方",
     "note_zh": "與 north 相對，常見於地址、地圖與天氣預報描述。",
@@ -5842,7 +5842,7 @@
   },
   {
     "word": "east",
-    "ipa": "/iːst/",
+    "ipa": "[ist]",
     "pos": "n.",
     "meaning_zh": "東方",
     "note_zh": "基本方位詞，常搭配 -bound 表示方向，如 eastbound traffic。",
@@ -5853,7 +5853,7 @@
   },
   {
     "word": "west",
-    "ipa": "/wɛst/",
+    "ipa": "[wɛst]",
     "pos": "n.",
     "meaning_zh": "西方",
     "note_zh": "與 east 相對，常見於地理位置或路線描述。",
@@ -5864,7 +5864,7 @@
   },
   {
     "word": "direction",
-    "ipa": "/dəˈrɛkʃən/",
+    "ipa": "[dəˋrɛkʃən]",
     "pos": "n.",
     "meaning_zh": "方向",
     "note_zh": "可指實際方位，也可指「指示」，常用複數 directions 表示路線指引。",
@@ -5875,7 +5875,7 @@
   },
   {
     "word": "route",
-    "ipa": "/ruːt/",
+    "ipa": "[rut]",
     "pos": "n.",
     "meaning_zh": "路線",
     "note_zh": "指從甲地到乙地的路徑選擇，常見於交通與旅行情境。",
@@ -5886,7 +5886,7 @@
   },
   {
     "word": "path",
-    "ipa": "/pæθ/",
+    "ipa": "[pæθ]",
     "pos": "n.",
     "meaning_zh": "小徑；步道",
     "note_zh": "常指公園、步行區的小道，也可比喻「途徑」。",
@@ -5897,7 +5897,7 @@
   },
   {
     "word": "distance",
-    "ipa": "/ˈdɪstəns/",
+    "ipa": "[ˋdɪstəns]",
     "pos": "n.",
     "meaning_zh": "距離",
     "note_zh": "常搭配 in the distance（在遠處）或 walking distance（步行距離）。",
@@ -5908,7 +5908,7 @@
   },
   {
     "word": "opposite",
-    "ipa": "/ˈɑːpəzɪt/",
+    "ipa": "[ˋɑpəzɪt]",
     "pos": "adj.",
     "meaning_zh": "對面的；相反的",
     "note_zh": "可作介系詞用法（opposite the bank），意思與 across from 相近。",
@@ -5919,7 +5919,7 @@
   },
   {
     "word": "adjacent",
-    "ipa": "/əˈdʒeɪsənt/",
+    "ipa": "[əˋdʒesənt]",
     "pos": "adj.",
     "meaning_zh": "相鄰的",
     "note_zh": "語氣較正式，常見於書面文章或建築配置描述。",
@@ -5930,7 +5930,7 @@
   },
   {
     "word": "downtown",
-    "ipa": "/ˈdaʊntaʊn/",
+    "ipa": "[ˋdaʊntaʊn]",
     "pos": "n.",
     "meaning_zh": "市中心",
     "note_zh": "美式用法，指城市的商業或行政中心區域。",
@@ -5941,7 +5941,7 @@
   },
   {
     "word": "destination",
-    "ipa": "/ˌdɛstəˈneɪʃən/",
+    "ipa": "[ˌdɛstəˋneʃən]",
     "pos": "n.",
     "meaning_zh": "目的地",
     "note_zh": "常見於旅遊、交通相關文章與對話中。",
@@ -5952,7 +5952,7 @@
   },
   {
     "word": "parent",
-    "ipa": "/ˈpɛrənt/",
+    "ipa": "[ˋpɛrənt]",
     "pos": "n.",
     "meaning_zh": "父母（其中一位）",
     "note_zh": "單數指父或母其中一人，複數 parents 指雙親。",
@@ -5963,7 +5963,7 @@
   },
   {
     "word": "mother",
-    "ipa": "/ˈmʌðər/",
+    "ipa": "[ˋmʌðɚ]",
     "pos": "n.",
     "meaning_zh": "母親",
     "note_zh": "家庭關係最基本的詞彙之一，口語常用 mom。",
@@ -5974,7 +5974,7 @@
   },
   {
     "word": "father",
-    "ipa": "/ˈfɑːðər/",
+    "ipa": "[ˋfɑðɚ]",
     "pos": "n.",
     "meaning_zh": "父親",
     "note_zh": "口語常用 dad，與 mother 相對。",
@@ -5985,7 +5985,7 @@
   },
   {
     "word": "sibling",
-    "ipa": "/ˈsɪblɪŋ/",
+    "ipa": "[ˋsɪblɪŋ]",
     "pos": "n.",
     "meaning_zh": "手足",
     "note_zh": "泛指兄弟姊妹，不分性別，常見於正式文件或問卷。",
@@ -5996,7 +5996,7 @@
   },
   {
     "word": "brother",
-    "ipa": "/ˈbrʌðər/",
+    "ipa": "[ˋbrʌðɚ]",
     "pos": "n.",
     "meaning_zh": "兄弟",
     "note_zh": "指男性手足，可指哥哥或弟弟，需靠上下文判斷。",
@@ -6007,7 +6007,7 @@
   },
   {
     "word": "sister",
-    "ipa": "/ˈsɪstər/",
+    "ipa": "[ˋsɪstɚ]",
     "pos": "n.",
     "meaning_zh": "姊妹",
     "note_zh": "指女性手足，可指姊姊或妹妹。",
@@ -6018,7 +6018,7 @@
   },
   {
     "word": "spouse",
-    "ipa": "/spaʊs/",
+    "ipa": "[spaʊs]",
     "pos": "n.",
     "meaning_zh": "配偶",
     "note_zh": "中性用詞，不分性別，常見於正式表格與法律文件。",
@@ -6029,7 +6029,7 @@
   },
   {
     "word": "husband",
-    "ipa": "/ˈhʌzbənd/",
+    "ipa": "[ˋhʌzbənd]",
     "pos": "n.",
     "meaning_zh": "丈夫",
     "note_zh": "指已婚男性的配偶身分。",
@@ -6040,7 +6040,7 @@
   },
   {
     "word": "wife",
-    "ipa": "/waɪf/",
+    "ipa": "[waɪf]",
     "pos": "n.",
     "meaning_zh": "妻子",
     "note_zh": "指已婚女性的配偶身分，複數為 wives。",
@@ -6051,7 +6051,7 @@
   },
   {
     "word": "son",
-    "ipa": "/sʌn/",
+    "ipa": "[sʌn]",
     "pos": "n.",
     "meaning_zh": "兒子",
     "note_zh": "家庭關係基本詞彙，與 daughter 相對。",
@@ -6062,7 +6062,7 @@
   },
   {
     "word": "daughter",
-    "ipa": "/ˈdɔːtər/",
+    "ipa": "[ˋdɔtɚ]",
     "pos": "n.",
     "meaning_zh": "女兒",
     "note_zh": "與 son 相對，常見於家庭關係描述。",
@@ -6073,7 +6073,7 @@
   },
   {
     "word": "grandparent",
-    "ipa": "/ˈɡrænpɛrənt/",
+    "ipa": "[ˋgrænˌpɛrənt]",
     "pos": "n.",
     "meaning_zh": "祖父母（其中一位）",
     "note_zh": "泛稱，複數 grandparents 指祖父母雙方。",
@@ -6084,7 +6084,7 @@
   },
   {
     "word": "grandmother",
-    "ipa": "/ˈɡrænmʌðər/",
+    "ipa": "[ˋgrænˌmʌðɚ]",
     "pos": "n.",
     "meaning_zh": "祖母；外婆",
     "note_zh": "口語常用 grandma，指父方或母方的母親。",
@@ -6095,7 +6095,7 @@
   },
   {
     "word": "grandfather",
-    "ipa": "/ˈɡrænfɑːðər/",
+    "ipa": "[ˋgrænˌfɑðɚ]",
     "pos": "n.",
     "meaning_zh": "祖父；外公",
     "note_zh": "口語常用 grandpa，與 grandmother 相對。",
@@ -6106,7 +6106,7 @@
   },
   {
     "word": "grandchild",
-    "ipa": "/ˈɡræntʃaɪld/",
+    "ipa": "[ˋgrænˌtʃaɪld]",
     "pos": "n.",
     "meaning_zh": "孫子女",
     "note_zh": "泛稱不分性別，複數為 grandchildren。",
@@ -6117,7 +6117,7 @@
   },
   {
     "word": "uncle",
-    "ipa": "/ˈʌŋkəl/",
+    "ipa": "[ˋʌŋkḷ]",
     "pos": "n.",
     "meaning_zh": "叔叔；伯伯；舅舅",
     "note_zh": "泛指父母的兄弟或姑姨的丈夫，英文不細分親屬關係。",
@@ -6128,7 +6128,7 @@
   },
   {
     "word": "aunt",
-    "ipa": "/ænt/",
+    "ipa": "[ænt]",
     "pos": "n.",
     "meaning_zh": "阿姨；姑姑；舅媽",
     "note_zh": "泛指父母的姊妹或叔伯的妻子，與 uncle 對應。",
@@ -6139,7 +6139,7 @@
   },
   {
     "word": "cousin",
-    "ipa": "/ˈkʌzən/",
+    "ipa": "[ˋkʌzṇ]",
     "pos": "n.",
     "meaning_zh": "表親；堂親",
     "note_zh": "泛指伯叔姑舅姨的子女，英文不區分堂表關係。",
@@ -6150,7 +6150,7 @@
   },
   {
     "word": "nephew",
-    "ipa": "/ˈnɛfjuː/",
+    "ipa": "[ˋnɛfju]",
     "pos": "n.",
     "meaning_zh": "姪子；外甥",
     "note_zh": "指兄弟姊妹的兒子，與 niece 相對。",
@@ -6161,7 +6161,7 @@
   },
   {
     "word": "niece",
-    "ipa": "/niːs/",
+    "ipa": "[nis]",
     "pos": "n.",
     "meaning_zh": "姪女；外甥女",
     "note_zh": "指兄弟姊妹的女兒，與 nephew 相對。",
@@ -6172,7 +6172,7 @@
   },
   {
     "word": "in-law",
-    "ipa": "/ɪn lɔː/",
+    "ipa": "[ɪn lɔ]",
     "pos": "n.",
     "meaning_zh": "姻親",
     "note_zh": "常與 mother/father/brother 等組合，如 mother-in-law（婆婆／岳母）。",
@@ -6183,7 +6183,7 @@
   },
   {
     "word": "stepfather",
-    "ipa": "/ˈstɛpfɑːðər/",
+    "ipa": "[ˋstɛpˌfɑðɚ]",
     "pos": "n.",
     "meaning_zh": "繼父",
     "note_zh": "指母親再婚後的丈夫，非親生父親。",
@@ -6194,7 +6194,7 @@
   },
   {
     "word": "stepmother",
-    "ipa": "/ˈstɛpmʌðər/",
+    "ipa": "[ˋstɛpˌmʌðɚ]",
     "pos": "n.",
     "meaning_zh": "繼母",
     "note_zh": "指父親再婚後的妻子，非親生母親。",
@@ -6205,7 +6205,7 @@
   },
   {
     "word": "relative",
-    "ipa": "/ˈrɛlətɪv/",
+    "ipa": "[ˋrɛlətɪv]",
     "pos": "n.",
     "meaning_zh": "親戚",
     "note_zh": "泛指所有有血緣或姻親關係的人，範圍比 family 更廣。",
@@ -6216,7 +6216,7 @@
   },
   {
     "word": "ancestor",
-    "ipa": "/ˈænsɛstər/",
+    "ipa": "[ˋænˌsɛstɚ]",
     "pos": "n.",
     "meaning_zh": "祖先",
     "note_zh": "指過去世代的家族成員，與 descendant（後代）相對。",
@@ -6227,7 +6227,7 @@
   },
   {
     "word": "guardian",
-    "ipa": "/ˈɡɑːrdiən/",
+    "ipa": "[ˋgɑrdɪən]",
     "pos": "n.",
     "meaning_zh": "監護人",
     "note_zh": "法律上負責照顧未成年人的人，不一定是親生父母。",
@@ -6238,7 +6238,7 @@
   },
   {
     "word": "dependent",
-    "ipa": "/dɪˈpɛndənt/",
+    "ipa": "[dɪˋpɛndənt]",
     "pos": "n.",
     "meaning_zh": "受扶養者",
     "note_zh": "常見於保險、稅務文件，指需要經濟支持的家庭成員。",
@@ -6249,7 +6249,7 @@
   },
   {
     "word": "household",
-    "ipa": "/ˈhaʊshoʊld/",
+    "ipa": "[ˋhaʊsˌhold]",
     "pos": "n.",
     "meaning_zh": "家戶；一家人",
     "note_zh": "指同住一個屋簷下的所有成員，常見於統計或調查資料。",
@@ -6260,7 +6260,7 @@
   },
   {
     "word": "extended family",
-    "ipa": "/ɪkˈstɛndɪd ˈfæməli/",
+    "ipa": "[ɪkˋstɛndɪd ˋfæməlɪ]",
     "pos": "n.",
     "meaning_zh": "大家庭",
     "note_zh": "指核心家庭以外的親戚，如祖父母、叔伯、表親等。",
@@ -6271,7 +6271,7 @@
   },
   {
     "word": "immediate family",
-    "ipa": "/ɪˈmiːdiət ˈfæməli/",
+    "ipa": "[ɪˋmidɪət ˋfæməlɪ]",
     "pos": "n.",
     "meaning_zh": "核心家庭",
     "note_zh": "指父母、配偶、子女、手足等最親近的家庭成員。",
@@ -6282,7 +6282,7 @@
   },
   {
     "word": "acquaintance",
-    "ipa": "/əˈkweɪntəns/",
+    "ipa": "[əˋkwentəns]",
     "pos": "n.",
     "meaning_zh": "泛泛之交",
     "note_zh": "指認識但不算親近的朋友，關係比 friend 疏遠。",
@@ -6293,7 +6293,7 @@
   },
   {
     "word": "neighbor",
-    "ipa": "/ˈneɪbər/",
+    "ipa": "[ˋnebɚ]",
     "pos": "n.",
     "meaning_zh": "鄰居",
     "note_zh": "英式拼法為 neighbour，指住處相近的人。",
@@ -6304,7 +6304,7 @@
   },
   {
     "word": "colleague",
-    "ipa": "/ˈkɑːliːɡ/",
+    "ipa": "[ˋkɑlig]",
     "pos": "n.",
     "meaning_zh": "同事",
     "note_zh": "指工作上共事的人，屬人際關係詞彙而非家庭成員。",
@@ -6315,7 +6315,7 @@
   },
   {
     "word": "roommate",
-    "ipa": "/ˈruːmmeɪt/",
+    "ipa": "[ˋrumˌmet]",
     "pos": "n.",
     "meaning_zh": "室友",
     "note_zh": "指共同居住但無血緣關係的人，常見於租屋情境。",
@@ -6326,7 +6326,7 @@
   },
   {
     "word": "partner",
-    "ipa": "/ˈpɑːrtnər/",
+    "ipa": "[ˋpɑrtnɚ]",
     "pos": "n.",
     "meaning_zh": "伴侶",
     "note_zh": "中性用詞，可指感情伴侶，也可指事業合夥人。",
@@ -6337,7 +6337,7 @@
   },
   {
     "word": "engaged",
-    "ipa": "/ɪnˈɡeɪdʒd/",
+    "ipa": "[ɪnˋgedʒd]",
     "pos": "adj.",
     "meaning_zh": "訂婚的",
     "note_zh": "表示已答應結婚但尚未正式成婚的狀態。",
@@ -6348,7 +6348,7 @@
   },
   {
     "word": "married",
-    "ipa": "/ˈmærid/",
+    "ipa": "[ˋmærid]",
     "pos": "adj.",
     "meaning_zh": "已婚的",
     "note_zh": "常見於個人資料表格中的婚姻狀況欄位。",
@@ -6359,7 +6359,7 @@
   },
   {
     "word": "divorced",
-    "ipa": "/dɪˈvɔːrst/",
+    "ipa": "[dɪˋvɔrst]",
     "pos": "adj.",
     "meaning_zh": "離婚的",
     "note_zh": "表示婚姻關係已透過法律程序結束。",
@@ -6370,7 +6370,7 @@
   },
   {
     "word": "widowed",
-    "ipa": "/ˈwɪdoʊd/",
+    "ipa": "[ˋwɪdod]",
     "pos": "adj.",
     "meaning_zh": "喪偶的",
     "note_zh": "指配偶已過世且尚未再婚的狀態。",
@@ -6381,7 +6381,7 @@
   },
   {
     "word": "single",
-    "ipa": "/ˈsɪŋɡəl/",
+    "ipa": "[ˋsɪŋgəl]",
     "pos": "adj.",
     "meaning_zh": "單身的",
     "note_zh": "常見於個人資料表格婚姻狀況欄位，與 married 相對。",

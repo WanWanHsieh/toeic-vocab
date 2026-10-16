@@ -24342,7 +24342,7 @@
   "tip": "Part 5 常考副詞 automatically（automatically renewed 自動續約）；形容詞 automatic 修飾名詞"
  },
  "digital": {
-  "kk": "[ˋdɪdʒɪtl]",
+  "kk": "[ˋdɪdʒɪtḷ]",
   "chunks": [
    {
     "t": "di",
@@ -24356,7 +24356,7 @@
    },
    {
     "t": "tal",
-    "k": "tl",
+    "k": "tḷ",
     "n": "-al 弱化成 [l]，前面的 t 直接接 [l]"
    }
   ],
@@ -30466,7 +30466,7 @@
   "tip": "vehicle 是車的總稱（car、truck、bus 都算）；Part 1 常見 vehicles are parked... 描述；h 不發音，唸 [ˋviɪkḷ]"
  },
  "container": {
-  "kk": "[kənˋtennɚ]",
+  "kk": "[kənˋtenɚ]",
   "chunks": [
    {
     "t": "con",
@@ -30481,7 +30481,7 @@
    },
    {
     "t": "ner",
-    "k": "nɚ",
+    "k": "ɚ",
     "n": "字尾 -er 念 [ɚ]"
    }
   ],
@@ -39551,23 +39551,20 @@
   "tip": "correct 同時是動詞與形容詞，Part 5 先看空格前後的詞性；名詞 correction 常與 make 搭配（make a correction）。"
  },
  "accurate": {
-  "kk": "[ˋækkjərɪt]",
+  "kk": "[ˋækjərɪt]",
   "chunks": [
    {
     "t": "ac",
-    "k": "æk",
-    "s": 1,
-    "n": "a 念 [æ]"
+    "k": "æ",
+    "s": 1
    },
    {
     "t": "cu",
-    "k": "kjə",
-    "n": "cu 念 [kjə]，u 前面多一個 [j]"
+    "k": "kjə"
    },
    {
     "t": "rate",
-    "k": "rɪt",
-    "n": "形容詞字尾 -ate 念 [ɪt]，e 不發音"
+    "k": "rɪt"
    }
   ],
   "senses": [
@@ -41981,7 +41978,7 @@
   "tip": "mandatory 的反義是 optional；Part 7 常見 mandatory for all employees，並常改寫成 required / compulsory。"
  },
  "optional": {
-  "kk": "[ˋɑpʃənəl]",
+  "kk": "[ˋɑpʃənḷ]",
   "chunks": [
    {
     "t": "op",
@@ -41996,7 +41993,7 @@
    },
    {
     "t": "al",
-    "k": "əl",
+    "k": "ḷ",
     "n": "字尾 -al 念 [əl]"
    }
   ],
@@ -42164,7 +42161,7 @@
   "tip": "substantially（副詞）常修飾 increase、reduce、differ 等動詞，是 Part 5 副詞題的高頻詞；substantial 本身修飾名詞。"
  },
  "considerable": {
-  "kk": "[kənˋsɪdərəbəl]",
+  "kk": "[kənˋsɪdərəbḷ]",
   "chunks": [
    {
     "t": "con",
@@ -42189,7 +42186,7 @@
    },
    {
     "t": "ble",
-    "k": "bəl",
+    "k": "bḷ",
     "n": "字尾 -ble 念 [bəl]"
    }
   ],
@@ -42532,7 +42529,7 @@
   "tip": "crucial to + 名詞；表示「必要」的形容詞後面的 that 子句要用原形動詞：It is crucial that he be informed."
  },
  "vital": {
-  "kk": "[ˋvaɪtl]",
+  "kk": "[ˋvaɪtḷ]",
   "chunks": [
    {
     "t": "vi",
@@ -42542,7 +42539,7 @@
    },
    {
     "t": "tal",
-    "k": "tl",
+    "k": "tḷ",
     "n": "字尾 -al 弱化成 [l]"
    }
   ],
@@ -43144,7 +43141,7 @@
   "tip": "relevant to（不是 relevant with）；履歷與徵才廣告常見 relevant experience（相關工作經驗）。"
  },
  "article": {
-  "kk": "[ˋɑrtɪkl]",
+  "kk": "[ˋɑrtɪkḷ]",
   "chunks": [
    {
     "t": "ar",
@@ -43159,7 +43156,7 @@
    },
    {
     "t": "cle",
-    "k": "kl",
+    "k": "kḷ",
     "n": "字尾 -cle 念 [kl]，e 不發音"
    }
   ],
@@ -43419,7 +43416,7 @@
   "tip": "stressful（事物令人有壓力）與 stressed（人感到有壓力）常考：a stressful job / I feel stressed；stress 當動詞時等於 emphasize。"
  },
  "physical": {
-  "kk": "[ˋfɪzɪkl]",
+  "kk": "[ˋfɪzɪkḷ]",
   "chunks": [
    {
     "t": "phy",
@@ -43434,7 +43431,7 @@
    },
    {
     "t": "cal",
-    "k": "kl",
+    "k": "kḷ",
     "n": "字尾 -cal 念 [kl]"
    }
   ],
@@ -43513,7 +43510,7 @@
   "tip": "physical 與 physician（醫師）拼字相近，別看錯；公司福利常見 annual physical examination（年度健檢）。"
  },
  "mental": {
-  "kk": "[ˋmɛntl]",
+  "kk": "[ˋmɛntḷ]",
   "chunks": [
    {
     "t": "men",
@@ -43523,7 +43520,7 @@
    },
    {
     "t": "tal",
-    "k": "tl",
+    "k": "tḷ",
     "n": "字尾 -al 弱化成 [l]"
    }
   ],
@@ -48520,22 +48517,20 @@
   "tip": "encourage sb to V（接 to 不定詞）；公告常見 Staff are encouraged to ...（鼓勵員工…）"
  },
  "enable": {
-  "kk": "[ɪnˋebḷ]",
+  "kk": "[ɪˋnebḷ]",
   "chunks": [
    {
-    "t": "en",
-    "k": "ɪn"
+    "t": "e",
+    "k": "ɪ"
    },
    {
-    "t": "a",
-    "k": "e",
-    "s": 1,
-    "n": "a 念 [e]"
+    "t": "na",
+    "k": "ne",
+    "s": 1
    },
    {
     "t": "ble",
-    "k": "bḷ",
-    "n": "-ble 念 [bḷ]"
+    "k": "bḷ"
    }
   ],
   "senses": [
@@ -49025,7 +49020,7 @@
   "tip": "be cautious about / of 後接事物；標示牌 Caution: wet floor 用的是名詞 caution"
  },
  "aggressive": {
-  "kk": "[əˋgrɛssɪv]",
+  "kk": "[əˋgrɛsɪv]",
   "chunks": [
    {
     "t": "a",
@@ -49033,14 +49028,12 @@
    },
    {
     "t": "ggres",
-    "k": "grɛs",
-    "s": 1,
-    "n": "gg 只念一個 [g]"
+    "k": "grɛ",
+    "s": 1
    },
    {
     "t": "sive",
-    "k": "sɪv",
-    "n": "-sive 念 [sɪv]"
+    "k": "sɪv"
    }
   ],
   "senses": [

@@ -1,7 +1,7 @@
 [
   {
     "word": "at your earliest convenience",
-    "ipa": "/æt jʊr ˈɝlɪst kənˈvinjəns/",
+    "ipa": "[æt jʊr ˋɝlɪst kənˋvinjəns]",
     "pos": "phr.",
     "meaning_zh": "盡快；在您方便時儘早",
     "note_zh": "正式信函中常見的委婉催促用語,比直接說 as soon as possible 更客氣,常用於信件結尾。",
@@ -12,7 +12,7 @@
   },
   {
     "word": "please find attached",
-    "ipa": "/pliz faɪnd əˈtætʃt/",
+    "ipa": "[pliz faɪnd əˋtætʃt]",
     "pos": "phr.",
     "meaning_zh": "隨函附上；請見附件",
     "note_zh": "電子郵件中用來說明附件內容的固定用語,後面常接名詞說明附件為何,如 please find attached the report。",
@@ -23,7 +23,7 @@
   },
   {
     "word": "with reference to",
-    "ipa": "/wɪð ˈrɛfərəns tu/",
+    "ipa": "[wɪð ˋrɛfərəns tu]",
     "pos": "phr.",
     "meaning_zh": "關於；茲就……",
     "note_zh": "正式書信開頭常用語,用來引出信件主題,語氣正式,常見於商業信函與公文。",
@@ -34,7 +34,7 @@
   },
   {
     "word": "with regard to",
-    "ipa": "/wɪð rɪˈgɑrd tu/",
+    "ipa": "[wɪð rɪˋgɑrd tu]",
     "pos": "phr.",
     "meaning_zh": "關於；就……而言",
     "note_zh": "與 with reference to 意思相近,但使用範圍更廣,可用於口語或書面,正式程度略低一些。",
@@ -45,7 +45,7 @@
   },
   {
     "word": "I am writing to inform you",
-    "ipa": "/aɪ æm ˈraɪtɪŋ tu ɪnˈfɔrm ju/",
+    "ipa": "[aɪ æm ˋraɪtɪŋ tu ɪnˋfɔrm ju]",
     "pos": "phr.",
     "meaning_zh": "我來信通知您",
     "note_zh": "正式信件開頭常用句型,用來直接說明寫信目的,常接 that 子句說明通知內容。",
@@ -56,7 +56,7 @@
   },
   {
     "word": "as per your request",
-    "ipa": "/æz pɝ jʊr rɪˈkwɛst/",
+    "ipa": "[æz pɝ jʊr rɪˋkwɛst]",
     "pos": "phr.",
     "meaning_zh": "依照您的要求",
     "note_zh": "商業書信中常見,語氣正式,用來說明所做的事是依照對方要求進行的,常放在句首。",
@@ -67,7 +67,7 @@
   },
   {
     "word": "should you have any questions",
-    "ipa": "/ʃʊd ju hæv ˈɛni ˈkwɛstʃənz/",
+    "ipa": "[ʃʊd ju hæv ˋɛnɪ ˋkwɛstʃənz]",
     "pos": "phr.",
     "meaning_zh": "若您有任何疑問",
     "note_zh": "正式信件結尾常用的假設語氣句型,等同於 if you have any questions,但語氣更正式典雅。",
@@ -78,7 +78,7 @@
   },
   {
     "word": "feel free to contact",
-    "ipa": "/fil fri tu kənˈtækt/",
+    "ipa": "[fil fri tu kənˋtækt]",
     "pos": "phr.",
     "meaning_zh": "歡迎隨時聯繫",
     "note_zh": "用於信件結尾,語氣友善且不失禮貌,鼓勵對方主動聯絡,常搭配 me / us。",
@@ -89,7 +89,7 @@
   },
   {
     "word": "looking forward to hearing from you",
-    "ipa": "/ˈlʊkɪŋ ˈfɔrwɚd tu ˈhɪrɪŋ frʌm ju/",
+    "ipa": "[ˋlʊkɪŋ ˋfɔrwɚd tu ˋhɪrɪŋ frʌm ju]",
     "pos": "phr.",
     "meaning_zh": "期待您的回覆",
     "note_zh": "商業信件結尾的固定用語,注意 to 為介系詞,後面須接動名詞 hearing。",
@@ -100,7 +100,7 @@
   },
   {
     "word": "thank you for your prompt reply",
-    "ipa": "/θæŋk ju fɔr jʊr prɑmpt rɪˈplaɪ/",
+    "ipa": "[θæŋk ju fɔr jʊr prɑmpt rɪˋplaɪ]",
     "pos": "phr.",
     "meaning_zh": "感謝您的迅速回覆",
     "note_zh": "prompt 意為立即的、迅速的,此片語用於感謝對方快速回應,常見於後續往來信件開頭。",
@@ -111,7 +111,7 @@
   },
   {
     "word": "in response to your inquiry",
-    "ipa": "/ɪn rɪˈspɑns tu jʊr ɪnˈkwaɪrɪ/",
+    "ipa": "[ɪn rɪˋspɑns tu jʊr ɪnˋkwaɪrɪ]",
     "pos": "phr.",
     "meaning_zh": "針對您的詢問",
     "note_zh": "用於回覆客戶或廠商詢問時的開場白,語氣正式,常見於客服或業務回信。",
@@ -122,7 +122,7 @@
   },
   {
     "word": "for your reference",
-    "ipa": "/fɔr jʊr ˈrɛfərəns/",
+    "ipa": "[fɔr jʊr ˋrɛfərəns]",
     "pos": "phr.",
     "meaning_zh": "供您參考",
     "note_zh": "常縮寫為 FYR,用於附加資訊供對方參考,語氣中性,常放句尾。",
@@ -133,7 +133,7 @@
   },
   {
     "word": "please be advised that",
-    "ipa": "/pliz bi ədˈvaɪzd ðæt/",
+    "ipa": "[pliz bi ədˋvaɪzd ðæt]",
     "pos": "phr.",
     "meaning_zh": "敬請注意；特此告知",
     "note_zh": "非常正式的公告用語,常見於公司通知或法律文件,用來告知重要事項或政策變更。",
@@ -144,7 +144,7 @@
   },
   {
     "word": "for your information",
-    "ipa": "/fɔr jʊr ˌɪnfɚˈmeʃən/",
+    "ipa": "[fɔr jʊr ˌɪnfɚˋmɛʃən]",
     "pos": "phr.",
     "meaning_zh": "供您參考知悉",
     "note_zh": "常縮寫為 FYI,用於提供補充資訊,語氣較 for your reference 更口語、隨性一些。",
@@ -155,7 +155,7 @@
   },
   {
     "word": "per our conversation",
-    "ipa": "/pɝ aʊr ˌkɑnvɚˈseʃən/",
+    "ipa": "[pɝ aʊr ˌkɑnvɚˋsɛʃən]",
     "pos": "phr.",
     "meaning_zh": "依照我們之前的討論",
     "note_zh": "用於信件開頭,承接先前電話或面談內容,常見於會議或商談後的確認信。",
@@ -166,7 +166,7 @@
   },
   {
     "word": "keep me posted",
-    "ipa": "/kip mi ˈpostɪd/",
+    "ipa": "[kip mi ˋpostɪd]",
     "pos": "phr.",
     "meaning_zh": "隨時讓我知道最新狀況",
     "note_zh": "較口語的用法,常用於同事或熟識的商業夥伴之間,要求對方持續更新進度。",
@@ -177,7 +177,7 @@
   },
   {
     "word": "touch base with",
-    "ipa": "/tʌtʃ bes wɪð/",
+    "ipa": "[tʌtʃ bɛs wɪð]",
     "pos": "phr.",
     "meaning_zh": "與……聯繫一下；簡短溝通",
     "note_zh": "商務口語常用語,指與某人做簡短的聯繫或確認,語氣輕鬆,常用於同事間。",
@@ -188,7 +188,7 @@
   },
   {
     "word": "get back to you",
-    "ipa": "/gɛt bæk tu ju/",
+    "ipa": "[gɛt bæk tu ju]",
     "pos": "phr.",
     "meaning_zh": "之後回覆您",
     "note_zh": "常用於暫時無法立即答覆時,表示稍後會再回應,語氣口語但仍適用於商業場合。",
@@ -199,7 +199,7 @@
   },
   {
     "word": "on a related note",
-    "ipa": "/ɑn ə rɪˈletɪd not/",
+    "ipa": "[ɑn ə rɪˋlɛtɪd not]",
     "pos": "phr.",
     "meaning_zh": "另外一提；順帶一提",
     "note_zh": "用來轉換話題但仍與前文相關,語氣自然,常見於較長的商業信件或報告中。",
@@ -210,7 +210,7 @@
   },
   {
     "word": "as discussed",
-    "ipa": "/æz dɪˈskʌst/",
+    "ipa": "[æz dɪˋskʌst]",
     "pos": "phr.",
     "meaning_zh": "如先前所討論",
     "note_zh": "常用於會後確認信開頭,簡潔地承接先前口頭討論的內容,語氣正式簡練。",
@@ -221,7 +221,7 @@
   },
   {
     "word": "to whom it may concern",
-    "ipa": "/tu hum ɪt me kənˈsɝn/",
+    "ipa": "[tu hum ɪt mɛ kənˋsɝn]",
     "pos": "phr.",
     "meaning_zh": "敬啟者",
     "note_zh": "用於不知收件人姓名時的正式信件開頭稱謂,常見於推薦信、證明信等正式文件。",
@@ -232,7 +232,7 @@
   },
   {
     "word": "bring to your attention",
-    "ipa": "/brɪŋ tu jʊr əˈtɛnʃən/",
+    "ipa": "[brɪŋ tu jʊr əˋtɛnʃən]",
     "pos": "phr.",
     "meaning_zh": "提請您注意",
     "note_zh": "用來強調重要事項,常見於正式通知或提醒信件,語氣鄭重。",
@@ -243,7 +243,7 @@
   },
   {
     "word": "further to our discussion",
-    "ipa": "/ˈfɝðɚ tu aʊr dɪˈskʌʃən/",
+    "ipa": "[ˋfɝðɚ tu aʊr dɪˋskʌʃən]",
     "pos": "phr.",
     "meaning_zh": "承續我們的討論",
     "note_zh": "與 per our conversation 相近,較常見於書面商業英文,用於承接先前討論的後續信件。",
@@ -254,7 +254,7 @@
   },
   {
     "word": "please do not hesitate to",
-    "ipa": "/pliz du nɑt ˈhɛzəˌtet tu/",
+    "ipa": "[pliz du nɑt ˋhɛzəˌtɛt tu]",
     "pos": "phr.",
     "meaning_zh": "請不要遲疑；請儘管",
     "note_zh": "鼓勵對方主動聯繫或提出問題的禮貌用語,常搭配 contact us 或 ask,語氣誠懇。",
@@ -265,7 +265,7 @@
   },
   {
     "word": "cc someone in",
-    "ipa": "/ˌsi ˈsi ˈsʌmˌwʌn ɪn/",
+    "ipa": "[si si ˋsʌmˌwʌn ɪn]",
     "pos": "phr.",
     "meaning_zh": "將某人副本抄送；把某人也加進郵件",
     "note_zh": "cc 源自 carbon copy,此片語為口語化用法,指在郵件中加入某人為副本收件人。",
@@ -276,7 +276,7 @@
   },
   {
     "word": "reach out to",
-    "ipa": "/ritʃ aʊt tu/",
+    "ipa": "[ritʃ aʊt tu]",
     "pos": "phr.",
     "meaning_zh": "主動聯繫",
     "note_zh": "較 contact 更帶有主動、友善的意味,常見於商務email 或客服用語中。",
@@ -287,7 +287,7 @@
   },
   {
     "word": "as attached",
-    "ipa": "/æz əˈtætʃt/",
+    "ipa": "[æz əˋtætʃt]",
     "pos": "phr.",
     "meaning_zh": "如附件所示",
     "note_zh": "簡短說明附件內容的用語,常放句尾,與 please find attached 功能相近但更簡潔。",
@@ -298,7 +298,7 @@
   },
   {
     "word": "put something on the agenda",
-    "ipa": "/pʊt ˈsʌmθɪŋ ɑn ði əˈdʒɛndə/",
+    "ipa": "[pʊt ˋsʌmθɪŋ ɑn ði əˋdʒɛndə]",
     "pos": "phr.",
     "meaning_zh": "把某事排入議程",
     "note_zh": "用於會議規劃階段,表示將議題正式列入討論項目,agenda 指會議議程表。",
@@ -309,7 +309,7 @@
   },
   {
     "word": "reschedule the meeting",
-    "ipa": "/riˈskɛdʒʊl ðə ˈmitɪŋ/",
+    "ipa": "[riˋskɛdʒʊl ðə ˋmitɪŋ]",
     "pos": "phr.",
     "meaning_zh": "重新安排會議時間",
     "note_zh": "指更改原定會議時間,常因時間衝突而使用,是商業英文中極常見的動詞片語。",
@@ -320,7 +320,7 @@
   },
   {
     "word": "postpone the meeting",
-    "ipa": "/postˈpon ðə ˈmitɪŋ/",
+    "ipa": "[postˋpon ðə ˋmitɪŋ]",
     "pos": "phr.",
     "meaning_zh": "延後會議",
     "note_zh": "強調將會議延到之後某個時間,與 reschedule 不同的是,postpone 不一定立即指定新時間。",
@@ -331,7 +331,7 @@
   },
   {
     "word": "call off the meeting",
-    "ipa": "/kɔl ɔf ðə ˈmitɪŋ/",
+    "ipa": "[kɔl ɔf ðə ˋmitɪŋ]",
     "pos": "phr.",
     "meaning_zh": "取消會議",
     "note_zh": "較口語的用法,意思等同於 cancel the meeting,常見於臨時取消的情況。",
@@ -342,7 +342,7 @@
   },
   {
     "word": "take minutes",
-    "ipa": "/tek ˈmɪnɪts/",
+    "ipa": "[tɛk ˋmɪnɪts]",
     "pos": "phr.",
     "meaning_zh": "做會議紀錄",
     "note_zh": "minutes 在此指會議記錄,並非分鐘,是 TOEIC 常考的一詞多義。",
@@ -353,7 +353,7 @@
   },
   {
     "word": "follow up on",
-    "ipa": "/ˈfɑlo ʌp ɑn/",
+    "ipa": "[ˋfɑlo ʌp ɑn]",
     "pos": "phr.",
     "meaning_zh": "針對……進行後續追蹤",
     "note_zh": "用於會議或工作後追蹤進度或未完成事項,是商業英文中使用頻率極高的片語動詞。",
@@ -364,7 +364,7 @@
   },
   {
     "word": "take a vote on",
-    "ipa": "/tek ə vot ɑn/",
+    "ipa": "[tɛk ə vot ɑn]",
     "pos": "phr.",
     "meaning_zh": "對……進行表決",
     "note_zh": "用於會議中需要正式表決某項議題時,常見於董事會或委員會會議紀錄。",
@@ -375,7 +375,7 @@
   },
   {
     "word": "reach a consensus",
-    "ipa": "/ritʃ ə kənˈsɛnsəs/",
+    "ipa": "[ritʃ ə kənˋsɛnsəs]",
     "pos": "phr.",
     "meaning_zh": "達成共識",
     "note_zh": "強調透過討論讓所有人意見一致,語氣較 reach an agreement 更強調共同認同。",
@@ -386,7 +386,7 @@
   },
   {
     "word": "make a decision",
-    "ipa": "/mek ə dɪˈsɪʒən/",
+    "ipa": "[mɛk ə dɪˋsɪʒən]",
     "pos": "phr.",
     "meaning_zh": "做決定",
     "note_zh": "最基本且高頻的決策用語,常搭配 about / on 表示決定的對象。",
@@ -397,7 +397,7 @@
   },
   {
     "word": "table a discussion",
-    "ipa": "/ˈtebəl ə dɪˈskʌʃən/",
+    "ipa": "[ˋtɛbḷ ə dɪˋskʌʃən]",
     "pos": "phr.",
     "meaning_zh": "擱置討論；暫緩討論",
     "note_zh": "美式英語中 table 作動詞意為暫時擱置,與英式英語中 table 表示提出討論意思相反,須特別注意。",
@@ -408,7 +408,7 @@
   },
   {
     "word": "weigh in on",
-    "ipa": "/we ɪn ɑn/",
+    "ipa": "[wɛ ɪn ɑn]",
     "pos": "phr.",
     "meaning_zh": "就……發表意見",
     "note_zh": "指在討論中提出自己的看法或加入意見,語氣較口語,常見於會議或郵件討論串。",
@@ -419,7 +419,7 @@
   },
   {
     "word": "bring up an issue",
-    "ipa": "/brɪŋ ʌp æn ˈɪʃu/",
+    "ipa": "[brɪŋ ʌp æn ˋɪʃu]",
     "pos": "phr.",
     "meaning_zh": "提出一個議題／問題",
     "note_zh": "指在會議中主動提及某個問題或話題,常搭配 during the meeting。",
@@ -430,7 +430,7 @@
   },
   {
     "word": "get the ball rolling",
-    "ipa": "/gɛt ðə bɔl ˈrolɪŋ/",
+    "ipa": "[gɛt ðə bɔl ˋrolɪŋ]",
     "pos": "phr.",
     "meaning_zh": "讓事情開始進行；起頭",
     "note_zh": "生動的口語表達,指開始啟動一項計畫或討論,常用於會議開場。",
@@ -441,7 +441,7 @@
   },
   {
     "word": "go over the details",
-    "ipa": "/go ˈovɚ ðə ˈditelz/",
+    "ipa": "[go ˋovɚ ðə ˋditɛlz]",
     "pos": "phr.",
     "meaning_zh": "仔細檢視細節",
     "note_zh": "用於會議中逐項檢查或說明細節內容,go over 為片語動詞,意為複習、詳細檢查。",
@@ -452,7 +452,7 @@
   },
   {
     "word": "run through the agenda",
-    "ipa": "/rʌn θru ði əˈdʒɛndə/",
+    "ipa": "[rʌn θru ði əˋdʒɛndə]",
     "pos": "phr.",
     "meaning_zh": "快速過一遍議程",
     "note_zh": "指在會議開始時簡要說明或回顧議程項目,run through 強調快速、概略地進行。",
@@ -463,7 +463,7 @@
   },
   {
     "word": "finalize the details",
-    "ipa": "/ˈfaɪnəˌlaɪz ðə ˈditelz/",
+    "ipa": "[ˋfaɪnəˌlaɪz ðə ˋditɛlz]",
     "pos": "phr.",
     "meaning_zh": "敲定細節",
     "note_zh": "表示將尚待確認的細節做最終確認,常用於合約、計畫定案前的最後階段。",
@@ -474,7 +474,7 @@
   },
   {
     "word": "be on the same page",
-    "ipa": "/bi ɑn ðə sem pedʒ/",
+    "ipa": "[bi ɑn ðə sɛm pɛdʒ]",
     "pos": "phr.",
     "meaning_zh": "想法一致；有共識",
     "note_zh": "生動比喻用語,表示雙方對某事的理解或期望一致,常用於確認團隊溝通無誤。",
@@ -485,7 +485,7 @@
   },
   {
     "word": "take into account",
-    "ipa": "/tek ˈɪntu əˈkaʊnt/",
+    "ipa": "[tɛk ˋɪntu əˋkaʊnt]",
     "pos": "phr.",
     "meaning_zh": "將……納入考量",
     "note_zh": "表示在做決策時將某項因素一併考慮進去,是商業英文中非常常見的片語。",
@@ -496,7 +496,7 @@
   },
   {
     "word": "move forward with",
-    "ipa": "/muv ˈfɔrwɚd wɪð/",
+    "ipa": "[muv ˋfɔrwɚd wɪð]",
     "pos": "phr.",
     "meaning_zh": "繼續推進；著手進行",
     "note_zh": "表示決定後續進行某項計畫,常用於會議做出決策後的下一步行動。",
@@ -507,7 +507,7 @@
   },
   {
     "word": "give the green light",
-    "ipa": "/gɪv ðə grin laɪt/",
+    "ipa": "[gɪv ðə grin laɪt]",
     "pos": "phr.",
     "meaning_zh": "批准；開綠燈",
     "note_zh": "生動的比喻用法,表示正式核准某項計畫或行動,語氣較 approve 更口語生動。",
@@ -518,7 +518,7 @@
   },
   {
     "word": "sign off on",
-    "ipa": "/saɪn ɔf ɑn/",
+    "ipa": "[saɪn ɔf ɑn]",
     "pos": "phr.",
     "meaning_zh": "正式批准；簽署同意",
     "note_zh": "指負責人在文件或提案上簽字表示同意,常見於流程審核或預算核准情境。",
@@ -529,7 +529,7 @@
   },
   {
     "word": "attend a meeting in person",
-    "ipa": "/əˈtɛnd ə ˈmitɪŋ ɪn ˈpɝsən/",
+    "ipa": "[əˋtɛnd ə ˋmitɪŋ ɪn ˋpɝsṇ]",
     "pos": "phr.",
     "meaning_zh": "親自出席會議",
     "note_zh": "強調實際到場參加,而非透過視訊或電話,常用於區分出席方式。",
@@ -540,7 +540,7 @@
   },
   {
     "word": "via video conference",
-    "ipa": "/ˈvaɪə ˈvɪdiˌo ˈkɑnfərəns/",
+    "ipa": "[ˋvaɪə ˋvɪdɪˌo ˋkɑnfərəns]",
     "pos": "phr.",
     "meaning_zh": "透過視訊會議",
     "note_zh": "說明會議進行方式的常見用語,常見於跨國或遠距團隊的會議通知中。",
@@ -551,7 +551,7 @@
   },
   {
     "word": "chair a meeting",
-    "ipa": "/tʃɛr ə ˈmitɪŋ/",
+    "ipa": "[tʃɛr ə ˋmitɪŋ]",
     "pos": "phr.",
     "meaning_zh": "主持會議",
     "note_zh": "chair 在此作動詞,意為擔任主席、主持,是商業英文中常考的詞性轉換用法。",
@@ -562,7 +562,7 @@
   },
   {
     "word": "reach an agreement",
-    "ipa": "/ritʃ æn əˈgrimənt/",
+    "ipa": "[ritʃ æn əˋgrimənt]",
     "pos": "phr.",
     "meaning_zh": "達成協議",
     "note_zh": "與 reach a consensus 相近,但更常用於正式的合約或商業談判情境。",
@@ -573,7 +573,7 @@
   },
   {
     "word": "come up with a plan",
-    "ipa": "/kʌm ʌp wɪð ə plæn/",
+    "ipa": "[kʌm ʌp wɪð ə plæn]",
     "pos": "phr.",
     "meaning_zh": "想出一個計畫",
     "note_zh": "come up with 意為想出、提出,常搭配 idea、solution、plan 等名詞使用。",
@@ -584,7 +584,7 @@
   },
   {
     "word": "draw up a proposal",
-    "ipa": "/drɔ ʌp ə prəˈpozəl/",
+    "ipa": "[drɔ ʌp ə prəˋpozḷ]",
     "pos": "phr.",
     "meaning_zh": "草擬一份提案",
     "note_zh": "draw up 指正式擬定文件,常搭配 contract、proposal、plan 等正式文件名詞。",
@@ -595,7 +595,7 @@
   },
   {
     "word": "iron out the details",
-    "ipa": "/ˈaɪɚn aʊt ðə ˈditelz/",
+    "ipa": "[ˋaɪɚn aʊt ðə ˋditɛlz]",
     "pos": "phr.",
     "meaning_zh": "解決細節問題；敲定細節",
     "note_zh": "比喻用語,原意為把皺褶燙平,引申為解決討論中殘留的小問題或分歧。",
@@ -606,7 +606,7 @@
   },
   {
     "word": "set a deadline",
-    "ipa": "/sɛt ə ˈdɛˌdlaɪn/",
+    "ipa": "[sɛt ə ˋdɛˌdlaɪn]",
     "pos": "phr.",
     "meaning_zh": "設定截止日期",
     "note_zh": "用於會議中決定某項任務或計畫必須完成的時間點,是專案管理常用語。",
@@ -617,7 +617,7 @@
   },
   {
     "word": "push back the deadline",
-    "ipa": "/pʊʃ bæk ðə ˈdɛˌdlaɪn/",
+    "ipa": "[pʊʃ bæk ðə ˋdɛˌdlaɪn]",
     "pos": "phr.",
     "meaning_zh": "延後截止日期",
     "note_zh": "push back 在此意為延後、往後推,常用於因故需要更多時間完成工作時。",
@@ -628,7 +628,7 @@
   },
   {
     "word": "within budget",
-    "ipa": "/wɪˈðɪn ˈbʌdʒɪt/",
+    "ipa": "[wɪˋðɪn ˋbʌdʒɪt]",
     "pos": "phr.",
     "meaning_zh": "在預算範圍內",
     "note_zh": "表示花費未超過預先編列的金額,是財務報告中常見的判斷用語。",
@@ -639,7 +639,7 @@
   },
   {
     "word": "over budget",
-    "ipa": "/ˈovɚ ˈbʌdʒɪt/",
+    "ipa": "[ˋovɚ ˋbʌdʒɪt]",
     "pos": "phr.",
     "meaning_zh": "超出預算",
     "note_zh": "與 within budget 相對,表示實際花費超過原先編列的金額,常見於專案結案報告。",
@@ -650,7 +650,7 @@
   },
   {
     "word": "cut costs",
-    "ipa": "/kʌt kɔsts/",
+    "ipa": "[kʌt kɔsts]",
     "pos": "phr.",
     "meaning_zh": "削減成本",
     "note_zh": "泛指各種降低支出的作法,是商業英文中最基本且常考的財務動詞片語之一。",
@@ -661,7 +661,7 @@
   },
   {
     "word": "cost-effective",
-    "ipa": "/kɔst ɪˈfɛktɪv/",
+    "ipa": "[kɔst ɪˋfɛktɪv]",
     "pos": "phr.",
     "meaning_zh": "具成本效益的；划算的",
     "note_zh": "形容詞用法,強調投入成本後所獲得的效益,常用於評估方案或產品的性價比。",
@@ -672,7 +672,7 @@
   },
   {
     "word": "break even",
-    "ipa": "/brek ˈivən/",
+    "ipa": "[brɛk ˋivən]",
     "pos": "phr.",
     "meaning_zh": "損益兩平",
     "note_zh": "指收入恰好等於支出,既未獲利也未虧損,是財務報告與商業計畫中的常見概念。",
@@ -683,7 +683,7 @@
   },
   {
     "word": "bottom line",
-    "ipa": "/ˈbɑtəm laɪn/",
+    "ipa": "[ˋbɑtəm laɪn]",
     "pos": "phr.",
     "meaning_zh": "最終盈虧；淨利；最終結果",
     "note_zh": "原指財務報表最後一行的淨利數字,引申為最終結果或重點,用法廣泛。",
@@ -694,7 +694,7 @@
   },
   {
     "word": "net profit",
-    "ipa": "/nɛt ˈprɑfɪt/",
+    "ipa": "[nɛt ˋprɑfɪt]",
     "pos": "phr.",
     "meaning_zh": "淨利",
     "note_zh": "指扣除所有成本、費用及稅金後的實際獲利,是財務報表中的關鍵指標。",
@@ -705,7 +705,7 @@
   },
   {
     "word": "gross revenue",
-    "ipa": "/gros ˈrɛvəˌnu/",
+    "ipa": "[gros ˋrɛvəˌnu]",
     "pos": "phr.",
     "meaning_zh": "總收入；毛收入",
     "note_zh": "指扣除任何成本費用前的總收入金額,常與 net profit 對比使用。",
@@ -716,7 +716,7 @@
   },
   {
     "word": "year-over-year",
-    "ipa": "/jɪr ˈovɚ jɪr/",
+    "ipa": "[jɪr ˋovɚ jɪr]",
     "pos": "phr.",
     "meaning_zh": "逐年；與去年同期相比",
     "note_zh": "常縮寫為 YoY,用於比較財務數據在不同年度同期的變化,是財報中極常見的用語。",
@@ -727,7 +727,7 @@
   },
   {
     "word": "quarter over quarter",
-    "ipa": "/ˈkwɔrtɚ ˈovɚ ˈkwɔrtɚ/",
+    "ipa": "[ˋkwɔrtɚ ˋovɚ ˋkwɔrtɚ]",
     "pos": "phr.",
     "meaning_zh": "季度環比；與上一季相比",
     "note_zh": "常縮寫為 QoQ,用來比較連續兩季之間數據的變化,常見於季報分析。",
@@ -738,7 +738,7 @@
   },
   {
     "word": "in the black",
-    "ipa": "/ɪn ðə blæk/",
+    "ipa": "[ɪn ðə blæk]",
     "pos": "phr.",
     "meaning_zh": "有盈餘的；獲利的",
     "note_zh": "源自會計上以黑色墨水記錄盈餘的傳統,表示公司財務處於獲利狀態。",
@@ -749,7 +749,7 @@
   },
   {
     "word": "in the red",
-    "ipa": "/ɪn ðə rɛd/",
+    "ipa": "[ɪn ðə rɛd]",
     "pos": "phr.",
     "meaning_zh": "虧損的",
     "note_zh": "與 in the black 相對,源自以紅色墨水記錄虧損的傳統,表示財務處於虧損狀態。",
@@ -760,7 +760,7 @@
   },
   {
     "word": "at a loss",
-    "ipa": "/æt ə lɔs/",
+    "ipa": "[æt ə lɔs]",
     "pos": "phr.",
     "meaning_zh": "虧本地",
     "note_zh": "指以低於成本的價格銷售或整體處於虧損狀態,常見於描述交易或營運結果。",
@@ -771,7 +771,7 @@
   },
   {
     "word": "offset the cost",
-    "ipa": "/ˈɔfˌsɛt ðə kɔst/",
+    "ipa": "[ˋɔfˌsɛt ðə kɔst]",
     "pos": "phr.",
     "meaning_zh": "抵銷成本",
     "note_zh": "表示用某種收入或節省的方式來彌補或抵銷原本的支出,常見於財務規劃討論。",
@@ -782,7 +782,7 @@
   },
   {
     "word": "allocate funds",
-    "ipa": "/ˈæləˌket fʌndz/",
+    "ipa": "[ˋæləˌkɛt fʌndz]",
     "pos": "phr.",
     "meaning_zh": "撥款；分配資金",
     "note_zh": "指依照計畫或需求分配預算資金給特定項目,常見於預算編列與財務規劃文件。",
@@ -793,7 +793,7 @@
   },
   {
     "word": "financial statement",
-    "ipa": "/faɪˈnænʃəl ˈstetmənt/",
+    "ipa": "[faɪˋnænʃəl ˋstɛtmənt]",
     "pos": "phr.",
     "meaning_zh": "財務報表",
     "note_zh": "泛指公司呈現財務狀況的正式文件,包含資產負債表、損益表等,是財務會計核心詞彙。",
@@ -804,7 +804,7 @@
   },
   {
     "word": "balance the books",
-    "ipa": "/ˈbæləns ðə bʊks/",
+    "ipa": "[ˋbæləns ðə bʊks]",
     "pos": "phr.",
     "meaning_zh": "使帳目平衡；結算帳目",
     "note_zh": "指確保收支記錄正確無誤、帳目相符,是會計工作中的基本任務。",
@@ -815,7 +815,7 @@
   },
   {
     "word": "return on investment",
-    "ipa": "/rɪˈtɝn ɑn ɪnˈvɛstmənt/",
+    "ipa": "[rɪˋtɝn ɑn ɪnˋvɛstmənt]",
     "pos": "phr.",
     "meaning_zh": "投資報酬率",
     "note_zh": "常縮寫為 ROI,用來衡量投資所帶來的獲利效益,是評估專案或行銷成效的重要指標。",
@@ -826,7 +826,7 @@
   },
   {
     "word": "cash flow",
-    "ipa": "/kæʃ flo/",
+    "ipa": "[kæʃ flo]",
     "pos": "phr.",
     "meaning_zh": "現金流",
     "note_zh": "指企業在一定期間內現金流入與流出的狀況,是評估公司財務健全度的重要指標。",
@@ -837,7 +837,7 @@
   },
   {
     "word": "as a percentage of",
-    "ipa": "/æz ə pɚˈsɛntɪdʒ ʌv/",
+    "ipa": "[æz ə pɚˋsɛntɪdʒ ʌv]",
     "pos": "phr.",
     "meaning_zh": "佔……的百分比",
     "note_zh": "用於財務報告中表示某項數值相對於整體的比例,常搭配 total revenue、sales 等詞。",
@@ -848,7 +848,7 @@
   },
   {
     "word": "reach a plateau",
-    "ipa": "/ritʃ ə plæˈto/",
+    "ipa": "[ritʃ ə plæˋto]",
     "pos": "phr.",
     "meaning_zh": "達到穩定期；趨於平緩",
     "note_zh": "用於描述數據成長趨緩、不再明顯上升或下降的狀態,常見於銷售或市場趨勢分析。",
@@ -859,7 +859,7 @@
   },
   {
     "word": "hit a record high",
-    "ipa": "/hɪt ə ˈrɛkɚd haɪ/",
+    "ipa": "[hɪt ə ˋrɛkɚd haɪ]",
     "pos": "phr.",
     "meaning_zh": "創下新高",
     "note_zh": "用於描述數據達到前所未有的高點,常見於股價、營收或銷售數字的報導。",
@@ -870,7 +870,7 @@
   },
   {
     "word": "hit a record low",
-    "ipa": "/hɪt ə ˈrɛkɚd lo/",
+    "ipa": "[hɪt ə ˋrɛkɚd lo]",
     "pos": "phr.",
     "meaning_zh": "創下新低",
     "note_zh": "與 hit a record high 相對,表示數據跌至前所未有的低點,常見於財經報導。",
@@ -881,7 +881,7 @@
   },
   {
     "word": "rise steadily",
-    "ipa": "/raɪz ˈstɛdəlɪ/",
+    "ipa": "[raɪz ˋstɛdəlɪ]",
     "pos": "phr.",
     "meaning_zh": "穩定上升",
     "note_zh": "用於描述數據呈現持續且平穩的成長趨勢,常見於圖表趨勢描述句。",
@@ -892,7 +892,7 @@
   },
   {
     "word": "fall sharply",
-    "ipa": "/fɔl ˈʃɑrplɪ/",
+    "ipa": "[fɔl ˋʃɑrplɪ]",
     "pos": "phr.",
     "meaning_zh": "急遽下降",
     "note_zh": "用於描述數據在短時間內大幅下滑,語氣強烈,常見於財經新聞與圖表描述。",
@@ -903,7 +903,7 @@
   },
   {
     "word": "exceed expectations",
-    "ipa": "/ɪkˈsid ˌɛkspɛkˈteʃənz/",
+    "ipa": "[ɪkˋsid ˌɛkspɛkˋtɛʃənz]",
     "pos": "phr.",
     "meaning_zh": "超乎預期",
     "note_zh": "表示實際結果比原先預估的還要好,常用於財報、業績或表現評估的正面描述。",
@@ -914,7 +914,7 @@
   },
   {
     "word": "fall short of",
-    "ipa": "/fɔl ʃɔrt ʌv/",
+    "ipa": "[fɔl ʃɔrt ʌv]",
     "pos": "phr.",
     "meaning_zh": "未達到；不及",
     "note_zh": "與 exceed expectations 相對,表示實際結果比預期或目標還要差,常搭配 target、goal 等詞。",
@@ -925,7 +925,7 @@
   },
   {
     "word": "account for",
-    "ipa": "/əˈkaʊnt fɔr/",
+    "ipa": "[əˋkaʊnt fɔr]",
     "pos": "phr.",
     "meaning_zh": "佔……比例；解釋說明",
     "note_zh": "在財務語境中常表示佔多少比例,如 account for 30% of sales;也可表示解釋原因。",
@@ -936,7 +936,7 @@
   },
   {
     "word": "a sharp increase",
-    "ipa": "/ə ʃɑrp ɪnˈkris/",
+    "ipa": "[ə ʃɑrp ɪnˋkris]",
     "pos": "phr.",
     "meaning_zh": "急遽增加",
     "note_zh": "名詞片語形式,用於描述數據大幅上升,常搭配介系詞 in,如 a sharp increase in costs。",
@@ -947,7 +947,7 @@
   },
   {
     "word": "generate revenue",
-    "ipa": "/ˈdʒɛnəˌret ˈrɛvəˌnu/",
+    "ipa": "[ˋdʒɛnəˌrɛt ˋrɛvəˌnu]",
     "pos": "phr.",
     "meaning_zh": "創造收入",
     "note_zh": "指透過業務活動產生收入,是描述公司營運或商業模式時常用的動詞片語。",
@@ -958,7 +958,7 @@
   },
   {
     "word": "apply for a position",
-    "ipa": "/əˈplaɪ fɔr ə pəˈzɪʃən/",
+    "ipa": "[əˋplaɪ fɔr ə pəˋzɪʃən]",
     "pos": "phr.",
     "meaning_zh": "應徵職位",
     "note_zh": "常用於求職情境，後面接職缺名稱或公司名稱；比 apply for a job 更正式、具體。",
@@ -969,7 +969,7 @@
   },
   {
     "word": "be eligible for",
-    "ipa": "/bi ˈɛlɪdʒəbl fɔr/",
+    "ipa": "[bi ˋɛlɪdʒəbḷ fɔr]",
     "pos": "phr.",
     "meaning_zh": "有資格獲得",
     "note_zh": "常用於描述員工是否符合申請福利、升遷或補助等條件，語氣中性正式。",
@@ -980,7 +980,7 @@
   },
   {
     "word": "on behalf of",
-    "ipa": "/ɑn bɪˈhæf ʌv/",
+    "ipa": "[ɑn bɪˋhæf ʌv]",
     "pos": "phr.",
     "meaning_zh": "代表；代理",
     "note_zh": "用於代替某人發言或行事的場合，常見於正式信函或會議中。",
@@ -991,7 +991,7 @@
   },
   {
     "word": "take over",
-    "ipa": "/tek ˈovɚ/",
+    "ipa": "[tɛk ˋovɚ]",
     "pos": "phr.",
     "meaning_zh": "接手；接管",
     "note_zh": "指接下他人原本負責的工作或職務，可用於職位交接或緊急代班。",
@@ -1002,7 +1002,7 @@
   },
   {
     "word": "be responsible for",
-    "ipa": "/bi rɪˈspɑnsəbl fɔr/",
+    "ipa": "[bi rɪˋspɑnsəbḷ fɔr]",
     "pos": "phr.",
     "meaning_zh": "負責",
     "note_zh": "用於說明職責範圍，常出現在職位說明或工作分配的描述中。",
@@ -1013,7 +1013,7 @@
   },
   {
     "word": "call in sick",
-    "ipa": "/kɔl ɪn sɪk/",
+    "ipa": "[kɔl ɪn sɪk]",
     "pos": "phr.",
     "meaning_zh": "打電話請病假",
     "note_zh": "指員工因生病而事先通知公司當天無法上班，語氣較口語但職場常用。",
@@ -1024,7 +1024,7 @@
   },
   {
     "word": "hand in one's resignation",
-    "ipa": "/hænd ɪn wʌnz ˌrɛzɪgˈneʃən/",
+    "ipa": "[hænd ɪn wʌnz ˌrɛzɪgˋnɛʃən]",
     "pos": "phr.",
     "meaning_zh": "遞交辭呈",
     "note_zh": "正式提出離職的說法，常搭配 letter of resignation 使用。",
@@ -1035,7 +1035,7 @@
   },
   {
     "word": "performance review",
-    "ipa": "/pɚˈfɔrməns rɪˈvju/",
+    "ipa": "[pɚˋfɔrməns rɪˋvju]",
     "pos": "phr.",
     "meaning_zh": "績效考核",
     "note_zh": "指公司定期評估員工工作表現的制度，常見於年度或季度考核。",
@@ -1046,7 +1046,7 @@
   },
   {
     "word": "job description",
-    "ipa": "/dʒɑb dɪˈskrɪpʃən/",
+    "ipa": "[dʒɑb dɪˋskrɪpʃən]",
     "pos": "phr.",
     "meaning_zh": "職務說明",
     "note_zh": "列出該職位的職責、資格與工作內容，常見於徵才廣告中。",
@@ -1057,7 +1057,7 @@
   },
   {
     "word": "take a leave of absence",
-    "ipa": "/tek ə liv ʌv ˈæbsəns/",
+    "ipa": "[tɛk ə liv ʌv ˋæbsəns]",
     "pos": "phr.",
     "meaning_zh": "請長假；留職停薪",
     "note_zh": "指員工因個人原因暫時離開工作崗位一段較長時間，通常需經核准。",
@@ -1068,7 +1068,7 @@
   },
   {
     "word": "be promoted to",
-    "ipa": "/bi prəˈmotɪd tu/",
+    "ipa": "[bi prəˋmotɪd tu]",
     "pos": "phr.",
     "meaning_zh": "被晉升為",
     "note_zh": "用於描述職位升遷，後面接新的職稱。",
@@ -1079,7 +1079,7 @@
   },
   {
     "word": "be laid off",
-    "ipa": "/bi led ɔf/",
+    "ipa": "[bi lɛd ɔf]",
     "pos": "phr.",
     "meaning_zh": "被資遣；被裁員",
     "note_zh": "指因公司縮編或營運考量而非員工個人過失被解僱，與 be fired（因過失被開除）不同。",
@@ -1090,7 +1090,7 @@
   },
   {
     "word": "severance package",
-    "ipa": "/ˈsɛvɚəns ˈpækɪdʒ/",
+    "ipa": "[ˋsɛvɚəns ˋpækɪdʒ]",
     "pos": "phr.",
     "meaning_zh": "資遣費方案",
     "note_zh": "指員工離職或被資遣時公司提供的補償金與相關福利組合。",
@@ -1101,7 +1101,7 @@
   },
   {
     "word": "probationary period",
-    "ipa": "/prəˈbeʃəˌnɛri ˈpɪriəd/",
+    "ipa": "[prəˋbɛʃəˌnɛrɪ ˋpɪrɪəd]",
     "pos": "phr.",
     "meaning_zh": "試用期",
     "note_zh": "指新進員工到職後接受考核的一段期間，期滿後決定是否正式聘用。",
@@ -1112,7 +1112,7 @@
   },
   {
     "word": "fill in for",
-    "ipa": "/fɪl ɪn fɔr/",
+    "ipa": "[fɪl ɪn fɔr]",
     "pos": "phr.",
     "meaning_zh": "代替；代班",
     "note_zh": "指暫時代替某人執行其職務，通常是短期、非正式的安排。",
@@ -1123,7 +1123,7 @@
   },
   {
     "word": "work overtime",
-    "ipa": "/wɝk ˈovɚˌtaɪm/",
+    "ipa": "[wɝk ˋovɚˌtaɪm]",
     "pos": "phr.",
     "meaning_zh": "加班",
     "note_zh": "指超過正常工時繼續工作，常涉及加班費規定。",
@@ -1134,7 +1134,7 @@
   },
   {
     "word": "attend a training session",
-    "ipa": "/əˈtɛnd ə ˈtreɪnɪŋ ˈsɛʃən/",
+    "ipa": "[əˋtɛnd ə ˋtrenɪŋ ˋsɛʃən]",
     "pos": "phr.",
     "meaning_zh": "參加訓練課程",
     "note_zh": "指出席公司安排的職能或技能訓練課程。",
@@ -1145,7 +1145,7 @@
   },
   {
     "word": "team-building activity",
-    "ipa": "/tim ˈbɪldɪŋ ækˈtɪvəti/",
+    "ipa": "[tim ˋbɪldɪŋ ækˋtɪvətɪ]",
     "pos": "phr.",
     "meaning_zh": "團隊建立活動",
     "note_zh": "指公司為增進員工向心力與合作默契所舉辦的活動。",
@@ -1156,7 +1156,7 @@
   },
   {
     "word": "conflict of interest",
-    "ipa": "/ˈkɑnflɪkt ʌv ˈɪntrəst/",
+    "ipa": "[ˋkɑnflɪkt ʌv ˋɪntrəst]",
     "pos": "phr.",
     "meaning_zh": "利益衝突",
     "note_zh": "指個人利益與職務義務相牴觸的情況，常見於職場道德規範中。",
@@ -1167,7 +1167,7 @@
   },
   {
     "word": "code of conduct",
-    "ipa": "/kod ʌv ˈkɑndʌkt/",
+    "ipa": "[kod ʌv ˋkɑndʌkt]",
     "pos": "phr.",
     "meaning_zh": "行為準則",
     "note_zh": "指公司制定的員工行為規範，涵蓋道德、紀律與職場禮儀等。",
@@ -1178,7 +1178,7 @@
   },
   {
     "word": "chain of command",
-    "ipa": "/tʃen ʌv kəˈmænd/",
+    "ipa": "[tʃɛn ʌv kəˋmænd]",
     "pos": "phr.",
     "meaning_zh": "指揮系統；層級體系",
     "note_zh": "指組織中職權由上而下的層級關係，決定報告與決策的流程。",
@@ -1189,7 +1189,7 @@
   },
   {
     "word": "get along with",
-    "ipa": "/gɛt əˈlɔŋ wɪð/",
+    "ipa": "[gɛt əˋlɔŋ wɪð]",
     "pos": "phr.",
     "meaning_zh": "與……相處融洽",
     "note_zh": "描述同事間人際互動良好，語氣較口語，常用於職場氛圍描述。",
@@ -1200,7 +1200,7 @@
   },
   {
     "word": "put in for",
-    "ipa": "/pʊt ɪn fɔr/",
+    "ipa": "[pʊt ɪn fɔr]",
     "pos": "phr.",
     "meaning_zh": "申請（調職、加薪等）",
     "note_zh": "指正式提出申請，常搭配 transfer、raise、promotion 等名詞。",
@@ -1211,7 +1211,7 @@
   },
   {
     "word": "step down from",
-    "ipa": "/stɛp daʊn frʌm/",
+    "ipa": "[stɛp daʊn frʌm]",
     "pos": "phr.",
     "meaning_zh": "辭去（職位）；卸任",
     "note_zh": "通常指主動辭去較高階的職位，語氣較 resign 委婉、正式。",
@@ -1222,7 +1222,7 @@
   },
   {
     "word": "give notice",
-    "ipa": "/gɪv ˈnotɪs/",
+    "ipa": "[gɪv ˋnotɪs]",
     "pos": "phr.",
     "meaning_zh": "預先通知（離職）",
     "note_zh": "指員工依規定提前告知公司即將離職，常搭配天數，如 give two weeks' notice。",
@@ -1233,7 +1233,7 @@
   },
   {
     "word": "cover for",
-    "ipa": "/ˈkʌvɚ fɔr/",
+    "ipa": "[ˋkʌvɚ fɔr]",
     "pos": "phr.",
     "meaning_zh": "代班；掩護",
     "note_zh": "指暫時接替某人的工作，也可指替他人隱瞞過失，需依上下文判斷語意。",
@@ -1244,7 +1244,7 @@
   },
   {
     "word": "keep someone posted",
-    "ipa": "/kip ˈsʌmwʌn ˈpostɪd/",
+    "ipa": "[kip ˋsʌmwʌn ˋpostɪd]",
     "pos": "phr.",
     "meaning_zh": "隨時通知某人最新進度",
     "note_zh": "常用於職場溝通中，請對方持續更新資訊，語氣友善、非正式。",
@@ -1255,7 +1255,7 @@
   },
   {
     "word": "job security",
-    "ipa": "/dʒɑb sɪˈkjʊrəti/",
+    "ipa": "[dʒɑb sɪˋkjʊrətɪ]",
     "pos": "phr.",
     "meaning_zh": "工作保障",
     "note_zh": "指員工對於保有現職、不被資遣的穩定感，常用於討論產業前景或公司政策。",
@@ -1266,7 +1266,7 @@
   },
   {
     "word": "in accordance with",
-    "ipa": "/ɪn əˈkɔrdəns wɪð/",
+    "ipa": "[ɪn əˋkɔrdəns wɪð]",
     "pos": "phr.",
     "meaning_zh": "依照；遵照",
     "note_zh": "常見於正式文件或契約中，強調依循規定、標準或指示，語氣比 according to 更正式。",
@@ -1277,7 +1277,7 @@
   },
   {
     "word": "be subject to",
-    "ipa": "/bi ˈsʌbdʒɪkt tu/",
+    "ipa": "[bi ˋsʌbdʒɪkt tu]",
     "pos": "phr.",
     "meaning_zh": "須遵守；受……約束",
     "note_zh": "指某事物受到特定規定、條件或變動的限制，常見於契約條款中。",
@@ -1288,7 +1288,7 @@
   },
   {
     "word": "terms and conditions",
-    "ipa": "/tɝmz ænd kənˈdɪʃənz/",
+    "ipa": "[tɝmz ænd kənˋdɪʃənz]",
     "pos": "phr.",
     "meaning_zh": "條款與細則",
     "note_zh": "指契約或服務中規範雙方權利義務的具體規定，常縮寫為 T&C。",
@@ -1299,7 +1299,7 @@
   },
   {
     "word": "null and void",
-    "ipa": "/nʌl ænd vɔɪd/",
+    "ipa": "[nʌl ænd vɔɪd]",
     "pos": "phr.",
     "meaning_zh": "無效的",
     "note_zh": "為法律固定用語，指契約或條款完全失去法律效力，兩詞意義重疊以加強語氣。",
@@ -1310,7 +1310,7 @@
   },
   {
     "word": "binding agreement",
-    "ipa": "/ˈbaɪndɪŋ əˈgrimənt/",
+    "ipa": "[ˋbaɪndɪŋ əˋgrimənt]",
     "pos": "phr.",
     "meaning_zh": "具約束力的協議",
     "note_zh": "指簽署後雙方都必須遵守、具有法律效力的協議。",
@@ -1321,7 +1321,7 @@
   },
   {
     "word": "breach of contract",
-    "ipa": "/britʃ ʌv ˈkɑntrækt/",
+    "ipa": "[britʃ ʌv ˋkɑntrækt]",
     "pos": "phr.",
     "meaning_zh": "違約",
     "note_zh": "指未履行契約中規定的義務，是契約糾紛中最常見的用語之一。",
@@ -1332,7 +1332,7 @@
   },
   {
     "word": "hold harmless",
-    "ipa": "/hold ˈhɑrmləs/",
+    "ipa": "[hold ˋhɑrmləs]",
     "pos": "phr.",
     "meaning_zh": "免除責任",
     "note_zh": "常與 indemnify 並用，指一方同意不追究另一方因特定事件產生的責任。",
@@ -1343,7 +1343,7 @@
   },
   {
     "word": "without prior notice",
-    "ipa": "/wɪðˈaʊt ˈpraɪɚ ˈnotɪs/",
+    "ipa": "[wɪðˋaʊt ˋpraɪɚ ˋnotɪs]",
     "pos": "phr.",
     "meaning_zh": "未經事先通知",
     "note_zh": "常用於說明某方可單方面採取行動而不需事先告知，多見於終止條款。",
@@ -1354,7 +1354,7 @@
   },
   {
     "word": "at one's own risk",
-    "ipa": "/æt wʌnz on rɪsk/",
+    "ipa": "[æt wʌnz on rɪsk]",
     "pos": "phr.",
     "meaning_zh": "自行承擔風險",
     "note_zh": "指使用者或當事人須自行承擔可能產生的損失或危險，常見於免責聲明。",
@@ -1365,7 +1365,7 @@
   },
   {
     "word": "to the extent permitted by law",
-    "ipa": "/tu ði ɪkˈstɛnt pɚˈmɪtɪd baɪ lɔ/",
+    "ipa": "[tu ði ɪkˋstɛnt pɚˋmɪtɪd baɪ lɔ]",
     "pos": "phr.",
     "meaning_zh": "在法律允許的範圍內",
     "note_zh": "常用於限縮條款效力的範圍，確保條款不牴觸現行法律。",
@@ -1376,7 +1376,7 @@
   },
   {
     "word": "governing law",
-    "ipa": "/ˈgʌvɚnɪŋ lɔ/",
+    "ipa": "[ˋgʌvɚnɪŋ lɔ]",
     "pos": "phr.",
     "meaning_zh": "準據法",
     "note_zh": "指用以解釋及規範契約的法律體系，通常寫明適用哪一國家或州的法律。",
@@ -1387,7 +1387,7 @@
   },
   {
     "word": "force majeure",
-    "ipa": "/fɔrs məˈʒɝ/",
+    "ipa": "[fɔrs məˋʒɝ]",
     "pos": "phr.",
     "meaning_zh": "不可抗力",
     "note_zh": "源自法文，指天災、戰爭等無法預見及控制的事件，契約中常訂立相關免責條款。",
@@ -1398,7 +1398,7 @@
   },
   {
     "word": "non-disclosure agreement",
-    "ipa": "/nɑn dɪsˈkloʒɚ əˈgrimənt/",
+    "ipa": "[nɑn dɪsˋkloʒɚ əˋgrimənt]",
     "pos": "phr.",
     "meaning_zh": "保密協議",
     "note_zh": "簡稱 NDA，用以約束當事人不得洩漏契約中涉及的機密資訊。",
@@ -1409,7 +1409,7 @@
   },
   {
     "word": "intellectual property rights",
-    "ipa": "/ˌɪntəˈlɛktʃuəl ˈprɑpɚti raɪts/",
+    "ipa": "[ˌɪntəˋlɛktʃuəl ˋprɑpɚtɪ raɪts]",
     "pos": "phr.",
     "meaning_zh": "智慧財產權",
     "note_zh": "指專利、商標、著作權等無形資產的法律權利，常簡稱 IP rights。",
@@ -1420,7 +1420,7 @@
   },
   {
     "word": "prior written consent",
-    "ipa": "/ˈpraɪɚ ˈrɪtn kənˈsɛnt/",
+    "ipa": "[ˋpraɪɚ rɪtn kənˋsɛnt]",
     "pos": "phr.",
     "meaning_zh": "事先書面同意",
     "note_zh": "指必須先取得對方以書面形式表達的同意才能進行某項行為，常見於授權或轉讓條款。",
@@ -1431,7 +1431,7 @@
   },
   {
     "word": "liable for",
-    "ipa": "/ˈlaɪəbl fɔr/",
+    "ipa": "[ˋlaɪəbḷ fɔr]",
     "pos": "phr.",
     "meaning_zh": "對……負有法律責任",
     "note_zh": "指依法須對損害或損失負責，常搭配 damages、losses 等名詞使用。",
@@ -1442,7 +1442,7 @@
   },
   {
     "word": "waive the right to",
-    "ipa": "/wev ðə raɪt tu/",
+    "ipa": "[wɛv ðə raɪt tu]",
     "pos": "phr.",
     "meaning_zh": "放棄……的權利",
     "note_zh": "指當事人自願放棄原本享有的某項法律權利，常見於棄權條款。",
@@ -1453,7 +1453,7 @@
   },
   {
     "word": "enter into a contract",
-    "ipa": "/ˈɛntɚ ˈɪntu ə ˈkɑntrækt/",
+    "ipa": "[ˋɛntɚ ˋɪntu ə ˋkɑntrækt]",
     "pos": "phr.",
     "meaning_zh": "簽訂合約",
     "note_zh": "指雙方正式建立契約關係，語氣較 sign a contract 更正式、書面化。",
@@ -1464,7 +1464,7 @@
   },
   {
     "word": "terminate a contract",
-    "ipa": "/ˈtɝməˌnet ə ˈkɑntrækt/",
+    "ipa": "[ˋtɝməˌnɛt ə ˋkɑntrækt]",
     "pos": "phr.",
     "meaning_zh": "終止合約",
     "note_zh": "指依約定條件提前結束契約關係，需注意是否符合終止條款的規定。",
@@ -1475,7 +1475,7 @@
   },
   {
     "word": "comply with",
-    "ipa": "/kəmˈplaɪ wɪð/",
+    "ipa": "[kəmˋplaɪ wɪð]",
     "pos": "phr.",
     "meaning_zh": "遵守；符合",
     "note_zh": "常用於法規遵循情境，指依循法律、政策或標準行事。",
@@ -1486,7 +1486,7 @@
   },
   {
     "word": "in the event of",
-    "ipa": "/ɪn ði ɪˈvɛnt ʌv/",
+    "ipa": "[ɪn ði ɪˋvɛnt ʌv]",
     "pos": "phr.",
     "meaning_zh": "萬一；如果發生",
     "note_zh": "用於引導假設情境，常見於契約中描述特定事件發生時的處理方式。",
@@ -1497,7 +1497,7 @@
   },
   {
     "word": "statute of limitations",
-    "ipa": "/ˈstætʃut ʌv ˌlɪməˈteʃənz/",
+    "ipa": "[ˋstætʃut ʌv ˌlɪməˋtɛʃənz]",
     "pos": "phr.",
     "meaning_zh": "訴訟時效",
     "note_zh": "指法律規定提起訴訟的有效期限，超過此期限即喪失求償的權利。",
@@ -1508,7 +1508,7 @@
   },
   {
     "word": "legally binding",
-    "ipa": "/ˈligəli ˈbaɪndɪŋ/",
+    "ipa": "[ˋligəlɪ ˋbaɪndɪŋ]",
     "pos": "phr.",
     "meaning_zh": "具法律約束力的",
     "note_zh": "用來形容文件或協議一旦簽署便產生法律效力，雙方都必須履行。",
@@ -1519,7 +1519,7 @@
   },
   {
     "word": "indemnify against",
-    "ipa": "/ɪnˈdɛmnəˌfaɪ əˈgɛnst/",
+    "ipa": "[ɪnˋdɛmnəˌfaɪ əˋgɛnst]",
     "pos": "phr.",
     "meaning_zh": "賠償；保障……免受損失",
     "note_zh": "指一方同意補償另一方因特定風險或損害所產生的損失，常見於保險與契約條款。",
@@ -1530,7 +1530,7 @@
   },
   {
     "word": "at one's sole discretion",
-    "ipa": "/æt wʌnz sol dɪˈskrɛʃən/",
+    "ipa": "[æt wʌnz sol dɪˋskrɛʃən]",
     "pos": "phr.",
     "meaning_zh": "全權決定；自行裁量",
     "note_zh": "指某一方擁有完全的決定權，不需徵詢對方同意，語氣正式且強調單方權力。",
@@ -1541,7 +1541,7 @@
   },
   {
     "word": "as stipulated in",
-    "ipa": "/æz ˈstɪpjəˌletɪd ɪn/",
+    "ipa": "[æz ˋstɪpjəˌlɛtɪd ɪn]",
     "pos": "phr.",
     "meaning_zh": "依……所規定",
     "note_zh": "用於引述契約或法規中明確載明的條文內容，語氣正式。",
@@ -1552,7 +1552,7 @@
   },
   {
     "word": "under the terms of",
-    "ipa": "/ˈʌndɚ ðə tɝmz ʌv/",
+    "ipa": "[ˋʌndɚ ðə tɝmz ʌv]",
     "pos": "phr.",
     "meaning_zh": "依照……的條款",
     "note_zh": "指依循某份契約或協議中所訂定的規範內容行事。",
@@ -1563,7 +1563,7 @@
   },
   {
     "word": "bear the cost of",
-    "ipa": "/bɛr ðə kɔst ʌv/",
+    "ipa": "[bɛr ðə kɔst ʌv]",
     "pos": "phr.",
     "meaning_zh": "承擔……的費用",
     "note_zh": "指依契約規定由某一方負擔特定支出，常見於責任分攤條款。",
@@ -1574,7 +1574,7 @@
   },
   {
     "word": "exempt from liability",
-    "ipa": "/ɪgˈzɛmpt frʌm ˌlaɪəˈbɪləti/",
+    "ipa": "[ɪgˋzɛmpt frʌm ˌlaɪəˋbɪlətɪ]",
     "pos": "phr.",
     "meaning_zh": "免除責任",
     "note_zh": "指依約定或法律規定，某方無須為特定損害或後果負責。",
@@ -1585,7 +1585,7 @@
   },
   {
     "word": "unless otherwise specified",
-    "ipa": "/ʌnˈlɛs ˈʌðɚˌwaɪz ˈspɛsəˌfaɪd/",
+    "ipa": "[ʌnˋlɛs ˋʌðɚˌwaɪz ˋspɛsəˌfaɪd]",
     "pos": "phr.",
     "meaning_zh": "除非另有規定",
     "note_zh": "用於契約條文開頭，表明後續內容為預設規則，除非另有明確約定。",
@@ -1596,7 +1596,7 @@
   },
   {
     "word": "on short notice",
-    "ipa": "/ɑn ʃɔrt ˈnotɪs/",
+    "ipa": "[ɑn ʃɔrt ˋnotɪs]",
     "pos": "phr.",
     "meaning_zh": "在很短的通知時間內",
     "note_zh": "指事情發生或安排得很匆促，幾乎沒有太多事先準備的時間。",
@@ -1607,7 +1607,7 @@
   },
   {
     "word": "ahead of schedule",
-    "ipa": "/əˈhɛd ʌv ˈskɛdʒʊl/",
+    "ipa": "[əˋhɛd ʌv ˋskɛdʒʊl]",
     "pos": "phr.",
     "meaning_zh": "提前於進度",
     "note_zh": "指工作或專案的進展比原訂計畫還要快，帶有正面語氣。",
@@ -1618,7 +1618,7 @@
   },
   {
     "word": "behind schedule",
-    "ipa": "/bɪˈhaɪnd ˈskɛdʒʊl/",
+    "ipa": "[bɪˋhaɪnd ˋskɛdʒʊl]",
     "pos": "phr.",
     "meaning_zh": "落後於進度",
     "note_zh": "指工作或計畫的進展比原訂時程慢，常用於進度報告中。",
@@ -1629,7 +1629,7 @@
   },
   {
     "word": "meet the deadline",
-    "ipa": "/mit ðə ˈdɛdˌlaɪn/",
+    "ipa": "[mit ðə ˋdɛdˌlaɪn]",
     "pos": "phr.",
     "meaning_zh": "趕上截止日期",
     "note_zh": "指在期限內完成某項工作，是職場與學術情境中極常見的說法。",
@@ -1640,7 +1640,7 @@
   },
   {
     "word": "reschedule an appointment",
-    "ipa": "/riˈskɛdʒʊl ən əˈpɔɪntmənt/",
+    "ipa": "[riˋskɛdʒʊl ən əˋpɔɪntmənt]",
     "pos": "phr.",
     "meaning_zh": "重新安排約會／預約時間",
     "note_zh": "指將原本約定好的時間更改為另一個時間，常用於醫療、商務約會情境。",
@@ -1651,7 +1651,7 @@
   },
   {
     "word": "postpone until further notice",
-    "ipa": "/postˈpon ʌnˈtɪl ˈfɝðɚ ˈnotɪs/",
+    "ipa": "[postˋpon ʌnˋtɪl ˋfɝðɚ ˋnotɪs]",
     "pos": "phr.",
     "meaning_zh": "延後至另行通知",
     "note_zh": "指活動或計畫暫時延期，且尚未確定新的日期，常見於正式公告。",
@@ -1662,7 +1662,7 @@
   },
   {
     "word": "in advance",
-    "ipa": "/ɪn ədˈvæns/",
+    "ipa": "[ɪn ədˋvæns]",
     "pos": "phr.",
     "meaning_zh": "事先；提前",
     "note_zh": "指在某事發生之前先完成某項動作，使用範圍廣泛，常搭配 book、pay、notify 等動詞。",
@@ -1673,7 +1673,7 @@
   },
   {
     "word": "run late",
-    "ipa": "/rʌn let/",
+    "ipa": "[rʌn lɛt]",
     "pos": "phr.",
     "meaning_zh": "遲到；進度延誤",
     "note_zh": "可指人因故遲到，也可指行程、班機等未能準時，語氣較口語。",
@@ -1684,7 +1684,7 @@
   },
   {
     "word": "push back",
-    "ipa": "/pʊʃ bæk/",
+    "ipa": "[pʊʃ bæk]",
     "pos": "phr.",
     "meaning_zh": "延後（會議、日期）",
     "note_zh": "指將原訂時間往後調整，語氣較口語但職場中很常用，與 bring forward 相對。",
@@ -1695,7 +1695,7 @@
   },
   {
     "word": "bring forward",
-    "ipa": "/brɪŋ ˈfɔrwɚd/",
+    "ipa": "[brɪŋ ˋfɔrwɚd]",
     "pos": "phr.",
     "meaning_zh": "提前（會議、日期）",
     "note_zh": "指將原訂時間提早進行，與 push back（延後）意義相反。",
@@ -1706,7 +1706,7 @@
   },
   {
     "word": "within the specified time frame",
-    "ipa": "/wɪˈðɪn ðə ˈspɛsəˌfaɪd taɪm frem/",
+    "ipa": "[wɪˋðɪn ðə ˋspɛsəˌfaɪd taɪm frɛm]",
     "pos": "phr.",
     "meaning_zh": "在指定的時間範圍內",
     "note_zh": "常用於契約或工作規範中，強調必須在某段明確界定的期間內完成。",
@@ -1717,7 +1717,7 @@
   },
   {
     "word": "as soon as possible",
-    "ipa": "/æz sun æz ˈpɑsəbl/",
+    "ipa": "[æz sun æz ˋpɑsəbḷ]",
     "pos": "phr.",
     "meaning_zh": "盡快",
     "note_zh": "常縮寫為 ASAP，用於要求對方儘速完成某事，正式與非正式場合皆適用。",
@@ -1728,7 +1728,7 @@
   },
   {
     "word": "on a regular basis",
-    "ipa": "/ɑn ə ˈrɛgjəlɚ ˈbesɪs/",
+    "ipa": "[ɑn ə ˋrɛgjəlɚ ˋbɛsɪs]",
     "pos": "phr.",
     "meaning_zh": "定期地",
     "note_zh": "指某事以固定頻率重複發生，常見於描述例行公事或例行檢查。",
@@ -1739,7 +1739,7 @@
   },
   {
     "word": "from time to time",
-    "ipa": "/frʌm taɪm tu taɪm/",
+    "ipa": "[frʌm taɪm tu taɪm]",
     "pos": "phr.",
     "meaning_zh": "偶爾；不時",
     "note_zh": "指某事並非固定發生，而是間歇性地出現，語氣較 sometimes 稍正式。",
@@ -1750,7 +1750,7 @@
   },
   {
     "word": "for the time being",
-    "ipa": "/fɔr ðə taɪm ˈbiɪŋ/",
+    "ipa": "[fɔr ðə taɪm ˋbiɪŋ]",
     "pos": "phr.",
     "meaning_zh": "暫時；目前",
     "note_zh": "指在目前這段期間內，暗示情況未來可能改變，常用於過渡性的安排。",
@@ -1761,7 +1761,7 @@
   },
   {
     "word": "in due course",
-    "ipa": "/ɪn dju kɔrs/",
+    "ipa": "[ɪn dju kɔrs]",
     "pos": "phr.",
     "meaning_zh": "在適當的時候；假以時日",
     "note_zh": "語氣較正式，指某事將在合理的時間內自然發生，不需催促。",
@@ -1772,7 +1772,7 @@
   },
   {
     "word": "around the clock",
-    "ipa": "/əˈraʊnd ðə klɑk/",
+    "ipa": "[əˋraʊnd ðə klɑk]",
     "pos": "phr.",
     "meaning_zh": "全天候地；日夜不停地",
     "note_zh": "指沒有間斷、二十四小時持續進行的狀態，常用於描述客服或生產線。",
@@ -1783,7 +1783,7 @@
   },
   {
     "word": "subject to change",
-    "ipa": "/ˈsʌbdʒɪkt tu tʃendʒ/",
+    "ipa": "[ˋsʌbdʒɪkt tu tʃɛndʒ]",
     "pos": "phr.",
     "meaning_zh": "可能變更",
     "note_zh": "指目前所訂的時間、價格或計畫並非最終確定，未來仍可能調整。",
@@ -1794,7 +1794,7 @@
   },
   {
     "word": "no later than",
-    "ipa": "/no ˈletɚ ðæn/",
+    "ipa": "[no ˋlɛtɚ ðæn]",
     "pos": "phr.",
     "meaning_zh": "不得晚於；最遲於",
     "note_zh": "用於明確設定最後期限，強調不能超過的時間點。",
@@ -1805,7 +1805,7 @@
   },
   {
     "word": "in a timely manner",
-    "ipa": "/ɪn ə ˈtaɪmli ˈmænɚ/",
+    "ipa": "[ɪn ə ˋtaɪmlɪ ˋmænɚ]",
     "pos": "phr.",
     "meaning_zh": "及時地；適時地",
     "note_zh": "強調在適當且不延誤的時間內完成某事，常見於商業書信與服務承諾。",
@@ -1816,7 +1816,7 @@
   },
   {
     "word": "take effect",
-    "ipa": "/tek ɪˈfɛkt/",
+    "ipa": "[tɛk ɪˋfɛkt]",
     "pos": "phr.",
     "meaning_zh": "（於某時）生效",
     "note_zh": "指法規、政策或契約條款開始具有效力的時間點。",
@@ -1827,7 +1827,7 @@
   },
   {
     "word": "expire at the end of",
-    "ipa": "/ɪkˈspaɪɚ æt ði ɛnd ʌv/",
+    "ipa": "[ɪkˋspaɪɚ æt ði ɛnd ʌv]",
     "pos": "phr.",
     "meaning_zh": "於……結束時到期",
     "note_zh": "指優惠、合約或證件的有效期限止於某個特定時間點。",
@@ -1838,7 +1838,7 @@
   },
   {
     "word": "set a deadline for",
-    "ipa": "/sɛt ə ˈdɛdˌlaɪn fɔr/",
+    "ipa": "[sɛt ə ˋdɛdˌlaɪn fɔr]",
     "pos": "phr.",
     "meaning_zh": "為……設定截止日期",
     "note_zh": "指明確訂出某項任務或計畫必須完成的時間點。",
@@ -1849,7 +1849,7 @@
   },
   {
     "word": "on a tight schedule",
-    "ipa": "/ɑn ə taɪt ˈskɛdʒʊl/",
+    "ipa": "[ɑn ə taɪt ˋskɛdʒʊl]",
     "pos": "phr.",
     "meaning_zh": "行程緊湊",
     "note_zh": "指時間安排得很緊密，幾乎沒有多餘的空檔，常用於描述忙碌的行程。",
@@ -1860,7 +1860,7 @@
   },
   {
     "word": "make time for",
-    "ipa": "/mek taɪm fɔr/",
+    "ipa": "[mɛk taɪm fɔr]",
     "pos": "phr.",
     "meaning_zh": "撥出時間給",
     "note_zh": "指在忙碌的行程中特地空出時間來做某件事，語氣較口語但常用於職場溝通。",
@@ -1871,7 +1871,7 @@
   },
   {
     "word": "extend the deadline",
-    "ipa": "/ɪkˈstɛnd ðə ˈdɛdˌlaɪn/",
+    "ipa": "[ɪkˋstɛnd ðə ˋdɛdˌlaɪn]",
     "pos": "phr.",
     "meaning_zh": "延長截止日期",
     "note_zh": "指將原本設定的完成期限往後展延，常見於申請、繳交作業等情境。",
@@ -1882,7 +1882,7 @@
   },
   {
     "word": "as a result",
-    "ipa": "/æz ə rɪˈzʌlt/",
+    "ipa": "[æz ə rɪˋzʌlt]",
     "pos": "phr.",
     "meaning_zh": "因此；結果",
     "note_zh": "置於句首作副詞片語，表示前述原因所導致的結果，語氣正式，常見於書面報告與商業書信。",
@@ -1893,7 +1893,7 @@
   },
   {
     "word": "as a result of",
-    "ipa": "/æz ə rɪˈzʌlt əv/",
+    "ipa": "[æz ə rɪˋzʌlt əv]",
     "pos": "phr.",
     "meaning_zh": "由於...的結果",
     "note_zh": "為介系詞片語，後面須接名詞或動名詞，與副詞用法的 as a result 不同，常在句中連接原因。",
@@ -1904,7 +1904,7 @@
   },
   {
     "word": "due to the fact that",
-    "ipa": "/dju tu ðə fækt ðæt/",
+    "ipa": "[dju tu ðə fækt ðæt]",
     "pos": "phr.",
     "meaning_zh": "由於（一個事實）",
     "note_zh": "後接完整子句，語氣較正式冗長，口語與寫作中常可簡化為 because，但商用英文偏好此說法以顯正式。",
@@ -1915,7 +1915,7 @@
   },
   {
     "word": "owing to",
-    "ipa": "/ˈoɪŋ tu/",
+    "ipa": "[ˋoɪŋ tu]",
     "pos": "phr.",
     "meaning_zh": "由於；因為",
     "note_zh": "為介系詞片語，後接名詞，語氣正式，常用於書面英文，與 due to 用法相近但更文雅。",
@@ -1926,7 +1926,7 @@
   },
   {
     "word": "thanks to",
-    "ipa": "/θæŋks tu/",
+    "ipa": "[θæŋks tu]",
     "pos": "phr.",
     "meaning_zh": "幸虧；由於",
     "note_zh": "語氣可正式可帶正面意涵，通常用於好的結果，偶爾也反諷地用於負面結果。",
@@ -1937,7 +1937,7 @@
   },
   {
     "word": "on account of",
-    "ipa": "/ɑn əˈkaʊnt əv/",
+    "ipa": "[ɑn əˋkaʊnt əv]",
     "pos": "phr.",
     "meaning_zh": "因為；由於",
     "note_zh": "為較正式的介系詞片語，後接名詞，常見於通知或公告中說明取消或變更的原因。",
@@ -1948,7 +1948,7 @@
   },
   {
     "word": "in spite of",
-    "ipa": "/ɪn spaɪt əv/",
+    "ipa": "[ɪn spaɪt əv]",
     "pos": "phr.",
     "meaning_zh": "儘管",
     "note_zh": "為介系詞片語，後接名詞或動名詞，與 although／even though 不同，後者須接完整子句。",
@@ -1959,7 +1959,7 @@
   },
   {
     "word": "despite the fact that",
-    "ipa": "/dɪˈspaɪt ðə fækt ðæt/",
+    "ipa": "[dɪˋspaɪt ðə fækt ðæt]",
     "pos": "phr.",
     "meaning_zh": "儘管（事實上）",
     "note_zh": "despite 本為介系詞，此片語加上 the fact that 後可接完整子句，功能等同 although，語氣正式。",
@@ -1970,7 +1970,7 @@
   },
   {
     "word": "even though",
-    "ipa": "/ˈivən ðo/",
+    "ipa": "[ˋivən ðo]",
     "pos": "phr.",
     "meaning_zh": "儘管；即使",
     "note_zh": "為連接詞，後須接完整子句，語氣比 although 更強調對比，常與事實相反的情況搭配。",
@@ -1981,7 +1981,7 @@
   },
   {
     "word": "even if",
-    "ipa": "/ˈivən ɪf/",
+    "ipa": "[ˋivən ɪf]",
     "pos": "phr.",
     "meaning_zh": "即使（假設）",
     "note_zh": "強調假設性條件而非既定事實，與 even though 不同，後者針對已發生的事實。",
@@ -1992,7 +1992,7 @@
   },
   {
     "word": "on the other hand",
-    "ipa": "/ɑn ðə ˈʌðɚ hænd/",
+    "ipa": "[ɑn ðə ˋʌðɚ hænd]",
     "pos": "phr.",
     "meaning_zh": "另一方面",
     "note_zh": "用於呈現對比的第二個觀點，常與 on one hand 搭配使用，置於句首並加逗號。",
@@ -2003,7 +2003,7 @@
   },
   {
     "word": "in contrast to",
-    "ipa": "/ɪn ˈkɑntræst tu/",
+    "ipa": "[ɪn ˋkɑntræst tu]",
     "pos": "phr.",
     "meaning_zh": "與...形成對比",
     "note_zh": "為介系詞片語，後接名詞，用來凸顯兩者之間的明顯差異，語氣中性偏正式。",
@@ -2014,7 +2014,7 @@
   },
   {
     "word": "as opposed to",
-    "ipa": "/æz əˈpozd tu/",
+    "ipa": "[æz əˋpozd tu]",
     "pos": "phr.",
     "meaning_zh": "相對於；而非",
     "note_zh": "強調兩者互斥的選擇，語意上比 in contrast to 更強調「取代」或「二選一」。",
@@ -2025,7 +2025,7 @@
   },
   {
     "word": "in addition to",
-    "ipa": "/ɪn əˈdɪʃən tu/",
+    "ipa": "[ɪn əˋdɪʃən tu]",
     "pos": "phr.",
     "meaning_zh": "除了...之外（還）",
     "note_zh": "為介系詞片語，後接名詞或動名詞，表示在既有基礎上再增加，注意與副詞 in addition 的用法區別。",
@@ -2036,7 +2036,7 @@
   },
   {
     "word": "as well as",
-    "ipa": "/æz wɛl æz/",
+    "ipa": "[æz wɛl æz]",
     "pos": "phr.",
     "meaning_zh": "以及；同時",
     "note_zh": "連接兩個對等的名詞或動名詞，語意上前項通常為重點，後項為附加項目。",
@@ -2047,7 +2047,7 @@
   },
   {
     "word": "not only...but also",
-    "ipa": "/nɑt ˈonlɪ bʌt ˈɔlso/",
+    "ipa": "[nɑt ˋonlɪ bʌt ˋɔlso]",
     "pos": "phr.",
     "meaning_zh": "不僅...而且",
     "note_zh": "為對等連接詞組，若置於句首需注意主詞助動詞倒裝，例如 Not only did sales rise...。",
@@ -2058,7 +2058,7 @@
   },
   {
     "word": "apart from",
-    "ipa": "/əˈpɑrt frɑm/",
+    "ipa": "[əˋpɑrt frɑm]",
     "pos": "phr.",
     "meaning_zh": "除了...之外",
     "note_zh": "可表示「除了...都」（排除）或「除了...還有」（附加），須依上下文判斷語意。",
@@ -2069,7 +2069,7 @@
   },
   {
     "word": "along with",
-    "ipa": "/əˈlɔŋ wɪð/",
+    "ipa": "[əˋlɔŋ wɪð]",
     "pos": "phr.",
     "meaning_zh": "連同；與...一起",
     "note_zh": "表示伴隨關係，常用於列舉隨附的人事物，語氣較 as well as 更強調同時附上。",
@@ -2080,7 +2080,7 @@
   },
   {
     "word": "provided that",
-    "ipa": "/prəˈvaɪdɪd ðæt/",
+    "ipa": "[prəˋvaɪdɪd ðæt]",
     "pos": "phr.",
     "meaning_zh": "只要；假如",
     "note_zh": "引導條件子句，語氣較正式，常見於合約或規章條款，語意等同 as long as 但更書面化。",
@@ -2091,7 +2091,7 @@
   },
   {
     "word": "in the event that",
-    "ipa": "/ɪn ðə ɪˈvɛnt ðæt/",
+    "ipa": "[ɪn ðə ɪˋvɛnt ðæt]",
     "pos": "phr.",
     "meaning_zh": "萬一；如果",
     "note_zh": "引導假設性條件子句，常見於正式文件與保險條款，語氣比簡單的 if 更正式謹慎。",
@@ -2102,7 +2102,7 @@
   },
   {
     "word": "as long as",
-    "ipa": "/æz lɔŋ æz/",
+    "ipa": "[æz lɔŋ æz]",
     "pos": "phr.",
     "meaning_zh": "只要",
     "note_zh": "口語與書面皆可使用，語意與 provided that 相近，但較不正式，適用範圍更廣。",
@@ -2113,7 +2113,7 @@
   },
   {
     "word": "on the condition that",
-    "ipa": "/ɑn ðə kənˈdɪʃən ðæt/",
+    "ipa": "[ɑn ðə kənˋdɪʃən ðæt]",
     "pos": "phr.",
     "meaning_zh": "在...的條件下",
     "note_zh": "強調附帶明確且限制性的條件，語氣正式，常用於合約或協議中規定但書。",
@@ -2124,7 +2124,7 @@
   },
   {
     "word": "unless otherwise",
-    "ipa": "/ənˈlɛs ˈʌðɚˌwaɪz/",
+    "ipa": "[ənˋlɛs ˋʌðɚˌwaɪz]",
     "pos": "phr.",
     "meaning_zh": "除非另有（說明／規定）",
     "note_zh": "常與 specified、stated、noted 等分詞連用，形成 unless otherwise specified 等固定用語，多見於契約條款。",
@@ -2135,7 +2135,7 @@
   },
   {
     "word": "prior to",
-    "ipa": "/ˈpraɪɚ tu/",
+    "ipa": "[ˋpraɪɚ tu]",
     "pos": "phr.",
     "meaning_zh": "在...之前",
     "note_zh": "為介系詞，後接名詞，語氣較 before 正式，常見於商用書信與說明文件。",
@@ -2146,7 +2146,7 @@
   },
   {
     "word": "subsequent to",
-    "ipa": "/ˈsʌbsɪˌkwɛnt tu/",
+    "ipa": "[ˋsʌbsɪˌkwɛnt tu]",
     "pos": "phr.",
     "meaning_zh": "在...之後",
     "note_zh": "為正式介系詞片語，與 prior to 相對，常用於書面公文，口語中通常以 after 取代。",
@@ -2157,7 +2157,7 @@
   },
   {
     "word": "in the meantime",
-    "ipa": "/ɪn ðə ˈminˌtaɪm/",
+    "ipa": "[ɪn ðə ˋminˌtaɪm]",
     "pos": "phr.",
     "meaning_zh": "與此同時；在此期間",
     "note_zh": "通常置於句首，用來銜接前後事件，說明在等待某事發生的期間內所做的事。",
@@ -2168,7 +2168,7 @@
   },
   {
     "word": "at the same time",
-    "ipa": "/æt ðə sem taɪm/",
+    "ipa": "[æt ðə sɛm taɪm]",
     "pos": "phr.",
     "meaning_zh": "同時",
     "note_zh": "可表示時間上同步發生，也可表達語意轉折「話雖如此」，需依上下文判斷。",
@@ -2179,7 +2179,7 @@
   },
   {
     "word": "in other words",
-    "ipa": "/ɪn ˈʌðɚ wɝdz/",
+    "ipa": "[ɪn ˋʌðɚ wɝdz]",
     "pos": "phr.",
     "meaning_zh": "換句話說",
     "note_zh": "用於以不同措辭重新解釋前述內容，使語意更清楚，是常見的釋義連接語。",
@@ -2190,7 +2190,7 @@
   },
   {
     "word": "that is to say",
-    "ipa": "/ðæt ɪz tu se/",
+    "ipa": "[ðæt ɪz tu sɛ]",
     "pos": "phr.",
     "meaning_zh": "也就是說",
     "note_zh": "語意與 in other words 相近，常用於書面說明，語氣稍微正式，亦可用逗號夾註方式插入句中。",
@@ -2201,7 +2201,7 @@
   },
   {
     "word": "for instance",
-    "ipa": "/fɔr ˈɪnstəns/",
+    "ipa": "[fɔr ˋɪnstəns]",
     "pos": "phr.",
     "meaning_zh": "例如",
     "note_zh": "用於舉出具體例子佐證前述論點，可置於句首或句中，語意與 for example 完全相同但稍微書面化。",
@@ -2212,7 +2212,7 @@
   },
   {
     "word": "we apologize for any inconvenience",
-    "ipa": "/wi əˈpɑləˌdʒaɪz fɔr ˈɛnɪ ˌɪnkənˈvinjəns/",
+    "ipa": "[wi əˋpɑləˌdʒaɪz fɔr ˋɛnɪ ˌɪnkənˋvinjəns]",
     "pos": "phr.",
     "meaning_zh": "造成不便，我們深感抱歉",
     "note_zh": "客服標準致歉用語，常接 this may have caused 或置於信件結尾表達歉意與服務誠意。",
@@ -2223,7 +2223,7 @@
   },
   {
     "word": "to the best of our knowledge",
-    "ipa": "/tu ðə bɛst əv aʊr ˈnɑlɪdʒ/",
+    "ipa": "[tu ðə bɛst əv aʊr ˋnɑlɪdʒ]",
     "pos": "phr.",
     "meaning_zh": "據我們所知",
     "note_zh": "用於在陳述資訊時保留但書，暗示所述內容可能因資訊有限而有誤，常見於客服回覆。",
@@ -2234,7 +2234,7 @@
   },
   {
     "word": "free of charge",
-    "ipa": "/fri əv tʃɑrdʒ/",
+    "ipa": "[fri əv tʃɑrdʒ]",
     "pos": "phr.",
     "meaning_zh": "免費",
     "note_zh": "語氣正式，常用於行銷文案或服務條款，語意等同 for free，但更常見於書面商業用語。",
@@ -2245,7 +2245,7 @@
   },
   {
     "word": "subject to availability",
-    "ipa": "/ˈsʌbdʒɪkt tu əˌveləˈbɪlətɪ/",
+    "ipa": "[ˋsʌbdʒɪkt tu əˌvɛləˋbɪlətɪ]",
     "pos": "phr.",
     "meaning_zh": "視供應情況而定",
     "note_zh": "行銷與訂購條款常用語，提醒消費者優惠或商品數量有限，不保證一定能取得。",
@@ -2256,7 +2256,7 @@
   },
   {
     "word": "on a first-come, first-served basis",
-    "ipa": "/ɑn ə fɝst kʌm fɝst sɝvd ˈbesɪs/",
+    "ipa": "[ɑn ə fɝst kʌm fɝst sɝvd ˋbɛsɪs]",
     "pos": "phr.",
     "meaning_zh": "依先到先得的原則",
     "note_zh": "常用於活動報名、優惠贈送等情境，強調名額有限、依序處理，無關資格審核。",
@@ -2267,7 +2267,7 @@
   },
   {
     "word": "money-back guarantee",
-    "ipa": "/ˈmʌnɪ bæk ˌgærənˈti/",
+    "ipa": "[ˋmʌnɪ bæk ˌgærənˋtɪ]",
     "pos": "phr.",
     "meaning_zh": "退款保證",
     "note_zh": "行銷常用詞，承諾顧客若不滿意可全額退費，用以降低消費者購買疑慮、建立信任。",
@@ -2278,7 +2278,7 @@
   },
   {
     "word": "limited time offer",
-    "ipa": "/ˈlɪmɪtɪd taɪm ˈɔfɚ/",
+    "ipa": "[ˋlɪmɪtɪd taɪm ˋɔfɚ]",
     "pos": "phr.",
     "meaning_zh": "限時優惠",
     "note_zh": "廣告用語，強調優惠僅在特定期間內有效，製造急迫感以促進消費者立即行動。",
@@ -2289,7 +2289,7 @@
   },
   {
     "word": "while supplies last",
-    "ipa": "/hwaɪl səˈplaɪz læst/",
+    "ipa": "[hwaɪl səˋplaɪz læst]",
     "pos": "phr.",
     "meaning_zh": "售完為止",
     "note_zh": "常附加於促銷文案末尾，提醒消費者庫存有限，常與 limited time offer 搭配使用。",
@@ -2300,7 +2300,7 @@
   },
   {
     "word": "buy one get one free",
-    "ipa": "/baɪ wʌn gɛt wʌn fri/",
+    "ipa": "[baɪ wʌn gɛt wʌn fri]",
     "pos": "phr.",
     "meaning_zh": "買一送一",
     "note_zh": "常縮寫為 BOGO，是零售與行銷中最常見的促銷手法之一，強調額外贈送而非折扣。",
@@ -2311,7 +2311,7 @@
   },
   {
     "word": "in recognition of",
-    "ipa": "/ɪn ˌrɛkəgˈnɪʃən əv/",
+    "ipa": "[ɪn ˌrɛkəgˋnɪʃən əv]",
     "pos": "phr.",
     "meaning_zh": "為表彰；為肯定",
     "note_zh": "常見於頒獎、致謝或行銷活動中，用來說明給予獎勵或優惠的原因。",
@@ -2322,7 +2322,7 @@
   },
   {
     "word": "get in touch with",
-    "ipa": "/gɛt ɪn tʌtʃ wɪð/",
+    "ipa": "[gɛt ɪn tʌtʃ wɪð]",
     "pos": "phr.",
     "meaning_zh": "與...聯繫",
     "note_zh": "客服常用來邀請顧客主動聯絡，語氣友善，比 contact 更口語化、親切。",
@@ -2333,7 +2333,7 @@
   },
   {
     "word": "look forward to",
-    "ipa": "/lʊk ˈfɔrwɚd tu/",
+    "ipa": "[lʊk ˋfɔrwɚd tu]",
     "pos": "phr.",
     "meaning_zh": "期待",
     "note_zh": "後接名詞或動名詞而非原形動詞，商業書信結尾常用語，表達正面且期待的態度。",
@@ -2344,7 +2344,7 @@
   },
   {
     "word": "feel free to",
-    "ipa": "/fil fri tu/",
+    "ipa": "[fil fri tu]",
     "pos": "phr.",
     "meaning_zh": "請隨意；歡迎",
     "note_zh": "客服用語，鼓勵顧客主動提出問題或需求，語氣輕鬆友善，後接原形動詞。",
@@ -2355,7 +2355,7 @@
   },
   {
     "word": "rest assured that",
-    "ipa": "/rɛst əˈʃʊrd ðæt/",
+    "ipa": "[rɛst əˋʃʊrd ðæt]",
     "pos": "phr.",
     "meaning_zh": "請放心；請確信",
     "note_zh": "客服安撫顧客情緒常用語，向對方保證問題會被妥善處理，語氣誠懇可靠。",
@@ -2366,7 +2366,7 @@
   },
   {
     "word": "take this opportunity to",
-    "ipa": "/tek ðɪs ˌɑpɚˈtunətɪ tu/",
+    "ipa": "[tɛk ðɪs ˌɑpɚˋtunətɪ tu]",
     "pos": "phr.",
     "meaning_zh": "藉此機會",
     "note_zh": "常用於信件或演說開頭，引出感謝、致歉或宣布消息等正式內容。",
@@ -2377,7 +2377,7 @@
   },
   {
     "word": "at no extra cost",
-    "ipa": "/æt no ˈɛkstrə kɔst/",
+    "ipa": "[æt no ˋɛkstrə kɔst]",
     "pos": "phr.",
     "meaning_zh": "不需額外費用",
     "note_zh": "行銷用語，強調某項服務或贈品已包含在原價內，無須額外付費，常見於促銷方案。",
@@ -2388,7 +2388,7 @@
   },
   {
     "word": "a wide range of",
-    "ipa": "/ə waɪd rendʒ əv/",
+    "ipa": "[ə waɪd rɛndʒ əv]",
     "pos": "phr.",
     "meaning_zh": "種類繁多的",
     "note_zh": "行銷文案常用來強調產品或服務選擇多樣，後接複數名詞，語氣正面且有說服力。",
@@ -2399,7 +2399,7 @@
   },
   {
     "word": "state-of-the-art",
-    "ipa": "/stet əv ðə ɑrt/",
+    "ipa": "[stɛt əv ðə ɑrt]",
     "pos": "phr.",
     "meaning_zh": "最先進的；尖端的",
     "note_zh": "常作形容詞，置於名詞前，用於強調產品或技術的先進程度，行銷文案高頻用詞。",
@@ -2410,7 +2410,7 @@
   },
   {
     "word": "tailor-made for",
-    "ipa": "/ˈtelɚ med fɔr/",
+    "ipa": "[ˋtɛlɚ mɛd fɔr]",
     "pos": "phr.",
     "meaning_zh": "量身訂做；專為...設計",
     "note_zh": "行銷用語，強調產品或服務針對特定客群或需求特別設計，帶有客製化與專屬感。",
@@ -2421,7 +2421,7 @@
   },
   {
     "word": "keep you posted",
-    "ipa": "/kip ju ˈpostɪd/",
+    "ipa": "[kip ju ˋpostɪd]",
     "pos": "phr.",
     "meaning_zh": "隨時向您更新消息",
     "note_zh": "客服常用結尾語，承諾會持續告知後續進度，語氣親切、帶有責任感。",
@@ -2432,7 +2432,7 @@
   },
   {
     "word": "address your concerns",
-    "ipa": "/əˈdrɛs jʊr kənˈsɝnz/",
+    "ipa": "[əˋdrɛs jʊr kənˋsɝnz]",
     "pos": "phr.",
     "meaning_zh": "回應您的疑慮",
     "note_zh": "客服正式用語，表示認真看待並處理顧客提出的疑問或不滿，常見於投訴回覆信。",
@@ -2443,7 +2443,7 @@
   },
   {
     "word": "resolve the issue",
-    "ipa": "/rɪˈzɑlv ðə ˈɪʃu/",
+    "ipa": "[rɪˋzɑlv ðə ˋɪʃu]",
     "pos": "phr.",
     "meaning_zh": "解決問題",
     "note_zh": "客服萬用語，泛指處理並解決顧客反映的問題，語氣中性且專業。",
@@ -2454,7 +2454,7 @@
   },
   {
     "word": "exceed your expectations",
-    "ipa": "/ɪkˈsid jʊr ˌɛkspɛkˈteʃənz/",
+    "ipa": "[ɪkˋsid jʊr ˌɛkspɛkˋtɛʃənz]",
     "pos": "phr.",
     "meaning_zh": "超乎您的期望",
     "note_zh": "行銷與客服常用語，用來承諾提供的服務或品質會優於顧客原先的預期，帶有正面承諾意味。",
@@ -2465,7 +2465,7 @@
   },
   {
     "word": "customer satisfaction guaranteed",
-    "ipa": "/ˈkʌstəmɚ ˌsætɪsˈfækʃən ˌgærənˈtid/",
+    "ipa": "[ˋkʌstəmɚ ˌsætɪsˋfækʃən ˌgærənˋtid]",
     "pos": "phr.",
     "meaning_zh": "保證顧客滿意",
     "note_zh": "行銷口號式用語，常見於廣告標語或包裝上，用以建立品牌信賴感，語氣簡潔有力。",
@@ -2476,7 +2476,7 @@
   },
   {
     "word": "terms and conditions apply",
-    "ipa": "/tɝmz ænd kənˈdɪʃənz əˈplaɪ/",
+    "ipa": "[tɝmz ænd kənˋdɪʃənz əˋplaɪ]",
     "pos": "phr.",
     "meaning_zh": "適用條款與細則",
     "note_zh": "廣告與促銷文案結尾常見的但書用語，提醒消費者優惠有附加限制，需詳閱細則。",
