@@ -272,8 +272,29 @@
   .reading-score{ text-align:center; font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--text-muted); margin-top:14px; }
 
   /* Word detail panel under the flashcard */
-  .wd-panel{ max-width:560px; margin:22px auto 0; background:var(--surface); border:1px solid var(--border); border-radius:14px; box-shadow:var(--shadow); padding:18px 20px; }
-  .wd-title{ font-weight:700; font-size:13px; letter-spacing:.04em; color:var(--accent); margin-bottom:6px; }
+  /* Word page (flashcard mode): one scrolling card + a sticky action bar */
+  .wpg{ max-width:640px; margin:0 auto; }
+  .wpg-card{ background:var(--surface); border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow); padding:22px 24px 8px; }
+  .wpg-top{ display:flex; justify-content:space-between; align-items:center; gap:8px; }
+  .wpg-tags{ display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
+  .wpg-top .speak-btn{ width:30px; height:30px; font-size:14px; flex:none; }
+  .wpg-word{ font-family:"IBM Plex Sans", system-ui, sans-serif; font-weight:700; font-size:clamp(32px,6vw,44px); text-align:center; margin:14px 0 2px; word-break:break-word; }
+  .wpg-ipa{ text-align:center; color:var(--accent); font-size:17px; }
+  .wpg-audio{ display:flex; justify-content:center; gap:8px; margin:12px 0 4px; flex-wrap:wrap; }
+  .wpg-meaning{ font-family:"IBM Plex Sans", system-ui, sans-serif; font-size:24px; font-weight:700; text-align:center; margin:14px 0 10px; }
+  .wpg-card .note-zh{ margin:0 0 6px; }
+  .wpg-sec{ border-top:1px solid var(--border); margin-top:16px; padding:14px 0 6px; }
+  .wpg-sec h4{ margin:0 0 10px; font-size:12.5px; letter-spacing:.06em; color:var(--text-muted); font-weight:600; }
+  .wpg-grid{ display:grid; grid-template-columns:1fr; gap:0 24px; }
+  @media (min-width:640px){ .wpg-grid{ grid-template-columns:1fr 1fr; } }
+  .wpg-spk{ width:30px; height:30px; font-size:13px; flex:none; }
+  .wpg-bar{ position:sticky; bottom:0; z-index:5; background:var(--bg); padding:10px 0 12px; margin-top:12px; }
+  .wpg-bar .progress-bar{ margin:0 0 10px; max-width:none; }
+  .wpg-bar-row{ display:flex; align-items:center; justify-content:center; gap:8px; }
+  .wpg-bar-row .mark-btn{ flex:1; max-width:140px; padding:10px 8px; white-space:nowrap; }
+  .wpg-count{ color:var(--text-muted); font-size:12px; min-width:56px; text-align:center; }
+  .wpg-bar-row .nav-btn{ flex:none; }
+  @media (max-width:420px){ .wpg-card{ padding:18px 16px 6px; } .wpg-count{ min-width:0; font-size:11px; } .wpg-bar-row{ gap:6px; } }
   .wd-kkline{ text-align:center; color:var(--accent); font-size:18px; margin-bottom:6px; }
   .wd-chunks{ display:flex; flex-wrap:wrap; justify-content:center; gap:6px; margin:8px 0 4px; }
   .wd-chunk{ display:flex; flex-direction:column; align-items:center; padding:6px 12px; border-radius:12px; border:2px solid transparent; min-width:46px; }
@@ -293,9 +314,6 @@
   .wd-notes{ list-style:none; margin:8px 0 0; padding:0; display:flex; flex-direction:column; gap:6px; font-size:14px; }
   .wd-notes li{ display:flex; gap:10px; align-items:center; }
   .wd-chunk.wd-tag{ display:inline-block; flex:none; padding:0 8px; min-width:48px; font-size:14px; font-weight:700; text-align:center; border-radius:8px; border-width:1px; }
-  .wd-hint{ text-align:center; color:var(--text-muted); font-size:12.5px; margin:14px 0 0; }
-  .wd-section{ border-top:1px solid var(--border); margin-top:14px; padding-top:12px; }
-  .wd-section h4{ margin:0 0 8px; font-size:12.5px; letter-spacing:.04em; color:var(--text-muted); font-weight:600; }
   .wd-sense{ margin-bottom:12px; }
   .wd-sense-head{ display:flex; align-items:center; gap:8px; margin-bottom:6px; }
   .wd-sense-zh{ font-size:18px; font-weight:700; }
@@ -1605,17 +1623,42 @@ function restoreCardCursor(id){
   cursor = idx >= 0 ? idx : 0;
 }
 
-/* ---------- Word detail panel (under the flashcard) ----------
-   data/<version>/word_details.json: { "<word lowercase>": { kk, chunks[], senses[], family[], collocations[],
-   synonyms[], pattern{}, root?, tip, stressNote? } }. Pronunciation (syllable tiles) is shown any time; the
-   parts that give away the meaning only show once the card is flipped, so the recall exercise still works. */
+/* ---------- Word page (flashcard mode) ----------
+   One scrolling page per word, no flipping. Basic data comes from toeic_vocab.json; when
+   data/<version>/word_details.json has an entry for the word ({ kk, chunks[], senses[], family[],
+   collocations[], synonyms[], pattern{}, root?, tip, stressNote? }) the page also shows the syllable
+   breakdown, per-sense examples, word family, collocations, paraphrases and pronunciation-rule words. */
 function escHtml(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
 
-function renderWordDetail(w, revealed){
+function renderWordPage(w, st, total){
   const d = wordDetails[w.word.toLowerCase()];
-  if(!d) return "";
+  const dis = canSpeak ? "" : "disabled";
   const say = (txt, rate)=> `data-say="${escHtml(txt)}"${rate ? ` data-rate="${rate}"` : ""}`;
-  const spk = (txt, size)=> `<button class="speak-btn" ${say(txt)} style="width:${size}px;height:${size}px;font-size:${Math.round(size*.45)}px;flex:none;" title="播放" ${canSpeak?'':'disabled'}>🔊</button>`;
+  const spk = (txt)=> `<button class="speak-btn wpg-spk" ${say(txt)} title="播放" ${dis}>🔊</button>`;
+  const sec = (title, body)=> `<section class="wpg-sec"><h4>${title}</h4>${body}</section>`;
+
+  const head = `
+    <div class="wpg-top">
+      <div class="wpg-tags">
+        <span class="chip cat">${categoryLabel(w.category)}</span>
+        ${w.importance ? `<span class="chip imp">${importanceLabel(w.importance)}</span>` : ""}
+        <span class="chip pos">${w.pos}</span>
+      </div>
+      <button class="speak-btn card-save-btn" title="加入收藏，之後複習">${isWordSaved(w.word) ? "❤️" : "🤍"}</button>
+    </div>
+    <h2 class="wpg-word">${escHtml(w.word)}</h2>
+    <div class="wpg-ipa mono">${escHtml(d ? d.kk : w.ipa)}</div>
+    <div class="wpg-audio">
+      <button class="icon-btn" ${say(w.word)} ${dis}>🔊 發音</button>
+      <button class="icon-btn" ${say(w.word, 0.5)} ${dis}>🐢 慢速</button>
+    </div>
+    <p class="wpg-meaning">${w.meaning_zh}</p>
+    ${w.note_zh ? `<div class="note-zh">💡 ${w.note_zh}</div>` : ""}`;
+
+  if(!d){
+    const ex = w.example_en ? sec("例句", `<div class="wd-example">${spk(w.example_en)}<div><div class="en">${w.example_en}</div>${w.example_zh ? `<div class="zh">${w.example_zh}</div>` : ""}</div></div>`) : "";
+    return `${head}${ex}`;
+  }
 
   let color = 0;
   const tiles = d.chunks.map(c=>{
@@ -1625,50 +1668,38 @@ function renderWordDetail(w, revealed){
     const kk = c.silent ? "不發音" : `${mark}${escHtml(c.k).replace("ˋ", '<span class="wd-stress">ˋ</span>')}`;
     return `<div class="wd-chunk ${cls}${c.s === 1 ? " s1" : ""}"><span class="wd-letters">${escHtml(c.t)}</span><span class="wd-kk">${kk}</span></div>`;
   }).join("");
-
   color = 0;
   const notes = d.chunks.map(c=>{
     const cls = c.silent ? "silent" : `c${color++ % 3}`;
     if(!c.n) return "";
     return `<li><span class="wd-chunk wd-tag ${cls}">${escHtml(c.t)}</span><span>${escHtml(c.n)}</span></li>`;
   }).join("");
-
-  const pronunciation = `
-    <div class="wd-kkline mono">${escHtml(d.kk)}</div>
+  const syllables = sec("音節拆解", `
     <div class="wd-chunks">${tiles}</div>
     <p class="wd-legend">框線＝重音所在　虛線＝不發音</p>
-    <div class="wd-audio">
-      <button class="icon-btn" ${say(w.word)} ${canSpeak?'':'disabled'}>🔊 發音</button>
-      <button class="icon-btn" ${say(w.word, 0.5)} ${canSpeak?'':'disabled'}>🐢 慢速</button>
-    </div>
     ${d.stressNote ? `<div class="wd-note">${escHtml(d.stressNote)}</div>` : ""}
-    ${notes ? `<ul class="wd-notes">${notes}</ul>` : ""}`;
+    ${notes ? `<ul class="wd-notes">${notes}</ul>` : ""}`);
 
-  let meaning = "";
-  if(revealed){
-    const senses = d.senses.map(s=>`
-      <div class="wd-sense">
-        <div class="wd-sense-head"><span class="chip pos">${escHtml(s.pos)}</span><span class="wd-sense-zh">${escHtml(s.zh.join("、"))}</span></div>
-        <div class="wd-example">${spk(s.ex, 30)}<div><div class="en">${escHtml(s.ex)}</div><div class="zh">${escHtml(s.exZh)}</div></div></div>
-      </div>`).join("");
-    const family = d.family && d.family.length ? `<div class="wd-section"><h4>詞類變化</h4><div class="wd-kv">
-      ${d.family.map(f=>`<span class="k">${escHtml(f.pos)}</span><span><b>${escHtml(f.w)}</b>　${escHtml(f.zh)}</span>`).join("")}</div></div>` : "";
-    const coll = d.collocations && d.collocations.length ? `<div class="wd-section"><h4>常見搭配</h4><div class="wd-kv">
-      ${d.collocations.map(c=>`<span class="en"><b>${escHtml(c.en)}</b></span><span class="muted">${escHtml(c.zh)}</span>`).join("")}</div></div>` : "";
-    const syn = d.synonyms && d.synonyms.length ? `<div class="wd-section"><h4>同義改寫（Part 7 常用）</h4>
-      <div class="wd-chips">${d.synonyms.map(s=>`<span class="wd-chip">${escHtml(s)}</span>`).join("")}</div></div>` : "";
-    const pattern = d.pattern ? `<div class="wd-section"><h4>同樣發音規則的字</h4>
-      <p class="wd-p">${escHtml(d.pattern.rule)}</p>
-      <div class="wd-chips">${d.pattern.words.map(x=>`<button class="wd-chip" ${say(x)}>🔊 ${escHtml(x)}</button>`).join("")}</div></div>` : "";
-    const callouts = (d.root || d.tip) ? `<div class="wd-section">
-      ${d.root ? `<div class="wd-callout root"><b>字根記憶　</b>${escHtml(d.root)}</div>` : ""}
-      ${d.tip ? `<div class="wd-callout tip"><b>多益提醒　</b>${escHtml(d.tip)}</div>` : ""}</div>` : "";
-    meaning = `<div class="wd-section"><h4>中文意思與例句</h4>${senses}</div>${family}${coll}${syn}${pattern}${callouts}`;
-  }else{
-    meaning = `<p class="wd-hint">翻面後會顯示：分義項例句、詞類變化、常見搭配、同義改寫…</p>`;
-  }
+  const senses = sec("詞義與例句", d.senses.map(s=>`
+    <div class="wd-sense">
+      <div class="wd-sense-head"><span class="chip pos">${escHtml(s.pos)}</span><span class="wd-sense-zh">${escHtml(s.zh.join("、"))}</span></div>
+      <div class="wd-example">${spk(s.ex)}<div><div class="en">${escHtml(s.ex)}</div><div class="zh">${escHtml(s.exZh)}</div></div></div>
+    </div>`).join(""));
 
-  return `<div class="wd-panel"><div class="wd-title">📖 單字詳解</div>${pronunciation}${meaning}</div>`;
+  const family = d.family && d.family.length ? `<div>${sec("詞類變化", `<div class="wd-kv">
+    ${d.family.map(f=>`<span class="k">${escHtml(f.pos)}</span><span><b>${escHtml(f.w)}</b>　${escHtml(f.zh)}</span>`).join("")}</div>`)}</div>` : "";
+  const coll = d.collocations && d.collocations.length ? `<div>${sec("常見搭配", `<div class="wd-kv">
+    ${d.collocations.map(c=>`<span class="en"><b>${escHtml(c.en)}</b></span><span class="muted">${escHtml(c.zh)}</span>`).join("")}</div>`)}</div>` : "";
+  const usage = (family || coll) ? `<div class="wpg-grid">${family}${coll}</div>` : "";
+
+  const syn = d.synonyms && d.synonyms.length ? sec("同義改寫（Part 7 常用）",
+    `<div class="wd-chips">${d.synonyms.map(s=>`<span class="wd-chip">${escHtml(s)}</span>`).join("")}</div>`) : "";
+  const pattern = d.pattern ? sec("同樣發音規則的字", `<p class="wd-p">${escHtml(d.pattern.rule)}</p>
+    <div class="wd-chips">${d.pattern.words.map(x=>`<button class="wd-chip" ${say(x)} ${dis}>🔊 ${escHtml(x)}</button>`).join("")}</div>`) : "";
+  const callouts = (d.root || d.tip) ? sec("記憶與提醒",
+    `${d.root ? `<div class="wd-callout root"><b>字根記憶　</b>${escHtml(d.root)}</div>` : ""}${d.tip ? `<div class="wd-callout tip"><b>多益提醒　</b>${escHtml(d.tip)}</div>` : ""}`) : "";
+
+  return `${head}${syllables}${senses}${usage}${syn}${pattern}${callouts}`;
 }
 
 /* ---------- Render: card mode ---------- */
@@ -1684,107 +1715,32 @@ function renderCardMode(container){
   saveCardPosition(w.id);
 
   container.innerHTML = `
-    <div class="card-wrap">
-      <div class="flashcard ${flipped?'flipped':''}" id="flashcard">
-        <div class="face front">
-          <div class="face-top">
-            <div style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
-              <span class="chip cat">${categoryLabel(w.category)}</span>
-              ${w.importance ? `<span class="chip imp">${importanceLabel(w.importance)}</span>` : ''}
-            </div>
-            <div style="display:flex; gap:6px; align-items:center;">
-              <span class="chip pos">${w.pos}</span>
-              <button class="speak-btn card-save-btn" style="width:28px;height:28px;font-size:13px;" title="加入收藏，之後複習">${isWordSaved(w.word) ? '❤️' : '🤍'}</button>
-            </div>
-          </div>
-          <div class="word-block">
-            <p class="word">${w.word}</p>
-            <p class="ipa mono">${w.ipa}</p>
-            <div class="speak-row">
-              <button class="speak-btn" id="speakWordBtn" title="播放發音" ${canSpeak?'':'disabled'}>🔊</button>
-            </div>
-          </div>
-          ${w.example_en ? `
-          <div class="example">
-            <button class="speak-btn" id="speakExampleFrontBtn" style="width:32px;height:32px;font-size:14px;flex:none;" title="播放例句" ${canSpeak?'':'disabled'}>🔊</button>
-            <div class="txt">${w.example_en}</div>
-          </div>` : ''}
-          <p class="hint">${canSpeak?'':'（此瀏覽器不支援語音播放）'} 點卡片查看中文意思</p>
-        </div>
-        <div class="face back">
-          <div class="face-top">
-            <div style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
-              <span class="chip cat">${categoryLabel(w.category)}</span>
-              ${w.importance ? `<span class="chip imp">${importanceLabel(w.importance)}</span>` : ''}
-            </div>
-            <div style="display:flex; gap:6px; align-items:center;">
-              <span class="chip pos">${w.pos}</span>
-              <button class="speak-btn card-save-btn" style="width:28px;height:28px;font-size:13px;" title="加入收藏，之後複習">${isWordSaved(w.word) ? '❤️' : '🤍'}</button>
-            </div>
-          </div>
-          <div class="back-word">
-            <span>${w.word}</span>
-            <span class="ipa mono">${w.ipa}</span>
-            <button class="speak-btn" id="speakWordBackBtn" style="width:24px;height:24px;font-size:11px;" title="播放發音" ${canSpeak?'':'disabled'}>🔊</button>
-          </div>
-          <p class="meaning">${w.meaning_zh}</p>
-          ${w.note_zh ? `<div class="note-zh">💡 ${w.note_zh}</div>` : ''}
-          <div class="example">
-            <button class="speak-btn" id="speakExampleBtn" style="width:32px;height:32px;font-size:14px;flex:none;" title="播放例句" ${canSpeak?'':'disabled'}>🔊</button>
-            <div>
-              <div class="txt">${w.example_en}</div>
-              ${w.example_zh ? `<div class="txt-zh">${w.example_zh}</div>` : ''}
-            </div>
-          </div>
-          <p class="hint">再點一次回到正面</p>
+    <div class="wpg">
+      <article class="wpg-card">${renderWordPage(w, st, finalList.length)}</article>
+      <div class="wpg-bar">
+        <div class="progress-bar"><div class="progress-fill" style="width:${((cursor+1)/finalList.length*100).toFixed(1)}%"></div></div>
+        <div class="wpg-bar-row">
+          <button class="nav-btn" id="prevBtn" title="上一個，不算已看過">◀</button>
+          <button class="mark-btn unknown ${st==='unknown'?'active':''}" id="markUnknownBtn">❌ 還不熟</button>
+          <span class="mono wpg-count">${cursor+1} / ${finalList.length}</span>
+          <button class="mark-btn known ${st==='known'?'active':''}" id="markKnownBtn">✅ 已熟記</button>
+          <button class="nav-btn" id="nextBtn" title="下一個，不算已看過">▶</button>
         </div>
       </div>
     </div>
-    <div class="mark-row">
-      <button class="mark-btn unknown ${st==='unknown'?'active':''}" id="markUnknownBtn">❌ 還不熟</button>
-      <button class="mark-btn known ${st==='known'?'active':''}" id="markKnownBtn">✅ 已熟記</button>
-    </div>
-    <div class="card-nav-row">
-      <button class="nav-btn" id="prevBtn" title="上一個，不算已看過">◀</button>
-      <span class="mono" style="color:var(--text-muted);font-size:13px;">${cursor+1} / ${finalList.length}</span>
-      <button class="nav-btn" id="nextBtn" title="下一個，不算已看過">▶</button>
-    </div>
-    <div class="progress-bar"><div class="progress-fill" style="width:${((cursor+1)/finalList.length*100).toFixed(1)}%"></div></div>
-    ${renderWordDetail(w, flipped)}
   `;
 
-  autosizeFlashcard();
-  container.querySelectorAll(".wd-panel [data-say]").forEach(btn=>{
+  container.querySelectorAll(".wpg-card [data-say]").forEach(btn=>{
     btn.addEventListener("click", ()=> speak(btn.dataset.say, btn.dataset.rate ? Number(btn.dataset.rate) : undefined));
   });
-  document.getElementById("flashcard").addEventListener("click", ()=>{ flipped = !flipped; renderStage(); });
-  const sb = document.getElementById("speakWordBtn");
-  if(sb) sb.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.word); });
-  const sbBack = document.getElementById("speakWordBackBtn");
-  if(sbBack) sbBack.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.word); });
-  const sebFront = document.getElementById("speakExampleFrontBtn");
-  if(sebFront) sebFront.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.example_en); });
-  const seb = document.getElementById("speakExampleBtn");
-  if(seb) seb.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.example_en); });
   container.querySelectorAll(".card-save-btn").forEach(btn=>{
-    btn.addEventListener("click", (e)=>{ e.stopPropagation(); toggleSavedWord(w); renderStage(); });
+    btn.addEventListener("click", ()=>{ toggleSavedWord(w); renderStage(); });
   });
-  document.getElementById("markUnknownBtn").addEventListener("click", (e)=>{
-    e.stopPropagation(); setStatus(w.id, "unknown");
-    cursor = (cursor+1)%finalList.length; flipped = false; renderStage();
-  });
-  document.getElementById("markKnownBtn").addEventListener("click", (e)=>{
-    e.stopPropagation(); setStatus(w.id, "known");
-    cursor = (cursor+1)%finalList.length; flipped = false; renderStage();
-  });
-  document.getElementById("prevBtn").addEventListener("click", (e)=>{
-    e.stopPropagation();
-    cursor = (cursor-1+finalList.length)%finalList.length; flipped = false; renderStage();
-  });
-  document.getElementById("nextBtn").addEventListener("click", (e)=>{
-    e.stopPropagation();
-    cursor = (cursor+1)%finalList.length; flipped = false; renderStage();
-  });
+  const go = (delta)=>{ cursor = (cursor+delta+finalList.length)%finalList.length; flipped = false; renderStage(); window.scrollTo(0, 0); };
+  document.getElementById("markUnknownBtn").addEventListener("click", ()=>{ setStatus(w.id, "unknown"); go(1); });
+  document.getElementById("markKnownBtn").addEventListener("click", ()=>{ setStatus(w.id, "known"); go(1); });
+  document.getElementById("prevBtn").addEventListener("click", ()=> go(-1));
+  document.getElementById("nextBtn").addEventListener("click", ()=> go(1));
 }
 
 /* ---------- Render: list mode ---------- */
