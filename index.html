@@ -23,6 +23,8 @@
     --danger-soft:#f4e2dc;
     --success:#3e7b58;
     --success-soft:#dfeee4;
+    --blue:#3b6ea5;
+    --blue-soft:#dde8f3;
     --shadow: 0 1px 2px rgba(38,36,32,.06), 0 8px 24px -12px rgba(38,36,32,.18);
   }
   @media (prefers-color-scheme: dark){
@@ -43,6 +45,8 @@
       --danger-soft:#3a2620;
       --success:#4fa98f;
       --success-soft:#1f3a34;
+      --blue:#8ab4e8;
+      --blue-soft:#1f2f44;
       --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 28px -14px rgba(0,0,0,.6);
     }
   }
@@ -63,6 +67,8 @@
     --danger-soft:#3a2620;
     --success:#4fa98f;
     --success-soft:#1f3a34;
+    --blue:#8ab4e8;
+    --blue-soft:#1f2f44;
     --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 28px -14px rgba(0,0,0,.6);
   }
 
@@ -264,6 +270,50 @@
   .q-explain{ margin-top:10px; padding-top:10px; border-top:1px dashed var(--border); font-size:13px; color:var(--text-muted); line-height:1.6; }
   .reading-actions{ display:flex; justify-content:center; gap:10px; margin-top:20px; }
   .reading-score{ text-align:center; font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--text-muted); margin-top:14px; }
+
+  /* Word detail panel under the flashcard */
+  .wd-panel{ max-width:560px; margin:22px auto 0; background:var(--surface); border:1px solid var(--border); border-radius:14px; box-shadow:var(--shadow); padding:18px 20px; }
+  .wd-title{ font-weight:700; font-size:13px; letter-spacing:.04em; color:var(--accent); margin-bottom:6px; }
+  .wd-kkline{ text-align:center; color:var(--accent); font-size:18px; margin-bottom:6px; }
+  .wd-chunks{ display:flex; flex-wrap:wrap; justify-content:center; gap:6px; margin:8px 0 4px; }
+  .wd-chunk{ display:flex; flex-direction:column; align-items:center; padding:6px 12px; border-radius:12px; border:2px solid transparent; min-width:46px; }
+  .wd-letters{ font-size:26px; font-weight:700; line-height:1.15; }
+  .wd-kk{ font-size:16px; margin-top:2px; min-height:1.4em; font-family:"IBM Plex Mono",monospace; }
+  .wd-chunk.c0{ background:var(--blue-soft); color:var(--blue); }
+  .wd-chunk.c1{ background:var(--gold-soft); color:var(--gold); }
+  .wd-chunk.c2{ background:var(--success-soft); color:var(--success); }
+  .wd-chunk.s1{ border-color:currentColor; }
+  .wd-stress{ color:var(--danger); font-weight:700; }
+  .wd-chunk.silent{ background:transparent; color:var(--text-muted); border:2px dashed var(--text-muted); }
+  .wd-chunk.silent .wd-letters{ text-decoration:line-through; text-decoration-thickness:2px; }
+  .wd-chunk.silent .wd-kk{ font-size:12px; }
+  .wd-legend{ text-align:center; font-size:12px; color:var(--text-muted); margin:2px 0 10px; }
+  .wd-audio{ display:flex; justify-content:center; gap:8px; margin-bottom:10px; flex-wrap:wrap; }
+  .wd-note{ background:var(--surface-2); border-radius:10px; padding:8px 12px; font-size:14px; margin:8px 0; line-height:1.6; }
+  .wd-notes{ list-style:none; margin:8px 0 0; padding:0; display:flex; flex-direction:column; gap:6px; font-size:14px; }
+  .wd-notes li{ display:flex; gap:10px; align-items:center; }
+  .wd-chunk.wd-tag{ display:inline-block; flex:none; padding:0 8px; min-width:48px; font-size:14px; font-weight:700; text-align:center; border-radius:8px; border-width:1px; }
+  .wd-hint{ text-align:center; color:var(--text-muted); font-size:12.5px; margin:14px 0 0; }
+  .wd-section{ border-top:1px solid var(--border); margin-top:14px; padding-top:12px; }
+  .wd-section h4{ margin:0 0 8px; font-size:12.5px; letter-spacing:.04em; color:var(--text-muted); font-weight:600; }
+  .wd-sense{ margin-bottom:12px; }
+  .wd-sense-head{ display:flex; align-items:center; gap:8px; margin-bottom:6px; }
+  .wd-sense-zh{ font-size:18px; font-weight:700; }
+  .wd-example{ background:var(--surface-2); border-radius:10px; padding:10px 12px; display:flex; gap:10px; align-items:flex-start; font-size:14px; line-height:1.55; }
+  .wd-example .en{ font-style:italic; }
+  .wd-example .zh{ color:var(--text-muted); margin-top:2px; }
+  .wd-kv{ display:grid; grid-template-columns:auto 1fr; gap:6px 14px; font-size:14.5px; align-items:baseline; }
+  .wd-kv .k{ color:var(--text-muted); }
+  .wd-kv .muted{ color:var(--text-muted); }
+  .wd-chips{ display:flex; flex-wrap:wrap; gap:6px; }
+  .wd-chip{ font-size:14px; padding:3px 11px; border-radius:999px; background:var(--surface-2); color:var(--text); border:0; font-family:inherit; }
+  button.wd-chip{ cursor:pointer; }
+  button.wd-chip:hover{ background:var(--accent-soft); }
+  .wd-p{ margin:0 0 8px; font-size:14px; line-height:1.6; }
+  .wd-callout{ border-radius:10px; padding:10px 12px; font-size:14px; line-height:1.65; }
+  .wd-callout.root{ background:var(--success-soft); }
+  .wd-callout.tip{ background:var(--gold-soft); }
+  .wd-callout + .wd-callout{ margin-top:8px; }
 
   /* Grammar lessons */
   .lesson-title{ margin-bottom:6px; }
@@ -680,6 +730,9 @@ let p5Order = []; let p5Idx = 0; let p5Selected = null; let p5Checked = false;
 /* When set (a P5 category key), Part 5 practice is limited to that grammar type — used by the 文法教學
    lessons' "練習這個類型" button. Cleared whenever Part 5 is opened from the TOEIC 測驗 hub. */
 let p5CategoryFilter = null;
+
+/* Detailed per-word info shown under the flashcard (syllables, KK, senses, word family…), keyed by lowercase word. */
+let wordDetails = {};
 
 /* 文法教學：每堂課對應 Part 5 題庫的一個文法類型（category），先講規則/陷阱，再接到同類型題目練習。 */
 let grammarLessons = [];
@@ -1149,12 +1202,12 @@ const canSpeak = "speechSynthesis" in window;
    so mobile gets its own slower rate instead of one shared value. */
 const isMobileDevice = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 const SPEECH_RATE = isMobileDevice ? 0.78 : 0.92;
-function speak(text){
+function speak(text, rate){
   if(!canSpeak) return;
   window.speechSynthesis.cancel();
   const u = new SpeechSynthesisUtterance(text);
   u.lang = "en-US";
-  u.rate = SPEECH_RATE;
+  u.rate = rate || SPEECH_RATE;
   window.speechSynthesis.speak(u);
 }
 /* Plays a list of strings in sequence (used for Part 2/3/4 audio). pitchFn(i) optionally varies pitch per line (e.g. by speaker). */
@@ -1552,6 +1605,72 @@ function restoreCardCursor(id){
   cursor = idx >= 0 ? idx : 0;
 }
 
+/* ---------- Word detail panel (under the flashcard) ----------
+   data/<version>/word_details.json: { "<word lowercase>": { kk, chunks[], senses[], family[], collocations[],
+   synonyms[], pattern{}, root?, tip, stressNote? } }. Pronunciation (syllable tiles) is shown any time; the
+   parts that give away the meaning only show once the card is flipped, so the recall exercise still works. */
+function escHtml(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+
+function renderWordDetail(w, revealed){
+  const d = wordDetails[w.word.toLowerCase()];
+  if(!d) return "";
+  const say = (txt, rate)=> `data-say="${escHtml(txt)}"${rate ? ` data-rate="${rate}"` : ""}`;
+  const spk = (txt, size)=> `<button class="speak-btn" ${say(txt)} style="width:${size}px;height:${size}px;font-size:${Math.round(size*.45)}px;flex:none;" title="播放" ${canSpeak?'':'disabled'}>🔊</button>`;
+
+  let color = 0;
+  const tiles = d.chunks.map(c=>{
+    const cls = c.silent ? "silent" : `c${color++ % 3}`;
+    const inline = /[ˋˌ]/.test(c.k); // a stress mark already sits inside this chunk's KK (e.g. the x in expand)
+    const mark = inline ? "" : c.s === 1 ? '<span class="wd-stress">ˋ</span>' : c.s === 2 ? "ˌ" : "";
+    const kk = c.silent ? "不發音" : `${mark}${escHtml(c.k).replace("ˋ", '<span class="wd-stress">ˋ</span>')}`;
+    return `<div class="wd-chunk ${cls}${c.s === 1 ? " s1" : ""}"><span class="wd-letters">${escHtml(c.t)}</span><span class="wd-kk">${kk}</span></div>`;
+  }).join("");
+
+  color = 0;
+  const notes = d.chunks.map(c=>{
+    const cls = c.silent ? "silent" : `c${color++ % 3}`;
+    if(!c.n) return "";
+    return `<li><span class="wd-chunk wd-tag ${cls}">${escHtml(c.t)}</span><span>${escHtml(c.n)}</span></li>`;
+  }).join("");
+
+  const pronunciation = `
+    <div class="wd-kkline mono">${escHtml(d.kk)}</div>
+    <div class="wd-chunks">${tiles}</div>
+    <p class="wd-legend">框線＝重音所在　虛線＝不發音</p>
+    <div class="wd-audio">
+      <button class="icon-btn" ${say(w.word)} ${canSpeak?'':'disabled'}>🔊 發音</button>
+      <button class="icon-btn" ${say(w.word, 0.5)} ${canSpeak?'':'disabled'}>🐢 慢速</button>
+    </div>
+    ${d.stressNote ? `<div class="wd-note">${escHtml(d.stressNote)}</div>` : ""}
+    ${notes ? `<ul class="wd-notes">${notes}</ul>` : ""}`;
+
+  let meaning = "";
+  if(revealed){
+    const senses = d.senses.map(s=>`
+      <div class="wd-sense">
+        <div class="wd-sense-head"><span class="chip pos">${escHtml(s.pos)}</span><span class="wd-sense-zh">${escHtml(s.zh.join("、"))}</span></div>
+        <div class="wd-example">${spk(s.ex, 30)}<div><div class="en">${escHtml(s.ex)}</div><div class="zh">${escHtml(s.exZh)}</div></div></div>
+      </div>`).join("");
+    const family = d.family && d.family.length ? `<div class="wd-section"><h4>詞類變化</h4><div class="wd-kv">
+      ${d.family.map(f=>`<span class="k">${escHtml(f.pos)}</span><span><b>${escHtml(f.w)}</b>　${escHtml(f.zh)}</span>`).join("")}</div></div>` : "";
+    const coll = d.collocations && d.collocations.length ? `<div class="wd-section"><h4>常見搭配</h4><div class="wd-kv">
+      ${d.collocations.map(c=>`<span class="en"><b>${escHtml(c.en)}</b></span><span class="muted">${escHtml(c.zh)}</span>`).join("")}</div></div>` : "";
+    const syn = d.synonyms && d.synonyms.length ? `<div class="wd-section"><h4>同義改寫（Part 7 常用）</h4>
+      <div class="wd-chips">${d.synonyms.map(s=>`<span class="wd-chip">${escHtml(s)}</span>`).join("")}</div></div>` : "";
+    const pattern = d.pattern ? `<div class="wd-section"><h4>同樣發音規則的字</h4>
+      <p class="wd-p">${escHtml(d.pattern.rule)}</p>
+      <div class="wd-chips">${d.pattern.words.map(x=>`<button class="wd-chip" ${say(x)}>🔊 ${escHtml(x)}</button>`).join("")}</div></div>` : "";
+    const callouts = (d.root || d.tip) ? `<div class="wd-section">
+      ${d.root ? `<div class="wd-callout root"><b>字根記憶　</b>${escHtml(d.root)}</div>` : ""}
+      ${d.tip ? `<div class="wd-callout tip"><b>多益提醒　</b>${escHtml(d.tip)}</div>` : ""}</div>` : "";
+    meaning = `<div class="wd-section"><h4>中文意思與例句</h4>${senses}</div>${family}${coll}${syn}${pattern}${callouts}`;
+  }else{
+    meaning = `<p class="wd-hint">翻面後會顯示：分義項例句、詞類變化、常見搭配、同義改寫…</p>`;
+  }
+
+  return `<div class="wd-panel"><div class="wd-title">📖 單字詳解</div>${pronunciation}${meaning}</div>`;
+}
+
 /* ---------- Render: card mode ---------- */
 function renderCardMode(container){
   const finalList = cardFinalIds();
@@ -1631,9 +1750,13 @@ function renderCardMode(container){
       <button class="nav-btn" id="nextBtn" title="下一個，不算已看過">▶</button>
     </div>
     <div class="progress-bar"><div class="progress-fill" style="width:${((cursor+1)/finalList.length*100).toFixed(1)}%"></div></div>
+    ${renderWordDetail(w, flipped)}
   `;
 
   autosizeFlashcard();
+  container.querySelectorAll(".wd-panel [data-say]").forEach(btn=>{
+    btn.addEventListener("click", ()=> speak(btn.dataset.say, btn.dataset.rate ? Number(btn.dataset.rate) : undefined));
+  });
   document.getElementById("flashcard").addEventListener("click", ()=>{ flipped = !flipped; renderStage(); });
   const sb = document.getElementById("speakWordBtn");
   if(sb) sb.addEventListener("click", (e)=>{ e.stopPropagation(); speak(w.word); });
@@ -3597,6 +3720,17 @@ async function loadThemeVocab(){
   themeWords = await loadJSONData("theme_vocab.json", []);
   if(mode === "theme") renderStage();
 }
+async function loadWordDetails(){
+  try{
+    await ensureCurrentVersion();
+    const res = await fetch(dataPath("word_details.json"));
+    if(!res.ok) throw new Error("HTTP " + res.status);
+    wordDetails = await res.json();
+  }catch(err){
+    wordDetails = {}; // purely an extra: the flashcard still works without it
+  }
+  if(mode === "card") renderStage();
+}
 async function loadPhraseBank(){
   phraseBank = await loadJSONData("phrase_bank.json", []);
   if(mode === "phrase") renderStage();
@@ -3673,6 +3807,7 @@ loadP4();
 loadThemeVocab();
 loadPhraseBank();
 loadGrammarLessons();
+loadWordDetails();
 loadDailyReading();
 loadStoryReading();
 </script>
