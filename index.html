@@ -277,7 +277,10 @@
   .wpg-card{ background:var(--surface); border:1px solid var(--border); border-radius:18px; box-shadow:var(--shadow); padding:22px 24px 8px; }
   .wpg-top{ display:flex; justify-content:space-between; align-items:center; gap:8px; }
   .wpg-tags{ display:flex; gap:6px; align-items:center; flex-wrap:wrap; }
+  .wpg-btns{ display:flex; gap:6px; flex:none; }
   .wpg-top .speak-btn{ width:30px; height:30px; font-size:14px; flex:none; }
+  .wpg-card.zh-off .zhh:not(.shown){ filter:blur(7px); user-select:none; cursor:pointer; }
+  .wpg-card .zhh{ transition:filter .15s; }
   .wpg-word{ font-family:"IBM Plex Sans", system-ui, sans-serif; font-weight:700; font-size:clamp(32px,6vw,44px); text-align:center; margin:14px 0 2px; word-break:break-word; }
   .wpg-ipa{ text-align:center; color:var(--accent); font-size:17px; }
   .wpg-audio{ display:flex; justify-content:center; gap:8px; margin:12px 0 4px; flex-wrap:wrap; }
@@ -709,6 +712,7 @@ let order = [];
 let cursor = 0;
 let mode = "card";
 let flipped = false;
+let showZh = false; // flashcard page: Chinese is hidden until the 👁 button (or the blurred text itself) is tapped
 let progress = {};
 let quizWord = null;
 let quizLocked = false;
@@ -1644,7 +1648,10 @@ function renderWordPage(w, st, total){
         ${w.importance ? `<span class="chip imp">${importanceLabel(w.importance)}</span>` : ""}
         <span class="chip pos">${w.pos}</span>
       </div>
-      <button class="speak-btn card-save-btn" title="加入收藏，之後複習">${isWordSaved(w.word) ? "❤️" : "🤍"}</button>
+      <div class="wpg-btns">
+        <button class="speak-btn wpg-eye" id="eyeBtn" title="顯示／隱藏中文" aria-pressed="${showZh}">${showZh ? "🙈" : "👁"}</button>
+        <button class="speak-btn card-save-btn" title="加入收藏，之後複習">${isWordSaved(w.word) ? "❤️" : "🤍"}</button>
+      </div>
     </div>
     <h2 class="wpg-word">${escHtml(w.word)}</h2>
     <div class="wpg-ipa mono">${escHtml(d ? d.kk : w.ipa)}</div>
@@ -1652,11 +1659,11 @@ function renderWordPage(w, st, total){
       <button class="icon-btn" ${say(w.word)} ${dis}>🔊 發音</button>
       <button class="icon-btn" ${say(w.word, 0.5)} ${dis}>🐢 慢速</button>
     </div>
-    <p class="wpg-meaning">${w.meaning_zh}</p>
-    ${w.note_zh ? `<div class="note-zh">💡 ${w.note_zh}</div>` : ""}`;
+    <p class="wpg-meaning zhh">${w.meaning_zh}</p>
+    ${w.note_zh ? `<div class="note-zh zhh">💡 ${w.note_zh}</div>` : ""}`;
 
   if(!d){
-    const ex = w.example_en ? sec("例句", `<div class="wd-example">${spk(w.example_en)}<div><div class="en">${w.example_en}</div>${w.example_zh ? `<div class="zh">${w.example_zh}</div>` : ""}</div></div>`) : "";
+    const ex = w.example_en ? sec("例句", `<div class="wd-example">${spk(w.example_en)}<div><div class="en">${w.example_en}</div>${w.example_zh ? `<div class="zh zhh">${w.example_zh}</div>` : ""}</div></div>`) : "";
     return `${head}${ex}`;
   }
 
@@ -1682,14 +1689,14 @@ function renderWordPage(w, st, total){
 
   const senses = sec("詞義與例句", d.senses.map(s=>`
     <div class="wd-sense">
-      <div class="wd-sense-head"><span class="chip pos">${escHtml(s.pos)}</span><span class="wd-sense-zh">${escHtml(s.zh.join("、"))}</span></div>
-      <div class="wd-example">${spk(s.ex)}<div><div class="en">${escHtml(s.ex)}</div><div class="zh">${escHtml(s.exZh)}</div></div></div>
+      <div class="wd-sense-head"><span class="chip pos">${escHtml(s.pos)}</span><span class="wd-sense-zh zhh">${escHtml(s.zh.join("、"))}</span></div>
+      <div class="wd-example">${spk(s.ex)}<div><div class="en">${escHtml(s.ex)}</div><div class="zh zhh">${escHtml(s.exZh)}</div></div></div>
     </div>`).join(""));
 
   const family = d.family && d.family.length ? `<div>${sec("詞類變化", `<div class="wd-kv">
-    ${d.family.map(f=>`<span class="k">${escHtml(f.pos)}</span><span><b>${escHtml(f.w)}</b>　${escHtml(f.zh)}</span>`).join("")}</div>`)}</div>` : "";
+    ${d.family.map(f=>`<span class="k">${escHtml(f.pos)}</span><span><b>${escHtml(f.w)}</b>　<span class="zhh">${escHtml(f.zh)}</span></span>`).join("")}</div>`)}</div>` : "";
   const coll = d.collocations && d.collocations.length ? `<div>${sec("常見搭配", `<div class="wd-kv">
-    ${d.collocations.map(c=>`<span class="en"><b>${escHtml(c.en)}</b></span><span class="muted">${escHtml(c.zh)}</span>`).join("")}</div>`)}</div>` : "";
+    ${d.collocations.map(c=>`<span class="en"><b>${escHtml(c.en)}</b></span><span class="muted zhh">${escHtml(c.zh)}</span>`).join("")}</div>`)}</div>` : "";
   const usage = (family || coll) ? `<div class="wpg-grid">${family}${coll}</div>` : "";
 
   const syn = d.synonyms && d.synonyms.length ? sec("同義改寫（Part 7 常用）",
@@ -1697,7 +1704,7 @@ function renderWordPage(w, st, total){
   const pattern = d.pattern ? sec("同樣發音規則的字", `<p class="wd-p">${escHtml(d.pattern.rule)}</p>
     <div class="wd-chips">${d.pattern.words.map(x=>`<button class="wd-chip" ${say(x)} ${dis}>🔊 ${escHtml(x)}</button>`).join("")}</div>`) : "";
   const callouts = (d.root || d.tip) ? sec("記憶與提醒",
-    `${d.root ? `<div class="wd-callout root"><b>字根記憶　</b>${escHtml(d.root)}</div>` : ""}${d.tip ? `<div class="wd-callout tip"><b>多益提醒　</b>${escHtml(d.tip)}</div>` : ""}`) : "";
+    `${d.root ? `<div class="wd-callout root zhh"><b>字根記憶　</b>${escHtml(d.root)}</div>` : ""}${d.tip ? `<div class="wd-callout tip zhh"><b>多益提醒　</b>${escHtml(d.tip)}</div>` : ""}`) : "";
 
   return `${head}${syllables}${senses}${usage}${syn}${pattern}${callouts}`;
 }
@@ -1716,7 +1723,7 @@ function renderCardMode(container){
 
   container.innerHTML = `
     <div class="wpg">
-      <article class="wpg-card">${renderWordPage(w, st, finalList.length)}</article>
+      <article class="wpg-card${showZh ? "" : " zh-off"}">${renderWordPage(w, st, finalList.length)}</article>
       <div class="wpg-bar">
         <div class="progress-bar"><div class="progress-fill" style="width:${((cursor+1)/finalList.length*100).toFixed(1)}%"></div></div>
         <div class="wpg-bar-row">
@@ -1736,7 +1743,20 @@ function renderCardMode(container){
   container.querySelectorAll(".card-save-btn").forEach(btn=>{
     btn.addEventListener("click", ()=>{ toggleSavedWord(w); renderStage(); });
   });
-  const go = (delta)=>{ cursor = (cursor+delta+finalList.length)%finalList.length; flipped = false; renderStage(); window.scrollTo(0, 0); };
+  const card = container.querySelector(".wpg-card");
+  const eye = document.getElementById("eyeBtn");
+  eye.addEventListener("click", ()=>{
+    showZh = !showZh;
+    card.classList.toggle("zh-off", !showZh);
+    card.querySelectorAll(".zhh.shown").forEach(el=>el.classList.remove("shown"));
+    eye.textContent = showZh ? "🙈" : "👁";
+    eye.setAttribute("aria-pressed", String(showZh));
+  });
+  card.addEventListener("click", (e)=>{            // tap one blurred line to reveal just that line
+    const el = e.target.closest(".zhh");
+    if(el && card.classList.contains("zh-off")) el.classList.add("shown");
+  });
+  const go = (delta)=>{ cursor = (cursor+delta+finalList.length)%finalList.length; flipped = false; showZh = false; renderStage(); window.scrollTo(0, 0); };
   document.getElementById("markUnknownBtn").addEventListener("click", ()=>{ setStatus(w.id, "unknown"); go(1); });
   document.getElementById("markKnownBtn").addEventListener("click", ()=>{ setStatus(w.id, "known"); go(1); });
   document.getElementById("prevBtn").addEventListener("click", ()=> go(-1));
