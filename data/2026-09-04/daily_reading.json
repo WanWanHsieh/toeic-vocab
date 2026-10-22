@@ -3222,5 +3222,2753 @@
         "explanation_zh": "她於9月25日返回、10月6日提交，相隔11天，未超過規定的14天期限，因此答案是 (D)。"
       }
     ]
+  },
+  {
+    "date": "2026-10-18",
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "email",
+        "title": "E-mail: Change to Your November 5 Group Visit",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Priya Nandakumar <pnandakumar@orchardhillmuseum.org>"
+          },
+          {
+            "label": "To:",
+            "value": "Gregory Fontaine <gfontaine@willowbrookacademy.edu>"
+          },
+          {
+            "label": "Subject:",
+            "value": "Your group visit on November 5"
+          },
+          {
+            "label": "Date:",
+            "value": "October 14"
+          }
+        ],
+        "paragraphs": [
+          "Dear Mr. Fontaine,",
+          "Thank you for booking a guided visit for 36 students from Willowbrook Academy on Thursday, November 5. I am writing to let you know about a change to the museum's gallery layout. The East Wing, which houses our collection of nineteenth-century landscape paintings, will be closed from November 2 through November 13 while its lighting system is replaced. Your tour will therefore be moved to the Garden Pavilion, where our new exhibition of modern ceramics is on display.",
+          "Your group will still be led by one of our volunteer guides, and the tour will start at 10:00 A.M. as originally planned. Because the pavilion is smaller than the East Wing, we can accommodate no more than 30 visitors at one time. We suggest dividing the students into two groups of 18, with the second group beginning at 10:45 A.M. while the first group takes part in a hands-on clay workshop in the education studio. Admission remains $6 per student, and teachers enter free of charge.",
+          "If this arrangement does not suit your class, we would be happy to reschedule your visit for any weekday after November 16. Please reply by October 20 to let me know which option you prefer.",
+          "Sincerely,\nPriya Nandakumar\nEducation Coordinator, Orchard Hill Art Museum"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "Why did Ms. Nandakumar write to Mr. Fontaine?",
+        "question_zh": "為什麼南達庫瑪女士要寫信給方丹先生?",
+        "options": [
+          "To ask for payment for a school tour",
+          "To explain a change to a planned visit",
+          "To announce a new ceramics exhibition",
+          "To invite teachers to a clay workshop"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中說明東廂將關閉，因此學生的參觀行程改到花園展館，目的是告知預定參訪的變動。其他選項並非寫信的主要目的，因此答案是 (B)。"
+      },
+      {
+        "question_en": "Why will the East Wing be closed?",
+        "question_zh": "東廂為什麼會關閉?",
+        "options": [
+          "Its lighting system will be replaced",
+          "Its paintings will be sent to another museum",
+          "A workshop will be held there",
+          "It is too small for large groups"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "第二段提到東廂將關閉，期間會更換照明系統（while its lighting system is replaced），因此答案是 (A)。"
+      },
+      {
+        "question_en": "What is NOT mentioned in the e-mail about the proposed arrangement?",
+        "question_zh": "關於信中建議的安排，下列何者「未」被提及?",
+        "options": [
+          "The tour will begin at 10:00 A.M.",
+          "The students may be divided into two groups",
+          "Students may take part in a clay workshop",
+          "Lunch will be provided for the students"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "信中提到導覽仍從上午10點開始、學生分成兩組、另一組參加黏土工作坊，但完全沒有提到供應午餐，因此答案是 (D)。"
+      },
+      {
+        "question_en": "The word \"accommodate\" in the e-mail is closest in meaning to",
+        "question_zh": "電子郵件中的 \"accommodate\" 一詞最接近下列何者的意思?",
+        "options": [
+          "reward",
+          "inspect",
+          "hold",
+          "train"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "\"accommodate no more than 30 visitors\" 指展館「最多容納」30位訪客，與 \"hold\" 意思最接近，因此答案是 (C)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-19",
+    "type": "single",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "advertisement",
+        "title": "BrightRoof Solar – Fall Installation Special",
+        "meta": [],
+        "paragraphs": [
+          "Make this the year your roof pays you back.",
+          "BrightRoof Solar has been designing and installing residential solar systems in the Redfield Valley for twelve years. This fall, homeowners who sign an installation contract before November 30 will receive a free battery storage unit, a $1,800 value, with any system of six kilowatts or larger. Customers who choose a smaller system will receive a free smart energy monitor instead.",
+          "Our process is simple. A certified designer visits your home at no charge, measures your roof, and reviews twelve months of your electricity bills. Within one week, you receive a written proposal showing the system size, total cost, and estimated yearly savings. Most installations are finished in two days, and all panels come with a 25-year performance guarantee.",
+          "Not ready to buy? Ask about our zero-down leasing plan, which lets you begin saving on day one with a fixed monthly payment. Please note that the free battery offer cannot be combined with leasing.",
+          "To book your free home assessment, call 555-0148 or visit www.brightroofsolar.example. Appointments are limited to 15 per week, so reserve yours today."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the main purpose of the advertisement?",
+        "question_zh": "這則廣告的主要目的為何?",
+        "options": [
+          "To recruit certified solar designers",
+          "To explain how to read an electricity bill",
+          "To promote a limited-time offer on home solar systems",
+          "To announce the opening of a new branch"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "廣告介紹秋季簽約即贈送電池儲能裝置或能源監測器的優惠，是在推廣限時的住宅太陽能系統方案，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What is included in the free home assessment?",
+        "question_zh": "免費的住家評估包含什麼?",
+        "options": [
+          "A review of the customer's electricity bills",
+          "The installation of a smart energy monitor",
+          "A 25-year performance guarantee",
+          "A signed leasing contract"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "第三段說明設計師會免費到府、測量屋頂，並檢視客戶十二個月的電費單，因此答案是 (A)。"
+      },
+      {
+        "question_en": "Which customer would receive the free battery storage unit?",
+        "question_zh": "下列哪一位客戶會獲得免費的電池儲能裝置?",
+        "options": [
+          "A customer who signs on November 10 for a four-kilowatt system",
+          "A customer who signs on December 2 for an eight-kilowatt system",
+          "A customer who chooses the leasing plan on November 15 for a seven-kilowatt system",
+          "A customer who signs on November 28 for a six-kilowatt system"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "須在11月30日前簽約且系統達6千瓦以上才有免費電池。(A) 系統太小，只能拿到監測器；(B) 12月2日已超過期限；(C) 選擇租賃方案，不能與電池優惠併用；只有 (D) 符合所有條件，因此答案是 (D)。"
+      },
+      {
+        "question_en": "What can be inferred about BrightRoof Solar?",
+        "question_zh": "關於 BrightRoof Solar，可以推論出什麼?",
+        "options": [
+          "It manufactures the panels it installs",
+          "It can conduct only a limited number of home assessments each week",
+          "It has operated for less than a year",
+          "It requires customers to pay a fee for proposals"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "廣告末段說每週預約名額限15個，可推知公司每週能進行的到府評估數量有限。公司已營運十二年、評估與提案皆未提及收費，也沒說自行製造面板，因此答案是 (B)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-20",
+    "type": "single",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Notice to Members: Online Banking Maintenance and Eastgate Branch Hours",
+        "meta": [],
+        "paragraphs": [
+          "Larkspur Credit Union will perform scheduled maintenance on its online and mobile banking systems on Saturday, October 31, from 11:00 P.M. until 5:00 A.M. on Sunday, November 1. During this time, members will not be able to log in, transfer funds, or deposit checks by mobile app. Debit cards and ATMs will continue to work normally, and our telephone service line, 555-0192, will remain open until 8:00 P.M. on Saturday.",
+          "The upgrade will introduce a new security feature that requires members to confirm large transfers of $2,000 or more through a one-time code sent to their registered phone. Members who have changed their phone number recently are encouraged to update it at any branch or by calling the service line before October 31. Those who do not update their number may be unable to complete large transfers until their information is verified.",
+          "In addition, beginning Monday, November 2, the Eastgate branch will open at 8:30 A.M. instead of 9:00 A.M. on weekdays. The Main Street branch hours will not change. We apologize for any inconvenience and thank you for banking with Larkspur Credit Union."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the notice?",
+        "question_zh": "這則通知的目的為何?",
+        "options": [
+          "To invite members to open new accounts",
+          "To announce an increase in service fees",
+          "To advertise a mobile banking application",
+          "To inform members of system maintenance and a schedule change"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "通知說明線上與行動銀行的定期維護，以及東門分行營業時間的調整，目的是告知會員這些變動，因此答案是 (D)。"
+      },
+      {
+        "question_en": "What will members still be able to do during the maintenance period?",
+        "question_zh": "維護期間，會員仍然可以做什麼?",
+        "options": [
+          "Deposit checks through the mobile app",
+          "Withdraw cash from ATMs",
+          "Transfer funds online",
+          "Log in to their accounts"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第一段說明維護期間無法登入、轉帳或以手機存支票，但簽帳金融卡與提款機仍正常運作，因此答案是 (B)。"
+      },
+      {
+        "question_en": "Who is encouraged to contact the credit union before October 31?",
+        "question_zh": "哪些人被鼓勵在10月31日前聯絡信用合作社?",
+        "options": [
+          "Members whose phone numbers have changed",
+          "Members who live near the Eastgate branch",
+          "Members who plan to deposit checks",
+          "Members who use the telephone service line"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "第二段指出最近更換電話號碼的會員，應在10月31日前更新資料，否則可能無法完成大額轉帳，因此答案是 (A)。"
+      },
+      {
+        "question_en": "What is indicated about the Eastgate branch?",
+        "question_zh": "關於東門分行，通知中提到什麼?",
+        "options": [
+          "It will close earlier on weekdays",
+          "It will be closed on November 2",
+          "It will open 30 minutes earlier on weekdays",
+          "It will replace the Main Street branch"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "自11月2日起，東門分行平日開門時間由上午9:00改為8:30，也就是提早30分鐘。關門時間、休業與取代總行均未提及，因此答案是 (C)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-21",
+    "type": "double",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Ridgeway Builders – Purchase Requisition Form",
+        "meta": [
+          {
+            "label": "Requisition No.:",
+            "value": "PR-3382"
+          },
+          {
+            "label": "Requested by:",
+            "value": "Tobias Lindqvist, Site Supervisor"
+          },
+          {
+            "label": "Department:",
+            "value": "Field Operations"
+          },
+          {
+            "label": "Date:",
+            "value": "October 9"
+          }
+        ],
+        "paragraphs": [
+          "Item requested: Ruggedized tablet computers for use by site inspectors at the Harbor View Apartments project. Quantity: 6. Unit price: $480.00. Subtotal: $2,880.00.",
+          "Additional items: Protective cases ($25.00 each) and a one-year extended warranty ($60.00 per tablet). Total estimated cost: $3,390.00.",
+          "Justification: Inspectors currently record safety checks on paper forms, which must be retyped in the office. This causes delays of up to two days in reporting problems. Tablets would allow inspections to be entered and submitted on site. Requested delivery date: October 27, before the structural phase begins on November 3.",
+          "Approval: The department manager's signature is required for purchases over $2,500. Purchases over $5,000 also require the signature of the finance director."
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail: Reply to Requisition PR-3382",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Camille Dubois <cdubois@ridgewaybuilders.example>"
+          },
+          {
+            "label": "To:",
+            "value": "Tobias Lindqvist <tlindqvist@ridgewaybuilders.example>"
+          },
+          {
+            "label": "Subject:",
+            "value": "Requisition PR-3382"
+          },
+          {
+            "label": "Date:",
+            "value": "October 13"
+          }
+        ],
+        "paragraphs": [
+          "Dear Tobias,",
+          "Your department manager has approved requisition PR-3382, and I have reviewed it against our current supplier agreements. Our preferred vendor, Norvik Systems, is offering the same tablets at $450.00 each for orders of eight or more units, and the extended warranty is included free at that quantity. The protective cases remain $25.00 each.",
+          "Orders of eight or more units ship from the vendor's regional warehouse and typically arrive within five business days. An order for six units must be shipped from overseas and would take about three weeks.",
+          "Would you consider ordering eight tablets instead of six? The two extra units could serve as spares for the inspectors. Please let me know by Friday, and I will place the order right away."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "Why did Mr. Lindqvist submit the form?",
+        "question_zh": "林德奎斯特先生為什麼要提交這份表單?",
+        "options": [
+          "To request the purchase of tablet computers",
+          "To report a safety problem at a construction site",
+          "To apply for an extended warranty",
+          "To order protective cases for a subcontractor"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "表單第一項即列出要採購供工地檢查員使用的堅固型平板電腦，因此這份表單是採購申請，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the form, what problem does the purchase aim to solve?",
+        "question_zh": "根據表單，這項採購想要解決什麼問題?",
+        "options": [
+          "Inspectors lack safety training",
+          "Inspection results are reported late",
+          "Tablets are too expensive to repair",
+          "The project has run out of budget"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "理由欄說明檢查員目前用紙本記錄，回辦公室重打，造成最多兩天的通報延誤，平板可在現場直接輸入，因此答案是 (B)。"
+      },
+      {
+        "question_en": "Who most likely signed the requisition before it reached Ms. Dubois?",
+        "question_zh": "在採購單送到杜波依女士手上之前，最可能是誰簽名核准?",
+        "options": [
+          "The finance director",
+          "A representative of Norvik Systems",
+          "The electrical subcontractor",
+          "Mr. Lindqvist's department manager"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "總預估金額 $3,390 超過 $2,500，需部門經理簽名，但未超過 $5,000，所以不需財務長簽核；電子郵件也說明部門經理已核准，因此答案是 (D)。"
+      },
+      {
+        "question_en": "What does Ms. Dubois suggest in the e-mail?",
+        "question_zh": "杜波依女士在電子郵件中提出什麼建議?",
+        "options": [
+          "Cancelling the requisition",
+          "Increasing the order from six tablets to eight",
+          "Choosing a different vendor",
+          "Removing the protective cases"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "她詢問林德奎斯特是否願意把訂購數量由六台增加為八台，以取得較低單價與免費延長保固，因此答案是 (B)。"
+      },
+      {
+        "question_en": "How much would the total cost be if Mr. Lindqvist accepts Ms. Dubois's suggestion?",
+        "question_zh": "如果林德奎斯特先生接受杜波依女士的建議，總費用會是多少?",
+        "options": [
+          "$3,390",
+          "$3,600",
+          "$3,800",
+          "$4,280"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "八台平板 8 × $450 = $3,600，保護殼 8 × $25 = $200，延長保固免費，合計 $3,800。$3,600 漏算保護殼，$4,280 則誤把保固費 $480 加進去，因此答案是 (C)。"
+      },
+      {
+        "question_en": "Why might keeping the order at six tablets be a problem?",
+        "question_zh": "為什麼維持訂購六台平板可能會有問題?",
+        "options": [
+          "They might not arrive by the requested delivery date",
+          "They would cost more than the approval limit",
+          "They would not be covered by any warranty",
+          "They would not work with the inspection forms"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "六台的訂單要從海外出貨，約需三週；從10月13日起算約在11月3日才到，晚於表單上要求的10月27日交貨日，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-22",
+    "type": "single",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "advertisement",
+        "title": "Kestrel Motors – Certified Pre-Owned Weekend",
+        "meta": [],
+        "paragraphs": [
+          "Drive Home Confidence This Weekend",
+          "Kestrel Motors invites you to our Certified Pre-Owned Weekend, Friday, November 6, through Sunday, November 8, at 1450 Lakeshore Boulevard. Choose from more than 80 sedans, SUVs, and trucks, each under six years old and each with fewer than 60,000 miles.",
+          "Every certified vehicle passes a 150-point inspection by our factory-trained technicians and comes with a 12-month warranty and one year of free roadside assistance. A complete vehicle history report is available for every car on the lot.",
+          "Special offers for the weekend: Receive $500 off the purchase price of any vehicle when you present this advertisement at the sales desk. Qualified buyers can take advantage of financing as low as 2.9 percent APR for up to 48 months. Planning to trade in your current car? Our appraisal team will give you a written offer in about 20 minutes, even if you do not buy from us.",
+          "Showroom hours: Friday, 10:00 A.M. to 8:00 P.M.; Saturday, 9:00 A.M. to 6:00 P.M.; Sunday, 12:00 noon to 5:00 P.M. Test drives require a valid driver's license. Visit www.kestrelmotors.example for the full inventory list."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the advertisement?",
+        "question_zh": "這則廣告的目的為何?",
+        "options": [
+          "To recruit new sales staff",
+          "To promote a weekend sales event for used vehicles",
+          "To announce the opening of a second showroom",
+          "To explain a new vehicle warranty law"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "廣告宣傳週末的認證中古車特賣活動，並列出優惠與營業時間，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What must customers do to receive $500 off?",
+        "question_zh": "顧客必須做什麼才能獲得 $500 折扣?",
+        "options": [
+          "Trade in their current vehicle",
+          "Finance through the dealership",
+          "Present the advertisement at the sales desk",
+          "Purchase a vehicle on Friday"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第四段說明在銷售櫃檯出示這則廣告，購買任何車輛即可折抵 $500；並未要求以舊換新、貸款或特定日期，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What is suggested about the trade-in appraisal?",
+        "question_zh": "關於舊車估價，廣告暗示了什麼?",
+        "options": [
+          "Customers can receive an offer without buying a vehicle",
+          "It takes about two hours",
+          "It is available only on Sunday",
+          "It is free only for certified vehicles"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "廣告說估價團隊約20分鐘內提供書面報價，「即使您不在我們這裡買車」也可以，可推知不購車也能取得報價，因此答案是 (A)。"
+      },
+      {
+        "question_en": "What is NOT mentioned as a benefit of buying a certified vehicle?",
+        "question_zh": "下列何者「未」被提及為購買認證車的好處?",
+        "options": [
+          "An inspection with 150 checkpoints",
+          "A 12-month warranty",
+          "Free roadside assistance for one year",
+          "A free replacement vehicle"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "第三段提到150項檢驗、12個月保固與一年免費道路救援，但並未提供免費替代車，因此答案是 (D)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-23",
+    "type": "single",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Notice to Residents: Holiday Week Waste Collection in Dunmore",
+        "meta": [],
+        "paragraphs": [
+          "The Dunmore Public Works Department announces changes to curbside collection during the Thanksgiving holiday week. There will be no collection on Thursday, November 26. Households with regular Thursday pickup will have their trash and recycling collected on Friday, November 27, and households with regular Friday pickup will be served on Saturday, November 28. Monday through Wednesday routes are not affected.",
+          "Please place bins at the curb by 6:30 A.M. on your collection day. Because of expected heavy volume after the holiday, bins that are overfilled or have lids that do not close may not be emptied. Extra bags will not be collected unless they carry a Dunmore Overflow Sticker, available for $2.00 each at City Hall and the Eastside Recreation Center.",
+          "Seasonal yard waste collection ends for the year after Friday, November 20. Residents with leaves left over may bring them to the Millbrook Transfer Station, open Saturdays from 8:00 A.M. to 3:00 P.M. Use of the station is free for Dunmore residents who show proof of address. Please note that the department's customer service line, 555-0173, will be closed on November 26 and 27 and will reopen on Monday, November 30."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the notice?",
+        "question_zh": "這則通知的目的為何?",
+        "options": [
+          "To announce a new recycling program",
+          "To request volunteers for a cleanup day",
+          "To inform residents of schedule changes during a holiday week",
+          "To raise the price of trash collection"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "通知說明感恩節當週路邊垃圾收運的日期調整與相關注意事項，目的是告知居民時程變動，因此答案是 (C)。"
+      },
+      {
+        "question_en": "Which households will NOT have their collection day changed?",
+        "question_zh": "哪些住戶的收運日「不會」改變?",
+        "options": [
+          "Households with regular Thursday pickup",
+          "Households with regular Friday pickup",
+          "Households that live near City Hall",
+          "Households with regular Tuesday pickup"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "第一段說週一至週三的路線不受影響，因此週二收運的住戶不變；週四、週五路線則分別順延一天，因此答案是 (D)。"
+      },
+      {
+        "question_en": "What is required for extra bags to be collected?",
+        "question_zh": "額外的垃圾袋要被收走，必須符合什麼條件?",
+        "options": [
+          "They must be placed at the curb after 6:30 A.M.",
+          "They must carry an overflow sticker",
+          "They must be taken to City Hall",
+          "They must contain only recyclable materials"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第二段指出額外的袋子必須貼有 Dunmore Overflow Sticker 才會被收運，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What is indicated about the Millbrook Transfer Station?",
+        "question_zh": "關於 Millbrook 轉運站，通知中提到什麼?",
+        "options": [
+          "Residents must show proof of address to use it for free",
+          "It is open every day of the week",
+          "It charges a $2.00 fee for leaves",
+          "It is located next to City Hall"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "第三段說該站週六開放，且鎮上居民出示住址證明即可免費使用。其他選項皆與內容不符，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-24",
+    "type": "single",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Tamarind Biolabs – Overtime Request Form",
+        "meta": [
+          {
+            "label": "Employee:",
+            "value": "Naveen Raghavan, Research Technician"
+          },
+          {
+            "label": "Department:",
+            "value": "Cell Culture Laboratory"
+          },
+          {
+            "label": "Date Submitted:",
+            "value": "October 20"
+          },
+          {
+            "label": "Supervisor:",
+            "value": "Dr. Helena Brandt"
+          }
+        ],
+        "paragraphs": [
+          "Overtime requested: Saturday, October 24, from 8:00 A.M. to 2:00 P.M. (6 hours) and Saturday, October 31, from 8:00 A.M. to 2:00 P.M. (6 hours).",
+          "Reason for request: The laboratory has been commissioned to prepare 240 cell culture plates for a client trial that begins on November 3. Because the incubator cycle cannot be interrupted, the plates must be inspected and relabeled on weekends, when the equipment is not in use by other teams. Without the additional hours, the shipment would be delayed by at least one week.",
+          "Compensation: Under company policy, overtime worked on a weekend is paid at 1.5 times the regular hourly rate. Employees may instead choose compensatory time off, which is credited at one hour for every hour worked and must be taken within 60 days.",
+          "Approval: Requests must be signed by the supervisor at least 48 hours before the first overtime shift. Overtime totaling more than 10 hours in a month also requires approval from the Director of Operations."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the main reason for the overtime request?",
+        "question_zh": "加班申請的主要原因為何?",
+        "options": [
+          "To finish preparing materials for a client trial",
+          "To train new employees",
+          "To repair laboratory equipment",
+          "To attend a weekend conference"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "理由欄說明實驗室受託準備240片細胞培養盤，供11月3日開始的客戶試驗使用，因此答案是 (A)。"
+      },
+      {
+        "question_en": "Why must the work be done on weekends?",
+        "question_zh": "為什麼這項工作必須在週末進行?",
+        "options": [
+          "Weekend pay is lower than weekday pay",
+          "The client requires weekend delivery",
+          "Other employees are on vacation",
+          "The equipment is not being used by other teams then"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "理由欄提到週末設備沒有被其他團隊使用，培養盤才能在不中斷培養週期的情況下檢查與重貼標籤，因此答案是 (D)。"
+      },
+      {
+        "question_en": "Why does the request require approval from the Director of Operations?",
+        "question_zh": "為什麼這份申請需要營運總監的核准?",
+        "options": [
+          "It was submitted less than 48 hours in advance",
+          "It involves work on Saturdays",
+          "The requested hours total more than 10 in October",
+          "The employee prefers time off instead of pay"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "兩次加班各6小時，10月合計12小時，超過每月10小時的上限，因此需營運總監核准。10月20日提交距10月24日已超過48小時，故 (A) 不對，因此答案是 (C)。"
+      },
+      {
+        "question_en": "How many hours of time off would Mr. Raghavan earn if he chose compensatory time for the entire request?",
+        "question_zh": "如果拉加文先生對整份申請選擇補休，他可獲得多少小時的補休?",
+        "options": [
+          "6 hours",
+          "12 hours",
+          "18 hours",
+          "24 hours"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "補休是工作一小時換一小時，共加班12小時，所以補休12小時。18小時是把12小時乘以1.5倍加班費率的錯誤算法，因此答案是 (B)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-25",
+    "type": "double",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "email",
+        "title": "E-mail: Changes to Your Weekly Lobby Arrangement",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Imogen Frost <ifrost@petalwickflorals.com>"
+          },
+          {
+            "label": "To:",
+            "value": "Tobias Lindqvist <tlindqvist@corvindesign.com>"
+          },
+          {
+            "label": "Subject:",
+            "value": "Changes to your weekly lobby arrangement"
+          },
+          {
+            "label": "Date:",
+            "value": "October 19"
+          }
+        ],
+        "paragraphs": [
+          "Dear Mr. Lindqvist,",
+          "Thank you for being a Petalwick Florals subscriber since June. Your Monday lobby arrangement has become one of our most admired weekly designs, and we are glad to keep supplying it.",
+          "I am writing to let you know that, beginning November 2, the price of our standard weekly arrangement will rise from $48 to $54 per delivery. The increase reflects higher shipping costs for imported flowers, and it applies to all subscription customers.",
+          "However, we would like to offer you an alternative. Our seasonal Autumn Harvest arrangement, made with sunflowers, dried wheat, and orange roses, will remain $48 per delivery through November 27. After that date, it will be priced at the new standard rate of $54. To reserve this option, please reply to this e-mail by October 28.",
+          "You are also welcome to keep your current arrangement at the new price. In that case, no action is needed.",
+          "Warm regards,\nImogen Frost\nCustomer Accounts, Petalwick Florals"
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail: Reply Regarding Lobby Arrangement and Open House",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Tobias Lindqvist <tlindqvist@corvindesign.com>"
+          },
+          {
+            "label": "To:",
+            "value": "Imogen Frost <ifrost@petalwickflorals.com>"
+          },
+          {
+            "label": "Subject:",
+            "value": "RE: Changes to your weekly lobby arrangement"
+          },
+          {
+            "label": "Date:",
+            "value": "October 22"
+          }
+        ],
+        "paragraphs": [
+          "Dear Ms. Frost,",
+          "Thank you for the advance notice. We would like to switch to the Autumn Harvest arrangement at $48 per delivery, so please consider this e-mail our confirmation.",
+          "I have a few additional requests. First, our weekly staff meeting is held on Monday mornings, and deliveries on that day have disrupted the lobby. Could future deliveries be made on Wednesday mornings before 9:00? Second, Corvin Design Studio will hold a client open house on November 13, and we would like a quote for twelve small table arrangements in similar autumn colors. They would need to be delivered by noon that day.",
+          "Finally, please send all invoices to our accounting team at accounts@corvindesign.com rather than to me directly.",
+          "Best regards,\nTobias Lindqvist\nOffice Manager, Corvin Design Studio"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "Why did Ms. Frost write to Mr. Lindqvist?",
+        "question_zh": "為什麼 Frost 女士要寫信給 Lindqvist 先生?",
+        "options": [
+          "To apologize for a late delivery",
+          "To announce a price increase and suggest an alternative",
+          "To request payment for an overdue invoice",
+          "To ask him to renew his subscription for a full year"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第一封信說明11月2日起標準每週花藝的價格將由48美元調漲至54美元，並提供價格不變的秋季豐收款作為替代選擇，因此答案是 (B)。"
+      },
+      {
+        "question_en": "By what date must customers reply to reserve the Autumn Harvest arrangement?",
+        "question_zh": "客戶必須在哪一天之前回覆，才能保留秋季豐收款花藝?",
+        "options": [
+          "October 19",
+          "November 2",
+          "October 28",
+          "November 27"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第一封信寫道請於10月28日前回覆以保留此選項；11月2日是漲價生效日，11月27日是優惠價截止日，因此答案是 (C)。"
+      },
+      {
+        "question_en": "The word \"reserve\" in the first e-mail is closest in meaning to",
+        "question_zh": "第一封電子郵件中的 \"reserve\" 一詞最接近下列何者的意思?",
+        "options": [
+          "secure",
+          "cancel",
+          "estimate",
+          "replace"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"reserve this option\" 指「保留、確保這個選項」，與 \"secure\" 意思最接近，因此答案是 (A)。"
+      },
+      {
+        "question_en": "What does Mr. Lindqvist NOT ask Petalwick Florals to do?",
+        "question_zh": "Lindqvist 先生沒有要求 Petalwick Florals 做下列何事?",
+        "options": [
+          "Move deliveries to Wednesdays",
+          "Provide a quote for table arrangements",
+          "Send invoices to the accounting team",
+          "Cancel his subscription"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "第二封信中他要求改為週三送花、為開放日報價12盆桌花、並將發票寄給會計部門，但他選擇了秋季豐收款而非取消訂閱，因此答案是 (D)。"
+      },
+      {
+        "question_en": "How much will Corvin Design Studio most likely pay per delivery during the week of November 9?",
+        "question_zh": "11月9日當週，Corvin Design Studio 每次送花最可能支付多少錢?",
+        "options": [
+          "$42",
+          "$48",
+          "$54",
+          "$60"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "Lindqvist 先生在回信中選擇秋季豐收款，每次48美元，而第一封信說明此價格持續到11月27日，因此11月9日當週仍為48美元，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What will most likely happen after November 27?",
+        "question_zh": "11月27日之後最可能發生什麼事?",
+        "options": [
+          "The Autumn Harvest promotion will begin",
+          "Corvin's subscription will be canceled automatically",
+          "The weekly price of Corvin's arrangement will rise to $54",
+          "Petalwick will deliver twelve table arrangements"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第一封信指出秋季豐收款的48美元價格只到11月27日，之後將改為新的標準價54美元，而Corvin已選擇該款式，所以每週價格會升為54美元；桌花是11月13日的活動需求，與11月27日之後無關，因此答案是 (C)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-26",
+    "type": "single",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Notice: Galaxy Gallery Renovation at Halden Science Museum",
+        "meta": [
+          {
+            "label": "Posted:",
+            "value": "October 22"
+          }
+        ],
+        "paragraphs": [
+          "Halden Science Museum will close its second-floor Galaxy Gallery for renovation from Monday, November 9, through Friday, December 18. All other areas of the museum, including the cafe and the gift shop, will remain open during regular hours.",
+          "To make up for the temporary closure, adult admission will be reduced from $18 to $13 for the duration of the renovation. Children under 12 will continue to enter free when accompanied by an adult. Annual members will not be charged for any part of the closure, and their passes will be extended automatically at no cost.",
+          "Visitors who bought tickets specifically for the Galaxy Gallery may exchange them for a pass to the Dome Theater's \"Journey to Saturn\" show or request a refund at the front desk until December 31. Please bring your original receipt. The planetarium will also present additional showings at 4:00 P.M. on weekends throughout the renovation.",
+          "We apologize for any inconvenience. We look forward to unveiling the new gallery, which will feature an interactive Mars rover display, on Saturday, December 19."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the notice mainly about?",
+        "question_zh": "這則公告主要是關於什麼?",
+        "options": [
+          "A change in membership fees",
+          "The opening of a new cafe",
+          "The temporary closure of a gallery",
+          "A new schedule for school tours"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "公告第一段說明二樓 Galaxy Gallery 將因整修而暫時關閉，整則公告都圍繞這件事，因此答案是 (C)。"
+      },
+      {
+        "question_en": "Why is the museum most likely lowering its adult admission price?",
+        "question_zh": "博物館降低成人票價最可能的原因為何?",
+        "options": [
+          "To attract more annual members",
+          "To compensate visitors for the closed gallery",
+          "To pay for the renovation",
+          "To compete with another museum"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第二段開頭的 \"To make up for the temporary closure\" 顯示降價是為了補償訪客無法參觀展廳，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What is NOT true about the museum during the renovation?",
+        "question_zh": "關於整修期間的博物館，下列何者「不」正確?",
+        "options": [
+          "The cafe will keep its regular hours.",
+          "Children under 12 can enter free with an adult.",
+          "Extra planetarium showings will be offered on weekends.",
+          "Annual members must pay to extend their passes."
+        ],
+        "answer_index": 3,
+        "explanation_zh": "第二段說年度會員的通行證會自動免費延長，並未要求付費，其他選項在文中都有提到，因此答案是 (D)。"
+      },
+      {
+        "question_en": "The word \"unveiling\" in paragraph 4 is closest in meaning to",
+        "question_zh": "第四段中的 \"unveiling\" 一詞最接近下列何者的意思?",
+        "options": [
+          "revealing",
+          "repairing",
+          "selling",
+          "measuring"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"unveiling the new gallery\" 指新展廳首度揭幕公開，與 revealing 最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-27",
+    "type": "triple",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Warranty Claim Form: Alderwood Furniture",
+        "meta": [
+          {
+            "label": "Claim No.:",
+            "value": "WC-5207"
+          },
+          {
+            "label": "Date Submitted:",
+            "value": "October 12"
+          },
+          {
+            "label": "Purchase Date:",
+            "value": "March 14, 2026"
+          },
+          {
+            "label": "Order No.:",
+            "value": "AF-88314"
+          }
+        ],
+        "paragraphs": [
+          "Customer Information: Priya Raman, 17 Lakeview Terrace, Denton. Product: Hartley extendable dining table, model HT-240, purchased with a total payment of $1,260, which includes $60 for delivery.",
+          "Description of problem: One of the table's two extension leaves no longer fits flush with the main surface. A gap of about five millimeters has appeared along the seam, and the wood in the leaf appears to be bending upward. The table has always been kept in a climate-controlled dining room and has not been exposed to water or direct sunlight.",
+          "Preferred resolution: Replacement of the extension leaf. (Other options on this form: repair or full refund.)",
+          "Attachments: three photographs of the damaged leaf and a copy of the original receipt.",
+          "I confirm that the information provided above is accurate. Signature: Priya Raman"
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail: Warranty Claim WC-5207 Approved",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Marcus Bell <mbell@alderwoodfurniture.com>"
+          },
+          {
+            "label": "To:",
+            "value": "Priya Raman <praman@denton-mail.com>"
+          },
+          {
+            "label": "Subject:",
+            "value": "Warranty Claim WC-5207"
+          },
+          {
+            "label": "Date:",
+            "value": "October 16"
+          }
+        ],
+        "paragraphs": [
+          "Dear Ms. Raman,",
+          "Thank you for submitting claim WC-5207 and the photographs of your dining table. After reviewing them, our warranty team has approved your request for a replacement extension leaf. The bending you described is a manufacturing defect, and because the table was purchased in March, it is well within the coverage period for structural parts.",
+          "The new leaf will be made at our workshop and should be ready about three weeks from today. Please note that natural wood changes color over time, so the replacement may look slightly lighter than the rest of your table at first. The difference will fade gradually. Once the leaf is ready, our delivery team will call you to arrange a convenient time. Delivery and installation are free of charge.",
+          "We apologize for the inconvenience this has caused you. If you have any questions in the meantime, please reply to this message.",
+          "Sincerely,",
+          "Marcus Bell",
+          "Warranty Services, Alderwood Furniture"
+        ],
+        "table": null
+      },
+      {
+        "kind": "webpage",
+        "title": "Alderwood Furniture: Warranty Policy",
+        "meta": [],
+        "paragraphs": [
+          "Coverage: Structural parts, including frames, legs, tabletops, and extension mechanisms, are covered against defects in materials and workmanship for five years from the date of purchase. Finishes and upholstery fabrics are covered for one year from the date of purchase.",
+          "How to file a claim: Complete the Warranty Claim Form and attach photographs of the damage and a copy of your receipt. Claims are reviewed within seven business days of receipt. Customers may state a preferred resolution, but Alderwood will decide whether to repair, replace, or refund the item.",
+          "What is not covered: Damage caused by exposure to moisture, misuse, or repairs made by anyone other than Alderwood is not covered. Slight color variation in natural wood is normal and is not considered a defect.",
+          "Approved claims: For approved claims, Alderwood pays all costs for parts, labor, and delivery within its service area. Customers outside the service area pay shipping only."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What problem does Ms. Raman report on the form?",
+        "question_zh": "Raman 女士在表單上回報了什麼問題?",
+        "options": [
+          "One of the table's extension leaves is warping.",
+          "The table was delivered late.",
+          "A table leg is broken.",
+          "The finish has faded in the sunlight."
+        ],
+        "answer_index": 0,
+        "explanation_zh": "表單的問題描述寫到其中一片延伸板無法與桌面齊平，木板向上彎曲變形，因此答案是 (A)。"
+      },
+      {
+        "question_en": "How much did Ms. Raman pay for the table itself, not including delivery?",
+        "question_zh": "Raman 女士購買桌子本身(不含運費)花了多少錢?",
+        "options": [
+          "$60",
+          "$1,200",
+          "$1,260",
+          "$1,320"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "表單寫明總付款為 $1,260，其中運費為 $60，所以桌子本身是 1,260 減 60 等於 $1,200。選項 (C) 是含運費的總額，因此答案是 (B)。"
+      },
+      {
+        "question_en": "Why was Ms. Raman's claim approved?",
+        "question_zh": "Raman 女士的申請為何獲得核准?",
+        "options": [
+          "She bought an extended warranty.",
+          "Moisture damage is covered by the policy.",
+          "The problem was judged to be a manufacturing defect.",
+          "She requested a full refund."
+        ],
+        "answer_index": 2,
+        "explanation_zh": "電子郵件說明她描述的彎曲屬於製造瑕疵，且購買時間仍在結構零件的保固期內，因此答案是 (C)。"
+      },
+      {
+        "question_en": "When will the replacement leaf most likely be ready?",
+        "question_zh": "更換用的延伸板最可能在何時完成?",
+        "options": [
+          "October 23",
+          "November 2",
+          "November 16",
+          "November 6"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "電子郵件日期是 10 月 16 日，信中說約三週後完成，10 月 16 日加三週是 11 月 6 日，因此答案是 (D)。"
+      },
+      {
+        "question_en": "Until when are the structural parts of Ms. Raman's table covered by the warranty?",
+        "question_zh": "Raman 女士桌子的結構零件保固到何時為止?",
+        "options": [
+          "March 14, 2027",
+          "March 14, 2029",
+          "March 14, 2031",
+          "March 14, 2036"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "表單顯示購買日是 2026 年 3 月 14 日，保固政策說結構零件保固五年，所以到 2031 年 3 月 14 日，需合併表單與政策才能得出，因此答案是 (C)。"
+      },
+      {
+        "question_en": "According to the warranty policy, which of the following would NOT be covered?",
+        "question_zh": "根據保固政策，下列何者「不」在保固範圍內?",
+        "options": [
+          "A shelf that swells after being kept in a flooded basement",
+          "A chair frame that cracks in the fourth year because of a defect",
+          "A table leg that splits in the second year because of a flaw in the wood",
+          "An extension mechanism that jams in the third year because of faulty workmanship"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "政策明載因接觸水氣造成的損壞不在保固範圍內，其他三項都是結構零件在五年內因瑕疵或工藝問題而損壞，屬於保固範圍，因此答案是 (A)。"
+      },
+      {
+        "question_en": "What can be inferred about a slight color difference in the replacement leaf?",
+        "question_zh": "關於更換延伸板可能出現的輕微色差，可以推論出什麼?",
+        "options": [
+          "It would entitle Ms. Raman to a full refund.",
+          "Alderwood would not consider it a defect.",
+          "It will remain permanently.",
+          "It was caused by moisture damage."
+        ],
+        "answer_index": 1,
+        "explanation_zh": "電子郵件指出新板的顏色起初可能略淡，之後會逐漸消退，而政策說明天然木材的輕微色差屬正常、不視為瑕疵，因此公司不會把它當成瑕疵，因此答案是 (B)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-28",
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "letter",
+        "title": "Letter: Renewal of Your Business Insurance Policy",
+        "meta": [
+          {
+            "label": "Date:",
+            "value": "October 19"
+          },
+          {
+            "label": "To:",
+            "value": "Joaquin Beltran, Owner, Beltran Flowers"
+          },
+          {
+            "label": "Policy No.:",
+            "value": "CS-40871"
+          },
+          {
+            "label": "Re:",
+            "value": "Renewal of Your Business Insurance Policy"
+          }
+        ],
+        "paragraphs": [
+          "Dear Mr. Beltran,",
+          "Your business insurance policy with Cardinal Shield Insurance is due to expire on December 31. We are writing to let you know that we would be glad to renew it for another year. When we reviewed your account, we noticed that you added a delivery van to your business in June. We have updated your coverage to include the vehicle, and this is the main reason for a change in your premium.",
+          "The renewal premium is $2,520, which is 5 percent higher than this year's premium of $2,400. You may pay in four quarterly installments of $630 each. Alternatively, if you pay the full amount by November 30, you will receive a 10 percent discount on the renewal premium.",
+          "To avoid any gap in your coverage, please sign and return the enclosed renewal confirmation form by November 15. If you would like to adjust the amount of coverage, contact your agent, Lena Hoffmann, at 555-0119 before that date.",
+          "We appreciate your continued trust in Cardinal Shield and look forward to serving Beltran Flowers in the coming year.",
+          "Sincerely,",
+          "Warren Pike",
+          "Customer Accounts, Cardinal Shield Insurance"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the letter?",
+        "question_zh": "這封信的目的為何?",
+        "options": [
+          "To announce a new insurance product",
+          "To request payment for a late premium",
+          "To report an accident claim",
+          "To inform a customer about renewing an insurance policy"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "信中說明保單即將到期，並提供續約保費、付款方式與回覆期限，目的是通知客戶續約事宜，因此答案是 (D)。"
+      },
+      {
+        "question_en": "How much will Mr. Beltran pay if he takes the discount?",
+        "question_zh": "如果 Beltran 先生選擇享有折扣，他要付多少錢?",
+        "options": [
+          "$2,160",
+          "$2,268",
+          "$2,400",
+          "$2,520"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "續約保費是 $2,520，十一月三十日前全額付清可打九折，2,520 乘以 0.9 等於 $2,268，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What is Mr. Beltran asked to do by November 15?",
+        "question_zh": "Beltran 先生被要求在 11 月 15 日前做什麼?",
+        "options": [
+          "Pay the full premium",
+          "Call the agent to cancel the policy",
+          "Return a signed renewal confirmation form",
+          "Send photographs of the van"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "信中要求在 11 月 15 日前簽署並寄回續約確認表。全額付款的期限是 11 月 30 日，不是 11 月 15 日，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What can be inferred about Beltran Flowers?",
+        "question_zh": "關於 Beltran Flowers，可以推論出什麼?",
+        "options": [
+          "It expanded its operations this year.",
+          "It filed several claims this year.",
+          "It plans to move to a new location.",
+          "It switched insurers last year."
+        ],
+        "answer_index": 0,
+        "explanation_zh": "信中提到該公司六月新增了一輛送貨車，並因此調整保障，可推論公司今年擴大了營運，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-29",
+    "type": "single",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "advertisement",
+        "title": "Pixelhaven Electronics: Trade-In Week",
+        "meta": [],
+        "paragraphs": [
+          "Pixelhaven Electronics Trade-In Week, November 2 to November 8",
+          "Is your old phone sitting in a drawer? Bring it to Pixelhaven Electronics from Monday, November 2, through Sunday, November 8, and turn it into store credit toward something new. We accept working smartphones, tablets, and laptops of any brand.",
+          "Trade-in values: smartphones up to $200, tablets up to $120, and laptops up to $350. The final value depends on the device's condition, which our technicians will check on the spot in about ten minutes. Bring the original box and charger and receive a 10 percent bonus on top of the quoted value.",
+          "Please back up your data before you come in. Our staff will erase all personal information from every device. A valid photo ID is required for all trade-ins.",
+          "Store credit can be used on any new item in our store and remains valid until January 31, but it cannot be exchanged for cash. The first 40 customers each day will also receive a free phone case. Visit us at 220 Harbor Avenue, open 10:00 A.M. to 8:00 P.M. Monday through Saturday, and 11:00 A.M. to 6:00 P.M. on Sunday."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is being advertised?",
+        "question_zh": "這則廣告在宣傳什麼?",
+        "options": [
+          "A sale on refurbished laptops",
+          "A repair service for broken phones",
+          "A program for exchanging used devices for store credit",
+          "A job fair for technicians"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "廣告說明顧客可把舊的手機、平板與筆電換成店內抵用金，這是一項以舊換新的活動，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What are customers advised to do before they come to the store?",
+        "question_zh": "廣告建議顧客在到店前先做什麼?",
+        "options": [
+          "Back up their data",
+          "Erase the device themselves",
+          "Buy a new device online",
+          "Register on the store's Web site"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "第三段請顧客在到店前先備份資料，個資會由店員清除，不需要自己清除，因此答案是 (A)。"
+      },
+      {
+        "question_en": "A customer trades in a tablet valued at $100 and brings the original box. How much store credit will the customer receive?",
+        "question_zh": "一位顧客以估價 $100 的平板舊換新，且帶了原廠包裝盒。顧客可獲得多少抵用金?",
+        "options": [
+          "$100",
+          "$110",
+          "$120",
+          "$130"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "帶原廠盒與充電器可在估價之上多得 10% 加成，100 加上 10 等於 $110，且未超過平板上限 $120，因此答案是 (B)。"
+      },
+      {
+        "question_en": "Which of the following is true about the store credit?",
+        "question_zh": "關於店內抵用金，下列何者正確?",
+        "options": [
+          "It can be exchanged for cash.",
+          "It expires on November 8.",
+          "It is valid only for phone purchases.",
+          "It can be used for any new item in the store."
+        ],
+        "answer_index": 3,
+        "explanation_zh": "最後一段說明抵用金可用於店內任何新品，有效期至 1 月 31 日，且不能換成現金，因此答案是 (D)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-30",
+    "type": "double",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Volunteer Shift Registration Form: Eastgate Community Food Bank",
+        "meta": [
+          {
+            "label": "Volunteer:",
+            "value": "Naomi Fischer"
+          },
+          {
+            "label": "Organization:",
+            "value": "Hartwell Software"
+          },
+          {
+            "label": "Group Size:",
+            "value": "12"
+          },
+          {
+            "label": "Requested Date:",
+            "value": "Saturday, November 14"
+          },
+          {
+            "label": "Requested Shift:",
+            "value": "9:00 A.M. to 12:00 P.M."
+          },
+          {
+            "label": "Submitted:",
+            "value": "October 26"
+          }
+        ],
+        "paragraphs": [
+          "Activities our group would like to take part in (Yes or No): Sorting donated food, Yes. Packing family boxes, Yes. Loading delivery trucks, No.",
+          "Special notes: Two members of our group are 17 years old. Please let us know whether they are allowed to volunteer and what is required.",
+          "Donation: Our employees have collected about 300 cans of food at our office. We would like to know where and when we can drop them off.",
+          "Our company will provide matching T-shirts for everyone in the group, and all volunteers will wear closed-toe shoes. Please contact me by e-mail with your confirmation.",
+          "I understand that all volunteers must attend a 15-minute safety briefing before their shift begins. Signature: Naomi Fischer"
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail: Reply to Volunteer Registration for November 14",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Carlos Medina <cmedina@eastgatefoodbank.org>"
+          },
+          {
+            "label": "To:",
+            "value": "Naomi Fischer <nfischer@hartwellsoft.com>"
+          },
+          {
+            "label": "Subject:",
+            "value": "Re: Volunteer registration for November 14"
+          },
+          {
+            "label": "Date:",
+            "value": "October 27"
+          }
+        ],
+        "paragraphs": [
+          "Dear Ms. Fischer,",
+          "Thank you for registering your group with Eastgate Community Food Bank. Unfortunately, the morning shift on November 14 is already full. However, we still have room for 15 volunteers in the afternoon shift, which runs from 1:00 P.M. to 4:00 P.M. on the same day. I hope that this works for your group.",
+          "Volunteers aged 16 and 17 are welcome, provided that we receive a permission form signed by a parent or guardian. The form is attached. Because minors may not operate warehouse equipment, they will be assigned to sorting or packing, which matches the activities you selected.",
+          "Please arrive by 12:45 P.M. for the safety briefing. Your food donation can be dropped off at the loading dock any weekday between 8:00 A.M. and 4:00 P.M., or you may bring it with you on the day of the shift.",
+          "Please reply to confirm the new time.",
+          "Sincerely,",
+          "Carlos Medina",
+          "Volunteer Coordinator, Eastgate Community Food Bank"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "In which activities does Ms. Fischer's group want to take part?",
+        "question_zh": "Fischer 女士的團體想參加哪些活動?",
+        "options": [
+          "Sorting food and loading trucks",
+          "Packing boxes and loading trucks",
+          "Loading trucks and cleaning the warehouse",
+          "Sorting food and packing boxes"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "表單中分類食物與包裝家庭箱勾選 Yes，裝載送貨卡車勾選 No，因此答案是 (D)。"
+      },
+      {
+        "question_en": "What does Ms. Fischer ask about in the special notes?",
+        "question_zh": "Fischer 女士在特別備註中詢問什麼?",
+        "options": [
+          "Whether two 17-year-old members may volunteer",
+          "Whether lunch will be provided",
+          "Whether T-shirts are required",
+          "Whether the shift can be shortened"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "備註寫到團體中有兩位十七歲成員，詢問他們能否參與以及需要什麼條件，因此答案是 (A)。"
+      },
+      {
+        "question_en": "Why can the group NOT take the morning shift?",
+        "question_zh": "為什麼這個團體無法參加早上的班次?",
+        "options": [
+          "It is only for experienced volunteers.",
+          "It has been canceled.",
+          "It is already full.",
+          "It is reserved for minors."
+        ],
+        "answer_index": 2,
+        "explanation_zh": "電子郵件第二段說明十一月十四日早班已經額滿，因此答案是 (C)。"
+      },
+      {
+        "question_en": "By what time should the group arrive on November 14?",
+        "question_zh": "團體在 11 月 14 日應該在何時之前抵達?",
+        "options": [
+          "8:45 A.M.",
+          "12:45 P.M.",
+          "1:00 P.M.",
+          "4:00 P.M."
+        ],
+        "answer_index": 1,
+        "explanation_zh": "原本申請的早班已額滿，改為下午 1 點開始的班次，並要求在 12:45 P.M. 前抵達參加安全說明，需結合兩份文件判斷，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What must be provided for the two 17-year-olds?",
+        "question_zh": "兩位十七歲成員需要提供什麼?",
+        "options": [
+          "A letter from their school",
+          "A medical certificate",
+          "Proof of previous volunteer experience",
+          "A permission form signed by a parent or guardian"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "電子郵件說明 16 到 17 歲的志工須繳交家長或監護人簽名的同意書，因此答案是 (D)。"
+      },
+      {
+        "question_en": "How many places will remain in the afternoon shift if Ms. Fischer's group joins?",
+        "question_zh": "如果 Fischer 女士的團體加入，下午班次還會剩下幾個名額?",
+        "options": [
+          "1",
+          "2",
+          "3",
+          "12"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "電子郵件說下午班次還有 15 個名額，表單顯示團體有 12 人，所以剩下 15 減 12 等於 3 個名額，因此答案是 (C)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-31",
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "email",
+        "title": "E-mail: Revised Courtyard Plan for Hartwell Community Center",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Elena Marquez <emarquez@greenwaylandscape.com>"
+          },
+          {
+            "label": "To:",
+            "value": "Samuel Okonkwo <sokonkwo@hartwellcc.org>"
+          },
+          {
+            "label": "Subject:",
+            "value": "Revised courtyard plan"
+          },
+          {
+            "label": "Date:",
+            "value": "October 27"
+          }
+        ],
+        "paragraphs": [
+          "Dear Mr. Okonkwo,",
+          "Thank you for meeting with us on October 21. As promised, I am attaching the revised site plan for the Hartwell Community Center courtyard. Based on your feedback, we made three changes. First, we replaced the large lawn with drought-resistant ground cover, which will significantly reduce water use. Second, we increased the number of benches from four to six. Third, we moved the fountain to the east side of the courtyard so that it is visible from the main lobby.",
+          "These changes raise the cost estimate from $34,000 to $37,400. We believe the additional investment will pay off through lower maintenance and watering costs over time.",
+          "If the board approves the budget at its November 12 meeting, we can begin construction on Monday, March 1, and expect to complete the work in about six weeks. Because many of the plants must be ordered well in advance, we would appreciate hearing the board's decision as soon as possible.",
+          "I am available to meet again on November 3 or 5 if you would like to discuss the plan further.",
+          "Best regards,",
+          "Elena Marquez",
+          "Project Designer, Greenway Landscape Design"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "Why did Ms. Marquez write the e-mail?",
+        "question_zh": "Marquez 女士為什麼寫這封電子郵件?",
+        "options": [
+          "To present a modified design and its cost",
+          "To cancel a project",
+          "To invite Mr. Okonkwo to a board meeting",
+          "To ask for payment of an invoice"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "信中附上修改後的場地規劃圖，說明三項更動與新的預估費用，因此答案是 (A)。"
+      },
+      {
+        "question_en": "Which change was NOT made to the original plan?",
+        "question_zh": "下列哪一項「不是」對原規劃所做的更動?",
+        "options": [
+          "The lawn was replaced with ground cover.",
+          "More benches were added.",
+          "The fountain was moved to the east side.",
+          "The courtyard was made smaller."
+        ],
+        "answer_index": 3,
+        "explanation_zh": "信中提到的三項更動是以耐旱地被取代草坪、長椅由四張增加為六張，以及將噴水池移到東側，並沒有縮小中庭，因此答案是 (D)。"
+      },
+      {
+        "question_en": "How much more will the revised plan cost than the original?",
+        "question_zh": "修改後的規劃比原規劃多花多少錢?",
+        "options": [
+          "$2,400",
+          "$3,400",
+          "$4,400",
+          "$37,400"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "預估費用由 $34,000 提高到 $37,400，差額是 37,400 減 34,000 等於 $3,400，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What is suggested about the construction?",
+        "question_zh": "關於施工，信中暗示了什麼?",
+        "options": [
+          "It will begin in November.",
+          "It has already received board approval.",
+          "It depends on a decision by the board.",
+          "It will take about six months."
+        ],
+        "answer_index": 2,
+        "explanation_zh": "信中說若董事會在 11 月 12 日核准預算才能在 3 月 1 日動工，表示施工取決於董事會的決定，尚未獲得核准，工期約六週而非六個月，因此答案是 (C)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-01",
+    "type": "single",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "advertisement",
+        "title": "Larkspur Animal Hospital – Pet Wellness Month",
+        "meta": [
+          {
+            "label": "Dates:",
+            "value": "November 2 – November 30"
+          },
+          {
+            "label": "Location:",
+            "value": "215 Willow Lane, Brookfield"
+          }
+        ],
+        "paragraphs": [
+          "Is your pet due for a check-up? Larkspur Animal Hospital is celebrating Pet Wellness Month from November 2 to November 30. During this time, every dog or cat can receive a complete nose-to-tail exam for just $29 (regularly $65). Our veterinarians will check your pet's weight, heart, and teeth, and will review its vaccination record.",
+          "Pets aged eight years or older also qualify for a free senior blood panel, an $80 value, when it is scheduled together with the exam. Need vaccines? Our Core Vaccine Package is available for $45 (regularly $60) and can be added to any visit. Please note that Wellness Month offers cannot be combined with other discounts or coupons.",
+          "On Wednesday, November 18, at 6:30 p.m., Dr. Amara Singh will lead a free seminar on choosing the right diet for pets of every age. Seating is limited to 30 guests, so please reserve a place at the front desk.",
+          "Appointments are required for exams and can be booked at www.larkspurah.com or by calling (555) 014-7782. We are open Monday through Friday from 8 a.m. to 6 p.m. and on Saturday from 9 a.m. to 1 p.m. The hospital will be closed on Thursday, November 26, for the holiday."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the advertisement?",
+        "question_zh": "這則廣告的目的為何?",
+        "options": [
+          "To announce that a new veterinarian has joined the staff",
+          "To advertise a pet food sale",
+          "To recruit volunteers for an animal shelter",
+          "To promote discounted pet health services"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "廣告說明 Larkspur Animal Hospital 在11月的寵物健康月提供優惠的健康檢查與疫苗服務，目的是推廣折扣的寵物健康服務，其餘選項文中均未提到，因此答案是 (D)。"
+      },
+      {
+        "question_en": "How much can a customer save on a nose-to-tail exam during Pet Wellness Month?",
+        "question_zh": "在寵物健康月期間，顧客做一次全面健檢可以省下多少錢?",
+        "options": [
+          "$29",
+          "$36",
+          "$45",
+          "$65"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第一段提到全面健檢原價65美元、活動價29美元，65減29等於36美元，因此可省下36美元，因此答案是 (B)。"
+      },
+      {
+        "question_en": "Which pet would most likely receive a free blood panel?",
+        "question_zh": "下列哪一隻寵物最可能獲得免費的血液檢查?",
+        "options": [
+          "A 10-year-old cat scheduled for an exam",
+          "A 3-year-old dog receiving the Core Vaccine Package only",
+          "A puppy whose owner attends the seminar",
+          "A 6-year-old dog scheduled for an exam"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "第二段指出8歲(含)以上的寵物在預約健檢時可享免費高齡血液檢查，只有10歲的貓同時符合年齡與預約健檢兩項條件；3歲的狗只打疫苗、小狗和6歲的狗年齡都不到8歲，因此答案是 (A)。"
+      },
+      {
+        "question_en": "The word \"qualify\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"qualify\" 一詞最接近下列何者的意思?",
+        "options": [
+          "pass a test",
+          "be examined",
+          "be eligible",
+          "be excused"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "\"qualify for a free blood panel\" 指「有資格」享有免費血液檢查，與 \"be eligible\" 意思最接近，因此答案是 (C)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-02",
+    "type": "single",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Notice: Water Service Shutoff on Harlan Avenue",
+        "meta": [],
+        "paragraphs": [
+          "Riverbend Water Authority will replace a main water pipe along Harlan Avenue between 4th Street and 9th Street. To complete the work safely, water service to all homes and businesses on those blocks will be shut off on Tuesday, November 10, from 9 a.m. to 3 p.m.",
+          "Customers should store enough water for drinking, cooking, and cleaning before the shutoff begins. When service is restored, water may look cloudy or slightly discolored for a short time. This is not harmful, and running cold water through your faucets for several minutes will usually clear it up.",
+          "If heavy rain makes the work unsafe, the shutoff will be moved to Thursday, November 12, during the same hours. Updates will be posted at www.riverbendwater.com and sent by text message to customers who have registered a mobile number. Residents who rely on medical equipment that requires water should call (555) 016-3300 by November 6 to arrange a free delivery of bottled water.",
+          "Free bottled water will also be available to all affected customers at Fire Station 3 on Harlan Avenue from 9 a.m. to 3 p.m. on the day of the shutoff. We apologize for the inconvenience and thank you for your understanding."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "Why was the notice written?",
+        "question_zh": "為什麼要發布這則公告?",
+        "options": [
+          "To announce an increase in water rates",
+          "To ask customers to conserve water during a drought",
+          "To warn customers of a temporary interruption in service",
+          "To explain how to read a water bill"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "公告說明 Harlan Avenue 部分路段將因更換主水管而在11月10日暫停供水，目的是通知客戶暫時停水，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What will happen if the weather is bad on November 10?",
+        "question_zh": "如果11月10日天氣不佳，會發生什麼事?",
+        "options": [
+          "The shutoff will be moved to November 12",
+          "The shutoff will be canceled",
+          "The shutoff will be extended until the evening",
+          "The shutoff will begin earlier in the morning"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "第三段提到若大雨使施工不安全，停水將改到11月12日星期四，時間相同，並非取消、延長或提早，因此答案是 (A)。"
+      },
+      {
+        "question_en": "What is NOT mentioned in the notice?",
+        "question_zh": "關於這則公告，下列何者沒有被提到?",
+        "options": [
+          "Water may look cloudy after service returns.",
+          "Free bottled water will be offered at a fire station.",
+          "Customers with registered mobile numbers will receive text updates.",
+          "Affected customers will receive a credit on their bills."
+        ],
+        "answer_index": 3,
+        "explanation_zh": "公告提到水可能暫時混濁、消防站提供免費瓶裝水、已登記手機的客戶會收到簡訊通知，但完全沒有提到帳單減免，因此未被提到的是帳單折抵，因此答案是 (D)。"
+      },
+      {
+        "question_en": "The word \"restored\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"restored\" 一詞最接近下列何者的意思?",
+        "options": [
+          "replaced",
+          "brought back",
+          "reduced",
+          "stored"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "\"When service is restored\" 指供水「恢復」，與 \"brought back\" 意思最接近，因此答案是 (B)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-03",
+    "type": "double",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "letter",
+        "title": "Letter: Winter Supply Program Invitation",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Rosalind Achterberg, Millstone Valley Growers Cooperative"
+          },
+          {
+            "label": "To:",
+            "value": "Hamid Rahimi, Saltmarsh Kitchen"
+          },
+          {
+            "label": "Date:",
+            "value": "October 28"
+          }
+        ],
+        "paragraphs": [
+          "Dear Chef Rahimi,",
+          "Thank you for visiting our stand at the Riverside Food Fair. On behalf of Millstone Valley Growers Cooperative, a group of fourteen family farms within sixty miles of the city, I am pleased to invite Saltmarsh Kitchen to join our Winter Supply Program.",
+          "The program runs for fifteen weeks, from the week of November 16 through Friday, February 26, with one delivery each Tuesday morning before 7:00. Two crate sizes are available. The Basic crate, $62 per week, contains kale, carrots, beets, potatoes, and onions. The Premium crate, $85 per week, includes everything in the Basic crate plus winter squash, mushrooms, and fresh herbs. Restaurants ordering four or more crates per week receive $25 off the weekly total.",
+          "To lock in these prices for the entire season, please return the signed agreement to our office by November 6. After that date, prices may change to reflect the harvest.",
+          "We look forward to supplying your kitchen.",
+          "Sincerely,\nRosalind Achterberg\nSales Director, Millstone Valley Growers Cooperative"
+        ],
+        "table": null
+      },
+      {
+        "kind": "memo",
+        "title": "Memo: Winter Produce Deliveries",
+        "meta": [
+          {
+            "label": "To:",
+            "value": "All Kitchen Staff"
+          },
+          {
+            "label": "From:",
+            "value": "Hamid Rahimi, Executive Chef"
+          },
+          {
+            "label": "Date:",
+            "value": "November 2"
+          },
+          {
+            "label": "Subject:",
+            "value": "Winter produce deliveries"
+          }
+        ],
+        "paragraphs": [
+          "As you know, we have signed up for the Winter Supply Program with Millstone Valley Growers Cooperative. We ordered four crates each week: three Premium and one Basic. The first delivery will arrive on Tuesday, November 17, and every Tuesday after that. The driver will reach the back door at about 6:45 a.m., so the opening cook on Tuesdays must be in the kitchen by 6:30 to receive and check the crates.",
+          "Please keep the following in mind. The top two shelves of the walk-in cooler will be reserved for the crates, so rotate older stock to the front. Report any damaged vegetables to me the same day so that I can request a credit from the cooperative.",
+          "Because mushrooms and winter squash will now be available every week, I am designing a new winter menu that will launch on November 20. Please attend the tasting on Thursday, November 12, at 3:00 p.m. to try the first dishes.",
+          "Thank you for your help with this change.",
+          "Hamid Rahimi"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the letter?",
+        "question_zh": "這封信的目的為何?",
+        "options": [
+          "To announce the closing of the cooperative's farms",
+          "To request payment for an earlier order",
+          "To advertise the Riverside Food Fair",
+          "To invite a restaurant to join a seasonal supply program"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "信中表示邀請 Saltmarsh Kitchen 加入合作社的冬季供貨計畫，因此答案是 (D)。"
+      },
+      {
+        "question_en": "What does the Premium crate include that the Basic crate does not?",
+        "question_zh": "高級箱含有哪些基本箱沒有的內容?",
+        "options": [
+          "Winter squash, mushrooms, and fresh herbs",
+          "Kale and carrots",
+          "Beets and potatoes",
+          "Onions and fresh fruit"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "信中說明高級箱包含基本箱的所有品項，再加上冬南瓜、菇類與新鮮香草；甘藍、紅蘿蔔、甜菜、馬鈴薯、洋蔥則是兩種箱子都有，因此答案是 (A)。"
+      },
+      {
+        "question_en": "What is NOT stated about Millstone Valley Growers Cooperative in the letter?",
+        "question_zh": "關於 Millstone Valley Growers Cooperative，信中沒有提到下列何者?",
+        "options": [
+          "It is made up of fourteen family farms",
+          "It offers a discount for larger orders",
+          "It delivers produce twice a week",
+          "It had a stand at a food fair"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "信中提到合作社由十四個家庭農場組成、四箱以上有折扣、並在美食展設攤，但送貨是每週二一次，並非每週兩次，因此答案是 (C)。"
+      },
+      {
+        "question_en": "How much will Saltmarsh Kitchen pay the cooperative each week?",
+        "question_zh": "Saltmarsh Kitchen 每週要付給合作社多少錢?",
+        "options": [
+          "$317",
+          "$292",
+          "$255",
+          "$267"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "備忘錄指出每週訂三箱高級箱與一箱基本箱，即 3 × 85 + 62 = 317 美元；共四箱符合折扣條件，信中說明可折25美元，所以是 317 − 25 = 292 美元，因此答案是 (B)。"
+      },
+      {
+        "question_en": "When will the first delivery arrive at Saltmarsh Kitchen?",
+        "question_zh": "Saltmarsh Kitchen 第一次會在何時收到貨?",
+        "options": [
+          "November 12",
+          "November 16",
+          "November 20",
+          "November 17"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "信中說計畫從11月16日當週開始、每週二送貨，備忘錄也確認首次送貨為週二11月17日；11月12日是試吃會，11月20日是新菜單上市日，因此答案是 (D)。"
+      },
+      {
+        "question_en": "What can be inferred about Chef Rahimi's agreement with the cooperative?",
+        "question_zh": "關於 Rahimi 主廚與合作社的協議，可以推論出什麼?",
+        "options": [
+          "It was finalized before the price-lock deadline",
+          "It includes deliveries twice a week",
+          "It will end in January",
+          "It was arranged through a wholesaler"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "信中規定須在11月6日前交回簽署協議才能鎖定價格，而11月2日的備忘錄已說「我們已簽約」，可見是在期限前完成；計畫為每週一次送貨並持續到2月26日，且是直接與合作社簽約，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "type": "single",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "advertisement",
+        "title": "Willowmere Family Dental – Fall Smile Savings",
+        "meta": [
+          {
+            "label": "Offer Period:",
+            "value": "November 9 – December 18"
+          },
+          {
+            "label": "Phone:",
+            "value": "555-0142"
+          }
+        ],
+        "paragraphs": [
+          "Willowmere Family Dental invites new patients to start the season with a healthier smile. From November 9 through December 18, anyone who books a first visit will receive a complete exam, digital X-rays, and a professional cleaning for just $79. The regular price for these services is $220.",
+          "Current patients can enjoy savings as well. Refer a friend or family member who completes a new-patient visit, and you will receive a $30 credit toward your next treatment. Credits cannot be redeemed for cash and expire on March 31. Teeth whitening is also discounted: take 20 percent off any whitening package when you purchase it during the same visit as a cleaning.",
+          "To qualify for the $79 offer, you must not have visited our clinic within the past two years. Patients with dental insurance may still use their coverage for any additional treatment recommended after the exam. Children under 12 are welcome and will receive a free toothbrush set.",
+          "We are open Monday through Thursday from 8:30 A.M. to 6:00 P.M. and Saturday from 9:00 A.M. to 1:00 P.M. Evening appointments fill quickly, so we recommend booking at least one week in advance at www.willowmeredental.example or by calling 555-0142."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the advertisement?",
+        "question_zh": "這則廣告的目的為何？",
+        "options": [
+          "To announce the opening of a new clinic location",
+          "To promote special offers for new and current patients",
+          "To recruit dental hygienists",
+          "To explain changes to insurance coverage"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "廣告開頭邀請新病患以優惠價格就診，後文又介紹現有病患的推薦回饋與美白折扣，可見其目的是推廣針對新舊病患的優惠，因此答案是 (B)。"
+      },
+      {
+        "question_en": "How much can a new patient save on the first visit during the promotion?",
+        "question_zh": "促銷期間，新病患的首次就診可以省下多少錢？",
+        "options": [
+          "$30",
+          "$79",
+          "$141",
+          "$220"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "第一段指出首次就診原價為 $220、優惠價為 $79，220 − 79 = 141，所以可省下 $141，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What is NOT included in the $79 first-visit offer?",
+        "question_zh": "下列哪一項「不」包含在 79 美元的首次就診優惠中？",
+        "options": [
+          "A complete exam",
+          "Digital X-rays",
+          "A professional cleaning",
+          "A teeth whitening package"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "第一段說明 $79 包含完整檢查、數位 X 光與專業洗牙；美白方案在第二段是另外購買才享 8 折，並不包含在內，因此答案是 (D)。"
+      },
+      {
+        "question_en": "Who would most likely be eligible for the $79 offer?",
+        "question_zh": "下列哪一位最有可能符合 79 美元優惠的資格？",
+        "options": [
+          "A resident who last had a cleaning at the clinic three years ago",
+          "A patient who visited the clinic last spring",
+          "A patient who had an exam at the clinic 14 months ago",
+          "A patient who was treated at the clinic in January of this year"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "第三段規定，必須在過去兩年內未曾到該診所就診才符合資格。三年前就診已超過兩年，符合條件；其餘三位（去年春天、14 個月前、今年一月）都在兩年內來過，不符資格，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-05",
+    "type": "single",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Notice: New Borrowing Rules at Larchmont Public Library",
+        "meta": [
+          {
+            "label": "Posted:",
+            "value": "November 5"
+          },
+          {
+            "label": "Effective:",
+            "value": "Monday, November 30"
+          },
+          {
+            "label": "Information:",
+            "value": "Any service desk or 555-0178"
+          }
+        ],
+        "paragraphs": [
+          "Larchmont Public Library will introduce updated borrowing rules at all three of its locations beginning Monday, November 30. The changes are designed to shorten waiting lists for popular titles and to make renewals easier for our members.",
+          "Under the new rules, each library card holder may check out up to 15 books and up to 3 DVDs at one time. The current limits are 10 books and 5 DVDs. Titles marked \"Quick Pick\" on the shelf, which are new releases in high demand, may be borrowed for 14 days and cannot be renewed. All other books will keep the 21-day loan period and may be renewed online up to two times, provided that no other patron has placed a hold on them.",
+          "Overdue fines for children's books will be eliminated. Fines for all other materials will remain $0.20 per day, up to a maximum of $10 per item. Items checked out before November 30 will keep their original due dates and will not be affected by the new rules.",
+          "Please note that cardholders with an outstanding balance of $15 or more will be unable to borrow additional items until the balance is paid. Updated brochures will be available at the front desk of each location from November 16."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the notice?",
+        "question_zh": "這則公告的目的為何？",
+        "options": [
+          "To announce a temporary closure of the library",
+          "To invite residents to a community event",
+          "To inform members of changes to borrowing rules",
+          "To request donations of books and DVDs"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "公告開頭即說明圖書館將自 11 月 30 日起實施新的借閱規則，後文逐項說明借書上限、借期與罰款，因此答案是 (C)。"
+      },
+      {
+        "question_en": "By how many will the book limit per cardholder increase?",
+        "question_zh": "每位持卡人的借書上限將增加多少本？",
+        "options": [
+          "3",
+          "5",
+          "10",
+          "15"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第二段指出新上限為 15 本，目前上限為 10 本，15 − 10 = 5，因此增加 5 本，因此答案是 (B)。"
+      },
+      {
+        "question_en": "Which of the following items most likely cannot be renewed?",
+        "question_zh": "下列哪一項資料最有可能無法續借？",
+        "options": [
+          "A classic novel with no holds waiting",
+          "A gardening book borrowed for 21 days",
+          "A children's picture book",
+          "A new release marked \"Quick Pick\""
+        ],
+        "answer_index": 3,
+        "explanation_zh": "第二段說明標示 \"Quick Pick\" 的熱門新書借期 14 天且不可續借；其他一般書籍（包含經典小說、園藝書與兒童繪本）在無人預約時都可線上續借，因此答案是 (D)。"
+      },
+      {
+        "question_en": "The word \"outstanding\" in paragraph 4 is closest in meaning to",
+        "question_zh": "第四段中的 \"outstanding\" 一字，意思最接近下列哪一個？",
+        "options": [
+          "unpaid",
+          "excellent",
+          "impressive",
+          "noticeable"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"outstanding balance\" 指「尚未繳清的欠款」，與 unpaid 意思最接近；excellent 與 impressive 是「傑出」的意思，不符語境，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-06",
+    "type": "single",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Marlowe & Finch Publishing – Examination Copy Request Form",
+        "meta": [
+          {
+            "label": "Form No.:",
+            "value": "EX-7731"
+          },
+          {
+            "label": "Requester:",
+            "value": "Prof. Anita Desrosiers"
+          },
+          {
+            "label": "Institution:",
+            "value": "Calder Community College"
+          },
+          {
+            "label": "Course:",
+            "value": "BUS 210, Business Writing"
+          },
+          {
+            "label": "Date:",
+            "value": "November 6"
+          }
+        ],
+        "paragraphs": [
+          "Title requested: Writing for the Workplace, 4th edition (list price $90.00). Format: one print copy with 60-day online access to the companion exercises. Expected enrollment: 28 students in the spring semester, which begins January 11. Ship to: Department of Business Studies, Calder Community College, 1200 Mill Road.",
+          "Terms: Examination copies are provided for evaluation purposes. Instructors who adopt the book for a course with 20 or more enrolled students may keep the copy at no cost. Instructors who do not adopt the book must either return the copy to Marlowe & Finch by January 15 using the prepaid label enclosed, or pay the invoice, which will be issued at the list price less a 40 percent educator discount.",
+          "Please allow 5 to 7 business days for delivery. Requests submitted without a department mailing address cannot be processed. By signing below, the requester confirms that she is an instructor currently teaching at the institution listed above.",
+          "Signature: Anita Desrosiers"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the form?",
+        "question_zh": "這份表單的目的為何?",
+        "options": [
+          "To place a bulk order for classroom textbooks",
+          "To apply for a publishing job",
+          "To report a printing error",
+          "To request a sample textbook for course evaluation"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "表單標題為審閱樣書申請表，教授申請一本教科書供課程評估使用，因此答案是 (D)。"
+      },
+      {
+        "question_en": "What must Professor Desrosiers do to keep the copy at no cost?",
+        "question_zh": "Desrosiers 教授要怎麼做才能免費保留樣書?",
+        "options": [
+          "Adopt the book for a course of at least 20 students",
+          "Return a signed form by November 20",
+          "Write a review for the publisher",
+          "Pay the shipping fee"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "第二段規定採用此書於20人以上課程的教師可免費保留樣書，其他選項在表單中都沒有提到，因此答案是 (A)。"
+      },
+      {
+        "question_en": "How much will Calder Community College be charged if the copy is neither adopted nor returned by January 15?",
+        "question_zh": "如果1月15日前既未採用也未寄回樣書，Calder Community College 會被收取多少費用?",
+        "options": [
+          "$90.00",
+          "$36.00",
+          "$54.00",
+          "$60.00"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "未採用也未寄回者須依定價扣除40%教育優惠付款，90美元 × 0.6 = 54美元；36美元是折扣金額而非應付金額，因此答案是 (C)。"
+      },
+      {
+        "question_en": "The word \"adopt\" in the second paragraph is closest in meaning to",
+        "question_zh": "第二段中的 \"adopt\" 一詞最接近下列何者的意思?",
+        "options": [
+          "borrow",
+          "choose to use",
+          "correct",
+          "sell"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "\"adopt the book for a course\" 指「選用此書作為課程教材」，與 \"choose to use\" 意思最接近，因此答案是 (B)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-07",
+    "type": "double",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "advertisement",
+        "title": "Lumen Photography Studio – Holiday Portrait Packages",
+        "meta": [
+          {
+            "label": "Sessions:",
+            "value": "November 16 – December 13"
+          },
+          {
+            "label": "Location:",
+            "value": "47 Alder Street"
+          }
+        ],
+        "paragraphs": [
+          "Capture this year's holiday memories with a professional portrait session at Lumen Photography Studio. Choose from three packages.",
+          "Classic – $85: 30-minute session, one backdrop, and 5 digital images. Family – $140: 45-minute session, two backdrops, up to 8 people, 10 digital images, and one 8x10 print. Deluxe – $220: 60-minute session, three backdrops, 20 digital images, and a framed 11x14 print. With any package, additional digital images cost $12 each.",
+          "Book by November 6 and receive 20 percent off the package price (additional images are not discounted). Digital images are delivered within seven days of the session.",
+          "Reserve your time at www.lumenphoto.com or call (555) 012-6408. A $25 deposit holds your time slot and will be applied to your final balance. Rescheduling is free up to 48 hours before the session."
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail: Question About Family Portrait Session",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Priya Nair <pnair@meridianmail.com>"
+          },
+          {
+            "label": "To:",
+            "value": "bookings@lumenphoto.com"
+          },
+          {
+            "label": "Subject:",
+            "value": "Which package should we choose?"
+          },
+          {
+            "label": "Date:",
+            "value": "November 4"
+          }
+        ],
+        "paragraphs": [
+          "Hello,",
+          "I saw your holiday portrait advertisement and would like to book a session for my family. There will be six of us, including my parents. We would like a session of about 45 minutes, and we need 14 digital images in total so that each relative can have a few. We do not need a framed print.",
+          "Could you tell me which package makes the most sense? I would like to book this week so that I can still take advantage of the discount, and I can pay the deposit online today. Our preferred date is Saturday, December 5, in the late morning if possible, since my children tend to be calmer earlier in the day. Please let me know whether that time is available and when I should expect to receive the digital images after the session.",
+          "Thank you,\nPriya Nair"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the advertisement?",
+        "question_zh": "這則廣告的目的為何?",
+        "options": [
+          "To promote portrait photography packages for the holidays",
+          "To announce the opening of a new photography school",
+          "To recruit photographers for the holiday season",
+          "To advertise a camera sale"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "廣告介紹節慶期間三種人像攝影方案與預約優惠，目的是推廣節慶人像攝影方案，因此答案是 (A)。"
+      },
+      {
+        "question_en": "What is NOT included in the Family package?",
+        "question_zh": "Family 方案不包含下列何者?",
+        "options": [
+          "A session for up to eight people",
+          "A 45-minute session",
+          "One 8x10 print",
+          "A framed 11x14 print"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "Family 方案包含最多8人、45分鐘拍攝與一張8x10照片；裱框的11x14照片是 Deluxe 方案才有的內容，因此答案是 (D)。"
+      },
+      {
+        "question_en": "Why did Ms. Nair write the e-mail?",
+        "question_zh": "為什麼奈兒女士要寫這封電子郵件?",
+        "options": [
+          "To complain about the quality of her photographs",
+          "To ask which package to choose before booking",
+          "To cancel a session on December 5",
+          "To request a refund of a deposit"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "她說明家人人數、拍攝時間與所需照片數量，詢問哪個方案最合適，並打算在本週預約，因此答案是 (B)。"
+      },
+      {
+        "question_en": "How much will Ms. Nair pay for the package and additional images, if she books by the deadline?",
+        "question_zh": "如果奈兒女士在期限內預約，方案與額外照片總共要付多少錢?",
+        "options": [
+          "$112",
+          "$140",
+          "$160",
+          "$188"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "她適合 Family 方案(人數6人、含10張數位照片)，打8折後為112美元；她需要14張，多出4張，每張12美元共48美元(不打折)，112加48等於160美元；188美元是忘了折扣的結果，因此答案是 (C)。"
+      },
+      {
+        "question_en": "Which package would cost Ms. Nair less for 14 digital images, and by how much?",
+        "question_zh": "若要取得14張數位照片，奈兒女士選哪個方案花費較少，少多少?",
+        "options": [
+          "Family, by $16",
+          "Deluxe, by $16",
+          "Family, by $60",
+          "Deluxe, by $44"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "Family 方案為112加48共160美元；Deluxe 方案含20張，打8折為176美元；176減160等於16美元，所以 Family 方案較便宜、少16美元，因此答案是 (A)。"
+      },
+      {
+        "question_en": "The phrase \"take advantage of\" in the e-mail is closest in meaning to",
+        "question_zh": "電子郵件中的 \"take advantage of\" 一詞最接近下列何者的意思?",
+        "options": [
+          "ignore",
+          "delay",
+          "pay for",
+          "make use of"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "\"take advantage of the discount\" 指「利用」折扣優惠，與 \"make use of\" 意思最接近，因此答案是 (D)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-08",
+    "type": "single",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Notice to Customers: Prescription Pickup Lockers at Bellwood Pharmacy",
+        "meta": [
+          {
+            "label": "Posted:",
+            "value": "November 8"
+          },
+          {
+            "label": "From:",
+            "value": "Bellwood Pharmacy, 410 Alder Street"
+          }
+        ],
+        "paragraphs": [
+          "Beginning Monday, December 7, Bellwood Pharmacy will offer secure prescription pickup lockers at our front entrance. The lockers will be accessible 24 hours a day, seven days a week, so customers no longer need to arrive during store hours to collect their refills.",
+          "To use the service, select the \"locker pickup\" option when you request a refill online, through our mobile app, or by phone. When your prescription is ready, you will receive a text message with a six-digit code. Enter the code on the locker keypad to open your assigned door. No photo identification is required. Codes remain valid for seven days. Any prescription not collected within that time will be returned to the pharmacy's stock, and you will need to submit a new request.",
+          "Please note that medications being started for the first time, as well as certain controlled substances, cannot be placed in the lockers. Our pharmacists must review these with you in person, so they will continue to be available only at the pharmacy counter.",
+          "Customers may register for text alerts beginning Monday, November 16, at the counter or on our Web site. If you have questions, call 555-0142 or ask any member of our pharmacy team."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the main purpose of the notice?",
+        "question_zh": "這則公告的主要目的為何?",
+        "options": [
+          "To announce the closing of the pharmacy",
+          "To advertise discounted vitamins",
+          "To announce a new way to pick up prescriptions",
+          "To report a recall of a medication"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "公告開頭即說明將於12月7日起提供處方箋取藥置物櫃，通篇都在介紹這項新服務，因此答案是 (C)。"
+      },
+      {
+        "question_en": "When will the pickup lockers become available?",
+        "question_zh": "取藥置物櫃何時開始提供使用?",
+        "options": [
+          "November 8",
+          "December 7",
+          "November 30",
+          "December 1"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第一段寫明從12月7日星期一開始；11月8日是公告張貼日，11月16日是開放登記文字通知的日期，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What will happen to a prescription left in a locker for more than seven days?",
+        "question_zh": "放在置物櫃超過七天的處方藥會如何處理?",
+        "options": [
+          "It will be returned to the pharmacy's stock",
+          "It will be mailed to the customer",
+          "It will be donated to a clinic",
+          "It will be moved to the drive-through window"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "第二段說明代碼有效期為七天，超過期限未領取的藥品會退回藥局庫存，顧客需重新提出申請，因此答案是 (A)。"
+      },
+      {
+        "question_en": "What is suggested about customers who start a new medication?",
+        "question_zh": "關於開始服用新藥的顧客，公告暗示了什麼?",
+        "options": [
+          "They cannot use the pharmacy's online refill service",
+          "They will be charged an extra fee",
+          "They must wait seven days before pickup",
+          "They must receive pharmacist counseling at the counter"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "第三段指出首次開始服用的藥物不能放入置物櫃，因為藥師必須當面說明，可見這類顧客須到櫃檯接受藥師講解，因此答案是 (D)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-09",
+    "type": "triple",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Aerowind Airways – Delayed Baggage Report Form",
+        "meta": [
+          {
+            "label": "Reference No.:",
+            "value": "DB-60418"
+          },
+          {
+            "label": "Passenger:",
+            "value": "Naveen Pillai"
+          },
+          {
+            "label": "Flight:",
+            "value": "AW 318, Portland to Chicago (connecting in Denver)"
+          },
+          {
+            "label": "Date Reported:",
+            "value": "November 2"
+          }
+        ],
+        "paragraphs": [
+          "Mr. Pillai arrived at Chicago O'Hare Airport on November 2 at 6:40 p.m. One checked bag, a black hard-shell suitcase with baggage tag AW553902, did not arrive on the flight.",
+          "Contents: business clothing, toiletries, a laptop charger, and a phone charger. Passenger statement: \"I am attending a three-day training seminar beginning tomorrow morning and need my business clothing and chargers.\"",
+          "Delivery address for the bag: Hotel Marden, 220 Lake Street, Chicago, Room 1412 (guest through November 5). Contact: Naveen Pillai, mobile 555-0187.",
+          "The passenger understands that receipts for essential items purchased because of the delay must be kept and submitted with a reimbursement request.",
+          "Received by: Aerowind Baggage Services Desk, O'Hare Airport"
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail: Delayed Baggage Report DB-60418",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Dana Whitfield <dwhitfield@aerowindairways.com>"
+          },
+          {
+            "label": "To:",
+            "value": "Naveen Pillai <npillai@tarnbridge.com>"
+          },
+          {
+            "label": "Subject:",
+            "value": "Delayed baggage report DB-60418"
+          },
+          {
+            "label": "Date:",
+            "value": "November 5"
+          }
+        ],
+        "paragraphs": [
+          "Dear Mr. Pillai,",
+          "I am pleased to confirm that your suitcase was located in Denver and delivered to Hotel Marden on November 4. Please accept our apologies for the inconvenience.",
+          "Thank you for sending your receipts for a toothbrush set and toiletries ($38.50), a dress shirt ($52.00), and a phone charger ($29.50), which total $120.00. All three purchases qualify as essential items under our policy. Because your suitcase reached you two days after your arrival, your claim covers two days of delay.",
+          "If you have any additional receipts, you may still send them through the baggage page of our Web site. Approved payments are made by bank transfer.",
+          "Sincerely,\nDana Whitfield\nBaggage Services, Aerowind Airways"
+        ],
+        "table": null
+      },
+      {
+        "kind": "webpage",
+        "title": "Aerowind Airways – Delayed Baggage Compensation",
+        "meta": [],
+        "paragraphs": [
+          "If your checked bag has not reached you within 12 hours of your flight's arrival, please report it at the airport before leaving the terminal or online within 24 hours.",
+          "We reimburse reasonable receipts for essential items, such as toiletries, basic clothing, and phone chargers, up to $50 for each full day of delay, with a maximum of $150 per bag. Items such as alcohol, jewelry, and entertainment purchases are not eligible.",
+          "Receipts must be submitted within 14 days after the bag is returned to the passenger. Approved claims are paid by bank transfer within 10 business days.",
+          "If a bag is not found within five days, the passenger will be asked to file a lost-baggage claim, which follows separate rules."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the first document?",
+        "question_zh": "第一份文件的目的為何?",
+        "options": [
+          "To report a bag that did not arrive with a passenger",
+          "To request a seat change on a flight",
+          "To apply for a frequent-flyer card",
+          "To confirm a hotel reservation"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "表單標題為延誤行李報告表，內容記載乘客的行李未隨班機抵達，因此答案是 (A)。"
+      },
+      {
+        "question_en": "According to the form, where should the suitcase be delivered?",
+        "question_zh": "根據表單，行李箱應送到哪裡?",
+        "options": [
+          "Chicago O'Hare Airport",
+          "Mr. Pillai's office",
+          "Hotel Marden",
+          "Aerowind's Denver office"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "表單的送達地址欄寫明是 Hotel Marden 的 1412 號房，因此答案是 (C)。"
+      },
+      {
+        "question_en": "Why did Ms. Whitfield send the e-mail?",
+        "question_zh": "為什麼 Whitfield 女士要寄這封電子郵件?",
+        "options": [
+          "To ask Mr. Pillai to file a lost-baggage claim",
+          "To confirm the return of a bag and the status of a claim",
+          "To reject Mr. Pillai's request",
+          "To announce a new baggage fee"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "信中確認行李已於11月4日送到飯店，並說明他的收據符合補償資格；行李已找到，因此不需要提出遺失行李申請，因此答案是 (B)。"
+      },
+      {
+        "question_en": "How much will Mr. Pillai most likely be reimbursed for his purchases?",
+        "question_zh": "Pillai 先生的採購費用最可能獲得多少補償?",
+        "options": [
+          "$150.00",
+          "$120.00",
+          "$75.00",
+          "$100.00"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "電子郵件說明延誤兩天且收據總額為120美元；網頁規定每延誤一個整天最高補償50美元，兩天即100美元，低於收據總額，所以補償100美元；150美元是每件行李的上限，並非此案金額，因此答案是 (D)。"
+      },
+      {
+        "question_en": "What is the last date on which Mr. Pillai can submit additional receipts?",
+        "question_zh": "Pillai 先生最晚可在哪一天提交額外的收據?",
+        "options": [
+          "November 5",
+          "November 16",
+          "November 18",
+          "November 24"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "網頁規定須在行李歸還後14天內提交收據，電子郵件指出行李於11月4日送達，11月4日加14天為11月18日；11月16日是從回報日起算的錯誤算法，因此答案是 (C)。"
+      },
+      {
+        "question_en": "Which purchase would NOT be eligible for reimbursement?",
+        "question_zh": "下列哪一項購買不符合補償資格?",
+        "options": [
+          "A bottle of wine",
+          "A tube of toothpaste",
+          "A phone charger",
+          "A clean shirt"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "網頁明確列出酒精類商品不予補償，而牙膏、手機充電器與基本衣物都屬於必需品，因此答案是 (A)。"
+      },
+      {
+        "question_en": "The word \"eligible\" in the Web page is closest in meaning to",
+        "question_zh": "網頁中的 \"eligible\" 一詞最接近下列何者的意思?",
+        "options": [
+          "obligated",
+          "qualified",
+          "delayed",
+          "refunded"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "\"not eligible\" 指「不符合資格」，與 \"qualified\"（有資格的）意思最接近；\"refunded\" 是已退款，並非資格之意，因此答案是 (B)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-10",
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "letter",
+        "title": "Letter: Loan of Navigation Instruments to Halvorsen Maritime Museum",
+        "meta": [
+          {
+            "label": "Date:",
+            "value": "December 14"
+          },
+          {
+            "label": "To:",
+            "value": "Paul Ndiaye"
+          },
+          {
+            "label": "From:",
+            "value": "Ingrid Solheim, Chief Curator"
+          },
+          {
+            "label": "Re:",
+            "value": "Spring exhibition loan"
+          }
+        ],
+        "paragraphs": [
+          "Dear Mr. Ndiaye,",
+          "Thank you for generously agreeing to lend your collection of nineteenth-century brass sextants and chronometers for our spring exhibition, Charting the Coast, which will run from March 6 through June 28. I am writing to outline the next steps.",
+          "Our conservation team will visit your home on January 12 to photograph and assess each item. We expect the visit to take about three hours. A professional art-handling company will then collect the pieces on February 9. Please note that our insurer requires a signed loan agreement and an updated valuation for each item before transport. The agreement is enclosed; kindly sign it and return it by January 30. If you prefer, the museum's appraiser can complete the valuations at no cost to you.",
+          "We would also like to include a short biography of you in the exhibition catalog and to display your name on the introductory panel, unless you wish to remain anonymous. Please let me know your preference by the same date.",
+          "Sincerely,",
+          "Ingrid Solheim",
+          "Chief Curator, Halvorsen Maritime Museum"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the letter?",
+        "question_zh": "這封信的目的為何?",
+        "options": [
+          "To invite Mr. Ndiaye to a museum fundraiser",
+          "To request a donation of artifacts",
+          "To explain the next steps for borrowing his collection",
+          "To announce a change in exhibition dates"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "信中感謝對方同意出借收藏，並說明後續步驟（勘查、取件、簽約等），因此是說明借展的後續流程，因此答案是 (C)。"
+      },
+      {
+        "question_en": "How much time will pass between the conservation visit and the pickup of the items?",
+        "question_zh": "從保存團隊到府勘查到物品被取走，中間相隔多久?",
+        "options": [
+          "Two weeks",
+          "Three weeks",
+          "Five weeks",
+          "Four weeks"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "勘查日為 1 月 12 日，取件日為 2 月 9 日；1 月有 31 天，1 月 12 日再加 28 天正好是 2 月 9 日，也就是相隔四週，因此答案是 (D)。"
+      },
+      {
+        "question_en": "What is Mr. Ndiaye asked to do by January 30?",
+        "question_zh": "Ndiaye 先生被要求在 1 月 30 日前做什麼?",
+        "options": [
+          "Provide photographs of each item",
+          "Sign and return the loan agreement",
+          "Pay for the appraisal",
+          "Hire an art-handling company"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第三段請他在 1 月 30 日前簽署並寄回借展合約，估價由博物館鑑定人免費處理，搬運公司也由博物館安排，因此答案是 (B)。"
+      },
+      {
+        "question_en": "The word \"assess\" in paragraph 3 is closest in meaning to",
+        "question_zh": "第三段中的 \"assess\" 一詞最接近下列何者的意思?",
+        "options": [
+          "evaluate",
+          "purchase",
+          "repair",
+          "insure"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"photograph and assess each item\" 指拍照並「評估」每件物品，與 evaluate 意思最接近，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-11",
+    "type": "single",
+    "category": "notice",
+    "passages": [
+      {
+        "kind": "notice",
+        "title": "Notice to Passengers: Check-In Counter Relocation",
+        "meta": [],
+        "paragraphs": [
+          "Riverton Regional Airport announces that, beginning Monday, November 23, all check-in counters for Aerolane and Brightwing Airlines will move from Terminal 1 to the newly renovated East Hall of Terminal 2. Passengers whose flights depart before that date should continue to check in at Terminal 1.",
+          "Passengers will be dropped off on Level 2 of Terminal 2, where self-service kiosks and baggage drop are located. Security screening for these airlines will take place at the Terminal 2 checkpoint, which opens at 4:00 a.m. daily. During the first week, from November 23 to November 29, we expect heavy crowds. Passengers on flights departing before 9:00 a.m. are therefore advised to arrive three hours before departure instead of the usual two hours.",
+          "A free shuttle bus will run every 10 minutes between the two terminals from 4:00 a.m. until midnight, and the ride takes about five minutes. Parking in the Terminal 1 garage remains available, and the first 20 minutes in the Terminal 2 drop-off lane are free. Passengers who need wheelchair assistance should request it at least 24 hours before their flight by calling the airport help desk at (555) 016-2290."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "Why was the notice written?",
+        "question_zh": "為什麼要發布這則公告?",
+        "options": [
+          "To announce an increase in parking fees",
+          "To report a flight cancellation",
+          "To inform passengers that check-in counters are moving",
+          "To advertise a new airline"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "公告說明自11月23日起兩家航空公司的報到櫃檯將從 Terminal 1 搬到 Terminal 2，目的是通知旅客報到地點的更動，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What is indicated about a passenger flying with Aerolane on November 20?",
+        "question_zh": "關於11月20日搭乘 Aerolane 的旅客，文中提到什麼?",
+        "options": [
+          "The passenger must use the shuttle bus to check in.",
+          "The passenger will check in at Terminal 1.",
+          "The passenger should arrive three hours early.",
+          "The passenger will be screened at Terminal 2."
+        ],
+        "answer_index": 1,
+        "explanation_zh": "第一段指出11月23日之前出發的旅客仍在 Terminal 1 報到，11月20日早於11月23日，因此仍在 Terminal 1 報到，因此答案是 (B)。"
+      },
+      {
+        "question_en": "A passenger has an 8:00 a.m. Aerolane flight on Wednesday, November 25. By what time is she advised to arrive at the airport?",
+        "question_zh": "一位旅客搭乘11月25日(週三)上午8:00的 Aerolane 班機，建議她幾點前抵達機場?",
+        "options": [
+          "4:00 a.m.",
+          "4:30 a.m.",
+          "6:00 a.m.",
+          "5:00 a.m."
+        ],
+        "answer_index": 3,
+        "explanation_zh": "11月25日落在11月23日至29日的第一週，且班機在上午9點前起飛，建議提前三小時抵達，8:00減三小時是5:00 a.m.；6:00 a.m. 是一般提前兩小時的時間，因此答案是 (D)。"
+      },
+      {
+        "question_en": "The word \"advised\" in paragraph 2 is closest in meaning to",
+        "question_zh": "第二段中的 \"advised\" 一詞最接近下列何者的意思?",
+        "options": [
+          "recommended",
+          "required",
+          "forbidden",
+          "allowed"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "\"are advised to arrive three hours before\" 指「被建議」提前三小時抵達，與 \"recommended\" 意思最接近，並非強制要求，因此答案是 (A)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-12",
+    "type": "double",
+    "category": "form",
+    "passages": [
+      {
+        "kind": "form",
+        "title": "Cascadia Auto Care – Vehicle Service Work Order",
+        "meta": [
+          {
+            "label": "Work Order No.:",
+            "value": "20817"
+          },
+          {
+            "label": "Customer:",
+            "value": "Hector Lim"
+          },
+          {
+            "label": "Vehicle:",
+            "value": "2021 Calder Hatchback"
+          },
+          {
+            "label": "Date In:",
+            "value": "November 5"
+          },
+          {
+            "label": "Estimated Completion:",
+            "value": "November 6, 5:00 P.M."
+          }
+        ],
+        "paragraphs": [
+          "Services requested: front brake pad replacement, engine oil and filter change, and cabin air filter replacement.",
+          "Estimate: Parts – front brake pads $120.00; oil and oil filter $40.00; cabin air filter $35.00. Labor – 3 hours at $85.00 per hour. Estimated total: $450.00 (tax included).",
+          "Authorization: By signing below, the customer authorizes the work listed above. Any additional repair that would raise the total by more than $100.00 will not be performed until the customer gives approval by telephone or e-mail. Vehicles not collected within three days of completion will be charged a storage fee of $10.00 per day.",
+          "Notes: The customer asked that the old brake pads be returned after replacement. The shop will provide a courtesy shuttle to the Harbor Street train station on request. Please present a photo ID when collecting the vehicle.",
+          "Customer signature: H. Lim"
+        ],
+        "table": null
+      },
+      {
+        "kind": "email",
+        "title": "E-mail: Work Order 20817 – Approval Needed",
+        "meta": [
+          {
+            "label": "From:",
+            "value": "Priya Nandakumar <service@cascadiaautocare.example>"
+          },
+          {
+            "label": "To:",
+            "value": "Hector Lim <hlim@mailbox.example>"
+          },
+          {
+            "label": "Subject:",
+            "value": "Work Order 20817 – Approval Needed"
+          },
+          {
+            "label": "Date:",
+            "value": "November 6"
+          }
+        ],
+        "paragraphs": [
+          "Dear Mr. Lim,",
+          "While replacing the front brake pads on your Calder hatchback, our technician noticed that the rear brake rotors are worn below the manufacturer's minimum thickness. We recommend replacing them for your safety. The additional parts and labor would cost $210.00, bringing the total for your visit to $660.00.",
+          "Because this amount exceeds the limit stated on your work order, we cannot proceed without your approval. Please reply to this e-mail or call me at 555-0166 by 5:00 P.M. today. If you approve, the rotors will arrive tomorrow, and because our shop is closed on Sundays, the car would be ready on Monday, November 9. If you prefer not to replace the rotors at this time, your car will be ready for pickup this evening as originally scheduled.",
+          "Sincerely,",
+          "Priya Nandakumar, Service Manager"
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "How much is the labor charge on the work order?",
+        "question_zh": "工作單上的工資為多少?",
+        "options": [
+          "$85.00",
+          "$170.00",
+          "$255.00",
+          "$450.00"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "工作單載明工資為 3 小時、每小時 $85，所以是 3 × 85 = $255，因此 $450 是預估總額而非工資，因此答案是 (C)。"
+      },
+      {
+        "question_en": "Why did Ms. Nandakumar write to Mr. Lim?",
+        "question_zh": "Nandakumar 女士為什麼寫信給 Lim 先生?",
+        "options": [
+          "To report that his car has been stolen",
+          "To explain a late-payment fee",
+          "To invite him to a customer event",
+          "To ask for approval of an additional repair"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "信中說明技師發現後煞車碟盤磨損，建議更換，並請他在期限前回覆是否同意，因此是要求核准額外維修，因此答案是 (D)。"
+      },
+      {
+        "question_en": "Why did the shop need to contact Mr. Lim before replacing the rotors?",
+        "question_zh": "為什麼店家在更換碟盤前必須聯絡 Lim 先生?",
+        "options": [
+          "The brake pads were out of stock",
+          "The extra repair exceeds the amount allowed without approval",
+          "Mr. Lim missed the pickup date",
+          "The shop wanted to change its labor rate"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "工作單規定追加維修若使總額增加超過 $100，須經客戶同意；碟盤的追加費用為 $210，超過上限，所以必須先取得同意，因此答案是 (B)。"
+      },
+      {
+        "question_en": "What will the total cost be if Mr. Lim approves the rotor replacement?",
+        "question_zh": "若 Lim 先生同意更換碟盤，總費用會是多少?",
+        "options": [
+          "$660.00",
+          "$450.00",
+          "$210.00",
+          "$560.00"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "原預估 $450 再加上碟盤費用 $210，總計 $660，電子郵件中也明確寫出此金額，因此答案是 (A)。"
+      },
+      {
+        "question_en": "When will the car be ready if Mr. Lim approves the additional repair?",
+        "question_zh": "若 Lim 先生同意額外維修，車子何時可以取車?",
+        "options": [
+          "Today, November 6",
+          "Saturday, November 7",
+          "Monday, November 9",
+          "Wednesday, November 11"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "電子郵件指出若同意，零件明天到貨，而店休星期日，因此車子會在 11 月 9 日星期一完成，因此答案是 (C)。"
+      },
+      {
+        "question_en": "The word \"approval\" in the e-mail is closest in meaning to",
+        "question_zh": "電子郵件中的 \"approval\" 一詞最接近下列何者的意思?",
+        "options": [
+          "refusal",
+          "estimate",
+          "delay",
+          "authorization"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "\"we cannot proceed without your approval\" 指沒有你的「同意」就無法進行，與 authorization（授權、許可）意思最接近，因此答案是 (D)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-13",
+    "type": "single",
+    "category": "correspondence",
+    "passages": [
+      {
+        "kind": "memo",
+        "title": "Memo: New Access Rules at the Marina Heights Construction Site",
+        "meta": [
+          {
+            "label": "To:",
+            "value": "All Marina Heights Subcontractors"
+          },
+          {
+            "label": "From:",
+            "value": "Stefan Kowalczyk, Site Safety Manager, Tallgrass Builders"
+          },
+          {
+            "label": "Date:",
+            "value": "November 9"
+          },
+          {
+            "label": "Subject:",
+            "value": "Site access changes effective November 16"
+          }
+        ],
+        "paragraphs": [
+          "To ensure the safety of everyone at the Marina Heights residential tower project, the following changes to site access will take effect on Monday, November 16.",
+          "First, the Pier Street gate will open at 6:30 A.M. instead of 6:00 A.M. and will close at 5:00 P.M. Everyone entering the site, including delivery drivers, must sign in at the security trailer and wear a hard hat, safety vest, and steel-toed boots. Visitors must be accompanied by a member of the Tallgrass staff at all times.",
+          "Second, the north parking area will be closed to vehicles on Tuesdays and Thursdays so that the tower crane can lift materials. On those days, workers should use the shuttle service from the Dock Street lot, which will run every 15 minutes.",
+          "Finally, each subcontractor must submit a list of all employees who will work on site to me by Friday, November 13. Workers whose names are not on the list will not be admitted until their information has been verified. Thank you for your cooperation."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the memo?",
+        "question_zh": "這份備忘錄的目的為何?",
+        "options": [
+          "To announce the completion of the tower project",
+          "To announce new site access rules",
+          "To request payment from subcontractors",
+          "To introduce a new safety manager"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "備忘錄開頭即說明自 11 月 16 日起工地出入管理將有所變動，內容皆為新的進出規定，因此答案是 (B)。"
+      },
+      {
+        "question_en": "How much later will the Pier Street gate open starting November 16?",
+        "question_zh": "從 11 月 16 日起，Pier Street 大門的開啟時間會晚多久?",
+        "options": [
+          "15 minutes",
+          "One hour",
+          "30 minutes",
+          "45 minutes"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "大門開啟時間由早上 6:00 改為 6:30，所以晚了 30 分鐘，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What must subcontractors do by November 13?",
+        "question_zh": "分包商必須在 11 月 13 日前做什麼?",
+        "options": [
+          "Submit a list of their on-site employees",
+          "Attend a safety orientation",
+          "Move their vehicles to the Dock Street lot",
+          "Sign in at the security trailer"
+        ],
+        "answer_index": 0,
+        "explanation_zh": "最後一段要求各分包商在 11 月 13 日星期五前，將在工地工作的所有員工名單交給 Kowalczyk 先生，因此答案是 (A)。"
+      },
+      {
+        "question_en": "What is suggested about Wednesdays?",
+        "question_zh": "關於星期三，文中暗示了什麼?",
+        "options": [
+          "The site will be closed to all workers",
+          "The tower crane will not operate",
+          "The shuttle service will run every 30 minutes",
+          "Workers can park in the north parking area"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "北側停車場只在星期二與星期四因吊車作業而禁止車輛進入，可推知星期三工人仍可使用該停車場，因此答案是 (D)。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-14",
+    "type": "single",
+    "category": "advertisement",
+    "passages": [
+      {
+        "kind": "advertisement",
+        "title": "Tallyroom Project Software – Year-End Subscription Offer",
+        "meta": [
+          {
+            "label": "Offer Ends:",
+            "value": "November 30"
+          },
+          {
+            "label": "Website:",
+            "value": "www.tallyroom-app.com"
+          }
+        ],
+        "paragraphs": [
+          "Keep every project, deadline, and client request in one place with Tallyroom, the cloud-based project software built for small and mid-sized teams. From now until November 30, you can save 20 percent on any plan when you choose annual billing instead of monthly billing.",
+          "Starter: $12 per user per month, up to 5 users, with task lists and shared calendars. Team: $20 per user per month, up to 25 users, adding time tracking and client progress reports. Business: $34 per user per month, unlimited users, adding priority phone support and custom dashboards. Prices shown are monthly rates before the annual-billing discount.",
+          "New customers can try any plan free for 30 days, and no credit card is required. Customers who currently pay monthly may switch to annual billing at any time, and the unused portion of the current month will be credited to the new invoice. Our onboarding team will import your existing spreadsheet data at no charge for Team and Business subscribers.",
+          "Annual subscriptions renew automatically on the anniversary date. To avoid being charged for another year, cancel at least seven days before the renewal date through your account settings. For questions, write to sales@tallyroom-app.com or chat with us on our website."
+        ],
+        "table": null
+      }
+    ],
+    "questions": [
+      {
+        "question_en": "What is the purpose of the advertisement?",
+        "question_zh": "這則廣告的目的為何?",
+        "options": [
+          "To announce a new office location",
+          "To promote a discount on yearly software subscriptions",
+          "To recruit software developers",
+          "To explain a change in a company's privacy policy"
+        ],
+        "answer_index": 1,
+        "explanation_zh": "廣告開頭說明在11月30日前選擇年繳可享八折優惠，並介紹各方案與費用，目的是推廣軟體的年度訂閱折扣，因此答案是 (B)。"
+      },
+      {
+        "question_en": "A company with 10 employees subscribes to the Team plan with annual billing during the offer. What will its monthly cost be?",
+        "question_zh": "一間有10名員工的公司在優惠期間以年繳方式訂閱 Team 方案，每月費用為多少?",
+        "options": [
+          "$120",
+          "$200",
+          "$160",
+          "$240"
+        ],
+        "answer_index": 2,
+        "explanation_zh": "Team 方案每位使用者每月20美元，10人為200美元；年繳可省20%，200乘以0.8等於160美元，200美元是未打折的月費，因此答案是 (C)。"
+      },
+      {
+        "question_en": "What is indicated about the Starter plan?",
+        "question_zh": "關於 Starter 方案，文中提到什麼?",
+        "options": [
+          "It is limited to five users.",
+          "It includes time tracking.",
+          "It comes with priority phone support.",
+          "It is available only to new customers."
+        ],
+        "answer_index": 0,
+        "explanation_zh": "第二段寫明 Starter 方案最多5位使用者；時間追蹤屬於 Team 方案，優先電話支援屬於 Business 方案，文中也未限定只有新客戶可用，因此答案是 (A)。"
+      },
+      {
+        "question_en": "What must a customer do to avoid being charged for another year?",
+        "question_zh": "客戶必須怎麼做才不會被收取下一年的費用?",
+        "options": [
+          "Switch to monthly billing in November",
+          "Contact the onboarding team by phone",
+          "Delete all project data from the account",
+          "Cancel at least seven days before the renewal date"
+        ],
+        "answer_index": 3,
+        "explanation_zh": "第四段指出年度訂閱會自動續約，若不想被收取下一年費用，須在續約日前至少七天取消，因此答案是 (D)。"
+      }
+    ]
   }
 ]
