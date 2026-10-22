@@ -1180,9 +1180,18 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
     const cloudCardPos = (cloud.cardPos && typeof cloud.cardPos.id === "number") ? cloud.cardPos : null;
     const winningCardPos = (cloudCardPos && (!localCardPos || cloudCardPos.updatedAt > localCardPos.updatedAt)) ? cloudCardPos : localCardPos;
     if(winningCardPos){
-      saveJSON("toeic-card-pos", winningCardPos);
-      if(order.length) restoreCardCursor(winningCardPos.id);
+      const { map: _ignored, ...lastPos } = winningCardPos;
+      saveJSON("toeic-card-pos", lastPos);
     }
+    // per-filter spots: keep, for every filter combination, whichever side moved most recently
+    const mergedMap = { ...loadCardPosMap() };
+    const cloudMap = (cloud.cardPos && cloud.cardPos.map && typeof cloud.cardPos.map === "object") ? cloud.cardPos.map : {};
+    for(const [k, v] of Object.entries(cloudMap)){
+      if(v && typeof v.id === "number" && (!mergedMap[k] || v.updatedAt > mergedMap[k].updatedAt)) mergedMap[k] = v;
+    }
+    if(Object.keys(mergedMap).length === 0 && winningCardPos) mergedMap[cardFilterKey()] = { id: winningCardPos.id, updatedAt: winningCardPos.updatedAt };
+    saveJSON("toeic-card-pos-map", mergedMap);
+    if(order.length) restoreCardForCurrentFilter();
 
     const localQuizRaw = loadJSON("toeic-quiz-pos");
     const localQuizPos = (localQuizRaw && typeof localQuizRaw.id === "number") ? localQuizRaw : null;
@@ -1203,7 +1212,7 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
     pushCloudPart("p3", p3Progress);
     pushCloudPart("p4", p4Progress);
     pushCloudSaved();
-    pushCloudCardPos(loadJSON("toeic-card-pos"));
+    pushCloudCardPos(cardPosPayload());
     pushCloudQuizPos(loadJSON("toeic-quiz-pos"));
     pushCloudDailyReading();
     pushCloudStory();
@@ -1434,9 +1443,9 @@ function populateCategories(){
 }
 
 document.getElementById("searchInput").addEventListener("input", ()=>{ cursor=0; listPage=1; render(); });
-document.getElementById("categorySelect").addEventListener("change", ()=>{ cursor=0; listPage=1; render(); });
-document.getElementById("importanceSelect").addEventListener("change", ()=>{ cursor=0; listPage=1; render(); });
-document.getElementById("onlyUnknown").addEventListener("change", ()=>{ cursor=0; listPage=1; render(); });
+document.getElementById("categorySelect").addEventListener("change", ()=>{ restoreCardForCurrentFilter(); listPage=1; render(); });
+document.getElementById("importanceSelect").addEventListener("change", ()=>{ restoreCardForCurrentFilter(); listPage=1; render(); });
+document.getElementById("onlyUnknown").addEventListener("change", ()=>{ restoreCardForCurrentFilter(); listPage=1; render(); });
 document.getElementById("shuffleBtn").addEventListener("click", ()=>{
   const list = currentFilterList();
   for(let i=list.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [list[i],list[j]]=[list[j],list[i]]; }
@@ -1765,11 +1774,18 @@ function renderCardMode(container){
     const el = e.target.closest(".zhh");
     if(el && card.classList.contains("zh-off")) el.classList.add("shown");
   });
-  const go = (delta)=>{ cursor = (cursor+delta+finalList.length)%finalList.length; flipped = false; showZh = false; renderStage(); window.scrollTo(0, 0); };
-  document.getElementById("markUnknownBtn").addEventListener("click", ()=>{ setStatus(w.id, "unknown"); go(1); });
-  document.getElementById("markKnownBtn").addEventListener("click", ()=>{ setStatus(w.id, "known"); go(1); });
-  document.getElementById("prevBtn").addEventListener("click", ()=> go(-1));
-  document.getElementById("nextBtn").addEventListener("click", ()=> go(1));
+  const go = (delta)=>{
+    /* Resolve the target BY ID: marking a word can drop it from the list (e.g. 只看待複習), and stepping
+       by index in the shrunken list would skip a card. */
+    const targetId = finalList[(cursor+delta+finalList.length)%finalList.length];
+    flipped = false; showZh = false;
+    return targetId;
+  };
+  const showAfter = (targetId)=>{ const i = cardFinalIds().indexOf(targetId); cursor = i >= 0 ? i : 0; renderStage(); window.scrollTo(0, 0); };
+  document.getElementById("markUnknownBtn").addEventListener("click", ()=>{ const t = go(1); setStatus(w.id, "unknown"); showAfter(t); });
+  document.getElementById("markKnownBtn").addEventListener("click", ()=>{ const t = go(1); setStatus(w.id, "known"); showAfter(t); });
+  document.getElementById("prevBtn").addEventListener("click", ()=> showAfter(go(-1)));
+  document.getElementById("nextBtn").addEventListener("click", ()=> showAfter(go(1)));
 }
 
 /* ---------- Render: list mode ---------- */
@@ -3611,14 +3627,38 @@ function loadCardPosition(){
   const raw = loadJSON("toeic-card-pos");
   return (raw && typeof raw.id === "number") ? raw : null;
 }
+/* One remembered spot per filter combination (分類 × 重要度 × 只看待複習), so switching between, say, 必考 and
+   常考 or between categories brings you back to where YOU were in that list instead of word 1 — or in the
+   one global spot, which only made sense for whichever list was open when it was saved. Searching is a
+   throw-away view and is never remembered. */
+function cardFilterKey(){
+  return [document.getElementById("categorySelect").value, document.getElementById("importanceSelect").value,
+          document.getElementById("onlyUnknown").checked ? "unknown" : "all"].join("|");
+}
+function loadCardPosMap(){
+  const raw = loadJSON("toeic-card-pos-map");
+  return (raw && typeof raw === "object" && !Array.isArray(raw)) ? raw : {};
+}
+function cardPosPayload(){ // what goes to the cloud: the legacy "last position" fields plus the per-filter map
+  return { ...(loadCardPosition() || {}), map: loadCardPosMap() };
+}
 function saveCardPosition(id){
+  if(document.getElementById("searchInput").value.trim()) return;
   /* Same reasoning as saveQuizPosition: don't re-stamp updatedAt when the position hasn't actually
      changed, or a mere page reload always wins the cross-device merge no matter what. */
-  const existing = loadCardPosition();
-  if(existing && existing.id === id) return;
+  const map = loadCardPosMap(), key = cardFilterKey();
+  if(map[key] && map[key].id === id) return;
   const entry = { id, updatedAt: Date.now() };
+  map[key] = entry;
+  saveJSON("toeic-card-pos-map", map);
   saveJSON("toeic-card-pos", entry);
-  pushCloudCardPos(entry);
+  pushCloudCardPos(cardPosPayload());
+}
+/* Jump to the remembered spot for the filter combination that is active right now (word 1 if none yet). */
+function restoreCardForCurrentFilter(){
+  if(document.getElementById("searchInput").value.trim()){ cursor = 0; return; }
+  const entry = loadCardPosMap()[cardFilterKey()];
+  if(entry) restoreCardCursor(entry.id); else cursor = 0;
 }
 
 /* True when the real word bank couldn't be downloaded (flaky network). The vocab tabs then show a retry
@@ -3656,8 +3696,12 @@ async function loadVocab(){
   // Categories must be populated first: with an empty category <select>, its value is "" and the
   // filter would match nothing, so the saved position couldn't be resolved against the filtered list.
   populateCategories();
-  const savedCard = loadCardPosition();
-  if(savedCard !== null) restoreCardCursor(savedCard.id);
+  const posMap = loadCardPosMap();
+  if(Object.keys(posMap).length === 0){        // first run after this feature: the old single spot belongs to the open list
+    const legacy = loadCardPosition();
+    if(legacy) saveJSON("toeic-card-pos-map", { [cardFilterKey()]: legacy });
+  }
+  restoreCardForCurrentFilter();
   const savedQuizId = loadQuizPosition();
   if(savedQuizId !== null && words.some(w=>w.id===savedQuizId)){
     pickQuizWord(savedQuizId);
