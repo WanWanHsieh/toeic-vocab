@@ -550,7 +550,9 @@
   .wpg-audio{ margin:16px 0 0; gap:10px; display:flex; justify-content:center; flex-wrap:wrap; }
   .wpg-audio .icon-btn{ border:0; border-radius:999px; font-family:var(--sans); font-weight:700; font-size:13.5px; padding:9px 20px; background:#fff; color:var(--hero-a); }
   .wpg-audio .icon-btn + .icon-btn{ background:rgba(255,255,255,.16); color:#fff; }
-  .wpg-audio .icon-btn:hover{ filter:brightness(1.07); color:inherit; }
+  /* explicit hover/press colours: a phone keeps :hover after a tap, and inheriting the hero's white text turned the white 發音 button blank */
+  .wpg-audio .icon-btn:hover, .wpg-audio .icon-btn:active, .wpg-audio .icon-btn:focus-visible{ background:#eef3fb; color:var(--hero-a); border:0; }
+  .wpg-audio .icon-btn + .icon-btn:hover, .wpg-audio .icon-btn + .icon-btn:active, .wpg-audio .icon-btn + .icon-btn:focus-visible{ background:rgba(255,255,255,.3); color:#fff; }
   .wpg-audio .icon-btn:disabled{ opacity:.5; }
   .wpg-body{ padding:22px 24px 10px; }
   .wpg-meaning{ position:relative; font-family:var(--sans); font-weight:800; font-size:clamp(23px,5.6vw,30px); letter-spacing:.02em; text-align:center; color:var(--accent); margin:0 0 12px; padding:0; }
