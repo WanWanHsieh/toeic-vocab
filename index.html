@@ -13,72 +13,72 @@
 <meta name="apple-mobile-web-app-title" content="多益單字">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <title>多益單字通</title>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
   :root{
     color-scheme:light;
-    --bg:#f6f3ec;
+    --bg:#f4f8fb;
     --surface:#ffffff;
-    --surface-2:#efeae0;
-    --border:#ddd5c7;
-    --text:#262420;
-    --text-muted:#6e6658;
-    --accent:#1e4b43;
+    --surface-2:#eaf1f6;
+    --border:#dbe5ec;
+    --text:#2f3e4e;
+    --text-muted:#667a8c;
+    --accent:#3c9600;
     --accent-contrast:#ffffff;
-    --accent-soft:#dceae6;
-    --gold:#a9834f;
-    --gold-soft:#f1e6d3;
-    --danger:#b3492f;
-    --danger-soft:#f4e2dc;
-    --success:#3e7b58;
-    --success-soft:#dfeee4;
-    --blue:#3b6ea5;
-    --blue-soft:#dde8f3;
-    --shadow: 0 1px 2px rgba(38,36,32,.06), 0 8px 24px -12px rgba(38,36,32,.18);
+    --accent-soft:#e2f5cf;
+    --gold:#e88700;
+    --gold-soft:#fff0d3;
+    --danger:#e5383b;
+    --danger-soft:#ffe1e1;
+    --success:#3c9600;
+    --success-soft:#e2f5cf;
+    --blue:#1783c4;
+    --blue-soft:#d9f0fc;
+    --shadow:0 2px 0 rgba(47,62,78,.05), 0 12px 26px -16px rgba(47,62,78,.28);
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
       color-scheme:dark;
-      --bg:#15181a;
-      --surface:#1d2124;
-      --surface-2:#23282b;
-      --border:#33393d;
-      --text:#edeae3;
-      --text-muted:#a7a296;
-      --accent:#4fa98f;
-      --accent-contrast:#08201b;
-      --accent-soft:#1f3a34;
-      --gold:#d8b378;
-      --gold-soft:#3a3021;
-      --danger:#e2836a;
-      --danger-soft:#3a2620;
-      --success:#4fa98f;
-      --success-soft:#1f3a34;
-      --blue:#8ab4e8;
-      --blue-soft:#1f2f44;
-      --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 28px -14px rgba(0,0,0,.6);
+      --bg:#131f24;
+      --surface:#1f2c33;
+      --surface-2:#2a3a43;
+      --border:#3a4b55;
+      --text:#eef6fb;
+      --text-muted:#93a8b5;
+      --accent:#7ed23f;
+      --accent-contrast:#10240a;
+      --accent-soft:#223d17;
+      --gold:#ffb340;
+      --gold-soft:#3d2e12;
+      --danger:#ff7a7a;
+      --danger-soft:#43201f;
+      --success:#7ed23f;
+      --success-soft:#223d17;
+      --blue:#6cc7f7;
+      --blue-soft:#17394d;
+      --shadow:0 2px 0 rgba(0,0,0,.25), 0 14px 28px -16px rgba(0,0,0,.6);
     }
   }
   :root[data-theme="dark"]{
     color-scheme:dark;
-    --bg:#15181a;
-    --surface:#1d2124;
-    --surface-2:#23282b;
-    --border:#33393d;
-    --text:#edeae3;
-    --text-muted:#a7a296;
-    --accent:#4fa98f;
-    --accent-contrast:#08201b;
-    --accent-soft:#1f3a34;
-    --gold:#d8b378;
-    --gold-soft:#3a3021;
-    --danger:#e2836a;
-    --danger-soft:#3a2620;
-    --success:#4fa98f;
-    --success-soft:#1f3a34;
-    --blue:#8ab4e8;
-    --blue-soft:#1f2f44;
-    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 12px 28px -14px rgba(0,0,0,.6);
+    --bg:#131f24;
+    --surface:#1f2c33;
+    --surface-2:#2a3a43;
+    --border:#3a4b55;
+    --text:#eef6fb;
+    --text-muted:#93a8b5;
+    --accent:#7ed23f;
+    --accent-contrast:#10240a;
+    --accent-soft:#223d17;
+    --gold:#ffb340;
+    --gold-soft:#3d2e12;
+    --danger:#ff7a7a;
+    --danger-soft:#43201f;
+    --success:#7ed23f;
+    --success-soft:#223d17;
+    --blue:#6cc7f7;
+    --blue-soft:#17394d;
+    --shadow:0 2px 0 rgba(0,0,0,.25), 0 14px 28px -16px rgba(0,0,0,.6);
   }
 
   *{ box-sizing:border-box; }
@@ -86,7 +86,7 @@
   body{
     background:var(--bg);
     color:var(--text);
-    font-family:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+    font-family:"Nunito", "PingFang TC", "Microsoft JhengHei", "Noto Sans TC", system-ui, -apple-system, "Segoe UI", sans-serif;
     -webkit-font-smoothing:antialiased;
   }
   h1,h2,h3{ text-wrap:balance; }
@@ -466,6 +466,135 @@
   .auth-btn{ background:var(--accent); color:var(--accent-contrast); border:none; padding:7px 14px; border-radius:8px; font-size:13px; font-weight:600; cursor:pointer; }
   .auth-btn.secondary{ background:var(--surface-2); color:var(--text-muted); border:1px solid var(--border); }
   .sync-note{ font-family:"IBM Plex Mono",monospace; font-size:11px; }
+
+  /* ================= Playful theme (home + flashcards) ================= */
+  :root{ --btn:#46a302; --btn-edge:#357d00; --btn-blue:#1cb0f6; --btn-blue-edge:#1590c8; --btn-orange:#ff9600; --btn-orange-edge:#d27a00;
+         --btn-red:#ff4b4b; --btn-red-edge:#d23838; --edge:#cfdae3; --r:18px; }
+  :root[data-theme="dark"]{ --edge:#0d161a; }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --edge:#0d161a; } }
+  body{ font-weight:600; }
+  b,strong,h1,h2,h3,h4{ font-weight:800; }
+
+  /* header */
+  .app{ padding-top:16px; }
+  .top{ align-items:center; margin-bottom:14px; }
+  .brand{ flex-direction:row; align-items:center; gap:12px; }
+  .brand-logo{ width:52px; height:52px; border-radius:16px; display:grid; place-items:center; font-size:30px; background:var(--btn); box-shadow:0 4px 0 var(--btn-edge); }
+  .brand-text{ display:flex; flex-direction:column; gap:0; }
+  .brand .kicker{ font-family:inherit; font-weight:800; font-size:10.5px; letter-spacing:.12em; color:var(--gold); }
+  .brand h1{ font-family:inherit; font-weight:900; font-size:clamp(24px,5vw,32px); line-height:1.15; }
+  .goal{ display:flex; align-items:center; gap:10px; background:var(--surface); border:2px solid var(--border); border-bottom-width:4px; border-radius:var(--r); padding:8px 14px 8px 10px; cursor:pointer; user-select:none; transition:transform .1s; }
+  .goal:active{ transform:translateY(2px); border-bottom-width:2px; margin-bottom:2px; }
+  .goal-ring{ width:46px; height:46px; transform:rotate(-90deg); flex:none; }
+  .goal-ring circle{ fill:none; stroke-width:5; }
+  .goal-ring .bg{ stroke:var(--surface-2); }
+  .goal-ring .fg{ stroke:var(--btn-orange); stroke-linecap:round; stroke-dasharray:113.1; stroke-dashoffset:113.1; transition:stroke-dashoffset .5s cubic-bezier(.2,.8,.2,1), stroke .3s; }
+  .goal.done .goal-ring .fg{ stroke:var(--btn); }
+  .goal-text{ display:flex; flex-direction:column; line-height:1.2; }
+  .goal-text b{ font-size:17px; font-weight:900; }
+  .goal-text span{ font-size:11.5px; color:var(--text-muted); font-weight:700; }
+  .stats{ gap:8px; flex-wrap:wrap; font-family:inherit; margin-bottom:14px; }
+  .stat{ display:flex; align-items:center; gap:7px; background:var(--surface); border:2px solid var(--border); border-radius:999px; padding:5px 14px 5px 8px; font-size:12.5px; font-weight:800; color:var(--text-muted); }
+  .stat i{ font-style:normal; width:26px; height:26px; border-radius:50%; display:grid; place-items:center; font-size:14px; }
+  .stat:nth-child(1) i{ background:var(--blue-soft); }
+  .stat:nth-child(2) i{ background:var(--success-soft); }
+  .stat:nth-child(3) i{ background:var(--gold-soft); }
+  .stat b{ display:inline; font-size:16px; font-weight:900; margin-right:2px; }
+
+  /* tabs */
+  .subtabs, .tabs{ background:transparent; border:0; padding:0; gap:8px; }
+  .subtabs{ flex-wrap:wrap; }
+  .subtab, .tab{ background:var(--surface); color:var(--text-muted); border:2px solid var(--border); border-bottom-width:4px; border-radius:14px; padding:8px 16px; font-size:14px; font-weight:800; transition:transform .08s, background .15s; }
+  .tab{ padding:6px 13px; font-size:13px; border-radius:12px; }
+  .subtab[aria-selected="true"], .tab[aria-selected="true"]{ background:var(--btn); color:#fff; border-color:var(--btn-edge); text-shadow:0 1px 0 rgba(0,0,0,.18); }
+  .subtab:active, .tab:active{ transform:translateY(2px); border-bottom-width:2px; margin-bottom:2px; }
+  .tabs{ margin-bottom:14px; }
+
+  /* controls */
+  .controls input[type="search"], .controls select{ border:2px solid var(--border); border-radius:14px; background:var(--surface); font-weight:700; }
+  .controls input[type="search"]:focus, .controls select:focus{ outline:none; border-color:var(--btn-blue); }
+  .icon-btn{ border:2px solid var(--border); border-bottom-width:4px; border-radius:14px; font-weight:800; transition:transform .08s; }
+  .icon-btn:hover{ border-color:var(--btn-blue); color:var(--btn-blue); }
+  .icon-btn:active{ transform:translateY(2px); border-bottom-width:2px; margin-bottom:2px; }
+
+  /* flashcard page */
+  @keyframes wpgIn{ from{ opacity:0; transform:translateY(10px) scale(.985); } to{ opacity:1; transform:none; } }
+  .wpg-card{ border:2px solid var(--border); border-bottom-width:5px; border-radius:26px; padding:20px 22px 8px; animation:wpgIn .28s cubic-bezier(.2,.8,.2,1); }
+  .chip{ font-family:inherit; font-weight:800; font-size:11.5px; letter-spacing:.04em; padding:4px 11px; }
+  .wpg-word{ font-family:inherit; font-weight:900; font-size:clamp(34px,8vw,50px); margin:16px 0 4px; letter-spacing:-.01em; }
+  .wpg-ipa{ display:table; margin:2px auto 0; background:var(--blue-soft); color:var(--blue); border-radius:999px; padding:4px 16px; font-size:16px; font-weight:700; }
+  .wpg-audio{ gap:10px; margin:16px 0 6px; }
+  .wpg-audio .icon-btn{ border:0; border-bottom:4px solid var(--btn-blue-edge); background:var(--btn-blue); color:#fff; padding:10px 20px; font-size:15px; text-shadow:0 1px 0 rgba(0,0,0,.15); }
+  .wpg-audio .icon-btn + .icon-btn{ background:var(--btn-orange); border-bottom-color:var(--btn-orange-edge); }
+  .wpg-audio .icon-btn:hover{ color:#fff; filter:brightness(1.05); }
+  .wpg-audio .icon-btn:active{ border-bottom-width:0; margin-top:4px; margin-bottom:0; }
+  .wpg-meaning{ position:relative; font-family:inherit; font-weight:900; font-size:clamp(22px,5.5vw,28px); background:var(--accent-soft); border:2px solid color-mix(in srgb, var(--btn) 45%, transparent); border-radius:20px; padding:14px 16px; margin:18px 0 8px; }
+  .wpg-card .note-zh{ background:var(--gold-soft); color:var(--text); border-radius:16px; padding:10px 14px; font-size:14px; font-weight:700; line-height:1.65; }
+  .wpg-sec{ border-top:2px dashed var(--border); margin-top:18px; padding-top:14px; }
+  .wpg-sec h4{ display:inline-block; background:var(--surface-2); color:var(--text); border-radius:999px; padding:3px 12px; font-size:12.5px; letter-spacing:.04em; margin-bottom:12px; }
+  .wd-chunk{ border-radius:16px; border-width:2.5px; border-bottom-width:5px; }
+  .wd-chunk.c0{ border-color:color-mix(in srgb, var(--blue) 35%, transparent); }
+  .wd-chunk.c1{ border-color:color-mix(in srgb, var(--gold) 35%, transparent); }
+  .wd-chunk.c2{ border-color:color-mix(in srgb, var(--success) 35%, transparent); }
+  .wd-chunk.s1{ border-color:currentColor; }
+  .wd-example{ border-radius:16px; border:2px solid var(--border); background:var(--surface-2); }
+  .wd-sense-zh{ font-weight:900; }
+  .wd-chip{ border:2px solid var(--border); border-bottom-width:3px; background:var(--surface); font-weight:800; }
+  button.wd-chip:hover{ border-color:var(--btn-blue); background:var(--blue-soft); }
+  .wd-callout{ border-radius:16px; font-weight:700; }
+  .speak-btn{ background:var(--blue-soft); color:var(--blue); }
+
+  /* bottom action bar */
+  .wpg-bar{ background:linear-gradient(to top, var(--bg) 78%, transparent); padding-top:14px; }
+  .progress-bar{ height:14px; background:var(--surface-2); border-radius:999px; }
+  .progress-fill{ background:var(--btn); border-radius:999px; position:relative; }
+  .progress-fill::after{ content:""; position:absolute; left:8px; right:8px; top:3px; height:4px; border-radius:999px; background:rgba(255,255,255,.35); }
+  .wpg-bar .progress-bar{ margin-bottom:12px; }
+  .wpg-bar-row{ gap:10px; }
+  .nav-btn{ width:50px; height:50px; border:2px solid var(--border); border-bottom-width:4px; background:var(--surface); font-weight:900; color:var(--text); }
+  .wpg-bar-row .mark-btn{ max-width:none; border:0; border-bottom:4px solid; border-radius:16px; padding:13px 8px; font-size:15px; font-weight:900; color:#fff; text-shadow:0 1px 0 rgba(0,0,0,.18); }
+  .wpg-bar-row .mark-btn.unknown{ background:var(--btn-red); border-bottom-color:var(--btn-red-edge); }
+  .wpg-bar-row .mark-btn.known{ background:var(--btn); border-bottom-color:var(--btn-edge); }
+  .wpg-bar-row .mark-btn.unknown.active, .wpg-bar-row .mark-btn.known.active{ color:#fff; outline:3px solid color-mix(in srgb, var(--text) 25%, transparent); outline-offset:2px; }
+  .wpg-bar-row .mark-btn:active, .nav-btn:active{ transform:translateY(3px); border-bottom-width:1px; }
+  .wpg-count{ font-weight:900; }
+
+  /* toast */
+  .toast{ position:fixed; left:50%; top:18px; transform:translate(-50%,-300%); background:var(--btn); color:#fff; font-weight:900; padding:12px 22px; border-radius:999px; border-bottom:4px solid var(--btn-edge); z-index:200; transition:transform .35s cubic-bezier(.2,.8,.2,1); pointer-events:none; }
+  .toast.show{ transform:translate(-50%,0); }
+
+  .subtab .ti{ margin-right:6px; }
+  @media (max-width:520px){
+    .app{ padding-left:14px; padding-right:14px; }
+    .top{ gap:8px; flex-wrap:nowrap; }
+    .brand{ min-width:0; gap:10px; }
+    .brand h1{ font-size:23px; white-space:nowrap; }
+    .brand .kicker{ font-size:9px; letter-spacing:.08em; white-space:nowrap; }
+    .brand-logo{ width:42px; height:42px; font-size:24px; border-radius:13px; flex:none; }
+    .goal{ padding:5px 10px 5px 6px; gap:6px; flex:none; }
+    .goal-ring{ width:38px; height:38px; }
+    .goal-text b{ font-size:15px; }
+    .goal-text span{ display:none; }
+    .stats{ flex-wrap:nowrap; gap:6px; }
+    .stat{ flex:1 1 0; min-width:0; justify-content:center; padding:6px 6px; font-size:11.5px; }
+    .stat i{ display:none; }
+    .stat b{ font-size:15px; }
+    #categoryTabs{ display:grid; grid-template-columns:repeat(4,1fr); gap:6px; }
+    .subtab{ display:flex; flex-direction:column; align-items:center; gap:2px; padding:6px 2px 5px; font-size:11.5px; border-radius:12px; white-space:nowrap; }
+    .subtab .ti{ margin:0; font-size:19px; line-height:1.1; }
+    .tabs{ flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; width:auto; margin-left:-14px; margin-right:-14px; padding:0 14px 4px; }
+    .tabs::-webkit-scrollbar{ display:none; }
+    .tab{ flex:none; }
+    .controls{ gap:8px; margin-bottom:16px; }
+    .controls input[type="search"]{ flex:1 1 100%; }
+    .wpg-count{ white-space:nowrap; min-width:0; font-size:11px; }
+    .wpg-bar-row{ gap:6px; }
+    .nav-btn{ width:42px; height:46px; flex:none; }
+    .wpg-bar-row .mark-btn{ flex:1 1 0; min-width:0; font-size:13.5px; padding:12px 4px; }
+    .controls select{ flex:1 1 42%; max-width:none; min-width:0; padding:9px 10px; font-size:13px; }
+    .icon-btn{ padding:7px 11px; font-size:13px; }
+  }
+  @media (prefers-reduced-motion: reduce){ .wpg-card{ animation:none; } .goal-ring .fg, .toast{ transition:none; } }
 </style>
 <script>
 /* Apply a saved theme choice before first paint so a light/dark override doesn't flash. */
@@ -480,27 +609,35 @@ try{ var t = localStorage.getItem("toeic-theme"); if(t === "light" || t === "dar
   </div>
   <div class="top">
     <div class="brand">
-      <span class="kicker">TOEIC Core Vocabulary</span>
-      <h1>多益單字通</h1>
+      <div class="brand-logo" aria-hidden="true">🦉</div>
+      <div class="brand-text">
+        <span class="kicker">TOEIC Core Vocabulary</span>
+        <h1>多益單字通</h1>
+      </div>
     </div>
-    <div class="stats">
-      <div><b id="statTotal">0</b>總字數</div>
-      <div><b id="statKnown">0</b>已熟記</div>
-      <div><b id="statUnknown">0</b>待複習</div>
+    <div class="goal" id="goalCard" role="button" tabindex="0" title="點一下修改每日目標">
+      <svg class="goal-ring" viewBox="0 0 44 44" aria-hidden="true"><circle class="bg" cx="22" cy="22" r="18"/><circle class="fg" id="goalArc" cx="22" cy="22" r="18"/></svg>
+      <div class="goal-text"><b id="goalNum">0 / 20</b><span id="goalLabel">今日目標</span></div>
     </div>
   </div>
+  <div class="stats">
+    <div class="stat"><i>📚</i><span><b id="statTotal">0</b>總字數</span></div>
+    <div class="stat"><i>✅</i><span><b id="statKnown">0</b>已熟記</span></div>
+    <div class="stat"><i>🔁</i><span><b id="statUnknown">0</b>待複習</span></div>
+  </div>
+  <div class="toast" id="toast" role="status"></div>
 
   <div class="subtabs" id="categoryTabs" role="tablist" style="margin-bottom:10px;">
-    <button class="subtab" data-cat="vocab" role="tab" aria-selected="true">單字學習</button>
-    <button class="subtab" data-cat="toeic" role="tab" aria-selected="false">TOEIC 模擬</button>
-    <button class="subtab" data-cat="reading" role="tab" aria-selected="false">閱讀練習</button>
-    <button class="subtab" data-cat="teach" role="tab" aria-selected="false">文法教學</button>
+    <button class="subtab" data-cat="vocab" role="tab" aria-selected="true"><span class="ti">📚</span><span>單字學習</span></button>
+    <button class="subtab" data-cat="toeic" role="tab" aria-selected="false"><span class="ti">📝</span><span>TOEIC 模擬</span></button>
+    <button class="subtab" data-cat="reading" role="tab" aria-selected="false"><span class="ti">📖</span><span>閱讀練習</span></button>
+    <button class="subtab" data-cat="teach" role="tab" aria-selected="false"><span class="ti">🎓</span><span>文法教學</span></button>
   </div>
 
   <div class="tabs" role="tablist" data-cat-group="vocab">
-    <button class="tab" data-mode="card" role="tab" aria-selected="true">字卡模式</button>
-    <button class="tab" data-mode="list" role="tab" aria-selected="false">單字列表</button>
-    <button class="tab" data-mode="theme" role="tab" aria-selected="false">主題單字</button>
+    <button class="tab" data-mode="card" role="tab" aria-selected="true">🃏 字卡模式</button>
+    <button class="tab" data-mode="list" role="tab" aria-selected="false">📋 單字列表</button>
+    <button class="tab" data-mode="theme" role="tab" aria-selected="false">🧩 主題單字</button>
     <button class="tab" data-mode="phrase" role="tab" aria-selected="false">📎 常考片語</button>
     <button class="tab" data-mode="spelling" role="tab" aria-selected="false">✍️ 拼字測驗</button>
     <button class="tab" data-mode="saved" role="tab" aria-selected="false">❤️ 收藏單字</button>
@@ -1587,6 +1724,45 @@ document.getElementById("readingShuffleBtn").addEventListener("click", ()=>{
 });
 
 /* ---------- Render: stats ---------- */
+/* ---------- Daily goal ring ---------- */
+function getDailyGoal(){ const n = Number(localStorage.getItem("toeic-daily-goal")); return n >= 1 ? Math.round(n) : 20; }
+function loadSeenToday(){
+  const raw = loadJSON("toeic-daily-seen");
+  return (raw && raw.date === todayLocalStr() && Array.isArray(raw.ids)) ? raw : { date: todayLocalStr(), ids: [], celebrated: false };
+}
+function recordSeenToday(id){
+  const seen = loadSeenToday();
+  if(!seen.ids.includes(id)){
+    seen.ids.push(id);
+    if(!seen.celebrated && seen.ids.length >= getDailyGoal()){ seen.celebrated = true; showToast("🎉 今日目標達成！"); }
+    saveJSON("toeic-daily-seen", seen);
+  }
+  updateGoalRing();
+}
+function showToast(msg){
+  const t = document.getElementById("toast"); if(!t) return;
+  t.textContent = msg; t.classList.add("show");
+  setTimeout(()=> t.classList.remove("show"), 2600);
+}
+function updateGoalRing(){
+  const arc = document.getElementById("goalArc"); if(!arc) return;
+  const goal = getDailyGoal(), n = loadSeenToday().ids.length, p = Math.min(1, n/goal);
+  arc.style.strokeDashoffset = String(113.1*(1-p));
+  document.getElementById("goalNum").textContent = n + " / " + goal;
+  document.getElementById("goalLabel").textContent = n >= goal ? "目標達成 🎉" : "今日目標";
+  document.getElementById("goalCard").classList.toggle("done", n >= goal);
+}
+function editDailyGoal(){
+  const v = prompt("每天想看幾個單字？", String(getDailyGoal()));
+  if(v === null) return;
+  const n = Math.round(Number(v));
+  if(!(n >= 1 && n <= 500)){ alert("請輸入 1 到 500 之間的數字"); return; }
+  localStorage.setItem("toeic-daily-goal", String(n));
+  updateGoalRing();
+}
+document.getElementById("goalCard").addEventListener("click", editDailyGoal);
+document.getElementById("goalCard").addEventListener("keydown", (e)=>{ if(e.key === "Enter" || e.key === " "){ e.preventDefault(); editDailyGoal(); } });
+
 function renderStats(){
   const total = words.length;
   const known = Object.values(progress).filter(v=>v==="known").length;
@@ -1594,6 +1770,7 @@ function renderStats(){
   document.getElementById("statTotal").textContent = total;
   document.getElementById("statKnown").textContent = known;
   document.getElementById("statUnknown").textContent = unknown;
+  updateGoalRing();
 }
 
 /* Both card faces are absolutely positioned (inset:0) so the flip transform overlays them exactly, which means
@@ -1738,6 +1915,7 @@ function renderCardMode(container){
   const w = words.find(x=>x.id===finalList[cursor]);
   const st = statusOf(w.id);
   saveCardPosition(w.id);
+  recordSeenToday(w.id);
 
   container.innerHTML = `
     <div class="wpg">
