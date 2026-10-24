@@ -621,6 +621,19 @@
     .wpg-bar-row .mark-btn{ flex:1 1 0; min-width:0; padding:10px 4px; }
   }
   @media (prefers-reduced-motion: reduce){ .wpg-card{ animation:none; } .goal-ring .fg, .toast{ transition:none; } }
+
+  /* spelling practice */
+  .wpg-practice{ display:flex; flex-direction:column; gap:10px; }
+  .pr-row{ display:flex; gap:8px; align-items:stretch; }
+  .pr-input{ flex:1; min-width:0; font-family:var(--sans); font-size:18px; font-weight:600; letter-spacing:.04em; text-align:center; padding:12px 14px; border:2px solid var(--border); border-radius:14px; background:var(--surface); color:var(--text); }
+  .pr-input:focus{ outline:none; border-color:var(--accent); }
+  .pr-input.ok{ border-color:var(--success); background:var(--success-soft); }
+  .pr-row .icon-btn{ border-radius:14px; white-space:nowrap; }
+  .pr-fb{ min-height:34px; text-align:center; font-size:22px; letter-spacing:.1em; line-height:1.5; word-break:break-all; }
+  .pr-fb .ok{ color:var(--success); font-weight:700; }
+  .pr-fb .bad{ color:var(--danger); font-weight:700; text-decoration:underline wavy; text-underline-offset:4px; }
+  .pr-fb .pending{ color:var(--border); }
+  .pr-msg{ min-height:18px; text-align:center; font-size:13px; font-weight:600; color:var(--text-muted); }
 </style>
 <script>
 /* Apply a saved theme choice before first paint so a light/dark override doesn't flash. */
@@ -1908,10 +1921,19 @@ function renderWordPage(w, st, total){
     <p class="wpg-meaning zhh">${w.meaning_zh}</p>
     ${w.note_zh ? `<div class="note-zh zhh">💡 ${w.note_zh}</div>` : ""}`;
   const wrap = (rest)=> `<div class="wpg-hero">${hero}</div><div class="wpg-body">${lead}${rest}</div>`;
+  const practice = sec("拼寫練習", `
+    <div class="wpg-practice">
+      <div class="pr-row">
+        <input id="practiceInput" class="pr-input" type="text" inputmode="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="看著單字，輸入一遍" aria-label="輸入這個單字練習拼寫">
+        <button class="icon-btn" id="practiceClear" type="button">再寫一次</button>
+      </div>
+      <div class="pr-fb mono" id="practiceFb" aria-live="polite"></div>
+      <div class="pr-msg" id="practiceMsg"></div>
+    </div>`);
 
   if(!d){
     const ex = w.example_en ? sec("例句", `<div class="wd-example">${spk(w.example_en)}<div><div class="en">${w.example_en}</div>${w.example_zh ? `<div class="zh">${w.example_zh}</div>` : ""}</div></div>`) : "";
-    return wrap(ex);
+    return wrap(practice + ex);
   }
 
   let color = 0;
@@ -1953,7 +1975,47 @@ function renderWordPage(w, st, total){
   const callouts = (d.root || d.tip) ? sec("記憶與提醒",
     `${d.root ? `<div class="wd-callout root"><b>字根記憶　</b>${escHtml(d.root)}</div>` : ""}${d.tip ? `<div class="wd-callout tip"><b>多益提醒　</b>${escHtml(d.tip)}</div>` : ""}`) : "";
 
-  return wrap(`${syllables}${senses}${usage}${syn}${pattern}${callouts}`);
+  return wrap(`${practice}${syllables}${senses}${usage}${syn}${pattern}${callouts}`);
+}
+
+/* ---------- Spelling practice on the flashcard page ----------
+   Type the word you are looking at: each letter turns green or red as you go, a correct word is
+   spoken aloud and counted, Enter (or 再寫一次) clears the box for another round. Case and accents
+   are ignored (typing "resume" is accepted for "résumé"). */
+let pracWordId = null, pracCount = 0, pracLatched = false;
+function pracNorm(x){ return String(x).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); }
+function setupSpellingPractice(w){
+  const input = document.getElementById("practiceInput");
+  if(!input) return;
+  if(pracWordId !== w.id){ pracWordId = w.id; pracCount = 0; pracLatched = false; }
+  const fb = document.getElementById("practiceFb"), msg = document.getElementById("practiceMsg");
+  const target = w.word;
+  const show = (ch)=> ch === " " ? "\u00a0\u00a0" : escHtml(ch);
+  const update = ()=>{
+    const typed = input.value;
+    let html = "";
+    const n = Math.max(typed.length, target.length);
+    for(let i = 0; i < n; i++){
+      if(i < typed.length){
+        const ok = i < target.length && pracNorm(typed[i]) === pracNorm(target[i]);
+        html += `<span class="${ok ? "ok" : "bad"}">${show(typed[i])}</span>`;
+      }else{
+        html += `<span class="pending">${target[i] === " " ? "\u00a0\u00a0" : "·"}</span>`;
+      }
+    }
+    fb.innerHTML = html;
+    const done = pracNorm(typed.trim().replace(/\s+/g, " ")) === pracNorm(target);
+    input.classList.toggle("ok", done);
+    if(done && !pracLatched){ pracLatched = true; pracCount++; speak(target); }
+    if(!done && typed.length === 0) pracLatched = false;
+    msg.textContent = done ? `✅ 拼對了！已拼對 ${pracCount} 次（按 Enter 或「再寫一次」繼續）`
+                           : (pracCount ? `已拼對 ${pracCount} 次` : "");
+  };
+  const reset = ()=>{ input.value = ""; pracLatched = false; update(); input.focus(); };
+  input.addEventListener("input", update);
+  input.addEventListener("keydown", (e)=>{ if(e.key === "Enter" && pracLatched){ e.preventDefault(); reset(); } });
+  document.getElementById("practiceClear").addEventListener("click", reset);
+  update();
 }
 
 /* ---------- Render: card mode ---------- */
@@ -1991,6 +2053,7 @@ function renderCardMode(container){
   container.querySelectorAll(".card-save-btn").forEach(btn=>{
     btn.addEventListener("click", ()=>{ toggleSavedWord(w); renderStage(); });
   });
+  setupSpellingPractice(w);
   const card = container.querySelector(".wpg-card");
   const eye = document.getElementById("eyeBtn");
   eye.addEventListener("click", ()=>{
