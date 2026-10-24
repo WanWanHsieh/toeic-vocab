@@ -634,6 +634,25 @@
   .pr-fb .bad{ color:var(--danger); font-weight:700; text-decoration:underline wavy; text-underline-offset:4px; }
   .pr-fb .pending{ color:var(--border); }
   .pr-msg{ min-height:18px; text-align:center; font-size:13px; font-weight:600; color:var(--text-muted); }
+
+  /* dictation mode */
+  .pr-toggle{ display:flex; align-items:center; gap:10px; font-size:13.5px; font-weight:600; color:var(--text-muted); cursor:pointer; user-select:none; }
+  .pr-toggle input{ position:absolute; opacity:0; pointer-events:none; }
+  .pr-switch{ position:relative; width:40px; height:24px; border-radius:999px; background:var(--border); flex:none; transition:background .15s; }
+  .pr-switch::after{ content:""; position:absolute; left:3px; top:3px; width:18px; height:18px; border-radius:50%; background:#fff; box-shadow:0 1px 3px rgba(0,0,0,.25); transition:transform .15s; }
+  .pr-toggle input:checked + .pr-switch{ background:var(--accent); }
+  .pr-toggle input:checked + .pr-switch::after{ transform:translateX(16px); }
+  .pr-toggle input:focus-visible + .pr-switch{ outline:2px solid var(--accent); outline-offset:2px; }
+  .pr-toggle input:checked ~ span:last-child{ color:var(--text); }
+  .pr-dict-actions{ display:none; gap:8px; }
+  .wpg-card.dict-on .pr-dict-actions{ display:flex; }
+  .pr-dict-actions .icon-btn{ flex:1; justify-content:center; border-radius:14px; }
+  #practiceCheck{ background:var(--accent); color:var(--accent-contrast); border-color:var(--accent); }
+  .wpg-card.dict-on:not(.dict-revealed) .wpg-word,
+  .wpg-card.dict-on:not(.dict-revealed) .wd-chunk .wd-letters,
+  .wpg-card.dict-on:not(.dict-revealed) .wd-example .en,
+  .wpg-card.dict-on:not(.dict-revealed) .wd-notes li > span:first-child{ filter:blur(11px); user-select:none; }
+  .wpg-card .wpg-word, .wpg-card .wd-letters, .wpg-card .wd-example .en{ transition:filter .2s; }
 </style>
 <script>
 /* Apply a saved theme choice before first paint so a light/dark override doesn't flash. */
@@ -1923,9 +1942,14 @@ function renderWordPage(w, st, total){
   const wrap = (rest)=> `<div class="wpg-hero">${hero}</div><div class="wpg-body">${lead}${rest}</div>`;
   const practice = sec("拼寫練習", `
     <div class="wpg-practice">
+      <label class="pr-toggle"><input type="checkbox" id="dictToggle"><span class="pr-switch"></span><span>默寫模式：蓋住單字，聽發音自己拼</span></label>
       <div class="pr-row">
         <input id="practiceInput" class="pr-input" type="text" inputmode="text" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" placeholder="看著單字，輸入一遍" aria-label="輸入這個單字練習拼寫">
         <button class="icon-btn" id="practiceClear" type="button">再寫一次</button>
+      </div>
+      <div class="pr-dict-actions">
+        <button class="icon-btn" id="practiceCheck" type="button">檢查</button>
+        <button class="icon-btn" id="practicePeek" type="button">看答案</button>
       </div>
       <div class="pr-fb mono" id="practiceFb" aria-live="polite"></div>
       <div class="pr-msg" id="practiceMsg"></div>
@@ -1983,18 +2007,23 @@ function renderWordPage(w, st, total){
    spoken aloud and counted, Enter (or 再寫一次) clears the box for another round. Case and accents
    are ignored (typing "resume" is accepted for "résumé"). */
 let pracWordId = null, pracCount = 0, pracLatched = false;
+let dictMode = false;
+try{ dictMode = localStorage.getItem("toeic-dict-mode") === "1"; }catch(e){}
 function pracNorm(x){ return String(x).normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); }
 function setupSpellingPractice(w){
   const input = document.getElementById("practiceInput");
   if(!input) return;
   if(pracWordId !== w.id){ pracWordId = w.id; pracCount = 0; pracLatched = false; }
+  const card = document.querySelector(".wpg-card");
   const fb = document.getElementById("practiceFb"), msg = document.getElementById("practiceMsg");
+  const toggle = document.getElementById("dictToggle");
   const target = w.word;
   const show = (ch)=> ch === " " ? "\u00a0\u00a0" : escHtml(ch);
-  const update = ()=>{
+  const isDone = ()=> pracNorm(input.value.trim().replace(/\s+/g, " ")) === pracNorm(target);
+  const diffHtml = (withPending)=>{
     const typed = input.value;
     let html = "";
-    const n = Math.max(typed.length, target.length);
+    const n = withPending ? Math.max(typed.length, target.length) : typed.length;
     for(let i = 0; i < n; i++){
       if(i < typed.length){
         const ok = i < target.length && pracNorm(typed[i]) === pracNorm(target[i]);
@@ -2003,18 +2032,62 @@ function setupSpellingPractice(w){
         html += `<span class="pending">${target[i] === " " ? "\u00a0\u00a0" : "·"}</span>`;
       }
     }
-    fb.innerHTML = html;
-    const done = pracNorm(typed.trim().replace(/\s+/g, " ")) === pracNorm(target);
-    input.classList.toggle("ok", done);
-    if(done && !pracLatched){ pracLatched = true; pracCount++; speak(target); }
-    if(!done && typed.length === 0) pracLatched = false;
-    msg.textContent = done ? `✅ 拼對了！已拼對 ${pracCount} 次（按 Enter 或「再寫一次」繼續）`
-                           : (pracCount ? `已拼對 ${pracCount} 次` : "");
+    return html;
   };
-  const reset = ()=>{ input.value = ""; pracLatched = false; update(); input.focus(); };
+  const applyMode = ()=>{
+    toggle.checked = dictMode;
+    card.classList.toggle("dict-on", dictMode);
+    card.classList.remove("dict-revealed");
+    input.placeholder = dictMode ? "聽發音，憑記憶拼出單字" : "看著單字，輸入一遍";
+  };
+  const finish = ()=>{                       // a correct word: count it, say it, uncover it
+    input.classList.add("ok");
+    if(!pracLatched){ pracLatched = true; pracCount++; speak(target); }
+    card.classList.add("dict-revealed");
+    msg.textContent = `✅ 拼對了！已拼對 ${pracCount} 次（按 Enter 或「再寫一次」繼續）`;
+  };
+  const update = ()=>{                       // live feedback while typing (normal mode only)
+    if(dictMode){ input.classList.remove("ok"); fb.innerHTML = ""; if(!pracLatched) msg.textContent = pracCount ? `已拼對 ${pracCount} 次` : ""; return; }
+    fb.innerHTML = diffHtml(true);
+    if(isDone()){ finish(); }
+    else{
+      input.classList.remove("ok");
+      if(input.value.length === 0) pracLatched = false;
+      msg.textContent = pracCount ? `已拼對 ${pracCount} 次` : "";
+    }
+  };
+  const check = ()=>{                        // dictation mode: judge only when asked
+    if(input.value.trim() === ""){ msg.textContent = "先輸入你記得的拼法"; return; }
+    fb.innerHTML = diffHtml(false);
+    if(isDone()) finish();
+    else msg.textContent = "❌ 還不對，修改後再按「檢查」，或點「看答案」";
+  };
+  const reset = ()=>{
+    input.value = ""; input.classList.remove("ok"); pracLatched = false; fb.innerHTML = "";
+    card.classList.remove("dict-revealed"); msg.textContent = pracCount ? `已拼對 ${pracCount} 次` : "";
+    update(); input.focus();
+  };
+  toggle.addEventListener("change", ()=>{
+    dictMode = toggle.checked;
+    try{ localStorage.setItem("toeic-dict-mode", dictMode ? "1" : "0"); }catch(e){}
+    pracLatched = false; input.value = ""; input.classList.remove("ok"); fb.innerHTML = ""; msg.textContent = pracCount ? `已拼對 ${pracCount} 次` : "";
+    applyMode(); update();
+  });
   input.addEventListener("input", update);
-  input.addEventListener("keydown", (e)=>{ if(e.key === "Enter" && pracLatched){ e.preventDefault(); reset(); } });
+  input.addEventListener("keydown", (e)=>{
+    if(e.key !== "Enter") return;
+    e.preventDefault();
+    if(pracLatched) reset();
+    else if(dictMode) check();
+  });
   document.getElementById("practiceClear").addEventListener("click", reset);
+  document.getElementById("practiceCheck").addEventListener("click", check);
+  document.getElementById("practicePeek").addEventListener("click", ()=>{
+    card.classList.add("dict-revealed");
+    fb.innerHTML = [...target].map(ch=>`<span class="pending" style="color:var(--text)">${show(ch)}</span>`).join("");
+    msg.textContent = "答案在上方，看過再默寫一次";
+  });
+  applyMode();
   update();
 }
 
