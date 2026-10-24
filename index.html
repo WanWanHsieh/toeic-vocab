@@ -653,6 +653,7 @@
   .wpg-card.dict-on:not(.dict-revealed) .wd-example .en,
   .wpg-card.dict-on:not(.dict-revealed) .wd-notes li > span:first-child{ filter:blur(11px); user-select:none; }
   .wpg-card .wpg-word, .wpg-card .wd-letters, .wpg-card .wd-example .en{ transition:filter .2s; }
+  body.kb-open .wpg-bar{ display:none; }
 </style>
 <script>
 /* Apply a saved theme choice before first paint so a light/dark override doesn't flash. */
@@ -2006,6 +2007,14 @@ function renderWordPage(w, st, total){
    Type the word you are looking at: each letter turns green or red as you go, a correct word is
    spoken aloud and counted, Enter (or 再寫一次) clears the box for another round. Case and accents
    are ignored (typing "resume" is accepted for "résumé"). */
+/* While the phone keyboard is open the sticky ◀ ❌ ✅ ▶ bar rides up on top of it and gets cut off by the keyboard's
+   toolbar. Detect the keyboard through the visual viewport and hide that bar until it closes. */
+if(window.visualViewport){
+  const vv = window.visualViewport;
+  const syncKeyboard = ()=> document.body.classList.toggle("kb-open", window.innerHeight - vv.height > 120);
+  vv.addEventListener("resize", syncKeyboard);
+  vv.addEventListener("scroll", syncKeyboard);
+}
 let pracWordId = null, pracCount = 0, pracLatched = false;
 let dictMode = false;
 try{ dictMode = localStorage.getItem("toeic-dict-mode") === "1"; }catch(e){}
