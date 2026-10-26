@@ -924,6 +924,7 @@ let mode = "card";
 let flipped = false;
 let showZh = false; // flashcard page: Chinese is hidden until the 👁 button (or the blurred text itself) is tapped
 let progress = {};
+let progressTs = {}; // id -> ms timestamp of the last change to that word's status (also kept for cleared marks)
 let quizWord = null;
 let quizLocked = false;
 
@@ -1143,6 +1144,7 @@ function saveVersionedProgress(key, version, dataObj){
 async function initAllProgress(){
   await ensureCurrentVersion();
   progress = loadVersionedProgress("toeic-vocab-progress", versionOf("vocab"));
+  progressTs = loadVersionedProgress("toeic-vocab-progress-ts", versionOf("vocab"));
   readingAnswers = loadVersionedProgress("toeic-reading-answers", versionOf("reading"));
   readingChecked = loadVersionedProgress("toeic-reading-checked", versionOf("reading"));
   p5Progress = loadVersionedProgress("toeic-p5-progress", versionOf("p5"));
@@ -1207,6 +1209,7 @@ async function switchToVersion(newVersion){
   readingIdx = 0; readingOrder = []; readingDocTab = {};
 
   progress = loadVersionedProgress("toeic-vocab-progress", newVersion);
+  progressTs = loadVersionedProgress("toeic-vocab-progress-ts", newVersion);
   readingAnswers = loadVersionedProgress("toeic-reading-answers", newVersion);
   readingChecked = loadVersionedProgress("toeic-reading-checked", newVersion);
   p5Progress = loadVersionedProgress("toeic-p5-progress", newVersion);
@@ -1234,7 +1237,7 @@ let cloudSyncing = false; // true while we're applying a cloud snapshot, to avoi
 
 function saveProgress(){
   saveVersionedProgress("toeic-vocab-progress", versionOf("vocab"), progress);
-  pushCloudVocab();
+  saveVersionedProgress("toeic-vocab-progress-ts", versionOf("vocab"), progressTs);
 }
 function saveReadingProgress(){
   saveVersionedProgress("toeic-reading-answers", versionOf("reading"), readingAnswers);
@@ -1246,7 +1249,76 @@ function pushCloud(key, payload){
   if(cloudSyncing || !currentUser || !window.cloudSync) return;
   window.cloudSync.save(currentUser.uid, key, payload).catch(()=>{});
 }
-function pushCloudVocab(){ pushCloud("vocab", { version: versionOf("vocab"), progress }); }
+/* Vocab marks sync per word with a timestamp, so two devices (phone + tablet) can never overwrite each other's newer
+   marks: a single change is written as one field (merge), and merging two copies keeps the newest change per word.
+   A cleared mark is stored as null (with its timestamp) so it isn't resurrected by an older copy. */
+function vocabCloudPayload(){
+  const prog = { ...progress };
+  for(const id of Object.keys(progressTs)) if(!(id in prog)) prog[id] = null;
+  return { version: versionOf("vocab"), progress: prog, ts: { ...progressTs } };
+}
+function pushCloudVocab(){ pushCloud("vocab", vocabCloudPayload()); }           // full copy (after a merge / reset)
+function pushCloudVocabEntries(ids){                                              // only the words that changed
+  if(cloudSyncing || !currentUser || !window.cloudSync || !ids.length) return;
+  const prog = {}, ts = {};
+  ids.forEach(id=>{ prog[id] = progress[id] ?? null; ts[id] = progressTs[id]; });
+  window.cloudSync.mergeVocab(currentUser.uid, { version: versionOf("vocab"), progress: prog, ts }).catch(()=>{});
+}
+/* Newest change per word wins. Copies without timestamps (made before this existed) tie at 0: this device's value
+   wins, otherwise the cloud's — the same as the old union merge. */
+function mergeVocabProgress(cloudEntry){
+  let cp = {}, ct = {};
+  if(cloudEntry){
+    if("version" in cloudEntry){ if(cloudEntry.version === versionOf("vocab")){ cp = cloudEntry.progress || {}; ct = cloudEntry.ts || {}; } }
+    else cp = cloudEntry; // legacy flat map
+  }
+  const out = {}, outTs = {}, localWins = [];
+  const ids = new Set([...Object.keys(cp), ...Object.keys(ct), ...Object.keys(progress), ...Object.keys(progressTs)]);
+  for(const id of ids){
+    const cs = cp[id] ?? null, cts = ct[id] || 0, ls = progress[id] ?? null, lts = progressTs[id] || 0;
+    let status, ts;
+    if(cts > lts){ status = cs; ts = cts; }
+    else if(lts > cts){ status = ls; ts = lts; localWins.push(id); }
+    else{ status = ls ?? cs; ts = lts; if(ls !== null && ls !== cs) localWins.push(id); }
+    if(status) out[id] = status;
+    if(ts) outTs[id] = ts;
+  }
+  return { progress: out, ts: outTs, localWins };
+}
+/* One safety copy per day (last 3 days) of both sides before a merge replaces local progress. */
+function backupVocabProgress(cloudEntry){
+  try{
+    const all = loadJSON("toeic-vocab-backup");
+    const list = Array.isArray(all) ? all : [];
+    const day = todayLocalStr();
+    if(list.some(b=>b.day === day)) return;
+    list.push({ day, savedAt: Date.now(), local: progress, localTs: progressTs, cloud: cloudEntry || null });
+    while(list.length > 3) list.shift();
+    saveJSON("toeic-vocab-backup", list);
+  }catch(e){}
+}
+/* Pull the newest marks when the app comes back to the foreground (e.g. after using the other device). */
+let lastVocabRefresh = 0;
+async function refreshVocabFromCloud(){
+  if(!currentUser || !window.cloudSync || cloudSyncing || !window.cloudSync.loadVocab) return;
+  if(Date.now() - lastVocabRefresh < 8000) return;
+  lastVocabRefresh = Date.now();
+  try{
+    await ensureCurrentVersion();
+    const cloudEntry = await window.cloudSync.loadVocab(currentUser.uid);
+    const before = JSON.stringify(progress);
+    const m = mergeVocabProgress(cloudEntry);
+    progress = m.progress; progressTs = m.ts; saveProgress();
+    pushCloudVocabEntries(m.localWins);
+    if(JSON.stringify(progress) !== before){
+      renderStats();
+      const typing = /INPUT|TEXTAREA|SELECT/.test((document.activeElement && document.activeElement.tagName) || "");
+      if(!typing && (mode === "card" || mode === "list" || mode === "quiz")) renderStage();
+    }
+  }catch(e){}
+}
+document.addEventListener("visibilitychange", ()=>{ if(!document.hidden) refreshVocabFromCloud(); });
+window.addEventListener("focus", refreshVocabFromCloud);
 function pushCloudReading(){ pushCloud("reading", { version: versionOf("reading"), answers: readingAnswers, checked: readingChecked }); }
 function pushCloudPart(key, progressObj){ pushCloud(key, { version: versionOf(key), progress: progressObj }); }
 function pushCloudSaved(){ pushCloud("savedWords", savedWords); }
@@ -1336,8 +1408,10 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
     await ensureCurrentVersion(); // make sure we know current versions before comparing
     const cloud = await window.cloudSync.loadProgress(currentUser.uid);
 
-    progress = mergeVersioned(cloud.vocab, progress, "vocab");
-    saveVersionedProgress("toeic-vocab-progress", versionOf("vocab"), progress);
+    backupVocabProgress(cloud.vocab);
+    const mergedVocab = mergeVocabProgress(cloud.vocab);
+    progress = mergedVocab.progress; progressTs = mergedVocab.ts;
+    saveProgress();
 
     const readingVersionOk = cloud.reading && (!("version" in cloud.reading) || cloud.reading.version === versionOf("reading"));
     if(readingVersionOk){
@@ -1426,13 +1500,17 @@ function statusOf(id){ return progress[id] || null; }
 function setStatus(id, status){
   if(progress[id] === status){ delete progress[id]; }
   else{ progress[id] = status; }
+  progressTs[id] = Date.now();
   saveProgress();
+  pushCloudVocabEntries([id]);
   renderStats();
 }
 /* Unconditional set (no toggle-off) — for automatic updates like quiz results, where re-affirming the same status must not clear the mark. */
 function setStatusDirect(id, status){
   progress[id] = status;
+  progressTs[id] = Date.now();
   saveProgress();
+  pushCloudVocabEntries([id]);
   renderStats();
 }
 
@@ -1656,8 +1734,11 @@ document.getElementById("shuffleBtn").addEventListener("click", ()=>{
 });
 document.getElementById("resetBtn").addEventListener("click", ()=>{
   if(confirm("確定要清除所有熟記進度嗎？此動作無法復原。")){
+    const now = Date.now();
+    Object.keys(progress).forEach(id=>{ progressTs[id] = now; });
     progress = {};
     saveProgress();
+    pushCloudVocab();
     render();
   }
 });
@@ -4278,6 +4359,14 @@ loadStoryReading();
     },
     save(uid, key, data){
       return setDoc(doc(db, "users", uid, "progress", key), { data, updatedAt: Date.now() });
+    },
+    async loadVocab(uid){
+      const snap = await getDoc(doc(db, "users", uid, "progress", "vocab"));
+      return snap.exists() ? snap.data().data : null;
+    },
+    // write only the given words (nested merge) so another device's newer marks are never overwritten
+    mergeVocab(uid, data){
+      return setDoc(doc(db, "users", uid, "progress", "vocab"), { data, updatedAt: Date.now() }, { merge: true });
     },
     saveVocab(uid, data){ return this.save(uid, "vocab", data); },
     saveReading(uid, data){ return this.save(uid, "reading", data); }
