@@ -589,9 +589,9 @@
   .nav-btn{ width:44px; height:44px; background:var(--surface-2); border:0; color:var(--text); }
   .wpg-bar-row .mark-btn{ border-radius:14px; font-size:14px; font-weight:700; padding:11px 8px; border:1.5px solid; background:transparent; }
   .wpg-bar-row .mark-btn.unknown{ color:var(--danger); border-color:color-mix(in srgb, var(--danger) 50%, transparent); }
-  .wpg-bar-row .mark-btn.known{ background:var(--success); color:#fff; border-color:var(--success); }
+  .wpg-bar-row .mark-btn.known{ color:var(--success); border-color:color-mix(in srgb, var(--success) 55%, transparent); }
   .wpg-bar-row .mark-btn.unknown.active{ background:var(--danger); color:#fff; border-color:var(--danger); }
-  .wpg-bar-row .mark-btn.known.active{ box-shadow:0 0 0 3px color-mix(in srgb, var(--success) 30%, transparent); }
+  .wpg-bar-row .mark-btn.known.active{ background:var(--success); color:#fff; border-color:var(--success); }
   .wpg-count{ font-weight:700; color:var(--text-muted); }
 
   .toast{ position:fixed; left:50%; top:16px; transform:translate(-50%,-300%); background:var(--text); color:var(--bg); font-weight:700; padding:10px 20px; border-radius:999px; z-index:200; transition:transform .35s cubic-bezier(.2,.8,.2,1); pointer-events:none; }
@@ -654,6 +654,8 @@
   .wpg-card.dict-on:not(.dict-revealed) .wd-notes li > span:first-child{ filter:blur(11px); user-select:none; }
   .wpg-card .wpg-word, .wpg-card .wd-letters, .wpg-card .wd-example .en{ transition:filter .2s; }
   body.kb-open .wpg-bar{ display:none; }
+  .wpg-hero .chip.st-known{ background:var(--success); color:#fff; }
+  .wpg-hero .chip.st-unknown{ background:var(--danger); color:#fff; }
 </style>
 <script>
 /* Apply a saved theme choice before first paint so a light/dark override doesn't flash. */
@@ -1925,6 +1927,7 @@ function renderWordPage(w, st, total){
         <span class="chip cat">${categoryLabel(w.category)}</span>
         ${w.importance ? `<span class="chip imp">${importanceLabel(w.importance)}</span>` : ""}
         <span class="chip pos">${w.pos}</span>
+        ${st === "known" ? '<span class="chip st st-known">✅ 已熟記</span>' : st === "unknown" ? '<span class="chip st st-unknown">❌ 還不熟</span>' : ""}
       </div>
       <div class="wpg-btns">
         <button class="speak-btn wpg-eye" id="eyeBtn" title="顯示／隱藏中文意思" aria-pressed="${showZh}">${showZh ? "🙈" : "👁"}</button>
@@ -2157,8 +2160,9 @@ function renderCardMode(container){
     return targetId;
   };
   const showAfter = (targetId)=>{ const i = cardFinalIds().indexOf(targetId); cursor = i >= 0 ? i : 0; renderStage(); window.scrollTo(0, 0); };
-  document.getElementById("markUnknownBtn").addEventListener("click", ()=>{ const t = go(1); setStatus(w.id, "unknown"); showAfter(t); });
-  document.getElementById("markKnownBtn").addEventListener("click", ()=>{ const t = go(1); setStatus(w.id, "known"); showAfter(t); });
+  /* Direct set, not a toggle: pressing the same button again must not silently clear the mark. */
+  document.getElementById("markUnknownBtn").addEventListener("click", ()=>{ const t = go(1); setStatusDirect(w.id, "unknown"); showAfter(t); });
+  document.getElementById("markKnownBtn").addEventListener("click", ()=>{ const t = go(1); setStatusDirect(w.id, "known"); showAfter(t); });
   document.getElementById("prevBtn").addEventListener("click", ()=> showAfter(go(-1)));
   document.getElementById("nextBtn").addEventListener("click", ()=> showAfter(go(1)));
 }
