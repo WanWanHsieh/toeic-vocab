@@ -656,6 +656,27 @@
   body.kb-open .wpg-bar{ display:none; }
   .wpg-hero .chip.st-known{ background:var(--success); color:#fff; }
   .wpg-hero .chip.st-unknown{ background:var(--danger); color:#fff; }
+
+  /* 每日文法 */
+  .gd-hero{ max-width:640px; margin:0 auto 18px; padding:22px 24px; border-radius:22px; color:var(--on-hero); background:linear-gradient(150deg,var(--hero-a),var(--hero-b)); box-shadow:0 18px 36px -24px rgba(0,0,0,.45); }
+  .gd-hero h2{ margin:4px 0 6px; font-size:28px; font-weight:800; color:var(--on-hero); }
+  .gd-hero p{ margin:0; font-size:13.5px; color:var(--on-hero-soft); line-height:1.6; }
+  .gd-date{ font-size:12px; font-weight:700; letter-spacing:.1em; color:var(--hero-gold); }
+  .gd-sub{ font-size:13px; font-weight:600; color:var(--on-hero-soft); }
+  .gd-start{ margin-top:16px; border:0; border-radius:14px; padding:12px 22px; font-size:15px; font-weight:800; cursor:pointer; background:var(--hbtn-bg); color:var(--hbtn-fg); }
+  .gd-start:hover{ background:var(--hbtn-bg-h); }
+  .gd-actions{ display:flex; gap:10px; flex-wrap:wrap; align-items:center; }
+  .gd-actions .icon-btn{ margin-top:16px; border-radius:14px; background:var(--chip-bg); color:var(--on-hero); border:0; }
+  .gd-list-title{ max-width:640px; margin:18px auto 8px; font-size:13px; font-weight:800; color:var(--text-muted); letter-spacing:.06em; }
+  .gd-list{ max-width:640px; margin:0 auto; display:flex; flex-direction:column; gap:8px; }
+  .gd-row, .gd-cat{ display:flex; justify-content:space-between; align-items:center; gap:10px; padding:12px 16px; border:1px solid var(--border); border-radius:14px; background:var(--surface); color:var(--text); font-size:14.5px; font-weight:700; text-align:left; font-family:inherit; }
+  .gd-row{ cursor:pointer; }
+  .gd-row:hover{ border-color:var(--accent); }
+  .gd-tag{ font-size:12.5px; font-weight:700; color:var(--text-muted); }
+  .gd-tag.done{ color:var(--success); }
+  .gd-wrong{ max-width:640px; margin:0 auto 10px; padding:14px 16px; border:1px solid var(--border); border-left:4px solid var(--danger); border-radius:14px; background:var(--surface); }
+  .gd-wrong-no{ font-size:12.5px; font-weight:700; color:var(--danger); }
+  .gd-next{ background:var(--accent); color:var(--accent-contrast); border-color:var(--accent); }
 </style>
 <script>
 /* Apply a saved theme choice before first paint so a light/dark override doesn't flash. */
@@ -708,6 +729,7 @@ try{ var t = localStorage.getItem("toeic-theme"); if(t === "light" || t === "dar
     <button class="tab" data-mode="story" role="tab" aria-selected="false">📖 故事閱讀</button>
   </div>
   <div class="tabs" role="tablist" data-cat-group="teach" style="display:none;">
+    <button class="tab" data-mode="gdaily" role="tab" aria-selected="false">✏️ 每日文法</button>
     <button class="tab" data-mode="lesson" role="tab" aria-selected="false">📘 文法課程</button>
   </div>
 
@@ -924,6 +946,7 @@ let mode = "card";
 let flipped = false;
 let showZh = false; // flashcard page: Chinese is hidden until the 👁 button (or the blurred text itself) is tapped
 let progress = {};
+let gdAnswers = loadJSON("toeic-gdaily") || {}; // 每日文法: { "YYYY-MM-DD": [chosen option index | null, x20] }
 let progressTs = {}; // id -> ms timestamp of the last change to that word's status (also kept for cleared marks)
 let quizWord = null;
 let quizLocked = false;
@@ -1324,7 +1347,7 @@ function pushCloudPart(key, progressObj){ pushCloud(key, { version: versionOf(ke
 function pushCloudSaved(){ pushCloud("savedWords", savedWords); }
 function pushCloudCardPos(entry){ pushCloud("cardPos", entry); }
 function pushCloudQuizPos(entry){ pushCloud("quizPos", entry); }
-function pushCloudDailyReading(){ pushCloud("dailyReading", { answers: dailyAnswers, checked: dailyChecked }); }
+function pushCloudDailyReading(){ pushCloud("dailyReading", { answers: dailyAnswers, checked: dailyChecked, grammar: gdAnswers }); }
 function saveDailyProgress(){
   saveJSON("toeic-daily-answers", dailyAnswers);
   saveJSON("toeic-daily-checked", dailyChecked);
@@ -1439,6 +1462,10 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
     }
     saveJSON("toeic-daily-answers", dailyAnswers);
     saveJSON("toeic-daily-checked", dailyChecked);
+    if(cloud.dailyReading && cloud.dailyReading.grammar){
+      gdAnswers = mergeGdAnswers(cloud.dailyReading.grammar, gdAnswers);
+      saveJSON("toeic-gdaily", gdAnswers);
+    }
 
     const storyVersionOk = cloud.story && (!("version" in cloud.story) || cloud.story.version === versionOf("story"));
     if(storyVersionOk){
@@ -1761,6 +1788,7 @@ document.querySelectorAll(".tab").forEach(btn=>{
     if(mode === "theme") themeStage = "picker";
     if(mode === "phrase") phraseStage = "picker";
     if(mode === "lesson") lessonStage = "picker";
+    if(mode === "gdaily") gdStage = "home";
     if(mode === "spelling") rebuildSpellingOrder();
     if(mode === "daily") dailyStage = "picker";
     if(mode === "story") storyStage = "picker";
@@ -1778,7 +1806,7 @@ const MODE_TO_CATEGORY = {
   card:"vocab", list:"vocab", theme:"vocab", phrase:"vocab", spelling:"vocab", saved:"vocab",
   quiz:"toeic", toeic_hub:"toeic", listening:"toeic", grammar:"toeic", reading:"toeic",
   daily:"reading", story:"reading",
-  lesson:"teach"
+  lesson:"teach", gdaily:"teach"
 };
 function showCategory(cat){
   document.querySelectorAll(".tabs[data-cat-group]").forEach(el=>{
@@ -3388,6 +3416,7 @@ function renderStage(){
   else if(mode === "theme") renderThemeMode(container);
   else if(mode === "phrase") renderPhraseMode(container);
   else if(mode === "lesson") renderLessonMode(container);
+  else if(mode === "gdaily") renderGdailyMode(container);
   else if(mode === "saved") renderSavedMode(container);
   else if(mode === "spelling") renderSpellingMode(container);
   else if(mode === "daily") renderDailyReadingMode(container);
@@ -4225,6 +4254,164 @@ async function loadPhraseBank(){
   phraseBank = await loadJSONData("phrase_bank.json", []);
   if(mode === "phrase") renderStage();
 }
+/* ---------- 每日文法：每天 20 題 Part 5 文法 ----------
+   data/<version>/grammar_daily.json = [ { date, questions[20] } ] written ahead of time; a day appears once its date
+   (viewer's local date) has arrived. Answers are kept per date and synced inside the dailyReading cloud doc. */
+let grammarDaily = [];
+let gdStage = "home", gdDate = null, gdIdx = 0;
+function mergeGdAnswers(cloudMap, localMap){
+  const count = (a)=> Array.isArray(a) ? a.filter(x=>x !== null && x !== undefined).length : 0;
+  const out = { ...(cloudMap || {}) };
+  for(const [date, arr] of Object.entries(localMap || {})){
+    if(!out[date] || count(arr) >= count(out[date])) out[date] = arr;
+  }
+  return out;
+}
+function gdSave(){ saveJSON("toeic-gdaily", gdAnswers); pushCloudDailyReading(); }
+function gdScore(day){
+  const a = gdAnswers[day.date] || [];
+  let right = 0, answered = 0;
+  day.questions.forEach((q, i)=>{ if(a[i] !== null && a[i] !== undefined){ answered++; if(a[i] === q.answer_index) right++; } });
+  return { right, answered, total: day.questions.length };
+}
+async function loadGrammarDaily(){
+  const all = await loadJSONData("grammar_daily.json", []);
+  const today = todayLocalStr();
+  grammarDaily = all.filter(d => d.date <= today).sort((x, y)=> x.date < y.date ? -1 : 1);
+  if(mode === "gdaily") renderStage();
+}
+function gdOpen(date){
+  const day = grammarDaily.find(d=>d.date === date);
+  if(!day) return;
+  gdDate = date;
+  const a = gdAnswers[date] || [];
+  const first = day.questions.findIndex((q, i)=> a[i] === null || a[i] === undefined);
+  if(first < 0){ gdStage = "result"; }
+  else{ gdStage = "quiz"; gdIdx = first; }
+  renderStage();
+}
+function renderGdailyMode(container){
+  if(grammarDaily.length === 0){
+    container.innerHTML = `<div class="empty-state">每日文法的題目準備中，稍後再來看看。</div>`;
+    return;
+  }
+  const day = grammarDaily.find(d=>d.date === gdDate);
+  if(gdStage === "quiz" && day) return renderGdailyQuiz(container, day);
+  if(gdStage === "result" && day) return renderGdailyResult(container, day);
+  gdStage = "home";
+  const today = todayLocalStr();
+  const days = grammarDaily.slice().reverse();
+  const latest = days[0], sc = gdScore(latest);
+  const isToday = latest.date === today;
+  const btn = sc.answered === 0 ? "開始今天的練習" : sc.answered < sc.total ? `繼續（已答 ${sc.answered} 題）` : `查看結果（答對 ${sc.right} / ${sc.total}）`;
+  const cats = [...new Set(latest.questions.map(q=>q.category))].map(c=>P5_CATEGORY_LABELS[c] || c).join("、");
+  const rows = days.slice(isToday ? 1 : 0).map(d=>{
+    const x = gdScore(d);
+    const tag = x.answered === 0 ? "未開始" : x.answered < x.total ? `進行中 ${x.answered}/${x.total}` : `答對 ${x.right} / ${x.total}`;
+    return `<button class="gd-row" data-date="${d.date}"><span>${formatDailyDate(d.date)}</span><span class="gd-tag ${x.answered === x.total ? "done" : ""}">${tag}</span></button>`;
+  }).join("");
+  container.innerHTML = `
+    <div class="gd-hero">
+      <div class="gd-date">${formatDailyDate(latest.date)}${isToday ? "" : "　（今天的新題目還在準備中）"}</div>
+      <h2>每日文法 ${latest.questions.length} 題</h2>
+      <p>${cats}</p>
+      <div class="progress-bar" style="margin:14px 0 4px;max-width:none;"><div class="progress-fill" style="width:${(sc.answered / sc.total * 100).toFixed(0)}%"></div></div>
+      <div class="gd-sub">已答 ${sc.answered} / ${sc.total}${sc.answered ? `　答對 ${sc.right}` : ""}</div>
+      <button class="gd-start" id="gdStartBtn">${btn}</button>
+    </div>
+    ${rows ? `<div class="gd-list-title">往日練習</div><div class="gd-list">${rows}</div>` : ""}`;
+  document.getElementById("gdStartBtn").addEventListener("click", ()=> gdOpen(latest.date));
+  container.querySelectorAll(".gd-row").forEach(b=> b.addEventListener("click", ()=> gdOpen(b.dataset.date)));
+}
+function gdSentence(q, chosenIdx){
+  const blank = chosenIdx === null || chosenIdx === undefined ? `<span class="p5-blank">＿＿＿＿</span>` : `<span class="p5-blank">${q.options[chosenIdx]}</span>`;
+  return wrapWords(q.sentence).replace(/_{4,}/, blank);
+}
+function renderGdailyQuiz(container, day){
+  const total = day.questions.length;
+  if(gdIdx < 0) gdIdx = 0;
+  if(gdIdx >= total){ gdStage = "result"; return renderGdailyResult(container, day); }
+  const q = day.questions[gdIdx];
+  const arr = gdAnswers[day.date] || [];
+  const sel = arr[gdIdx] === undefined ? null : arr[gdIdx];
+  const checked = sel !== null;
+  const sc = gdScore(day);
+  const opts = q.options.map((opt, oi)=>{
+    let cls = "q-opt";
+    if(checked){ if(oi === q.answer_index) cls += " correct"; else if(oi === sel) cls += " wrong"; }
+    return `<button class="${cls}" data-oi="${oi}" ${checked ? "disabled" : ""}>${String.fromCharCode(65 + oi)}. ${opt}</button>`;
+  }).join("");
+  const explain = checked ? `<div class="q-explain">${sel === q.answer_index ? "✅ 答對了！" : "❌ 答錯了。"} 正確答案是 (${String.fromCharCode(65 + q.answer_index)})。<br>${q.explanation_zh}</div>` : "";
+  const last = gdIdx === total - 1;
+  container.innerHTML = `
+    <div class="reading-head">
+      <div class="reading-tag"><button class="icon-btn" id="gdBackBtn" style="padding:5px 10px;font-size:12.5px;">← 返回</button> <span class="chip cat">${P5_CATEGORY_LABELS[q.category] || q.category}</span></div>
+      <div class="reading-nav">
+        <span>答對 ${sc.right} / 已答 ${sc.answered}</span>
+        <button class="nav-btn" id="gdPrevBtn" style="width:36px;height:36px;" ${gdIdx === 0 ? "disabled" : ""}>◀</button>
+        <span>${gdIdx + 1} / ${total}</span>
+        <button class="nav-btn" id="gdNextBtn" style="width:36px;height:36px;">▶</button>
+      </div>
+    </div>
+    <div class="progress-bar" style="margin:0 auto 14px;max-width:640px;"><div class="progress-fill" style="width:${(sc.answered / total * 100).toFixed(0)}%"></div></div>
+    <div class="p5-card">
+      <p class="p5-sentence">${gdSentence(q, sel)}</p>
+      <div class="p5-options">${opts}</div>
+      ${explain}
+      <div class="reading-actions">
+        ${checked ? `<button class="icon-btn gd-next" id="gdContinueBtn">${last ? "看結果 ▶" : "下一題 ▶"}</button>` : ""}
+      </div>
+    </div>`;
+  document.getElementById("gdBackBtn").addEventListener("click", ()=>{ gdStage = "home"; renderStage(); });
+  document.getElementById("gdPrevBtn").addEventListener("click", ()=>{ gdIdx--; renderStage(); });
+  document.getElementById("gdNextBtn").addEventListener("click", ()=>{ gdIdx++; renderStage(); });
+  document.getElementById("gdContinueBtn")?.addEventListener("click", ()=>{ gdIdx++; renderStage(); window.scrollTo(0, 0); });
+  if(!checked){
+    container.querySelectorAll(".q-opt").forEach(b=> b.addEventListener("click", ()=>{
+      const a = gdAnswers[day.date] || (gdAnswers[day.date] = Array(total).fill(null));
+      a[gdIdx] = Number(b.dataset.oi);
+      gdSave();
+      renderStage();
+    }));
+  }
+}
+function renderGdailyResult(container, day){
+  const sc = gdScore(day);
+  const a = gdAnswers[day.date] || [];
+  const byCat = {};
+  day.questions.forEach((q, i)=>{
+    const c = byCat[q.category] || (byCat[q.category] = { right: 0, total: 0 });
+    c.total++; if(a[i] === q.answer_index) c.right++;
+  });
+  const catRows = Object.entries(byCat).map(([c, v])=>`<div class="gd-cat"><span>${P5_CATEGORY_LABELS[c] || c}</span><span class="gd-tag ${v.right === v.total ? "done" : ""}">${v.right} / ${v.total}</span></div>`).join("");
+  const wrong = day.questions.map((q, i)=>({ q, i })).filter(x=> a[x.i] !== x.q.answer_index);
+  const wrongHtml = wrong.map(({ q, i })=>`
+    <div class="gd-wrong">
+      <div class="gd-wrong-no">第 ${i + 1} 題　你的答案：${a[i] === null || a[i] === undefined ? "未作答" : q.options[a[i]]}</div>
+      <p class="p5-sentence" style="margin:6px 0;">${wrapWords(q.sentence).replace(/_{4,}/, `<span class="p5-blank">${q.options[q.answer_index]}</span>`)}</p>
+      <div class="q-explain" style="border-top:0;padding-top:0;margin-top:4px;">${q.explanation_zh}</div>
+    </div>`).join("");
+  container.innerHTML = `
+    <div class="gd-hero gd-result">
+      <div class="gd-date">${formatDailyDate(day.date)}</div>
+      <h2>${sc.right} / ${sc.total}</h2>
+      <p>${sc.right === sc.total ? "全部答對，太厲害了！" : sc.right >= sc.total * 0.8 ? "表現很好，把錯的題目看一遍吧" : "把錯題的解析看過，再重做一次"}</p>
+      <div class="gd-actions">
+        ${wrong.length ? `<button class="gd-start" id="gdRedoBtn">重做錯題（${wrong.length} 題）</button>` : ""}
+        <button class="icon-btn" id="gdHomeBtn">← 回到每日文法</button>
+      </div>
+    </div>
+    <div class="gd-list-title">各類型成績</div>
+    <div class="gd-list">${catRows}</div>
+    ${wrong.length ? `<div class="gd-list-title">答錯的題目</div>${wrongHtml}` : ""}`;
+  document.getElementById("gdHomeBtn").addEventListener("click", ()=>{ gdStage = "home"; renderStage(); });
+  document.getElementById("gdRedoBtn")?.addEventListener("click", ()=>{
+    wrong.forEach(({ i })=>{ a[i] = null; });
+    gdAnswers[day.date] = a; gdSave();
+    gdOpen(day.date);
+  });
+}
+
 async function loadGrammarLessons(){
   grammarLessons = await loadJSONData("grammar_lessons.json", []);
   if(mode === "lesson") renderStage();
@@ -4297,6 +4484,7 @@ loadP4();
 loadThemeVocab();
 loadPhraseBank();
 loadGrammarLessons();
+loadGrammarDaily();
 loadWordDetails();
 if("serviceWorker" in navigator && location.protocol !== "file:") navigator.serviceWorker.register("sw.js").catch(()=>{}); // lets the site be added to the home screen as an app
 loadDailyReading();

@@ -1,0 +1,3432 @@
+[
+  {
+    "date": "2026-10-26",
+    "questions": [
+      {
+        "sentence": "The company's ___________ of a new customer database was completed two weeks ahead of schedule.",
+        "options": [
+          "implement",
+          "implemented",
+          "implementation",
+          "implementing"
+        ],
+        "answer_index": 2,
+        "category": "noun_form",
+        "explanation_zh": "空格前有所有格 company's 和冠詞 the,後面接 of,需要名詞,implementation(實施、執行)是名詞。implement 作動詞時是『實施』,implemented 為過去式或分詞,implementing 為現在分詞,都不能放在 the...of 之間當名詞。"
+      },
+      {
+        "sentence": "Applicants should attach a letter of ___________ from a former supervisor to their résumés.",
+        "options": [
+          "recommendation",
+          "recommend",
+          "recommended",
+          "recommending"
+        ],
+        "answer_index": 0,
+        "category": "noun_form",
+        "explanation_zh": "letter of recommendation(推薦信)是固定搭配,介系詞 of 後面要接名詞 recommendation。recommend 是動詞,recommended 和 recommending 是動詞變化形,都無法在此作名詞。"
+      },
+      {
+        "sentence": "The conference room was ___________ furnished, with leather chairs and a long glass table.",
+        "options": [
+          "elegant",
+          "elegance",
+          "elegantness",
+          "elegantly"
+        ],
+        "answer_index": 3,
+        "category": "adjective_adverb",
+        "explanation_zh": "空格修飾過去分詞 furnished(被布置),修飾動詞或分詞要用副詞,所以是 elegantly。elegant 是形容詞,elegance 是名詞,elegantness 不是自然的用字,也不能修飾動詞。"
+      },
+      {
+        "sentence": "Fragile items must be handled ___________ because the contents can be damaged very easily.",
+        "options": [
+          "careful",
+          "carefully",
+          "care",
+          "caring"
+        ],
+        "answer_index": 1,
+        "category": "adjective_adverb",
+        "explanation_zh": "空格修飾被動動詞 be handled,需要副詞,所以是 carefully。careful 是形容詞,care 是名詞或動詞,caring 是形容詞(體貼的),都不能直接放在被動動詞後面修飾它。"
+      },
+      {
+        "sentence": "Ms. Tanaka asked the vendor ___________ the revised quotation before Thursday morning.",
+        "options": [
+          "sending",
+          "to send",
+          "sends",
+          "send"
+        ],
+        "answer_index": 1,
+        "category": "verb_form",
+        "explanation_zh": "ask + 人 + to V 是固定句型,表示『請某人做某事』,所以用 to send。sending 和 sends 不符合此句型,原形 send 少了 to,在正式英文中不正確。"
+      },
+      {
+        "sentence": "The tickets ___________ to all registered attendees by the end of this week.",
+        "options": [
+          "will send",
+          "are sending",
+          "sending",
+          "will be sent"
+        ],
+        "answer_index": 3,
+        "category": "verb_form",
+        "explanation_zh": "tickets(票券)是被寄出的對象,與 send 是被動關係,且有 by the end of this week 表示未來,所以用 will be sent。will send 和 are sending 是主動語態,後面又沒有受詞;sending 不是完整的述語動詞。"
+      },
+      {
+        "sentence": "The list of approved suppliers ___________ posted on the intranet every Monday.",
+        "options": [
+          "is",
+          "are",
+          "have been",
+          "were"
+        ],
+        "answer_index": 0,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "主詞是單數的 list,of approved suppliers 只是修飾語,所以動詞用單數 is;every Monday 表示現在的慣例。are 與 have been 是複數動詞,不與 list 一致;were 是過去式,也不符合現在的慣例。"
+      },
+      {
+        "sentence": "The findings of the recent survey ___________ that customers prefer faster delivery over lower prices.",
+        "options": [
+          "suggests",
+          "is suggesting",
+          "suggest",
+          "has suggested"
+        ],
+        "answer_index": 2,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "主詞是複數名詞 findings,現在簡單式的動詞要用複數形 suggest。suggests、is suggesting 與 has suggested 都是單數主詞才用的形式,與 findings 不一致。"
+      },
+      {
+        "sentence": "Ms. Park completed the entire audit report by ___________ without any help from her colleagues.",
+        "options": [
+          "her",
+          "hers",
+          "she",
+          "herself"
+        ],
+        "answer_index": 3,
+        "category": "pronoun",
+        "explanation_zh": "by oneself 表示『獨自、不靠別人』,是固定用法,要用反身代名詞 herself。her 是受格或所有格,hers 是所有格代名詞,she 是主格,都不能放在 by 後面構成這個片語。"
+      },
+      {
+        "sentence": "Customers who wish to cancel ___________ subscription must notify us thirty days in advance.",
+        "options": [
+          "their",
+          "them",
+          "theirs",
+          "they"
+        ],
+        "answer_index": 0,
+        "category": "pronoun",
+        "explanation_zh": "空格後面是名詞 subscription,需要所有格形容詞修飾它,先行詞 customers 是複數,所以用 their。them 是受格,theirs 是所有格代名詞(後面不能再接名詞),they 是主格。"
+      },
+      {
+        "sentence": "The factory has been running ___________ full capacity since the new supply contract was signed.",
+        "options": [
+          "in",
+          "for",
+          "at",
+          "with"
+        ],
+        "answer_index": 2,
+        "category": "preposition",
+        "explanation_zh": "run at full capacity(以滿載產能運作)是固定搭配,表示程度、速率時用 at。in、for、with 都不能和 full capacity 搭配成這個意思。"
+      },
+      {
+        "sentence": "Ms. Okafor is responsible ___________ coordinating all overseas shipments for the entire sales division.",
+        "options": [
+          "of",
+          "for",
+          "to",
+          "with"
+        ],
+        "answer_index": 1,
+        "category": "preposition",
+        "explanation_zh": "be responsible for 是固定用法,表示『負責某事』,後面接名詞或動名詞。of、to、with 都不能與 responsible 搭配成這個意思。"
+      },
+      {
+        "sentence": "The software update will be installed overnight ___________ it does not interrupt daily operations.",
+        "options": [
+          "so that",
+          "even though",
+          "unless",
+          "whereas"
+        ],
+        "answer_index": 0,
+        "category": "conjunction_connector",
+        "explanation_zh": "so that 引導目的副詞子句,表示『為了讓…』,符合『在夜間安裝是為了不干擾日常運作』的語意。even though 表示讓步,unless 表示『除非』,whereas 表示對比,語意都不通。"
+      },
+      {
+        "sentence": "The new printer is expensive; ___________, it is far more durable than our current model.",
+        "options": [
+          "therefore",
+          "otherwise",
+          "instead",
+          "nevertheless"
+        ],
+        "answer_index": 3,
+        "category": "conjunction_connector",
+        "explanation_zh": "前句說很貴,後句說更耐用,語氣轉折而讓步,所以用 nevertheless(儘管如此)。therefore 表示因果,otherwise 表示『否則』,instead 表示『取而代之』,都不符合這裡的邏輯。"
+      },
+      {
+        "sentence": "The consultant to ___________ we spoke last week has agreed to join the project in January.",
+        "options": [
+          "who",
+          "whom",
+          "whose",
+          "which"
+        ],
+        "answer_index": 1,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞 consultant 是人,且在關係子句中是 spoke to 的受詞,介系詞 to 後面要用受格 whom。who 是主格,不能接在介系詞後面;whose 表示所屬;which 用於事物。"
+      },
+      {
+        "sentence": "The software upgrade, ___________ will take about two hours, is scheduled for Saturday night.",
+        "options": [
+          "what",
+          "that",
+          "which",
+          "who"
+        ],
+        "answer_index": 2,
+        "category": "relative_clause",
+        "explanation_zh": "逗號後面是補充說明的非限定關係子句,先行詞是事物 upgrade,要用 which。that 不能用在逗號後的非限定子句;what 不是關係代名詞,不能接在先行詞後面;who 用於人。"
+      },
+      {
+        "sentence": "Our new courier service is ___________ reliable than any other provider operating in the region.",
+        "options": [
+          "most",
+          "more",
+          "as",
+          "very"
+        ],
+        "answer_index": 1,
+        "category": "comparison",
+        "explanation_zh": "後面有 than,表示比較級,reliable 是多音節形容詞,所以在前面加 more。most 是最高級,as 要搭配 as...as,very 是程度副詞,都不能與 than 連用。"
+      },
+      {
+        "sentence": "The warranty on this model is as ___________ as the one offered on our premium line.",
+        "options": [
+          "more generous",
+          "generously",
+          "generous",
+          "most generous"
+        ],
+        "answer_index": 2,
+        "category": "comparison",
+        "explanation_zh": "as...as 的中間要放形容詞或副詞的原級。be 動詞後面要接形容詞,所以是 generous。more generous 與 most generous 是比較級和最高級,不能放在 as...as 中間;generously 是副詞,不能作 is 的補語。"
+      },
+      {
+        "sentence": "The accounting team must ___________ all receipts against the bank statement before the monthly report is finalized.",
+        "options": [
+          "notify",
+          "qualify",
+          "comply",
+          "verify"
+        ],
+        "answer_index": 3,
+        "category": "word_choice",
+        "explanation_zh": "verify(核實、查證)可以直接接受詞 receipts,語意是將收據與銀行對帳單核對。notify 要接人,qualify 是『使具資格』,comply 是不及物動詞,須搭配 with,語意與用法都不符。"
+      },
+      {
+        "sentence": "The hotel offers a ___________ shuttle service to and from the airport for all registered guests.",
+        "options": [
+          "complimentary",
+          "complementary",
+          "compliant",
+          "competitive"
+        ],
+        "answer_index": 0,
+        "category": "word_choice",
+        "explanation_zh": "complimentary 指『免費贈送的』,符合飯店提供免費接駁車的語意。complementary 是『互補的』,compliant 是『遵守規定的』,competitive 是『有競爭力的』,都不適合形容接駁服務。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-27",
+    "questions": [
+      {
+        "sentence": "Employees are encouraged to take full ___________ of the company's tuition assistance program.",
+        "options": [
+          "advantageous",
+          "advantage",
+          "advantageously",
+          "advantaged"
+        ],
+        "answer_index": 1,
+        "category": "noun_form",
+        "explanation_zh": "take advantage of 是固定用法,意思是『善用、利用』,take 的受詞要用名詞 advantage。advantageous 是形容詞,advantageously 是副詞,advantaged 是形容詞(有利條件的),都不能作 take 的受詞。"
+      },
+      {
+        "sentence": "Our firm values the ___________ of every team member to the success of the project.",
+        "options": [
+          "contribute",
+          "contributory",
+          "contributed",
+          "contribution"
+        ],
+        "answer_index": 3,
+        "category": "noun_form",
+        "explanation_zh": "the 後面、of 前面需要名詞,contribution(貢獻)是名詞。contribute 是動詞,contributory 是形容詞,contributed 是過去式或過去分詞,都不能放在這個位置。"
+      },
+      {
+        "sentence": "Sales of the new skincare line rose ___________ in the third quarter, exceeding every forecast.",
+        "options": [
+          "sharply",
+          "sharp",
+          "sharpness",
+          "sharpen"
+        ],
+        "answer_index": 0,
+        "category": "adjective_adverb",
+        "explanation_zh": "rose 是不及物動詞,後面修飾動詞要用副詞 sharply(大幅地)。sharp 是形容詞,sharpness 是名詞,sharpen 是動詞,都不能直接修飾 rose。"
+      },
+      {
+        "sentence": "The training manual is ___________ to read and includes plenty of step-by-step illustrations.",
+        "options": [
+          "easily",
+          "ease",
+          "easy",
+          "easiness"
+        ],
+        "answer_index": 2,
+        "category": "adjective_adverb",
+        "explanation_zh": "be 動詞後面接形容詞作補語,easy to read(容易閱讀)是常見句型,所以用 easy。easily 是副詞,不能作 is 的補語;ease 和 easiness 是名詞,不能放在這裡。"
+      },
+      {
+        "sentence": "Mr. Chen ___________ the quarterly report when the power suddenly went out in the building.",
+        "options": [
+          "finishes",
+          "has finished",
+          "was finishing",
+          "will finish"
+        ],
+        "answer_index": 2,
+        "category": "verb_form",
+        "explanation_zh": "when 子句用過去簡單式 went out,表示過去某個時刻的打斷,主要子句通常用過去進行式 was finishing 表示當時正在進行的動作。finishes 是現在式,has finished 是現在完成式,will finish 是未來式,時態都與過去時間不符。"
+      },
+      {
+        "sentence": "The hotel reservation cannot be ___________ without a valid credit card number on file.",
+        "options": [
+          "confirmed",
+          "confirm",
+          "confirming",
+          "to confirm"
+        ],
+        "answer_index": 0,
+        "category": "verb_form",
+        "explanation_zh": "cannot be 後面接被動語態,需要過去分詞,reservation(預約)是被確認的對象,所以用 confirmed。confirm 是原形,confirming 是現在分詞,to confirm 是不定詞,都不能接在 be 後面構成被動。"
+      },
+      {
+        "sentence": "The director, together with her three assistants, ___________ attending the trade fair in Munich this week.",
+        "options": [
+          "are",
+          "were",
+          "have been",
+          "is"
+        ],
+        "answer_index": 3,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "主詞是單數的 The director,together with 引導的片語只是附加說明,不影響動詞,所以用單數 is。are 與 have been 是複數形;were 是過去式,與 this week 不符。"
+      },
+      {
+        "sentence": "The number of applicants for the summer internship ___________ risen steadily since January.",
+        "options": [
+          "have",
+          "has",
+          "are",
+          "were"
+        ],
+        "answer_index": 1,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "the number of 的主詞是單數的 number,動詞要用單數,搭配 risen 構成現在完成式 has risen。have 與主詞不一致,are 與 were 後面接 risen 不能構成正確的時態。"
+      },
+      {
+        "sentence": "Ms. Tran asked Mr. Park and ___________ to review the draft contract before the board meeting.",
+        "options": [
+          "him",
+          "he",
+          "himself",
+          "his"
+        ],
+        "answer_index": 0,
+        "category": "pronoun",
+        "explanation_zh": "空格與 Mr. Park 並列,同為動詞 asked 的受詞,所以用受格 him。he 是主格,himself 是反身代名詞(Ms. Tran 是女性,不能用),his 是所有格,都不適合作並列受詞。"
+      },
+      {
+        "sentence": "The CEO ___________ will present the awards at the annual company ceremony.",
+        "options": [
+          "her",
+          "hers",
+          "she",
+          "herself"
+        ],
+        "answer_index": 3,
+        "category": "pronoun",
+        "explanation_zh": "反身代名詞可以放在名詞後面強調『本人親自』,The CEO herself 表示執行長親自頒獎。her、hers 和 she 都不能緊接在名詞之後作同位語來強調。"
+      },
+      {
+        "sentence": "The service contract is valid ___________ December 31, after which it must be renewed.",
+        "options": [
+          "by",
+          "until",
+          "during",
+          "since"
+        ],
+        "answer_index": 1,
+        "category": "preposition",
+        "explanation_zh": "valid until 表示有效期間持續到某一時間點為止,符合『之後必須續約』的語意。by 表示在某時間之前完成某動作,during 後面接一段期間,since 表示從過去某時開始,都不適合表示有效期限的終點。"
+      },
+      {
+        "sentence": "Please send the signed forms ___________ the attached envelope to the regional office.",
+        "options": [
+          "on",
+          "at",
+          "in",
+          "to"
+        ],
+        "answer_index": 2,
+        "category": "preposition",
+        "explanation_zh": "表示東西放在信封『裡面』要用 in,in the attached envelope 意思是『放在附上的信封內』。on、at、to 都不能表示放入容器之中的位置關係。"
+      },
+      {
+        "sentence": "The loan will be approved ___________ the applicant can provide proof of steady income.",
+        "options": [
+          "even though",
+          "according to",
+          "as though",
+          "provided that"
+        ],
+        "answer_index": 3,
+        "category": "conjunction_connector",
+        "explanation_zh": "provided that 表示『只要…就…』,引導條件副詞子句,符合『提供收入證明才會核准貸款』的語意。even though 表示讓步,according to 是介系詞片語(後面接名詞),as though 表示『彷彿』,語意都不通。"
+      },
+      {
+        "sentence": "The warehouse flooded last week; ___________, all outbound shipments were delayed until Monday.",
+        "options": [
+          "as a result",
+          "in contrast",
+          "otherwise",
+          "nevertheless"
+        ],
+        "answer_index": 0,
+        "category": "conjunction_connector",
+        "explanation_zh": "前句是原因(倉庫淹水),後句是結果(出貨延遲),所以用 as a result(因此)連接。in contrast 表示對比,otherwise 表示『否則』,nevertheless 表示讓步轉折,都不符合因果關係。"
+      },
+      {
+        "sentence": "The branch ___________ you visited last month has since moved to a larger building downtown.",
+        "options": [
+          "what",
+          "who",
+          "that",
+          "whose"
+        ],
+        "answer_index": 2,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞 branch 是事物,在關係子句中作 visited 的受詞,可以用 that 引導限定關係子句(也可省略)。what 不能接在先行詞後面,who 用於人,whose 表示所屬,後面須接名詞。"
+      },
+      {
+        "sentence": "The annual conference will take place in Lisbon, ___________ the company has its largest overseas office.",
+        "options": [
+          "which",
+          "where",
+          "that",
+          "whose"
+        ],
+        "answer_index": 1,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞 Lisbon 是地點,關係子句 the company has its largest overseas office 本身是完整句子,所以需要關係副詞 where(在那裡)。which 與 that 在子句中要當主詞或受詞,但子句已經完整;whose 後面須接名詞。"
+      },
+      {
+        "sentence": "Of all the shipping options listed on the website, express delivery is by far the ___________ expensive.",
+        "options": [
+          "more",
+          "much",
+          "too",
+          "most"
+        ],
+        "answer_index": 3,
+        "category": "comparison",
+        "explanation_zh": "Of all the options 表示在三個以上的對象中比較,要用最高級,expensive 是多音節形容詞,所以是 the most expensive。more 是比較級,much 與 too 都不能放在 the 與 expensive 之間構成最高級。"
+      },
+      {
+        "sentence": "Online orders are now ___________ than in-store purchases at most of our retail locations.",
+        "options": [
+          "most common",
+          "more common",
+          "as common",
+          "commonly"
+        ],
+        "answer_index": 1,
+        "category": "comparison",
+        "explanation_zh": "空格後面有 than,需要比較級,common 前面加 more 構成 more common。most common 是最高級,as common 要搭配 as,commonly 是副詞,不能作 are 的補語。"
+      },
+      {
+        "sentence": "The airline will ___________ passengers for the inconvenience caused by yesterday's canceled flights.",
+        "options": [
+          "compensate",
+          "resolve",
+          "revise",
+          "restore"
+        ],
+        "answer_index": 0,
+        "category": "word_choice",
+        "explanation_zh": "compensate sb for sth 表示『就某事補償某人』,符合航空公司補償旅客不便的語意。resolve 是解決問題,revise 是修訂,restore 是恢復,後面都不能接 passengers for inconvenience 這種結構。"
+      },
+      {
+        "sentence": "The service agreement will ___________ automatically unless either party gives written notice.",
+        "options": [
+          "renovate",
+          "reward",
+          "renew",
+          "reserve"
+        ],
+        "answer_index": 2,
+        "category": "word_choice",
+        "explanation_zh": "renew(續約、更新)指合約到期後自動延長,符合 service agreement 的語意。renovate 是翻修建築,reward 是獎勵,reserve 是預訂或保留,都不能作合約自動發生的動作。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-28",
+    "questions": [
+      {
+        "sentence": "Applicants should submit their ___________ for the sales manager position by the end of this week.",
+        "options": [
+          "applicants",
+          "applying",
+          "applications",
+          "applicable"
+        ],
+        "answer_index": 2,
+        "category": "noun_form",
+        "explanation_zh": "空格前有所有格 their,需要名詞;submit 的受詞是「申請文件」,複數名詞 applications 最合理。applicants 是「申請人」,意思不通;applying 是動名詞/分詞,applicable 是形容詞,都不能作 submit 的受詞。"
+      },
+      {
+        "sentence": "Early ___________ for the annual logistics conference closes on November 15, so please sign up soon.",
+        "options": [
+          "registration",
+          "register",
+          "registered",
+          "registrar"
+        ],
+        "answer_index": 0,
+        "category": "noun_form",
+        "explanation_zh": "形容詞 Early 後面需要名詞作主詞,「報名、登記」用名詞 registration。register 是動詞,registered 是過去分詞/形容詞,registrar 是「登記員」,意思不合,也無法表示「報名截止」。"
+      },
+      {
+        "sentence": "The quarterly report must be reviewed ___________ before it is sent to the board of directors.",
+        "options": [
+          "careful",
+          "care",
+          "carefulness",
+          "carefully"
+        ],
+        "answer_index": 3,
+        "category": "adjective_adverb",
+        "explanation_zh": "修飾被動動詞 reviewed 要用副詞 carefully(仔細地)。careful 是形容詞,care 與 carefulness 是名詞,都不能修飾動詞。"
+      },
+      {
+        "sentence": "Our customer service representatives are ___________ to answer your questions between 8 a.m. and 6 p.m. on weekdays.",
+        "options": [
+          "availably",
+          "available",
+          "availability",
+          "avail"
+        ],
+        "answer_index": 1,
+        "category": "adjective_adverb",
+        "explanation_zh": "be 動詞後面接形容詞當補語,be available to V 表示「可以(隨時)做某事」。availably 不是正常用法,availability 是名詞,avail 是動詞,皆不符文法。"
+      },
+      {
+        "sentence": "The shipment ___________ in Rotterdam by the time the customs officers began their strike on Monday.",
+        "options": [
+          "has arrived",
+          "had arrived",
+          "arriving",
+          "will arrive"
+        ],
+        "answer_index": 1,
+        "category": "verb_form",
+        "explanation_zh": "by the time 後面接過去簡單式 began,表示主句動作在該過去時間點之前已完成,須用過去完成式 had arrived。has arrived 是現在完成式,will arrive 是未來式,arriving 不能單獨當述語動詞。"
+      },
+      {
+        "sentence": "Employees are encouraged ___________ their expense reports electronically through the new online portal.",
+        "options": [
+          "submit",
+          "submitting",
+          "submitted",
+          "to submit"
+        ],
+        "answer_index": 3,
+        "category": "verb_form",
+        "explanation_zh": "be encouraged to V 是 encourage somebody to V 的被動型,後面接不定詞 to submit。直接用原形、-ing 或過去分詞都不符合此固定結構。"
+      },
+      {
+        "sentence": "The director, along with two senior analysts, ___________ presenting the findings at tomorrow's conference.",
+        "options": [
+          "is",
+          "are",
+          "were",
+          "have been"
+        ],
+        "answer_index": 0,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "along with 引導的片語不影響主詞數,真正的主詞是單數 The director,所以用單數 be 動詞 is。are 與 have been 是複數形;were 是過去式,和 tomorrow 的未來時間不合。"
+      },
+      {
+        "sentence": "Every employee who completes the online training course ___________ a certificate of achievement from the human resources office.",
+        "options": [
+          "receive",
+          "receiving",
+          "receives",
+          "to receive"
+        ],
+        "answer_index": 2,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "主詞是 Every employee(單數),who 子句只是修飾語,主要動詞需用第三人稱單數 receives。receive 是複數/原形,receiving 與 to receive 不是完整的述語動詞。"
+      },
+      {
+        "sentence": "Ms. Garcia assembled the entire display ___________ because no other staff members were available that morning.",
+        "options": [
+          "her",
+          "she",
+          "hers",
+          "herself"
+        ],
+        "answer_index": 3,
+        "category": "pronoun",
+        "explanation_zh": "動作者與主詞相同,且強調「親自、獨自」時用反身代名詞 herself 當同位語。her 是受格、she 是主格、hers 是所有格代名詞,放在此處都無法成句。"
+      },
+      {
+        "sentence": "The report was prepared by Ms. Silva and ___________, so please direct any questions to either of us.",
+        "options": [
+          "I",
+          "me",
+          "myself",
+          "mine"
+        ],
+        "answer_index": 1,
+        "category": "pronoun",
+        "explanation_zh": "介系詞 by 後面要接受格,and 連接的對象同為 by 的受詞,所以用 me。I 是主格,不能放在介系詞後;myself 是反身代名詞,但此處並非主詞自己作用於自己;mine 是所有格代名詞,語意不合。"
+      },
+      {
+        "sentence": "The new travel policy will remain ___________ effect until the board votes on a revised version next quarter.",
+        "options": [
+          "in",
+          "on",
+          "at",
+          "by"
+        ],
+        "answer_index": 0,
+        "category": "preposition",
+        "explanation_zh": "in effect 是固定用法,表示「(規定)生效中」,remain in effect 即「持續有效」。on、at、by 都不能與 effect 搭配成此意。"
+      },
+      {
+        "sentence": "Participants in the product workshop may choose ___________ a morning session and an afternoon session, but not both.",
+        "options": [
+          "among",
+          "during",
+          "between",
+          "within"
+        ],
+        "answer_index": 2,
+        "category": "preposition",
+        "explanation_zh": "choose between A and B 是固定搭配,用在兩個選項之間。among 用於三者以上,during 與 within 表示時間範圍,語意不合。"
+      },
+      {
+        "sentence": "The warehouse team worked overtime all week, ___________ the backlog of customer orders was cleared by Friday.",
+        "options": [
+          "because",
+          "unless",
+          "so",
+          "although"
+        ],
+        "answer_index": 2,
+        "category": "conjunction_connector",
+        "explanation_zh": "前句是原因(加班),後句是結果(積壓訂單清空),用對等連接詞 so 表示結果。because 會使因果顛倒;unless 表示「除非」,although 表示「雖然」,語意都不通。"
+      },
+      {
+        "sentence": "___________ the safety inspection has been completed, the factory will resume full production and welcome back its night shift.",
+        "options": [
+          "Once",
+          "During",
+          "Despite",
+          "Whereas"
+        ],
+        "answer_index": 0,
+        "category": "conjunction_connector",
+        "explanation_zh": "空格後是完整子句(主詞加動詞),需要從屬連接詞;Once 表示「一旦…就」,符合先檢查後復工的順序。During 與 Despite 是介系詞,後面不能接子句;Whereas 表示對比,語意不合。"
+      },
+      {
+        "sentence": "All of the proposals ___________ were submitted after the deadline have been returned to the vendors.",
+        "options": [
+          "what",
+          "that",
+          "whom",
+          "whose"
+        ],
+        "answer_index": 1,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞 proposals 是事物,在關係子句中當主詞,可用關係代名詞 that。what 本身已包含先行詞,前面不能再有先行詞;whom 指人且為受格;whose 是所有格,後面需接名詞。"
+      },
+      {
+        "sentence": "The colleague with ___________ I shared the project report has since moved to the Boston branch.",
+        "options": [
+          "who",
+          "which",
+          "whose",
+          "whom"
+        ],
+        "answer_index": 3,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞 The colleague 是人,且在介系詞 with 之後作受詞,必須用受格 whom。who 是主格,不能放在介系詞後;which 指事物;whose 是所有格,後面要接名詞。"
+      },
+      {
+        "sentence": "Online orders have grown ___________ than anyone in the sales department had predicted at the start of the year.",
+        "options": [
+          "fast",
+          "faster",
+          "fastest",
+          "more fast"
+        ],
+        "answer_index": 1,
+        "category": "comparison",
+        "explanation_zh": "空格後有 than,表示比較級;fast 是單音節字,比較級為 faster。fast 是原級,fastest 是最高級,more fast 不符合單音節字的變化規則。"
+      },
+      {
+        "sentence": "The latest model is not nearly as ___________ as the manufacturer claimed in its advertising campaign.",
+        "options": [
+          "reliably",
+          "more reliable",
+          "reliable",
+          "reliability"
+        ],
+        "answer_index": 2,
+        "category": "comparison",
+        "explanation_zh": "as ... as 的中間要放原級,且 be 動詞後需要形容詞當補語,所以用 reliable。reliably 是副詞,more reliable 是比較級,不能放在 as...as 之間;reliability 是名詞。"
+      },
+      {
+        "sentence": "The factory's monthly output has ___________ steadily since the new packaging equipment was installed in March.",
+        "options": [
+          "raised",
+          "arisen",
+          "lifted",
+          "risen"
+        ],
+        "answer_index": 3,
+        "category": "word_choice",
+        "explanation_zh": "rise 是不及物動詞(上升),過去分詞 risen,與 has 構成現在完成式,output 自己上升。raised 與 lifted 是及物動詞,需要受詞;arisen 指「(問題)出現」,不適用於產量。"
+      },
+      {
+        "sentence": "Please ___________ the attached invoice and confirm that all of the amounts are correct before Friday afternoon.",
+        "options": [
+          "review",
+          "recall",
+          "reserve",
+          "remind"
+        ],
+        "answer_index": 0,
+        "category": "word_choice",
+        "explanation_zh": "review 表示「審閱」,review an invoice 是常見搭配,後面接 and confirm 邏輯順暢。recall 是「回想、召回」,reserve 是「預訂」,remind 需接人作受詞,皆不合。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-29",
+    "questions": [
+      {
+        "sentence": "The auditors praised the ___________ of the company's financial records during their annual review.",
+        "options": [
+          "accurate",
+          "accurately",
+          "inaccurate",
+          "accuracy"
+        ],
+        "answer_index": 3,
+        "category": "noun_form",
+        "explanation_zh": "the 之後、of 之前要用名詞,「準確性」是 accuracy。accurate 與 inaccurate 是形容詞,accurately 是副詞,都不能放在 the...of 的名詞位置。"
+      },
+      {
+        "sentence": "The airline apologized for the ___________ caused by the sudden cancellation of all morning flights.",
+        "options": [
+          "inconvenient",
+          "inconvenience",
+          "inconveniently",
+          "inconvenienced"
+        ],
+        "answer_index": 1,
+        "category": "noun_form",
+        "explanation_zh": "apologize for the + 名詞,「造成的不便」用名詞 inconvenience,後面 caused by 是過去分詞片語修飾它。inconvenient 是形容詞,inconveniently 是副詞,inconvenienced 是動詞過去式/分詞,都不能當 the 後的名詞。"
+      },
+      {
+        "sentence": "Mr. Novak is ___________ qualified for the supervisory role, having managed large teams for over a decade.",
+        "options": [
+          "highly",
+          "high",
+          "highest",
+          "heightened"
+        ],
+        "answer_index": 0,
+        "category": "adjective_adverb",
+        "explanation_zh": "修飾形容詞 qualified 要用副詞,highly qualified 是固定搭配,表示「資格非常符合」。high 作副詞指「高處」,不能這樣用;highest 是最高級;heightened 是「提高的」,語意不合。"
+      },
+      {
+        "sentence": "The warehouse manager gave us a ___________ estimate of when the missing shipment would reach our dock.",
+        "options": [
+          "realistically",
+          "realism",
+          "realistic",
+          "realize"
+        ],
+        "answer_index": 2,
+        "category": "adjective_adverb",
+        "explanation_zh": "冠詞 a 與名詞 estimate 之間需要形容詞修飾,realistic 表示「切合實際的」。realistically 是副詞,realism 是名詞,realize 是動詞,都不能直接修飾名詞 estimate。"
+      },
+      {
+        "sentence": "The new pricing policy ___________ to all retail partners by the end of next week.",
+        "options": [
+          "will be communicated",
+          "will communicate",
+          "communicating",
+          "has communicated"
+        ],
+        "answer_index": 0,
+        "category": "verb_form",
+        "explanation_zh": "policy 是被傳達的對象,且 by the end of next week 指未來時間,所以用未來被動 will be communicated。will communicate 與 has communicated 是主動語態,後面缺受詞;communicating 不能單獨當述語動詞。"
+      },
+      {
+        "sentence": "If the supplier had notified us earlier about the shortage, we ___________ an alternative source in time.",
+        "options": [
+          "will find",
+          "would find",
+          "would have found",
+          "found"
+        ],
+        "answer_index": 2,
+        "category": "verb_form",
+        "explanation_zh": "if 子句用過去完成式 had notified,表示與過去事實相反,主句要用 would have + 過去分詞,即 would have found。will find 與 would find 的時態不符,found 無法表達「本來會找到」的假設語氣。"
+      },
+      {
+        "sentence": "The results of the customer satisfaction survey ___________ that most clients prefer to place orders online.",
+        "options": [
+          "shows",
+          "is showing",
+          "has shown",
+          "show"
+        ],
+        "answer_index": 3,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "主詞的核心名詞是複數 results(of 片語只是修飾),所以動詞用複數形 show。shows、is showing、has shown 都是單數形式,與主詞不一致。"
+      },
+      {
+        "sentence": "One of the engineers who work on the packaging project ___________ transferring to the Dallas office next month.",
+        "options": [
+          "are",
+          "is",
+          "were",
+          "have been"
+        ],
+        "answer_index": 1,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "主句的主詞是 One(單數),who work 只是修飾 engineers 的關係子句,所以動詞用單數 is。are 與 have been 是複數形式,were 是過去式,且與 next month 的未來時間不合。"
+      },
+      {
+        "sentence": "Employees who finish early may leave at four, but ___________ who need extra time should tell their supervisors.",
+        "options": [
+          "them",
+          "themselves",
+          "those",
+          "whom"
+        ],
+        "answer_index": 2,
+        "category": "pronoun",
+        "explanation_zh": "those who 表示「那些…的人」,those 作主詞並被 who 子句修飾。them 是受格,themselves 是反身代名詞,whom 是關係代名詞,都不能作 but 後子句的主詞。"
+      },
+      {
+        "sentence": "Mr. Dubois completed the entire inventory count by ___________ in less than three hours.",
+        "options": [
+          "himself",
+          "he",
+          "him",
+          "his"
+        ],
+        "answer_index": 0,
+        "category": "pronoun",
+        "explanation_zh": "by oneself 表示「獨自、靠自己」,主詞是 Mr. Dubois,所以用反身代名詞 himself。he 是主格,him 是受格,his 是所有格,都不能與 by 組成此固定用法。"
+      },
+      {
+        "sentence": "The firm has been a leading supplier of medical equipment ___________ more than thirty years.",
+        "options": [
+          "since",
+          "for",
+          "during",
+          "from"
+        ],
+        "answer_index": 1,
+        "category": "preposition",
+        "explanation_zh": "for + 一段期間(more than thirty years)搭配現在完成式,表示持續多久。since 後面要接起點時間點;during 後面接特定事件或時段名稱;from 沒有此用法。"
+      },
+      {
+        "sentence": "Applicants must hold a university degree ___________ engineering or a related field to be considered for this position.",
+        "options": [
+          "on",
+          "at",
+          "to",
+          "in"
+        ],
+        "answer_index": 3,
+        "category": "preposition",
+        "explanation_zh": "a degree in + 學科是固定搭配,表示「某領域的學位」。on、at、to 都不能與 degree 搭配表示專業領域。"
+      },
+      {
+        "sentence": "___________ the conference room was already booked, the team held its weekly meeting in the cafeteria.",
+        "options": [
+          "Unless",
+          "Until",
+          "Either",
+          "Because"
+        ],
+        "answer_index": 3,
+        "category": "conjunction_connector",
+        "explanation_zh": "前面是原因(會議室被訂走),後面是結果(改在自助餐廳開會),用表示原因的從屬連接詞 Because。Unless 是「除非」,Until 是「直到」,Either 是對等連接詞的一部分,不能引導子句。"
+      },
+      {
+        "sentence": "Management has not yet decided ___________ to extend the contract with the current logistics provider.",
+        "options": [
+          "that",
+          "whether",
+          "what",
+          "because"
+        ],
+        "answer_index": 1,
+        "category": "conjunction_connector",
+        "explanation_zh": "decide whether to V 表示「決定是否要…」,whether 後可接 to 不定詞。that 引導名詞子句時不能接 to V;what 不符語意;because 是連接詞,不能接在 decided 之後引導不定詞。"
+      },
+      {
+        "sentence": "Mr. Tanaka is the engineer ___________ designed the ventilation system installed in all of our newer plants.",
+        "options": [
+          "whom",
+          "whose",
+          "who",
+          "which"
+        ],
+        "answer_index": 2,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞 the engineer 是人,在關係子句中作主詞(後面直接接動詞 designed),要用主格 who。whom 是受格,whose 後面需接名詞,which 用於事物。"
+      },
+      {
+        "sentence": "The Frankfurt office, ___________ most of our European contracts are negotiated, will be expanded next year.",
+        "options": [
+          "where",
+          "which",
+          "what",
+          "whom"
+        ],
+        "answer_index": 0,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞 The Frankfurt office 是地點,關係子句 most of our European contracts are negotiated 本身是完整句,缺的是地點副詞,所以用 where。which 在此會使子句缺少介系詞;what 與 whom 不能修飾地點先行詞。"
+      },
+      {
+        "sentence": "This year's trade show attracted ___________ visitors than any previous event held at the convention center.",
+        "options": [
+          "more",
+          "most",
+          "much",
+          "many"
+        ],
+        "answer_index": 0,
+        "category": "comparison",
+        "explanation_zh": "後面有 than,需要比較級;修飾可數複數名詞 visitors 的比較級是 more。most 是最高級,much 與 many 是原級,不能與 than 連用。"
+      },
+      {
+        "sentence": "Of all the shipping options, express freight is the ___________ but also the most costly.",
+        "options": [
+          "faster",
+          "fast",
+          "more fast",
+          "fastest"
+        ],
+        "answer_index": 3,
+        "category": "comparison",
+        "explanation_zh": "Of all the... 表示在三者以上之中比較,且後面 the most costly 為最高級,前面也要用最高級 the fastest。faster 是比較級,fast 是原級,more fast 不符合單音節字的變化。"
+      },
+      {
+        "sentence": "Please ___________ the meeting minutes to all participants by the end of the working day.",
+        "options": [
+          "contribute",
+          "distribute",
+          "attribute",
+          "subscribe"
+        ],
+        "answer_index": 1,
+        "category": "word_choice",
+        "explanation_zh": "distribute A to B 表示「把 A 分發給 B」,最符合散發會議紀錄的情境。contribute 是「貢獻」,attribute 是「歸因於」,subscribe 是「訂閱」,都不能這樣搭配。"
+      },
+      {
+        "sentence": "The manager gave a brief ___________ of the quarterly results before opening the floor to questions.",
+        "options": [
+          "oversight",
+          "overhead",
+          "overview",
+          "overtime"
+        ],
+        "answer_index": 2,
+        "category": "word_choice",
+        "explanation_zh": "an overview of 表示「概述」,符合在開放提問前簡要說明季度成績的情境。oversight 是「疏忽/監督」,overhead 是「管理費用」,overtime 是「加班」,語意皆不合。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-30",
+    "questions": [
+      {
+        "sentence": "Applicants must provide ___________ of their professional licenses before the interview process can begin.",
+        "options": [
+          "prove",
+          "provable",
+          "proof",
+          "proving"
+        ],
+        "answer_index": 2,
+        "category": "noun_form",
+        "explanation_zh": "provide 後面需要名詞當受詞,proof(證明)是名詞,proof of 是常見搭配。prove 是動詞,provable 是形容詞,proving 是動名詞,都無法接 of 並當 provide 的受詞。"
+      },
+      {
+        "sentence": "The company's ___________ to quality has earned it several international certifications over the past decade.",
+        "options": [
+          "commitment",
+          "committed",
+          "commit",
+          "committing"
+        ],
+        "answer_index": 0,
+        "category": "noun_form",
+        "explanation_zh": "所有格 company's 後面要接名詞,commitment to 表示「對…的承諾」。committed 是形容詞或過去分詞,commit 是動詞原形,committing 是現在分詞,都不能放在所有格之後當主詞。"
+      },
+      {
+        "sentence": "The conference call was ___________ interrupted by a power outage at the Chicago office this morning.",
+        "options": [
+          "brief",
+          "briefer",
+          "briefness",
+          "briefly"
+        ],
+        "answer_index": 3,
+        "category": "adjective_adverb",
+        "explanation_zh": "修飾過去分詞 interrupted 要用副詞,briefly 表示「短暫地」。brief 是形容詞,briefer 是比較級形容詞,briefness 是名詞,都不能修飾動詞性的分詞。"
+      },
+      {
+        "sentence": "Mr. Tan gave a ___________ explanation of why the quarterly figures had been revised so late.",
+        "options": [
+          "clearly",
+          "clear",
+          "clarity",
+          "clarify"
+        ],
+        "answer_index": 1,
+        "category": "adjective_adverb",
+        "explanation_zh": "冠詞 a 與名詞 explanation 之間需要形容詞來修飾名詞,clear 是形容詞。clearly 是副詞,不能修飾名詞;clarity 是名詞;clarify 是動詞,皆不符合文法。"
+      },
+      {
+        "sentence": "Having ___________ the final report, Ms. Park forwarded it to the regional director for approval.",
+        "options": [
+          "completing",
+          "completed",
+          "complete",
+          "to complete"
+        ],
+        "answer_index": 1,
+        "category": "verb_form",
+        "explanation_zh": "Having 後面接過去分詞構成完成式分詞構句,表示「完成報告之後」,所以用 completed。completing、complete、to complete 都不能接在 Having 之後構成完成式。"
+      },
+      {
+        "sentence": "All invoices must be ___________ to the accounting department by the fifth of every month.",
+        "options": [
+          "submit",
+          "submitting",
+          "submits",
+          "submitted"
+        ],
+        "answer_index": 3,
+        "category": "verb_form",
+        "explanation_zh": "must be 後面接過去分詞形成被動語態,發票是「被提交」,所以用 submitted。submit 與 submits 不能接在 be 之後,submitting 表示主動進行,語意與被動不符。"
+      },
+      {
+        "sentence": "Half of the footage recorded at the film festival ___________ accidentally deleted from the studio's server last week.",
+        "options": [
+          "was",
+          "were",
+          "are",
+          "have been"
+        ],
+        "answer_index": 0,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "half of 後面接不可數名詞 footage,動詞依該名詞用單數;且 last week 指過去,故用過去式 was。were 是複數,are 是現在式,have been 是現在完成式,都與 last week 或主詞單複數不合。"
+      },
+      {
+        "sentence": "The news about the plant closure ___________ spread quickly among employees before the official announcement.",
+        "options": [
+          "have",
+          "are",
+          "has",
+          "were"
+        ],
+        "answer_index": 2,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "news 雖然字尾是 s,但是不可數的單數名詞,搭配 has spread 構成現在完成式。have 是複數形式,are 與 were 後接 spread 的語意與形式都不通順。"
+      },
+      {
+        "sentence": "The new printer is so easy to use that clients can set it up by ___________ in just a few minutes.",
+        "options": [
+          "them",
+          "their",
+          "they",
+          "themselves"
+        ],
+        "answer_index": 3,
+        "category": "pronoun",
+        "explanation_zh": "by 加反身代名詞表示「靠自己、獨自」,主詞 clients 是複數,所以用 themselves。them 是受格,their 是所有格,they 是主格,都不能放在 by 之後表達這個意思。"
+      },
+      {
+        "sentence": "Ms. Lopez asked the assistants to send ___________ the revised itinerary as soon as it was finalized.",
+        "options": [
+          "her",
+          "she",
+          "hers",
+          "herself"
+        ],
+        "answer_index": 0,
+        "category": "pronoun",
+        "explanation_zh": "send 的間接受詞要用受格 her,指 Ms. Lopez。she 是主格,hers 是所有格代名詞,herself 是反身代名詞,但 send 的動作者是 assistants 而非 Ms. Lopez,所以不能用反身。"
+      },
+      {
+        "sentence": "The new inventory software is fully compatible ___________ both Windows and Mac operating systems.",
+        "options": [
+          "for",
+          "with",
+          "to",
+          "on"
+        ],
+        "answer_index": 1,
+        "category": "preposition",
+        "explanation_zh": "be compatible with 是固定的形容詞加介系詞搭配,表示「與……相容」。for、to、on 都不能與 compatible 搭配。"
+      },
+      {
+        "sentence": "The software update will be installed ___________ the weekend so that regular business hours are not disrupted.",
+        "options": [
+          "while",
+          "since",
+          "during",
+          "between"
+        ],
+        "answer_index": 2,
+        "category": "preposition",
+        "explanation_zh": "during 是介系詞,後面接名詞 the weekend,表示「在週末期間」。while 是連接詞,後面要接子句;since 表示「自從」,時態不符;between 需要兩個對象。"
+      },
+      {
+        "sentence": "The committee has not yet decided ___________ the branch in Osaka should be closed or merged with another.",
+        "options": [
+          "whether",
+          "that",
+          "unless",
+          "because"
+        ],
+        "answer_index": 0,
+        "category": "conjunction_connector",
+        "explanation_zh": "decide 後面接名詞子句,而且句中有 or 表示二選一,所以用 whether。that 不能搭配 or 的選擇語意,unless 與 because 是副詞子句連接詞,不能作 decide 的受詞子句。"
+      },
+      {
+        "sentence": "Please back up all of your files today; ___________, you may lose important data during the system upgrade.",
+        "options": [
+          "furthermore",
+          "therefore",
+          "however",
+          "otherwise"
+        ],
+        "answer_index": 3,
+        "category": "conjunction_connector",
+        "explanation_zh": "前句是要求,後句是不照做的後果,所以用 otherwise(否則)。furthermore 表示補充,therefore 表示因此,however 表示轉折,語意都不符。"
+      },
+      {
+        "sentence": "The consultant ___________ report identified the cost overruns has been invited to speak at our next meeting.",
+        "options": [
+          "who",
+          "whom",
+          "whose",
+          "which"
+        ],
+        "answer_index": 2,
+        "category": "relative_clause",
+        "explanation_zh": "空格後面接名詞 report,表示「顧問的報告」,所以用所有格關係代名詞 whose。who、whom 與 which 後面不能直接接名詞 report 表示所屬關係。"
+      },
+      {
+        "sentence": "The clients to ___________ we sent the satisfaction survey have until Friday to submit their responses.",
+        "options": [
+          "who",
+          "whom",
+          "which",
+          "whose"
+        ],
+        "answer_index": 1,
+        "category": "relative_clause",
+        "explanation_zh": "介系詞 to 之後的關係代名詞指人時要用受格 whom。who 不能放在介系詞之後,which 用於事物,whose 後面必須接名詞。"
+      },
+      {
+        "sentence": "The new laptop is nearly as light ___________ the older model but offers a much longer battery life.",
+        "options": [
+          "as",
+          "than",
+          "to",
+          "like"
+        ],
+        "answer_index": 0,
+        "category": "comparison",
+        "explanation_zh": "as light as 是同級比較的固定結構,前面的 as 搭配後面的 as。than 用於比較級,to 與 like 都不能與前面的 as 配對。"
+      },
+      {
+        "sentence": "Of the three proposals submitted by contractors, the second one is by far the ___________ expensive.",
+        "options": [
+          "less",
+          "lesser",
+          "little",
+          "least"
+        ],
+        "answer_index": 3,
+        "category": "comparison",
+        "explanation_zh": "三者以上比較要用最高級,the least expensive 表示「最不貴的」。less 是比較級,lesser 不能這樣修飾形容詞,little 不能直接放在 the 後面形成最高級。"
+      },
+      {
+        "sentence": "The warehouse manager will ___________ the shipment against the purchase order before signing for the delivery.",
+        "options": [
+          "identify",
+          "verify",
+          "clarify",
+          "notify"
+        ],
+        "answer_index": 1,
+        "category": "word_choice",
+        "explanation_zh": "verify ... against 表示「對照…核實」,符合簽收前核對貨物與訂單的情境。identify 是辨識,clarify 是釐清,notify 是通知,語意與搭配皆不合。"
+      },
+      {
+        "sentence": "Due to a technical error, several customers were ___________ twice for the same online order last week.",
+        "options": [
+          "costed",
+          "priced",
+          "charged",
+          "afforded"
+        ],
+        "answer_index": 2,
+        "category": "word_choice",
+        "explanation_zh": "be charged 表示「被收費」,customers 被重複收費符合語意。costed、priced 與 afforded 都不能用來表示向顧客收款的被動語態。"
+      }
+    ]
+  },
+  {
+    "date": "2026-10-31",
+    "questions": [
+      {
+        "sentence": "The ___________ of the new inventory system required extensive training for all warehouse staff.",
+        "options": [
+          "implemented",
+          "implementation",
+          "implement",
+          "implementable"
+        ],
+        "answer_index": 1,
+        "category": "noun_form",
+        "explanation_zh": "冠詞 The 之後、介系詞 of 之前要放名詞,implementation 是名詞,表示「實施、導入」。implemented 是過去分詞,implement 是動詞,implementable 是形容詞,皆不能當主詞。"
+      },
+      {
+        "sentence": "Please contact our customer service team if you have any ___________ regarding your recent order.",
+        "options": [
+          "inquire",
+          "inquiring",
+          "inquired",
+          "inquiries"
+        ],
+        "answer_index": 3,
+        "category": "noun_form",
+        "explanation_zh": "any 後面接名詞,have any inquiries 表示「有任何詢問」,且此處用複數。inquire 是動詞,inquiring 與 inquired 是分詞形式,都不能作為 have 的受詞名詞。"
+      },
+      {
+        "sentence": "The marketing director spoke ___________ about the upcoming campaign during the staff briefing on Monday.",
+        "options": [
+          "enthusiastically",
+          "enthusiastic",
+          "enthusiasm",
+          "enthused"
+        ],
+        "answer_index": 0,
+        "category": "adjective_adverb",
+        "explanation_zh": "修飾動詞 spoke 要用副詞,enthusiastically 表示「熱切地」。enthusiastic 是形容詞,enthusiasm 是名詞,enthused 是分詞,都不能直接修飾動詞。"
+      },
+      {
+        "sentence": "Only ___________ employees are permitted to enter the chemical storage area without a supervisor.",
+        "options": [
+          "authorize",
+          "authorization",
+          "authorized",
+          "authority"
+        ],
+        "answer_index": 2,
+        "category": "adjective_adverb",
+        "explanation_zh": "名詞 employees 前面需要形容詞,authorized employees 表示「獲授權的員工」。authorize 是動詞,authorization 與 authority 是名詞,不能放在此處修飾 employees。"
+      },
+      {
+        "sentence": "Employees are required ___________ their identification cards at all times while inside the building.",
+        "options": [
+          "wear",
+          "wearing",
+          "to wear",
+          "worn"
+        ],
+        "answer_index": 2,
+        "category": "verb_form",
+        "explanation_zh": "be required to V 是固定用法,所以用 to wear。wear 少了 to,wearing 是動名詞,worn 是過去分詞,都不能接在 required 之後。"
+      },
+      {
+        "sentence": "If the shipment had arrived on schedule last Friday, the client ___________ its contract with our distribution company.",
+        "options": [
+          "would not have terminated",
+          "would not terminate",
+          "did not terminate",
+          "will not terminate"
+        ],
+        "answer_index": 0,
+        "category": "verb_form",
+        "explanation_zh": "if 子句用過去完成式 had arrived,表示與過去事實相反,主要子句要用 would have + 過去分詞,所以用 would not have terminated。其他選項的時態都不能與過去完成式的假設搭配。"
+      },
+      {
+        "sentence": "The quarterly sales figures, which were released on Monday, ___________ that revenue has doubled since last year.",
+        "options": [
+          "shows",
+          "is showing",
+          "has shown",
+          "show"
+        ],
+        "answer_index": 3,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "主詞是複數的 figures(which 子句只是插入語),所以動詞用複數形 show。shows、is showing 與 has shown 都是單數形式,與主詞不一致。"
+      },
+      {
+        "sentence": "Ten percent of the inventory ___________ damaged during transit because of improper packaging by the supplier.",
+        "options": [
+          "were",
+          "was",
+          "have been",
+          "are"
+        ],
+        "answer_index": 1,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "百分比後的動詞要看 of 後面的名詞,inventory 是不可數名詞,視為單數,且 during transit 是過去情況,所以用 was。were 是複數,have been 與 are 的數或時態都不符。"
+      },
+      {
+        "sentence": "Mr. Okafor reminded the interns that ___________ were responsible for submitting their own timesheets every Friday.",
+        "options": [
+          "they",
+          "them",
+          "their",
+          "themselves"
+        ],
+        "answer_index": 0,
+        "category": "pronoun",
+        "explanation_zh": "that 子句缺少主詞,要用主格代名詞 they 指代 the interns。them 是受格,their 是所有格,themselves 是反身代名詞,都不能當子句的主詞。"
+      },
+      {
+        "sentence": "I will deliver the signed contract to the Berlin office ___________ rather than rely on a courier service.",
+        "options": [
+          "me",
+          "my",
+          "myself",
+          "mine"
+        ],
+        "answer_index": 2,
+        "category": "pronoun",
+        "explanation_zh": "反身代名詞 myself 在這裡用來強調「我親自」,主詞是 I。me 是受格,my 是所有格,mine 是所有格代名詞,都不能放在句尾作強調用法。"
+      },
+      {
+        "sentence": "The new regional manager is known ___________ her ability to resolve disputes between departments quickly.",
+        "options": [
+          "with",
+          "for",
+          "at",
+          "by"
+        ],
+        "answer_index": 1,
+        "category": "preposition",
+        "explanation_zh": "be known for 表示「以…聞名」,固定搭配。with、at、by 都不能與 known 搭配表達因某項特質而知名。"
+      },
+      {
+        "sentence": "The deadline for submitting the grant application falls ___________ the last Friday of next month.",
+        "options": [
+          "at",
+          "in",
+          "by",
+          "on"
+        ],
+        "answer_index": 3,
+        "category": "preposition",
+        "explanation_zh": "某一天(包含 the last Friday)前面用介系詞 on。at 用於時刻,in 用於月份或年份,by 表示「在…之前」,語意不符。"
+      },
+      {
+        "sentence": "Employees will receive their annual bonuses ___________ the performance review has been finalized by the board.",
+        "options": [
+          "during",
+          "despite",
+          "once",
+          "unless"
+        ],
+        "answer_index": 2,
+        "category": "conjunction_connector",
+        "explanation_zh": "once 作連接詞表示「一旦…就」,後面接完整子句,符合邏輯。during 與 despite 是介系詞,不能接子句;unless 表示「除非」,語意與領獎金不合。"
+      },
+      {
+        "sentence": "Not only did the vendor deliver the goods early, ___________ it also waived the shipping fee.",
+        "options": [
+          "but",
+          "and",
+          "or",
+          "so"
+        ],
+        "answer_index": 0,
+        "category": "conjunction_connector",
+        "explanation_zh": "not only ... but also 是固定的相關連接詞,所以空格用 but。and、or 與 so 都不能與 not only 配對使用。"
+      },
+      {
+        "sentence": "Everything ___________ you need for the quarterly audit is stored in the shared folder on the server.",
+        "options": [
+          "what",
+          "who",
+          "whom",
+          "that"
+        ],
+        "answer_index": 3,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞是 everything 時,關係代名詞要用 that。what 本身已包含先行詞,前面不能再有 everything;who 與 whom 用於指人,不適用。"
+      },
+      {
+        "sentence": "The hotel ___________ we stayed during the conference offers a generous discount to corporate clients.",
+        "options": [
+          "which",
+          "where",
+          "who",
+          "whose"
+        ],
+        "answer_index": 1,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞是地點 hotel,且子句 we stayed 本身完整、缺少地點副詞,所以用關係副詞 where。which 作受詞時需要介系詞 at,who 用於人,whose 後面要接名詞。"
+      },
+      {
+        "sentence": "The newer model consumes ___________ electricity than the one it replaced, which lowers our monthly costs.",
+        "options": [
+          "less",
+          "least",
+          "little",
+          "fewer"
+        ],
+        "answer_index": 0,
+        "category": "comparison",
+        "explanation_zh": "後面有 than,要用比較級,electricity 是不可數名詞,所以用 less。least 是最高級,little 是原級,fewer 只能修飾可數名詞。"
+      },
+      {
+        "sentence": "Mr. Patel's presentation was ___________ more persuasive than any other delivered at the annual sales conference.",
+        "options": [
+          "very",
+          "most",
+          "much",
+          "so"
+        ],
+        "answer_index": 2,
+        "category": "comparison",
+        "explanation_zh": "比較級 more persuasive 前面要用 much 來加強語氣,表示「遠比…更」。very 不能修飾比較級,most 是最高級,so 也不能這樣加強比較級。"
+      },
+      {
+        "sentence": "The finance department will ___________ a detailed budget proposal at next week's board meeting.",
+        "options": [
+          "represent",
+          "present",
+          "pretend",
+          "prevent"
+        ],
+        "answer_index": 1,
+        "category": "word_choice",
+        "explanation_zh": "present a proposal 表示「提出方案、報告」,符合董事會報告的情境。represent 是代表,pretend 是假裝,prevent 是防止,語意都不合。"
+      },
+      {
+        "sentence": "The company decided to ___________ its aging fleet of delivery vans with electric vehicles by next year.",
+        "options": [
+          "reform",
+          "revise",
+          "relocate",
+          "replace"
+        ],
+        "answer_index": 3,
+        "category": "word_choice",
+        "explanation_zh": "replace A with B 表示「以 B 取代 A」,符合以電動車換掉老舊貨車的語意。reform 是改革,revise 是修訂,relocate 是搬遷,都不能搭配 with 表示替換。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-01",
+    "questions": [
+      {
+        "sentence": "The company's ___________ of two rival brands was completed in March after lengthy regulatory review.",
+        "options": [
+          "acquire",
+          "acquired",
+          "acquisition",
+          "acquisitive"
+        ],
+        "answer_index": 2,
+        "category": "noun_form",
+        "explanation_zh": "空格位於所有格 company's 之後、介系詞 of 之前，需要名詞，acquisition（收購）符合。acquire 是動詞、acquired 是過去分詞、acquisitive 是形容詞，都不能放在這個名詞位置。"
+      },
+      {
+        "sentence": "Applicants must provide ___________ of at least three years of relevant work experience.",
+        "options": [
+          "proof",
+          "prove",
+          "proven",
+          "provable"
+        ],
+        "answer_index": 0,
+        "category": "noun_form",
+        "explanation_zh": "provide 後面需要名詞作受詞，proof of 表示「……的證明」。prove 是動詞、proven 是過去分詞、provable 是形容詞，都不能當 provide 的受詞。"
+      },
+      {
+        "sentence": "Please keep the receipt in a ___________ place so that it can be found easily during the audit.",
+        "options": [
+          "safely",
+          "safety",
+          "save",
+          "safe"
+        ],
+        "answer_index": 3,
+        "category": "adjective_adverb",
+        "explanation_zh": "空格在冠詞 a 與名詞 place 之間，需要形容詞修飾名詞，safe place 為「安全的地方」。safely 是副詞，safety 是名詞，save 是動詞，皆不能修飾名詞。"
+      },
+      {
+        "sentence": "The sales team worked ___________ to finish the quarterly report before the Friday deadline.",
+        "options": [
+          "diligent",
+          "diligently",
+          "diligence",
+          "most diligent"
+        ],
+        "answer_index": 1,
+        "category": "adjective_adverb",
+        "explanation_zh": "修飾動詞 worked 要用副詞，diligently 表示「勤奮地」。diligent 是形容詞、diligence 是名詞、most diligent 是形容詞最高級，都不能修飾動詞。"
+      },
+      {
+        "sentence": "Laboratory technicians are advised to avoid ___________ any sample without wearing protective gloves.",
+        "options": [
+          "touching",
+          "touch",
+          "to touch",
+          "touched"
+        ],
+        "answer_index": 0,
+        "category": "verb_form",
+        "explanation_zh": "avoid 後面的動詞必須用動名詞(V-ing),故用 touching。touch 是原形、to touch 是不定詞、touched 是過去分詞,都不能接在 avoid 之後。"
+      },
+      {
+        "sentence": "Had the supplier shipped the parts on time, the factory ___________ its production target last month.",
+        "options": [
+          "would meet",
+          "will meet",
+          "had met",
+          "would have met"
+        ],
+        "answer_index": 3,
+        "category": "verb_form",
+        "explanation_zh": "Had + 過去分詞 是省略 if 的假設語氣（與過去事實相反），主句要用 would have + 過去分詞，故為 would have met。would meet 與 will meet 時態不合，had met 不能用在假設語氣的主句。"
+      },
+      {
+        "sentence": "Reducing packaging waste ___________ become a top priority for most grocery chains in the region.",
+        "options": [
+          "have",
+          "has",
+          "are",
+          "being"
+        ],
+        "answer_index": 1,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "動名詞片語 Reducing packaging waste 作主詞,視為單數,後面搭配單數的 has 組成現在完成式 has become。have 與 are 是複數,being 不能單獨作述語動詞。"
+      },
+      {
+        "sentence": "Every one of the delivery trucks ___________ equipped with a GPS tracking device.",
+        "options": [
+          "are",
+          "were",
+          "is",
+          "have been"
+        ],
+        "answer_index": 2,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "Every one 是單數主詞，of the delivery trucks 只是修飾，所以動詞用單數 is。are、were、have been 皆為複數形式，不合。"
+      },
+      {
+        "sentence": "Mr. Lee and ___________ will present the quarterly results to the board on Monday.",
+        "options": [
+          "me",
+          "myself",
+          "mine",
+          "I"
+        ],
+        "answer_index": 3,
+        "category": "pronoun",
+        "explanation_zh": "空格是句子主詞的一部分，需要主格代名詞，所以用 I。me 是受格、myself 是反身代名詞、mine 是所有格代名詞，皆不能當主詞。"
+      },
+      {
+        "sentence": "Mr. Ortiz fixed the jammed copier ___________ instead of calling the technician.",
+        "options": [
+          "himself",
+          "him",
+          "his",
+          "he"
+        ],
+        "answer_index": 0,
+        "category": "pronoun",
+        "explanation_zh": "himself 作加強語氣的反身代名詞，強調「他親自」修理，與主詞 Mr. Ortiz 為同一人。him、his、he 都無法放在此處表達親自完成的意思。"
+      },
+      {
+        "sentence": "Ms. Tanaka has been responsible ___________ the company's overseas recruitment since she joined in 2019.",
+        "options": [
+          "of",
+          "to",
+          "for",
+          "with"
+        ],
+        "answer_index": 2,
+        "category": "preposition",
+        "explanation_zh": "be responsible for + 事務 是固定用法，表示「負責……」。of、to、with 都不能與 responsible 搭配表示負責某項工作。"
+      },
+      {
+        "sentence": "Our team will travel to Osaka ___________ train to the client meeting because airfares are too high this season.",
+        "options": [
+          "on",
+          "by",
+          "with",
+          "in"
+        ],
+        "answer_index": 1,
+        "category": "preposition",
+        "explanation_zh": "表示交通方式時用 by + 無冠詞的交通工具，by train 為「搭火車」。on、with、in 在沒有冠詞的情況下都不能這樣用。"
+      },
+      {
+        "sentence": "___________ the shipment arrives at the dock, we will begin unloading the containers immediately.",
+        "options": [
+          "As soon as",
+          "Although",
+          "Unless",
+          "Whereas"
+        ],
+        "answer_index": 0,
+        "category": "conjunction_connector",
+        "explanation_zh": "As soon as 表示「一……就……」，連接兩個先後發生的動作，語意通順。Although（雖然）、Unless（除非）、Whereas（然而）都無法表達這種時間先後關係。"
+      },
+      {
+        "sentence": "The software update is free of charge, ___________ the hardware upgrade costs an additional fee.",
+        "options": [
+          "because",
+          "so that",
+          "unless",
+          "whereas"
+        ],
+        "answer_index": 3,
+        "category": "conjunction_connector",
+        "explanation_zh": "前後兩個子句形成對比（軟體免費、硬體要錢），用 whereas（然而、相對於）。because 表原因、so that 表目的、unless 表條件，語意皆不合。"
+      },
+      {
+        "sentence": "The report in ___________ the analyst summarized the market trends was shared with all department heads.",
+        "options": [
+          "that",
+          "which",
+          "what",
+          "whom"
+        ],
+        "answer_index": 1,
+        "category": "relative_clause",
+        "explanation_zh": "介系詞 in 後面的關係代名詞指事物，只能用 which（in which）。that 不能接在介系詞之後，what 本身包含先行詞，whom 指人，皆不合。"
+      },
+      {
+        "sentence": "Applicants ___________ are fluent in both Spanish and English will be given priority in the hiring process.",
+        "options": [
+          "whom",
+          "whose",
+          "who",
+          "which"
+        ],
+        "answer_index": 2,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞 Applicants 是人，且關係詞在子句中當主詞（後接動詞 are），所以用主格 who。whom 是受格，whose 後面需接名詞，which 用於事物。"
+      },
+      {
+        "sentence": "The delivery arrived ___________ than we expected, two days ahead of schedule.",
+        "options": [
+          "quickest",
+          "most quickly",
+          "as quick",
+          "quicker"
+        ],
+        "answer_index": 3,
+        "category": "comparison",
+        "explanation_zh": "句中有 than，需要比較級，quicker 符合。quickest 與 most quickly 是最高級，as quick 要搭配 as 而非 than，皆不合。"
+      },
+      {
+        "sentence": "The new bus route carries ___________ passengers than the old one, so the city may reduce its service.",
+        "options": [
+          "fewer",
+          "less",
+          "least",
+          "little"
+        ],
+        "answer_index": 0,
+        "category": "comparison",
+        "explanation_zh": "passengers 是可數名詞複數,表示「較少」要用 fewer 加 than 構成比較級。less 修飾不可數名詞,least 是最高級,little 是原級且不接 than,皆不合。"
+      },
+      {
+        "sentence": "Employees are expected to ___________ with all safety regulations at the factory.",
+        "options": [
+          "obey",
+          "comply",
+          "follow",
+          "accept"
+        ],
+        "answer_index": 1,
+        "category": "word_choice",
+        "explanation_zh": "comply with 是固定搭配，表示「遵守（規定）」。obey、follow、accept 都是及物動詞，後面直接接受詞，不能加 with。"
+      },
+      {
+        "sentence": "The new manager is highly ___________ of the team's efforts to improve customer satisfaction.",
+        "options": [
+          "appreciable",
+          "appreciated",
+          "appreciative",
+          "appreciating"
+        ],
+        "answer_index": 2,
+        "category": "word_choice",
+        "explanation_zh": "be appreciative of 表示「對……感激」，符合語意。appreciable 意為「可察覺的」，appreciated 與 appreciating 不能與 highly ... of 搭配表達此意。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-02",
+    "questions": [
+      {
+        "sentence": "Thanks to the new software, the ___________ of customer complaints has become much faster.",
+        "options": [
+          "resolve",
+          "resolution",
+          "resolved",
+          "resolutely"
+        ],
+        "answer_index": 1,
+        "category": "noun_form",
+        "explanation_zh": "the 之後、of 之前要用名詞，resolution 表示「解決」。resolve 是動詞、resolved 是過去分詞、resolutely 是副詞，皆不能放在此處。"
+      },
+      {
+        "sentence": "The hotel's ___________ for large banquets makes it a popular venue for corporate events.",
+        "options": [
+          "capable",
+          "capably",
+          "capacious",
+          "capacity"
+        ],
+        "answer_index": 3,
+        "category": "noun_form",
+        "explanation_zh": "所有格 hotel's 之後需要名詞，capacity for 表示「容納……的能力」。capable 是形容詞、capably 是副詞、capacious 也是形容詞，且不與 for 搭配成名詞片語。"
+      },
+      {
+        "sentence": "Electricity production at the solar plant was ___________ reduced by the unusually cloudy winter.",
+        "options": [
+          "severely",
+          "severe",
+          "severity",
+          "more severe"
+        ],
+        "answer_index": 0,
+        "category": "adjective_adverb",
+        "explanation_zh": "修飾過去分詞 reduced 要用副詞,severely reduced 表示「嚴重減少」。severe 是形容詞,severity 是名詞,more severe 是形容詞比較級,都不能修飾分詞。"
+      },
+      {
+        "sentence": "The ___________ designed brochure attracted many first-time visitors to our booth at the trade show.",
+        "options": [
+          "attractive",
+          "attraction",
+          "attractively",
+          "attract"
+        ],
+        "answer_index": 2,
+        "category": "adjective_adverb",
+        "explanation_zh": "空格修飾過去分詞 designed，需要副詞，attractively designed 表示「設計得很吸引人的」。attractive 是形容詞、attraction 是名詞、attract 是動詞，不能修飾分詞。"
+      },
+      {
+        "sentence": "Staff members are advised ___________ their passwords every ninety days for security reasons.",
+        "options": [
+          "changing",
+          "change",
+          "to change",
+          "changed"
+        ],
+        "answer_index": 2,
+        "category": "verb_form",
+        "explanation_zh": "advise 用於被動時為 be advised to V，表示「被建議做……」。changing、change、changed 都無法接在 are advised 後面。"
+      },
+      {
+        "sentence": "By the time the auditors arrived, the accountant ___________ all of the records.",
+        "options": [
+          "has organized",
+          "had organized",
+          "organizes",
+          "will organize"
+        ],
+        "answer_index": 1,
+        "category": "verb_form",
+        "explanation_zh": "By the time 引導的過去時間點（arrived）之前已完成的動作，要用過去完成式 had organized。has organized、organizes、will organize 時態皆與過去時間不合。"
+      },
+      {
+        "sentence": "The instructions printed on the back of the medicine bottle ___________ difficult to read without a magnifying glass.",
+        "options": [
+          "seems",
+          "has seemed",
+          "seeming",
+          "seem"
+        ],
+        "answer_index": 3,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "主詞是複數名詞 instructions(of the medicine bottle 只是修飾語,不影響單複數),現在式用複數動詞 seem。seems 是單數,has seemed 也是單數形式,seeming 不能單獨作述語動詞。"
+      },
+      {
+        "sentence": "A pair of steel-toed boots ___________ issued to every worker entering the construction site.",
+        "options": [
+          "is",
+          "are",
+          "have",
+          "were"
+        ],
+        "answer_index": 0,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "a pair of + 複數名詞 作主詞時,核心名詞是單數的 pair,動詞用單數 is,與被動語態 issued 組成 is issued。are 與 were 是複數,have 後面不能直接接 issued 表被動。"
+      },
+      {
+        "sentence": "After the merger, the two companies combined ___________ resources to enter the Asian market.",
+        "options": [
+          "them",
+          "their",
+          "theirs",
+          "they"
+        ],
+        "answer_index": 1,
+        "category": "pronoun",
+        "explanation_zh": "空格後面接名詞 resources，需要所有格形容詞，their 指兩家公司的。them 是受格，theirs 是所有格代名詞，they 是主格，皆不能直接修飾名詞。"
+      },
+      {
+        "sentence": "The samples are ours, but those on the shelf belong to the supplier, so please do not mix ___________ up.",
+        "options": [
+          "they",
+          "themselves",
+          "them",
+          "their"
+        ],
+        "answer_index": 2,
+        "category": "pronoun",
+        "explanation_zh": "mix up 的受詞是前面提到的 samples，需要複數受格 them。they 是主格，themselves 是反身代名詞（主詞並非樣品本身），their 是所有格，皆不合。"
+      },
+      {
+        "sentence": "The new sales strategy was developed ___________ cooperation with the marketing and finance departments.",
+        "options": [
+          "on",
+          "at",
+          "by",
+          "in"
+        ],
+        "answer_index": 3,
+        "category": "preposition",
+        "explanation_zh": "in cooperation with 是固定用法，表示「與……合作」。on、at、by 都不能與 cooperation with 組成這個片語。"
+      },
+      {
+        "sentence": "Most of the company's annual profits come ___________ its overseas subsidiaries in Asia and Europe.",
+        "options": [
+          "from",
+          "by",
+          "of",
+          "off"
+        ],
+        "answer_index": 0,
+        "category": "preposition",
+        "explanation_zh": "come from 表示來源，利潤「來自」海外子公司。by、of、off 都不能表達這種來源關係。"
+      },
+      {
+        "sentence": "Ms. Rivera was promoted to regional manager ___________ she had consistently exceeded her sales targets.",
+        "options": [
+          "although",
+          "unless",
+          "because",
+          "otherwise"
+        ],
+        "answer_index": 2,
+        "category": "conjunction_connector",
+        "explanation_zh": "後面的子句說明升遷的原因，要用表原因的連接詞 because。although 表讓步、unless 表條件，otherwise 是副詞，不能連接兩個子句。"
+      },
+      {
+        "sentence": "Please call our help desk ___________ you cannot log in to the system after resetting your password.",
+        "options": [
+          "unless",
+          "if",
+          "until",
+          "whether"
+        ],
+        "answer_index": 1,
+        "category": "conjunction_connector",
+        "explanation_zh": "if 引導條件子句，表示「如果無法登入就來電」。unless 已含否定，與 cannot 重複；until 表時間持續；whether 不能這樣引導條件。"
+      },
+      {
+        "sentence": "The warehouse ___________ our inventory is stored will be closed for renovation next month.",
+        "options": [
+          "where",
+          "which",
+          "that",
+          "when"
+        ],
+        "answer_index": 0,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞 warehouse 是地點，且子句 our inventory is stored 已完整，需用關係副詞 where（= in which）。which 與 that 在此會使子句缺少介系詞，when 用於時間。"
+      },
+      {
+        "sentence": "It was the redesigned checkout page ___________ persuaded more online shoppers to complete their purchases.",
+        "options": [
+          "what",
+          "who",
+          "whose",
+          "that"
+        ],
+        "answer_index": 3,
+        "category": "relative_clause",
+        "explanation_zh": "強調句型 It was ... that 中,先行詞是物(page),關係代名詞作主詞用 that。what 不能接在先行詞之後,who 指人,whose 後面要接名詞表所有,皆不合。"
+      },
+      {
+        "sentence": "Because of the new automation, the plant now produces twice ___________ units per day as it did last year.",
+        "options": [
+          "more",
+          "as many",
+          "many",
+          "as much"
+        ],
+        "answer_index": 1,
+        "category": "comparison",
+        "explanation_zh": "twice as many + 可數名詞 + as 是倍數比較的固定結構，units 為可數名詞。twice more 不是標準用法，many 少了 as，as much 只能接不可數名詞。"
+      },
+      {
+        "sentence": "Customers are ___________ to shop online when the delivery is free than when shipping fees apply.",
+        "options": [
+          "as likely",
+          "most likely",
+          "more likely",
+          "likeliest"
+        ],
+        "answer_index": 2,
+        "category": "comparison",
+        "explanation_zh": "句中有 than，要用比較級 more likely。as likely 需搭配 as，most likely 與 likeliest 是最高級，皆不合。"
+      },
+      {
+        "sentence": "The committee will ___________ a decision about the vendor contract by the end of the week.",
+        "options": [
+          "do",
+          "hold",
+          "put",
+          "make"
+        ],
+        "answer_index": 3,
+        "category": "word_choice",
+        "explanation_zh": "make a decision 是固定搭配，表示「做決定」。do、hold、put 都不能與 decision 搭配成這個意思。"
+      },
+      {
+        "sentence": "The new tax law will ___________ all companies with annual revenues above ten million dollars.",
+        "options": [
+          "affect",
+          "effect",
+          "affection",
+          "afflict"
+        ],
+        "answer_index": 0,
+        "category": "word_choice",
+        "explanation_zh": "affect 作動詞表示「影響」，符合語意。effect 作動詞意為「實現」，affection 是名詞「感情」，afflict 意為「使痛苦」，皆不合。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-03",
+    "questions": [
+      {
+        "sentence": "Ms. Patel asked the vendor ___________ the damaged goods at no extra charge.",
+        "options": [
+          "replace",
+          "to replace",
+          "replaced",
+          "replacing"
+        ],
+        "answer_index": 1,
+        "category": "verb_form",
+        "explanation_zh": "ask + 人 + to V 是固定句型,表示「要求某人做某事」,所以用 to replace。原形 replace、過去式/過去分詞 replaced 與現在分詞 replacing 都不能直接接在 asked the vendor 後面。"
+      },
+      {
+        "sentence": "The director reviewed the budget ___________ instead of delegating the task to the finance team.",
+        "options": [
+          "herself",
+          "her",
+          "she",
+          "hers"
+        ],
+        "answer_index": 0,
+        "category": "pronoun",
+        "explanation_zh": "反身代名詞可作強調用法,放在句尾強調主詞親自做某事,所以用 herself。her 是受格或所有格,she 是主格,hers 是所有格代名詞,放在此處都無法成句。"
+      },
+      {
+        "sentence": "The proposals that the committee reviewed yesterday ___________ more detailed than last year's.",
+        "options": [
+          "were",
+          "was",
+          "has been",
+          "is"
+        ],
+        "answer_index": 0,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "主詞是複數名詞 proposals(that 子句只是修飾語),又有 yesterday 的過去時間背景,所以用複數過去式 were。was、has been、is 都是單數動詞,與複數主詞不一致。"
+      },
+      {
+        "sentence": "By the time the auditors arrived on Monday, the accountants ___________ all of the ledgers.",
+        "options": [
+          "have reviewed",
+          "will review",
+          "review",
+          "had reviewed"
+        ],
+        "answer_index": 3,
+        "category": "verb_form",
+        "explanation_zh": "By the time 後接過去式 arrived,主要子句要用過去完成式 had reviewed,表示在稽核員到達之前已完成。have reviewed 是現在完成式、will review 是未來式、review 是現在式,時態都與過去時間點不合。"
+      },
+      {
+        "sentence": "The software update, ___________ many users had been waiting for, was finally released on Friday.",
+        "options": [
+          "who",
+          "which",
+          "whose",
+          "where"
+        ],
+        "answer_index": 1,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞 update 是事物,且在關係子句中作 waiting for 的受詞,所以用 which。who 指人,whose 表示所有格,where 指地點,都不適用。"
+      },
+      {
+        "sentence": "The Kyoto office is by far the ___________ of our three overseas branches.",
+        "options": [
+          "larger",
+          "largest",
+          "more large",
+          "largely"
+        ],
+        "answer_index": 1,
+        "category": "comparison",
+        "explanation_zh": "by far the 搭配最高級,且 of our three overseas branches 表示三個以上中的範圍,所以用 largest。larger 是比較級、more large 不是正確形式、largely 是副詞,都不適用。"
+      },
+      {
+        "sentence": "The board voted to ___________ the minimum order amount from $50 to $75.",
+        "options": [
+          "raise",
+          "rise",
+          "arise",
+          "arouse"
+        ],
+        "answer_index": 0,
+        "category": "word_choice",
+        "explanation_zh": "raise 是及物動詞,意為「提高(某物)」,後面可接受詞 the minimum order amount。rise 與 arise 是不及物動詞,不能接受詞;arouse 意為「喚起」,語意不合。"
+      },
+      {
+        "sentence": "The consultant's ___________ on cutting logistics costs helped the company save nearly a million dollars last year.",
+        "options": [
+          "advice",
+          "advise",
+          "advisable",
+          "advisedly"
+        ],
+        "answer_index": 0,
+        "category": "noun_form",
+        "explanation_zh": "所有格 consultant's 後面要接名詞,advice 是不可數名詞,意為「建議」,可接 on 說明建議的主題。advise 是動詞、advisable 是形容詞、advisedly 是副詞,都不能放在所有格之後當主詞。"
+      },
+      {
+        "sentence": "The shipping department has been working ___________ to clear the backlog before the holiday rush.",
+        "options": [
+          "tireless",
+          "tiring",
+          "tire",
+          "tirelessly"
+        ],
+        "answer_index": 3,
+        "category": "adjective_adverb",
+        "explanation_zh": "修飾動詞 working 要用副詞,tirelessly 表示「不倦地」,故正確。tireless 與 tiring 是形容詞,不能修飾動詞;tire 是動詞,放在此處也不合文法。"
+      },
+      {
+        "sentence": "Anyone ___________ wishes to join the wellness program should register at the front desk by Friday.",
+        "options": [
+          "whom",
+          "whose",
+          "who",
+          "which"
+        ],
+        "answer_index": 2,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞 Anyone 指人,且在關係子句中作 wishes 的主詞,要用主格關係代名詞 who。whom 是受格,whose 是所有格,which 指事物,都不正確。"
+      },
+      {
+        "sentence": "The sales team is eager to learn more ___________ the competitor's new pricing strategy.",
+        "options": [
+          "at",
+          "for",
+          "about",
+          "with"
+        ],
+        "answer_index": 2,
+        "category": "preposition",
+        "explanation_zh": "learn more about 是固定搭配,表示「更了解……」,所以用 about。at、for、with 都不能和 learn more 搭配表示學習的主題。"
+      },
+      {
+        "sentence": "Ms. Kim found the instructions for the new copier surprisingly ___________, so she needed no help from IT.",
+        "options": [
+          "simply",
+          "simple",
+          "simplify",
+          "simplicity"
+        ],
+        "answer_index": 1,
+        "category": "adjective_adverb",
+        "explanation_zh": "found + 受詞 + 形容詞,表示「覺得……」,且 surprisingly 修飾形容詞,所以空格填形容詞 simple。simply 是副詞,不能作受詞補語;simplify 是動詞;simplicity 是名詞,都不符。"
+      },
+      {
+        "sentence": "Customers may return unused items within thirty days ___________ they have kept the original receipt.",
+        "options": [
+          "as long as",
+          "even though",
+          "whereas",
+          "so that"
+        ],
+        "answer_index": 0,
+        "category": "conjunction_connector",
+        "explanation_zh": "as long as 表示「只要……」,引導條件,符合退貨條件的語意。even though 表示讓步、whereas 表示對比、so that 表示目的,放在此處語意都不通。"
+      },
+      {
+        "sentence": "Seventy percent of the survey respondents ___________ that the checkout process should be simplified.",
+        "options": [
+          "agrees",
+          "has agreed",
+          "agree",
+          "is agreed"
+        ],
+        "answer_index": 2,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "percent of + 複數名詞時,動詞依 of 後面的名詞決定,respondents 是複數,所以用複數動詞 agree。agrees 與 has agreed 是單數形式,is agreed 則是被動語態,語意與文法都不對。"
+      },
+      {
+        "sentence": "The new model is cheaper to produce; ___________, it uses far less energy.",
+        "options": [
+          "nevertheless",
+          "otherwise",
+          "instead",
+          "moreover"
+        ],
+        "answer_index": 3,
+        "category": "conjunction_connector",
+        "explanation_zh": "分號後的句子是在前句優點之外再補充另一個優點,所以用表示「此外」的 moreover。nevertheless 表示轉折、otherwise 表示「否則」、instead 表示「反而」,都不符合遞進的語意。"
+      },
+      {
+        "sentence": "Local voters expressed strong ___________ to the proposed increase in property taxes during the public hearing.",
+        "options": [
+          "oppose",
+          "opposed",
+          "opposition",
+          "opposing"
+        ],
+        "answer_index": 2,
+        "category": "noun_form",
+        "explanation_zh": "空格前有形容詞 strong,應填名詞,opposition to 表示「對……的反對」。oppose 是動詞,opposed 與 opposing 是分詞或形容詞,不能作 expressed 的受詞。"
+      },
+      {
+        "sentence": "The new document scanner is nearly twice as ___________ as the old one.",
+        "options": [
+          "faster",
+          "fastest",
+          "fast",
+          "more fast"
+        ],
+        "answer_index": 2,
+        "category": "comparison",
+        "explanation_zh": "as ... as 同等比較中間要放形容詞原級,所以用 fast。faster 與 fastest 是比較級與最高級,more fast 不是 fast 的正確比較形式,都不能放在 as ... as 之間。"
+      },
+      {
+        "sentence": "Mr. Jensen has been responsible ___________ the Asia-Pacific accounts since he joined the firm.",
+        "options": [
+          "to",
+          "for",
+          "of",
+          "with"
+        ],
+        "answer_index": 1,
+        "category": "preposition",
+        "explanation_zh": "be responsible for + 事物,表示「負責某事」,是固定用法,故選 for。responsible to 後面接的是「對誰負責」的人;of 與 with 則沒有這個搭配。"
+      },
+      {
+        "sentence": "Ms. Tanaka asked Mr. Lee and ___________ to present the quarterly figures at the board meeting.",
+        "options": [
+          "I",
+          "my",
+          "mine",
+          "me"
+        ],
+        "answer_index": 3,
+        "category": "pronoun",
+        "explanation_zh": "asked 後面的 Mr. Lee and ___ 是動詞的受詞,要用受格 me。I 是主格、my 是所有格形容詞(後面需接名詞)、mine 是所有格代名詞,都不能作受詞。"
+      },
+      {
+        "sentence": "The bank agreed to ___________ the firm two million dollars to finance the new plant.",
+        "options": [
+          "borrow",
+          "rent",
+          "hire",
+          "lend"
+        ],
+        "answer_index": 3,
+        "category": "word_choice",
+        "explanation_zh": "lend 表示「借出」,銀行是出借方,可接雙受詞 lend somebody something。borrow 是向人借入,方向相反;rent 是租用,hire 是僱用,都不能表示銀行借錢給公司。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-04",
+    "questions": [
+      {
+        "sentence": "Having ___________ the final inspection, the plant was cleared to resume operations on Monday.",
+        "options": [
+          "pass",
+          "passing",
+          "passed",
+          "to pass"
+        ],
+        "answer_index": 2,
+        "category": "verb_form",
+        "explanation_zh": "Having 之後接過去分詞,構成完成式分詞構句,表示「通過檢查之後」,所以用 passed。pass 是原形,passing 與 having 重複使用,to pass 是不定詞,都不能接在 Having 後。"
+      },
+      {
+        "sentence": "___________ otherwise noted, all prices on the menu include tax and service charges.",
+        "options": [
+          "Despite",
+          "Without",
+          "Because",
+          "Unless"
+        ],
+        "answer_index": 3,
+        "category": "conjunction_connector",
+        "explanation_zh": "Unless otherwise noted 是常見的省略用法,表示「除非另有註明」,所以用 Unless。Despite 與 Without 是介系詞,後面不能接 otherwise noted;Because 表示原因,語意不合。"
+      },
+      {
+        "sentence": "The manager, along with two project engineers, ___________ the new production schedule this afternoon.",
+        "options": [
+          "are presenting",
+          "present",
+          "have presented",
+          "is presenting"
+        ],
+        "answer_index": 3,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "along with 引出的片語不影響主詞數,真正的主詞是單數 The manager,又有 this afternoon 的近期安排,所以用 is presenting。are presenting、present、have presented 都是複數形式,與單數主詞不一致。"
+      },
+      {
+        "sentence": "This year's trade show attracted ___________ visitors than last year's, mainly because of the rail strike.",
+        "options": [
+          "fewer",
+          "less",
+          "little",
+          "fewest"
+        ],
+        "answer_index": 0,
+        "category": "comparison",
+        "explanation_zh": "visitors 是可數複數名詞,比較級用 fewer,後面搭配 than。less 用於不可數名詞,little 不是比較級,fewest 是最高級,不能搭配 than。"
+      },
+      {
+        "sentence": "The new supplier's components are just ___________ reliable as those from our previous vendor.",
+        "options": [
+          "so",
+          "more",
+          "very",
+          "as"
+        ],
+        "answer_index": 3,
+        "category": "comparison",
+        "explanation_zh": "just as ... as 表示「一樣……」的同等比較,空格填第一個 as,後面的 as 引出比較對象。so 不能用在肯定句的同等比較,more 與 very 也不能和後面的 as 搭配。"
+      },
+      {
+        "sentence": "The hotel offers a ___________ breakfast buffet to all guests staying in its executive suites.",
+        "options": [
+          "complimentarily",
+          "complimenting",
+          "complimentary",
+          "compliment"
+        ],
+        "answer_index": 2,
+        "category": "adjective_adverb",
+        "explanation_zh": "空格位在冠詞 a 與名詞 breakfast buffet 之間,需要形容詞,complimentary 表示「免費贈送的」。complimentarily 是副詞,complimenting 是分詞,compliment 是名詞或動詞,都不符。"
+      },
+      {
+        "sentence": "The first draft contained several errors; ___________, the editor returned it to the author for revision.",
+        "options": [
+          "however",
+          "therefore",
+          "nevertheless",
+          "although"
+        ],
+        "answer_index": 1,
+        "category": "conjunction_connector",
+        "explanation_zh": "前句是原因(草稿有錯誤),後句是結果(退回修改),所以用表示因果的 therefore。however 與 nevertheless 表示轉折,語意相反;although 是從屬連接詞,不能接在分號之後單獨作連接副詞。"
+      },
+      {
+        "sentence": "Ms. Brandt, ___________ team developed the mobile app, was promoted to vice president last week.",
+        "options": [
+          "who",
+          "which",
+          "whose",
+          "whom"
+        ],
+        "answer_index": 2,
+        "category": "relative_clause",
+        "explanation_zh": "空格後的 team 是名詞,先行詞 Ms. Brandt 與 team 之間是所有格關係,所以用 whose。who 與 whom 後面不能直接接名詞 team,which 則是指事物,都不正確。"
+      },
+      {
+        "sentence": "Travelers should be aware ___________ the new baggage restrictions before arriving at the airport.",
+        "options": [
+          "with",
+          "for",
+          "on",
+          "of"
+        ],
+        "answer_index": 3,
+        "category": "preposition",
+        "explanation_zh": "be aware of 是固定搭配,表示「知道、意識到」,所以用 of。with、for、on 都不能和 aware 搭配表示意識的對象。"
+      },
+      {
+        "sentence": "The new hires were encouraged ___________ questions at any time during the orientation session.",
+        "options": [
+          "to ask",
+          "ask",
+          "asking",
+          "asked"
+        ],
+        "answer_index": 0,
+        "category": "verb_form",
+        "explanation_zh": "be encouraged to V 是被動語態的固定用法,表示「被鼓勵去做某事」,所以用 to ask。ask、asking、asked 都不能直接接在 were encouraged 後面。"
+      },
+      {
+        "sentence": "There ___________ several issues that must be resolved before the merger can proceed.",
+        "options": [
+          "is",
+          "are",
+          "has",
+          "be"
+        ],
+        "answer_index": 1,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "There be 句型中,動詞要和後面的真正主詞一致,several issues 是複數,所以用 are。is 與 has 是單數動詞,be 是原形,不能在此作限定動詞。"
+      },
+      {
+        "sentence": "The laptop on the conference table is ___________, so please do not move it.",
+        "options": [
+          "my",
+          "me",
+          "mine",
+          "myself"
+        ],
+        "answer_index": 2,
+        "category": "pronoun",
+        "explanation_zh": "is 之後缺的是補語,所有格代名詞 mine 表示「我的(東西)」,相當於 my laptop。my 後面需要接名詞,me 是受格,myself 是反身代名詞,都不能作此處補語。"
+      },
+      {
+        "sentence": "The negotiations are scheduled to continue ___________ the end of the week.",
+        "options": [
+          "by",
+          "until",
+          "during",
+          "within"
+        ],
+        "answer_index": 1,
+        "category": "preposition",
+        "explanation_zh": "until 表示動作持續到某一時間點,與 continue 搭配符合語意。by 表示「在……之前完成」,用於一次性完成的動作;during 後面要接一段期間而非時間點;within 後面接一段時間長度,都不適合。"
+      },
+      {
+        "sentence": "Staff members should ___________ their expense reports to the accounting office by the fifth of each month.",
+        "options": [
+          "surrender",
+          "subscribe",
+          "submit",
+          "subject"
+        ],
+        "answer_index": 2,
+        "category": "word_choice",
+        "explanation_zh": "submit 表示「提交(文件)」,與 expense reports 搭配是固定用法。surrender 是「投降、交出」,subscribe 是「訂閱」且需接 to,subject 是「使遭受」,語意都不合。"
+      },
+      {
+        "sentence": "The farm's ___________ of organic vegetables has expanded to three additional counties this year.",
+        "options": [
+          "cultivate",
+          "cultivation",
+          "cultivated",
+          "cultivator"
+        ],
+        "answer_index": 1,
+        "category": "noun_form",
+        "explanation_zh": "所有格 farm's 之後要接名詞,且 cultivation of 表示「……的栽培」,與 has expanded 語意相符。cultivate 是動詞,cultivated 是形容詞,cultivator 指耕種者(人或農具),無法擴展到三個郡。"
+      },
+      {
+        "sentence": "Mr. Hwang submitted his ___________ from the position of regional director to the board on Monday.",
+        "options": [
+          "resign",
+          "resigned",
+          "resigning",
+          "resignation"
+        ],
+        "answer_index": 3,
+        "category": "noun_form",
+        "explanation_zh": "his 之後要接名詞作 submitted 的受詞,resignation 表示「辭呈」,可接 from 說明辭去的職位。resign 是動詞,resigned 與 resigning 是分詞,都不適合在此作名詞。"
+      },
+      {
+        "sentence": "The two founders met in college and built the company by ___________.",
+        "options": [
+          "themselves",
+          "them",
+          "their",
+          "theirs"
+        ],
+        "answer_index": 0,
+        "category": "pronoun",
+        "explanation_zh": "by + 反身代名詞表示「獨自、靠自己」,主詞是 The two founders(複數),所以用 themselves。them 是受格,their 是所有格,theirs 是所有格代名詞,都不能用在 by 之後表達這個意思。"
+      },
+      {
+        "sentence": "The candidate ___________ the committee interviewed on Tuesday has accepted our offer.",
+        "options": [
+          "whom",
+          "whose",
+          "which",
+          "whoever"
+        ],
+        "answer_index": 0,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞 The candidate 指人,且在關係子句中是 interviewed 的受詞,要用受格 whom。whose 是所有格,which 指事物,whoever 是複合關係代名詞,都不能修飾前面的先行詞。"
+      },
+      {
+        "sentence": "The ___________ packaged electronics were shipped by air to avoid damage during transit.",
+        "options": [
+          "carefully",
+          "careful",
+          "careless",
+          "carefulness"
+        ],
+        "answer_index": 0,
+        "category": "adjective_adverb",
+        "explanation_zh": "packaged 是過去分詞,要用副詞修飾,carefully packaged 表示「包裝仔細的」。careful 與 careless 是形容詞,不能修飾分詞;carefulness 是名詞,同樣不能放在此處。"
+      },
+      {
+        "sentence": "The IT department will ___________ technical support to all remote employees during the software transition.",
+        "options": [
+          "provoke",
+          "provide",
+          "prevent",
+          "produce"
+        ],
+        "answer_index": 1,
+        "category": "word_choice",
+        "explanation_zh": "provide A to B 表示「向……提供……」,與 technical support 搭配最自然。provoke 是「激怒、引起」,prevent 是「阻止」,produce 是「生產」,語意都不符。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-05",
+    "questions": [
+      {
+        "sentence": "Applicants must provide ___________ of their previous employment before the interview can be scheduled.",
+        "options": [
+          "verify",
+          "verifiable",
+          "verification",
+          "verified"
+        ],
+        "answer_index": 2,
+        "category": "noun_form",
+        "explanation_zh": "provide 後面需要名詞作受詞,介系詞 of 前也要名詞,故用名詞 verification(驗證)。verify 是動詞、verifiable 與 verified 是形容詞,都不能當 provide 的受詞。"
+      },
+      {
+        "sentence": "Ms. Tanaka's ___________ to the sales team was recognized with a special award at the annual dinner.",
+        "options": [
+          "contribution",
+          "contribute",
+          "contributed",
+          "contributive"
+        ],
+        "answer_index": 0,
+        "category": "noun_form",
+        "explanation_zh": "所有格 Ms. Tanaka's 後面需接名詞,contribution to 為「對……的貢獻」的固定搭配。contribute 與 contributed 是動詞,contributive 是形容詞,皆不能放在所有格之後當主詞。"
+      },
+      {
+        "sentence": "The conference room is ___________ equipped with video projectors and wireless microphones for every presentation.",
+        "options": [
+          "full",
+          "fuller",
+          "fullness",
+          "fully"
+        ],
+        "answer_index": 3,
+        "category": "adjective_adverb",
+        "explanation_zh": "空格修飾過去分詞 equipped,需用副詞,故為 fully equipped(設備齊全)。full 與 fuller 是形容詞,fullness 是名詞,都不能修飾分詞。"
+      },
+      {
+        "sentence": "Sales representatives should remain ___________ when handling complaints from frustrated customers during peak season.",
+        "options": [
+          "patiently",
+          "patient",
+          "patience",
+          "patients"
+        ],
+        "answer_index": 1,
+        "category": "adjective_adverb",
+        "explanation_zh": "remain 為連綴動詞,後面接形容詞補語說明主詞狀態,故用 patient。patiently 是副詞,不能作 remain 的補語;patience 與 patients 是名詞,語意與句型都不合。"
+      },
+      {
+        "sentence": "All visitors are required ___________ a photo ID at the reception desk upon arrival.",
+        "options": [
+          "show",
+          "to show",
+          "showing",
+          "shown"
+        ],
+        "answer_index": 1,
+        "category": "verb_form",
+        "explanation_zh": "be required to V 為固定用法,to 後接原形動詞,故用 to show。直接用 show、showing 或 shown 都不符合此句型。"
+      },
+      {
+        "sentence": "The quarterly report ___________ by the finance team before it was submitted to the board of directors.",
+        "options": [
+          "had reviewed",
+          "has been reviewed",
+          "was reviewing",
+          "had been reviewed"
+        ],
+        "answer_index": 3,
+        "category": "verb_form",
+        "explanation_zh": "報告是被審閱,須用被動語態;且審閱發生在過去的「提交」之前,所以用過去完成式被動 had been reviewed。had reviewed 與 was reviewing 是主動語態,與 by 片語衝突;has been reviewed 是現在完成式,與過去時間的 was submitted 不搭。"
+      },
+      {
+        "sentence": "Several of the tenants in the apartment building ___________ complained to the landlord about the broken elevator.",
+        "options": [
+          "have",
+          "has",
+          "having",
+          "was"
+        ],
+        "answer_index": 0,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "Several of + 複數名詞 作主詞時動詞用複數,與 complained 組成現在完成式 have complained。has 與 was 是單數,having 不能單獨作述語動詞。"
+      },
+      {
+        "sentence": "Either the regional director or her assistants ___________ responsible for approving all overseas travel requests.",
+        "options": [
+          "is",
+          "was",
+          "are",
+          "has been"
+        ],
+        "answer_index": 2,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "either...or 連接兩個主詞時,動詞與靠近動詞的主詞一致,此處最近的是複數 her assistants,故用 are。is、was、has been 都是單數形式,不符合。"
+      },
+      {
+        "sentence": "Mr. Dubois repaired the jammed printer by ___________ instead of waiting for the technician to arrive.",
+        "options": [
+          "him",
+          "his",
+          "he",
+          "himself"
+        ],
+        "answer_index": 3,
+        "category": "pronoun",
+        "explanation_zh": "by oneself 表示「獨自、靠自己」,主詞是 Mr. Dubois,故用反身代名詞 himself。him 是受格、his 是所有格、he 是主格,都不能放在 by 之後構成此片語。"
+      },
+      {
+        "sentence": "Please send the signed contract to either Ms. Reyes or ___________ no later than Friday afternoon.",
+        "options": [
+          "me",
+          "I",
+          "myself",
+          "mine"
+        ],
+        "answer_index": 0,
+        "category": "pronoun",
+        "explanation_zh": "介系詞 to 後面要用受格,either...or 連接的兩個對象都是 to 的受詞,所以用受格 me。I 是主格,mine 是所有格代名詞(意為我的東西),myself 是反身代名詞,在此沒有反身語意,都不適合。"
+      },
+      {
+        "sentence": "Employees may claim reimbursement ___________ expenses incurred during official business trips outside the country.",
+        "options": [
+          "by",
+          "at",
+          "for",
+          "into"
+        ],
+        "answer_index": 2,
+        "category": "preposition",
+        "explanation_zh": "reimbursement for + 費用 是固定搭配,表示「就……費用的補償」,故用 for。by、at、into 都無法與 reimbursement 搭配表達此意。"
+      },
+      {
+        "sentence": "Deliveries to the downtown office are made ___________ weekdays between nine in the morning and five in the afternoon.",
+        "options": [
+          "at",
+          "on",
+          "in",
+          "by"
+        ],
+        "answer_index": 1,
+        "category": "preposition",
+        "explanation_zh": "表示星期或日子(weekdays、Monday、March 15th)時,介系詞用 on,故為 on weekdays。at 用於時刻、in 用於月份年份或一段時間、by 表示「在……之前」,都不適用。"
+      },
+      {
+        "sentence": "___________ the supplier raised its prices again, we have begun looking for an alternative source of materials.",
+        "options": [
+          "Because",
+          "Despite",
+          "However",
+          "Therefore"
+        ],
+        "answer_index": 0,
+        "category": "conjunction_connector",
+        "explanation_zh": "後面接完整子句 the supplier raised its prices,且前後是因果關係,需要連接詞 Because。Despite 是介系詞,後面不能接子句;However 與 Therefore 是轉折副詞,不能連接兩個子句,語意上 Despite 與 However 也不是因果。"
+      },
+      {
+        "sentence": "Please submit your expense report by Friday; ___________, your reimbursement will be delayed until the following month.",
+        "options": [
+          "therefore",
+          "moreover",
+          "otherwise",
+          "instead"
+        ],
+        "answer_index": 2,
+        "category": "conjunction_connector",
+        "explanation_zh": "前句是要求,後句是不照做的後果,otherwise(否則)正好表達這種關係。therefore 表結果、moreover 表補充、instead 表替代,都不符合前後句邏輯。"
+      },
+      {
+        "sentence": "The accounting software ___________ our team uses every day will be upgraded at the end of next month.",
+        "options": [
+          "who",
+          "which",
+          "whose",
+          "where"
+        ],
+        "answer_index": 1,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞 software 是物,且在關係子句中作 uses 的受詞,故用關係代名詞 which(亦可省略)。who 指人,whose 表所有格,where 引導地點,都不合。"
+      },
+      {
+        "sentence": "The applicant ___________ we interviewed on Monday morning has accepted our job offer and will start in May.",
+        "options": [
+          "whose",
+          "which",
+          "where",
+          "whom"
+        ],
+        "answer_index": 3,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞 applicant 是人,在關係子句中作 interviewed 的受詞,故用受格 whom。whose 表所有格,which 指物,where 指地點,都不適用。"
+      },
+      {
+        "sentence": "Online training is just as ___________ as classroom instruction for most employees in the customer service department.",
+        "options": [
+          "effective",
+          "effectively",
+          "more effective",
+          "effectiveness"
+        ],
+        "answer_index": 0,
+        "category": "comparison",
+        "explanation_zh": "as...as 之間要放原級形容詞,且 is 後面需要形容詞補語,故用 effective。effectively 是副詞,more effective 是比較級,不能放在 as...as 中,effectiveness 是名詞。"
+      },
+      {
+        "sentence": "The renovation of the lobby took ___________ than the contractor had originally estimated in the proposal.",
+        "options": [
+          "long",
+          "longest",
+          "more long",
+          "longer"
+        ],
+        "answer_index": 3,
+        "category": "comparison",
+        "explanation_zh": "後面有 than,表示兩者比較,需用比較級;long 的比較級為 longer(單音節字加 -er)。long 是原級、longest 是最高級,more long 是錯誤的比較級形式。"
+      },
+      {
+        "sentence": "The company will ___________ a press conference on Thursday to announce its quarterly earnings.",
+        "options": [
+          "do",
+          "hold",
+          "make",
+          "take"
+        ],
+        "answer_index": 1,
+        "category": "word_choice",
+        "explanation_zh": "「舉行記者會」的固定搭配是 hold a press conference。do、make、take 都不能與 press conference 搭配成此意。"
+      },
+      {
+        "sentence": "The service contract will ___________ on December 31 unless both parties agree in writing to renew it.",
+        "options": [
+          "expend",
+          "expose",
+          "expire",
+          "expel"
+        ],
+        "answer_index": 2,
+        "category": "word_choice",
+        "explanation_zh": "expire 指合約、證件等「到期、期滿」,符合 unless...renew 的語境。expend 是花費,expose 是暴露,expel 是驅逐,字形相近但意思皆不符。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-06",
+    "questions": [
+      {
+        "sentence": "The company has seen a steady ___________ in online orders since the new website went live in March.",
+        "options": [
+          "increasing",
+          "increase",
+          "increased",
+          "increasingly"
+        ],
+        "answer_index": 1,
+        "category": "noun_form",
+        "explanation_zh": "冠詞 a 與形容詞 steady 之後需接名詞,an increase in 表示「……的增加」。increasing 與 increased 是分詞(形容詞),increasingly 是副詞,都不能作名詞。"
+      },
+      {
+        "sentence": "Thank you for your prompt ___________ to my inquiry about the delayed shipment of office furniture.",
+        "options": [
+          "respond",
+          "responsive",
+          "responsively",
+          "response"
+        ],
+        "answer_index": 3,
+        "category": "noun_form",
+        "explanation_zh": "所有格 your 與形容詞 prompt 之後需要名詞,response to 為固定搭配。respond 是動詞,responsive 是形容詞,responsively 是副詞,皆不能當名詞。"
+      },
+      {
+        "sentence": "Passengers who arrive ___________ for their flights may be denied boarding at the gate.",
+        "options": [
+          "late",
+          "lately",
+          "lateness",
+          "latest"
+        ],
+        "answer_index": 0,
+        "category": "adjective_adverb",
+        "explanation_zh": "arrive late 表示「晚到」,late 在此作副詞修飾 arrive。lately 意為「最近」,語意不合;lateness 是名詞;latest 是最高級形容詞,都不適用。"
+      },
+      {
+        "sentence": "The marketing team was ___________ pleased with the results of the customer survey conducted last quarter.",
+        "options": [
+          "extreme",
+          "extremity",
+          "extremely",
+          "more extreme"
+        ],
+        "answer_index": 2,
+        "category": "adjective_adverb",
+        "explanation_zh": "空格修飾形容詞 pleased,需用副詞,故為 extremely pleased。extreme 與 more extreme 是形容詞,extremity 是名詞,都不能修飾形容詞。"
+      },
+      {
+        "sentence": "Unless the export license ___________ before the end of March, the exporter will have to suspend all shipments.",
+        "options": [
+          "renew",
+          "will renew",
+          "is renewed",
+          "renewing"
+        ],
+        "answer_index": 2,
+        "category": "verb_form",
+        "explanation_zh": "Unless 引導的條件副詞子句用現在式代替未來式,且 license 是被更新的對象,要用被動語態 is renewed。will renew 在條件子句中不可用未來式,renew 與 renewing 的形式與語態都不對。"
+      },
+      {
+        "sentence": "The new employees are looking forward to ___________ the regional manager during next week's orientation.",
+        "options": [
+          "meeting",
+          "meet",
+          "to meet",
+          "met"
+        ],
+        "answer_index": 0,
+        "category": "verb_form",
+        "explanation_zh": "look forward to 中的 to 是介系詞,後面要接動名詞,故用 meeting。原形動詞 meet、不定詞 to meet 與過去式 met 都不符合此句型。"
+      },
+      {
+        "sentence": "The prices listed in the attached catalog ___________ valid until the end of the calendar year.",
+        "options": [
+          "remains",
+          "was",
+          "has remained",
+          "remain"
+        ],
+        "answer_index": 3,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "主詞 prices 是複數(listed in the attached catalog 為修飾語),現在式用複數動詞 remain,搭配 valid until 表示持續有效。remains 與 has remained 是單數,was 是過去式且單數,皆不合。"
+      },
+      {
+        "sentence": "Compliance with the new fire safety regulations ___________ extensive changes to the ventilation systems of older hotels.",
+        "options": [
+          "require",
+          "requires",
+          "requiring",
+          "to require"
+        ],
+        "answer_index": 1,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "主詞是單數名詞 Compliance(with the regulations 為修飾語),動詞用單數 requires。require 是複數形,requiring 與 to require 不能單獨作述語動詞。"
+      },
+      {
+        "sentence": "Ms. Lopez will present the findings to the board, and Mr. Grant will assist ___________ during the question session.",
+        "options": [
+          "her",
+          "she",
+          "hers",
+          "herself"
+        ],
+        "answer_index": 0,
+        "category": "pronoun",
+        "explanation_zh": "assist 的受詞需用受格,指前面的 Ms. Lopez,故用 her。she 是主格,hers 是所有格代名詞,herself 是反身代名詞,但受詞與主詞 Mr. Grant 並非同一人,不能用反身代名詞。"
+      },
+      {
+        "sentence": "___________ who wish to attend the leadership workshop must register with the HR department by Friday.",
+        "options": [
+          "Them",
+          "Those",
+          "Who",
+          "Whose"
+        ],
+        "answer_index": 1,
+        "category": "pronoun",
+        "explanation_zh": "Those who... 表示「想要……的人」,those 作主詞,後面接 who 引導的關係子句。Them 是受格,不能當主詞;Who 與 Whose 是關係詞,不能當被修飾的先行詞。"
+      },
+      {
+        "sentence": "The warehouse is conveniently located ___________ the main highway and the freight railway station.",
+        "options": [
+          "among",
+          "within",
+          "across",
+          "between"
+        ],
+        "answer_index": 3,
+        "category": "preposition",
+        "explanation_zh": "between A and B 是固定結構,用於兩個對象之間,句中正好是 highway 與 railway station 兩者。among 用於三者以上,within 與 across 無法搭配 and 構成此意。"
+      },
+      {
+        "sentence": "The assembly plant in Ohio has operated without a single major accident ___________ 2015, according to its safety records.",
+        "options": [
+          "for",
+          "during",
+          "since",
+          "at"
+        ],
+        "answer_index": 2,
+        "category": "preposition",
+        "explanation_zh": "現在完成式搭配 since + 過去時間點,表示「自 2015 年以來」。for 後面接一段期間而非年份,during 接特定期間,at 用於時刻,都不合。"
+      },
+      {
+        "sentence": "Several departments reduced costs last year; ___________, the marketing team cut its travel spending by thirty percent.",
+        "options": [
+          "otherwise",
+          "for example",
+          "nevertheless",
+          "in contrast"
+        ],
+        "answer_index": 1,
+        "category": "conjunction_connector",
+        "explanation_zh": "分號後的句子是前一句的具體例子,用轉折副詞 for example 引出。otherwise 表示否則,nevertheless 表示儘管如此,in contrast 表示對比,都與前後文的邏輯不符。"
+      },
+      {
+        "sentence": "The CEO will not approve the budget ___________ the finance team revises its projected costs for next year.",
+        "options": [
+          "until",
+          "during",
+          "despite",
+          "whether"
+        ],
+        "answer_index": 0,
+        "category": "conjunction_connector",
+        "explanation_zh": "not...until... 表示「直到……才」,until 後面可接子句。during 與 despite 是介系詞,後面不能接子句;whether 引導名詞子句,語意也不通。"
+      },
+      {
+        "sentence": "Customers ___________ place their orders before noon will receive their items the following morning.",
+        "options": [
+          "whom",
+          "whose",
+          "who",
+          "which"
+        ],
+        "answer_index": 2,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞 Customers 是人,且在關係子句中作主詞(place 的動作者),故用主格 who。whom 是受格,whose 是所有格,which 指物,都不適用。"
+      },
+      {
+        "sentence": "The consultant ___________ recommendations saved us thousands of dollars will join our team on a permanent basis.",
+        "options": [
+          "who",
+          "whom",
+          "which",
+          "whose"
+        ],
+        "answer_index": 3,
+        "category": "relative_clause",
+        "explanation_zh": "空格後面是名詞 recommendations,表示「該顧問的建議」,需要所有格關係代名詞 whose。who 與 whom 後面不會直接接名詞,which 指物,都不合。"
+      },
+      {
+        "sentence": "This was the ___________ quarter in the company's history, with record profits across all of its divisions.",
+        "options": [
+          "more profitable",
+          "profitable",
+          "most profitably",
+          "most profitable"
+        ],
+        "answer_index": 3,
+        "category": "comparison",
+        "explanation_zh": "the ... in the company's history 表示範圍內的最高程度,需用最高級,多音節形容詞用 most profitable。more profitable 是比較級,profitable 是原級,most profitably 是副詞,都不能修飾名詞 quarter。"
+      },
+      {
+        "sentence": "The updated model consumes ___________ electricity than the older one while producing the same output.",
+        "options": [
+          "fewer",
+          "little",
+          "less",
+          "least"
+        ],
+        "answer_index": 2,
+        "category": "comparison",
+        "explanation_zh": "後面有 than,需用比較級;electricity 是不可數名詞,「較少」要用 less。fewer 只用於可數名詞,little 是原級,least 是最高級,都不合。"
+      },
+      {
+        "sentence": "The firm decided to ___________ the product launch until the supply problems had been fully resolved.",
+        "options": [
+          "postpone",
+          "prevent",
+          "pretend",
+          "prepare"
+        ],
+        "answer_index": 0,
+        "category": "word_choice",
+        "explanation_zh": "postpone 意為「延後」,與 until 連用表示延到問題解決之後才進行。prevent 是阻止,pretend 是假裝,prepare 是準備,字形相近但語意與搭配皆不合。"
+      },
+      {
+        "sentence": "Due to the heavy snowfall, all flights to Denver have been ___________ until further notice.",
+        "options": [
+          "suspected",
+          "suspended",
+          "resumed",
+          "reserved"
+        ],
+        "answer_index": 1,
+        "category": "word_choice",
+        "explanation_zh": "suspended 意為「暫停」,與 until further notice(另行通知前)搭配最自然。suspected 是被懷疑,resumed 是恢復,reserved 是被預訂,語意都不通。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-07",
+    "questions": [
+      {
+        "sentence": "The loan officer was praised for her close ___________ to detail when reviewing mortgage applications.",
+        "options": [
+          "attend",
+          "attentive",
+          "attention",
+          "attentively"
+        ],
+        "answer_index": 2,
+        "category": "noun_form",
+        "explanation_zh": "close 之後要接名詞,pay attention to / attention to detail 是固定搭配,表示「注重細節」。attend 是動詞,attentive 是形容詞,attentively 是副詞,都不能放在形容詞 close 之後作名詞。"
+      },
+      {
+        "sentence": "Careful ___________ of raw materials helps the plant reduce waste and keep production costs low.",
+        "options": [
+          "selection",
+          "select",
+          "selective",
+          "selectively"
+        ],
+        "answer_index": 0,
+        "category": "noun_form",
+        "explanation_zh": "形容詞 Careful 後面要接名詞,且後面有 of 片語修飾,selection(挑選)是名詞,符合文法。select 是動詞、selective 是形容詞、selectively 是副詞,都不能放在形容詞後面當主詞。"
+      },
+      {
+        "sentence": "Ms. Park answered every question ___________ during the investor call, which reassured the shareholders.",
+        "options": [
+          "confident",
+          "confidence",
+          "confidences",
+          "confidently"
+        ],
+        "answer_index": 3,
+        "category": "adjective_adverb",
+        "explanation_zh": "空格修飾動詞 answered,說明回答的方式,要用副詞 confidently(自信地)。confident 是形容詞,confidence 與 confidences 是名詞,都不能修飾動詞。"
+      },
+      {
+        "sentence": "Customers rated the repair service as ___________ because technicians arrived on time and fixed every problem.",
+        "options": [
+          "reliably",
+          "reliable",
+          "rely",
+          "reliability"
+        ],
+        "answer_index": 1,
+        "category": "adjective_adverb",
+        "explanation_zh": "as 後面補充說明 service 的性質,需要形容詞 reliable(可靠的)。reliably 是副詞,rely 是動詞,reliability 是名詞,都不能當「被評為...」的形容詞補語。"
+      },
+      {
+        "sentence": "The museum has been closed since the flood and is expected ___________ to visitors in June.",
+        "options": [
+          "reopening",
+          "reopened",
+          "reopens",
+          "to reopen"
+        ],
+        "answer_index": 3,
+        "category": "verb_form",
+        "explanation_zh": "be expected to V 是固定句型,表示「預計會……」,to 之後接原形動詞,故用 to reopen。reopening、reopened、reopens 都不能直接接在 is expected 之後。"
+      },
+      {
+        "sentence": "The quarterly report ___________ to all regional managers by Friday morning, according to the current schedule.",
+        "options": [
+          "sends",
+          "will be sent",
+          "is sending",
+          "has sent"
+        ],
+        "answer_index": 1,
+        "category": "verb_form",
+        "explanation_zh": "report 是被寄送的對象,應用被動語態;by Friday morning 指未來時間,所以用 will be sent。其餘選項都是主動語態,而且後面沒有受詞,語意與文法都不通。"
+      },
+      {
+        "sentence": "Included in the monthly rental fee ___________ electricity, water, and high-speed internet access for all tenants.",
+        "options": [
+          "are",
+          "is",
+          "has",
+          "being"
+        ],
+        "answer_index": 0,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "這是倒裝句,真正的主詞在動詞之後,為複數的 electricity, water, and high-speed internet access(三項並列),所以動詞用複數 are。is 與 has 是單數,being 不能單獨作述語動詞。"
+      },
+      {
+        "sentence": "Mathematics, along with statistics, ___________ required for all students majoring in finance at the university.",
+        "options": [
+          "are",
+          "were",
+          "is",
+          "have been"
+        ],
+        "answer_index": 2,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "主詞是單數的 Mathematics,along with statistics 只是插入的附加語,不改變主詞的單複數,所以用單數的 is。are、were、have been 都是複數形式,不能搭配此主詞。"
+      },
+      {
+        "sentence": "The manager gave the assignment to Ms. Lee and ___________ because we had both worked on the account.",
+        "options": [
+          "I",
+          "me",
+          "myself",
+          "mine"
+        ],
+        "answer_index": 1,
+        "category": "pronoun",
+        "explanation_zh": "and 連接兩個介系詞 to 的受詞,Ms. Lee and 後面要用受格 me。I 是主格,myself 是反身代名詞(沒有與主詞相同的對象),mine 是所有格代名詞,都不適用。"
+      },
+      {
+        "sentence": "The CEO ___________ approved the new travel policy after consulting with the legal department.",
+        "options": [
+          "him",
+          "he",
+          "his",
+          "himself"
+        ],
+        "answer_index": 3,
+        "category": "pronoun",
+        "explanation_zh": "空格放在主詞 The CEO 後面用來強調「本人親自」,要用反身代名詞 himself 作同位語。him 是受格、he 會造成主詞重複、his 是所有格,都不能放在這個位置。"
+      },
+      {
+        "sentence": "The company's new logo will appear ___________ all packaging starting from the next product season.",
+        "options": [
+          "on",
+          "over",
+          "at",
+          "to"
+        ],
+        "answer_index": 0,
+        "category": "preposition",
+        "explanation_zh": "appear on + 表面或載體 表示「出現在...上」,logo 印在包裝上要用 on。over 表示在上方,at 指定點,to 表示方向,都不是此處的慣用搭配。"
+      },
+      {
+        "sentence": "Seats for the guided cave tour are limited, so visitors are urged to book ___________ advance.",
+        "options": [
+          "by",
+          "on",
+          "in",
+          "at"
+        ],
+        "answer_index": 2,
+        "category": "preposition",
+        "explanation_zh": "in advance 是固定片語,表示「事先、提前」,book in advance 即「提前預訂」。by、on、at 都不能與 advance 組成這個意思的片語。"
+      },
+      {
+        "sentence": "___________ the new hires complete their orientation, they will be assigned to a permanent department.",
+        "options": [
+          "Despite",
+          "However",
+          "Whereas",
+          "Once"
+        ],
+        "answer_index": 3,
+        "category": "conjunction_connector",
+        "explanation_zh": "空格要連接兩個子句,表示「一旦...就」的時間先後,用從屬連接詞 Once。Despite 是介系詞,However 是轉折副詞,Whereas 表示對比,語意都不合。"
+      },
+      {
+        "sentence": "The team worked overtime all week ___________ the delayed order could still be shipped before the holiday.",
+        "options": [
+          "so that",
+          "although",
+          "whereas",
+          "unless"
+        ],
+        "answer_index": 0,
+        "category": "conjunction_connector",
+        "explanation_zh": "so that 引導目的副詞子句,表示「為了讓...能夠」,符合加班的目的。although 表示讓步,whereas 表示對比,unless 表示除非,放進句中語意都不通。"
+      },
+      {
+        "sentence": "The consultant with ___________ we signed the agreement has offices in both Berlin and London.",
+        "options": [
+          "who",
+          "whom",
+          "whose",
+          "which"
+        ],
+        "answer_index": 1,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞 consultant 是人,且在關係子句中作介系詞 with 的受詞,要用受格 whom。who 是主格,whose 表示所有,which 用於事物,都不正確。"
+      },
+      {
+        "sentence": "Please double-check the figures ___________ the accountant sent this morning before the meeting begins.",
+        "options": [
+          "what",
+          "who",
+          "that",
+          "whose"
+        ],
+        "answer_index": 2,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞 figures 是事物,在關係子句中作 sent 的受詞,可用關係代名詞 that。what 本身包含先行詞,不能接在名詞後面;who 用於人;whose 表示所有,都不合。"
+      },
+      {
+        "sentence": "Sales in the second quarter were not as strong ___________ those recorded in the first quarter.",
+        "options": [
+          "than",
+          "as",
+          "that",
+          "like"
+        ],
+        "answer_index": 1,
+        "category": "comparison",
+        "explanation_zh": "not as + 形容詞 + as 是原級比較的否定形式,第二個空格要填 as。than 用於比較級,that 與 like 都不能與前面的 as strong 組成比較結構。"
+      },
+      {
+        "sentence": "Shipping by sea is considerably ___________ than shipping by air, although it takes much longer to arrive.",
+        "options": [
+          "cheaper",
+          "cheap",
+          "cheapest",
+          "more cheap"
+        ],
+        "answer_index": 0,
+        "category": "comparison",
+        "explanation_zh": "後面有 than,表示兩者比較,需用比較級;cheap 是單音節形容詞,比較級為 cheaper。cheap 是原級,cheapest 是最高級,more cheap 的構詞方式不正確。"
+      },
+      {
+        "sentence": "The central bank is expected to ___________ interest rates by half a percentage point at next week's meeting.",
+        "options": [
+          "arise",
+          "rise",
+          "arouse",
+          "raise"
+        ],
+        "answer_index": 3,
+        "category": "word_choice",
+        "explanation_zh": "空格後有受詞 interest rates,需要及物動詞,raise 表示「調升」。rise 與 arise 是不及物動詞,不能接受詞;arouse 意為喚起(情緒、興趣),語意不合。"
+      },
+      {
+        "sentence": "The two-day seminar will ___________ topics ranging from tax planning to retirement savings.",
+        "options": [
+          "hold",
+          "carry",
+          "cover",
+          "spread"
+        ],
+        "answer_index": 2,
+        "category": "word_choice",
+        "explanation_zh": "cover 在此表示「涵蓋(主題、範圍)」,cover topics 是慣用搭配。hold 常指舉辦活動、carry 指攜帶或承載、spread 指散播,都不能直接接 topics 表示涵蓋內容。"
+      }
+    ]
+  },
+  {
+    "date": "2026-11-08",
+    "questions": [
+      {
+        "sentence": "Several employees expressed ___________ about the proposed change to the shift schedule at the Austin plant.",
+        "options": [
+          "concerned",
+          "concern",
+          "concerning",
+          "concernedly"
+        ],
+        "answer_index": 1,
+        "category": "noun_form",
+        "explanation_zh": "express 後面要接名詞作受詞,concern(擔憂)可作不可數名詞,express concern about 是常見用法。concerned 是形容詞、concerning 是介系詞或分詞、concernedly 是副詞,都不能當受詞。"
+      },
+      {
+        "sentence": "Mr. Dunn's ___________ at the industry conference was praised by the organizers and several sponsors.",
+        "options": [
+          "participate",
+          "participant",
+          "participatory",
+          "participation"
+        ],
+        "answer_index": 3,
+        "category": "noun_form",
+        "explanation_zh": "所有格 Mr. Dunn's 後面要接名詞,且語意為「參與」,應用 participation。participant 指參與者,與 Mr. Dunn's 重複指人且語意不通;participate 是動詞,participatory 是形容詞。"
+      },
+      {
+        "sentence": "The warehouse manager was ___________ about the new safety procedures and asked for additional training.",
+        "options": [
+          "uncertain",
+          "uncertainly",
+          "uncertainty",
+          "uncertainties"
+        ],
+        "answer_index": 0,
+        "category": "adjective_adverb",
+        "explanation_zh": "was 是 be 動詞,後面要接形容詞作補語,be uncertain about 表示「對...不確定」。uncertainly 是副詞,uncertainty 與 uncertainties 是名詞,都不能當主詞補語。"
+      },
+      {
+        "sentence": "The factory has been operating ___________ since the new cooling system was installed last month.",
+        "options": [
+          "efficient",
+          "efficiency",
+          "efficiently",
+          "efficiencies"
+        ],
+        "answer_index": 2,
+        "category": "adjective_adverb",
+        "explanation_zh": "空格修飾動詞 operating,要用副詞 efficiently(有效率地)。efficient 是形容詞,efficiency 與 efficiencies 是名詞,都不能修飾動詞。"
+      },
+      {
+        "sentence": "Once ___________, the vaccine vial must be kept refrigerated and discarded after seven days.",
+        "options": [
+          "opened",
+          "opening",
+          "opens",
+          "to open"
+        ],
+        "answer_index": 0,
+        "category": "verb_form",
+        "explanation_zh": "Once 後面省略了與主詞相同的 the vial is,vial 是被開封的對象,用過去分詞表被動,故為 Once opened。opening 表主動,opens 缺少主詞,to open 在此語法不通。"
+      },
+      {
+        "sentence": "The staff would have finished the audit earlier if the records ___________ properly organized.",
+        "options": [
+          "were",
+          "have been",
+          "had been",
+          "would be"
+        ],
+        "answer_index": 2,
+        "category": "verb_form",
+        "explanation_zh": "would have finished 是與過去事實相反的假設語氣,if 子句要用過去完成式 had been。were 與 have been、would be 的時態都不符合這個句型。"
+      },
+      {
+        "sentence": "Both the defense attorney and the prosecutor ___________ present at yesterday's pretrial hearing in the district court.",
+        "options": [
+          "was",
+          "is",
+          "has been",
+          "were"
+        ],
+        "answer_index": 3,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "Both A and B 作主詞是複數,且 yesterday 表示過去時間,所以用過去式複數 were。was 是單數,is 與 has been 是現在或現在完成式,都與 yesterday 不合。"
+      },
+      {
+        "sentence": "Fifty percent of the shipment ___________ damaged during transit, according to the insurance report.",
+        "options": [
+          "were",
+          "was",
+          "are",
+          "have been"
+        ],
+        "answer_index": 1,
+        "category": "subject_verb_agreement",
+        "explanation_zh": "百分比後面接 of 時,動詞要依 of 後面的名詞決定;shipment 是單數名詞,所以用 was。were、are、have been 都是複數形式,而且 are 的時態也不合語意。"
+      },
+      {
+        "sentence": "Customers who register online can track ___________ orders at any time using the mobile app.",
+        "options": [
+          "his",
+          "them",
+          "their",
+          "theirs"
+        ],
+        "answer_index": 2,
+        "category": "pronoun",
+        "explanation_zh": "先行詞 Customers 是複數,空格後面接名詞 orders,需要所有格形容詞 their。his 是單數男性,them 是受格,theirs 是所有格代名詞,後面不能再接名詞。"
+      },
+      {
+        "sentence": "Although the new manager is highly skilled, she prefers to handle difficult clients ___________ rather than delegate.",
+        "options": [
+          "herself",
+          "her",
+          "hers",
+          "she"
+        ],
+        "answer_index": 0,
+        "category": "pronoun",
+        "explanation_zh": "動作的執行者與強調對象都是 she,用反身代名詞 herself 表示「親自」。her 是受格或所有格,hers 是所有格代名詞,she 是主格,放在這裡都不合文法。"
+      },
+      {
+        "sentence": "The new hires were divided ___________ three groups for the afternoon training session.",
+        "options": [
+          "to",
+          "into",
+          "from",
+          "with"
+        ],
+        "answer_index": 1,
+        "category": "preposition",
+        "explanation_zh": "be divided into + 數量 表示「被分成幾組」,是固定搭配。to、from、with 都不與 divided 搭配來表示分組的結果。"
+      },
+      {
+        "sentence": "The company has been in business ___________ more than forty years and now employs about eight hundred people.",
+        "options": [
+          "since",
+          "during",
+          "from",
+          "for"
+        ],
+        "answer_index": 3,
+        "category": "preposition",
+        "explanation_zh": "for + 一段期間 表示持續多久,與現在完成式 has been 搭配,所以用 for。since 後面要接起點時間,during 用於特定事件期間,from 需與 to 連用,都不合。"
+      },
+      {
+        "sentence": "___________ the manager was out of the office, her assistant handled all incoming client calls.",
+        "options": [
+          "Despite",
+          "Whether",
+          "While",
+          "Therefore"
+        ],
+        "answer_index": 2,
+        "category": "conjunction_connector",
+        "explanation_zh": "While 作連接詞,引導表示「在...期間」的時間子句,後面接完整子句。Despite 是介系詞,後面不能接子句;Whether 引導名詞子句;Therefore 是連接副詞,不能連接子句。"
+      },
+      {
+        "sentence": "Neither the film's lead actor ___________ its director attended the press screening held in Cannes last night.",
+        "options": [
+          "or",
+          "nor",
+          "but",
+          "and"
+        ],
+        "answer_index": 1,
+        "category": "conjunction_connector",
+        "explanation_zh": "Neither ... nor ... 是固定的相關連接詞,表示「既不……也不……」。or、but、and 都不能與 neither 搭配。"
+      },
+      {
+        "sentence": "The conference room ___________ the board usually meets is being renovated throughout this month.",
+        "options": [
+          "who",
+          "whose",
+          "what",
+          "where"
+        ],
+        "answer_index": 3,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞 conference room 是地點,後面的子句 the board usually meets 已經完整,需用關係副詞 where。who 用於人,whose 表示所有,what 不能接在先行詞後面。"
+      },
+      {
+        "sentence": "Everything ___________ the technician recommended has been included in the revised maintenance plan.",
+        "options": [
+          "that",
+          "which",
+          "what",
+          "who"
+        ],
+        "answer_index": 0,
+        "category": "relative_clause",
+        "explanation_zh": "先行詞是不定代名詞 Everything,關係代名詞要用 that。which 不用於 everything 之後,what 不能接在先行詞後面,who 用於人,都不正確。"
+      },
+      {
+        "sentence": "Since the clinic adopted online booking, the average wait for an appointment has become much ___________ than it was last year.",
+        "options": [
+          "short",
+          "shortest",
+          "as short",
+          "shorter"
+        ],
+        "answer_index": 3,
+        "category": "comparison",
+        "explanation_zh": "後面有 than,表示兩者比較,要用形容詞比較級 shorter,much 可用來加強比較級。short 是原級,shortest 是最高級,as short 需搭配 as 而非 than,皆不合。"
+      },
+      {
+        "sentence": "Of the four plants inspected, the Busan facility came the ___________ to meeting the new environmental standards.",
+        "options": [
+          "closest",
+          "closer",
+          "closely",
+          "more close"
+        ],
+        "answer_index": 0,
+        "category": "comparison",
+        "explanation_zh": "Of the four 表示在四者之中比較,且前面有 the,需用最高級 closest。closer 是比較級,用於兩者之間;closely 是副詞;more close 的構詞不正確。"
+      },
+      {
+        "sentence": "The new vacation policy will ___________ effect on January 1, so please update your personal records.",
+        "options": [
+          "make",
+          "give",
+          "take",
+          "bring"
+        ],
+        "answer_index": 2,
+        "category": "word_choice",
+        "explanation_zh": "take effect 是固定搭配,意思是「生效」。make、give、bring 都不能與 effect 組成「生效」的意思。"
+      },
+      {
+        "sentence": "The retailer decided to ___________ the product line after sales fell short of expectations for three consecutive quarters.",
+        "options": [
+          "dismiss",
+          "discontinue",
+          "dissolve",
+          "dispose"
+        ],
+        "answer_index": 1,
+        "category": "word_choice",
+        "explanation_zh": "discontinue 的意思是「停止生產或供應」,discontinue a product line 是常見用法。dismiss 指解僱或駁回,dissolve 指解散或溶解,dispose 需接 of 才表示處理掉,都不符合語意。"
+      }
+    ]
+  }
+]
