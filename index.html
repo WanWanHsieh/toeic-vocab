@@ -677,6 +677,41 @@
   .gd-wrong{ max-width:640px; margin:0 auto 10px; padding:14px 16px; border:1px solid var(--border); border-left:4px solid var(--danger); border-radius:14px; background:var(--surface); }
   .gd-wrong-no{ font-size:12.5px; font-weight:700; color:var(--danger); }
   .gd-next{ background:var(--accent); color:var(--accent-contrast); border-color:var(--accent); }
+
+  /* 今日 */
+  .tabs[data-cat-group="today"]{ display:none !important; }
+  #categoryTabs{ grid-template-columns:repeat(5,1fr) !important; }
+  .td{ max-width:640px; margin:0 auto; }
+  .td-streak{ display:flex; align-items:center; gap:16px; padding:20px 22px; border-radius:22px; color:var(--on-hero); background:linear-gradient(150deg,var(--hero-a),var(--hero-b)); box-shadow:0 18px 36px -24px rgba(0,0,0,.45); }
+  .td-fire{ font-size:44px; line-height:1; }
+  .td-streak-num{ font-size:34px; font-weight:800; line-height:1.1; color:var(--on-hero); }
+  .td-streak-num span{ font-size:16px; font-weight:700; }
+  .td-streak-sub{ margin-top:4px; font-size:13px; color:var(--on-hero-soft); line-height:1.5; }
+  .td-banner{ margin:14px 0 0; padding:12px 16px; border-radius:14px; background:var(--success-soft); color:var(--success); font-weight:800; text-align:center; }
+  .td-list-title{ margin:20px 4px 8px; font-size:13px; font-weight:800; letter-spacing:.06em; color:var(--text-muted); }
+  .td-tasks{ display:flex; flex-direction:column; gap:10px; }
+  .td-task{ display:flex; align-items:center; gap:12px; padding:14px 16px; border:1px solid var(--border); border-radius:18px; background:var(--surface); box-shadow:var(--shadow); }
+  .td-task.done{ border-color:color-mix(in srgb, var(--success) 45%, transparent); background:color-mix(in srgb, var(--success-soft) 55%, var(--surface)); }
+  .td-ico{ width:42px; height:42px; border-radius:14px; display:grid; place-items:center; font-size:22px; background:var(--surface-2); flex:none; }
+  .td-info{ flex:1; min-width:0; }
+  .td-title{ font-size:15.5px; font-weight:800; }
+  .td-sub{ margin-top:2px; font-size:12.5px; color:var(--text-muted); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .td-side{ display:flex; flex-direction:column; align-items:flex-end; gap:6px; flex:none; }
+  .td-prog{ font-size:12px; font-weight:800; color:var(--text-muted); }
+  .td-btn{ border:0; border-radius:12px; padding:9px 18px; font-size:14px; font-weight:800; cursor:pointer; font-family:inherit; background:var(--accent); color:var(--accent-contrast); }
+  .td-btn.ghost{ background:var(--surface-2); color:var(--text); }
+  .td-actions{ display:flex; gap:10px; justify-content:center; margin-top:18px; flex-wrap:wrap; }
+  .td-cal{ margin-top:22px; padding:16px; border:1px solid var(--border); border-radius:18px; background:var(--surface); }
+  .td-cal-title{ font-size:13px; font-weight:800; color:var(--text-muted); margin-bottom:8px; }
+  .td-cal-grid{ display:grid; grid-template-columns:repeat(7,1fr); gap:6px; text-align:center; }
+  .td-wd{ font-size:11px; font-weight:700; color:var(--text-muted); }
+  .td-day{ aspect-ratio:1; display:grid; place-items:center; border-radius:50%; font-size:12.5px; font-weight:700; color:var(--text-muted); }
+  .td-day.on{ background:var(--accent); color:var(--accent-contrast); }
+  .td-day.today{ outline:2px solid var(--accent); outline-offset:1px; }
+  .td-day.future{ opacity:.4; }
+  .ts-head{ display:flex; align-items:center; gap:10px; margin-bottom:12px; }
+  .ts-count{ margin-left:auto; font-weight:800; color:var(--text-muted); font-size:13px; }
+  @media (max-width:520px){ #categoryTabs .subtab{ font-size:13px; padding:9px 0; } .td-streak{ padding:16px 18px; } .td-sub{ white-space:normal; } }
 </style>
 <script>
 /* Apply a saved theme choice before first paint so a light/dark override doesn't flash. */
@@ -706,14 +741,18 @@ try{ var t = localStorage.getItem("toeic-theme"); if(t === "light" || t === "dar
   <div class="toast" id="toast" role="status"></div>
 
   <div class="subtabs" id="categoryTabs" role="tablist" style="margin-bottom:10px;">
-    <button class="subtab" data-cat="vocab" role="tab" aria-selected="true">單字學習</button>
-    <button class="subtab" data-cat="toeic" role="tab" aria-selected="false">TOEIC 模擬</button>
-    <button class="subtab" data-cat="reading" role="tab" aria-selected="false">閱讀練習</button>
-    <button class="subtab" data-cat="teach" role="tab" aria-selected="false">文法教學</button>
+    <button class="subtab" data-cat="today" role="tab" aria-selected="true">今日</button>
+    <button class="subtab" data-cat="vocab" role="tab" aria-selected="false">單字</button>
+    <button class="subtab" data-cat="toeic" role="tab" aria-selected="false">TOEIC</button>
+    <button class="subtab" data-cat="reading" role="tab" aria-selected="false">閱讀</button>
+    <button class="subtab" data-cat="teach" role="tab" aria-selected="false">文法</button>
   </div>
 
-  <div class="tabs" role="tablist" data-cat-group="vocab">
-    <button class="tab" data-mode="card" role="tab" aria-selected="true">字卡模式</button>
+  <div class="tabs" role="tablist" data-cat-group="today" style="display:none;">
+    <button class="tab" data-mode="today" role="tab" aria-selected="true">🏠 今日</button>
+  </div>
+  <div class="tabs" role="tablist" data-cat-group="vocab" style="display:none;">
+    <button class="tab" data-mode="card" role="tab" aria-selected="false">字卡模式</button>
     <button class="tab" data-mode="list" role="tab" aria-selected="false">單字列表</button>
     <button class="tab" data-mode="theme" role="tab" aria-selected="false">主題單字</button>
     <button class="tab" data-mode="phrase" role="tab" aria-selected="false">📎 常考片語</button>
@@ -942,12 +981,15 @@ const FALLBACK_P4 = [
 let words = [];
 let order = [];
 let cursor = 0;
-let mode = "card";
+let mode = "today";
 let flipped = false;
 let showZh = false; // flashcard page: Chinese is hidden until the 👁 button (or the blurred text itself) is tapped
 let progress = {};
 let gdAnswers = loadJSON("toeic-gdaily") || {}; // 每日文法: { "YYYY-MM-DD": [chosen option index | null, x20] }
-let progressTs = {}; // id -> ms timestamp of the last change to that word's status (also kept for cleared marks)
+let progressTs = {};
+let srs = {};            // 間隔複習: { id: { s: stage 0-5, d: next due 'YYYY-MM-DD', t: ms of the last review } }
+let activeDays = loadJSON("toeic-active-days") || {};   // days with some practice: { 'YYYY-MM-DD': true }
+let progressLoaded = false; // id -> ms timestamp of the last change to that word's status (also kept for cleared marks)
 let quizWord = null;
 let quizLocked = false;
 
@@ -1168,6 +1210,7 @@ async function initAllProgress(){
   await ensureCurrentVersion();
   progress = loadVersionedProgress("toeic-vocab-progress", versionOf("vocab"));
   progressTs = loadVersionedProgress("toeic-vocab-progress-ts", versionOf("vocab"));
+  srs = loadVersionedProgress("toeic-vocab-srs", versionOf("vocab"));
   readingAnswers = loadVersionedProgress("toeic-reading-answers", versionOf("reading"));
   readingChecked = loadVersionedProgress("toeic-reading-checked", versionOf("reading"));
   p5Progress = loadVersionedProgress("toeic-p5-progress", versionOf("p5"));
@@ -1180,6 +1223,7 @@ async function initAllProgress(){
   dailyChecked = loadJSON("toeic-daily-checked");
   storyAnswers = loadVersionedProgress("toeic-story-answers", versionOf("story"));
   storyChecked = loadVersionedProgress("toeic-story-checked", versionOf("story"));
+  progressLoaded = true;
   render();
 }
 
@@ -1233,6 +1277,7 @@ async function switchToVersion(newVersion){
 
   progress = loadVersionedProgress("toeic-vocab-progress", newVersion);
   progressTs = loadVersionedProgress("toeic-vocab-progress-ts", newVersion);
+  srs = loadVersionedProgress("toeic-vocab-srs", newVersion);
   readingAnswers = loadVersionedProgress("toeic-reading-answers", newVersion);
   readingChecked = loadVersionedProgress("toeic-reading-checked", newVersion);
   p5Progress = loadVersionedProgress("toeic-p5-progress", newVersion);
@@ -1278,14 +1323,14 @@ function pushCloud(key, payload){
 function vocabCloudPayload(){
   const prog = { ...progress };
   for(const id of Object.keys(progressTs)) if(!(id in prog)) prog[id] = null;
-  return { version: versionOf("vocab"), progress: prog, ts: { ...progressTs } };
+  return { version: versionOf("vocab"), progress: prog, ts: { ...progressTs }, srs: { ...srs } };
 }
 function pushCloudVocab(){ pushCloud("vocab", vocabCloudPayload()); }           // full copy (after a merge / reset)
 function pushCloudVocabEntries(ids){                                              // only the words that changed
   if(cloudSyncing || !currentUser || !window.cloudSync || !ids.length) return;
-  const prog = {}, ts = {};
-  ids.forEach(id=>{ prog[id] = progress[id] ?? null; ts[id] = progressTs[id]; });
-  window.cloudSync.mergeVocab(currentUser.uid, { version: versionOf("vocab"), progress: prog, ts }).catch(()=>{});
+  const prog = {}, ts = {}, sr = {};
+  ids.forEach(id=>{ prog[id] = progress[id] ?? null; ts[id] = progressTs[id]; if(srs[id]) sr[id] = srs[id]; });
+  window.cloudSync.mergeVocab(currentUser.uid, { version: versionOf("vocab"), progress: prog, ts, srs: sr }).catch(()=>{});
 }
 /* Newest change per word wins. Copies without timestamps (made before this existed) tie at 0: this device's value
    wins, otherwise the cloud's — the same as the old union merge. */
@@ -1296,6 +1341,13 @@ function mergeVocabProgress(cloudEntry){
     else cp = cloudEntry; // legacy flat map
   }
   const out = {}, outTs = {}, localWins = [];
+  const outSrs = {};
+  const cSrs = (cloudEntry && "version" in cloudEntry && cloudEntry.version === versionOf("vocab") && cloudEntry.srs) || {};
+  for(const id of new Set([...Object.keys(cSrs), ...Object.keys(srs)])){
+    const a = cSrs[id], b = srs[id];
+    outSrs[id] = (a && (!b || a.t > b.t)) ? a : b;
+    if(b && (!a || b.t > a.t)) localWins.push(id);
+  }
   const ids = new Set([...Object.keys(cp), ...Object.keys(ct), ...Object.keys(progress), ...Object.keys(progressTs)]);
   for(const id of ids){
     const cs = cp[id] ?? null, cts = ct[id] || 0, ls = progress[id] ?? null, lts = progressTs[id] || 0;
@@ -1306,7 +1358,7 @@ function mergeVocabProgress(cloudEntry){
     if(status) out[id] = status;
     if(ts) outTs[id] = ts;
   }
-  return { progress: out, ts: outTs, localWins };
+  return { progress: out, ts: outTs, srs: outSrs, localWins };
 }
 /* One safety copy per day (last 3 days) of both sides before a merge replaces local progress. */
 function backupVocabProgress(cloudEntry){
@@ -1331,7 +1383,8 @@ async function refreshVocabFromCloud(){
     const cloudEntry = await window.cloudSync.loadVocab(currentUser.uid);
     const before = JSON.stringify(progress);
     const m = mergeVocabProgress(cloudEntry);
-    progress = m.progress; progressTs = m.ts; saveProgress();
+    progress = m.progress; progressTs = m.ts; srs = m.srs; saveProgress(); saveSrs();
+    resetTodayQueueIfUntouched();
     pushCloudVocabEntries(m.localWins);
     if(JSON.stringify(progress) !== before){
       renderStats();
@@ -1347,7 +1400,7 @@ function pushCloudPart(key, progressObj){ pushCloud(key, { version: versionOf(ke
 function pushCloudSaved(){ pushCloud("savedWords", savedWords); }
 function pushCloudCardPos(entry){ pushCloud("cardPos", entry); }
 function pushCloudQuizPos(entry){ pushCloud("quizPos", entry); }
-function pushCloudDailyReading(){ pushCloud("dailyReading", { answers: dailyAnswers, checked: dailyChecked, grammar: gdAnswers }); }
+function pushCloudDailyReading(){ pushCloud("dailyReading", { answers: dailyAnswers, checked: dailyChecked, grammar: gdAnswers, active: activeDays }); }
 function saveDailyProgress(){
   saveJSON("toeic-daily-answers", dailyAnswers);
   saveJSON("toeic-daily-checked", dailyChecked);
@@ -1433,8 +1486,9 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
 
     backupVocabProgress(cloud.vocab);
     const mergedVocab = mergeVocabProgress(cloud.vocab);
-    progress = mergedVocab.progress; progressTs = mergedVocab.ts;
-    saveProgress();
+    progress = mergedVocab.progress; progressTs = mergedVocab.ts; srs = mergedVocab.srs;
+    saveProgress(); saveSrs();
+    resetTodayQueueIfUntouched();
 
     const readingVersionOk = cloud.reading && (!("version" in cloud.reading) || cloud.reading.version === versionOf("reading"));
     if(readingVersionOk){
@@ -1462,6 +1516,10 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
     }
     saveJSON("toeic-daily-answers", dailyAnswers);
     saveJSON("toeic-daily-checked", dailyChecked);
+    if(cloud.dailyReading && cloud.dailyReading.active){
+      activeDays = { ...cloud.dailyReading.active, ...activeDays };
+      saveJSON("toeic-active-days", activeDays);
+    }
     if(cloud.dailyReading && cloud.dailyReading.grammar){
       gdAnswers = mergeGdAnswers(cloud.dailyReading.grammar, gdAnswers);
       saveJSON("toeic-gdaily", gdAnswers);
@@ -1806,7 +1864,7 @@ const MODE_TO_CATEGORY = {
   card:"vocab", list:"vocab", theme:"vocab", phrase:"vocab", spelling:"vocab", saved:"vocab",
   quiz:"toeic", toeic_hub:"toeic", listening:"toeic", grammar:"toeic", reading:"toeic",
   daily:"reading", story:"reading",
-  lesson:"teach", gdaily:"teach"
+  lesson:"teach", gdaily:"teach", today:"today", tsession:"today"
 };
 function showCategory(cat){
   document.querySelectorAll(".tabs[data-cat-group]").forEach(el=>{
@@ -1909,6 +1967,7 @@ function recordSeenToday(id){
     seen.ids.push(id);
     if(!seen.celebrated && seen.ids.length >= getDailyGoal()){ seen.celebrated = true; showToast("今日目標達成 🎉"); }
     saveJSON("toeic-daily-seen", seen);
+    if(seen.ids.length >= 5) markActive();
   }
   updateGoalRing();
 }
@@ -2212,6 +2271,30 @@ function setupSpellingPractice(w){
   update();
 }
 
+/* Wires up everything inside a word page: audio buttons, ❤️, the 👁 meaning toggle, tap-to-reveal and the spelling box. */
+function bindWordPage(container, w){
+  container.querySelectorAll(".wpg-card [data-say]").forEach(btn=>{
+    btn.addEventListener("click", ()=> speak(btn.dataset.say, btn.dataset.rate ? Number(btn.dataset.rate) : undefined));
+  });
+  container.querySelectorAll(".card-save-btn").forEach(btn=>{
+    btn.addEventListener("click", ()=>{ toggleSavedWord(w); renderStage(); });
+  });
+  setupSpellingPractice(w);
+  const card = container.querySelector(".wpg-card");
+  const eye = document.getElementById("eyeBtn");
+  eye.addEventListener("click", ()=>{
+    showZh = !showZh;
+    card.classList.toggle("zh-off", !showZh);
+    card.querySelectorAll(".zhh.shown").forEach(el=>el.classList.remove("shown"));
+    eye.textContent = showZh ? "🙈" : "👁";
+    eye.setAttribute("aria-pressed", String(showZh));
+  });
+  card.addEventListener("click", (e)=>{            // tap one blurred line to reveal just that line
+    const el = e.target.closest(".zhh");
+    if(el && card.classList.contains("zh-off")) el.classList.add("shown");
+  });
+}
+
 /* ---------- Render: card mode ---------- */
 function renderCardMode(container){
   const finalList = cardFinalIds();
@@ -2241,26 +2324,7 @@ function renderCardMode(container){
     </div>
   `;
 
-  container.querySelectorAll(".wpg-card [data-say]").forEach(btn=>{
-    btn.addEventListener("click", ()=> speak(btn.dataset.say, btn.dataset.rate ? Number(btn.dataset.rate) : undefined));
-  });
-  container.querySelectorAll(".card-save-btn").forEach(btn=>{
-    btn.addEventListener("click", ()=>{ toggleSavedWord(w); renderStage(); });
-  });
-  setupSpellingPractice(w);
-  const card = container.querySelector(".wpg-card");
-  const eye = document.getElementById("eyeBtn");
-  eye.addEventListener("click", ()=>{
-    showZh = !showZh;
-    card.classList.toggle("zh-off", !showZh);
-    card.querySelectorAll(".zhh.shown").forEach(el=>el.classList.remove("shown"));
-    eye.textContent = showZh ? "🙈" : "👁";
-    eye.setAttribute("aria-pressed", String(showZh));
-  });
-  card.addEventListener("click", (e)=>{            // tap one blurred line to reveal just that line
-    const el = e.target.closest(".zhh");
-    if(el && card.classList.contains("zh-off")) el.classList.add("shown");
-  });
+  bindWordPage(container, w);
   const go = (delta)=>{
     /* Resolve the target BY ID: marking a word can drop it from the list (e.g. 只看待複習), and stepping
        by index in the shrunken list would skip a card. */
@@ -3233,6 +3297,7 @@ function renderDailyReadingMode(container){
     const curAnswers = dailyAnswers[set.date] || {};
     dailyChecked[set.date] = set.questions.every((q,qi)=>curAnswers[qi]===q.answer_index) ? "correct" : "wrong";
     saveDailyProgress();
+    markActive();
     renderStage();
   });
   document.getElementById("dailyRetryBtn")?.addEventListener("click", ()=>{
@@ -3398,6 +3463,7 @@ function renderStoryMode(container){
 
 /* ---------- Master render ---------- */
 function renderStage(){
+  updateControlBarVisibility();   // the search/filter bar belongs to the vocab views only (not 今日)
   const container = document.getElementById("stage");
   if(vocabLoadFailed && (mode === "card" || mode === "list" || mode === "quiz")){
     container.innerHTML = `
@@ -3417,6 +3483,8 @@ function renderStage(){
   else if(mode === "phrase") renderPhraseMode(container);
   else if(mode === "lesson") renderLessonMode(container);
   else if(mode === "gdaily") renderGdailyMode(container);
+  else if(mode === "today") renderTodayMode(container);
+  else if(mode === "tsession") renderTodaySession(container);
   else if(mode === "saved") renderSavedMode(container);
   else if(mode === "spelling") renderSpellingMode(container);
   else if(mode === "daily") renderDailyReadingMode(container);
@@ -4278,7 +4346,7 @@ async function loadGrammarDaily(){
   const all = await loadJSONData("grammar_daily.json", []);
   const today = todayLocalStr();
   grammarDaily = all.filter(d => d.date <= today).sort((x, y)=> x.date < y.date ? -1 : 1);
-  if(mode === "gdaily") renderStage();
+  if(mode === "gdaily" || mode === "today") renderStage();
 }
 function gdOpen(date){
   const day = grammarDaily.find(d=>d.date === date);
@@ -4371,6 +4439,7 @@ function renderGdailyQuiz(container, day){
       const a = gdAnswers[day.date] || (gdAnswers[day.date] = Array(total).fill(null));
       a[gdIdx] = Number(b.dataset.oi);
       gdSave();
+      if(day.date === todayLocalStr() && gdScore(day).answered >= 5) markActive();
       renderStage();
     }));
   }
@@ -4412,6 +4481,200 @@ function renderGdailyResult(container, day){
   });
 }
 
+/* ---------- 今日：任務、連續天數、間隔複習 ----------
+   今日單字 = up to 10 words due for review (words marked 還不熟, plus words rated before whose due date has come) and 5 new
+   words. Rating a word ("還不熟" / "記得了") schedules its next review: forgot -> tomorrow, remembered -> 3, 7, 14, 30 days. */
+const SRS_INTERVALS = [1, 3, 7, 14, 30];
+function dateStr(d){ return d.getFullYear() + "-" + String(d.getMonth()+1).padStart(2,"0") + "-" + String(d.getDate()).padStart(2,"0"); }
+function addDays(str, n){ const [y, m, d] = str.split("-").map(Number); return dateStr(new Date(y, m-1, d+n)); }
+function startOfTodayMs(){ const n = new Date(); return new Date(n.getFullYear(), n.getMonth(), n.getDate()).getTime(); }
+function saveSrs(){ saveVersionedProgress("toeic-vocab-srs", versionOf("vocab"), srs); }
+function ratedToday(id){ return !!(srs[id] && srs[id].t >= startOfTodayMs()); }
+function srsRate(id, remembered){
+  const cur = srs[id];
+  const stage = remembered ? Math.min((cur ? cur.s : 0) + 1, SRS_INTERVALS.length) : 0;
+  const days = remembered ? SRS_INTERVALS[Math.min(stage, SRS_INTERVALS.length - 1)] : 1;
+  srs[id] = { s: stage, d: addDays(todayLocalStr(), days), t: Date.now() };
+  saveSrs();
+}
+function markActive(){
+  const d = todayLocalStr();
+  if(activeDays[d]) return;
+  activeDays[d] = true;
+  saveJSON("toeic-active-days", activeDays);
+  pushCloudDailyReading();
+}
+function streakInfo(){
+  let streak = 0, d = todayLocalStr();
+  if(!activeDays[d]) d = addDays(d, -1);        // today not done yet: the streak is still alive until midnight
+  while(activeDays[d]){ streak++; d = addDays(d, -1); }
+  let best = 0, run = 0, prev = null;
+  for(const x of Object.keys(activeDays).sort()){ run = (prev && addDays(prev, 1) === x) ? run + 1 : 1; best = Math.max(best, run); prev = x; }
+  return { streak, best };
+}
+function getTodayQueue(){
+  if(!progressLoaded || words.length === 0) return null;
+  const today = todayLocalStr();
+  const saved = loadJSON("toeic-today-queue");
+  if(saved && saved.date === today && Array.isArray(saved.ids)) return saved;
+  const due = [];
+  for(const w of words){
+    const st = progress[w.id], e = srs[w.id];
+    if((st === "unknown" || (st === "known" && e)) && (!e || e.d <= today)) due.push(w.id);
+  }
+  due.sort((a, b)=> (((srs[a] && srs[a].d) || "") < ((srs[b] && srs[b].d) || "")) ? -1 : 1);
+  const review = due.slice(0, 10);
+  const fresh = [];
+  const pick = (core)=>{ for(const w of words){ if(fresh.length >= 15 - review.length) return; if(!progress[w.id] && !srs[w.id] && !fresh.includes(w.id) && (!core || w.importance === "core")) fresh.push(w.id); } };
+  pick(true); pick(false);
+  const q = { date: today, ids: [...review, ...fresh], review: review.length };
+  saveJSON("toeic-today-queue", q);
+  return q;
+}
+function resetTodayQueueIfUntouched(){
+  const q = loadJSON("toeic-today-queue");
+  if(q && Array.isArray(q.ids) && !q.ids.some(ratedToday)) localStorage.removeItem("toeic-today-queue");
+}
+function extendTodayQueue(n){
+  const q = getTodayQueue(); if(!q) return;
+  let added = 0;
+  for(const w of words){
+    if(added >= n) break;
+    if(!progress[w.id] && !srs[w.id] && !q.ids.includes(w.id) && w.importance === "core"){ q.ids.push(w.id); added++; }
+  }
+  saveJSON("toeic-today-queue", q);
+}
+function calendarHtml(){
+  const now = new Date(), y = now.getFullYear(), m = now.getMonth();
+  const first = new Date(y, m, 1).getDay(), dim = new Date(y, m + 1, 0).getDate();
+  const today = todayLocalStr();
+  let cells = ["日","一","二","三","四","五","六"].map(x=>`<span class="td-wd">${x}</span>`).join("");
+  for(let i = 0; i < first; i++) cells += `<span></span>`;
+  for(let d = 1; d <= dim; d++){
+    const ds = dateStr(new Date(y, m, d));
+    cells += `<span class="td-day${activeDays[ds] ? " on" : ""}${ds === today ? " today" : ""}${ds > today ? " future" : ""}">${d}</span>`;
+  }
+  return `<div class="td-cal"><div class="td-cal-title">${m + 1} 月</div><div class="td-cal-grid">${cells}</div></div>`;
+}
+function renderTodayMode(container){
+  const q = getTodayQueue();
+  if(!q){ container.innerHTML = `<div class="empty-state">正在準備今天的任務…</div>`; return; }
+  const today = todayLocalStr();
+  const { streak, best } = streakInfo();
+  const wDone = q.ids.filter(ratedToday).length, wTotal = q.ids.length;
+  const gday = grammarDaily.find(d=>d.date === today), gsc = gday ? gdScore(gday) : null;
+  const rset = findDailySet(today), rDone = !!dailyChecked[today];
+  const tasks = [
+    { key: "words", icon: "🃏", title: "今日單字",
+      sub: wTotal ? `複習 ${q.review} 個 ・ 新字 ${wTotal - q.review} 個` : "今天沒有需要複習的字",
+      prog: wTotal ? `${wDone} / ${wTotal}` : "", done: wTotal > 0 && wDone >= wTotal,
+      btn: wTotal === 0 ? "" : wDone === 0 ? "開始" : wDone < wTotal ? "繼續" : "再看一次" },
+    { key: "grammar", icon: "✏️", title: "每日文法 20 題",
+      sub: gday ? "名詞、動詞、介系詞…各類型 Part 5 文法" : "今天的題目還在準備中",
+      prog: gsc ? `${gsc.answered} / ${gsc.total}` : "", done: !!gsc && gsc.answered >= gsc.total,
+      btn: !gday ? "" : gsc.answered === 0 ? "開始" : gsc.answered < gsc.total ? "繼續" : "看結果" },
+    { key: "reading", icon: "📖", title: "每日一篇閱讀",
+      sub: rset ? (rset.passages[0].title || "今天的文章") : "今天的文章還沒有",
+      prog: rset ? (rDone ? "已完成" : "") : "", done: !!rset && rDone,
+      btn: !rset ? "" : rDone ? "再看一次" : "開始" }
+  ];
+  const allDone = tasks.every(t=>t.done);
+  const taskHtml = tasks.map(t=>`
+    <div class="td-task${t.done ? " done" : ""}">
+      <div class="td-ico">${t.done ? "✅" : t.icon}</div>
+      <div class="td-info"><div class="td-title">${t.title}</div><div class="td-sub">${t.sub}</div></div>
+      <div class="td-side">${t.prog ? `<span class="td-prog">${t.prog}</span>` : ""}${t.btn ? `<button class="td-btn" data-task="${t.key}">${t.btn}</button>` : ""}</div>
+    </div>`).join("");
+  container.innerHTML = `
+    <div class="td">
+      <section class="td-streak">
+        <div class="td-fire">🔥</div>
+        <div class="td-streak-main">
+          <div class="td-streak-num">${streak}<span> 天</span></div>
+          <div class="td-streak-sub">${streak ? "連續練習中" : "今天練習任何一項，就開始累計連續天數"}${best > 1 ? `　最長 ${best} 天` : ""}</div>
+        </div>
+      </section>
+      ${allDone ? `<div class="td-banner">🎉 今天的任務全部完成！</div>` : ""}
+      <div class="td-list-title">今天的任務</div>
+      <div class="td-tasks">${taskHtml}</div>
+      ${calendarHtml()}
+    </div>`;
+  container.querySelectorAll(".td-btn").forEach(b=> b.addEventListener("click", ()=>{
+    const k = b.dataset.task;
+    if(k === "words") startTodaySession();
+    else if(k === "grammar"){ document.querySelector('.subtab[data-cat="teach"]').click(); gdOpen(today); }
+    else if(k === "reading"){ document.querySelector('.subtab[data-cat="reading"]').click(); currentDailyDate = today; dailyStage = "article"; renderStage(); }
+  }));
+}
+function startTodaySession(){
+  const q = getTodayQueue();
+  if(!q || q.ids.length === 0) return;
+  mode = "tsession";
+  updateControlBarVisibility();
+  renderStage();
+  window.scrollTo(0, 0);
+}
+function leaveTodaySession(){
+  mode = "today";
+  updateControlBarVisibility();
+  renderStage();
+  window.scrollTo(0, 0);
+}
+function renderTodaySession(container){
+  const q = getTodayQueue();
+  if(!q){ container.innerHTML = `<div class="empty-state">正在準備今天的任務…</div>`; return; }
+  const ids = q.ids;
+  const nextId = ids.find(id=>!ratedToday(id));
+  const done = ids.filter(ratedToday).length;
+  if(nextId === undefined){
+    const known = ids.filter(id=>progress[id] === "known").length;
+    container.innerHTML = `
+      <div class="td">
+        <section class="td-streak td-finish">
+          <div class="td-fire">🎉</div>
+          <div class="td-streak-main"><div class="td-streak-num">今日單字完成</div>
+            <div class="td-streak-sub">${ids.length} 個字：記得 ${known} 個、還不熟 ${ids.length - known} 個。還不熟的字會明天再出現。</div></div>
+        </section>
+        <div class="td-actions">
+          <button class="td-btn" id="tsMoreBtn">再學 5 個新字</button>
+          <button class="td-btn ghost" id="tsHomeBtn">回到今日</button>
+        </div>
+      </div>`;
+    document.getElementById("tsHomeBtn").addEventListener("click", leaveTodaySession);
+    document.getElementById("tsMoreBtn").addEventListener("click", ()=>{ extendTodayQueue(5); renderStage(); window.scrollTo(0, 0); });
+    return;
+  }
+  const w = words.find(x=>x.id === nextId);
+  const st = statusOf(w.id);
+  const isNew = !progress[w.id] && !srs[w.id];
+  recordSeenToday(w.id);
+  container.innerHTML = `
+    <div class="wpg">
+      <div class="ts-head"><button class="icon-btn" id="tsExitBtn" style="padding:6px 12px;font-size:13px;">← 今日</button>
+        <span class="chip ${isNew ? "pos" : "cat"}">${isNew ? "新字" : "複習"}</span><span class="ts-count">${done + 1} / ${ids.length}</span></div>
+      <article class="wpg-card${showZh ? "" : " zh-off"}">${renderWordPage(w, st, ids.length)}</article>
+      <div class="wpg-bar">
+        <div class="progress-bar"><div class="progress-fill" style="width:${(done / ids.length * 100).toFixed(1)}%"></div></div>
+        <div class="wpg-bar-row">
+          <button class="mark-btn unknown" id="tsForgotBtn">❌ 還不熟</button>
+          <button class="mark-btn known active" id="tsKnowBtn">✅ 記得了</button>
+        </div>
+      </div>
+    </div>`;
+  bindWordPage(container, w);
+  document.getElementById("tsExitBtn").addEventListener("click", leaveTodaySession);
+  const rate = (ok)=>{
+    srsRate(w.id, ok);                         // first: setStatusDirect below pushes the new schedule together with the mark
+    setStatusDirect(w.id, ok ? "known" : "unknown");
+    markActive();
+    showZh = false;
+    renderStage();
+    window.scrollTo(0, 0);
+  };
+  document.getElementById("tsForgotBtn").addEventListener("click", ()=> rate(false));
+  document.getElementById("tsKnowBtn").addEventListener("click", ()=> rate(true));
+}
+
 async function loadGrammarLessons(){
   grammarLessons = await loadJSONData("grammar_lessons.json", []);
   if(mode === "lesson") renderStage();
@@ -4423,7 +4686,7 @@ async function loadDailyReading(){
   const all = await loadJSONData("daily_reading.json", []);
   const today = todayLocalStr();
   dailyReadingSets = all.filter(s => s.date <= today);
-  if(mode === "daily") renderStage();
+  if(mode === "daily" || mode === "today") renderStage();
 }
 async function loadStoryReading(){
   storySets = await loadJSONData("story_reading.json", []);
