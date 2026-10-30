@@ -4516,18 +4516,21 @@ function getTodayQueue(){
   if(!progressLoaded || words.length === 0) return null;
   const today = todayLocalStr();
   const saved = loadJSON("toeic-today-queue");
-  if(saved && saved.date === today && Array.isArray(saved.ids)) return saved;
+  // v2 = 必考 first. An older queue is kept only if some of its words were already studied today.
+  if(saved && saved.date === today && Array.isArray(saved.ids) && (saved.v === 2 || saved.ids.some(ratedToday))) return saved;
   const due = [];
   for(const w of words){
     const st = progress[w.id], e = srs[w.id];
     if((st === "unknown" || (st === "known" && e)) && (!e || e.d <= today)) due.push(w.id);
   }
-  due.sort((a, b)=> (((srs[a] && srs[a].d) || "") < ((srs[b] && srs[b].d) || "")) ? -1 : 1);
+  const IMP = { core: 0, common: 1, extended: 2 };
+  const impOf = (id)=> IMP[(words.find(w=>w.id === id) || {}).importance] ?? 3;
+  due.sort((a, b)=> (impOf(a) - impOf(b)) || ((((srs[a] && srs[a].d) || "") < ((srs[b] && srs[b].d) || "")) ? -1 : 1));   // 必考 first, then the longest overdue
   const review = due.slice(0, 10);
   const fresh = [];
   const pick = (core)=>{ for(const w of words){ if(fresh.length >= 15 - review.length) return; if(!progress[w.id] && !srs[w.id] && !fresh.includes(w.id) && (!core || w.importance === "core")) fresh.push(w.id); } };
   pick(true); pick(false);
-  const q = { date: today, ids: [...review, ...fresh], review: review.length };
+  const q = { date: today, v: 2, ids: [...review, ...fresh], review: review.length };
   saveJSON("toeic-today-queue", q);
   return q;
 }
@@ -4538,9 +4541,11 @@ function resetTodayQueueIfUntouched(){
 function extendTodayQueue(n){
   const q = getTodayQueue(); if(!q) return;
   let added = 0;
-  for(const w of words){
-    if(added >= n) break;
-    if(!progress[w.id] && !srs[w.id] && !q.ids.includes(w.id) && w.importance === "core"){ q.ids.push(w.id); added++; }
+  for(const core of [true, false]){          // 必考 words first; the rest only once those run out
+    for(const w of words){
+      if(added >= n) break;
+      if(!progress[w.id] && !srs[w.id] && !q.ids.includes(w.id) && (!core || w.importance === "core")){ q.ids.push(w.id); added++; }
+    }
   }
   saveJSON("toeic-today-queue", q);
 }
