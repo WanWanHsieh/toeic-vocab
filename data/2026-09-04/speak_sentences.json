@@ -1,0 +1,802 @@
+[
+  {
+    "cat": "greeting",
+    "en": "Nice to meet you.",
+    "zh": "很高興認識你。"
+  },
+  {
+    "cat": "greeting",
+    "en": "How have you been?",
+    "zh": "你最近過得好嗎？"
+  },
+  {
+    "cat": "greeting",
+    "en": "It's really nice weather today.",
+    "zh": "今天天氣真好。"
+  },
+  {
+    "cat": "greeting",
+    "en": "Thank you for coming today.",
+    "zh": "謝謝你今天過來。"
+  },
+  {
+    "cat": "greeting",
+    "en": "Let's catch up over coffee sometime.",
+    "zh": "找時間一起喝杯咖啡聊聊吧。"
+  },
+  {
+    "cat": "greeting",
+    "en": "You speak English really well.",
+    "zh": "你的英文說得真好。"
+  },
+  {
+    "cat": "greeting",
+    "en": "What are you doing this weekend?",
+    "zh": "這個週末你有什麼計畫？"
+  },
+  {
+    "cat": "greeting",
+    "en": "Sorry I'm late, the traffic was terrible.",
+    "zh": "抱歉我遲到了，路上塞得很嚴重。"
+  },
+  {
+    "cat": "greeting",
+    "en": "Congratulations on your new job, that's wonderful news!",
+    "zh": "恭喜你換新工作，這真是好消息！"
+  },
+  {
+    "cat": "greeting",
+    "en": "Thanks a lot for the ride.",
+    "zh": "謝謝你載我一程。"
+  },
+  {
+    "cat": "greeting",
+    "en": "Do you mind if I sit here?",
+    "zh": "你介意我坐這裡嗎？"
+  },
+  {
+    "cat": "greeting",
+    "en": "I love your jacket, where did you get it?",
+    "zh": "我好喜歡你的外套，你在哪裡買的？"
+  },
+  {
+    "cat": "greeting",
+    "en": "Have you been busy at work lately?",
+    "zh": "你最近工作忙嗎？"
+  },
+  {
+    "cat": "greeting",
+    "en": "I hope you have a great weekend.",
+    "zh": "祝你週末愉快。"
+  },
+  {
+    "cat": "greeting",
+    "en": "I'm sorry, I didn't mean to bother you.",
+    "zh": "抱歉，我不是故意要打擾你的。"
+  },
+  {
+    "cat": "greeting",
+    "en": "It's getting cold, so remember to wear a coat.",
+    "zh": "天氣變冷了，記得穿外套。"
+  },
+  {
+    "cat": "greeting",
+    "en": "I'm from Taiwan, and I work in marketing.",
+    "zh": "我來自台灣，從事行銷工作。"
+  },
+  {
+    "cat": "greeting",
+    "en": "It was great seeing you again, let's keep in touch.",
+    "zh": "很高興再見到你，我們保持聯絡吧。"
+  },
+  {
+    "cat": "greeting",
+    "en": "I heard it might rain this afternoon, so bring an umbrella.",
+    "zh": "聽說今天下午可能會下雨，記得帶傘。"
+  },
+  {
+    "cat": "greeting",
+    "en": "I'd love to chat more, but I have to run to a meeting.",
+    "zh": "我很想多聊一會兒，但我得趕去開會了。"
+  },
+  {
+    "cat": "restaurant",
+    "en": "A table for two, please.",
+    "zh": "麻煩給我們兩位。"
+  },
+  {
+    "cat": "restaurant",
+    "en": "Could I see the menu, please?",
+    "zh": "可以給我看一下菜單嗎？"
+  },
+  {
+    "cat": "restaurant",
+    "en": "What do you recommend?",
+    "zh": "你有什麼推薦的嗎？"
+  },
+  {
+    "cat": "restaurant",
+    "en": "I'll have the chicken sandwich.",
+    "zh": "我要點雞肉三明治。"
+  },
+  {
+    "cat": "restaurant",
+    "en": "Can we get the check, please?",
+    "zh": "麻煩幫我們結帳。"
+  },
+  {
+    "cat": "restaurant",
+    "en": "Is this dish spicy?",
+    "zh": "這道菜會辣嗎？"
+  },
+  {
+    "cat": "restaurant",
+    "en": "I'd like an iced latte with less sugar.",
+    "zh": "我想要一杯少糖的冰拿鐵。"
+  },
+  {
+    "cat": "restaurant",
+    "en": "Do you have any vegetarian options?",
+    "zh": "你們有素食的選擇嗎？"
+  },
+  {
+    "cat": "restaurant",
+    "en": "Could I get this to go, please?",
+    "zh": "這個可以幫我外帶嗎？"
+  },
+  {
+    "cat": "restaurant",
+    "en": "Excuse me, we're ready to order now.",
+    "zh": "不好意思，我們可以點餐了。"
+  },
+  {
+    "cat": "restaurant",
+    "en": "Could we have some more water, please?",
+    "zh": "可以再給我們一些水嗎？"
+  },
+  {
+    "cat": "restaurant",
+    "en": "I'm allergic to peanuts, so please leave them out.",
+    "zh": "我對花生過敏，所以請不要放。"
+  },
+  {
+    "cat": "restaurant",
+    "en": "Do you accept credit cards or only cash?",
+    "zh": "你們可以刷卡，還是只收現金？"
+  },
+  {
+    "cat": "restaurant",
+    "en": "Can I get the dressing on the side?",
+    "zh": "沙拉醬可以分開放嗎？"
+  },
+  {
+    "cat": "restaurant",
+    "en": "How long is the wait for a table?",
+    "zh": "現在要等多久才有位子？"
+  },
+  {
+    "cat": "restaurant",
+    "en": "Sorry, but I think this isn't what I ordered.",
+    "zh": "抱歉，這好像不是我點的餐。"
+  },
+  {
+    "cat": "restaurant",
+    "en": "Is it okay if we split the bill?",
+    "zh": "我們想分開付帳，可以嗎？"
+  },
+  {
+    "cat": "restaurant",
+    "en": "We'd like to sit by the window if possible.",
+    "zh": "如果可以的話，我們想坐窗邊。"
+  },
+  {
+    "cat": "restaurant",
+    "en": "Everything was delicious, thank you very much.",
+    "zh": "每道菜都很好吃，非常謝謝你們。"
+  },
+  {
+    "cat": "restaurant",
+    "en": "Could you pack the leftovers for me, please?",
+    "zh": "可以麻煩你幫我把剩菜打包嗎？"
+  },
+  {
+    "cat": "shopping",
+    "en": "How much is this?",
+    "zh": "這個多少錢？"
+  },
+  {
+    "cat": "shopping",
+    "en": "Do you have this in blue?",
+    "zh": "這個有藍色的嗎？"
+  },
+  {
+    "cat": "shopping",
+    "en": "Can I try this on?",
+    "zh": "我可以試穿嗎？"
+  },
+  {
+    "cat": "shopping",
+    "en": "Where is the fitting room?",
+    "zh": "試衣間在哪裡？"
+  },
+  {
+    "cat": "shopping",
+    "en": "Is there a discount on this?",
+    "zh": "這個有折扣嗎？"
+  },
+  {
+    "cat": "shopping",
+    "en": "May I have a receipt, please?",
+    "zh": "可以給我收據嗎？"
+  },
+  {
+    "cat": "shopping",
+    "en": "Is this available in a larger size?",
+    "zh": "這個有大一點的尺寸嗎？"
+  },
+  {
+    "cat": "shopping",
+    "en": "Could you show me that one?",
+    "zh": "可以拿那一個給我看看嗎？"
+  },
+  {
+    "cat": "shopping",
+    "en": "This one feels a little too tight.",
+    "zh": "這件有點太緊了。"
+  },
+  {
+    "cat": "shopping",
+    "en": "Can I pay with my phone?",
+    "zh": "我可以用手機付款嗎？"
+  },
+  {
+    "cat": "shopping",
+    "en": "I'm just looking around, thank you.",
+    "zh": "我只是隨便看看，謝謝。"
+  },
+  {
+    "cat": "shopping",
+    "en": "Do you have anything cheaper than this?",
+    "zh": "你們有比這個便宜一點的嗎？"
+  },
+  {
+    "cat": "shopping",
+    "en": "Would you mind wrapping this as a gift?",
+    "zh": "可以幫我包成禮物嗎？"
+  },
+  {
+    "cat": "shopping",
+    "en": "Can I get a refund if it doesn't fit?",
+    "zh": "如果不合穿，可以退款嗎？"
+  },
+  {
+    "cat": "shopping",
+    "en": "Do you take credit cards here?",
+    "zh": "這裡可以刷信用卡嗎？"
+  },
+  {
+    "cat": "shopping",
+    "en": "I'd like to exchange this for a different one.",
+    "zh": "我想把這個換成別的。"
+  },
+  {
+    "cat": "shopping",
+    "en": "How long will the delivery take?",
+    "zh": "送貨要多久？"
+  },
+  {
+    "cat": "shopping",
+    "en": "I'm looking for a birthday gift for my mother.",
+    "zh": "我在找送媽媽的生日禮物。"
+  },
+  {
+    "cat": "shopping",
+    "en": "Could you deliver it to my office tomorrow?",
+    "zh": "可以明天送到我的辦公室嗎？"
+  },
+  {
+    "cat": "shopping",
+    "en": "I bought this yesterday, but it has a small hole.",
+    "zh": "我昨天買的，但上面有一個小洞。"
+  },
+  {
+    "cat": "travel",
+    "en": "Which counter should I check in at?",
+    "zh": "我該到哪個櫃檯報到？"
+  },
+  {
+    "cat": "travel",
+    "en": "Here is my passport.",
+    "zh": "這是我的護照。"
+  },
+  {
+    "cat": "travel",
+    "en": "Could I have a window seat, please?",
+    "zh": "可以給我靠窗的座位嗎？"
+  },
+  {
+    "cat": "travel",
+    "en": "I have one bag to check.",
+    "zh": "我有一件行李要託運。"
+  },
+  {
+    "cat": "travel",
+    "en": "Which gate does my flight leave from?",
+    "zh": "我的班機從哪個登機門出發？"
+  },
+  {
+    "cat": "travel",
+    "en": "Has boarding started for this flight?",
+    "zh": "這班飛機開始登機了嗎？"
+  },
+  {
+    "cat": "travel",
+    "en": "Please drop me off at the corner.",
+    "zh": "請讓我在轉角下車。"
+  },
+  {
+    "cat": "travel",
+    "en": "What is the fare to downtown, please?",
+    "zh": "請問到市區的車資是多少？"
+  },
+  {
+    "cat": "travel",
+    "en": "Could you take me to this address?",
+    "zh": "可以載我到這個地址嗎？"
+  },
+  {
+    "cat": "travel",
+    "en": "I have a reservation for two nights.",
+    "zh": "我有預訂兩晚。"
+  },
+  {
+    "cat": "travel",
+    "en": "What time is checkout tomorrow morning?",
+    "zh": "明天早上幾點退房？"
+  },
+  {
+    "cat": "travel",
+    "en": "Is it possible to check out late?",
+    "zh": "可以晚一點退房嗎？"
+  },
+  {
+    "cat": "travel",
+    "en": "How do I get to the train station?",
+    "zh": "請問火車站怎麼走？"
+  },
+  {
+    "cat": "travel",
+    "en": "Excuse me, is there a subway station nearby?",
+    "zh": "不好意思，這附近有捷運站嗎？"
+  },
+  {
+    "cat": "travel",
+    "en": "Which line goes to the night market?",
+    "zh": "哪一條線可以到夜市？"
+  },
+  {
+    "cat": "travel",
+    "en": "Does this bus go to the city center?",
+    "zh": "這班公車有到市中心嗎？"
+  },
+  {
+    "cat": "travel",
+    "en": "One round trip ticket to the museum, please.",
+    "zh": "請給我一張到博物館的來回票。"
+  },
+  {
+    "cat": "travel",
+    "en": "Do you know where I can buy a ticket?",
+    "zh": "你知道哪裡可以買票嗎？"
+  },
+  {
+    "cat": "travel",
+    "en": "Do you mind if I leave my luggage here until noon?",
+    "zh": "我可以把行李先放這裡到中午嗎？"
+  },
+  {
+    "cat": "travel",
+    "en": "Can you tell me about the shuttle bus to the airport?",
+    "zh": "可以跟我說明一下往機場的接駁巴士嗎？"
+  },
+  {
+    "cat": "phone",
+    "en": "Hello, this is Amy.",
+    "zh": "你好，我是艾咪。"
+  },
+  {
+    "cat": "phone",
+    "en": "Can I take a message?",
+    "zh": "需要我幫你留話嗎？"
+  },
+  {
+    "cat": "phone",
+    "en": "I think you have the wrong number.",
+    "zh": "你好像打錯電話了。"
+  },
+  {
+    "cat": "phone",
+    "en": "Could you speak up a little, please?",
+    "zh": "可以請你說大聲一點嗎？"
+  },
+  {
+    "cat": "phone",
+    "en": "I'll call you back later.",
+    "zh": "我晚點再回電給你。"
+  },
+  {
+    "cat": "phone",
+    "en": "Hello, how can I help you today?",
+    "zh": "您好，請問有什麼可以為您服務的嗎？"
+  },
+  {
+    "cat": "phone",
+    "en": "Please hold while I transfer you.",
+    "zh": "請稍等，我幫您轉接。"
+  },
+  {
+    "cat": "phone",
+    "en": "I'm returning your call from this morning.",
+    "zh": "我是回覆你今天早上的來電。"
+  },
+  {
+    "cat": "phone",
+    "en": "Could I leave a message for her?",
+    "zh": "我可以留話給她嗎？"
+  },
+  {
+    "cat": "phone",
+    "en": "What time works best for you?",
+    "zh": "你什麼時候方便？"
+  },
+  {
+    "cat": "phone",
+    "en": "Do you mind if we reschedule?",
+    "zh": "你介意我們改時間嗎？"
+  },
+  {
+    "cat": "phone",
+    "en": "I'd like to book an appointment for Friday.",
+    "zh": "我想預約星期五。"
+  },
+  {
+    "cat": "phone",
+    "en": "Let me check my calendar and get back to you.",
+    "zh": "我先看一下行事曆，再回覆你。"
+  },
+  {
+    "cat": "phone",
+    "en": "Could we move our meeting to next Tuesday?",
+    "zh": "我們可以把會議改到下週二嗎？"
+  },
+  {
+    "cat": "phone",
+    "en": "Hi, I'm calling to confirm my Monday appointment.",
+    "zh": "你好，我想確認我星期一的預約。"
+  },
+  {
+    "cat": "phone",
+    "en": "Could you ask him to return my call?",
+    "zh": "可以請他回我電話嗎？"
+  },
+  {
+    "cat": "phone",
+    "en": "Would Wednesday afternoon be better for you?",
+    "zh": "星期三下午對你來說會比較方便嗎？"
+  },
+  {
+    "cat": "phone",
+    "en": "I'm sorry, but I have to cancel tomorrow's appointment.",
+    "zh": "很抱歉，我必須取消明天的預約。"
+  },
+  {
+    "cat": "phone",
+    "en": "Please let me know if anything changes before then.",
+    "zh": "如果在那之前有任何變動，請告訴我。"
+  },
+  {
+    "cat": "phone",
+    "en": "The line is busy, so I'll try again in a few minutes.",
+    "zh": "電話忙線中，我幾分鐘後再試一次。"
+  },
+  {
+    "cat": "meeting",
+    "en": "Okay, let's get started everyone.",
+    "zh": "好，各位我們開始吧。"
+  },
+  {
+    "cat": "meeting",
+    "en": "Thanks for coming today.",
+    "zh": "謝謝大家今天出席。"
+  },
+  {
+    "cat": "meeting",
+    "en": "Can everyone hear me clearly?",
+    "zh": "大家聽得清楚嗎？"
+  },
+  {
+    "cat": "meeting",
+    "en": "I agree with your point.",
+    "zh": "我同意你的看法。"
+  },
+  {
+    "cat": "meeting",
+    "en": "That's a good idea.",
+    "zh": "這個點子不錯。"
+  },
+  {
+    "cat": "meeting",
+    "en": "What do you mean by that exactly?",
+    "zh": "你這句話確切是什麼意思？"
+  },
+  {
+    "cat": "meeting",
+    "en": "I see it a little differently.",
+    "zh": "我的看法有點不一樣。"
+  },
+  {
+    "cat": "meeting",
+    "en": "Could you explain that in more detail?",
+    "zh": "你可以說明得更詳細一點嗎？"
+  },
+  {
+    "cat": "meeting",
+    "en": "Let me share my screen first.",
+    "zh": "讓我先分享我的螢幕。"
+  },
+  {
+    "cat": "meeting",
+    "en": "Is it okay if I add something?",
+    "zh": "我可以補充一點嗎？"
+  },
+  {
+    "cat": "meeting",
+    "en": "First, I'll go over the main results quickly.",
+    "zh": "首先，我會快速說明主要的結果。"
+  },
+  {
+    "cat": "meeting",
+    "en": "I'm afraid I don't quite agree with that.",
+    "zh": "恐怕我不太同意這一點。"
+  },
+  {
+    "cat": "meeting",
+    "en": "Who is going to follow up on this?",
+    "zh": "這件事由誰來跟進？"
+  },
+  {
+    "cat": "meeting",
+    "en": "Let's take a quick look at the schedule.",
+    "zh": "我們來快速看一下時程。"
+  },
+  {
+    "cat": "meeting",
+    "en": "We should focus on the budget first.",
+    "zh": "我們應該先專注在預算上。"
+  },
+  {
+    "cat": "meeting",
+    "en": "Could you send everyone the notes after the meeting?",
+    "zh": "會後可以把會議記錄寄給大家嗎？"
+  },
+  {
+    "cat": "meeting",
+    "en": "I'll finish the report by the end of this week.",
+    "zh": "我會在本週結束前完成報告。"
+  },
+  {
+    "cat": "meeting",
+    "en": "That's a fair point, but we may need more time.",
+    "zh": "你說得有道理，不過我們可能需要更多時間。"
+  },
+  {
+    "cat": "meeting",
+    "en": "To sum up, we agreed on three main action items.",
+    "zh": "總結一下，我們確定了三項主要的待辦事項。"
+  },
+  {
+    "cat": "meeting",
+    "en": "If there are no more questions, we can wrap up here.",
+    "zh": "如果沒有其他問題，我們今天就到這裡結束。"
+  },
+  {
+    "cat": "workchat",
+    "en": "Do you have a minute?",
+    "zh": "你現在有空嗎？"
+  },
+  {
+    "cat": "workchat",
+    "en": "How was your weekend?",
+    "zh": "你週末過得怎麼樣？"
+  },
+  {
+    "cat": "workchat",
+    "en": "Did you get my email?",
+    "zh": "你有收到我的信嗎？"
+  },
+  {
+    "cat": "workchat",
+    "en": "The internet is down again.",
+    "zh": "網路又斷了。"
+  },
+  {
+    "cat": "workchat",
+    "en": "I forgot to attach the file.",
+    "zh": "我忘了附上檔案。"
+  },
+  {
+    "cat": "workchat",
+    "en": "Could you help me with this?",
+    "zh": "這個可以請你幫我一下嗎？"
+  },
+  {
+    "cat": "workchat",
+    "en": "The deadline is this Friday.",
+    "zh": "截止日期是這個星期五。"
+  },
+  {
+    "cat": "workchat",
+    "en": "I can't log in to my account.",
+    "zh": "我登入不了我的帳號。"
+  },
+  {
+    "cat": "workchat",
+    "en": "Do you want to grab lunch together?",
+    "zh": "要不要一起去吃午餐？"
+  },
+  {
+    "cat": "workchat",
+    "en": "Do you mind if I open the window?",
+    "zh": "你介意我開窗戶嗎？"
+  },
+  {
+    "cat": "workchat",
+    "en": "Could you send me the latest version?",
+    "zh": "可以把最新的版本寄給我嗎？"
+  },
+  {
+    "cat": "workchat",
+    "en": "I'd like to take tomorrow off.",
+    "zh": "我想請明天的假。"
+  },
+  {
+    "cat": "workchat",
+    "en": "Sorry, I'm running a little behind schedule.",
+    "zh": "抱歉，我的進度有點落後。"
+  },
+  {
+    "cat": "workchat",
+    "en": "I'm still working on the first draft.",
+    "zh": "我還在處理初稿。"
+  },
+  {
+    "cat": "workchat",
+    "en": "Please see the attachment for more details.",
+    "zh": "詳細內容請參考附件。"
+  },
+  {
+    "cat": "workchat",
+    "en": "Let me know if you need anything else.",
+    "zh": "如果還需要什麼，再跟我說。"
+  },
+  {
+    "cat": "workchat",
+    "en": "I'll finish it before the end of the day.",
+    "zh": "我會在今天下班前完成。"
+  },
+  {
+    "cat": "workchat",
+    "en": "Can you take a look at my report?",
+    "zh": "你可以幫我看一下報告嗎？"
+  },
+  {
+    "cat": "workchat",
+    "en": "I'm going to be out of the office next week.",
+    "zh": "我下星期不在公司。"
+  },
+  {
+    "cat": "workchat",
+    "en": "Could you give me an update on the project?",
+    "zh": "可以跟我說一下專案的最新進度嗎？"
+  },
+  {
+    "cat": "help",
+    "en": "I really need some help.",
+    "zh": "我真的需要有人幫忙。"
+  },
+  {
+    "cat": "help",
+    "en": "Excuse me, can you give me a hand?",
+    "zh": "不好意思，可以幫我一下嗎？"
+  },
+  {
+    "cat": "help",
+    "en": "I lost my wallet.",
+    "zh": "我的錢包掉了。"
+  },
+  {
+    "cat": "help",
+    "en": "I don't feel well.",
+    "zh": "我覺得不太舒服。"
+  },
+  {
+    "cat": "help",
+    "en": "Call an ambulance, please!",
+    "zh": "請叫救護車！"
+  },
+  {
+    "cat": "help",
+    "en": "I have a terrible headache.",
+    "zh": "我頭痛得很厲害。"
+  },
+  {
+    "cat": "help",
+    "en": "Sorry, could you say that again?",
+    "zh": "抱歉，可以再說一次嗎？"
+  },
+  {
+    "cat": "help",
+    "en": "Could you speak a little slower?",
+    "zh": "可以請你說慢一點嗎？"
+  },
+  {
+    "cat": "help",
+    "en": "Where is the nearest pharmacy?",
+    "zh": "最近的藥局在哪裡？"
+  },
+  {
+    "cat": "help",
+    "en": "What does that word mean?",
+    "zh": "那個字是什麼意思？"
+  },
+  {
+    "cat": "help",
+    "en": "I think I left my phone on the bus.",
+    "zh": "我好像把手機忘在公車上了。"
+  },
+  {
+    "cat": "help",
+    "en": "Can I see a doctor, please?",
+    "zh": "我可以看醫生嗎？"
+  },
+  {
+    "cat": "help",
+    "en": "I think there was a misunderstanding.",
+    "zh": "我想這中間有些誤會。"
+  },
+  {
+    "cat": "help",
+    "en": "Is there any medicine for a sore throat?",
+    "zh": "有沒有治喉嚨痛的藥？"
+  },
+  {
+    "cat": "help",
+    "en": "Has anyone found a black umbrella?",
+    "zh": "有人撿到一把黑色的雨傘嗎？"
+  },
+  {
+    "cat": "help",
+    "en": "I've had a fever since last night.",
+    "zh": "我從昨天晚上就開始發燒。"
+  },
+  {
+    "cat": "help",
+    "en": "Someone just fainted, so please call for help.",
+    "zh": "有人剛剛昏倒了，請趕快叫人來幫忙。"
+  },
+  {
+    "cat": "help",
+    "en": "Could you show me the way to the hospital?",
+    "zh": "可以告訴我怎麼去醫院嗎？"
+  },
+  {
+    "cat": "help",
+    "en": "I'm lost, and my phone is out of battery.",
+    "zh": "我迷路了，而且手機沒電了。"
+  },
+  {
+    "cat": "help",
+    "en": "I'm allergic to this medicine, so please tell the doctor.",
+    "zh": "我對這種藥過敏，請告訴醫生。"
+  }
+]

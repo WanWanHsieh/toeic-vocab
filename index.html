@@ -712,6 +712,32 @@
   .ts-head{ display:flex; align-items:center; gap:10px; margin-bottom:12px; }
   .ts-count{ margin-left:auto; font-weight:800; color:var(--text-muted); font-size:13px; }
   @media (max-width:520px){ #categoryTabs .subtab{ font-size:13px; padding:9px 0; } .td-streak{ padding:16px 18px; } .td-sub{ white-space:normal; } }
+
+  /* 口說練習 */
+  .sp{ max-width:640px; margin:0 auto; }
+  .sp-note{ max-width:640px; margin:0 auto 12px; padding:10px 14px; border-radius:12px; background:var(--gold-soft); font-size:13px; line-height:1.6; }
+  .sp-card{ background:var(--surface); border:1px solid var(--border); border-radius:22px; padding:24px 22px; text-align:center; box-shadow:var(--shadow); }
+  .sp-en{ margin:0; font-size:clamp(22px,5.5vw,28px); font-weight:800; line-height:1.4; }
+  .sp-zh{ margin:8px 0 0; font-size:15px; color:var(--text-muted); }
+  .sp-best{ margin-top:10px; font-size:12.5px; font-weight:700; color:var(--success); }
+  .sp-listen{ display:flex; justify-content:center; gap:10px; margin:18px 0; flex-wrap:wrap; }
+  .sp-listen .icon-btn{ border-radius:999px; }
+  .sp-mic{ width:100%; border:0; border-radius:18px; padding:18px 16px; font-size:17px; font-weight:800; cursor:pointer; font-family:inherit; background:var(--accent); color:var(--accent-contrast); }
+  .sp-mic.on{ background:var(--danger); color:#fff; animation:spPulse 1.2s ease-in-out infinite; }
+  @keyframes spPulse{ 0%,100%{ box-shadow:0 0 0 0 color-mix(in srgb, var(--danger) 45%, transparent); } 50%{ box-shadow:0 0 0 12px color-mix(in srgb, var(--danger) 0%, transparent); } }
+  .sp-self{ padding:14px; border-radius:14px; background:var(--surface-2); }
+  .sp-self p{ margin:0 0 10px; font-size:14px; color:var(--text-muted); }
+  .sp-result{ margin-top:18px; padding:16px; border-radius:16px; text-align:center; }
+  .sp-result.good{ background:var(--success-soft); }
+  .sp-result.mid{ background:var(--gold-soft); }
+  .sp-result.bad{ background:var(--danger-soft); font-weight:700; }
+  .sp-score{ font-size:38px; font-weight:800; line-height:1; }
+  .sp-score span{ font-size:15px; margin-left:2px; }
+  .sp-verdict{ margin-top:6px; font-weight:800; }
+  .sp-heard{ margin-top:10px; font-size:13px; color:var(--text-muted); word-break:break-word; }
+  .sp-words{ margin-top:10px; font-size:19px; font-weight:700; line-height:1.7; }
+  .sp-ok{ color:var(--success); }
+  .sp-miss{ color:var(--danger); text-decoration:underline wavy; text-underline-offset:4px; }
 </style>
 <script>
 /* Apply a saved theme choice before first paint so a light/dark override doesn't flash. */
@@ -757,6 +783,7 @@ try{ var t = localStorage.getItem("toeic-theme"); if(t === "light" || t === "dar
     <button class="tab" data-mode="theme" role="tab" aria-selected="false">主題單字</button>
     <button class="tab" data-mode="phrase" role="tab" aria-selected="false">📎 常考片語</button>
     <button class="tab" data-mode="spelling" role="tab" aria-selected="false">✍️ 拼字測驗</button>
+    <button class="tab" data-mode="speak" role="tab" aria-selected="false">🎤 口說練習</button>
     <button class="tab" data-mode="saved" role="tab" aria-selected="false">❤️ 收藏單字</button>
   </div>
   <div class="tabs" role="tablist" data-cat-group="toeic" style="display:none;">
@@ -985,6 +1012,7 @@ let mode = "today";
 let flipped = false;
 let showZh = false; // flashcard page: Chinese is hidden until the 👁 button (or the blurred text itself) is tapped
 let progress = {};
+let speakBest = loadJSON("toeic-speak-best") || {}; // 口說練習: { 'English sentence': best score 0-100 }
 let gdAnswers = loadJSON("toeic-gdaily") || {}; // 每日文法: { "YYYY-MM-DD": [chosen option index | null, x20] }
 let progressTs = {};
 let srs = {};            // 間隔複習: { id: { s: stage 0-5, d: next due 'YYYY-MM-DD', t: ms of the last review } }
@@ -1400,7 +1428,7 @@ function pushCloudPart(key, progressObj){ pushCloud(key, { version: versionOf(ke
 function pushCloudSaved(){ pushCloud("savedWords", savedWords); }
 function pushCloudCardPos(entry){ pushCloud("cardPos", entry); }
 function pushCloudQuizPos(entry){ pushCloud("quizPos", entry); }
-function pushCloudDailyReading(){ pushCloud("dailyReading", { answers: dailyAnswers, checked: dailyChecked, grammar: gdAnswers, active: activeDays }); }
+function pushCloudDailyReading(){ pushCloud("dailyReading", { answers: dailyAnswers, checked: dailyChecked, grammar: gdAnswers, active: activeDays, speak: speakBest }); }
 function saveDailyProgress(){
   saveJSON("toeic-daily-answers", dailyAnswers);
   saveJSON("toeic-daily-checked", dailyChecked);
@@ -1519,6 +1547,10 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
     if(cloud.dailyReading && cloud.dailyReading.active){
       activeDays = { ...cloud.dailyReading.active, ...activeDays };
       saveJSON("toeic-active-days", activeDays);
+    }
+    if(cloud.dailyReading && cloud.dailyReading.speak){
+      for(const [k, v] of Object.entries(cloud.dailyReading.speak)) speakBest[k] = Math.max(speakBest[k] || 0, v || 0);
+      saveJSON("toeic-speak-best", speakBest);
     }
     if(cloud.dailyReading && cloud.dailyReading.grammar){
       gdAnswers = mergeGdAnswers(cloud.dailyReading.grammar, gdAnswers);
@@ -1847,6 +1879,7 @@ document.querySelectorAll(".tab").forEach(btn=>{
     if(mode === "phrase") phraseStage = "picker";
     if(mode === "lesson") lessonStage = "picker";
     if(mode === "gdaily") gdStage = "home";
+    if(mode === "speak") speakStage = "picker";
     if(mode === "spelling") rebuildSpellingOrder();
     if(mode === "daily") dailyStage = "picker";
     if(mode === "story") storyStage = "picker";
@@ -1864,7 +1897,7 @@ const MODE_TO_CATEGORY = {
   card:"vocab", list:"vocab", theme:"vocab", phrase:"vocab", spelling:"vocab", saved:"vocab",
   quiz:"toeic", toeic_hub:"toeic", listening:"toeic", grammar:"toeic", reading:"toeic",
   daily:"reading", story:"reading",
-  lesson:"teach", gdaily:"teach", today:"today", tsession:"today"
+  lesson:"teach", gdaily:"teach", today:"today", tsession:"today", speak:"vocab"
 };
 function showCategory(cat){
   document.querySelectorAll(".tabs[data-cat-group]").forEach(el=>{
@@ -3463,6 +3496,7 @@ function renderStoryMode(container){
 
 /* ---------- Master render ---------- */
 function renderStage(){
+  if(mode !== "speak" && speakRec) stopSpeakRec();   // leaving 口說練習 while the microphone is open
   updateControlBarVisibility();   // the search/filter bar belongs to the vocab views only (not 今日)
   const container = document.getElementById("stage");
   if(vocabLoadFailed && (mode === "card" || mode === "list" || mode === "quiz")){
@@ -3484,6 +3518,7 @@ function renderStage(){
   else if(mode === "lesson") renderLessonMode(container);
   else if(mode === "gdaily") renderGdailyMode(container);
   else if(mode === "today") renderTodayMode(container);
+  else if(mode === "speak") renderSpeakMode(container);
   else if(mode === "tsession") renderTodaySession(container);
   else if(mode === "saved") renderSavedMode(container);
   else if(mode === "spelling") renderSpellingMode(container);
@@ -4680,6 +4715,194 @@ function renderTodaySession(container){
   document.getElementById("tsKnowBtn").addEventListener("click", ()=> rate(true));
 }
 
+/* ---------- 口說練習：聽範例 -> 跟著說 -> 語音辨識打分數 ----------
+   data/<version>/speak_sentences.json = [ { cat, en, zh } ]. Uses the browser's SpeechRecognition (Chrome, Android, Safari);
+   where that is missing the page falls back to listen-and-repeat with a self check. Best score per sentence is kept. */
+const SPEAK_CATS = {
+  greeting:["👋","日常寒暄與閒聊"], restaurant:["🍽️","餐廳與咖啡店"], shopping:["🛍️","購物"], travel:["✈️","旅遊與交通"],
+  phone:["📞","電話與約時間"], meeting:["💼","職場會議"], workchat:["🧑‍💼","職場日常溝通"], help:["🆘","求助與緊急狀況"]
+};
+const SpeechRec = window.SpeechRecognition || window.webkitSpeechRecognition;
+let speakSentences = [], speakStage = "picker", speakCat = null, speakIdx = 0, speakResult = null, speakRec = null, speakListening = false;
+const SPEAK_PASS = 70;
+async function loadSpeakSentences(){
+  speakSentences = await loadJSONData("speak_sentences.json", []);
+  if(mode === "speak") renderStage();
+}
+const CONTRACTIONS = { "can't":"can not", "won't":"will not", "cannot":"can not", "let's":"let us", "i'm":"i am", "it's":"it is", "that's":"that is", "what's":"what is",
+  "there's":"there is", "here's":"here is", "he's":"he is", "she's":"she is", "who's":"who is", "where's":"where is", "how's":"how is" };
+const NUM_WORDS = ["zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","fourteen","fifteen","sixteen","seventeen","eighteen","nineteen","twenty"];
+function speakTokens(text){
+  let t = String(text).toLowerCase().replace(/[’‘]/g, "'");
+  t = t.replace(/[^a-z0-9' ]+/g, " ").split(/\s+/).filter(Boolean);
+  const out = [];
+  for(let w of t){
+    w = w.replace(/^'+|'+$/g, "");
+    if(!w) continue;
+    if(CONTRACTIONS[w]){ out.push(...CONTRACTIONS[w].split(" ")); continue; }
+    if(/^\d+$/.test(w) && Number(w) <= 20){ out.push(NUM_WORDS[Number(w)]); continue; }
+    if(/n't$/.test(w)){ out.push(w.slice(0, -3), "not"); continue; }
+    if(/'ll$/.test(w)){ out.push(w.slice(0, -3), "will"); continue; }
+    if(/'re$/.test(w)){ out.push(w.slice(0, -3), "are"); continue; }
+    if(/'ve$/.test(w)){ out.push(w.slice(0, -3), "have"); continue; }
+    if(/'d$/.test(w)){ out.push(w.slice(0, -2), "would"); continue; }
+    if(/'m$/.test(w)){ out.push(w.slice(0, -2), "am"); continue; }
+    out.push(w.replace(/'s$/, ""));
+  }
+  return out;
+}
+/* Align what was said with the target (longest common subsequence): returns which target words were matched and a 0-100 score. */
+function scoreSpeech(target, spoken){
+  const a = speakTokens(target), b = speakTokens(spoken);
+  const n = a.length, m = b.length;
+  const dp = Array.from({ length: n + 1 }, ()=> new Array(m + 1).fill(0));
+  for(let i = n - 1; i >= 0; i--) for(let j = m - 1; j >= 0; j--)
+    dp[i][j] = a[i] === b[j] ? dp[i+1][j+1] + 1 : Math.max(dp[i+1][j], dp[i][j+1]);
+  const hit = new Array(n).fill(false);
+  let i = 0, j = 0;
+  while(i < n && j < m){
+    if(a[i] === b[j]){ hit[i] = true; i++; j++; }
+    else if(dp[i+1][j] >= dp[i][j+1]) i++;
+    else j++;
+  }
+  const matched = dp[0][0];
+  const score = n === 0 ? 0 : Math.round(matched / Math.max(n, m) * 100);
+  return { score, hit, words: a };
+}
+function speakDisplayWords(text, hit){      // show the sentence as the learner sees it, coloured by whether each word was heard
+  const raw = String(text).split(/\s+/);
+  let k = 0;
+  return raw.map(w=>{
+    const toks = speakTokens(w);
+    if(toks.length === 0) return escHtml(w);
+    const ok = toks.every((_, x)=> hit[k + x]);
+    k += toks.length;
+    return `<span class="${ok ? "sp-ok" : "sp-miss"}">${escHtml(w)}</span>`;
+  }).join(" ");
+}
+function stopSpeakRec(){
+  if(speakRec){
+    speakRec.onresult = speakRec.onerror = speakRec.onend = null;   // aborting must not report a result
+    try{ speakRec.abort(); }catch(e){}
+    speakRec = null;
+  }
+  speakListening = false;
+}
+function listenOnce(cb){
+  if(canSpeak) window.speechSynthesis.cancel();
+  const rec = new SpeechRec();
+  speakRec = rec;
+  rec.lang = "en-US"; rec.interimResults = false; rec.maxAlternatives = 3; rec.continuous = false;
+  let finished = false;
+  const done = (r)=>{ if(finished) return; finished = true; speakRec = null; speakListening = false; cb(r); };
+  rec.onresult = (e)=>{ const alts = []; for(const res of e.results) for(const alt of res) alts.push(alt.transcript); done({ alts }); };
+  rec.onerror = (e)=> done({ error: e.error || "error" });
+  rec.onend = ()=> done({ alts: [] });
+  try{ rec.start(); speakListening = true; }catch(err){ done({ error: "start-failed" }); }
+}
+function renderSpeakMode(container){
+  if(speakSentences.length === 0){ container.innerHTML = `<div class="empty-state">正在載入口說練習的句子…</div>`; return; }
+  const cats = Object.keys(SPEAK_CATS).filter(c=> speakSentences.some(x=>x.cat === c));
+  if(speakStage === "picker" || !speakCat){
+    speakStage = "picker";
+    const rows = cats.map(c=>{
+      const list = speakSentences.filter(x=>x.cat === c);
+      const passed = list.filter(x=> (speakBest[x.en] || 0) >= SPEAK_PASS).length;
+      return `<button class="hub-card" data-cat="${c}">
+        <div class="hub-card-title">${SPEAK_CATS[c][0]} ${SPEAK_CATS[c][1]}</div>
+        <div class="hub-card-sub">${list.length} 句　已過關 ${passed} / ${list.length}</div>
+        <div class="hub-card-bar"><div class="hub-card-bar-fill" style="width:${(passed / list.length * 100).toFixed(0)}%;"></div></div>
+      </button>`;
+    }).join("");
+    container.innerHTML = `<div class="hub-intro">選一個情境，先聽範例，再開口跟著說。系統會聽你說的，告訴你哪些字沒說到。</div>
+      ${SpeechRec ? "" : `<div class="sp-note">這個瀏覽器沒有語音辨識，會改成「聽一遍、跟著說、自己確認」的練習方式。想要自動打分數，請用 Chrome（電腦、Android）或 Safari（iPhone）開啟網站。</div>`}
+      <div class="hub-list">${rows}</div>`;
+    container.querySelectorAll(".hub-card[data-cat]").forEach(b=> b.addEventListener("click", ()=>{
+      speakCat = b.dataset.cat; speakStage = "practice"; speakResult = null;
+      const list = speakSentences.filter(x=>x.cat === speakCat);
+      const first = list.findIndex(x=> (speakBest[x.en] || 0) < SPEAK_PASS);   // continue at the first sentence not passed yet
+      speakIdx = first < 0 ? 0 : first;
+      renderStage();
+    }));
+    return;
+  }
+  const list = speakSentences.filter(x=>x.cat === speakCat);
+  if(speakIdx >= list.length) speakIdx = 0;
+  if(speakIdx < 0) speakIdx = list.length - 1;
+  const item = list[speakIdx];
+  const best = speakBest[item.en] || 0;
+  const r = speakResult;
+  let resultHtml = "";
+  if(r && r.error){
+    const msg = r.error === "not-allowed" || r.error === "service-not-allowed" ? "沒有麥克風權限。請在瀏覽器網址列旁允許使用麥克風，再試一次。"
+              : r.error === "no-speech" ? "沒有聽到聲音，靠近麥克風再說一次。"
+              : r.error === "network" ? "語音辨識需要網路，請確認連線後再試。" : "這次沒有辨識成功，請再試一次。";
+    resultHtml = `<div class="sp-result bad">${msg}</div>`;
+  }else if(r && r.alts){
+    if(r.alts.length === 0) resultHtml = `<div class="sp-result bad">沒有聽到聲音，靠近麥克風再說一次。</div>`;
+    else{
+      const scored = r.alts.map(t=>({ t, ...scoreSpeech(item.en, t) })).sort((x, y)=> y.score - x.score)[0];
+      const ok = scored.score >= SPEAK_PASS;
+      resultHtml = `<div class="sp-result ${ok ? "good" : "mid"}">
+        <div class="sp-score">${scored.score}<span>分</span></div>
+        <div class="sp-verdict">${scored.score >= 90 ? "✅ 非常棒！" : ok ? "👍 過關了" : "再試一次，把紅色的字說清楚"}</div>
+        <div class="sp-heard">你說的：${escHtml(scored.t)}</div>
+        <div class="sp-words">${speakDisplayWords(item.en, scored.hit)}</div>
+      </div>`;
+    }
+  }
+  const micLabel = speakListening ? "🎙️ 聆聽中…說完會自動停止" : "🎤 按一下開始說";
+  container.innerHTML = `
+    <div class="sp">
+      <div class="reading-head">
+        <div class="reading-tag"><button class="icon-btn" id="spBackBtn" style="padding:5px 10px;font-size:12.5px;">← 返回</button> <span class="chip cat">${SPEAK_CATS[speakCat][0]} ${SPEAK_CATS[speakCat][1]}</span></div>
+        <div class="reading-nav">
+          <button class="nav-btn" id="spPrevBtn" style="width:36px;height:36px;">◀</button>
+          <span>${speakIdx + 1} / ${list.length}</span>
+          <button class="nav-btn" id="spNextBtn" style="width:36px;height:36px;">▶</button>
+        </div>
+      </div>
+      <div class="sp-card">
+        <p class="sp-en">${r && r.alts && r.alts.length ? "" : ""}${escHtml(item.en)}</p>
+        <p class="sp-zh">${escHtml(item.zh)}</p>
+        ${best ? `<div class="sp-best">最佳成績 ${best} 分${best >= SPEAK_PASS ? " ✅" : ""}</div>` : ""}
+        <div class="sp-listen">
+          <button class="icon-btn" id="spSayBtn" ${canSpeak ? "" : "disabled"}>🔊 聽範例</button>
+          <button class="icon-btn" id="spSlowBtn" ${canSpeak ? "" : "disabled"}>🐢 慢速</button>
+        </div>
+        ${SpeechRec ? `<button class="sp-mic${speakListening ? " on" : ""}" id="spMicBtn">${micLabel}</button>`
+                    : `<div class="sp-self"><p>先聽範例，再開口跟著說三遍。</p><button class="icon-btn" id="spSelfBtn">✅ 我說得出來了</button></div>`}
+        ${resultHtml}
+      </div>
+      <div class="reading-actions"><button class="icon-btn gd-next" id="spContinueBtn">下一句 ▶</button></div>
+    </div>`;
+  const go = (d)=>{ stopSpeakRec(); speakIdx += d; speakResult = null; renderStage(); window.scrollTo(0, 0); };
+  document.getElementById("spBackBtn").addEventListener("click", ()=>{ stopSpeakRec(); speakStage = "picker"; speakResult = null; renderStage(); });
+  document.getElementById("spPrevBtn").addEventListener("click", ()=> go(-1));
+  document.getElementById("spNextBtn").addEventListener("click", ()=> go(1));
+  document.getElementById("spContinueBtn").addEventListener("click", ()=> go(1));
+  document.getElementById("spSayBtn").addEventListener("click", ()=> speak(item.en));
+  document.getElementById("spSlowBtn").addEventListener("click", ()=> speak(item.en, 0.5));
+  document.getElementById("spSelfBtn")?.addEventListener("click", ()=>{
+    speakBest[item.en] = 100; saveJSON("toeic-speak-best", speakBest); pushCloudDailyReading(); markActive();
+    speakResult = null; renderStage();
+  });
+  document.getElementById("spMicBtn")?.addEventListener("click", ()=>{
+    if(speakListening){ stopSpeakRec(); renderStage(); return; }
+    speakResult = null;
+    listenOnce((res)=>{
+      speakResult = res;
+      if(res.alts && res.alts.length){
+        const top = Math.max(...res.alts.map(t=> scoreSpeech(item.en, t).score));
+        if(top > (speakBest[item.en] || 0)){ speakBest[item.en] = top; saveJSON("toeic-speak-best", speakBest); pushCloudDailyReading(); }
+        if(top >= SPEAK_PASS) markActive();
+      }
+      if(mode === "speak") renderStage();
+    });
+    renderStage();                                // show the "listening" state right away
+  });
+}
+
 async function loadGrammarLessons(){
   grammarLessons = await loadJSONData("grammar_lessons.json", []);
   if(mode === "lesson") renderStage();
@@ -4753,6 +4976,7 @@ loadThemeVocab();
 loadPhraseBank();
 loadGrammarLessons();
 loadGrammarDaily();
+loadSpeakSentences();
 loadWordDetails();
 if("serviceWorker" in navigator && location.protocol !== "file:") navigator.serviceWorker.register("sw.js").catch(()=>{}); // lets the site be added to the home screen as an app
 loadDailyReading();
