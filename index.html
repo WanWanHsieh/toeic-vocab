@@ -738,6 +738,15 @@
   .sp-words{ margin-top:10px; font-size:19px; font-weight:700; line-height:1.7; }
   .sp-ok{ color:var(--success); }
   .sp-miss{ color:var(--danger); text-decoration:underline wavy; text-underline-offset:4px; }
+
+  /* story player */
+  .story-player{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:12px; }
+  .story-player .icon-btn{ border-radius:999px; }
+  .story-player .icon-btn[hidden]{ display:none; }
+  .st-status{ font-size:13px; font-weight:700; color:var(--text-muted); margin-left:auto; }
+  .story-para-block.playing .doc-para, .story-para-block.paused .doc-para{ background:var(--accent-soft); border-radius:10px; }
+  .story-para-speak.heard{ background:var(--success-soft) !important; color:var(--success) !important; }
+  .story-vocab-item .d{ display:block; margin-top:2px; font-size:12.5px; font-style:italic; color:var(--text-muted); line-height:1.5; }
 </style>
 <script>
 /* Apply a saved theme choice before first paint so a light/dark override doesn't flash. */
@@ -1012,6 +1021,7 @@ let mode = "today";
 let flipped = false;
 let showZh = false; // flashcard page: Chinese is hidden until the 👁 button (or the blurred text itself) is tapped
 let progress = {};
+let storyHeard = loadJSON("toeic-story-heard") || {}; // 故事聽力: { storyId: [paragraph indexes already played to the end] }
 let speakBest = loadJSON("toeic-speak-best") || {}; // 口說練習: { 'English sentence': best score 0-100 }
 let gdAnswers = loadJSON("toeic-gdaily") || {}; // 每日文法: { "YYYY-MM-DD": [chosen option index | null, x20] }
 let progressTs = {};
@@ -1434,7 +1444,7 @@ function saveDailyProgress(){
   saveJSON("toeic-daily-checked", dailyChecked);
   pushCloudDailyReading();
 }
-function pushCloudStory(){ pushCloud("story", { version: versionOf("story"), answers: storyAnswers, checked: storyChecked }); }
+function pushCloudStory(){ pushCloud("story", { version: versionOf("story"), answers: storyAnswers, checked: storyChecked, heard: storyHeard }); }
 function saveStoryProgress(){
   saveVersionedProgress("toeic-story-answers", versionOf("story"), storyAnswers);
   saveVersionedProgress("toeic-story-checked", versionOf("story"), storyChecked);
@@ -1560,6 +1570,10 @@ window.addEventListener("cloud-auth-changed", async (e)=>{
     const storyVersionOk = cloud.story && (!("version" in cloud.story) || cloud.story.version === versionOf("story"));
     if(storyVersionOk){
       storyChecked = mergeProgress(cloud.story.checked, storyChecked);
+      if(cloud.story.heard){
+        for(const [sid, arr] of Object.entries(cloud.story.heard)) storyHeard[sid] = [...new Set([...(storyHeard[sid] || []), ...arr])];
+        saveJSON("toeic-story-heard", storyHeard);
+      }
       storyAnswers = { ...(cloud.story.answers||{}), ...storyAnswers };
     }
     saveVersionedProgress("toeic-story-answers", versionOf("story"), storyAnswers);
@@ -3347,6 +3361,90 @@ function renderDailyReadingMode(container){
   });
 }
 
+/* ---------- Story audio: sentence-by-sentence player with pause/resume and "heard" tracking ----------
+   Each paragraph is read one sentence at a time. Pause stops the voice but remembers the sentence, so "continue" picks up from that
+   sentence instead of the beginning of the paragraph (the browser's own pause() is unreliable on phones). A paragraph counts as
+   heard once its last sentence has finished playing; the story list shows which stories are not finished yet. */
+const storyPlayer = { sid: null, queue: [], qi: 0, state: "idle", token: 0, scope: "all" };
+function splitSentences(text){
+  return (String(text).match(/[^.!?]+[.!?]+["”’']*|[^.!?]+$/g) || [String(text)]).map(x=>x.trim()).filter(Boolean);
+}
+function markParaHeard(sid, pi){
+  const arr = storyHeard[sid] || (storyHeard[sid] = []);
+  if(arr.includes(pi)) return;
+  arr.push(pi);
+  saveJSON("toeic-story-heard", storyHeard);
+  pushCloudStory();
+}
+function storyStopPlayback(){
+  storyPlayer.token++;
+  storyPlayer.state = "idle";
+  storyPlayer.queue = [];
+  if(canSpeak) window.speechSynthesis.cancel();
+}
+function storyPlay(s, fromPara, onlyOne){
+  storyStopPlayback();
+  const q = [];
+  s.paragraphs.forEach((p, pi)=>{
+    if(pi < fromPara || (onlyOne && pi !== fromPara)) return;
+    const ss = splitSentences(p);
+    ss.forEach((t, k)=> q.push({ pi, text: t, last: k === ss.length - 1 }));
+  });
+  Object.assign(storyPlayer, { sid: s.id, queue: q, qi: 0, state: "playing", scope: onlyOne ? "one" : "all" });
+  storyPlayNext(s);
+}
+function storyPlayNext(s){
+  const P = storyPlayer;
+  if(P.state !== "playing") return;
+  if(P.qi >= P.queue.length){ P.state = "idle"; P.queue = []; updateStoryPlayerUI(s); return; }
+  const item = P.queue[P.qi];
+  const tok = ++P.token;
+  const u = new SpeechSynthesisUtterance(item.text);
+  u.lang = "en-US"; u.rate = SPEECH_RATE;
+  u.onend = ()=>{
+    if(tok !== P.token) return;                 // cancelled by a pause / stop / another paragraph
+    if(item.last) markParaHeard(s.id, item.pi);
+    P.qi++;
+    storyPlayNext(s);
+  };
+  updateStoryPlayerUI(s);
+  window.speechSynthesis.speak(u);
+}
+function storyPause(s){
+  const P = storyPlayer;
+  if(P.state !== "playing") return;
+  P.token++;
+  window.speechSynthesis.cancel();
+  P.state = "paused";
+  updateStoryPlayerUI(s);
+}
+function storyResume(s){
+  const P = storyPlayer;
+  if(P.state !== "paused") return;
+  P.state = "playing";
+  storyPlayNext(s);
+}
+function updateStoryPlayerUI(s){
+  const btn = document.getElementById("stPlayBtn");
+  if(!btn) return;
+  const P = storyPlayer, mine = P.sid === s.id && P.state !== "idle";
+  const cur = mine && P.queue[P.qi] ? P.queue[P.qi].pi : -1;
+  const heard = new Set(storyHeard[s.id] || []);
+  const firstUnheard = s.paragraphs.findIndex((_, i)=> !heard.has(i));
+  if(mine && P.scope === "all"){ btn.textContent = P.state === "playing" ? "⏸ 暫停" : `▶ 繼續（第 ${cur + 1} 段）`; }
+  else if(heard.size > 0 && firstUnheard > 0) btn.textContent = `▶ 繼續聽（第 ${firstUnheard + 1} 段起）`;
+  else btn.textContent = "▶ 播放全文";
+  document.getElementById("stStopBtn").hidden = !mine;
+  document.getElementById("stStatus").textContent = heard.size >= s.paragraphs.length ? "✅ 全部聽完了" : `已聽完 ${heard.size} / ${s.paragraphs.length} 段`;
+  document.querySelectorAll(".story-para-block").forEach((blk, i)=>{
+    blk.classList.toggle("playing", i === cur && P.state === "playing");
+    blk.classList.toggle("paused", i === cur && P.state === "paused");
+    const b = blk.querySelector(".story-para-speak");
+    b.textContent = i === cur ? (P.state === "playing" ? "⏸" : "▶") : heard.has(i) ? "✓" : "🔊";
+    b.classList.toggle("heard", heard.has(i) && i !== cur);
+  });
+}
+
 /* ---------- Story reading: general-interest stories with a 導讀 (reading guide) ---------- */
 function renderStoryMode(container){
   if(storySets.length === 0){
@@ -3357,12 +3455,17 @@ function renderStoryMode(container){
   if(storyStage === "picker"){
     const rows = storySets.map(s=>{
       const st = storyChecked[s.id];
+      const heardN = (storyHeard[s.id] || []).length, total = s.paragraphs.length;
+      const heardChip = heardN >= total ? `<span class="chip pos" style="background:var(--success-soft);color:var(--success);">🎧 已聽完</span>`
+        : heardN > 0 ? `<span class="chip pos" style="background:var(--gold-soft);color:var(--gold);">🎧 未聽完 ${heardN}/${total} 段</span>`
+        : `<span class="chip pos" style="background:var(--surface-2);color:var(--text-muted);">🎧 還沒聽</span>`;
       return `
         <button class="hub-card" data-id="${s.id}">
           <div class="hub-card-title">${s.title}<br><span style="font-weight:400;font-size:13px;color:var(--text-muted);">${s.title_zh || ''}</span></div>
           <div class="hub-card-sub" style="display:flex; gap:6px; flex-wrap:wrap; align-items:center; margin-top:6px;">
             <span class="chip pos">${STORY_LEVEL_LABELS[s.level] || s.level}</span>
             <span class="chip cat">${s.genre}</span>
+            ${heardChip}
             ${st==='correct' ? `<span class="chip pos" style="background:var(--success-soft);color:var(--success);">✅ 答對</span>` : ''}
             ${st==='wrong' ? `<span class="chip pos" style="background:var(--danger-soft);color:var(--danger);">❌ 答錯</span>` : ''}
           </div>
@@ -3392,6 +3495,7 @@ function renderStoryMode(container){
         <button class="speak-btn" data-vocab-idx="${vi}" title="播放發音" ${canSpeak?'':'disabled'}>🔊</button>
       </div>
       <span class="m">${v.meaning_zh}</span>
+      ${v.def_en ? `<span class="d">${v.def_en}</span>` : ''}
     </div>`).join("");
   const paragraphsHtml = s.paragraphs.map((p,pi)=>`
     <div class="story-para-block">
@@ -3445,6 +3549,11 @@ function renderStoryMode(container){
       </div>
     </div>
     <div class="doc-card" style="margin-top:14px;">
+      <div class="story-player">
+        <button class="icon-btn" id="stPlayBtn" ${canSpeak ? "" : "disabled"}>▶ 播放全文</button>
+        <button class="icon-btn" id="stStopBtn" hidden>■ 停止</button>
+        <span class="st-status" id="stStatus"></span>
+      </div>
       ${paragraphsHtml}
     </div>
     <div class="doc-card story-summary" style="margin-top:14px;">
@@ -3459,13 +3568,29 @@ function renderStoryMode(container){
   `;
 
   document.getElementById("storyBackBtn").addEventListener("click", ()=>{
-    speechSynthesis.cancel();
+    storyStopPlayback();
     storyStage = "picker";
     renderStage();
   });
-  container.querySelectorAll(".story-para-speak").forEach(btn=>{
-    btn.addEventListener("click", ()=> speak(s.paragraphs[Number(btn.dataset.paraIdx)]));
+  document.getElementById("stPlayBtn").addEventListener("click", ()=>{
+    const P = storyPlayer, mine = P.sid === s.id && P.state !== "idle" && P.scope === "all";
+    if(mine) P.state === "playing" ? storyPause(s) : storyResume(s);
+    else{
+      const heard = new Set(storyHeard[s.id] || []);
+      const first = s.paragraphs.findIndex((_, i)=> !heard.has(i));
+      storyPlay(s, first > 0 ? first : 0, false);
+    }
   });
+  document.getElementById("stStopBtn").addEventListener("click", ()=>{ storyStopPlayback(); updateStoryPlayerUI(s); });
+  container.querySelectorAll(".story-para-speak").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const pi = Number(btn.dataset.paraIdx), P = storyPlayer;
+      const here = P.sid === s.id && P.state !== "idle" && P.queue[P.qi] && P.queue[P.qi].pi === pi;
+      if(here) P.state === "playing" ? storyPause(s) : storyResume(s);   // same paragraph: pause / continue where it stopped
+      else storyPlay(s, pi, true);
+    });
+  });
+  updateStoryPlayerUI(s);
   container.querySelectorAll("[data-vocab-idx]").forEach(btn=>{
     btn.addEventListener("click", ()=> speak(s.key_vocab[Number(btn.dataset.vocabIdx)].word));
   });
@@ -3496,6 +3621,7 @@ function renderStoryMode(container){
 
 /* ---------- Master render ---------- */
 function renderStage(){
+  if(mode !== "story" && typeof storyPlayer !== "undefined" && storyPlayer.state !== "idle") storyStopPlayback();
   if(mode !== "speak" && speakRec) stopSpeakRec();   // leaving 口說練習 while the microphone is open
   updateControlBarVisibility();   // the search/filter bar belongs to the vocab views only (not 今日)
   const container = document.getElementById("stage");

@@ -9,42 +9,50 @@
       {
         "word": "cafeteria",
         "meaning_zh": "學校餐廳",
-        "ipa": "[ˌkæfəˋtɪrɪə]"
+        "ipa": "[ˌkæfəˋtɪrɪə]",
+        "def_en": "a place in a school where students buy and eat meals"
       },
       {
         "word": "tray",
         "meaning_zh": "餐盤",
-        "ipa": "[tre]"
+        "ipa": "[tre]",
+        "def_en": "a flat board used to carry food and drinks"
       },
       {
         "word": "disappear",
         "meaning_zh": "消失",
-        "ipa": "[ˌdɪsəˋpɪr]"
+        "ipa": "[ˌdɪsəˋpɪr]",
+        "def_en": "to go out of sight and not be seen"
       },
       {
         "word": "curly",
         "meaning_zh": "捲曲的(頭髮)",
-        "ipa": "[ˋkɝlɪ]"
+        "ipa": "[ˋkɝlɪ]",
+        "def_en": "having hair that bends in small round shapes"
       },
       {
         "word": "introduce",
         "meaning_zh": "介紹",
-        "ipa": "[ˌɪntrəˋdus]"
+        "ipa": "[ˌɪntrəˋdus]",
+        "def_en": "to tell people each other's names so they can meet"
       },
       {
         "word": "relax",
         "meaning_zh": "放鬆",
-        "ipa": "[rɪˋlæks]"
+        "ipa": "[rɪˋlæks]",
+        "def_en": "to become calm and less tense"
       },
       {
         "word": "hesitate",
         "meaning_zh": "猶豫",
-        "ipa": "[ˋhɛzɪˌtet]"
+        "ipa": "[ˋhɛzɪˌtet]",
+        "def_en": "to pause because you are not sure what to do"
       },
       {
         "word": "notice",
         "meaning_zh": "注意到",
-        "ipa": "[ˋnotɪs]"
+        "ipa": "[ˋnotɪs]",
+        "def_en": "to see or become aware of something"
       }
     ],
     "paragraphs": [
@@ -131,42 +139,50 @@
       {
         "word": "complain",
         "meaning_zh": "抱怨",
-        "ipa": "[kəmˋplen]"
+        "ipa": "[kəmˋplen]",
+        "def_en": "to say you are unhappy about something"
       },
       {
         "word": "reply all",
         "meaning_zh": "回覆全部收件人",
-        "ipa": "[rɪˋplaɪ ɔl]"
+        "ipa": "[rɪˋplaɪ ɔl]",
+        "def_en": "an email button that sends your answer to every person"
       },
       {
         "word": "buzzed",
         "meaning_zh": "(手機)嗡嗡震動",
-        "ipa": "[bʌzd]"
+        "ipa": "[bʌzd]",
+        "def_en": "made a short humming shake or sound"
       },
       {
         "word": "stomach dropped",
         "meaning_zh": "心一沉、嚇一跳的感覺",
-        "ipa": "[ˋstʌmək drɑpt]"
+        "ipa": "[ˋstʌmək drɑpt]",
+        "def_en": "a sudden sinking feeling of fear or shock"
       },
       {
         "word": "apologize",
         "meaning_zh": "道歉",
-        "ipa": "[əˋpɑləˌdʒaɪz]"
+        "ipa": "[əˋpɑləˌdʒaɪz]",
+        "def_en": "to say sorry for doing something wrong"
       },
       {
         "word": "honestly",
         "meaning_zh": "老實說",
-        "ipa": "[ˋɑnɪstlɪ]"
+        "ipa": "[ˋɑnɪstlɪ]",
+        "def_en": "used to say what you really think"
       },
       {
         "word": "double-check",
         "meaning_zh": "再三確認",
-        "ipa": "[ˋdʌbḷ tʃɛk]"
+        "ipa": "[ˋdʌbḷ tʃɛk]",
+        "def_en": "to look at something again to be sure it is right"
       },
       {
         "word": "accident",
         "meaning_zh": "意外",
-        "ipa": "[ˋæksədənt]"
+        "ipa": "[ˋæksədənt]",
+        "def_en": "something bad that happens by mistake"
       }
     ],
     "paragraphs": [
@@ -249,42 +265,50 @@
       {
         "word": "shaking",
         "meaning_zh": "顫抖",
-        "ipa": "[ˋʃekɪŋ]"
+        "ipa": "[ˋʃekɪŋ]",
+        "def_en": "moving with small quick movements you cannot control"
       },
       {
         "word": "recipe",
         "meaning_zh": "食譜",
-        "ipa": "[ˋrɛsəpɪ]"
+        "ipa": "[ˋrɛsəpɪ]",
+        "def_en": "instructions for how to cook a food"
       },
       {
         "word": "pinch of salt",
         "meaning_zh": "一小撮鹽",
-        "ipa": "[pɪntʃ əv sɔlt]"
+        "ipa": "[pɪntʃ əv sɔlt]",
+        "def_en": "a very small amount of a white seasoning"
       },
       {
         "word": "dough",
         "meaning_zh": "麵團",
-        "ipa": "[do]"
+        "ipa": "[do]",
+        "def_en": "a soft mixture of flour and water for making bread"
       },
       {
         "word": "mention",
         "meaning_zh": "提到",
-        "ipa": "[ˋmɛnʃən]"
+        "ipa": "[ˋmɛnʃən]",
+        "def_en": "to say something briefly"
       },
       {
         "word": "tightly",
         "meaning_zh": "緊緊地",
-        "ipa": "[ˋtaɪtlɪ]"
+        "ipa": "[ˋtaɪtlɪ]",
+        "def_en": "with a strong hold, not loosely"
       },
       {
         "word": "autumn",
         "meaning_zh": "秋天",
-        "ipa": "[ˋɔtəm]"
+        "ipa": "[ˋɔtəm]",
+        "def_en": "the season between summer and winter"
       },
       {
         "word": "beside",
         "meaning_zh": "在旁邊",
-        "ipa": "[bɪˋsaɪd]"
+        "ipa": "[bɪˋsaɪd]",
+        "def_en": "at the side of someone or something"
       }
     ],
     "paragraphs": [
@@ -369,42 +393,50 @@
       {
         "word": "elderly",
         "meaning_zh": "年長的",
-        "ipa": "[ˋɛldɚlɪ]"
+        "ipa": "[ˋɛldɚlɪ]",
+        "def_en": "old, often used politely for older people"
       },
       {
         "word": "shuffled",
         "meaning_zh": "拖著腳步走",
-        "ipa": "[ˋʃʌfəld]"
+        "ipa": "[ˋʃʌfəld]",
+        "def_en": "walked slowly, dragging your feet along the ground"
       },
       {
         "word": "precious",
         "meaning_zh": "珍貴的",
-        "ipa": "[ˋprɛʃəs]"
+        "ipa": "[ˋprɛʃəs]",
+        "def_en": "very valuable and loved"
       },
       {
         "word": "confront",
         "meaning_zh": "當面對質",
-        "ipa": "[kənˋfrʌnt]"
+        "ipa": "[kənˋfrʌnt]",
+        "def_en": "to face someone and talk about a problem directly"
       },
       {
         "word": "embarrassed",
         "meaning_zh": "尷尬的",
-        "ipa": "[ɪmˋbærəst]"
+        "ipa": "[ɪmˋbærəst]",
+        "def_en": "feeling shy or ashamed in front of others"
       },
       {
         "word": "afford",
         "meaning_zh": "負擔得起",
-        "ipa": "[əˋfɔrd]"
+        "ipa": "[əˋfɔrd]",
+        "def_en": "to have enough money to pay for something"
       },
       {
         "word": "guilt",
         "meaning_zh": "愧疚感",
-        "ipa": "[gɪlt]"
+        "ipa": "[gɪlt]",
+        "def_en": "the sad feeling after doing something wrong"
       },
       {
         "word": "unlikely",
         "meaning_zh": "意想不到的",
-        "ipa": "[ʌnˋlaɪklɪ]"
+        "ipa": "[ʌnˋlaɪklɪ]",
+        "def_en": "not expected and surprising"
       }
     ],
     "paragraphs": [
@@ -489,47 +521,56 @@
       {
         "word": "connecting flight",
         "meaning_zh": "轉機班機",
-        "ipa": "[kəˋnɛktɪŋ flaɪt]"
+        "ipa": "[kəˋnɛktɪŋ flaɪt]",
+        "def_en": "a second plane trip you take after the first"
       },
       {
         "word": "sleek",
         "meaning_zh": "流線型的、時髦的",
-        "ipa": "[slik]"
+        "ipa": "[slik]",
+        "def_en": "smooth, modern and stylish in shape"
       },
       {
         "word": "efficient",
         "meaning_zh": "有效率的",
-        "ipa": "[ɪˋfɪʃənt]"
+        "ipa": "[ɪˋfɪʃənt]",
+        "def_en": "working well without wasting time or effort"
       },
       {
         "word": "panic",
         "meaning_zh": "驚慌",
-        "ipa": "[ˋpænɪk]"
+        "ipa": "[ˋpænɪk]",
+        "def_en": "a sudden strong fear that stops clear thinking"
       },
       {
         "word": "limited",
         "meaning_zh": "有限的",
-        "ipa": "[ˋlɪmɪtɪd]"
+        "ipa": "[ˋlɪmɪtɪd]",
+        "def_en": "small in amount or not much"
       },
       {
         "word": "gesture",
         "meaning_zh": "手勢",
-        "ipa": "[ˋdʒɛstʃɚ]"
+        "ipa": "[ˋdʒɛstʃɚ]",
+        "def_en": "a hand or body movement that shows meaning"
       },
       {
         "word": "relieved",
         "meaning_zh": "鬆一口氣的",
-        "ipa": "[rɪˋlivd]"
+        "ipa": "[rɪˋlivd]",
+        "def_en": "happy because a worry has gone away"
       },
       {
         "word": "bamboo grove",
         "meaning_zh": "竹林",
-        "ipa": "[bæmˋbu grov]"
+        "ipa": "[bæmˋbu grov]",
+        "def_en": "a small forest of tall, thin, hollow plants"
       },
       {
         "word": "stranger",
         "meaning_zh": "陌生人",
-        "ipa": "[ˋstrendʒɚ]"
+        "ipa": "[ˋstrendʒɚ]",
+        "def_en": "a person you do not know"
       }
     ],
     "paragraphs": [
@@ -614,42 +655,50 @@
       {
         "word": "lightweight headset",
         "meaning_zh": "輕便頭戴裝置",
-        "ipa": "[ˋlaɪtwet ˋhɛdsɛt]"
+        "ipa": "[ˋlaɪtwet ˋhɛdsɛt]",
+        "def_en": "a light device you wear over your eyes and ears"
       },
       {
         "word": "relive",
         "meaning_zh": "重新體驗",
-        "ipa": "[riˋlɪv]"
+        "ipa": "[riˋlɪv]",
+        "def_en": "to experience something from the past again"
       },
       {
         "word": "session",
         "meaning_zh": "(使用或療程的)一次",
-        "ipa": "[ˋsɛʃən]"
+        "ipa": "[ˋsɛʃən]",
+        "def_en": "one period of time spent doing an activity"
       },
       {
         "word": "volunteer",
         "meaning_zh": "當志工",
-        "ipa": "[ˌvɑlənˋtɪr]"
+        "ipa": "[ˌvɑlənˋtɪr]",
+        "def_en": "to work without pay to help others"
       },
       {
         "word": "shovel",
         "meaning_zh": "鏟子",
-        "ipa": "[ˋʃʌvḷ]"
+        "ipa": "[ˋʃʌvḷ]",
+        "def_en": "a tool with a wide blade for digging"
       },
       {
         "word": "replace",
         "meaning_zh": "取代",
-        "ipa": "[rɪˋples]"
+        "ipa": "[rɪˋples]",
+        "def_en": "to take the place of something"
       },
       {
         "word": "niece",
         "meaning_zh": "姪女、外甥女",
-        "ipa": "[nis]"
+        "ipa": "[nis]",
+        "def_en": "the daughter of your brother or sister"
       },
       {
         "word": "wires",
         "meaning_zh": "電線",
-        "ipa": "[waɪrz]"
+        "ipa": "[waɪrz]",
+        "def_en": "thin metal lines that carry electricity"
       }
     ],
     "paragraphs": [
@@ -734,52 +783,62 @@
       {
         "word": "peculiar",
         "meaning_zh": "奇特的",
-        "ipa": "[pɪˋkjuljɚ]"
+        "ipa": "[pɪˋkjuljɚ]",
+        "def_en": "strange or unusual in a way"
       },
       {
         "word": "accustomed",
         "meaning_zh": "習慣於…的",
-        "ipa": "[əˋkʌstəmd]"
+        "ipa": "[əˋkʌstəmd]",
+        "def_en": "used to something because it happens often"
       },
       {
         "word": "widower",
         "meaning_zh": "鰥夫",
-        "ipa": "[ˋwɪdoɚ]"
+        "ipa": "[ˋwɪdoɚ]",
+        "def_en": "a man whose wife has died"
       },
       {
         "word": "attentiveness",
         "meaning_zh": "專注、留心",
-        "ipa": "[əˋtɛntɪvnɪs]"
+        "ipa": "[əˋtɛntɪvnɪs]",
+        "def_en": "the act of watching closely and carefully"
       },
       {
         "word": "unsettled",
         "meaning_zh": "使人不安的",
-        "ipa": "[ʌnˋsɛtəld]"
+        "ipa": "[ʌnˋsɛtəld]",
+        "def_en": "making people feel worried or uneasy"
       },
       {
         "word": "shoo away",
         "meaning_zh": "把…趕走",
-        "ipa": "[ʃu əˋwe]"
+        "ipa": "[ʃu əˋwe]",
+        "def_en": "to chase an animal off by waving or shouting"
       },
       {
         "word": "perpetually",
         "meaning_zh": "持續不斷地",
-        "ipa": "[pɚˋpɛtʃuəlɪ]"
+        "ipa": "[pɚˋpɛtʃuəlɪ]",
+        "def_en": "in a way that never stops"
       },
       {
         "word": "commemorate",
         "meaning_zh": "紀念",
-        "ipa": "[kəˋmɛməˌret]"
+        "ipa": "[kəˋmɛməˌret]",
+        "def_en": "to honor the memory of a person or event"
       },
       {
         "word": "whimper",
         "meaning_zh": "嗚咽、低聲哀鳴",
-        "ipa": "[ˋwɪmpɚ]"
+        "ipa": "[ˋwɪmpɚ]",
+        "def_en": "to make soft, sad crying sounds"
       },
       {
         "word": "plaque",
         "meaning_zh": "紀念牌匾",
-        "ipa": "[plæk]"
+        "ipa": "[plæk]",
+        "def_en": "a flat metal sign that remembers someone"
       }
     ],
     "paragraphs": [
@@ -864,52 +923,62 @@
       {
         "word": "submerge",
         "meaning_zh": "浸入水中",
-        "ipa": "[səbˋmɝdʒ]"
+        "ipa": "[səbˋmɝdʒ]",
+        "def_en": "to put something fully under water"
       },
       {
         "word": "voluntarily",
         "meaning_zh": "自願地",
-        "ipa": "[ˌvɑlənˋtɛrəlɪ]"
+        "ipa": "[ˌvɑlənˋtɛrəlɪ]",
+        "def_en": "by your own choice, not forced"
       },
       {
         "word": "deeply rooted",
         "meaning_zh": "根深蒂固的",
-        "ipa": "[ˋdiplɪ ˋrutɪd]"
+        "ipa": "[ˋdiplɪ ˋrutɪd]",
+        "def_en": "very strong and hard to change"
       },
       {
         "word": "dread",
         "meaning_zh": "恐懼、畏懼",
-        "ipa": "[drɛd]"
+        "ipa": "[drɛd]",
+        "def_en": "strong fear about something that may happen"
       },
       {
         "word": "agonizingly",
         "meaning_zh": "令人痛苦地",
-        "ipa": "[ˋægəˌnaɪzɪŋlɪ]"
+        "ipa": "[ˋægəˌnaɪzɪŋlɪ]",
+        "def_en": "in a very painful or frustrating way"
       },
       {
         "word": "nonlinear",
         "meaning_zh": "非線性的、起伏不定的",
-        "ipa": "[nɑnˋlɪniɚ]"
+        "ipa": "[nɑnˋlɪniɚ]",
+        "def_en": "not steady, going up and down"
       },
       {
         "word": "anticlimactic",
         "meaning_zh": "虎頭蛇尾的、不如預期戲劇化的",
-        "ipa": "[ˌæntɪklaɪˋmæktɪk]"
+        "ipa": "[ˌæntɪklaɪˋmæktɪk]",
+        "def_en": "disappointing because it is less exciting than expected"
       },
       {
         "word": "brace (oneself)",
         "meaning_zh": "讓自己做好心理準備",
-        "ipa": "[bres]"
+        "ipa": "[bres]",
+        "def_en": "to get yourself ready for something bad"
       },
       {
         "word": "instinctively",
         "meaning_zh": "本能地",
-        "ipa": "[ɪnˋstɪŋktɪvlɪ]"
+        "ipa": "[ɪnˋstɪŋktɪvlɪ]",
+        "def_en": "without thinking, in a natural way"
       },
       {
         "word": "exaggeration",
         "meaning_zh": "誇大",
-        "ipa": "[ɪgˌzædʒəˋreʃən]"
+        "ipa": "[ɪgˌzædʒəˋreʃən]",
+        "def_en": "saying something is greater than it really is"
       }
     ],
     "paragraphs": [
