@@ -747,6 +747,10 @@
   .story-para-block.playing .doc-para, .story-para-block.paused .doc-para{ background:var(--accent-soft); border-radius:10px; }
   .story-para-speak.heard{ background:var(--success-soft) !important; color:var(--success) !important; }
   .story-vocab-item .d{ display:block; margin-top:2px; font-size:12.5px; font-style:italic; color:var(--text-muted); line-height:1.5; }
+  .opt-row{ display:flex; align-items:center; gap:8px; margin-bottom:7px; }
+  .opt-row .q-opt{ flex:1; margin-bottom:0; }
+  .opt-look{ flex:none; width:38px; height:38px; border-radius:10px; border:1px solid var(--border); background:var(--surface); color:var(--accent); font-size:15px; cursor:pointer; }
+  .opt-look:hover{ border-color:var(--accent); background:var(--accent-soft); }
 </style>
 <script>
 /* Apply a saved theme choice before first paint so a light/dark override doesn't flash. */
@@ -1680,6 +1684,21 @@ function speakSequence(texts, opts){
 }
 
 /* ---------- Word lookup (click-to-define) ---------- */
+/* An answer option plus a small lookup button beside it: one word opens the same popup as tapping a word in the sentence
+   (pronunciation + meaning); a multi-word option just reads the phrase aloud. The option itself stays a plain button, so
+   tapping it still selects the answer. */
+function optionRowHtml(btnHtml, optText){
+  const single = /^[A-Za-z]+(?:['’][A-Za-z]+)?$/.test(String(optText).trim());
+  return `<div class="opt-row">${btnHtml}<button type="button" class="opt-look" data-look="${escHtml(optText)}" title="${single ? "查發音與意思" : "聽這個選項的發音"}" aria-label="${single ? "查發音與意思" : "聽發音"}">${single ? "🔍" : "🔊"}</button></div>`;
+}
+document.addEventListener("click", (e)=>{
+  const b = e.target.closest(".opt-look");
+  if(!b) return;
+  e.stopPropagation();
+  const t = b.dataset.look;
+  if(/^[A-Za-z]+(?:['’][A-Za-z]+)?$/.test(t.trim())) showWordPopup(t.trim().toLowerCase());
+  else speak(t);
+});
 function wrapWords(text){
   if(!text) return text;
   return text.replace(/[A-Za-z]+(?:['’][A-Za-z]+)?/g, (m)=> `<span class="lookup-word" data-w="${m.toLowerCase()}">${m}</span>`);
@@ -2618,7 +2637,7 @@ function renderP5(container){
       if(oi === item.answer_index) cls += " correct";
       else if(oi === p5Selected) cls += " wrong";
     }
-    return `<button class="${cls}" data-oi="${oi}" aria-pressed="${p5Selected===oi}" ${checked?'disabled':''}>${String.fromCharCode(65+oi)}. ${opt}</button>`;
+    return optionRowHtml(`<button class="${cls}" data-oi="${oi}" aria-pressed="${p5Selected===oi}" ${checked?'disabled':''}>${String.fromCharCode(65+oi)}. ${opt}</button>`, opt);
   }).join("");
 
   const explainHtml = checked ? `<div class="q-explain">${p5Selected===item.answer_index?'✅ 答對了！':'❌ 答錯了。'} 正確答案是 (${String.fromCharCode(65+item.answer_index)})。<br>${item.explanation_zh}</div>` : "";
@@ -4568,7 +4587,7 @@ function renderGdailyQuiz(container, day){
   const opts = q.options.map((opt, oi)=>{
     let cls = "q-opt";
     if(checked){ if(oi === q.answer_index) cls += " correct"; else if(oi === sel) cls += " wrong"; }
-    return `<button class="${cls}" data-oi="${oi}" ${checked ? "disabled" : ""}>${String.fromCharCode(65 + oi)}. ${opt}</button>`;
+    return optionRowHtml(`<button class="${cls}" data-oi="${oi}" ${checked ? "disabled" : ""}>${String.fromCharCode(65 + oi)}. ${opt}</button>`, opt);
   }).join("");
   const explain = checked ? `<div class="q-explain">${sel === q.answer_index ? "✅ 答對了！" : "❌ 答錯了。"} 正確答案是 (${String.fromCharCode(65 + q.answer_index)})。<br>${q.explanation_zh}</div>` : "";
   const last = gdIdx === total - 1;
